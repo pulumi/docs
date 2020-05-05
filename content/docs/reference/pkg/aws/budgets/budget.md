@@ -139,7 +139,7 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Budget</span><span class="p">(resource_name, opts=None, </span>account_id=None<span class="p">, </span>budget_type=None<span class="p">, </span>cost_filters=None<span class="p">, </span>cost_types=None<span class="p">, </span>limit_amount=None<span class="p">, </span>limit_unit=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>notifications=None<span class="p">, </span>time_period_end=None<span class="p">, </span>time_period_start=None<span class="p">, </span>time_unit=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Budget</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>budget_type=None<span class="p">, </span>cost_filters=None<span class="p">, </span>cost_types=None<span class="p">, </span>limit_amount=None<span class="p">, </span>limit_unit=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>notifications=None<span class="p">, </span>time_period_end=None<span class="p">, </span>time_period_start=None<span class="p">, </span>time_unit=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1444,6 +1444,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/budgets?tab=doc#BudgetCostTypesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/budgets?tab=doc#BudgetCostTypesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Inputs.BudgetCostTypesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Outputs.BudgetCostTypes.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1882,6 +1885,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/budgets?tab=doc#BudgetNotificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/budgets?tab=doc#BudgetNotificationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Inputs.BudgetNotificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Outputs.BudgetNotification.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

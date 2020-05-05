@@ -53,7 +53,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OrganizationCustomRule</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>excluded_accounts=None<span class="p">, </span>input_parameters=None<span class="p">, </span>lambda_function_arn=None<span class="p">, </span>maximum_execution_frequency=None<span class="p">, </span>name=None<span class="p">, </span>resource_id_scope=None<span class="p">, </span>resource_types_scopes=None<span class="p">, </span>tag_key_scope=None<span class="p">, </span>tag_value_scope=None<span class="p">, </span>trigger_types=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OrganizationCustomRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>excluded_accounts=None<span class="p">, </span>input_parameters=None<span class="p">, </span>lambda_function_arn=None<span class="p">, </span>maximum_execution_frequency=None<span class="p">, </span>name=None<span class="p">, </span>resource_id_scope=None<span class="p">, </span>resource_types_scopes=None<span class="p">, </span>tag_key_scope=None<span class="p">, </span>tag_value_scope=None<span class="p">, </span>trigger_types=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

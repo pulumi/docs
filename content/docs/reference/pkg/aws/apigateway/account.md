@@ -79,7 +79,7 @@ const cloudwatchRolePolicy = new aws.iam.RolePolicy("cloudwatch", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Account</span><span class="p">(resource_name, opts=None, </span>cloudwatch_role_arn=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Account</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloudwatch_role_arn=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -679,6 +679,9 @@ Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gate
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#AccountThrottleSettingsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Outputs.AccountThrottleSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

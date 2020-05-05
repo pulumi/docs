@@ -28,6 +28,46 @@ const example = new digitalocean.Vpc("example", {
     region: "nyc3",
 });
 ```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+example = digitalocean.Vpc("example",
+    ip_range="10.10.10.0/24",
+    region="nyc3")
+```
+
+{{% /example %}}
+{{% example %}}
+### Resource Assignment
+
+`digitalocean..Droplet`, `digitalocean..KubernetesCluster`,
+`digitalocean_load_balancer`, and `digitalocean..DatabaseCluster` resources
+may be assigned to a VPC by referencing its `id`. For example:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const exampleVpc = new digitalocean.Vpc("exampleVpc", {region: "nyc3"});
+const exampleDroplet = new digitalocean.Droplet("exampleDroplet", {
+    size: "s-1vcpu-1gb",
+    image: "ubuntu-18-04-x64",
+    region: "nyc3",
+    vpcUuid: exampleVpc.id,
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+example_vpc = digitalocean.Vpc("exampleVpc", region="nyc3")
+example_droplet = digitalocean.Droplet("exampleDroplet",
+    size="s-1vcpu-1gb",
+    image="ubuntu-18-04-x64",
+    region="nyc3",
+    vpc_uuid=example_vpc.id)
+```
 
 {{% /example %}}
 {{% /examples %}}
@@ -43,7 +83,7 @@ const example = new digitalocean.Vpc("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Vpc</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>ip_range=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Vpc</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>ip_range=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

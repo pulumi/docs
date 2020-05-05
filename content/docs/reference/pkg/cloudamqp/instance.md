@@ -513,6 +513,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>Ready</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag describing if the resource is ready
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -564,6 +573,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>Ready</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag describing if the resource is ready
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -615,6 +633,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>ready</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Flag describing if the resource is ready
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>url</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -666,6 +693,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>ready</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag describing if the resource is ready
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>url</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -701,7 +737,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>apikey=None<span class="p">, </span>host=None<span class="p">, </span>name=None<span class="p">, </span>nodes=None<span class="p">, </span>plan=None<span class="p">, </span>region=None<span class="p">, </span>rmq_version=None<span class="p">, </span>tags=None<span class="p">, </span>url=None<span class="p">, </span>vhost=None<span class="p">, </span>vpc_subnet=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>apikey=None<span class="p">, </span>host=None<span class="p">, </span>name=None<span class="p">, </span>nodes=None<span class="p">, </span>plan=None<span class="p">, </span>ready=None<span class="p">, </span>region=None<span class="p">, </span>rmq_version=None<span class="p">, </span>tags=None<span class="p">, </span>url=None<span class="p">, </span>vhost=None<span class="p">, </span>vpc_subnet=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -862,6 +898,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Ready</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag describing if the resource is ready
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -964,6 +1009,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the plan, valid options are: lemur, tiger, bunny, rabbit, panda, ape, hippo, lion
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ready</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag describing if the resource is ready
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1074,6 +1128,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>ready</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Flag describing if the resource is ready
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1176,6 +1239,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the plan, valid options are: lemur, tiger, bunny, rabbit, panda, ape, hippo, lion
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ready</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Flag describing if the resource is ready
 {{% /md %}}</dd>
 
     <dt class="property-optional"

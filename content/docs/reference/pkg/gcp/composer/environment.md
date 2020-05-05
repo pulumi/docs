@@ -1,7 +1,8 @@
 
 ---
 title: "Environment"
-block_external_search_index: true
+title_tag: "Resource Environment | Module composer | Package GCP"
+meta_desc: "Explore the Environment resource of the composer module, including examples, input properties, output properties, lookup functions, and supporting types. An environment for running orchestration tasks."
 ---
 
 
@@ -86,7 +87,7 @@ const test = new gcp.composer.Environment("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Environment</span><span class="p">(resource_name, opts=None, </span>config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Environment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -264,7 +265,8 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -272,7 +274,16 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels for this environment. The labels map can contain
+no more than 64 entries. Entries of the labels map are UTF8 strings
+that comply with the following restrictions:
+Label keys must be between 1 and 63 characters long and must conform
+to the following regular expression: `a-z?`.
+Label values must be between 0 and 63 characters long and must
+conform to the regular expression `(a-z?)?`.
+No more than 64 labels can be associated with a given environment.
+Both keys and values must be <= 128 bytes in size.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -280,7 +291,8 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -298,7 +310,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location or Compute Engine region for the environment.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -313,7 +326,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -321,7 +335,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels for this environment. The labels map can contain
+no more than 64 entries. Entries of the labels map are UTF8 strings
+that comply with the following restrictions:
+Label keys must be between 1 and 63 characters long and must conform
+to the following regular expression: `a-z?`.
+Label values must be between 0 and 63 characters long and must
+conform to the regular expression `(a-z?)?`.
+No more than 64 labels can be associated with a given environment.
+Both keys and values must be <= 128 bytes in size.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -329,7 +352,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -347,7 +371,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location or Compute Engine region for the environment.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -362,7 +387,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -370,7 +396,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels for this environment. The labels map can contain
+no more than 64 entries. Entries of the labels map are UTF8 strings
+that comply with the following restrictions:
+Label keys must be between 1 and 63 characters long and must conform
+to the following regular expression: `a-z?`.
+Label values must be between 0 and 63 characters long and must
+conform to the regular expression `(a-z?)?`.
+No more than 64 labels can be associated with a given environment.
+Both keys and values must be <= 128 bytes in size.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -378,7 +413,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -396,7 +432,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location or Compute Engine region for the environment.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -411,7 +448,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Dict[Environment<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -419,7 +457,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels for this environment. The labels map can contain
+no more than 64 entries. Entries of the labels map are UTF8 strings
+that comply with the following restrictions:
+Label keys must be between 1 and 63 characters long and must conform
+to the following regular expression: `a-z?`.
+Label values must be between 0 and 63 characters long and must
+conform to the regular expression `(a-z?)?`.
+No more than 64 labels can be associated with a given environment.
+Both keys and values must be <= 128 bytes in size.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -427,7 +474,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -445,7 +493,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location or Compute Engine region for the environment.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -657,7 +706,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -665,7 +715,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels for this environment. The labels map can contain
+no more than 64 entries. Entries of the labels map are UTF8 strings
+that comply with the following restrictions:
+Label keys must be between 1 and 63 characters long and must conform
+to the following regular expression: `a-z?`.
+Label values must be between 0 and 63 characters long and must
+conform to the regular expression `(a-z?)?`.
+No more than 64 labels can be associated with a given environment.
+Both keys and values must be <= 128 bytes in size.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -673,7 +732,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -691,7 +751,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location or Compute Engine region for the environment.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -706,7 +767,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -714,7 +776,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels for this environment. The labels map can contain
+no more than 64 entries. Entries of the labels map are UTF8 strings
+that comply with the following restrictions:
+Label keys must be between 1 and 63 characters long and must conform
+to the following regular expression: `a-z?`.
+Label values must be between 0 and 63 characters long and must
+conform to the regular expression `(a-z?)?`.
+No more than 64 labels can be associated with a given environment.
+Both keys and values must be <= 128 bytes in size.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -722,7 +793,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -740,7 +812,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location or Compute Engine region for the environment.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -755,7 +828,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -763,7 +837,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels for this environment. The labels map can contain
+no more than 64 entries. Entries of the labels map are UTF8 strings
+that comply with the following restrictions:
+Label keys must be between 1 and 63 characters long and must conform
+to the following regular expression: `a-z?`.
+Label values must be between 0 and 63 characters long and must
+conform to the regular expression `(a-z?)?`.
+No more than 64 labels can be associated with a given environment.
+Both keys and values must be <= 128 bytes in size.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -771,7 +854,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -789,7 +873,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location or Compute Engine region for the environment.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -804,7 +889,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfig">Dict[Environment<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -812,7 +898,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User-defined labels for this environment. The labels map can contain
+no more than 64 entries. Entries of the labels map are UTF8 strings
+that comply with the following restrictions:
+Label keys must be between 1 and 63 characters long and must conform
+to the following regular expression: `a-z?`.
+Label values must be between 0 and 63 characters long and must
+conform to the regular expression `(a-z?)?`.
+No more than 64 labels can be associated with a given environment.
+Both keys and values must be <= 128 bytes in size.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -820,7 +915,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -838,7 +934,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location or Compute Engine region for the environment.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -900,7 +997,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -908,7 +1006,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
+will be used to run this environment.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -916,7 +1016,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -924,7 +1025,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -963,7 +1065,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -971,7 +1074,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
+will be used to run this environment.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -979,7 +1084,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -987,7 +1093,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1026,7 +1133,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1034,7 +1142,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
+will be used to run this environment.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1042,7 +1152,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1050,7 +1161,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1089,7 +1201,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfig">Dict[Environment<wbr>Config<wbr>Node<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1097,7 +1210,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
+will be used to run this environment.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1105,7 +1220,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Dict[Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1113,7 +1229,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigsoftwareconfig">Dict[Environment<wbr>Config<wbr>Software<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1143,7 +1260,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine zone in which to deploy the VMs running the
+Apache Airflow software, specified as the zone name or
+relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project
+and region.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1151,7 +1272,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
+If unspecified, defaults to 100GB. Cannot be updated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1159,7 +1282,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration for controlling how IPs are allocated in the GKE cluster.
+Structure is documented below.
+Cannot be updated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1167,7 +1293,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine machine type used for cluster instances,
+specified as a name or relative resource name. For example:
+"projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and
+region/zone.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1175,7 +1305,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine network to be used for machine
+communications, specified as a self-link, relative resource name
+(e.g. "projects/{project}/global/networks/{network}"), by name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1183,7 +1316,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of Google API scopes to be made available on all node
+VMs. Cannot be updated. If empty, defaults to
+`["https://www.googleapis.com/auth/cloud-platform"]`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1191,7 +1327,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Google Cloud Platform Service Account to be used by the
+node VMs. If a service account is not specified, the "default"
+Compute Engine service account is used. Cannot be updated. If given,
+note that the service account must have `roles/composer.worker`
+for any GCP resources created under the Cloud Composer Environment.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1199,7 +1340,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine subnetwork to be used for machine
+communications, , specified as a self-link, relative resource name (e.g.
+"projects/{project}/regions/{region}/subnetworks/{subnetwork}"), or by name. If subnetwork is provided,
+network must also be provided and the subnetwork must belong to the enclosing environment's project and region.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1207,7 +1352,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of instance tags applied to all node VMs. Tags are
+used to identify valid sources or targets for network
+firewalls. Each tag within the list must comply with RFC1035.
+Cannot be updated.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1222,7 +1371,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine zone in which to deploy the VMs running the
+Apache Airflow software, specified as the zone name or
+relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project
+and region.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1230,7 +1383,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
+If unspecified, defaults to 100GB. Cannot be updated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1238,7 +1393,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration for controlling how IPs are allocated in the GKE cluster.
+Structure is documented below.
+Cannot be updated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1246,7 +1404,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine machine type used for cluster instances,
+specified as a name or relative resource name. For example:
+"projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and
+region/zone.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1254,7 +1416,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine network to be used for machine
+communications, specified as a self-link, relative resource name
+(e.g. "projects/{project}/global/networks/{network}"), by name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1262,7 +1427,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of Google API scopes to be made available on all node
+VMs. Cannot be updated. If empty, defaults to
+`["https://www.googleapis.com/auth/cloud-platform"]`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1270,7 +1438,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Google Cloud Platform Service Account to be used by the
+node VMs. If a service account is not specified, the "default"
+Compute Engine service account is used. Cannot be updated. If given,
+note that the service account must have `roles/composer.worker`
+for any GCP resources created under the Cloud Composer Environment.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1278,7 +1451,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine subnetwork to be used for machine
+communications, , specified as a self-link, relative resource name (e.g.
+"projects/{project}/regions/{region}/subnetworks/{subnetwork}"), or by name. If subnetwork is provided,
+network must also be provided and the subnetwork must belong to the enclosing environment's project and region.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1286,7 +1463,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of instance tags applied to all node VMs. Tags are
+used to identify valid sources or targets for network
+firewalls. Each tag within the list must comply with RFC1035.
+Cannot be updated.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1301,7 +1482,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine zone in which to deploy the VMs running the
+Apache Airflow software, specified as the zone name or
+relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project
+and region.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1309,7 +1494,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
+If unspecified, defaults to 100GB. Cannot be updated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1317,7 +1504,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration for controlling how IPs are allocated in the GKE cluster.
+Structure is documented below.
+Cannot be updated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1325,7 +1515,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine machine type used for cluster instances,
+specified as a name or relative resource name. For example:
+"projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and
+region/zone.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1333,7 +1527,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine network to be used for machine
+communications, specified as a self-link, relative resource name
+(e.g. "projects/{project}/global/networks/{network}"), by name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1341,7 +1538,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of Google API scopes to be made available on all node
+VMs. Cannot be updated. If empty, defaults to
+`["https://www.googleapis.com/auth/cloud-platform"]`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1349,7 +1549,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Google Cloud Platform Service Account to be used by the
+node VMs. If a service account is not specified, the "default"
+Compute Engine service account is used. Cannot be updated. If given,
+note that the service account must have `roles/composer.worker`
+for any GCP resources created under the Cloud Composer Environment.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1357,7 +1562,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine subnetwork to be used for machine
+communications, , specified as a self-link, relative resource name (e.g.
+"projects/{project}/regions/{region}/subnetworks/{subnetwork}"), or by name. If subnetwork is provided,
+network must also be provided and the subnetwork must belong to the enclosing environment's project and region.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1365,7 +1574,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of instance tags applied to all node VMs. Tags are
+used to identify valid sources or targets for network
+firewalls. Each tag within the list must comply with RFC1035.
+Cannot be updated.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1380,7 +1593,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine zone in which to deploy the VMs running the
+Apache Airflow software, specified as the zone name or
+relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project
+and region.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1388,7 +1605,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
+If unspecified, defaults to 100GB. Cannot be updated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1396,7 +1615,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Dict[Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration for controlling how IPs are allocated in the GKE cluster.
+Structure is documented below.
+Cannot be updated.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1404,7 +1626,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine machine type used for cluster instances,
+specified as a name or relative resource name. For example:
+"projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and
+region/zone.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1412,7 +1638,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine network to be used for machine
+communications, specified as a self-link, relative resource name
+(e.g. "projects/{project}/global/networks/{network}"), by name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1420,7 +1649,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of Google API scopes to be made available on all node
+VMs. Cannot be updated. If empty, defaults to
+`["https://www.googleapis.com/auth/cloud-platform"]`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1428,7 +1660,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Google Cloud Platform Service Account to be used by the
+node VMs. If a service account is not specified, the "default"
+Compute Engine service account is used. Cannot be updated. If given,
+note that the service account must have `roles/composer.worker`
+for any GCP resources created under the Cloud Composer Environment.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1436,7 +1673,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Compute Engine subnetwork to be used for machine
+communications, , specified as a self-link, relative resource name (e.g.
+"projects/{project}/regions/{region}/subnetworks/{subnetwork}"), or by name. If subnetwork is provided,
+network must also be provided and the subnetwork must belong to the enclosing environment's project and region.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1444,7 +1685,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of instance tags applied to all node VMs. Tags are
+used to identify valid sources or targets for network
+firewalls. Each tag within the list must comply with RFC1035.
+Cannot be updated.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1474,7 +1719,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
+Defaults to true if the `ip_allocation_block` is present in config.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1482,7 +1729,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP address range used to allocate IP addresses to pods in the cluster.
+Set to blank to have GKE choose a range with the default size.
+Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
+Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
+(e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
+Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1490,7 +1743,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the cluster's secondary range used to allocate IP addresses to pods.
+Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+This field is applicable only when `use_ip_aliases` is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1498,7 +1754,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP address range used to allocate IP addresses in this cluster.
+Set to blank to have GKE choose a range with the default size.
+Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
+Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
+(e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
+Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1506,7 +1768,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the services' secondary range used to allocate IP addresses to the cluster.
+Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
+This field is applicable only when `use_ip_aliases` is true.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1521,7 +1786,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
+Defaults to true if the `ip_allocation_block` is present in config.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1529,7 +1796,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP address range used to allocate IP addresses to pods in the cluster.
+Set to blank to have GKE choose a range with the default size.
+Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
+Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
+(e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
+Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1537,7 +1810,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the cluster's secondary range used to allocate IP addresses to pods.
+Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+This field is applicable only when `use_ip_aliases` is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1545,7 +1821,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP address range used to allocate IP addresses in this cluster.
+Set to blank to have GKE choose a range with the default size.
+Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
+Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
+(e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
+Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1553,7 +1835,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the services' secondary range used to allocate IP addresses to the cluster.
+Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
+This field is applicable only when `use_ip_aliases` is true.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1568,7 +1853,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
+Defaults to true if the `ip_allocation_block` is present in config.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1576,7 +1863,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP address range used to allocate IP addresses to pods in the cluster.
+Set to blank to have GKE choose a range with the default size.
+Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
+Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
+(e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
+Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1584,7 +1877,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the cluster's secondary range used to allocate IP addresses to pods.
+Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+This field is applicable only when `use_ip_aliases` is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1592,7 +1888,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP address range used to allocate IP addresses in this cluster.
+Set to blank to have GKE choose a range with the default size.
+Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
+Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
+(e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
+Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1600,7 +1902,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the services' secondary range used to allocate IP addresses to the cluster.
+Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
+This field is applicable only when `use_ip_aliases` is true.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1615,7 +1920,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
+Defaults to true if the `ip_allocation_block` is present in config.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1623,7 +1930,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP address range used to allocate IP addresses to pods in the cluster.
+Set to blank to have GKE choose a range with the default size.
+Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
+Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
+(e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
+Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1631,7 +1944,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the cluster's secondary range used to allocate IP addresses to pods.
+Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+This field is applicable only when `use_ip_aliases` is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1639,7 +1955,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP address range used to allocate IP addresses in this cluster.
+Set to blank to have GKE choose a range with the default size.
+Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
+Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
+(e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
+Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1647,7 +1969,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the services' secondary range used to allocate IP addresses to the cluster.
+Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
+This field is applicable only when `use_ip_aliases` is true.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1677,7 +2002,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+If true, access to the public endpoint of the GKE cluster is denied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1685,7 +2012,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP range in CIDR notation to use for the hosted master network. This range is used
+for assigning internal IP addresses to the cluster master or set of masters and to the
+internal load balancer virtual IP. This range must not overlap with any other ranges
+in use within the cluster's network.
+If left blank, the default value of '172.16.0.0/28' is used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1700,7 +2032,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+If true, access to the public endpoint of the GKE cluster is denied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1708,7 +2042,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP range in CIDR notation to use for the hosted master network. This range is used
+for assigning internal IP addresses to the cluster master or set of masters and to the
+internal load balancer virtual IP. This range must not overlap with any other ranges
+in use within the cluster's network.
+If left blank, the default value of '172.16.0.0/28' is used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1723,7 +2062,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+If true, access to the public endpoint of the GKE cluster is denied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1731,7 +2072,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP range in CIDR notation to use for the hosted master network. This range is used
+for assigning internal IP addresses to the cluster master or set of masters and to the
+internal load balancer virtual IP. This range must not overlap with any other ranges
+in use within the cluster's network.
+If left blank, the default value of '172.16.0.0/28' is used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1746,7 +2092,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+If true, access to the public endpoint of the GKE cluster is denied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1754,7 +2102,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP range in CIDR notation to use for the hosted master network. This range is used
+for assigning internal IP addresses to the cluster master or set of masters and to the
+internal load balancer virtual IP. This range must not overlap with any other ranges
+in use within the cluster's network.
+If left blank, the default value of '172.16.0.0/28' is used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1784,7 +2137,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+(Optional) Apache Airflow configuration properties to override. Property keys contain the section and property names,
+separated by a hyphen, for example "core-dags_are_paused_at_creation".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1792,7 +2148,26 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes.
+Environment variable names must match the regular expression `[a-zA-Z_][a-zA-Z0-9_]*`.
+They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression
+`AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names:
+```
+AIRFLOW_HOME
+C_FORCE_ROOT
+CONTAINER_NAME
+DAGS_FOLDER
+GCP_PROJECT
+GCS_BUCKET
+GKE_CLUSTER_NAME
+SQL_DATABASE
+SQL_INSTANCE
+SQL_PASSWORD
+SQL_PROJECT
+SQL_REGION
+SQL_USER
+```
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1816,7 +2191,11 @@ for allowed release names.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Custom Python Package Index (PyPI) packages to be installed
+in the environment. Keys refer to the lowercase package name (e.g. "numpy"). Values are the lowercase extras and
+version specifier (e.g. "==1.12.0", "[devel,gcp_api]", "[devel]>=1.8.2, <1.9.2"). To specify a package without
+pinning it to a version specifier, use the empty string as the value.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1842,7 +2221,10 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+(Optional) Apache Airflow configuration properties to override. Property keys contain the section and property names,
+separated by a hyphen, for example "core-dags_are_paused_at_creation".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1850,7 +2232,26 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes.
+Environment variable names must match the regular expression `[a-zA-Z_][a-zA-Z0-9_]*`.
+They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression
+`AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names:
+```
+AIRFLOW_HOME
+C_FORCE_ROOT
+CONTAINER_NAME
+DAGS_FOLDER
+GCP_PROJECT
+GCS_BUCKET
+GKE_CLUSTER_NAME
+SQL_DATABASE
+SQL_INSTANCE
+SQL_PASSWORD
+SQL_PROJECT
+SQL_REGION
+SQL_USER
+```
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1874,7 +2275,11 @@ for allowed release names.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Custom Python Package Index (PyPI) packages to be installed
+in the environment. Keys refer to the lowercase package name (e.g. "numpy"). Values are the lowercase extras and
+version specifier (e.g. "==1.12.0", "[devel,gcp_api]", "[devel]>=1.8.2, <1.9.2"). To specify a package without
+pinning it to a version specifier, use the empty string as the value.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1900,7 +2305,10 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+(Optional) Apache Airflow configuration properties to override. Property keys contain the section and property names,
+separated by a hyphen, for example "core-dags_are_paused_at_creation".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1908,7 +2316,26 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes.
+Environment variable names must match the regular expression `[a-zA-Z_][a-zA-Z0-9_]*`.
+They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression
+`AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names:
+```
+AIRFLOW_HOME
+C_FORCE_ROOT
+CONTAINER_NAME
+DAGS_FOLDER
+GCP_PROJECT
+GCS_BUCKET
+GKE_CLUSTER_NAME
+SQL_DATABASE
+SQL_INSTANCE
+SQL_PASSWORD
+SQL_PROJECT
+SQL_REGION
+SQL_USER
+```
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1932,7 +2359,11 @@ for allowed release names.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Custom Python Package Index (PyPI) packages to be installed
+in the environment. Keys refer to the lowercase package name (e.g. "numpy"). Values are the lowercase extras and
+version specifier (e.g. "==1.12.0", "[devel,gcp_api]", "[devel]>=1.8.2, <1.9.2"). To specify a package without
+pinning it to a version specifier, use the empty string as the value.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1958,7 +2389,10 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+(Optional) Apache Airflow configuration properties to override. Property keys contain the section and property names,
+separated by a hyphen, for example "core-dags_are_paused_at_creation".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1966,7 +2400,26 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes.
+Environment variable names must match the regular expression `[a-zA-Z_][a-zA-Z0-9_]*`.
+They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression
+`AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names:
+```
+AIRFLOW_HOME
+C_FORCE_ROOT
+CONTAINER_NAME
+DAGS_FOLDER
+GCP_PROJECT
+GCS_BUCKET
+GKE_CLUSTER_NAME
+SQL_DATABASE
+SQL_INSTANCE
+SQL_PASSWORD
+SQL_PROJECT
+SQL_REGION
+SQL_USER
+```
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1990,7 +2443,11 @@ for allowed release names.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Custom Python Package Index (PyPI) packages to be installed
+in the environment. Keys refer to the lowercase package name (e.g. "numpy"). Values are the lowercase extras and
+version specifier (e.g. "==1.12.0", "[devel,gcp_api]", "[devel]>=1.8.2, <1.9.2"). To specify a package without
+pinning it to a version specifier, use the empty string as the value.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2020,8 +2477,7 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

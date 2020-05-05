@@ -1078,6 +1078,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#BranchProtectionRequiredPullRequestReviewsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#BranchProtectionRequiredPullRequestReviewsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Inputs.BranchProtectionRequiredPullRequestReviewsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Outputs.BranchProtectionRequiredPullRequestReviews.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1313,6 +1316,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#BranchProtectionRequiredStatusChecksArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#BranchProtectionRequiredStatusChecksOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Inputs.BranchProtectionRequiredStatusChecksArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Outputs.BranchProtectionRequiredStatusChecks.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1451,6 +1457,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#BranchProtectionRestrictionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#BranchProtectionRestrictionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Inputs.BranchProtectionRestrictionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Outputs.BranchProtectionRestrictions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

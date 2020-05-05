@@ -16,6 +16,48 @@ Manages attaching a Volume to a Droplet.
 
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const foobarVolume = new digitalocean.Volume("foobarVolume", {
+    region: "nyc1",
+    size: 100,
+    initialFilesystemType: "ext4",
+    description: "an example volume",
+});
+const foobarDroplet = new digitalocean.Droplet("foobarDroplet", {
+    size: "s-1vcpu-1gb",
+    image: "ubuntu-18-04-x64",
+    region: "nyc1",
+});
+const foobarVolumeAttachment = new digitalocean.VolumeAttachment("foobarVolumeAttachment", {
+    dropletId: foobarDroplet.id,
+    volumeId: foobarVolume.id,
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+foobar_volume = digitalocean.Volume("foobarVolume",
+    region="nyc1",
+    size=100,
+    initial_filesystem_type="ext4",
+    description="an example volume")
+foobar_droplet = digitalocean.Droplet("foobarDroplet",
+    size="s-1vcpu-1gb",
+    image="ubuntu-18-04-x64",
+    region="nyc1")
+foobar_volume_attachment = digitalocean.VolumeAttachment("foobarVolumeAttachment",
+    droplet_id=foobar_droplet.id,
+    volume_id=foobar_volume.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -29,7 +71,7 @@ Manages attaching a Volume to a Droplet.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeAttachment</span><span class="p">(resource_name, opts=None, </span>droplet_id=None<span class="p">, </span>volume_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeAttachment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>droplet_id=None<span class="p">, </span>volume_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

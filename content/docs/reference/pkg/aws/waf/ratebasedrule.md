@@ -52,7 +52,7 @@ const wafrule = new aws.waf.RateBasedRule("wafrule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RateBasedRule</span><span class="p">(resource_name, opts=None, </span>metric_name=None<span class="p">, </span>name=None<span class="p">, </span>predicates=None<span class="p">, </span>rate_key=None<span class="p">, </span>rate_limit=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RateBasedRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>metric_name=None<span class="p">, </span>name=None<span class="p">, </span>predicates=None<span class="p">, </span>rate_key=None<span class="p">, </span>rate_limit=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -275,7 +275,7 @@ The RateBasedRule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -336,7 +336,7 @@ The RateBasedRule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -397,7 +397,7 @@ The RateBasedRule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -458,7 +458,7 @@ The RateBasedRule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -761,7 +761,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -831,7 +831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -901,7 +901,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -971,7 +971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -996,6 +996,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#RateBasedRulePredicateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#RateBasedRulePredicateOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Inputs.RateBasedRulePredicateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Outputs.RateBasedRulePredicate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

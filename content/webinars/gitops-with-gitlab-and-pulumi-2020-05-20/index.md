@@ -45,11 +45,11 @@ main:
     # Webinar title.
     title: "GitOps with Pulumi and GitLab"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-05-20T11:00:00-07:00
+    sortable_date: 2020-05-20T12:00:00-07:00
     # Duration of the webinar.
-    duration: "30 minutes"
+    duration: "45 minutes"
     # Datetime of the webinar.
-    datetime: "WED, MAY 20, 2020 AT 11:00AM PDT"
+    datetime: "WED, MAY 20, 2020 AT 12:00PM PDT"
     # Description of the webinar.
     description: |
         Deploy and update your infrastructure the same way you deliver the rest of your application: with real code delivered through your CI/CD pipeline. Learn how Pulumi’s modern infrastructure as code platform helps your team deliver features faster by helping you to define resources on any cloud using your favorite languages.  Praneet Loke from Pulumi and William Chia from GitLab will show you how to super-charge your team’s velocity with GitOps.

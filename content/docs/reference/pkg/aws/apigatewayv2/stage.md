@@ -42,7 +42,7 @@ const example = new aws.apigatewayv2.Stage("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Stage</span><span class="p">(resource_name, opts=None, </span>access_log_settings=None<span class="p">, </span>api_id=None<span class="p">, </span>auto_deploy=None<span class="p">, </span>client_certificate_id=None<span class="p">, </span>default_route_settings=None<span class="p">, </span>deployment_id=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>route_settings=None<span class="p">, </span>stage_variables=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Stage</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_log_settings=None<span class="p">, </span>api_id=None<span class="p">, </span>auto_deploy=None<span class="p">, </span>client_certificate_id=None<span class="p">, </span>default_route_settings=None<span class="p">, </span>deployment_id=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>route_settings=None<span class="p">, </span>stage_variables=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -312,7 +312,7 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the stage.
+    <dd>{{% md %}}A map of tags to assign to the stage.
 {{% /md %}}</dd>
 
 </dl>
@@ -420,7 +420,7 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the stage.
+    <dd>{{% md %}}A map of tags to assign to the stage.
 {{% /md %}}</dd>
 
 </dl>
@@ -528,7 +528,7 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the stage.
+    <dd>{{% md %}}A map of tags to assign to the stage.
 {{% /md %}}</dd>
 
 </dl>
@@ -636,7 +636,7 @@ Supported only for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the stage.
+    <dd>{{% md %}}A map of tags to assign to the stage.
 {{% /md %}}</dd>
 
 </dl>
@@ -1091,7 +1091,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the stage.
+    <dd>{{% md %}}A map of tags to assign to the stage.
 {{% /md %}}</dd>
 
 </dl>
@@ -1229,7 +1229,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the stage.
+    <dd>{{% md %}}A map of tags to assign to the stage.
 {{% /md %}}</dd>
 
 </dl>
@@ -1367,7 +1367,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the stage.
+    <dd>{{% md %}}A map of tags to assign to the stage.
 {{% /md %}}</dd>
 
 </dl>
@@ -1505,7 +1505,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the stage.
+    <dd>{{% md %}}A map of tags to assign to the stage.
 {{% /md %}}</dd>
 
 </dl>
@@ -1530,6 +1530,9 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#StageAccessLogSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#StageAccessLogSettingsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Inputs.StageAccessLogSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Outputs.StageAccessLogSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1645,6 +1648,9 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#StageDefaultRouteSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#StageDefaultRouteSettingsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Inputs.StageDefaultRouteSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Outputs.StageDefaultRouteSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1876,6 +1882,9 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#StageRouteSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#StageRouteSettingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Inputs.StageRouteSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Outputs.StageRouteSetting.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

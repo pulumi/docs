@@ -26,7 +26,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FunctionEventInvokeConfig</span><span class="p">(resource_name, opts=None, </span>destination_config=None<span class="p">, </span>function_name=None<span class="p">, </span>maximum_event_age_in_seconds=None<span class="p">, </span>maximum_retry_attempts=None<span class="p">, </span>qualifier=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FunctionEventInvokeConfig</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination_config=None<span class="p">, </span>function_name=None<span class="p">, </span>maximum_event_age_in_seconds=None<span class="p">, </span>maximum_retry_attempts=None<span class="p">, </span>qualifier=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -827,6 +827,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionEventInvokeConfigDestinationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionEventInvokeConfigDestinationConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -942,6 +945,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnFailureArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnFailureOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionEventInvokeConfigDestinationConfigOnFailureArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionEventInvokeConfigDestinationConfigOnFailure.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1020,6 +1026,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnSuccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnSuccessOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionEventInvokeConfigDestinationConfigOnSuccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionEventInvokeConfigDestinationConfigOnSuccess.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

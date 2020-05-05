@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-vault/issues">pulumi/pulumi-vault repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/issues">terraform-providers/terraform-provider-vault repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_vault.tokenauth"></span><dl class="class">
+<span class="target" id="module-pulumi_vault.tokenauth"></span><dl class="py class">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.tokenauth.</code><code class="sig-name descname">AuthBackendRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_policies=None</em>, <em class="sig-param">bound_cidrs=None</em>, <em class="sig-param">disallowed_policies=None</em>, <em class="sig-param">explicit_max_ttl=None</em>, <em class="sig-param">orphan=None</em>, <em class="sig-param">path_suffix=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">renewable=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">token_bound_cidrs=None</em>, <em class="sig-param">token_explicit_max_ttl=None</em>, <em class="sig-param">token_max_ttl=None</em>, <em class="sig-param">token_no_default_policy=None</em>, <em class="sig-param">token_num_uses=None</em>, <em class="sig-param">token_period=None</em>, <em class="sig-param">token_policies=None</em>, <em class="sig-param">token_ttl=None</em>, <em class="sig-param">token_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.tokenauth.</code><code class="sig-name descname">AuthBackendRole</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disallowed_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">explicit_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">orphan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_suffix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renewable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_bound_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_explicit_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_no_default_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_num_uses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages Token auth backend role in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/token.html">Vault
 documentation</a> for more
 information.</p>
@@ -67,129 +67,129 @@ requests a different type at generation time.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.allowed_policies">
-<code class="sig-name descname">allowed_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.allowed_policies" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allowed_policies</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.allowed_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of allowed policies for given role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.bound_cidrs">
-<code class="sig-name descname">bound_cidrs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.bound_cidrs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bound_cidrs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.bound_cidrs" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.disallowed_policies">
-<code class="sig-name descname">disallowed_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.disallowed_policies" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">disallowed_policies</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.disallowed_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of disallowed policies for given role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.explicit_max_ttl">
-<code class="sig-name descname">explicit_max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.explicit_max_ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">explicit_max_ttl</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.explicit_max_ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, the
 token will have an explicit max TTL set upon it.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.orphan">
-<code class="sig-name descname">orphan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.orphan" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">orphan</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.orphan" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, tokens created against this policy will be orphan tokens.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.path_suffix">
-<code class="sig-name descname">path_suffix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.path_suffix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">path_suffix</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.path_suffix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tokens created against this role will have the given suffix as part of their path in addition to the role name.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.period">
-<code class="sig-name descname">period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.period" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">period</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.period" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token’s TTL will be set to the
 value of this field. Specified in seconds.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.renewable">
-<code class="sig-name descname">renewable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.renewable" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">renewable</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.renewable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wether to disable the ability of the token to be renewed past its initial TTL.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.role_name">
-<code class="sig-name descname">role_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.role_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.role_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.token_bound_cidrs">
-<code class="sig-name descname">token_bound_cidrs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_bound_cidrs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_bound_cidrs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_bound_cidrs" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.token_explicit_max_ttl">
-<code class="sig-name descname">token_explicit_max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_explicit_max_ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_explicit_max_ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_explicit_max_ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, will encode an
 <a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">explicit max TTL</a>
 onto the token in number of seconds. This is a hard cap even if <code class="docutils literal notranslate"><span class="pre">token_ttl</span></code> and
 <code class="docutils literal notranslate"><span class="pre">token_max_ttl</span></code> would otherwise allow a renewal.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.token_max_ttl">
-<code class="sig-name descname">token_max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_max_ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_max_ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_max_ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.token_no_default_policy">
-<code class="sig-name descname">token_no_default_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_no_default_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_no_default_policy</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_no_default_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.token_num_uses">
-<code class="sig-name descname">token_num_uses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_num_uses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_num_uses</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_num_uses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The
 <a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">period</a>,
 if any, in number of seconds to set on the token.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.token_period">
-<code class="sig-name descname">token_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_period" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_period</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token’s TTL will be set to the
 value of this field. Specified in seconds.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.token_policies">
-<code class="sig-name descname">token_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_policies" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_policies</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generated Token’s Policies</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.token_ttl">
-<code class="sig-name descname">token_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.token_type">
-<code class="sig-name descname">token_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.token_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
 <code class="docutils literal notranslate"><span class="pre">batch</span></code>, or <code class="docutils literal notranslate"><span class="pre">default</span></code> to use the mount’s tuned default (which unless changed will be
 <code class="docutils literal notranslate"><span class="pre">service</span></code> tokens). For token store roles, there are two additional possibilities:
@@ -197,9 +197,9 @@ Its current value will be referenced at renewal time.</p>
 requests a different type at generation time.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_policies=None</em>, <em class="sig-param">bound_cidrs=None</em>, <em class="sig-param">disallowed_policies=None</em>, <em class="sig-param">explicit_max_ttl=None</em>, <em class="sig-param">orphan=None</em>, <em class="sig-param">path_suffix=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">renewable=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">token_bound_cidrs=None</em>, <em class="sig-param">token_explicit_max_ttl=None</em>, <em class="sig-param">token_max_ttl=None</em>, <em class="sig-param">token_no_default_policy=None</em>, <em class="sig-param">token_num_uses=None</em>, <em class="sig-param">token_period=None</em>, <em class="sig-param">token_policies=None</em>, <em class="sig-param">token_ttl=None</em>, <em class="sig-param">token_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disallowed_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">explicit_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">orphan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_suffix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renewable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_bound_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_explicit_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_no_default_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_num_uses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AuthBackendRole resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -255,9 +255,9 @@ requests a different type at generation time.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -273,9 +273,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.tokenauth.AuthBackendRole.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.tokenauth.AuthBackendRole.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

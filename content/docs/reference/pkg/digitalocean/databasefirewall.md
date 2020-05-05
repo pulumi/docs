@@ -15,6 +15,111 @@ connections to your database to trusted sources. You may limit connections to
 specific Droplets, Kubernetes clusters, or IP addresses.
 
 {{% examples %}}
+## Example Usage
+
+{{% example %}}
+### Create a new database firewall allowing multiple IP addresses
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const postgres-example = new digitalocean.DatabaseCluster("postgres-example", {
+    engine: "pg",
+    version: "11",
+    size: "db-s-1vcpu-1gb",
+    region: "nyc1",
+    nodeCount: 1,
+});
+const example-fw = new digitalocean.DatabaseFirewall("example-fw", {
+    clusterId: postgres-example.id,
+    rule: [
+        {
+            type: "ip_addr",
+            value: "192.168.1.1",
+        },
+        {
+            type: "ip_addr",
+            value: "192.0.2.0",
+        },
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+postgres_example = digitalocean.DatabaseCluster("postgres-example",
+    engine="pg",
+    version="11",
+    size="db-s-1vcpu-1gb",
+    region="nyc1",
+    node_count=1)
+example_fw = digitalocean.DatabaseFirewall("example-fw",
+    cluster_id=postgres_example.id,
+    rule=[
+        {
+            "type": "ip_addr",
+            "value": "192.168.1.1",
+        },
+        {
+            "type": "ip_addr",
+            "value": "192.0.2.0",
+        },
+    ])
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a new database firewall allowing a Droplet
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const web = new digitalocean.Droplet("web", {
+    size: "s-1vcpu-1gb",
+    image: "centos-7-x64",
+    region: "nyc3",
+});
+const postgres-example = new digitalocean.DatabaseCluster("postgres-example", {
+    engine: "pg",
+    version: "11",
+    size: "db-s-1vcpu-1gb",
+    region: "nyc1",
+    nodeCount: 1,
+});
+const example-fw = new digitalocean.DatabaseFirewall("example-fw", {
+    clusterId: postgres-example.id,
+    rule: [{
+        type: "droplet",
+        value: web.id,
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+web = digitalocean.Droplet("web",
+    size="s-1vcpu-1gb",
+    image="centos-7-x64",
+    region="nyc3")
+postgres_example = digitalocean.DatabaseCluster("postgres-example",
+    engine="pg",
+    version="11",
+    size="db-s-1vcpu-1gb",
+    region="nyc1",
+    node_count=1)
+example_fw = digitalocean.DatabaseFirewall("example-fw",
+    cluster_id=postgres_example.id,
+    rule=[{
+        "type": "droplet",
+        "value": web.id,
+    }])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -28,7 +133,7 @@ specific Droplets, Kubernetes clusters, or IP addresses.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatabaseFirewall</span><span class="p">(resource_name, opts=None, </span>cluster_id=None<span class="p">, </span>rules=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatabaseFirewall</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -628,6 +733,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#DatabaseFirewallRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#DatabaseFirewallRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.DatabaseFirewallRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.DatabaseFirewallRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -15,6 +15,9 @@ Manages a Event Hubs Consumer Group as a nested resource within an Event Hub.
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.eventhub.EventHubConsumerGroup has been deprecated in favour of azure.eventhub.ConsumerGroup
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.EventHubConsumerGroup has been deprecated in favour of azure.eventhub.ConsumerGroup{{% /md %}}</p>
 
 
 ## Create a EventHubConsumerGroup Resource {#create}

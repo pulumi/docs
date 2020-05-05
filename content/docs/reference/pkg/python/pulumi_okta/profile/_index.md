@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-okta/issues">pulumi/pulumi-okta repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/issues">terraform-providers/terraform-provider-okta repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_okta.profile"></span><dl class="class">
+<span class="target" id="module-pulumi_okta.profile"></span><dl class="py class">
 <dt id="pulumi_okta.profile.Mapping">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.profile.</code><code class="sig-name descname">Mapping</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">delete_when_absent=None</em>, <em class="sig-param">mappings=None</em>, <em class="sig-param">source_id=None</em>, <em class="sig-param">target_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.profile.Mapping" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.profile.</code><code class="sig-name descname">Mapping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_when_absent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mappings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.profile.Mapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Mapping resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -37,28 +37,28 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pushStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_okta.profile.Mapping.delete_when_absent">
-<code class="sig-name descname">delete_when_absent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.profile.Mapping.delete_when_absent" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_when_absent</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.profile.Mapping.delete_when_absent" title="Permalink to this definition">¶</a></dt>
 <dd><p>When turned on this flag will trigger the provider to delete mapping properties that are not defined in config. By
 default, we do not delete missing properties.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_okta.profile.Mapping.source_id">
-<code class="sig-name descname">source_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.profile.Mapping.source_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">source_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.profile.Mapping.source_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The source id of the mapping to manage.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_okta.profile.Mapping.target_id">
-<code class="sig-name descname">target_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.profile.Mapping.target_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">target_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.profile.Mapping.target_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The target id of the mapping to manage.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_okta.profile.Mapping.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">delete_when_absent=None</em>, <em class="sig-param">mappings=None</em>, <em class="sig-param">source_id=None</em>, <em class="sig-param">source_name=None</em>, <em class="sig-param">source_type=None</em>, <em class="sig-param">target_id=None</em>, <em class="sig-param">target_name=None</em>, <em class="sig-param">target_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.profile.Mapping.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_when_absent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mappings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.profile.Mapping.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Mapping resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -82,9 +82,9 @@ default, we do not delete missing properties.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_okta.profile.Mapping.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.profile.Mapping.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.profile.Mapping.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -100,9 +100,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_okta.profile.Mapping.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.profile.Mapping.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.profile.Mapping.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

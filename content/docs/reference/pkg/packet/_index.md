@@ -52,6 +52,6 @@ A Pulumi package for creating and managing X cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`packet` Terraform Provider](https://github.com/terraform-providers/terraform-provider-packet).</dd>
 	<dt>Version</dt>
-	<dd>2.0.1</dd>
+	<dd>2.1.0</dd>
 </dl>
 

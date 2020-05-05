@@ -107,7 +107,7 @@ const exampleRule = new aws.cfg.Rule("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Rule</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>input_parameters=None<span class="p">, </span>maximum_execution_frequency=None<span class="p">, </span>name=None<span class="p">, </span>scope=None<span class="p">, </span>source=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Rule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>input_parameters=None<span class="p">, </span>maximum_execution_frequency=None<span class="p">, </span>name=None<span class="p">, </span>scope=None<span class="p">, </span>source=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -341,7 +341,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -413,7 +413,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -485,7 +485,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -557,7 +557,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -916,7 +916,7 @@ the function to evaluate your AWS resources as documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1006,7 +1006,7 @@ the function to evaluate your AWS resources as documented below.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1096,7 +1096,7 @@ the function to evaluate your AWS resources as documented below.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1186,7 +1186,7 @@ the function to evaluate your AWS resources as documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1211,6 +1211,9 @@ the function to evaluate your AWS resources as documented below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleScopeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Inputs.RuleScopeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Outputs.RuleScope.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1415,6 +1418,9 @@ want to trigger an evaluation for the rule.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Inputs.RuleSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Outputs.RuleSource.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1565,6 +1571,9 @@ want to trigger an evaluation for the rule.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleSourceSourceDetailArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleSourceSourceDetailOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Inputs.RuleSourceSourceDetailArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Outputs.RuleSourceSourceDetail.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

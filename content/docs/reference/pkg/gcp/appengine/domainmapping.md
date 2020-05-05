@@ -1,7 +1,8 @@
 
 ---
 title: "DomainMapping"
-block_external_search_index: true
+title_tag: "Resource DomainMapping | Module appengine | Package GCP"
+meta_desc: "Explore the DomainMapping resource of the appengine module, including examples, input properties, output properties, lookup functions, and supporting types. A domain serving an App Engine application."
 ---
 
 
@@ -44,7 +45,7 @@ const domainMapping = new gcp.appengine.DomainMapping("domain_mapping", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DomainMapping</span><span class="p">(resource_name, opts=None, </span>domain_name=None<span class="p">, </span>override_strategy=None<span class="p">, </span>project=None<span class="p">, </span>ssl_settings=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DomainMapping</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain_name=None<span class="p">, </span>override_strategy=None<span class="p">, </span>project=None<span class="p">, </span>ssl_settings=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -231,7 +232,8 @@ The DomainMapping resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain.
+By default, overrides are rejected.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -250,7 +252,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingsslsettings">Domain<wbr>Mapping<wbr>Ssl<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -275,7 +277,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain.
+By default, overrides are rejected.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -294,7 +297,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingsslsettings">Domain<wbr>Mapping<wbr>Ssl<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -319,7 +322,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain.
+By default, overrides are rejected.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -338,7 +342,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingsslsettings">Domain<wbr>Mapping<wbr>Ssl<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -363,7 +367,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain.
+By default, overrides are rejected.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -382,7 +387,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingsslsettings">Dict[Domain<wbr>Mapping<wbr>Ssl<wbr>Settings]</a></span>
     </dt>
-    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -689,7 +694,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain.
+By default, overrides are rejected.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -718,7 +724,7 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingsslsettings">Domain<wbr>Mapping<wbr>Ssl<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -752,7 +758,8 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain.
+By default, overrides are rejected.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -781,7 +788,7 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingsslsettings">Domain<wbr>Mapping<wbr>Ssl<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -815,7 +822,8 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain.
+By default, overrides are rejected.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -844,7 +852,7 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingsslsettings">Domain<wbr>Mapping<wbr>Ssl<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -878,7 +886,8 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+    <dd>{{% md %}}Whether the domain creation should override any existing mappings for this domain.
+By default, overrides are rejected.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -907,7 +916,7 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingsslsettings">Dict[Domain<wbr>Mapping<wbr>Ssl<wbr>Settings]</a></span>
     </dt>
-    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+    <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1085,7 +1094,9 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSL management type for this domain. If `AUTOMATIC`, a managed certificate is automatically provisioned.
+If `MANUAL`, `certificateId` must be manually specified in order to configure SSL for this domain.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1093,7 +1104,13 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will
+remove SSL support.
+By default, a managed certificate is automatically created for every domain mapping. To omit SSL support
+or to configure SSL manually, specify `SslManagementType.MANUAL` on a `CREATE` or `UPDATE` request. You must be
+authorized to administer the `AuthorizedCertificate` resource to manually map it to a DomainMapping resource.
+Example: 12345.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1101,7 +1118,13 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+ID of the managed `AuthorizedCertificate` resource currently being provisioned, if applicable. Until the new
+managed certificate has been successfully provisioned, the previous SSL state will be preserved. Once the
+provisioning process completes, the `certificateId` field will reflect the new managed certificate and this
+field will be left empty. To remove SSL support while there is still a pending managed certificate, clear the
+`certificateId` field with an update request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1116,7 +1139,9 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSL management type for this domain. If `AUTOMATIC`, a managed certificate is automatically provisioned.
+If `MANUAL`, `certificateId` must be manually specified in order to configure SSL for this domain.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1124,7 +1149,13 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will
+remove SSL support.
+By default, a managed certificate is automatically created for every domain mapping. To omit SSL support
+or to configure SSL manually, specify `SslManagementType.MANUAL` on a `CREATE` or `UPDATE` request. You must be
+authorized to administer the `AuthorizedCertificate` resource to manually map it to a DomainMapping resource.
+Example: 12345.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1132,7 +1163,13 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+ID of the managed `AuthorizedCertificate` resource currently being provisioned, if applicable. Until the new
+managed certificate has been successfully provisioned, the previous SSL state will be preserved. Once the
+provisioning process completes, the `certificateId` field will reflect the new managed certificate and this
+field will be left empty. To remove SSL support while there is still a pending managed certificate, clear the
+`certificateId` field with an update request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1147,7 +1184,9 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSL management type for this domain. If `AUTOMATIC`, a managed certificate is automatically provisioned.
+If `MANUAL`, `certificateId` must be manually specified in order to configure SSL for this domain.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1155,7 +1194,13 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will
+remove SSL support.
+By default, a managed certificate is automatically created for every domain mapping. To omit SSL support
+or to configure SSL manually, specify `SslManagementType.MANUAL` on a `CREATE` or `UPDATE` request. You must be
+authorized to administer the `AuthorizedCertificate` resource to manually map it to a DomainMapping resource.
+Example: 12345.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1163,7 +1208,13 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+ID of the managed `AuthorizedCertificate` resource currently being provisioned, if applicable. Until the new
+managed certificate has been successfully provisioned, the previous SSL state will be preserved. Once the
+provisioning process completes, the `certificateId` field will reflect the new managed certificate and this
+field will be left empty. To remove SSL support while there is still a pending managed certificate, clear the
+`certificateId` field with an update request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1178,7 +1229,9 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSL management type for this domain. If `AUTOMATIC`, a managed certificate is automatically provisioned.
+If `MANUAL`, `certificateId` must be manually specified in order to configure SSL for this domain.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1186,7 +1239,13 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will
+remove SSL support.
+By default, a managed certificate is automatically created for every domain mapping. To omit SSL support
+or to configure SSL manually, specify `SslManagementType.MANUAL` on a `CREATE` or `UPDATE` request. You must be
+authorized to administer the `AuthorizedCertificate` resource to manually map it to a DomainMapping resource.
+Example: 12345.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1194,7 +1253,13 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+ID of the managed `AuthorizedCertificate` resource currently being provisioned, if applicable. Until the new
+managed certificate has been successfully provisioned, the previous SSL state will be preserved. Once the
+provisioning process completes, the `certificateId` field will reflect the new managed certificate and this
+field will be left empty. To remove SSL support while there is still a pending managed certificate, clear the
+`certificateId` field with an update request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1213,8 +1278,7 @@ configuration in order to serve the application via this domain mapping.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

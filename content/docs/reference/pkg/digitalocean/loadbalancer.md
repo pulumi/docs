@@ -27,7 +27,7 @@ modify, and delete Load Balancers.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancer</span><span class="p">(resource_name, opts=None, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>vpc_uuid=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1532,6 +1532,9 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerForwardingRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerForwardingRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.LoadBalancerForwardingRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.LoadBalancerForwardingRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1790,6 +1793,9 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerHealthcheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerHealthcheckOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.LoadBalancerHealthcheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.LoadBalancerHealthcheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2085,6 +2091,9 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerStickySessionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LoadBalancerStickySessionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.LoadBalancerStickySessionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.LoadBalancerStickySessions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

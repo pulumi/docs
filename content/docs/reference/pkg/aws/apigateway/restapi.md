@@ -58,7 +58,7 @@ const example = new aws.apigateway.RestApi("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RestApi</span><span class="p">(resource_name, opts=None, </span>api_key_source=None<span class="p">, </span>binary_media_types=None<span class="p">, </span>body=None<span class="p">, </span>description=None<span class="p">, </span>endpoint_configuration=None<span class="p">, </span>minimum_compression_size=None<span class="p">, </span>name=None<span class="p">, </span>policy=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RestApi</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_key_source=None<span class="p">, </span>binary_media_types=None<span class="p">, </span>body=None<span class="p">, </span>description=None<span class="p">, </span>endpoint_configuration=None<span class="p">, </span>minimum_compression_size=None<span class="p">, </span>name=None<span class="p">, </span>policy=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -308,7 +308,7 @@ The RestApi resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -396,7 +396,7 @@ The RestApi resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -484,7 +484,7 @@ The RestApi resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -572,7 +572,7 @@ The RestApi resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1047,7 +1047,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1173,7 +1173,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1299,7 +1299,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1425,7 +1425,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1450,6 +1450,9 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#RestApiEndpointConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#RestApiEndpointConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Inputs.RestApiEndpointConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Outputs.RestApiEndpointConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -55,7 +55,7 @@ const roleset = new vault.gcp.SecretRoleset("roleset", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretRoleset</span><span class="p">(resource_name, opts=None, </span>backend=None<span class="p">, </span>bindings=None<span class="p">, </span>project=None<span class="p">, </span>roleset=None<span class="p">, </span>secret_type=None<span class="p">, </span>token_scopes=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretRoleset</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend=None<span class="p">, </span>bindings=None<span class="p">, </span>project=None<span class="p">, </span>roleset=None<span class="p">, </span>secret_type=None<span class="p">, </span>token_scopes=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

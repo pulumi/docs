@@ -59,7 +59,7 @@ Image Service set it.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Image</span><span class="p">(resource_name, opts=None, </span>container_format=None<span class="p">, </span>disk_format=None<span class="p">, </span>image_cache_path=None<span class="p">, </span>image_source_url=None<span class="p">, </span>local_file_path=None<span class="p">, </span>min_disk_gb=None<span class="p">, </span>min_ram_mb=None<span class="p">, </span>name=None<span class="p">, </span>properties=None<span class="p">, </span>protected=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>verify_checksum=None<span class="p">, </span>visibility=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Image</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_format=None<span class="p">, </span>disk_format=None<span class="p">, </span>image_cache_path=None<span class="p">, </span>image_source_url=None<span class="p">, </span>local_file_path=None<span class="p">, </span>min_disk_gb=None<span class="p">, </span>min_ram_mb=None<span class="p">, </span>name=None<span class="p">, </span>properties=None<span class="p">, </span>protected=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>verify_checksum=None<span class="p">, </span>visibility=None<span class="p">, </span>web_download=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -265,10 +265,9 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}This is the url of the raw image that will
-be downloaded in the `image_cache_path` before being uploaded to Glance.
-Glance is able to download image from internet but the `gophercloud` library
-does not yet provide a way to do so.
+    <dd>{{% md %}}This is the url of the raw image. If `web_download`
+is not used, then the image will be downloaded in the `image_cache_path` before
+being uploaded to Glance.
 Conflicts with `local_file_path`.
 {{% /md %}}</dd>
 
@@ -279,7 +278,8 @@ Conflicts with `local_file_path`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with `image_source_url`.
+that will be uploaded to Glance. Conflicts with `image_source_url` and
+`web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,7 +361,8 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If false, the checksum will not be verified
-once the image is finished uploading. Defaults to true.
+once the image is finished uploading. Conflicts with `web_download`.
+Defaults to true when not using `web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -373,6 +374,17 @@ once the image is finished uploading. Defaults to true.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Web<wbr>Download</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, the "web-download" import method will
+be used to let Openstack download the image directly from the remote source.
+Conflicts with `local_file_path`. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -416,10 +428,9 @@ visibility depends upon the configuration of the OpenStack cloud.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}This is the url of the raw image that will
-be downloaded in the `image_cache_path` before being uploaded to Glance.
-Glance is able to download image from internet but the `gophercloud` library
-does not yet provide a way to do so.
+    <dd>{{% md %}}This is the url of the raw image. If `web_download`
+is not used, then the image will be downloaded in the `image_cache_path` before
+being uploaded to Glance.
 Conflicts with `local_file_path`.
 {{% /md %}}</dd>
 
@@ -430,7 +441,8 @@ Conflicts with `local_file_path`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with `image_source_url`.
+that will be uploaded to Glance. Conflicts with `image_source_url` and
+`web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,7 +524,8 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If false, the checksum will not be verified
-once the image is finished uploading. Defaults to true.
+once the image is finished uploading. Conflicts with `web_download`.
+Defaults to true when not using `web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -524,6 +537,17 @@ once the image is finished uploading. Defaults to true.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Web<wbr>Download</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, the "web-download" import method will
+be used to let Openstack download the image directly from the remote source.
+Conflicts with `local_file_path`. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -567,10 +591,9 @@ visibility depends upon the configuration of the OpenStack cloud.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}This is the url of the raw image that will
-be downloaded in the `image_cache_path` before being uploaded to Glance.
-Glance is able to download image from internet but the `gophercloud` library
-does not yet provide a way to do so.
+    <dd>{{% md %}}This is the url of the raw image. If `web_download`
+is not used, then the image will be downloaded in the `image_cache_path` before
+being uploaded to Glance.
 Conflicts with `local_file_path`.
 {{% /md %}}</dd>
 
@@ -581,7 +604,8 @@ Conflicts with `local_file_path`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with `image_source_url`.
+that will be uploaded to Glance. Conflicts with `image_source_url` and
+`web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -663,7 +687,8 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If false, the checksum will not be verified
-once the image is finished uploading. Defaults to true.
+once the image is finished uploading. Conflicts with `web_download`.
+Defaults to true when not using `web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -675,6 +700,17 @@ once the image is finished uploading. Defaults to true.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>web<wbr>Download</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If true, the "web-download" import method will
+be used to let Openstack download the image directly from the remote source.
+Conflicts with `local_file_path`. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -718,10 +754,9 @@ visibility depends upon the configuration of the OpenStack cloud.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}This is the url of the raw image that will
-be downloaded in the `image_cache_path` before being uploaded to Glance.
-Glance is able to download image from internet but the `gophercloud` library
-does not yet provide a way to do so.
+    <dd>{{% md %}}This is the url of the raw image. If `web_download`
+is not used, then the image will be downloaded in the `image_cache_path` before
+being uploaded to Glance.
 Conflicts with `local_file_path`.
 {{% /md %}}</dd>
 
@@ -732,7 +767,8 @@ Conflicts with `local_file_path`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with `image_source_url`.
+that will be uploaded to Glance. Conflicts with `image_source_url` and
+`web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -814,7 +850,8 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If false, the checksum will not be verified
-once the image is finished uploading. Defaults to true.
+once the image is finished uploading. Conflicts with `web_download`.
+Defaults to true when not using `web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -826,6 +863,17 @@ once the image is finished uploading. Defaults to true.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>web_<wbr>download</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, the "web-download" import method will
+be used to let Openstack download the image directly from the remote source.
+Conflicts with `local_file_path`. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -1302,7 +1350,7 @@ Get an existing Image resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>checksum=None<span class="p">, </span>container_format=None<span class="p">, </span>created_at=None<span class="p">, </span>disk_format=None<span class="p">, </span>file=None<span class="p">, </span>image_cache_path=None<span class="p">, </span>image_source_url=None<span class="p">, </span>local_file_path=None<span class="p">, </span>metadata=None<span class="p">, </span>min_disk_gb=None<span class="p">, </span>min_ram_mb=None<span class="p">, </span>name=None<span class="p">, </span>owner=None<span class="p">, </span>properties=None<span class="p">, </span>protected=None<span class="p">, </span>region=None<span class="p">, </span>schema=None<span class="p">, </span>size_bytes=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>update_at=None<span class="p">, </span>updated_at=None<span class="p">, </span>verify_checksum=None<span class="p">, </span>visibility=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>checksum=None<span class="p">, </span>container_format=None<span class="p">, </span>created_at=None<span class="p">, </span>disk_format=None<span class="p">, </span>file=None<span class="p">, </span>image_cache_path=None<span class="p">, </span>image_source_url=None<span class="p">, </span>local_file_path=None<span class="p">, </span>metadata=None<span class="p">, </span>min_disk_gb=None<span class="p">, </span>min_ram_mb=None<span class="p">, </span>name=None<span class="p">, </span>owner=None<span class="p">, </span>properties=None<span class="p">, </span>protected=None<span class="p">, </span>region=None<span class="p">, </span>schema=None<span class="p">, </span>size_bytes=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>update_at=None<span class="p">, </span>updated_at=None<span class="p">, </span>verify_checksum=None<span class="p">, </span>visibility=None<span class="p">, </span>web_download=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1479,10 +1527,9 @@ or the path to retrieve it.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}This is the url of the raw image that will
-be downloaded in the `image_cache_path` before being uploaded to Glance.
-Glance is able to download image from internet but the `gophercloud` library
-does not yet provide a way to do so.
+    <dd>{{% md %}}This is the url of the raw image. If `web_download`
+is not used, then the image will be downloaded in the `image_cache_path` before
+being uploaded to Glance.
 Conflicts with `local_file_path`.
 {{% /md %}}</dd>
 
@@ -1493,7 +1540,8 @@ Conflicts with `local_file_path`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with `image_source_url`.
+that will be uploaded to Glance. Conflicts with `image_source_url` and
+`web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1642,7 +1690,8 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If false, the checksum will not be verified
-once the image is finished uploading. Defaults to true.
+once the image is finished uploading. Conflicts with `web_download`.
+Defaults to true when not using `web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1654,6 +1703,17 @@ once the image is finished uploading. Defaults to true.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Web<wbr>Download</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, the "web-download" import method will
+be used to let Openstack download the image directly from the remote source.
+Conflicts with `local_file_path`. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -1726,10 +1786,9 @@ or the path to retrieve it.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}This is the url of the raw image that will
-be downloaded in the `image_cache_path` before being uploaded to Glance.
-Glance is able to download image from internet but the `gophercloud` library
-does not yet provide a way to do so.
+    <dd>{{% md %}}This is the url of the raw image. If `web_download`
+is not used, then the image will be downloaded in the `image_cache_path` before
+being uploaded to Glance.
 Conflicts with `local_file_path`.
 {{% /md %}}</dd>
 
@@ -1740,7 +1799,8 @@ Conflicts with `local_file_path`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with `image_source_url`.
+that will be uploaded to Glance. Conflicts with `image_source_url` and
+`web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1889,7 +1949,8 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If false, the checksum will not be verified
-once the image is finished uploading. Defaults to true.
+once the image is finished uploading. Conflicts with `web_download`.
+Defaults to true when not using `web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1901,6 +1962,17 @@ once the image is finished uploading. Defaults to true.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Web<wbr>Download</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, the "web-download" import method will
+be used to let Openstack download the image directly from the remote source.
+Conflicts with `local_file_path`. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -1973,10 +2045,9 @@ or the path to retrieve it.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}This is the url of the raw image that will
-be downloaded in the `image_cache_path` before being uploaded to Glance.
-Glance is able to download image from internet but the `gophercloud` library
-does not yet provide a way to do so.
+    <dd>{{% md %}}This is the url of the raw image. If `web_download`
+is not used, then the image will be downloaded in the `image_cache_path` before
+being uploaded to Glance.
 Conflicts with `local_file_path`.
 {{% /md %}}</dd>
 
@@ -1987,7 +2058,8 @@ Conflicts with `local_file_path`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with `image_source_url`.
+that will be uploaded to Glance. Conflicts with `image_source_url` and
+`web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2136,7 +2208,8 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If false, the checksum will not be verified
-once the image is finished uploading. Defaults to true.
+once the image is finished uploading. Conflicts with `web_download`.
+Defaults to true when not using `web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2148,6 +2221,17 @@ once the image is finished uploading. Defaults to true.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>web<wbr>Download</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If true, the "web-download" import method will
+be used to let Openstack download the image directly from the remote source.
+Conflicts with `local_file_path`. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -2220,10 +2304,9 @@ or the path to retrieve it.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}This is the url of the raw image that will
-be downloaded in the `image_cache_path` before being uploaded to Glance.
-Glance is able to download image from internet but the `gophercloud` library
-does not yet provide a way to do so.
+    <dd>{{% md %}}This is the url of the raw image. If `web_download`
+is not used, then the image will be downloaded in the `image_cache_path` before
+being uploaded to Glance.
 Conflicts with `local_file_path`.
 {{% /md %}}</dd>
 
@@ -2234,7 +2317,8 @@ Conflicts with `local_file_path`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with `image_source_url`.
+that will be uploaded to Glance. Conflicts with `image_source_url` and
+`web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2383,7 +2467,8 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If false, the checksum will not be verified
-once the image is finished uploading. Defaults to true.
+once the image is finished uploading. Conflicts with `web_download`.
+Defaults to true when not using `web_download`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2395,6 +2480,17 @@ once the image is finished uploading. Defaults to true.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>web_<wbr>download</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, the "web-download" import method will
+be used to let Openstack download the image directly from the remote source.
+Conflicts with `local_file_path`. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>

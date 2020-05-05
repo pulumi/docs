@@ -11,10 +11,10 @@ meta_desc: "Explore the ClusterInstance resource of the docdb module, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an DocDB Cluster Resource Instance. A Cluster Instance Resource defines
-attributes that are specific to a single instance in a [DocDB Cluster][1].
+attributes that are specific to a single instance in a [DocDB Cluster](https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html).
 
 You do not designate a primary and subsequent replicas. Instead, you simply add DocDB
-Instances and DocDB manages the replication. You can use the [count][3]
+Instances and DocDB manages the replication. You can use the [count](https://www.terraform.io/docs/configuration/resources.html#count)
 meta-parameter to make multiple instances and join them all to the same DocDB
 Cluster, or you may specify different Cluster Instance resources with various
 `instance_class` sizes.
@@ -61,7 +61,7 @@ for (let i = 0; i < 2; i++) {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClusterInstance</span><span class="p">(resource_name, opts=None, </span>apply_immediately=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>availability_zone=None<span class="p">, </span>ca_cert_identifier=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>engine=None<span class="p">, </span>identifier=None<span class="p">, </span>identifier_prefix=None<span class="p">, </span>instance_class=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>promotion_tier=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClusterInstance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>availability_zone=None<span class="p">, </span>ca_cert_identifier=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>engine=None<span class="p">, </span>identifier=None<span class="p">, </span>identifier_prefix=None<span class="p">, </span>instance_class=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>promotion_tier=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -248,8 +248,8 @@ The ClusterInstance resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
+    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
+supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
@@ -347,7 +347,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -372,8 +372,8 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
+    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
+supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
@@ -471,7 +471,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -496,8 +496,8 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
+    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
+supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
@@ -595,7 +595,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -620,8 +620,8 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
+    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
+supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
@@ -719,7 +719,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -1442,8 +1442,8 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
+    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
+supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
@@ -1521,7 +1521,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1664,8 +1664,8 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
+    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
+supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
@@ -1743,7 +1743,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1886,8 +1886,8 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
+    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
+supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
@@ -1965,7 +1965,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2108,8 +2108,8 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
-supports the below instance classes. Please see [AWS Documentation][4] for complete details.
+    <dd>{{% md %}}The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-manage-performance.html#db-cluster-manage-scaling-instance). DocDB currently
+supports the below instance classes. Please see [AWS Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/db-instance-classes.html#db-instance-class-specs) for complete details.
 - db.r4.large
 - db.r4.xlarge
 - db.r4.2xlarge
@@ -2187,7 +2187,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

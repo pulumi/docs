@@ -42,7 +42,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NfsFileShare</span><span class="p">(resource_name, opts=None, </span>client_lists=None<span class="p">, </span>default_storage_class=None<span class="p">, </span>gateway_arn=None<span class="p">, </span>guess_mime_type_enabled=None<span class="p">, </span>kms_encrypted=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>location_arn=None<span class="p">, </span>nfs_file_share_defaults=None<span class="p">, </span>object_acl=None<span class="p">, </span>read_only=None<span class="p">, </span>requester_pays=None<span class="p">, </span>role_arn=None<span class="p">, </span>squash=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NfsFileShare</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_lists=None<span class="p">, </span>default_storage_class=None<span class="p">, </span>gateway_arn=None<span class="p">, </span>guess_mime_type_enabled=None<span class="p">, </span>kms_encrypted=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>location_arn=None<span class="p">, </span>nfs_file_share_defaults=None<span class="p">, </span>object_acl=None<span class="p">, </span>read_only=None<span class="p">, </span>requester_pays=None<span class="p">, </span>role_arn=None<span class="p">, </span>squash=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -337,7 +337,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -470,7 +470,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -603,7 +603,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -736,7 +736,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1201,7 +1201,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1361,7 +1361,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1521,7 +1521,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1681,7 +1681,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1706,6 +1706,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#NfsFileShareNfsFileShareDefaultsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#NfsFileShareNfsFileShareDefaultsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.Inputs.NfsFileShareNfsFileShareDefaultsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.Outputs.NfsFileShareNfsFileShareDefaults.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

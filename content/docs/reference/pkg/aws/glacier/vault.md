@@ -67,7 +67,7 @@ const myArchive = new aws.glacier.Vault("my_archive", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Vault</span><span class="p">(resource_name, opts=None, </span>access_policy=None<span class="p">, </span>name=None<span class="p">, </span>notifications=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Vault</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_policy=None<span class="p">, </span>name=None<span class="p">, </span>notifications=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -273,7 +273,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -317,7 +317,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -361,7 +361,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -405,7 +405,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -736,7 +736,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -798,7 +798,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -860,7 +860,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -922,7 +922,7 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -947,6 +947,9 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultNotificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultNotificationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glacier.Inputs.VaultNotificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glacier.Outputs.VaultNotification.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

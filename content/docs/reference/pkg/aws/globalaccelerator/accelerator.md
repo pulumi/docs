@@ -45,7 +45,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Accelerator</span><span class="p">(resource_name, opts=None, </span>attributes=None<span class="p">, </span>enabled=None<span class="p">, </span>ip_address_type=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Accelerator</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>enabled=None<span class="p">, </span>ip_address_type=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -259,7 +259,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -311,7 +311,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -363,7 +363,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -415,7 +415,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -444,7 +444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][1] to the Global Accelerator. This attribute
+route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 {{% /md %}}</dd>
 
@@ -488,7 +488,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][1] to the Global Accelerator. This attribute
+route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 {{% /md %}}</dd>
 
@@ -532,7 +532,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][1] to the Global Accelerator. This attribute
+route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 {{% /md %}}</dd>
 
@@ -576,7 +576,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][1] to the Global Accelerator. This attribute
+route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 {{% /md %}}</dd>
 
@@ -755,7 +755,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][1] to the Global Accelerator. This attribute
+route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 {{% /md %}}</dd>
 
@@ -809,7 +809,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -836,7 +836,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][1] to the Global Accelerator. This attribute
+route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 {{% /md %}}</dd>
 
@@ -890,7 +890,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -917,7 +917,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][1] to the Global Accelerator. This attribute
+route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 {{% /md %}}</dd>
 
@@ -971,7 +971,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -998,7 +998,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][1] to the Global Accelerator. This attribute
+route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
 is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 {{% /md %}}</dd>
 
@@ -1052,7 +1052,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1077,6 +1077,9 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#AcceleratorAttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#AcceleratorAttributesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.Inputs.AcceleratorAttributesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.Outputs.AcceleratorAttributes.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1228,6 +1231,9 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#AcceleratorIpSetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.Outputs.AcceleratorIpSet.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

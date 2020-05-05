@@ -46,7 +46,7 @@ const task = new aws.emr.InstanceGroup("task", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceGroup</span><span class="p">(resource_name, opts=None, </span>autoscaling_policy=None<span class="p">, </span>bid_price=None<span class="p">, </span>cluster_id=None<span class="p">, </span>configurations_json=None<span class="p">, </span>ebs_configs=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>instance_count=None<span class="p">, </span>instance_type=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscaling_policy=None<span class="p">, </span>bid_price=None<span class="p">, </span>cluster_id=None<span class="p">, </span>configurations_json=None<span class="p">, </span>ebs_configs=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>instance_count=None<span class="p">, </span>instance_type=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1262,6 +1262,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#InstanceGroupEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#InstanceGroupEbsConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.InstanceGroupEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.InstanceGroupEbsConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

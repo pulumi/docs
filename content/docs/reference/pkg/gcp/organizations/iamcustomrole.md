@@ -1,7 +1,8 @@
 
 ---
 title: "IAMCustomRole"
-block_external_search_index: true
+title_tag: "Resource IAMCustomRole | Module organizations | Package GCP"
+meta_desc: "Explore the IAMCustomRole resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. Allows management of a customized Cloud IAM organization role. For more information see"
 ---
 
 
@@ -58,7 +59,7 @@ const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IAMCustomRole</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>org_id=None<span class="p">, </span>permissions=None<span class="p">, </span>role_id=None<span class="p">, </span>stage=None<span class="p">, </span>title=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IAMCustomRole</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>org_id=None<span class="p">, </span>permissions=None<span class="p">, </span>role_id=None<span class="p">, </span>stage=None<span class="p">, </span>title=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1087,8 +1088,7 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

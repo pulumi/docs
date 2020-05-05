@@ -13,6 +13,7 @@ meta_desc: "Explore the ZipBlob resource of the storage module, including exampl
 
 Deprecated: ZipBlob resource is deprecated in the 2.0 version of the provider. Use Blob resource instead.
 
+<p class="resource-deprecated">Deprecated: {{% md %}}ZipBlob resource is deprecated in the 2.0 version of the provider. Use Blob resource instead.{{% /md %}}</p>
 
 
 ## Create a ZipBlob Resource {#create}

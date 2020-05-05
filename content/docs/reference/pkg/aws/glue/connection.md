@@ -69,7 +69,7 @@ const example = new aws.glue.Connection("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Connection</span><span class="p">(resource_name, opts=None, </span>catalog_id=None<span class="p">, </span>connection_properties=None<span class="p">, </span>connection_type=None<span class="p">, </span>description=None<span class="p">, </span>match_criterias=None<span class="p">, </span>name=None<span class="p">, </span>physical_connection_requirements=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Connection</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>catalog_id=None<span class="p">, </span>connection_properties=None<span class="p">, </span>connection_type=None<span class="p">, </span>description=None<span class="p">, </span>match_criterias=None<span class="p">, </span>name=None<span class="p">, </span>physical_connection_requirements=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -265,7 +265,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -335,7 +335,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -405,7 +405,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -475,7 +475,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -742,7 +742,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -812,7 +812,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -882,7 +882,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -952,7 +952,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the connection. Defaults to `JBDC`.
+    <dd>{{% md %}}The type of the connection. Supported are: `JDBC`, `MONGODB`. Defaults to `JBDC`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1013,6 +1013,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#ConnectionPhysicalConnectionRequirementsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#ConnectionPhysicalConnectionRequirementsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.ConnectionPhysicalConnectionRequirementsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.ConnectionPhysicalConnectionRequirements.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

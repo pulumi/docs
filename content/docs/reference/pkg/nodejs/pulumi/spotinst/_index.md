@@ -71,7 +71,7 @@ import * as spotinst from "@pulumi/spotinst";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="HealthCheck" data-link-title="HealthCheck">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L42">
         Resource <strong>HealthCheck</strong>
     </a>
 </h3>
@@ -111,7 +111,7 @@ const httpCheck = new spotinst.HealthCheck("httpCheck", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/health_check.html.markdown.
 
 <h4 class="pdoc-member-header" id="HealthCheck-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -125,7 +125,7 @@ Create a HealthCheck resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="HealthCheck-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -136,14 +136,14 @@ Get an existing HealthCheck resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="HealthCheck-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HealthCheck-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -154,7 +154,7 @@ Returns true if the given object is an instance of HealthCheck.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="HealthCheck-check">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L72">property <b>check</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L72">property <b>check</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>check: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#HealthCheckCheck'>HealthCheckCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Describes the check to execute.
 
 <h4 class="pdoc-member-header" id="HealthCheck-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -171,7 +171,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="HealthCheck-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -179,17 +179,17 @@ deployments and may be missing (undefined) during planning phases.
 The name of the health check.
 
 <h4 class="pdoc-member-header" id="HealthCheck-proxyAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L77">property <b>proxyAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L77">property <b>proxyAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>proxyAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="HealthCheck-proxyPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L78">property <b>proxyPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L78">property <b>proxyPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>proxyPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="HealthCheck-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L82">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L82">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -197,7 +197,7 @@ The name of the health check.
 The ID of the resource to check.
 
 <h4 class="pdoc-member-header" id="HealthCheck-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -206,7 +206,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/provider.ts#L17">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -221,7 +221,7 @@ construction to achieve fine-grained programmatic control over provider settings
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/index.html.markdown.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L30"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/provider.ts#L30"> <b>constructor</b></a>
 </h4>
 
 
@@ -235,14 +235,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/provider.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L25">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/provider.ts#L25">method <b>isInstance</b></a>
 </h4>
 
 
@@ -253,14 +253,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L17">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/provider.ts#L17">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/provider.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -269,7 +269,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/provider.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -278,7 +278,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Subscription" data-link-title="Subscription">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L38">
         Resource <strong>Subscription</strong>
     </a>
 </h3>
@@ -314,7 +314,7 @@ const defaultSubscription = new spotinst.Subscription("default-subscription", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/subscription.html.markdown.
 
 <h4 class="pdoc-member-header" id="Subscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -328,7 +328,7 @@ Create a Subscription resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Subscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -339,14 +339,14 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Subscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Subscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -357,7 +357,7 @@ Returns true if the given object is an instance of Subscription.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Subscription-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L68">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L68">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -365,7 +365,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The endpoint the notification will be sent to: url in case of `"http"`/`"https"`, email address in case of `"email"`/`"email-json"`, sns-topic-arn in case of `"aws-sns"`.
 
 <h4 class="pdoc-member-header" id="Subscription-eventType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L72">property <b>eventType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L72">property <b>eventType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -373,7 +373,7 @@ The endpoint the notification will be sent to: url in case of `"http"`/`"https"`
 The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`.
 
 <h4 class="pdoc-member-header" id="Subscription-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L76">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L76">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTA
 The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
 
 <h4 class="pdoc-member-header" id="Subscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -390,7 +390,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Subscription-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L80">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L80">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -398,7 +398,7 @@ deployments and may be missing (undefined) during planning phases.
 The protocol to send the notification. Valid values: `"http"`, `"https"`, `"email"`, `"email-json"`, `"aws-sns"`, `"web"`.
 
 <h4 class="pdoc-member-header" id="Subscription-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L84">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L84">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -406,7 +406,7 @@ The protocol to send the notification. Valid values: `"http"`, `"https"`, `"emai
 Spotinst Resource ID (Elastigroup ID).
 
 <h4 class="pdoc-member-header" id="Subscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -418,7 +418,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -427,7 +427,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -436,7 +436,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -445,7 +445,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -454,7 +454,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="HealthCheckArgs" data-link-title="HealthCheckArgs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L149">
         interface <strong>HealthCheckArgs</strong>
     </a>
 </h3>
@@ -464,7 +464,7 @@ deployments.
 The set of arguments for constructing a HealthCheck resource.
 
 <h4 class="pdoc-member-header" id="HealthCheckArgs-check">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L153">property <b>check</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L153">property <b>check</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>check?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#HealthCheckCheck'>HealthCheckCheck</a>&gt;;</code></pre>
@@ -472,7 +472,7 @@ The set of arguments for constructing a HealthCheck resource.
 Describes the check to execute.
 
 <h4 class="pdoc-member-header" id="HealthCheckArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L157">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -480,17 +480,17 @@ Describes the check to execute.
 The name of the health check.
 
 <h4 class="pdoc-member-header" id="HealthCheckArgs-proxyAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L158">property <b>proxyAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L158">property <b>proxyAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="HealthCheckArgs-proxyPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L159">property <b>proxyPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L159">property <b>proxyPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="HealthCheckArgs-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L163">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L163">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -498,7 +498,7 @@ The name of the health check.
 The ID of the resource to check.
 
 <h3 class="pdoc-module-header" id="HealthCheckState" data-link-title="HealthCheckState">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L129">
         interface <strong>HealthCheckState</strong>
     </a>
 </h3>
@@ -508,7 +508,7 @@ The ID of the resource to check.
 Input properties used for looking up and filtering HealthCheck resources.
 
 <h4 class="pdoc-member-header" id="HealthCheckState-check">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L133">property <b>check</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L133">property <b>check</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>check?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#HealthCheckCheck'>HealthCheckCheck</a>&gt;;</code></pre>
@@ -516,7 +516,7 @@ Input properties used for looking up and filtering HealthCheck resources.
 Describes the check to execute.
 
 <h4 class="pdoc-member-header" id="HealthCheckState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L137">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L137">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -524,17 +524,17 @@ Describes the check to execute.
 The name of the health check.
 
 <h4 class="pdoc-member-header" id="HealthCheckState-proxyAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L138">property <b>proxyAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L138">property <b>proxyAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="HealthCheckState-proxyPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L139">property <b>proxyPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L139">property <b>proxyPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="HealthCheckState-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/healthCheck.ts#L143">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/healthCheck.ts#L143">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ The name of the health check.
 The ID of the resource to check.
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/provider.ts#L60">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -552,7 +552,7 @@ The ID of the resource to check.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L64">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/provider.ts#L64">property <b>account</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>account?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -560,7 +560,7 @@ The set of arguments for constructing a Provider resource.
 Spotinst Account ID
 
 <h4 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L68">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/provider.ts#L68">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -568,7 +568,7 @@ Spotinst Account ID
 Spotinst Personal API Access Token
 
 <h3 class="pdoc-module-header" id="SubscriptionArgs" data-link-title="SubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L163">
         interface <strong>SubscriptionArgs</strong>
     </a>
 </h3>
@@ -578,7 +578,7 @@ Spotinst Personal API Access Token
 The set of arguments for constructing a Subscription resource.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L167">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L167">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -586,7 +586,7 @@ The set of arguments for constructing a Subscription resource.
 The endpoint the notification will be sent to: url in case of `"http"`/`"https"`, email address in case of `"email"`/`"email-json"`, sns-topic-arn in case of `"aws-sns"`.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-eventType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L171">property <b>eventType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L171">property <b>eventType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -594,7 +594,7 @@ The endpoint the notification will be sent to: url in case of `"http"`/`"https"`
 The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L175">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L175">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -602,7 +602,7 @@ The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTA
 The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L179">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L179">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -610,7 +610,7 @@ The format of the notification content (JSON Format - Key+Value). Valid values: 
 The protocol to send the notification. Valid values: `"http"`, `"https"`, `"email"`, `"email-json"`, `"aws-sns"`, `"web"`.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L183">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L183">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -618,7 +618,7 @@ The protocol to send the notification. Valid values: `"http"`, `"https"`, `"emai
 Spotinst Resource ID (Elastigroup ID).
 
 <h3 class="pdoc-module-header" id="SubscriptionState" data-link-title="SubscriptionState">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L137">
         interface <strong>SubscriptionState</strong>
     </a>
 </h3>
@@ -628,7 +628,7 @@ Spotinst Resource ID (Elastigroup ID).
 Input properties used for looking up and filtering Subscription resources.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L141">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L141">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -636,7 +636,7 @@ Input properties used for looking up and filtering Subscription resources.
 The endpoint the notification will be sent to: url in case of `"http"`/`"https"`, email address in case of `"email"`/`"email-json"`, sns-topic-arn in case of `"aws-sns"`.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-eventType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L145">property <b>eventType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L145">property <b>eventType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -644,7 +644,7 @@ The endpoint the notification will be sent to: url in case of `"http"`/`"https"`
 The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTANCE_TERMINATE"`, `"AWS_EC2_INSTANCE_TERMINATED"`, `"AWS_EC2_INSTANCE_LAUNCH"`, `"AWS_EC2_INSTANCE_UNHEALTHY_IN_ELB"`, `"GROUP_ROLL_FAILED"`, `"GROUP_ROLL_FINISHED"`, `"CANT_SCALE_UP_GROUP_MAX_CAPACITY"`, `"GROUP_UPDATED"`, `"AWS_EC2_CANT_SPIN_OD"`, `"AWS_EMR_PROVISION_TIMEOUT"`, `"AWS_EC2_INSTANCE_READY_SIGNAL_TIMEOUT"`.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L149">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L149">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -652,7 +652,7 @@ The event to send the notification when triggered. Valid values: `"AWS_EC2_INSTA
 The format of the notification content (JSON Format - Key+Value). Valid values: `"%instance-id%"`, `"%event%"`, `"%resource-id%"`, `"%resource-name%"`.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L153">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L153">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -660,7 +660,7 @@ The format of the notification content (JSON Format - Key+Value). Valid values: 
 The protocol to send the notification. Valid values: `"http"`, `"https"`, `"email"`, `"email-json"`, `"aws-sns"`, `"web"`.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/subscription.ts#L157">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/subscription.ts#L157">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

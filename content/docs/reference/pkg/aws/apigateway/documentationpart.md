@@ -46,7 +46,7 @@ const exampleDocumentationPart = new aws.apigateway.DocumentationPart("example",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DocumentationPart</span><span class="p">(resource_name, opts=None, </span>location=None<span class="p">, </span>properties=None<span class="p">, </span>rest_api_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DocumentationPart</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>location=None<span class="p">, </span>properties=None<span class="p">, </span>rest_api_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -702,6 +702,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#DocumentationPartLocationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#DocumentationPartLocationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Inputs.DocumentationPartLocationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Outputs.DocumentationPartLocation.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

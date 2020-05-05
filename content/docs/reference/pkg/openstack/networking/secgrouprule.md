@@ -50,7 +50,7 @@ const secgroupRule1 = new openstack.networking.SecGroupRule("secgroup_rule_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecGroupRule</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>direction=None<span class="p">, </span>ethertype=None<span class="p">, </span>port_range_max=None<span class="p">, </span>port_range_min=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>remote_group_id=None<span class="p">, </span>remote_ip_prefix=None<span class="p">, </span>security_group_id=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecGroupRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>direction=None<span class="p">, </span>ethertype=None<span class="p">, </span>port_range_max=None<span class="p">, </span>port_range_min=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>remote_group_id=None<span class="p">, </span>remote_ip_prefix=None<span class="p">, </span>security_group_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

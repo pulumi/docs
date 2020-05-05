@@ -57,7 +57,7 @@ const test = new aws.dms.Endpoint("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Endpoint</span><span class="p">(resource_name, opts=None, </span>certificate_arn=None<span class="p">, </span>database_name=None<span class="p">, </span>elasticsearch_settings=None<span class="p">, </span>endpoint_id=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>engine_name=None<span class="p">, </span>extra_connection_attributes=None<span class="p">, </span>kinesis_settings=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>mongodb_settings=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>s3_settings=None<span class="p">, </span>server_name=None<span class="p">, </span>service_access_role=None<span class="p">, </span>ssl_mode=None<span class="p">, </span>tags=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Endpoint</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_arn=None<span class="p">, </span>database_name=None<span class="p">, </span>elasticsearch_settings=None<span class="p">, </span>endpoint_id=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>engine_name=None<span class="p">, </span>extra_connection_attributes=None<span class="p">, </span>kafka_settings=None<span class="p">, </span>kinesis_settings=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>mongodb_settings=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>s3_settings=None<span class="p">, </span>server_name=None<span class="p">, </span>service_access_role=None<span class="p">, </span>ssl_mode=None<span class="p">, </span>tags=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -253,7 +253,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | elasticsearch | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -280,7 +280,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Elasticsearch. Available settings are `service_access_role_arn`, `endpoint_uri`, `error_retry_duration` (default: `300`) and `full_load_error_percentage` (default: `10`). For more details, see [Using an Amazon Elasticsearch Service Cluster as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html).
+    <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -294,11 +294,20 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>Kafka<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Kinesis<wbr>Settings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Kinesis endpoint. Available settings are `message_format`, `service_access_role_arn`, and `stream_arn`. For more details, see [Using Amazon Kinesis Data Streams as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html).
+    <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -316,7 +325,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
+    <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -343,7 +352,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
+    <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -379,7 +388,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -422,7 +431,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | elasticsearch | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -449,7 +458,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Elasticsearch. Available settings are `service_access_role_arn`, `endpoint_uri`, `error_retry_duration` (default: `300`) and `full_load_error_percentage` (default: `10`). For more details, see [Using an Amazon Elasticsearch Service Cluster as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html).
+    <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -463,11 +472,20 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>Kafka<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Kinesis<wbr>Settings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Kinesis endpoint. Available settings are `message_format`, `service_access_role_arn`, and `stream_arn`. For more details, see [Using Amazon Kinesis Data Streams as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html).
+    <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -485,7 +503,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
+    <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,7 +530,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
+    <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -548,7 +566,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -591,7 +609,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | elasticsearch | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -618,7 +636,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Elasticsearch. Available settings are `service_access_role_arn`, `endpoint_uri`, `error_retry_duration` (default: `300`) and `full_load_error_percentage` (default: `10`). For more details, see [Using an Amazon Elasticsearch Service Cluster as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html).
+    <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -632,11 +650,20 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>kafka<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>kinesis<wbr>Settings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Kinesis endpoint. Available settings are `message_format`, `service_access_role_arn`, and `stream_arn`. For more details, see [Using Amazon Kinesis Data Streams as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html).
+    <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -654,7 +681,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
+    <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -681,7 +708,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
+    <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -717,7 +744,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -760,7 +787,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | elasticsearch | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -787,7 +814,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Dict[Endpoint<wbr>Elasticsearch<wbr>Settings]</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Elasticsearch. Available settings are `service_access_role_arn`, `endpoint_uri`, `error_retry_duration` (default: `300`) and `full_load_error_percentage` (default: `10`). For more details, see [Using an Amazon Elasticsearch Service Cluster as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html).
+    <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -801,11 +828,20 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>kafka_<wbr>settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Dict[Endpoint<wbr>Kafka<wbr>Settings]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>kinesis_<wbr>settings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Dict[Endpoint<wbr>Kinesis<wbr>Settings]</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Kinesis endpoint. Available settings are `message_format`, `service_access_role_arn`, and `stream_arn`. For more details, see [Using Amazon Kinesis Data Streams as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html).
+    <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -823,7 +859,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Dict[Endpoint<wbr>Mongodb<wbr>Settings]</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
+    <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -850,7 +886,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Dict[Endpoint<wbr>S3Settings]</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
+    <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -886,7 +922,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1024,7 +1060,7 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>certificate_arn=None<span class="p">, </span>database_name=None<span class="p">, </span>elasticsearch_settings=None<span class="p">, </span>endpoint_arn=None<span class="p">, </span>endpoint_id=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>engine_name=None<span class="p">, </span>extra_connection_attributes=None<span class="p">, </span>kinesis_settings=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>mongodb_settings=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>s3_settings=None<span class="p">, </span>server_name=None<span class="p">, </span>service_access_role=None<span class="p">, </span>ssl_mode=None<span class="p">, </span>tags=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>certificate_arn=None<span class="p">, </span>database_name=None<span class="p">, </span>elasticsearch_settings=None<span class="p">, </span>endpoint_arn=None<span class="p">, </span>endpoint_id=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>engine_name=None<span class="p">, </span>extra_connection_attributes=None<span class="p">, </span>kafka_settings=None<span class="p">, </span>kinesis_settings=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>mongodb_settings=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>s3_settings=None<span class="p">, </span>server_name=None<span class="p">, </span>service_access_role=None<span class="p">, </span>ssl_mode=None<span class="p">, </span>tags=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1162,7 +1198,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Elasticsearch. Available settings are `service_access_role_arn`, `endpoint_uri`, `error_retry_duration` (default: `300`) and `full_load_error_percentage` (default: `10`). For more details, see [Using an Amazon Elasticsearch Service Cluster as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html).
+    <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1198,7 +1234,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | elasticsearch | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1212,11 +1248,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Kafka<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Kinesis<wbr>Settings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Kinesis endpoint. Available settings are `message_format`, `service_access_role_arn`, and `stream_arn`. For more details, see [Using Amazon Kinesis Data Streams as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html).
+    <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1234,7 +1279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
+    <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1261,7 +1306,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
+    <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1297,7 +1342,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1340,7 +1385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Elasticsearch. Available settings are `service_access_role_arn`, `endpoint_uri`, `error_retry_duration` (default: `300`) and `full_load_error_percentage` (default: `10`). For more details, see [Using an Amazon Elasticsearch Service Cluster as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html).
+    <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1376,7 +1421,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | elasticsearch | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1390,11 +1435,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Kafka<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Kinesis<wbr>Settings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Kinesis endpoint. Available settings are `message_format`, `service_access_role_arn`, and `stream_arn`. For more details, see [Using Amazon Kinesis Data Streams as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html).
+    <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1412,7 +1466,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
+    <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1439,7 +1493,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
+    <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1475,7 +1529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1518,7 +1572,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Endpoint<wbr>Elasticsearch<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Elasticsearch. Available settings are `service_access_role_arn`, `endpoint_uri`, `error_retry_duration` (default: `300`) and `full_load_error_percentage` (default: `10`). For more details, see [Using an Amazon Elasticsearch Service Cluster as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html).
+    <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1554,7 +1608,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | elasticsearch | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1568,11 +1622,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>kafka<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>kinesis<wbr>Settings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Endpoint<wbr>Kinesis<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Kinesis endpoint. Available settings are `message_format`, `service_access_role_arn`, and `stream_arn`. For more details, see [Using Amazon Kinesis Data Streams as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html).
+    <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1590,7 +1653,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
+    <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1617,7 +1680,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
+    <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1653,7 +1716,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1696,7 +1759,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointelasticsearchsettings">Dict[Endpoint<wbr>Elasticsearch<wbr>Settings]</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Elasticsearch. Available settings are `service_access_role_arn`, `endpoint_uri`, `error_retry_duration` (default: `300`) and `full_load_error_percentage` (default: `10`). For more details, see [Using an Amazon Elasticsearch Service Cluster as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html).
+    <dd>{{% md %}}Configuration block with Elasticsearch settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1732,7 +1795,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | elasticsearch | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1746,11 +1809,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>kafka_<wbr>settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointkafkasettings">Dict[Endpoint<wbr>Kafka<wbr>Settings]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with Kafka settings. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>kinesis_<wbr>settings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointkinesissettings">Dict[Endpoint<wbr>Kinesis<wbr>Settings]</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target Kinesis endpoint. Available settings are `message_format`, `service_access_role_arn`, and `stream_arn`. For more details, see [Using Amazon Kinesis Data Streams as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html).
+    <dd>{{% md %}}Configuration block with Kinesis settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1768,7 +1840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointmongodbsettings">Dict[Endpoint<wbr>Mongodb<wbr>Settings]</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
+    <dd>{{% md %}}Configuration block with MongoDB settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1795,7 +1867,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoints3settings">Dict[Endpoint<wbr>S3Settings]</a></span>
     </dt>
-    <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
+    <dd>{{% md %}}Configuration block with S3 settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1831,7 +1903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1866,6 +1938,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointElasticsearchSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointElasticsearchSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Inputs.EndpointElasticsearchSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Outputs.EndpointElasticsearchSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1879,7 +1954,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Endpoint for the Elasticsearch cluster.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1887,7 +1963,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1895,7 +1972,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1903,7 +1981,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1918,7 +1997,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Endpoint for the Elasticsearch cluster.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1926,7 +2006,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1934,7 +2015,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1942,7 +2024,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1957,7 +2040,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Endpoint for the Elasticsearch cluster.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1965,7 +2049,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1973,7 +2058,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1981,7 +2067,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1996,7 +2083,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Endpoint for the Elasticsearch cluster.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2004,7 +2092,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2012,7 +2101,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2020,7 +2110,126 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="endpointkafkasettings">Endpoint<wbr>Kafka<wbr>Settings</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointKafkaSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointKafkaSettings">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointKafkaSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointKafkaSettingsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Inputs.EndpointKafkaSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Outputs.EndpointKafkaSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Broker</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Topic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka topic for migration. Defaults to `kafka-default-topic`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Broker</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Topic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka topic for migration. Defaults to `kafka-default-topic`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>broker</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>topic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka topic for migration. Defaults to `kafka-default-topic`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>broker</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka broker location. Specify in the form broker-hostname-or-ip:port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>topic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka topic for migration. Defaults to `kafka-default-topic`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2037,6 +2246,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointKinesisSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointKinesisSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Inputs.EndpointKinesisSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Outputs.EndpointKinesisSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2050,7 +2262,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2058,7 +2271,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2066,7 +2280,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Kinesis data stream.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2081,7 +2296,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2089,7 +2305,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2097,7 +2314,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Kinesis data stream.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2112,7 +2330,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2120,7 +2339,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2128,7 +2348,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Kinesis data stream.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2143,7 +2364,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2151,7 +2373,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2159,7 +2382,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Kinesis data stream.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2176,6 +2400,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointMongodbSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointMongodbSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Inputs.EndpointMongodbSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Outputs.EndpointMongodbSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2189,7 +2416,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2197,7 +2425,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2205,7 +2434,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication type to access the MongoDB source endpoint. Defaults to `password`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2213,7 +2443,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2221,7 +2452,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2229,7 +2461,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2244,7 +2477,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2252,7 +2486,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2260,7 +2495,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication type to access the MongoDB source endpoint. Defaults to `password`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2268,7 +2504,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2276,7 +2513,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2284,7 +2522,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2299,7 +2538,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2307,7 +2547,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2315,7 +2556,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication type to access the MongoDB source endpoint. Defaults to `password`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2323,7 +2565,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2331,7 +2574,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2339,7 +2583,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2354,7 +2599,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2362,7 +2608,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2370,7 +2617,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Authentication type to access the MongoDB source endpoint. Defaults to `password`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2378,7 +2626,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2386,7 +2635,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2394,7 +2644,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2411,6 +2662,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointS3SettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointS3SettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Inputs.EndpointS3SettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dms.Outputs.EndpointS3Settings.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2424,7 +2678,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket Object prefix.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2432,7 +2687,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2440,7 +2696,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2448,7 +2705,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Delimiter used to separate columns in the source files. Defaults to `,`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2456,7 +2714,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2464,7 +2723,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2472,7 +2732,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2487,7 +2748,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket Object prefix.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2495,7 +2757,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2503,7 +2766,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2511,7 +2775,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Delimiter used to separate columns in the source files. Defaults to `,`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2519,7 +2784,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2527,7 +2793,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2535,7 +2802,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2550,7 +2818,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket Object prefix.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2558,7 +2827,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2566,7 +2836,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2574,7 +2845,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Delimiter used to separate columns in the source files. Defaults to `,`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2582,7 +2854,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2590,7 +2863,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2598,7 +2872,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2613,7 +2888,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket Object prefix.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2621,7 +2897,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2629,7 +2906,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2637,7 +2915,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Delimiter used to separate columns in the source files. Defaults to `,`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2645,7 +2924,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2653,7 +2933,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2661,7 +2942,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

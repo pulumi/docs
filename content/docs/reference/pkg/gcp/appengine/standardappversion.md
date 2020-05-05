@@ -1,7 +1,8 @@
 
 ---
 title: "StandardAppVersion"
-block_external_search_index: true
+title_tag: "Resource StandardAppVersion | Module appengine | Package GCP"
+meta_desc: "Explore the StandardAppVersion resource of the appengine module, including examples, input properties, output properties, lookup functions, and supporting types. Standard App Version resource to create a new version of standard GAE Application."
 ---
 
 
@@ -31,7 +32,7 @@ To get more information about StandardAppVersion, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StandardAppVersion</span><span class="p">(resource_name, opts=None, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>instance_class=None<span class="p">, </span>libraries=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>service=None<span class="p">, </span>threadsafe=None<span class="p">, </span>version_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StandardAppVersion</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>instance_class=None<span class="p">, </span>libraries=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>service=None<span class="p">, </span>threadsafe=None<span class="p">, </span>version_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -227,7 +228,7 @@ The StandardAppVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.
+    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -236,7 +237,7 @@ The StandardAppVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.
+    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -254,8 +255,8 @@ The StandardAppVersion resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandler">List&lt;Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
-request and other request handlers are not attempted.
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -264,8 +265,9 @@ request and other request handlers are not attempted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Instance class that is used to run this version. Valid values are AutomaticScaling F1, F2, F4, F4_1G (Only
-AutomaticScaling is supported at the moment)
+    <dd>{{% md %}}Instance class that is used to run this version. Valid values are
+AutomaticScaling F1, F2, F4, F4_1G
+(Only AutomaticScaling is supported at the moment)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -274,7 +276,7 @@ AutomaticScaling is supported at the moment)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionlibrary">List&lt;Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
+    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -302,8 +304,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
-https://cloud.google.com/appengine/docs/standard//config/appref
+    <dd>{{% md %}}The version of the API in the given runtime environment.
+Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -330,8 +332,7 @@ https://cloud.google.com/appengine/docs/standard//config/appref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters,
-numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+    <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
 
 </dl>
@@ -365,7 +366,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.
+    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -374,7 +375,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.
+    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -392,8 +393,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandler">[]Standard<wbr>App<wbr>Version<wbr>Handler</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
-request and other request handlers are not attempted.
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -402,8 +403,9 @@ request and other request handlers are not attempted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Instance class that is used to run this version. Valid values are AutomaticScaling F1, F2, F4, F4_1G (Only
-AutomaticScaling is supported at the moment)
+    <dd>{{% md %}}Instance class that is used to run this version. Valid values are
+AutomaticScaling F1, F2, F4, F4_1G
+(Only AutomaticScaling is supported at the moment)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -412,7 +414,7 @@ AutomaticScaling is supported at the moment)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionlibrary">[]Standard<wbr>App<wbr>Version<wbr>Library</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
+    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -440,8 +442,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
-https://cloud.google.com/appengine/docs/standard//config/appref
+    <dd>{{% md %}}The version of the API in the given runtime environment.
+Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -468,8 +470,7 @@ https://cloud.google.com/appengine/docs/standard//config/appref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters,
-numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+    <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
 
 </dl>
@@ -503,7 +504,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.
+    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,7 +513,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.
+    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -530,8 +531,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandler">Standard<wbr>App<wbr>Version<wbr>Handler[]</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
-request and other request handlers are not attempted.
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -540,8 +541,9 @@ request and other request handlers are not attempted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Instance class that is used to run this version. Valid values are AutomaticScaling F1, F2, F4, F4_1G (Only
-AutomaticScaling is supported at the moment)
+    <dd>{{% md %}}Instance class that is used to run this version. Valid values are
+AutomaticScaling F1, F2, F4, F4_1G
+(Only AutomaticScaling is supported at the moment)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -550,7 +552,7 @@ AutomaticScaling is supported at the moment)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionlibrary">Standard<wbr>App<wbr>Version<wbr>Library[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
+    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -578,8 +580,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
-https://cloud.google.com/appengine/docs/standard//config/appref
+    <dd>{{% md %}}The version of the API in the given runtime environment.
+Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -606,8 +608,7 @@ https://cloud.google.com/appengine/docs/standard//config/appref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters,
-numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+    <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
 
 </dl>
@@ -641,7 +642,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeployment">Dict[Standard<wbr>App<wbr>Version<wbr>Deployment]</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.
+    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -650,7 +651,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionentrypoint">Dict[Standard<wbr>App<wbr>Version<wbr>Entrypoint]</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.
+    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -668,8 +669,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandler">List[Standard<wbr>App<wbr>Version<wbr>Handler]</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
-request and other request handlers are not attempted.
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -678,8 +679,9 @@ request and other request handlers are not attempted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Instance class that is used to run this version. Valid values are AutomaticScaling F1, F2, F4, F4_1G (Only
-AutomaticScaling is supported at the moment)
+    <dd>{{% md %}}Instance class that is used to run this version. Valid values are
+AutomaticScaling F1, F2, F4, F4_1G
+(Only AutomaticScaling is supported at the moment)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -688,7 +690,7 @@ AutomaticScaling is supported at the moment)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionlibrary">List[Standard<wbr>App<wbr>Version<wbr>Library]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
+    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -716,8 +718,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
-https://cloud.google.com/appengine/docs/standard//config/appref
+    <dd>{{% md %}}The version of the API in the given runtime environment.
+Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -744,8 +746,7 @@ https://cloud.google.com/appengine/docs/standard//config/appref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters,
-numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+    <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
 
 </dl>
@@ -1003,7 +1004,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.
+    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1012,7 +1013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.
+    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1030,8 +1031,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandler">List&lt;Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
-request and other request handlers are not attempted.
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1040,8 +1041,9 @@ request and other request handlers are not attempted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Instance class that is used to run this version. Valid values are AutomaticScaling F1, F2, F4, F4_1G (Only
-AutomaticScaling is supported at the moment)
+    <dd>{{% md %}}Instance class that is used to run this version. Valid values are
+AutomaticScaling F1, F2, F4, F4_1G
+(Only AutomaticScaling is supported at the moment)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1050,7 +1052,7 @@ AutomaticScaling is supported at the moment)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionlibrary">List&lt;Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
+    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1096,8 +1098,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
-https://cloud.google.com/appengine/docs/standard//config/appref
+    <dd>{{% md %}}The version of the API in the given runtime environment.
+Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1124,8 +1126,7 @@ https://cloud.google.com/appengine/docs/standard//config/appref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters,
-numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+    <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
 
 </dl>
@@ -1150,7 +1151,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.
+    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1159,7 +1160,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.
+    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1177,8 +1178,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandler">[]Standard<wbr>App<wbr>Version<wbr>Handler</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
-request and other request handlers are not attempted.
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1187,8 +1188,9 @@ request and other request handlers are not attempted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Instance class that is used to run this version. Valid values are AutomaticScaling F1, F2, F4, F4_1G (Only
-AutomaticScaling is supported at the moment)
+    <dd>{{% md %}}Instance class that is used to run this version. Valid values are
+AutomaticScaling F1, F2, F4, F4_1G
+(Only AutomaticScaling is supported at the moment)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1197,7 +1199,7 @@ AutomaticScaling is supported at the moment)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionlibrary">[]Standard<wbr>App<wbr>Version<wbr>Library</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
+    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1243,8 +1245,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
-https://cloud.google.com/appengine/docs/standard//config/appref
+    <dd>{{% md %}}The version of the API in the given runtime environment.
+Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1271,8 +1273,7 @@ https://cloud.google.com/appengine/docs/standard//config/appref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters,
-numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+    <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
 
 </dl>
@@ -1297,7 +1298,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.
+    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1306,7 +1307,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.
+    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1324,8 +1325,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandler">Standard<wbr>App<wbr>Version<wbr>Handler[]</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
-request and other request handlers are not attempted.
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1334,8 +1335,9 @@ request and other request handlers are not attempted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Instance class that is used to run this version. Valid values are AutomaticScaling F1, F2, F4, F4_1G (Only
-AutomaticScaling is supported at the moment)
+    <dd>{{% md %}}Instance class that is used to run this version. Valid values are
+AutomaticScaling F1, F2, F4, F4_1G
+(Only AutomaticScaling is supported at the moment)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1344,7 +1346,7 @@ AutomaticScaling is supported at the moment)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionlibrary">Standard<wbr>App<wbr>Version<wbr>Library[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
+    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1390,8 +1392,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
-https://cloud.google.com/appengine/docs/standard//config/appref
+    <dd>{{% md %}}The version of the API in the given runtime environment.
+Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1418,8 +1420,7 @@ https://cloud.google.com/appengine/docs/standard//config/appref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters,
-numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+    <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
 
 </dl>
@@ -1444,7 +1445,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeployment">Dict[Standard<wbr>App<wbr>Version<wbr>Deployment]</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.
+    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1453,7 +1454,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionentrypoint">Dict[Standard<wbr>App<wbr>Version<wbr>Entrypoint]</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.
+    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1471,8 +1472,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandler">List[Standard<wbr>App<wbr>Version<wbr>Handler]</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the
-request and other request handlers are not attempted.
+    <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
+The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1481,8 +1482,9 @@ request and other request handlers are not attempted.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Instance class that is used to run this version. Valid values are AutomaticScaling F1, F2, F4, F4_1G (Only
-AutomaticScaling is supported at the moment)
+    <dd>{{% md %}}Instance class that is used to run this version. Valid values are
+AutomaticScaling F1, F2, F4, F4_1G
+(Only AutomaticScaling is supported at the moment)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1491,7 +1493,7 @@ AutomaticScaling is supported at the moment)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionlibrary">List[Standard<wbr>App<wbr>Version<wbr>Library]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
+    <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1537,8 +1539,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
-https://cloud.google.com/appengine/docs/standard//config/appref
+    <dd>{{% md %}}The version of the API in the given runtime environment.
+Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1565,8 +1567,7 @@ https://cloud.google.com/appengine/docs/standard//config/appref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters,
-numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
+    <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
 
 </dl>
@@ -1605,7 +1606,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeploymentfile">List&lt;Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+All files must be readable using the credentials supplied with this call.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1613,7 +1616,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeploymentzip">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Zip File  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1628,7 +1632,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeploymentfile">[]Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+All files must be readable using the credentials supplied with this call.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1636,7 +1642,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeploymentzip">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Zip File  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1651,7 +1658,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeploymentfile">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+All files must be readable using the credentials supplied with this call.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1659,7 +1668,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeploymentzip">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Zip File  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1674,7 +1684,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeploymentfile">List[Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+All files must be readable using the credentials supplied with this call.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1682,7 +1694,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversiondeploymentzip">Dict[Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Zip File  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1721,7 +1734,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Source URL
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1729,7 +1743,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SHA1 checksum of the file
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1753,7 +1768,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Source URL
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1761,7 +1777,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SHA1 checksum of the file
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1785,7 +1802,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Source URL
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1793,7 +1811,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SHA1 checksum of the file
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1817,7 +1836,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Source URL
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1825,7 +1845,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SHA1 checksum of the file
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1855,7 +1876,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Source URL
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1863,7 +1885,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}files count
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1878,7 +1901,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Source URL
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1886,7 +1910,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}files count
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1901,7 +1926,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Source URL
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1909,7 +1935,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}files count
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1924,7 +1951,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Source URL
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1932,7 +1960,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}files count
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1962,7 +1991,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The format should be a shell command that can be fed to bash -c.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1977,7 +2007,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The format should be a shell command that can be fed to bash -c.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1992,7 +2023,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The format should be a shell command that can be fed to bash -c.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2007,7 +2039,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The format should be a shell command that can be fed to bash -c.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2037,7 +2070,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Actions to take when the user is not logged in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2045,7 +2079,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Methods to restrict access to a URL based on login status.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2053,7 +2088,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2061,7 +2097,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandlerscript">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Executes a script to handle the requests that match this URL pattern.
+Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2069,7 +2107,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2077,7 +2116,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2085,7 +2125,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
+All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2100,7 +2142,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Actions to take when the user is not logged in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2108,7 +2151,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Methods to restrict access to a URL based on login status.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2116,7 +2160,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2124,7 +2169,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandlerscript">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Executes a script to handle the requests that match this URL pattern.
+Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2132,7 +2179,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2140,7 +2188,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2148,7 +2197,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
+All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2163,7 +2214,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Actions to take when the user is not logged in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2171,7 +2223,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Methods to restrict access to a URL based on login status.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2179,7 +2232,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2187,7 +2241,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandlerscript">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Executes a script to handle the requests that match this URL pattern.
+Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2195,7 +2251,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2203,7 +2260,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2211,7 +2269,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
+All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2226,7 +2286,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Actions to take when the user is not logged in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2234,7 +2295,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Methods to restrict access to a URL based on login status.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2242,7 +2304,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2250,7 +2313,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandlerscript">Dict[Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Executes a script to handle the requests that match this URL pattern.
+Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2258,7 +2323,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2266,7 +2332,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Dict[Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2274,7 +2341,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
+All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2304,7 +2373,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path to the script from the application root directory.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2319,7 +2389,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path to the script from the application root directory.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2334,7 +2405,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path to the script from the application root directory.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2349,7 +2421,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path to the script from the application root directory.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2379,7 +2452,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2387,7 +2461,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2395,7 +2471,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
+An object containing a list of "key:value" value pairs.".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2403,7 +2481,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}MIME type used to serve all files served by this handler.
+Defaults to file-specific MIME types, which are derived from each file's filename extension.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2411,7 +2491,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2419,7 +2500,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2427,7 +2509,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2442,7 +2525,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2450,7 +2534,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2458,7 +2544,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
+An object containing a list of "key:value" value pairs.".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2466,7 +2554,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}MIME type used to serve all files served by this handler.
+Defaults to file-specific MIME types, which are derived from each file's filename extension.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2474,7 +2564,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2482,7 +2573,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2490,7 +2582,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2505,7 +2598,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2513,7 +2607,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2521,7 +2617,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
+An object containing a list of "key:value" value pairs.".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2529,7 +2627,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}MIME type used to serve all files served by this handler.
+Defaults to file-specific MIME types, which are derived from each file's filename extension.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2537,7 +2637,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2545,7 +2646,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2553,7 +2655,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2568,7 +2671,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2576,7 +2680,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2584,7 +2690,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
+An object containing a list of "key:value" value pairs.".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2592,7 +2700,9 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}MIME type used to serve all files served by this handler.
+Defaults to file-specific MIME types, which are derived from each file's filename extension.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2600,7 +2710,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2608,7 +2719,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2616,7 +2728,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2655,7 +2768,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Version of the library to select, or "latest".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2679,7 +2793,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Version of the library to select, or "latest".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2703,7 +2818,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Version of the library to select, or "latest".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2727,7 +2843,8 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Version of the library to select, or "latest".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2746,8 +2863,7 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

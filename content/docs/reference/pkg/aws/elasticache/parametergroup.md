@@ -51,7 +51,7 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ParameterGroup</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>family=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ParameterGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>family=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -779,6 +779,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#ParameterGroupParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#ParameterGroupParameterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.Inputs.ParameterGroupParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.Outputs.ParameterGroupParameter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

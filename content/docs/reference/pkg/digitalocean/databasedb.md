@@ -13,6 +13,37 @@ meta_desc: "Explore the DatabaseDb resource of the Digital Ocean package, includ
 Provides a DigitalOcean database resource. When creating a new database cluster, a default database with name `defaultdb` will be created. Then, this resource can be used to provide additional database inside the cluster.
 
 {{% examples %}}
+## Example Usage
+
+{{% example %}}
+### Create a new PostgreSQL database
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const postgres-example = new digitalocean.DatabaseCluster("postgres-example", {
+    engine: "pg",
+    version: "11",
+    size: "db-s-1vcpu-1gb",
+    region: "nyc1",
+    nodeCount: 1,
+});
+const database-example = new digitalocean.DatabaseDb("database-example", {clusterId: postgres-example.id});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+postgres_example = digitalocean.DatabaseCluster("postgres-example",
+    engine="pg",
+    version="11",
+    size="db-s-1vcpu-1gb",
+    region="nyc1",
+    node_count=1)
+database_example = digitalocean.DatabaseDb("database-example", cluster_id=postgres_example.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -26,7 +57,7 @@ Provides a DigitalOcean database resource. When creating a new database cluster,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatabaseDb</span><span class="p">(resource_name, opts=None, </span>cluster_id=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatabaseDb</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

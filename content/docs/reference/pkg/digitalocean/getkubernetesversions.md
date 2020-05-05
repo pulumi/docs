@@ -13,6 +13,97 @@ meta_desc: "Explore the GetKubernetesVersions function of the Digital Ocean pack
 Provides access to the available DigitalOcean Kubernetes Service versions.
 
 {{% examples %}}
+## Example Usage
+
+{{% example %}}
+### Output a list of all available versions
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const example = digitalocean.getKubernetesVersions({});
+export const k8s_versions = example.then(example => example.validVersions);
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+example = digitalocean.get_kubernetes_versions()
+pulumi.export("k8s-versions", example.valid_versions)
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a Kubernetes cluster using the most recent version available
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const example = digitalocean.getKubernetesVersions({});
+const example-cluster = new digitalocean.KubernetesCluster("example-cluster", {
+    region: "lon1",
+    version: example.then(example => example.latestVersion),
+    node_pool: {
+        name: "default",
+        size: "s-1vcpu-2gb",
+        nodeCount: 3,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+example = digitalocean.get_kubernetes_versions()
+example_cluster = digitalocean.KubernetesCluster("example-cluster",
+    region="lon1",
+    version=example.latest_version,
+    node_pool={
+        "name": "default",
+        "size": "s-1vcpu-2gb",
+        "nodeCount": 3,
+    })
+```
+
+{{% /example %}}
+{{% example %}}
+### Pin a Kubernetes cluster to a specific minor version
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const example = digitalocean.getKubernetesVersions({
+    versionPrefix: "1.16.",
+});
+const example-cluster = new digitalocean.KubernetesCluster("example-cluster", {
+    region: "lon1",
+    version: example.then(example => example.latestVersion),
+    node_pool: {
+        name: "default",
+        size: "s-1vcpu-2gb",
+        nodeCount: 3,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+example = digitalocean.get_kubernetes_versions(version_prefix="1.16.")
+example_cluster = digitalocean.KubernetesCluster("example-cluster",
+    region="lon1",
+    version=example.latest_version,
+    node_pool={
+        "name": "default",
+        "size": "s-1vcpu-2gb",
+        "nodeCount": 3,
+    })
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -22,7 +113,7 @@ Provides access to the available DigitalOcean Kubernetes Service versions.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
-{{% choosable language typescript %}}
+{{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKubernetesVersions<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#GetKubernetesVersionsArgs">GetKubernetesVersionsArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#GetKubernetesVersionsResult">GetKubernetesVersionsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
@@ -33,7 +124,7 @@ Provides access to the available DigitalOcean Kubernetes Service versions.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesVersions<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetKubernetesVersionsArgs">GetKubernetesVersionsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LookupKubernetesVersionsResult">LookupKubernetesVersionsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesVersions<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetKubernetesVersionsArgs">GetKubernetesVersionsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetKubernetesVersionsResult">GetKubernetesVersionsResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -131,7 +222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -173,7 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -215,7 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -257,7 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -294,4 +385,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+</dl>
 

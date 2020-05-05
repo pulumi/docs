@@ -12,6 +12,9 @@ meta_desc: "Explore the ManangementLock resource of the managementresource modul
 
 Manages a Management Lock which is scoped to a Subscription, Resource Group or Resource.
 
+Deprecated: azure.managementresource.ManangementLock has been deprecated in favour of azure.management.Lock
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.managementresource.ManangementLock has been deprecated in favour of azure.management.Lock{{% /md %}}</p>
 
 
 ## Create a ManangementLock Resource {#create}

@@ -113,7 +113,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">UserPoolClient</span><span class="p">(resource_name, opts=None, </span>allowed_oauth_flows=None<span class="p">, </span>allowed_oauth_flows_user_pool_client=None<span class="p">, </span>allowed_oauth_scopes=None<span class="p">, </span>analytics_configuration=None<span class="p">, </span>callback_urls=None<span class="p">, </span>default_redirect_uri=None<span class="p">, </span>explicit_auth_flows=None<span class="p">, </span>generate_secret=None<span class="p">, </span>logout_urls=None<span class="p">, </span>name=None<span class="p">, </span>prevent_user_existence_errors=None<span class="p">, </span>read_attributes=None<span class="p">, </span>refresh_token_validity=None<span class="p">, </span>supported_identity_providers=None<span class="p">, </span>user_pool_id=None<span class="p">, </span>write_attributes=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">UserPoolClient</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_oauth_flows=None<span class="p">, </span>allowed_oauth_flows_user_pool_client=None<span class="p">, </span>allowed_oauth_scopes=None<span class="p">, </span>analytics_configuration=None<span class="p">, </span>callback_urls=None<span class="p">, </span>default_redirect_uri=None<span class="p">, </span>explicit_auth_flows=None<span class="p">, </span>generate_secret=None<span class="p">, </span>logout_urls=None<span class="p">, </span>name=None<span class="p">, </span>prevent_user_existence_errors=None<span class="p">, </span>read_attributes=None<span class="p">, </span>refresh_token_validity=None<span class="p">, </span>supported_identity_providers=None<span class="p">, </span>user_pool_id=None<span class="p">, </span>write_attributes=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1777,6 +1777,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolClientAnalyticsConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolClientAnalyticsConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolClientAnalyticsConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolClientAnalyticsConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

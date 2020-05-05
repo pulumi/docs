@@ -31,7 +31,7 @@ Manages a V2 networking quota resource within OpenStack.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">QuotaV2</span><span class="p">(resource_name, opts=None, </span>floatingip=None<span class="p">, </span>network=None<span class="p">, </span>port=None<span class="p">, </span>project_id=None<span class="p">, </span>rbac_policy=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>security_group=None<span class="p">, </span>security_group_rule=None<span class="p">, </span>subnet=None<span class="p">, </span>subnetpool=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">QuotaV2</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>floatingip=None<span class="p">, </span>network=None<span class="p">, </span>port=None<span class="p">, </span>project_id=None<span class="p">, </span>rbac_policy=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>security_group=None<span class="p">, </span>security_group_rule=None<span class="p">, </span>subnet=None<span class="p">, </span>subnetpool=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

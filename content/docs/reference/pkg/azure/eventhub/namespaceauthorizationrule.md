@@ -15,6 +15,9 @@ Manages a ServiceBus Namespace authorization Rule within a ServiceBus.
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.eventhub.NamespaceAuthorizationRule has been deprecated in favour of azure.servicebus.NamespaceAuthorizationRule
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.NamespaceAuthorizationRule has been deprecated in favour of azure.servicebus.NamespaceAuthorizationRule{{% /md %}}</p>
 
 
 ## Create a NamespaceAuthorizationRule Resource {#create}

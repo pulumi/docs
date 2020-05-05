@@ -26,7 +26,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LaunchTemplate</span><span class="p">(resource_name, opts=None, </span>block_device_mappings=None<span class="p">, </span>capacity_reservation_specification=None<span class="p">, </span>cpu_options=None<span class="p">, </span>credit_specification=None<span class="p">, </span>description=None<span class="p">, </span>disable_api_termination=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_gpu_specifications=None<span class="p">, </span>elastic_inference_accelerator=None<span class="p">, </span>hibernation_options=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_initiated_shutdown_behavior=None<span class="p">, </span>instance_market_options=None<span class="p">, </span>instance_type=None<span class="p">, </span>kernel_id=None<span class="p">, </span>key_name=None<span class="p">, </span>license_specifications=None<span class="p">, </span>metadata_options=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>placement=None<span class="p">, </span>ram_disk_id=None<span class="p">, </span>security_group_names=None<span class="p">, </span>tag_specifications=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LaunchTemplate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>block_device_mappings=None<span class="p">, </span>capacity_reservation_specification=None<span class="p">, </span>cpu_options=None<span class="p">, </span>credit_specification=None<span class="p">, </span>description=None<span class="p">, </span>disable_api_termination=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_gpu_specifications=None<span class="p">, </span>elastic_inference_accelerator=None<span class="p">, </span>hibernation_options=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_initiated_shutdown_behavior=None<span class="p">, </span>instance_market_options=None<span class="p">, </span>instance_type=None<span class="p">, </span>kernel_id=None<span class="p">, </span>key_name=None<span class="p">, </span>license_specifications=None<span class="p">, </span>metadata_options=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>placement=None<span class="p">, </span>ram_disk_id=None<span class="p">, </span>security_group_names=None<span class="p">, </span>tag_specifications=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -456,7 +456,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -742,7 +742,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1028,7 +1028,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1314,7 +1314,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1932,7 +1932,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2245,7 +2245,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2558,7 +2558,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2871,7 +2871,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the launch template.
+    <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2914,6 +2914,9 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateBlockDeviceMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateBlockDeviceMappingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateBlockDeviceMappingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateBlockDeviceMapping.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3109,6 +3112,9 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateBlockDeviceMappingEbsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateBlockDeviceMappingEbsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateBlockDeviceMappingEbsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateBlockDeviceMappingEbs.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3421,6 +3427,9 @@ This must be set with a `volume_type` of `"io1"`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateCapacityReservationSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateCapacityReservationSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateCapacityReservationSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateCapacityReservationSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3536,6 +3545,9 @@ This must be set with a `volume_type` of `"io1"`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3614,6 +3626,9 @@ This must be set with a `volume_type` of `"io1"`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateCpuOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateCpuOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateCpuOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateCpuOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3734,6 +3749,9 @@ Otherwise, specify the default value of 2.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateCreditSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateCreditSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateCreditSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateCreditSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3812,6 +3830,9 @@ Otherwise, specify the default value of 2.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateElasticGpuSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateElasticGpuSpecificationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateElasticGpuSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateElasticGpuSpecification.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3892,6 +3913,9 @@ Otherwise, specify the default value of 2.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateElasticInferenceAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateElasticInferenceAcceleratorOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateElasticInferenceAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateElasticInferenceAccelerator.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3971,6 +3995,9 @@ Otherwise, specify the default value of 2.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateHibernationOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateHibernationOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateHibernationOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateHibernationOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4049,6 +4076,9 @@ Otherwise, specify the default value of 2.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateIamInstanceProfileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateIamInstanceProfileOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateIamInstanceProfileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateIamInstanceProfile.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4165,6 +4195,9 @@ Otherwise, specify the default value of 2.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateInstanceMarketOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateInstanceMarketOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateInstanceMarketOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateInstanceMarketOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4279,6 +4312,9 @@ Otherwise, specify the default value of 2.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateInstanceMarketOptionsSpotOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateInstanceMarketOptionsSpotOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateInstanceMarketOptionsSpotOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateInstanceMarketOptionsSpotOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4507,6 +4543,9 @@ Otherwise, specify the default value of 2.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateLicenseSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateLicenseSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateLicenseSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateLicenseSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4585,6 +4624,9 @@ Otherwise, specify the default value of 2.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateMetadataOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateMetadataOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateMetadataOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateMetadataOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4737,6 +4779,9 @@ Otherwise, specify the default value of 2.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateMonitoringArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateMonitoringOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateMonitoringArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateMonitoring.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4815,6 +4860,9 @@ Otherwise, specify the default value of 2.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateNetworkInterfaceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateNetworkInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5291,6 +5339,9 @@ Otherwise, specify the default value of 2.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplatePlacementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplatePlacementOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplatePlacementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplatePlacement.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5550,6 +5601,9 @@ Otherwise, specify the default value of 2.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateTagSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchTemplateTagSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateTagSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateTagSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5572,7 +5626,7 @@ Otherwise, specify the default value of 2.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -5597,7 +5651,7 @@ Otherwise, specify the default value of 2.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -5622,7 +5676,7 @@ Otherwise, specify the default value of 2.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -5647,7 +5701,7 @@ Otherwise, specify the default value of 2.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>

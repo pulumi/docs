@@ -2066,6 +2066,9 @@ tagging. Default: `0`.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroupPortsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.HostPortGroupPorts.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

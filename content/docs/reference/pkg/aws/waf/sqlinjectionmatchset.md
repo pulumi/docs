@@ -44,7 +44,7 @@ const sqlInjectionMatchSet = new aws.waf.SqlInjectionMatchSet("sql_injection_mat
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SqlInjectionMatchSet</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>sql_injection_match_tuples=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SqlInjectionMatchSet</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>sql_injection_match_tuples=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -629,6 +629,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#SqlInjectionMatchSetSqlInjectionMatchTupleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#SqlInjectionMatchSetSqlInjectionMatchTupleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Inputs.SqlInjectionMatchSetSqlInjectionMatchTupleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Outputs.SqlInjectionMatchSetSqlInjectionMatchTuple.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -759,6 +762,9 @@ for all supported values.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Inputs.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Outputs.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

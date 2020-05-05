@@ -2503,6 +2503,9 @@ Repositories are created as public (e.g. open source) by default.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#RepositoryTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#RepositoryTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Inputs.RepositoryTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Outputs.RepositoryTemplate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

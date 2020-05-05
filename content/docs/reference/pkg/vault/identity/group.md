@@ -67,7 +67,7 @@ const group = new vault.identity.Group("group", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Group</span><span class="p">(resource_name, opts=None, </span>external_policies=None<span class="p">, </span>member_entity_ids=None<span class="p">, </span>member_group_ids=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>policies=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Group</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>external_policies=None<span class="p">, </span>member_entity_ids=None<span class="p">, </span>member_group_ids=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>policies=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

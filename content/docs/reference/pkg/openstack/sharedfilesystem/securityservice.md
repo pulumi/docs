@@ -22,7 +22,7 @@ meta_desc: "Explore the SecurityService resource of the sharedfilesystem module,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecurityService</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>dns_ip=None<span class="p">, </span>domain=None<span class="p">, </span>name=None<span class="p">, </span>ou=None<span class="p">, </span>password=None<span class="p">, </span>region=None<span class="p">, </span>server=None<span class="p">, </span>type=None<span class="p">, </span>user=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecurityService</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>dns_ip=None<span class="p">, </span>domain=None<span class="p">, </span>name=None<span class="p">, </span>ou=None<span class="p">, </span>password=None<span class="p">, </span>region=None<span class="p">, </span>server=None<span class="p">, </span>type=None<span class="p">, </span>user=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

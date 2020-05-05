@@ -44,7 +44,7 @@ const example_com = new openstack.dns.Zone("example.com", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Zone</span><span class="p">(resource_name, opts=None, </span>attributes=None<span class="p">, </span>description=None<span class="p">, </span>email=None<span class="p">, </span>masters=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Zone</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>description=None<span class="p">, </span>email=None<span class="p">, </span>masters=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

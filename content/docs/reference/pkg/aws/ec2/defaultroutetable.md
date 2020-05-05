@@ -68,7 +68,7 @@ const defaultRouteTable = new aws.ec2.DefaultRouteTable("r", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DefaultRouteTable</span><span class="p">(resource_name, opts=None, </span>default_route_table_id=None<span class="p">, </span>propagating_vgws=None<span class="p">, </span>routes=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DefaultRouteTable</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_route_table_id=None<span class="p">, </span>propagating_vgws=None<span class="p">, </span>routes=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -932,6 +932,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultRouteTableRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#DefaultRouteTableRouteOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.DefaultRouteTableRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.DefaultRouteTableRoute.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

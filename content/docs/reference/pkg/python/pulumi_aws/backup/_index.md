@@ -13,9 +13,126 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.backup"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.backup"></span><dl class="py class">
+<dt id="pulumi_aws.backup.AwaitableGetPlanResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">AwaitableGetPlanResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.AwaitableGetPlanResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.backup.AwaitableGetSelectionResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">AwaitableGetSelectionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resources</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">selection_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.AwaitableGetSelectionResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.backup.AwaitableGetVaultResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">AwaitableGetVaultResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recovery_points</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.AwaitableGetVaultResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.backup.GetPlanResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">GetPlanResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.GetPlanResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPlan.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetPlanResult.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetPlanResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the backup plan.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetPlanResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetPlanResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetPlanResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetPlanResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The display name of a backup plan.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetPlanResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetPlanResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata that you can assign to help organize the plans you create.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetPlanResult.version">
+<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetPlanResult.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.backup.GetSelectionResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">GetSelectionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resources</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">selection_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.GetSelectionResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getSelection.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetSelectionResult.iam_role_arn">
+<code class="sig-name descname">iam_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetSelectionResult.iam_role_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the <a class="reference external" href="https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies">AWS Backup Developer Guide</a> for additional information about using AWS managed policies or creating custom policies attached to the IAM role.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetSelectionResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetSelectionResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetSelectionResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetSelectionResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The display name of a resource selection document.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetSelectionResult.resources">
+<code class="sig-name descname">resources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetSelectionResult.resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.backup.GetVaultResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">GetVaultResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recovery_points</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.GetVaultResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getVault.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetVaultResult.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetVaultResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the vault.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetVaultResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetVaultResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetVaultResult.kms_key_arn">
+<code class="sig-name descname">kms_key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetVaultResult.kms_key_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The server-side encryption key that is used to protect your backups.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetVaultResult.recovery_points">
+<code class="sig-name descname">recovery_points</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetVaultResult.recovery_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of recovery points that are stored in a backup vault.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.backup.GetVaultResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.GetVaultResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata that you can assign to help organize the resources that you create.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aws.backup.Plan">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">Plan</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Plan" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">Plan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Backup plan resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -54,21 +171,21 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">startWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time in minutes before beginning a backup.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetVaultName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a logical container where backups are stored.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Plan.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Plan.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Plan.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the backup plan.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Plan.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Plan.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Plan.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The display name of a backup plan.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Plan.rules">
-<code class="sig-name descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Plan.rules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rules</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Plan.rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>A rule object that specifies a scheduled task that is used to back up a selection of resources.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">completionWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of time AWS Backup attempts a backup before canceling the job and returning an error.</p></li>
@@ -97,21 +214,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Plan.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Plan.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Plan.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Metadata that you can assign to help organize the plans you create.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Plan.version">
-<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Plan.version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Plan.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.backup.Plan.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Plan.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Plan.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Plan resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -156,9 +273,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.backup.Plan.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Plan.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Plan.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -174,9 +291,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.backup.Plan.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Plan.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Plan.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -194,16 +311,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.backup.Selection">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">Selection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plan_id=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">selection_tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Selection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">Selection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resources</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">selection_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Selection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages selection conditions for AWS Backup plan resources.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>iam_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the <a class="reference external" href="https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies">AWS Backup Developer Guide</a> for additional information about using AWS managed policies or creating custom policies attached to the IAM role.</p></li>
+<li><p><strong>iam_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the <a class="reference external" href="https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies">AWS Backup Developer Guide</a> for additional information about using AWS managed policies or creating custom policies attached to the IAM role.</p>
+</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name of a resource selection document.</p></li>
 <li><p><strong>plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backup plan ID to be associated with the selection of resources.</p></li>
 <li><p><strong>resources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..</p></li>
@@ -217,33 +335,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An operation, such as <code class="docutils literal notranslate"><span class="pre">StringEquals</span></code>, that is applied to a key-value pair used to filter resources in a selection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value in a key-value pair.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Selection.iam_role_arn">
-<code class="sig-name descname">iam_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Selection.iam_role_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iam_role_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Selection.iam_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the <a class="reference external" href="https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies">AWS Backup Developer Guide</a> for additional information about using AWS managed policies or creating custom policies attached to the IAM role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Selection.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Selection.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Selection.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The display name of a resource selection document.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Selection.plan_id">
-<code class="sig-name descname">plan_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Selection.plan_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plan_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Selection.plan_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The backup plan ID to be associated with the selection of resources.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Selection.resources">
-<code class="sig-name descname">resources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Selection.resources" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resources</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Selection.resources" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan..</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Selection.selection_tags">
-<code class="sig-name descname">selection_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Selection.selection_tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">selection_tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Selection.selection_tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tag-based conditions used to specify a set of resources to assign to a backup plan.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The key in a key-value pair.</p></li>
@@ -252,9 +370,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.backup.Selection.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plan_id=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">selection_tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Selection.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resources</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">selection_tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Selection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Selection resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -280,9 +398,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.backup.Selection.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Selection.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Selection.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -298,9 +416,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.backup.Selection.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Selection.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Selection.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -318,9 +436,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.backup.Vault">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">Vault</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Vault" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">Vault</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Vault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Backup vault resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -333,39 +451,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Vault.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Vault.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Vault.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the vault.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Vault.kms_key_arn">
-<code class="sig-name descname">kms_key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Vault.kms_key_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kms_key_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Vault.kms_key_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The server-side encryption key that is used to protect your backups.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Vault.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Vault.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Vault.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the backup vault to create.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Vault.recovery_points">
-<code class="sig-name descname">recovery_points</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Vault.recovery_points" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">recovery_points</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Vault.recovery_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of recovery points that are stored in a backup vault.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.backup.Vault.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Vault.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.backup.Vault.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Metadata that you can assign to help organize the resources that you create.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.backup.Vault.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recovery_points=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Vault.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recovery_points</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Vault.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Vault resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -384,9 +502,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.backup.Vault.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Vault.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Vault.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -402,9 +520,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.backup.Vault.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Vault.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Vault.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -420,6 +538,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.backup.get_plan">
+<code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">get_plan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.get_plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get information on an existing backup plan.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plan_id</strong> (<em>str</em>) – The backup plan ID.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – Metadata that you can assign to help organize the plans you create.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.backup.get_selection">
+<code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">get_selection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">selection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.get_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get information on an existing backup selection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plan_id</strong> (<em>str</em>) – The backup plan ID associated with the selection of resources.</p></li>
+<li><p><strong>selection_id</strong> (<em>str</em>) – The backup selection ID.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.backup.get_vault">
+<code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">get_vault</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.get_vault" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get information on an existing backup vault.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the backup vault.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – Metadata that you can assign to help organize the resources that you create.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

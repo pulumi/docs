@@ -42,7 +42,7 @@ const example = new aws.ram.ResourceShare("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourceShare</span><span class="p">(resource_name, opts=None, </span>allow_external_principals=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourceShare</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_external_principals=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -238,7 +238,7 @@ The ResourceShare resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource share.
+    <dd>{{% md %}}A map of tags to assign to the resource share.
 {{% /md %}}</dd>
 
 </dl>
@@ -272,7 +272,7 @@ The ResourceShare resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource share.
+    <dd>{{% md %}}A map of tags to assign to the resource share.
 {{% /md %}}</dd>
 
 </dl>
@@ -306,7 +306,7 @@ The ResourceShare resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource share.
+    <dd>{{% md %}}A map of tags to assign to the resource share.
 {{% /md %}}</dd>
 
 </dl>
@@ -340,7 +340,7 @@ The ResourceShare resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource share.
+    <dd>{{% md %}}A map of tags to assign to the resource share.
 {{% /md %}}</dd>
 
 </dl>
@@ -616,7 +616,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource share.
+    <dd>{{% md %}}A map of tags to assign to the resource share.
 {{% /md %}}</dd>
 
 </dl>
@@ -659,7 +659,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource share.
+    <dd>{{% md %}}A map of tags to assign to the resource share.
 {{% /md %}}</dd>
 
 </dl>
@@ -702,7 +702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource share.
+    <dd>{{% md %}}A map of tags to assign to the resource share.
 {{% /md %}}</dd>
 
 </dl>
@@ -745,7 +745,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource share.
+    <dd>{{% md %}}A map of tags to assign to the resource share.
 {{% /md %}}</dd>
 
 </dl>

@@ -15,6 +15,9 @@ Manages a ServiceBus Namespace.
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.eventhub.Namespace has been deprecated in favour of azure.servicebus.Namespace
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Namespace has been deprecated in favour of azure.servicebus.Namespace{{% /md %}}</p>
 
 
 ## Create a Namespace Resource {#create}

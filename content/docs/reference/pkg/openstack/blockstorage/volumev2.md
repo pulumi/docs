@@ -41,7 +41,7 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeV2</span><span class="p">(resource_name, opts=None, </span>availability_zone=None<span class="p">, </span>consistency_group_id=None<span class="p">, </span>description=None<span class="p">, </span>image_id=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>source_replica=None<span class="p">, </span>source_vol_id=None<span class="p">, </span>volume_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeV2</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zone=None<span class="p">, </span>consistency_group_id=None<span class="p">, </span>description=None<span class="p">, </span>image_id=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>scheduler_hints=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>source_replica=None<span class="p">, </span>source_vol_id=None<span class="p">, </span>volume_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -296,6 +296,16 @@ creates a new volume.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Scheduler<wbr>Hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumev2schedulerhint">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Block<wbr>Storage.<wbr>Inputs.<wbr>Volume<wbr>V2Scheduler<wbr>Hint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -419,6 +429,16 @@ volume's name.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scheduler<wbr>Hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumev2schedulerhint">[]Volume<wbr>V2Scheduler<wbr>Hint</a></span>
+    </dt>
+    <dd>{{% md %}}Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -550,6 +570,16 @@ creates a new volume.
 
     <dt class="property-optional"
             title="Optional">
+        <span>scheduler<wbr>Hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumev2schedulerhint">Volume<wbr>V2Scheduler<wbr>Hint[]</a></span>
+    </dt>
+    <dd>{{% md %}}Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -673,6 +703,16 @@ volume's name.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scheduler_<wbr>hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumev2schedulerhint">List[Volume<wbr>V2Scheduler<wbr>Hint]</a></span>
+    </dt>
+    <dd>{{% md %}}Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -848,7 +888,7 @@ Get an existing VolumeV2 resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attachments=None<span class="p">, </span>availability_zone=None<span class="p">, </span>consistency_group_id=None<span class="p">, </span>description=None<span class="p">, </span>image_id=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>source_replica=None<span class="p">, </span>source_vol_id=None<span class="p">, </span>volume_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attachments=None<span class="p">, </span>availability_zone=None<span class="p">, </span>consistency_group_id=None<span class="p">, </span>description=None<span class="p">, </span>image_id=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>scheduler_hints=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>source_replica=None<span class="p">, </span>source_vol_id=None<span class="p">, </span>volume_type=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1046,6 +1086,16 @@ creates a new volume.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Scheduler<wbr>Hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumev2schedulerhint">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Block<wbr>Storage.<wbr>Inputs.<wbr>Volume<wbr>V2Scheduler<wbr>Hint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
@@ -1180,6 +1230,16 @@ volume's name.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scheduler<wbr>Hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumev2schedulerhint">[]Volume<wbr>V2Scheduler<wbr>Hint</a></span>
+    </dt>
+    <dd>{{% md %}}Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1322,6 +1382,16 @@ creates a new volume.
 
     <dt class="property-optional"
             title="Optional">
+        <span>scheduler<wbr>Hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumev2schedulerhint">Volume<wbr>V2Scheduler<wbr>Hint[]</a></span>
+    </dt>
+    <dd>{{% md %}}Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
@@ -1460,6 +1530,16 @@ creates a new volume.
 
     <dt class="property-optional"
             title="Optional">
+        <span>scheduler_<wbr>hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumev2schedulerhint">List[Volume<wbr>V2Scheduler<wbr>Hint]</a></span>
+    </dt>
+    <dd>{{% md %}}Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1529,6 +1609,9 @@ Changing this creates a new volume.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage?tab=doc#VolumeV2AttachmentOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.BlockStorage.Outputs.VolumeV2Attachment.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1653,6 +1736,268 @@ Changing this creates a new volume.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="volumev2schedulerhint">Volume<wbr>V2Scheduler<wbr>Hint</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#VolumeV2SchedulerHint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#VolumeV2SchedulerHint">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage?tab=doc#VolumeV2SchedulerHintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage?tab=doc#VolumeV2SchedulerHintOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.BlockStorage.Inputs.VolumeV2SchedulerHintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.BlockStorage.Outputs.VolumeV2SchedulerHint.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Additional<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Arbitrary key/value pairs of additional
+properties to pass to the scheduler.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Different<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The volume should be scheduled on a 
+different host from the set of volumes specified in the list provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Local<wbr>To<wbr>Instance</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An instance UUID. The volume should be 
+scheduled on the same host as the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A conditional query that a back-end must pass in
+order to host a volume. The query must use the `JsonFilter` syntax
+which is described
+[here](https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter).
+At this time, only simple queries are supported. Compound queries using
+`and`, `or`, or `not` are not supported. An example of a simple query is:
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Same<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of volume UUIDs. The volume should be
+scheduled on the same host as another volume specified in the list provided.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Additional<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Arbitrary key/value pairs of additional
+properties to pass to the scheduler.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Different<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The volume should be scheduled on a 
+different host from the set of volumes specified in the list provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Local<wbr>To<wbr>Instance</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An instance UUID. The volume should be 
+scheduled on the same host as the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A conditional query that a back-end must pass in
+order to host a volume. The query must use the `JsonFilter` syntax
+which is described
+[here](https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter).
+At this time, only simple queries are supported. Compound queries using
+`and`, `or`, or `not` are not supported. An example of a simple query is:
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Same<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of volume UUIDs. The volume should be
+scheduled on the same host as another volume specified in the list provided.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>additional<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Arbitrary key/value pairs of additional
+properties to pass to the scheduler.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>different<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The volume should be scheduled on a 
+different host from the set of volumes specified in the list provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>local<wbr>To<wbr>Instance</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An instance UUID. The volume should be 
+scheduled on the same host as the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A conditional query that a back-end must pass in
+order to host a volume. The query must use the `JsonFilter` syntax
+which is described
+[here](https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter).
+At this time, only simple queries are supported. Compound queries using
+`and`, `or`, or `not` are not supported. An example of a simple query is:
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>same<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of volume UUIDs. The volume should be
+scheduled on the same host as another volume specified in the list provided.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>additional<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Arbitrary key/value pairs of additional
+properties to pass to the scheduler.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>different<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The volume should be scheduled on a 
+different host from the set of volumes specified in the list provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>local<wbr>To<wbr>Instance</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An instance UUID. The volume should be 
+scheduled on the same host as the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A conditional query that a back-end must pass in
+order to host a volume. The query must use the `JsonFilter` syntax
+which is described
+[here](https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter).
+At this time, only simple queries are supported. Compound queries using
+`and`, `or`, or `not` are not supported. An example of a simple query is:
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>same<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of volume UUIDs. The volume should be
+scheduled on the same host as another volume specified in the list provided.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

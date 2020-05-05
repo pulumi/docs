@@ -112,7 +112,7 @@ const foo = new aws.route53.HealthCheck("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HealthCheck</span><span class="p">(resource_name, opts=None, </span>child_health_threshold=None<span class="p">, </span>child_healthchecks=None<span class="p">, </span>cloudwatch_alarm_name=None<span class="p">, </span>cloudwatch_alarm_region=None<span class="p">, </span>enable_sni=None<span class="p">, </span>failure_threshold=None<span class="p">, </span>fqdn=None<span class="p">, </span>insufficient_data_health_status=None<span class="p">, </span>invert_healthcheck=None<span class="p">, </span>ip_address=None<span class="p">, </span>measure_latency=None<span class="p">, </span>port=None<span class="p">, </span>reference_name=None<span class="p">, </span>regions=None<span class="p">, </span>request_interval=None<span class="p">, </span>resource_path=None<span class="p">, </span>search_string=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HealthCheck</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>child_health_threshold=None<span class="p">, </span>child_healthchecks=None<span class="p">, </span>cloudwatch_alarm_name=None<span class="p">, </span>cloudwatch_alarm_region=None<span class="p">, </span>enable_sni=None<span class="p">, </span>failure_threshold=None<span class="p">, </span>fqdn=None<span class="p">, </span>insufficient_data_health_status=None<span class="p">, </span>invert_healthcheck=None<span class="p">, </span>ip_address=None<span class="p">, </span>measure_latency=None<span class="p">, </span>port=None<span class="p">, </span>reference_name=None<span class="p">, </span>regions=None<span class="p">, </span>request_interval=None<span class="p">, </span>resource_path=None<span class="p">, </span>search_string=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -453,7 +453,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
 </dl>
@@ -632,7 +632,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
 </dl>
@@ -811,7 +811,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
 </dl>
@@ -990,7 +990,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
 </dl>
@@ -1357,7 +1357,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1536,7 +1536,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1715,7 +1715,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1894,7 +1894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

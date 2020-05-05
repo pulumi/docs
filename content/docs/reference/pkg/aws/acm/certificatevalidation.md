@@ -43,7 +43,7 @@ const certValidation = new aws.route53.Record("cert_validation", {
     records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
     ttl: 60,
     type: certCertificate.domainValidationOptions[0].resourceRecordType,
-    zoneId: zone.id,
+    zoneId: zone.zoneId!,
 });
 const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
     certificateArn: certCertificate.arn,
@@ -84,21 +84,21 @@ const certValidation = new aws.route53.Record("cert_validation", {
     records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
     ttl: 60,
     type: certCertificate.domainValidationOptions[0].resourceRecordType,
-    zoneId: zone.id,
+    zoneId: zone.zoneId!,
 });
 const certValidationAlt1 = new aws.route53.Record("cert_validation_alt1", {
     name: certCertificate.domainValidationOptions[1].resourceRecordName,
     records: [certCertificate.domainValidationOptions[1].resourceRecordValue],
     ttl: 60,
     type: certCertificate.domainValidationOptions[1].resourceRecordType,
-    zoneId: zone.id,
+    zoneId: zone.zoneId!,
 });
 const certValidationAlt2 = new aws.route53.Record("cert_validation_alt2", {
     name: certCertificate.domainValidationOptions[2].resourceRecordName,
     records: [certCertificate.domainValidationOptions[2].resourceRecordValue],
     ttl: 60,
     type: certCertificate.domainValidationOptions[2].resourceRecordType,
-    zoneId: zoneAlt.id,
+    zoneId: zoneAlt.zoneId!,
 });
 const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
     certificateArn: certCertificate.arn,
@@ -147,7 +147,7 @@ const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">CertificateValidation</span><span class="p">(resource_name, opts=None, </span>certificate_arn=None<span class="p">, </span>validation_record_fqdns=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">CertificateValidation</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_arn=None<span class="p">, </span>validation_record_fqdns=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

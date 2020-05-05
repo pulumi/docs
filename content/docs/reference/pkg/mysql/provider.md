@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, opts=None, </span>authentication_plugin=None<span class="p">, </span>endpoint=None<span class="p">, </span>max_conn_lifetime_sec=None<span class="p">, </span>max_open_conns=None<span class="p">, </span>password=None<span class="p">, </span>proxy=None<span class="p">, </span>tls=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authentication_plugin=None<span class="p">, </span>endpoint=None<span class="p">, </span>max_conn_lifetime_sec=None<span class="p">, </span>max_open_conns=None<span class="p">, </span>password=None<span class="p">, </span>proxy=None<span class="p">, </span>tls=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -60,7 +60,7 @@ resources:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StackV1</span><span class="p">(resource_name, opts=None, </span>capabilities=None<span class="p">, </span>creation_time=None<span class="p">, </span>description=None<span class="p">, </span>disable_rollback=None<span class="p">, </span>environment_opts=None<span class="p">, </span>name=None<span class="p">, </span>notification_topics=None<span class="p">, </span>outputs=None<span class="p">, </span>parameters=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>status_reason=None<span class="p">, </span>tags=None<span class="p">, </span>template_description=None<span class="p">, </span>template_opts=None<span class="p">, </span>timeout=None<span class="p">, </span>updated_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StackV1</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capabilities=None<span class="p">, </span>creation_time=None<span class="p">, </span>description=None<span class="p">, </span>disable_rollback=None<span class="p">, </span>environment_opts=None<span class="p">, </span>name=None<span class="p">, </span>notification_topics=None<span class="p">, </span>outputs=None<span class="p">, </span>parameters=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>status_reason=None<span class="p">, </span>tags=None<span class="p">, </span>template_description=None<span class="p">, </span>template_opts=None<span class="p">, </span>timeout=None<span class="p">, </span>updated_time=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1868,6 +1868,9 @@ is the time zone as an offset from UTC.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#StackV1OutputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#StackV1OutputOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Orchestration.Inputs.StackV1OutputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Orchestration.Outputs.StackV1Output.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

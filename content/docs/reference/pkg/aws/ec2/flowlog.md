@@ -99,7 +99,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FlowLog</span><span class="p">(resource_name, opts=None, </span>eni_id=None<span class="p">, </span>iam_role_arn=None<span class="p">, </span>log_destination=None<span class="p">, </span>log_destination_type=None<span class="p">, </span>log_format=None<span class="p">, </span>log_group_name=None<span class="p">, </span>max_aggregation_interval=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>traffic_type=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FlowLog</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>eni_id=None<span class="p">, </span>iam_role_arn=None<span class="p">, </span>log_destination=None<span class="p">, </span>log_destination_type=None<span class="p">, </span>log_format=None<span class="p">, </span>log_group_name=None<span class="p">, </span>max_aggregation_interval=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>traffic_type=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -361,7 +361,7 @@ minutes). Default: `600`.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -470,7 +470,7 @@ minutes). Default: `600`.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -579,7 +579,7 @@ minutes). Default: `600`.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -688,7 +688,7 @@ minutes). Default: `600`.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -985,7 +985,7 @@ minutes). Default: `600`.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1094,7 +1094,7 @@ minutes). Default: `600`.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1203,7 +1203,7 @@ minutes). Default: `600`.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1312,7 +1312,7 @@ minutes). Default: `600`.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
     <dt class="property-optional"

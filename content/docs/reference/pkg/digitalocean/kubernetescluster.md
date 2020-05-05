@@ -33,6 +33,19 @@ const foo = new digitalocean.KubernetesCluster("foo", {
     version: "1.15.5-do.1",
 });
 ```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+foo = digitalocean.KubernetesCluster("foo",
+    node_pool={
+        "name": "worker-pool",
+        "nodeCount": 3,
+        "size": "s-2vcpu-2gb",
+    },
+    region="nyc1",
+    version="1.15.5-do.1")
+```
 
 {{% /example %}}
 {{% example %}}
@@ -57,6 +70,21 @@ const foo = new digitalocean.KubernetesCluster("foo", {
     version: "1.15.5-do.1",
 });
 ```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+foo = digitalocean.KubernetesCluster("foo",
+    node_pool={
+        "autoScale": True,
+        "maxNodes": 5,
+        "minNodes": 1,
+        "name": "autoscale-worker-pool",
+        "size": "s-2vcpu-2gb",
+    },
+    region="nyc1",
+    version="1.15.5-do.1")
+```
 
 Note that, while individual node pools may scale to 0, a cluster must always include at least one node.
 
@@ -74,7 +102,7 @@ Note that, while individual node pools may scale to 0, a cluster must always inc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KubernetesCluster</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>node_pool=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KubernetesCluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>node_pool=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vpc_uuid=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1643,6 +1671,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterKubeConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.KubernetesClusterKubeConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1909,6 +1940,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterNodePoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterNodePoolOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.KubernetesClusterNodePoolArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.KubernetesClusterNodePool.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2316,6 +2350,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterNodePoolNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterNodePoolNodeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.KubernetesClusterNodePoolNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.KubernetesClusterNodePoolNode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

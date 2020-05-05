@@ -12,6 +12,7 @@ Explore the resources and functions of the plugins module in the New Relic packa
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alertcondition" title="AlertCondition"><span class="symbol resource"></span>AlertCondition</a></li>
+    <li><a href="workload" title="Workload"><span class="symbol resource"></span>Workload</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -29,6 +30,6 @@ Explore the resources and functions of the plugins module in the New Relic packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic).</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.2.1</dd>
 </dl>
 

@@ -12,8 +12,8 @@ meta_desc: "Explore the EventSourceMapping resource of the lambda module, includ
 
 Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis, DynamoDB and SQS.
 
-For information about Lambda and how to use it, see [What is AWS Lambda?][1].
-For information about event source mappings, see [CreateEventSourceMapping][2] in the API docs.
+For information about Lambda and how to use it, see [What is AWS Lambda?](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html).
+For information about event source mappings, see [CreateEventSourceMapping](http://docs.aws.amazon.com/lambda/latest/dg/API_CreateEventSourceMapping.html) in the API docs.
 
 {{% examples %}}
 ## Example Usage
@@ -75,7 +75,7 @@ const example = new aws.lambda.EventSourceMapping("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EventSourceMapping</span><span class="p">(resource_name, opts=None, </span>batch_size=None<span class="p">, </span>bisect_batch_on_function_error=None<span class="p">, </span>destination_config=None<span class="p">, </span>enabled=None<span class="p">, </span>event_source_arn=None<span class="p">, </span>function_name=None<span class="p">, </span>maximum_batching_window_in_seconds=None<span class="p">, </span>maximum_record_age_in_seconds=None<span class="p">, </span>maximum_retry_attempts=None<span class="p">, </span>parallelization_factor=None<span class="p">, </span>starting_position=None<span class="p">, </span>starting_position_timestamp=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EventSourceMapping</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>batch_size=None<span class="p">, </span>bisect_batch_on_function_error=None<span class="p">, </span>destination_config=None<span class="p">, </span>enabled=None<span class="p">, </span>event_source_arn=None<span class="p">, </span>function_name=None<span class="p">, </span>maximum_batching_window_in_seconds=None<span class="p">, </span>maximum_record_age_in_seconds=None<span class="p">, </span>maximum_retry_attempts=None<span class="p">, </span>parallelization_factor=None<span class="p">, </span>starting_position=None<span class="p">, </span>starting_position_timestamp=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1812,6 +1812,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#EventSourceMappingDestinationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#EventSourceMappingDestinationConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.EventSourceMappingDestinationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.EventSourceMappingDestinationConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1890,6 +1893,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#EventSourceMappingDestinationConfigOnFailureArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#EventSourceMappingDestinationConfigOnFailureOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.EventSourceMappingDestinationConfigOnFailureArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.EventSourceMappingDestinationConfigOnFailure.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

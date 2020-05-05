@@ -1,7 +1,8 @@
 
 ---
 title: "EngineSplitTraffic"
-block_external_search_index: true
+title_tag: "Resource EngineSplitTraffic | Module appengine | Package GCP"
+meta_desc: "Explore the EngineSplitTraffic resource of the appengine module, including examples, input properties, output properties, lookup functions, and supporting types. Traffic routing configuration for versions within a single service. Traffic splits define how traffic directed to the service is assigned to versions."
 ---
 
 
@@ -27,7 +28,7 @@ To get more information about ServiceSplitTraffic, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EngineSplitTraffic</span><span class="p">(resource_name, opts=None, </span>migrate_traffic=None<span class="p">, </span>project=None<span class="p">, </span>service=None<span class="p">, </span>split=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EngineSplitTraffic</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>migrate_traffic=None<span class="p">, </span>project=None<span class="p">, </span>service=None<span class="p">, </span>split=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -214,7 +215,7 @@ The EngineSplitTraffic resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -258,7 +259,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -302,7 +303,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -346,7 +347,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Dict[Engine<wbr>Split<wbr>Traffic<wbr>Split]</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -606,7 +607,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -650,7 +651,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -694,7 +695,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -738,7 +739,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Dict[Engine<wbr>Split<wbr>Traffic<wbr>Split]</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -777,7 +778,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -785,7 +787,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -800,7 +803,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -808,7 +812,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -823,7 +828,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -831,7 +837,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -846,7 +853,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -854,7 +862,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -873,8 +882,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

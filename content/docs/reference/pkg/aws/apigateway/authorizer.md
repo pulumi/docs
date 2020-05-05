@@ -94,7 +94,7 @@ const invocationPolicy = new aws.iam.RolePolicy("invocation_policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Authorizer</span><span class="p">(resource_name, opts=None, </span>authorizer_credentials=None<span class="p">, </span>authorizer_result_ttl_in_seconds=None<span class="p">, </span>authorizer_uri=None<span class="p">, </span>identity_source=None<span class="p">, </span>identity_validation_expression=None<span class="p">, </span>name=None<span class="p">, </span>provider_arns=None<span class="p">, </span>rest_api=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Authorizer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authorizer_credentials=None<span class="p">, </span>authorizer_result_ttl_in_seconds=None<span class="p">, </span>authorizer_uri=None<span class="p">, </span>identity_source=None<span class="p">, </span>identity_validation_expression=None<span class="p">, </span>name=None<span class="p">, </span>provider_arns=None<span class="p">, </span>rest_api=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

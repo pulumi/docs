@@ -22,7 +22,7 @@ meta_desc: "Explore the Instance resource of the compute module, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, opts=None, </span>access_ip_v4=None<span class="p">, </span>access_ip_v6=None<span class="p">, </span>admin_pass=None<span class="p">, </span>availability_zone=None<span class="p">, </span>block_devices=None<span class="p">, </span>config_drive=None<span class="p">, </span>flavor_id=None<span class="p">, </span>flavor_name=None<span class="p">, </span>force_delete=None<span class="p">, </span>image_id=None<span class="p">, </span>image_name=None<span class="p">, </span>key_pair=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>personalities=None<span class="p">, </span>power_state=None<span class="p">, </span>region=None<span class="p">, </span>scheduler_hints=None<span class="p">, </span>security_groups=None<span class="p">, </span>stop_before_destroy=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vendor_options=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_ip_v4=None<span class="p">, </span>access_ip_v6=None<span class="p">, </span>admin_pass=None<span class="p">, </span>availability_zone=None<span class="p">, </span>availability_zone_hints=None<span class="p">, </span>block_devices=None<span class="p">, </span>config_drive=None<span class="p">, </span>flavor_id=None<span class="p">, </span>flavor_name=None<span class="p">, </span>force_delete=None<span class="p">, </span>image_id=None<span class="p">, </span>image_name=None<span class="p">, </span>key_pair=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>personalities=None<span class="p">, </span>power_state=None<span class="p">, </span>region=None<span class="p">, </span>scheduler_hints=None<span class="p">, </span>security_groups=None<span class="p">, </span>stop_before_destroy=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vendor_options=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -229,7 +229,22 @@ Changing this changes the root password on the existing server.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The availability zone in which to create
-the server. Changing this creates a new server.
+the server. Conflicts with `availability_zone_hints`. Changing this creates
+a new server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The availability zone in which to
+create the server. This argument is preferred to `availability_zone`, when
+scheduling the server on a
+[particular](https://docs.openstack.org/nova/latest/admin/availability-zones.html)
+host or node. Conflicts with `availability_zone`. Changing this creates a
+new server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -491,7 +506,22 @@ Changing this changes the root password on the existing server.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The availability zone in which to create
-the server. Changing this creates a new server.
+the server. Conflicts with `availability_zone_hints`. Changing this creates
+a new server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The availability zone in which to
+create the server. This argument is preferred to `availability_zone`, when
+scheduling the server on a
+[particular](https://docs.openstack.org/nova/latest/admin/availability-zones.html)
+host or node. Conflicts with `availability_zone`. Changing this creates a
+new server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -753,7 +783,22 @@ Changing this changes the root password on the existing server.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The availability zone in which to create
-the server. Changing this creates a new server.
+the server. Conflicts with `availability_zone_hints`. Changing this creates
+a new server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Zone<wbr>Hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The availability zone in which to
+create the server. This argument is preferred to `availability_zone`, when
+scheduling the server on a
+[particular](https://docs.openstack.org/nova/latest/admin/availability-zones.html)
+host or node. Conflicts with `availability_zone`. Changing this creates a
+new server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1015,7 +1060,22 @@ Changing this changes the root password on the existing server.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The availability zone in which to create
-the server. Changing this creates a new server.
+the server. Conflicts with `availability_zone_hints`. Changing this creates
+a new server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability_<wbr>zone_<wbr>hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The availability zone in which to
+create the server. This argument is preferred to `availability_zone`, when
+scheduling the server on a
+[particular](https://docs.openstack.org/nova/latest/admin/availability-zones.html)
+host or node. Conflicts with `availability_zone`. Changing this creates a
+new server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1397,7 +1457,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_ip_v4=None<span class="p">, </span>access_ip_v6=None<span class="p">, </span>admin_pass=None<span class="p">, </span>all_metadata=None<span class="p">, </span>all_tags=None<span class="p">, </span>availability_zone=None<span class="p">, </span>block_devices=None<span class="p">, </span>config_drive=None<span class="p">, </span>flavor_id=None<span class="p">, </span>flavor_name=None<span class="p">, </span>force_delete=None<span class="p">, </span>image_id=None<span class="p">, </span>image_name=None<span class="p">, </span>key_pair=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>personalities=None<span class="p">, </span>power_state=None<span class="p">, </span>region=None<span class="p">, </span>scheduler_hints=None<span class="p">, </span>security_groups=None<span class="p">, </span>stop_before_destroy=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vendor_options=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_ip_v4=None<span class="p">, </span>access_ip_v6=None<span class="p">, </span>admin_pass=None<span class="p">, </span>all_metadata=None<span class="p">, </span>all_tags=None<span class="p">, </span>availability_zone=None<span class="p">, </span>availability_zone_hints=None<span class="p">, </span>block_devices=None<span class="p">, </span>config_drive=None<span class="p">, </span>flavor_id=None<span class="p">, </span>flavor_name=None<span class="p">, </span>force_delete=None<span class="p">, </span>image_id=None<span class="p">, </span>image_name=None<span class="p">, </span>key_pair=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>personalities=None<span class="p">, </span>power_state=None<span class="p">, </span>region=None<span class="p">, </span>scheduler_hints=None<span class="p">, </span>security_groups=None<span class="p">, </span>stop_before_destroy=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vendor_options=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1564,7 +1624,22 @@ been explicitly and implicitly added.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The availability zone in which to create
-the server. Changing this creates a new server.
+the server. Conflicts with `availability_zone_hints`. Changing this creates
+a new server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The availability zone in which to
+create the server. This argument is preferred to `availability_zone`, when
+scheduling the server on a
+[particular](https://docs.openstack.org/nova/latest/admin/availability-zones.html)
+host or node. Conflicts with `availability_zone`. Changing this creates a
+new server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1844,7 +1919,22 @@ been explicitly and implicitly added.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The availability zone in which to create
-the server. Changing this creates a new server.
+the server. Conflicts with `availability_zone_hints`. Changing this creates
+a new server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The availability zone in which to
+create the server. This argument is preferred to `availability_zone`, when
+scheduling the server on a
+[particular](https://docs.openstack.org/nova/latest/admin/availability-zones.html)
+host or node. Conflicts with `availability_zone`. Changing this creates a
+new server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2124,7 +2214,22 @@ been explicitly and implicitly added.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The availability zone in which to create
-the server. Changing this creates a new server.
+the server. Conflicts with `availability_zone_hints`. Changing this creates
+a new server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Zone<wbr>Hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The availability zone in which to
+create the server. This argument is preferred to `availability_zone`, when
+scheduling the server on a
+[particular](https://docs.openstack.org/nova/latest/admin/availability-zones.html)
+host or node. Conflicts with `availability_zone`. Changing this creates a
+new server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2404,7 +2509,22 @@ been explicitly and implicitly added.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The availability zone in which to create
-the server. Changing this creates a new server.
+the server. Conflicts with `availability_zone_hints`. Changing this creates
+a new server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability_<wbr>zone_<wbr>hints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The availability zone in which to
+create the server. This argument is preferred to `availability_zone`, when
+scheduling the server on a
+[particular](https://docs.openstack.org/nova/latest/admin/availability-zones.html)
+host or node. Conflicts with `availability_zone`. Changing this creates a
+new server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2646,6 +2766,9 @@ Supported options are described below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#InstanceBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#InstanceBlockDeviceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.Inputs.InstanceBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.Outputs.InstanceBlockDevice.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3106,6 +3229,9 @@ creates a new server.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#InstanceNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#InstanceNetworkOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.Inputs.InstanceNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.Outputs.InstanceNetwork.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3413,6 +3539,9 @@ the image, volume, or snapshot. Changing this creates a new server.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#InstancePersonalityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#InstancePersonalityOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.Inputs.InstancePersonalityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.Outputs.InstancePersonality.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3527,6 +3656,9 @@ the image, volume, or snapshot. Changing this creates a new server.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#InstanceSchedulerHintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#InstanceSchedulerHintOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.Inputs.InstanceSchedulerHintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.Outputs.InstanceSchedulerHint.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3863,12 +3995,26 @@ scheduled on the same host of those specified.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#InstanceVendorOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#InstanceVendorOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.Inputs.InstanceVendorOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.Outputs.InstanceVendorOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Detach<wbr>Ports<wbr>Before<wbr>Destroy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to try to detach all attached
+ports to the vm before destroying it to make sure the port state is correct
+after the vm destruction. This is helpful when the port is not deleted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3891,6 +4037,17 @@ instances after some timeout.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Detach<wbr>Ports<wbr>Before<wbr>Destroy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to try to detach all attached
+ports to the vm before destroying it to make sure the port state is correct
+after the vm destruction. This is helpful when the port is not deleted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Ignore<wbr>Resize<wbr>Confirmation</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
@@ -3910,6 +4067,17 @@ instances after some timeout.
 
     <dt class="property-optional"
             title="Optional">
+        <span>detach<wbr>Ports<wbr>Before<wbr>Destroy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to try to detach all attached
+ports to the vm before destroying it to make sure the port state is correct
+after the vm destruction. This is helpful when the port is not deleted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ignore<wbr>Resize<wbr>Confirmation</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
@@ -3926,6 +4094,17 @@ instances after some timeout.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>detach<wbr>Ports<wbr>Before<wbr>Destroy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to try to detach all attached
+ports to the vm before destroying it to make sure the port state is correct
+after the vm destruction. This is helpful when the port is not deleted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

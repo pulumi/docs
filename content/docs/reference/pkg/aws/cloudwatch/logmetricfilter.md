@@ -46,7 +46,7 @@ const yada = new aws.cloudwatch.LogMetricFilter("yada", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LogMetricFilter</span><span class="p">(resource_name, opts=None, </span>log_group_name=None<span class="p">, </span>metric_transformation=None<span class="p">, </span>name=None<span class="p">, </span>pattern=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LogMetricFilter</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>log_group_name=None<span class="p">, </span>metric_transformation=None<span class="p">, </span>name=None<span class="p">, </span>pattern=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -790,6 +790,9 @@ for extracting metric data out of ingested log events.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogMetricFilterMetricTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogMetricFilterMetricTransformationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.LogMetricFilterMetricTransformation.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

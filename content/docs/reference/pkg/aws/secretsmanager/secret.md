@@ -61,7 +61,7 @@ const rotation_example = new aws.secretsmanager.Secret("rotation-example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Secret</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>policy=None<span class="p">, </span>recovery_window_in_days=None<span class="p">, </span>rotation_lambda_arn=None<span class="p">, </span>rotation_rules=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Secret</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>policy=None<span class="p">, </span>recovery_window_in_days=None<span class="p">, </span>rotation_lambda_arn=None<span class="p">, </span>rotation_rules=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1293,6 +1293,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/secretsmanager?tab=doc#SecretRotationRulesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/secretsmanager?tab=doc#SecretRotationRulesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SecretsManager.Inputs.SecretRotationRulesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SecretsManager.Outputs.SecretRotationRules.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

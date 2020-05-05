@@ -13,6 +13,90 @@ meta_desc: "Explore the KubernetesNodePool resource of the Digital Ocean package
 Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the `digitalocean..KubernetesCluster` resource, this resource can be used to add additional ones to a cluster.
 
 {{% examples %}}
+## Example Usage
+
+{{% example %}}
+### Basic Example
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const foo = new digitalocean.KubernetesCluster("foo", {
+    region: "nyc1",
+    version: "1.15.5-do.1",
+    node_pool: {
+        name: "front-end-pool",
+        size: "s-2vcpu-2gb",
+        nodeCount: 3,
+    },
+});
+const bar = new digitalocean.KubernetesNodePool("bar", {
+    clusterId: foo.id,
+    size: "c-2",
+    nodeCount: 2,
+    tags: ["backend"],
+    labels: {
+        service: "backend",
+        priority: "high",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+foo = digitalocean.KubernetesCluster("foo",
+    region="nyc1",
+    version="1.15.5-do.1",
+    node_pool={
+        "name": "front-end-pool",
+        "size": "s-2vcpu-2gb",
+        "nodeCount": 3,
+    })
+bar = digitalocean.KubernetesNodePool("bar",
+    cluster_id=foo.id,
+    size="c-2",
+    node_count=2,
+    tags=["backend"],
+    labels={
+        "service": "backend",
+        "priority": "high",
+    })
+```
+
+{{% /example %}}
+{{% example %}}
+### Autoscaling Example
+
+Node pools may also be configured to [autoscale](https://www.digitalocean.com/docs/kubernetes/how-to/autoscale/).
+For example:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const autoscale-pool-01 = new digitalocean.KubernetesNodePool("autoscale-pool-01", {
+    clusterId: digitalocean_kubernetes_cluster.foo.id,
+    size: "s-1vcpu-2gb",
+    autoScale: true,
+    minNodes: 0,
+    maxNodes: 5,
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+autoscale_pool_01 = digitalocean.KubernetesNodePool("autoscale-pool-01",
+    cluster_id=digitalocean_kubernetes_cluster["foo"]["id"],
+    size="s-1vcpu-2gb",
+    auto_scale=True,
+    min_nodes=0,
+    max_nodes=5)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -26,7 +110,7 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KubernetesNodePool</span><span class="p">(resource_name, opts=None, </span>auto_scale=None<span class="p">, </span>cluster_id=None<span class="p">, </span>labels=None<span class="p">, </span>max_nodes=None<span class="p">, </span>min_nodes=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KubernetesNodePool</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_scale=None<span class="p">, </span>cluster_id=None<span class="p">, </span>labels=None<span class="p">, </span>max_nodes=None<span class="p">, </span>min_nodes=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1306,6 +1390,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesNodePoolNodeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.KubernetesNodePoolNode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

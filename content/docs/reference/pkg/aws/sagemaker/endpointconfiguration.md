@@ -50,7 +50,7 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EndpointConfiguration</span><span class="p">(resource_name, opts=None, </span>kms_key_arn=None<span class="p">, </span>name=None<span class="p">, </span>production_variants=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EndpointConfiguration</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>name=None<span class="p">, </span>production_variants=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -850,6 +850,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sagemaker?tab=doc#EndpointConfigurationProductionVariantArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sagemaker?tab=doc#EndpointConfigurationProductionVariantOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.EndpointConfigurationProductionVariantArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.EndpointConfigurationProductionVariant.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

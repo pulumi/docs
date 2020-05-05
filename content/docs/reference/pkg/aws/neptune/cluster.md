@@ -56,7 +56,7 @@ See the AWS [Docs](https://docs.aws.amazon.com/neptune/latest/userguide/limits.h
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>apply_immediately=None<span class="p">, </span>availability_zones=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>cluster_identifier_prefix=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>enable_cloudwatch_logs_exports=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>final_snapshot_identifier=None<span class="p">, </span>iam_database_authentication_enabled=None<span class="p">, </span>iam_roles=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>neptune_cluster_parameter_group_name=None<span class="p">, </span>neptune_subnet_group_name=None<span class="p">, </span>port=None<span class="p">, </span>preferred_backup_window=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>replication_source_identifier=None<span class="p">, </span>skip_final_snapshot=None<span class="p">, </span>snapshot_identifier=None<span class="p">, </span>storage_encrypted=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>availability_zones=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>cluster_identifier_prefix=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>enable_cloudwatch_logs_exports=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>final_snapshot_identifier=None<span class="p">, </span>iam_database_authentication_enabled=None<span class="p">, </span>iam_roles=None<span class="p">, </span>kms_key_arn=None<span class="p">, </span>neptune_cluster_parameter_group_name=None<span class="p">, </span>neptune_subnet_group_name=None<span class="p">, </span>port=None<span class="p">, </span>preferred_backup_window=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>replication_source_identifier=None<span class="p">, </span>skip_final_snapshot=None<span class="p">, </span>snapshot_identifier=None<span class="p">, </span>storage_encrypted=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -432,7 +432,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Neptune cluster.
+    <dd>{{% md %}}A map of tags to assign to the Neptune cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -655,7 +655,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Neptune cluster.
+    <dd>{{% md %}}A map of tags to assign to the Neptune cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -878,7 +878,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Neptune cluster.
+    <dd>{{% md %}}A map of tags to assign to the Neptune cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1101,7 +1101,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Neptune cluster.
+    <dd>{{% md %}}A map of tags to assign to the Neptune cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1791,7 +1791,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Neptune cluster.
+    <dd>{{% md %}}A map of tags to assign to the Neptune cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2068,7 +2068,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Neptune cluster.
+    <dd>{{% md %}}A map of tags to assign to the Neptune cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2345,7 +2345,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Neptune cluster.
+    <dd>{{% md %}}A map of tags to assign to the Neptune cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2622,7 +2622,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Neptune cluster.
+    <dd>{{% md %}}A map of tags to assign to the Neptune cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

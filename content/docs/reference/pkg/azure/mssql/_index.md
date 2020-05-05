@@ -14,6 +14,7 @@ Explore the resources and functions of the mssql module in the Azure package.
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="databasevulnerabilityassessmentrulebaseline" title="DatabaseVulnerabilityAssessmentRuleBaseline"><span class="symbol resource"></span>DatabaseVulnerabilityAssessmentRuleBaseline</a></li>
     <li><a href="elasticpool" title="ElasticPool"><span class="symbol resource"></span>ElasticPool</a></li>
+    <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
     <li><a href="serversecurityalertpolicy" title="ServerSecurityAlertPolicy"><span class="symbol resource"></span>ServerSecurityAlertPolicy</a></li>
     <li><a href="servervulnerabilityassessment" title="ServerVulnerabilityAssessment"><span class="symbol resource"></span>ServerVulnerabilityAssessment</a></li>
     <li><a href="virtualmachine" title="VirtualMachine"><span class="symbol resource"></span>VirtualMachine</a></li>
@@ -34,6 +35,6 @@ Explore the resources and functions of the mssql module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 

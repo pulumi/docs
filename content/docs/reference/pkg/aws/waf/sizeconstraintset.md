@@ -46,7 +46,7 @@ const sizeConstraintSet = new aws.waf.SizeConstraintSet("size_constraint_set", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SizeConstraintSet</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>size_constraints=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SizeConstraintSet</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>size_constraints=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -703,6 +703,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#SizeConstraintSetSizeConstraintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#SizeConstraintSetSizeConstraintOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Inputs.SizeConstraintSetSizeConstraintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Outputs.SizeConstraintSetSizeConstraint.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -921,6 +924,9 @@ for all supported values.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#SizeConstraintSetSizeConstraintFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#SizeConstraintSetSizeConstraintFieldToMatchOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Inputs.SizeConstraintSetSizeConstraintFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Outputs.SizeConstraintSetSizeConstraintFieldToMatch.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

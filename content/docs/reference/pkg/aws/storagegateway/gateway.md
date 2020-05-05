@@ -96,7 +96,7 @@ const example = new aws.storagegateway.Gateway("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Gateway</span><span class="p">(resource_name, opts=None, </span>activation_key=None<span class="p">, </span>cloudwatch_log_group_arn=None<span class="p">, </span>gateway_ip_address=None<span class="p">, </span>gateway_name=None<span class="p">, </span>gateway_timezone=None<span class="p">, </span>gateway_type=None<span class="p">, </span>medium_changer_type=None<span class="p">, </span>smb_active_directory_settings=None<span class="p">, </span>smb_guest_password=None<span class="p">, </span>tags=None<span class="p">, </span>tape_drive_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Gateway</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>activation_key=None<span class="p">, </span>cloudwatch_log_group_arn=None<span class="p">, </span>gateway_ip_address=None<span class="p">, </span>gateway_name=None<span class="p">, </span>gateway_timezone=None<span class="p">, </span>gateway_type=None<span class="p">, </span>gateway_vpc_endpoint=None<span class="p">, </span>medium_changer_type=None<span class="p">, </span>smb_active_directory_settings=None<span class="p">, </span>smb_guest_password=None<span class="p">, </span>tags=None<span class="p">, </span>tape_drive_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -324,6 +324,15 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span>Gateway<wbr>Vpc<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Medium<wbr>Changer<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -425,6 +434,15 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gateway<wbr>Vpc<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -534,6 +552,15 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span>gateway<wbr>Vpc<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>medium<wbr>Changer<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -635,6 +662,15 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>gateway_<wbr>vpc_<wbr>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -843,7 +879,7 @@ Get an existing Gateway resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>activation_key=None<span class="p">, </span>arn=None<span class="p">, </span>cloudwatch_log_group_arn=None<span class="p">, </span>gateway_id=None<span class="p">, </span>gateway_ip_address=None<span class="p">, </span>gateway_name=None<span class="p">, </span>gateway_timezone=None<span class="p">, </span>gateway_type=None<span class="p">, </span>medium_changer_type=None<span class="p">, </span>smb_active_directory_settings=None<span class="p">, </span>smb_guest_password=None<span class="p">, </span>tags=None<span class="p">, </span>tape_drive_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>activation_key=None<span class="p">, </span>arn=None<span class="p">, </span>cloudwatch_log_group_arn=None<span class="p">, </span>gateway_id=None<span class="p">, </span>gateway_ip_address=None<span class="p">, </span>gateway_name=None<span class="p">, </span>gateway_timezone=None<span class="p">, </span>gateway_type=None<span class="p">, </span>gateway_vpc_endpoint=None<span class="p">, </span>medium_changer_type=None<span class="p">, </span>smb_active_directory_settings=None<span class="p">, </span>smb_guest_password=None<span class="p">, </span>tags=None<span class="p">, </span>tape_drive_type=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1031,6 +1067,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Gateway<wbr>Vpc<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Medium<wbr>Changer<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1150,6 +1195,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gateway<wbr>Vpc<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1277,6 +1331,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>gateway<wbr>Vpc<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>medium<wbr>Changer<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1400,6 +1463,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>gateway_<wbr>vpc_<wbr>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>medium_<wbr>changer_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1464,6 +1536,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#GatewaySmbActiveDirectorySettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#GatewaySmbActiveDirectorySettingsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.Inputs.GatewaySmbActiveDirectorySettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.Outputs.GatewaySmbActiveDirectorySettings.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

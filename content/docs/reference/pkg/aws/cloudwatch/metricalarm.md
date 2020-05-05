@@ -158,7 +158,7 @@ const xxAnomalyDetection = new aws.cloudwatch.MetricAlarm("xx_anomaly_detection"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MetricAlarm</span><span class="p">(resource_name, opts=None, </span>actions_enabled=None<span class="p">, </span>alarm_actions=None<span class="p">, </span>alarm_description=None<span class="p">, </span>comparison_operator=None<span class="p">, </span>datapoints_to_alarm=None<span class="p">, </span>dimensions=None<span class="p">, </span>evaluate_low_sample_count_percentiles=None<span class="p">, </span>evaluation_periods=None<span class="p">, </span>extended_statistic=None<span class="p">, </span>insufficient_data_actions=None<span class="p">, </span>metric_name=None<span class="p">, </span>metric_queries=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>ok_actions=None<span class="p">, </span>period=None<span class="p">, </span>statistic=None<span class="p">, </span>tags=None<span class="p">, </span>threshold=None<span class="p">, </span>threshold_metric_id=None<span class="p">, </span>treat_missing_data=None<span class="p">, </span>unit=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MetricAlarm</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions_enabled=None<span class="p">, </span>alarm_actions=None<span class="p">, </span>alarm_description=None<span class="p">, </span>comparison_operator=None<span class="p">, </span>datapoints_to_alarm=None<span class="p">, </span>dimensions=None<span class="p">, </span>evaluate_low_sample_count_percentiles=None<span class="p">, </span>evaluation_periods=None<span class="p">, </span>extended_statistic=None<span class="p">, </span>insufficient_data_actions=None<span class="p">, </span>metric_name=None<span class="p">, </span>metric_queries=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>ok_actions=None<span class="p">, </span>period=None<span class="p">, </span>statistic=None<span class="p">, </span>tags=None<span class="p">, </span>threshold=None<span class="p">, </span>threshold_metric_id=None<span class="p">, </span>treat_missing_data=None<span class="p">, </span>unit=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -497,7 +497,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -710,7 +710,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -923,7 +923,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1136,7 +1136,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1591,7 +1591,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1813,7 +1813,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2035,7 +2035,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2257,7 +2257,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2318,6 +2318,9 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#MetricAlarmMetricQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#MetricAlarmMetricQueryOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.MetricAlarmMetricQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.MetricAlarmMetricQuery.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2541,6 +2544,9 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#MetricAlarmMetricQueryMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#MetricAlarmMetricQueryMetricOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.MetricAlarmMetricQueryMetricArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.MetricAlarmMetricQueryMetric.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

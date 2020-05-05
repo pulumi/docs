@@ -22,6 +22,7 @@ import * as openstack from "@pulumi/openstack";
 
 const member1 = new openstack.loadbalancer.Member("member_1", {
     address: "192.168.199.23",
+    poolId: "935685fb-a896-40f9-9ff4-ae531a3a00fe",
     protocolPort: 8080,
 });
 ```
@@ -40,7 +41,7 @@ const member1 = new openstack.loadbalancer.Member("member_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Member</span><span class="p">(resource_name, opts=None, </span>address=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>name=None<span class="p">, </span>pool_id=None<span class="p">, </span>protocol_port=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>weight=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Member</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>name=None<span class="p">, </span>pool_id=None<span class="p">, </span>protocol_port=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -228,8 +229,8 @@ the load balancer. Changing this creates a new member.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of the pool that this member will be
-assigned to.
+    <dd>{{% md %}}The id of the pool that this member will be assigned
+to. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -249,7 +250,7 @@ Changing this creates a new member.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the member.
-A valid value is true (UP) or false (DOWN).
+A valid value is true (UP) or false (DOWN). Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -268,9 +269,8 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-member.
+A Networking client is needed to create a member. If omitted, the `region`
+argument of the provider is used. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -279,7 +279,8 @@ member.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The subnet in which to access the member
+    <dd>{{% md %}}The subnet in which to access the member. Changing
+this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -302,7 +303,7 @@ other than their own. Changing this creates a new member.
     <dd>{{% md %}}A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
-as a member with a weight of 2.
+as a member with a weight of 2. Defaults to 1.
 {{% /md %}}</dd>
 
 </dl>
@@ -328,8 +329,8 @@ the load balancer. Changing this creates a new member.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of the pool that this member will be
-assigned to.
+    <dd>{{% md %}}The id of the pool that this member will be assigned
+to. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -349,7 +350,7 @@ Changing this creates a new member.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the member.
-A valid value is true (UP) or false (DOWN).
+A valid value is true (UP) or false (DOWN). Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -368,9 +369,8 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-member.
+A Networking client is needed to create a member. If omitted, the `region`
+argument of the provider is used. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -379,7 +379,8 @@ member.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The subnet in which to access the member
+    <dd>{{% md %}}The subnet in which to access the member. Changing
+this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -402,7 +403,7 @@ other than their own. Changing this creates a new member.
     <dd>{{% md %}}A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
-as a member with a weight of 2.
+as a member with a weight of 2. Defaults to 1.
 {{% /md %}}</dd>
 
 </dl>
@@ -428,8 +429,8 @@ the load balancer. Changing this creates a new member.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of the pool that this member will be
-assigned to.
+    <dd>{{% md %}}The id of the pool that this member will be assigned
+to. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -449,7 +450,7 @@ Changing this creates a new member.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the member.
-A valid value is true (UP) or false (DOWN).
+A valid value is true (UP) or false (DOWN). Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -468,9 +469,8 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-member.
+A Networking client is needed to create a member. If omitted, the `region`
+argument of the provider is used. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -479,7 +479,8 @@ member.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The subnet in which to access the member
+    <dd>{{% md %}}The subnet in which to access the member. Changing
+this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -502,7 +503,7 @@ other than their own. Changing this creates a new member.
     <dd>{{% md %}}A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
-as a member with a weight of 2.
+as a member with a weight of 2. Defaults to 1.
 {{% /md %}}</dd>
 
 </dl>
@@ -528,8 +529,8 @@ the load balancer. Changing this creates a new member.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The id of the pool that this member will be
-assigned to.
+    <dd>{{% md %}}The id of the pool that this member will be assigned
+to. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -549,7 +550,7 @@ Changing this creates a new member.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the member.
-A valid value is true (UP) or false (DOWN).
+A valid value is true (UP) or false (DOWN). Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -568,9 +569,8 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-member.
+A Networking client is needed to create a member. If omitted, the `region`
+argument of the provider is used. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -579,7 +579,8 @@ member.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The subnet in which to access the member
+    <dd>{{% md %}}The subnet in which to access the member. Changing
+this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -602,7 +603,7 @@ other than their own. Changing this creates a new member.
     <dd>{{% md %}}A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
-as a member with a weight of 2.
+as a member with a weight of 2. Defaults to 1.
 {{% /md %}}</dd>
 
 </dl>
@@ -826,7 +827,7 @@ the load balancer. Changing this creates a new member.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the member.
-A valid value is true (UP) or false (DOWN).
+A valid value is true (UP) or false (DOWN). Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -844,8 +845,8 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of the pool that this member will be
-assigned to.
+    <dd>{{% md %}}The id of the pool that this member will be assigned
+to. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -865,9 +866,8 @@ Changing this creates a new member.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-member.
+A Networking client is needed to create a member. If omitted, the `region`
+argument of the provider is used. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -876,7 +876,8 @@ member.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The subnet in which to access the member
+    <dd>{{% md %}}The subnet in which to access the member. Changing
+this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -899,7 +900,7 @@ other than their own. Changing this creates a new member.
     <dd>{{% md %}}A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
-as a member with a weight of 2.
+as a member with a weight of 2. Defaults to 1.
 {{% /md %}}</dd>
 
 </dl>
@@ -926,7 +927,7 @@ the load balancer. Changing this creates a new member.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the member.
-A valid value is true (UP) or false (DOWN).
+A valid value is true (UP) or false (DOWN). Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -944,8 +945,8 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of the pool that this member will be
-assigned to.
+    <dd>{{% md %}}The id of the pool that this member will be assigned
+to. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -965,9 +966,8 @@ Changing this creates a new member.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-member.
+A Networking client is needed to create a member. If omitted, the `region`
+argument of the provider is used. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -976,7 +976,8 @@ member.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The subnet in which to access the member
+    <dd>{{% md %}}The subnet in which to access the member. Changing
+this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -999,7 +1000,7 @@ other than their own. Changing this creates a new member.
     <dd>{{% md %}}A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
-as a member with a weight of 2.
+as a member with a weight of 2. Defaults to 1.
 {{% /md %}}</dd>
 
 </dl>
@@ -1026,7 +1027,7 @@ the load balancer. Changing this creates a new member.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the member.
-A valid value is true (UP) or false (DOWN).
+A valid value is true (UP) or false (DOWN). Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1044,8 +1045,8 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The id of the pool that this member will be
-assigned to.
+    <dd>{{% md %}}The id of the pool that this member will be assigned
+to. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1065,9 +1066,8 @@ Changing this creates a new member.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-member.
+A Networking client is needed to create a member. If omitted, the `region`
+argument of the provider is used. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1076,7 +1076,8 @@ member.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The subnet in which to access the member
+    <dd>{{% md %}}The subnet in which to access the member. Changing
+this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1099,7 +1100,7 @@ other than their own. Changing this creates a new member.
     <dd>{{% md %}}A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
-as a member with a weight of 2.
+as a member with a weight of 2. Defaults to 1.
 {{% /md %}}</dd>
 
 </dl>
@@ -1126,7 +1127,7 @@ the load balancer. Changing this creates a new member.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the member.
-A valid value is true (UP) or false (DOWN).
+A valid value is true (UP) or false (DOWN). Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1144,8 +1145,8 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The id of the pool that this member will be
-assigned to.
+    <dd>{{% md %}}The id of the pool that this member will be assigned
+to. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,9 +1166,8 @@ Changing this creates a new member.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-member.
+A Networking client is needed to create a member. If omitted, the `region`
+argument of the provider is used. Changing this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1176,7 +1176,8 @@ member.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The subnet in which to access the member
+    <dd>{{% md %}}The subnet in which to access the member. Changing
+this creates a new member.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1199,7 +1200,7 @@ other than their own. Changing this creates a new member.
     <dd>{{% md %}}A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
-as a member with a weight of 2.
+as a member with a weight of 2. Defaults to 1.
 {{% /md %}}</dd>
 
 </dl>

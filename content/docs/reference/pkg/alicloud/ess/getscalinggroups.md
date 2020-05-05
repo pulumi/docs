@@ -1062,7 +1062,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>launch<wbr>Template<wbr>Id</span>
+        <span>launch_<wbr>template_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1071,7 +1071,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>launch<wbr>Template<wbr>Version</span>
+        <span>launch_<wbr>template_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

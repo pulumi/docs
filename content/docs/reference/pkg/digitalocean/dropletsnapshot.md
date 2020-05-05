@@ -13,6 +13,32 @@ meta_desc: "Explore the DropletSnapshot resource of the Digital Ocean package, i
 Provides a resource which can be used to create a snapshot from an existing DigitalOcean Droplet.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const web = new digitalocean.Droplet("web", {
+    size: "s-1vcpu-1gb",
+    image: "centos-7-x64",
+    region: "nyc3",
+});
+const web-snapshot = new digitalocean.DropletSnapshot("web-snapshot", {dropletId: web.id});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+web = digitalocean.Droplet("web",
+    size="s-1vcpu-1gb",
+    image="centos-7-x64",
+    region="nyc3")
+web_snapshot = digitalocean.DropletSnapshot("web-snapshot", droplet_id=web.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -26,7 +52,7 @@ Provides a resource which can be used to create a snapshot from an existing Digi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DropletSnapshot</span><span class="p">(resource_name, opts=None, </span>droplet_id=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DropletSnapshot</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>droplet_id=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

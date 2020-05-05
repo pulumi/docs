@@ -13,6 +13,32 @@ meta_desc: "Explore the VolumeSnapshot resource of the Digital Ocean package, in
 Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot from an existing volume.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const foobarVolume = new digitalocean.Volume("foobarVolume", {
+    region: "nyc1",
+    size: 100,
+    description: "an example volume",
+});
+const foobarVolumeSnapshot = new digitalocean.VolumeSnapshot("foobarVolumeSnapshot", {volumeId: foobarVolume.id});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+foobar_volume = digitalocean.Volume("foobarVolume",
+    region="nyc1",
+    size=100,
+    description="an example volume")
+foobar_volume_snapshot = digitalocean.VolumeSnapshot("foobarVolumeSnapshot", volume_id=foobar_volume.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -26,7 +52,7 @@ Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot f
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeSnapshot</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>volume_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeSnapshot</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>volume_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

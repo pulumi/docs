@@ -13,14 +13,14 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.mq"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.mq"></span><dl class="py class">
 <dt id="pulumi_aws.mq.AwaitableGetBrokerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">AwaitableGetBrokerResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">auto_minor_version_upgrade=None</em>, <em class="sig-param">broker_id=None</em>, <em class="sig-param">broker_name=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">deployment_mode=None</em>, <em class="sig-param">encryption_options=None</em>, <em class="sig-param">engine_type=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">host_instance_type=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">maintenance_window_start_time=None</em>, <em class="sig-param">publicly_accessible=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.AwaitableGetBrokerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">AwaitableGetBrokerResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_minor_version_upgrade</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">broker_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">broker_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publicly_accessible</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">users</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.AwaitableGetBrokerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.mq.Broker">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">Broker</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apply_immediately=None</em>, <em class="sig-param">auto_minor_version_upgrade=None</em>, <em class="sig-param">broker_name=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">deployment_mode=None</em>, <em class="sig-param">encryption_options=None</em>, <em class="sig-param">engine_type=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">host_instance_type=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">maintenance_window_start_time=None</em>, <em class="sig-param">publicly_accessible=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">Broker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">apply_immediately</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_minor_version_upgrade</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">broker_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publicly_accessible</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">users</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an MQ Broker Resource. This resources also manages users for the broker.</p>
 <p>For more information on Amazon MQ, see <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html">Amazon MQ documentation</a>.</p>
 <p>Changes to an MQ Broker can occur when you change a
@@ -55,7 +55,7 @@ are applied immediately, or during the next maintenance window. Default is <code
 <li><p><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable connections from applications outside of the VPC that hosts the broker’s subnets.</p></li>
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of security group IDs assigned to the broker.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of subnet IDs in which to launch the broker. A <code class="docutils literal notranslate"><span class="pre">SINGLE_INSTANCE</span></code> deployment requires one subnet. An <code class="docutils literal notranslate"><span class="pre">ACTIVE_STANDBY_MULTI_AZ</span></code> deployment requires two subnets.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of all ActiveMQ usernames for the specified broker. See below.</p></li>
 </ul>
 </dd>
@@ -88,34 +88,34 @@ are applied immediately, or during the next maintenance window. Default is <code
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username of the user.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.apply_immediately">
-<code class="sig-name descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.apply_immediately" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">apply_immediately</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.apply_immediately" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the broker.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.auto_minor_version_upgrade">
-<code class="sig-name descname">auto_minor_version_upgrade</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.auto_minor_version_upgrade" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">auto_minor_version_upgrade</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.auto_minor_version_upgrade" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.broker_name">
-<code class="sig-name descname">broker_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.broker_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">broker_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.broker_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the broker.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.configuration">
-<code class="sig-name descname">configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration of the broker. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Configuration ID.</p></li>
@@ -123,15 +123,15 @@ are applied immediately, or during the next maintenance window. Default is <code
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.deployment_mode">
-<code class="sig-name descname">deployment_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.deployment_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">deployment_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.deployment_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The deployment mode of the broker. Supported: <code class="docutils literal notranslate"><span class="pre">SINGLE_INSTANCE</span></code> and <code class="docutils literal notranslate"><span class="pre">ACTIVE_STANDBY_MULTI_AZ</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">SINGLE_INSTANCE</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.encryption_options">
-<code class="sig-name descname">encryption_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.encryption_options" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">encryption_options</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.encryption_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block containing encryption options. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting <code class="docutils literal notranslate"><span class="pre">use_aws_owned_key</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>. To perform drift detection when AWS managed CMKs or customer managed CMKs are in use, this value must be configured.</p></li>
@@ -139,27 +139,27 @@ are applied immediately, or during the next maintenance window. Default is <code
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.engine_type">
-<code class="sig-name descname">engine_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.engine_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">engine_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.engine_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of broker engine. Currently, Amazon MQ supports only <code class="docutils literal notranslate"><span class="pre">ActiveMQ</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.engine_version">
-<code class="sig-name descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.engine_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">engine_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.engine_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The version of the broker engine. See the <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html">AmazonMQ Broker Engine docs</a> for supported versions.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.host_instance_type">
-<code class="sig-name descname">host_instance_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.host_instance_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host_instance_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.host_instance_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The broker’s instance type. e.g. <code class="docutils literal notranslate"><span class="pre">mq.t2.micro</span></code> or <code class="docutils literal notranslate"><span class="pre">mq.m4.large</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.instances">
-<code class="sig-name descname">instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.instances" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">instances</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of information about allocated brokers (both active &amp; standby).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">instances.0.console_url</span></code> - The URL of the broker’s <a class="reference external" href="http://activemq.apache.org/web-console.html">ActiveMQ Web Console</a>.</p></li>
@@ -179,9 +179,9 @@ are applied immediately, or during the next maintenance window. Default is <code
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.logs">
-<code class="sig-name descname">logs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.logs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">logs</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.logs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Logging configuration of the broker. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audit</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables audit logging. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -189,9 +189,9 @@ are applied immediately, or during the next maintenance window. Default is <code
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.maintenance_window_start_time">
-<code class="sig-name descname">maintenance_window_start_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.maintenance_window_start_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">maintenance_window_start_time</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.maintenance_window_start_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maintenance window start time. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dayOfWeek</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The day of the week. e.g. <code class="docutils literal notranslate"><span class="pre">MONDAY</span></code>, <code class="docutils literal notranslate"><span class="pre">TUESDAY</span></code>, or <code class="docutils literal notranslate"><span class="pre">WEDNESDAY</span></code></p></li>
@@ -200,33 +200,33 @@ are applied immediately, or during the next maintenance window. Default is <code
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.publicly_accessible">
-<code class="sig-name descname">publicly_accessible</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.publicly_accessible" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">publicly_accessible</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.publicly_accessible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to enable connections from applications outside of the VPC that hosts the broker’s subnets.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.security_groups">
-<code class="sig-name descname">security_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.security_groups" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">security_groups</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of security group IDs assigned to the broker.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.subnet_ids">
-<code class="sig-name descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.subnet_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subnet_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.subnet_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of subnet IDs in which to launch the broker. A <code class="docutils literal notranslate"><span class="pre">SINGLE_INSTANCE</span></code> deployment requires one subnet. An <code class="docutils literal notranslate"><span class="pre">ACTIVE_STANDBY_MULTI_AZ</span></code> deployment requires two subnets.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Broker.users">
-<code class="sig-name descname">users</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.users" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">users</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.users" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of all ActiveMQ usernames for the specified broker. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">consoleAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable access to the <a class="reference external" href="http://activemq.apache.org/web-console.html">ActiveMQ Web Console</a> for the user.</p></li>
@@ -236,9 +236,9 @@ are applied immediately, or during the next maintenance window. Default is <code
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.mq.Broker.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apply_immediately=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_minor_version_upgrade=None</em>, <em class="sig-param">broker_name=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">deployment_mode=None</em>, <em class="sig-param">encryption_options=None</em>, <em class="sig-param">engine_type=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">host_instance_type=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">maintenance_window_start_time=None</em>, <em class="sig-param">publicly_accessible=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">apply_immediately</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_minor_version_upgrade</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">broker_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publicly_accessible</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">users</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Broker resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -281,7 +281,7 @@ are applied immediately, or during the next maintenance window. Default is <code
 <li><p><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable connections from applications outside of the VPC that hosts the broker’s subnets.</p></li>
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of security group IDs assigned to the broker.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of subnet IDs in which to launch the broker. A <code class="docutils literal notranslate"><span class="pre">SINGLE_INSTANCE</span></code> deployment requires one subnet. An <code class="docutils literal notranslate"><span class="pre">ACTIVE_STANDBY_MULTI_AZ</span></code> deployment requires two subnets.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of all ActiveMQ usernames for the specified broker. See below.</p></li>
 </ul>
 </dd>
@@ -322,9 +322,9 @@ are applied immediately, or during the next maintenance window. Default is <code
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.mq.Broker.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -340,9 +340,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.mq.Broker.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -360,9 +360,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.mq.Configuration">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">Configuration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">engine_type=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">Configuration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an MQ Configuration Resource.</p>
 <p>For more information on Amazon MQ, see <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html">Amazon MQ documentation</a>.</p>
 <dl class="field-list simple">
@@ -377,63 +377,63 @@ for supported parameters and format of the XML.</p></li>
 <li><p><strong>engine_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of broker engine.</p></li>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the broker engine.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the configuration</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Configuration.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Configuration.data">
-<code class="sig-name descname">data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">data</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.data" title="Permalink to this definition">¶</a></dt>
 <dd><p>The broker configuration in XML format.
 See <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html">official docs</a>
 for supported parameters and format of the XML.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Configuration.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of the configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Configuration.engine_type">
-<code class="sig-name descname">engine_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.engine_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">engine_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.engine_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of broker engine.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Configuration.engine_version">
-<code class="sig-name descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.engine_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">engine_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.engine_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The version of the broker engine.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Configuration.latest_revision">
-<code class="sig-name descname">latest_revision</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.latest_revision" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">latest_revision</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.latest_revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>The latest revision of the configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Configuration.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the configuration</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.Configuration.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.mq.Configuration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">engine_type=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">latest_revision=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_revision</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Configuration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -452,15 +452,15 @@ for supported parameters and format of the XML.</p>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the broker engine.</p></li>
 <li><p><strong>latest_revision</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The latest revision of the configuration.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the configuration</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.mq.Configuration.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -476,9 +476,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.mq.Configuration.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -496,11 +496,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.mq.GetBrokerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">GetBrokerResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">auto_minor_version_upgrade=None</em>, <em class="sig-param">broker_id=None</em>, <em class="sig-param">broker_name=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">deployment_mode=None</em>, <em class="sig-param">encryption_options=None</em>, <em class="sig-param">engine_type=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">host_instance_type=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">maintenance_window_start_time=None</em>, <em class="sig-param">publicly_accessible=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.GetBrokerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">GetBrokerResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_minor_version_upgrade</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">broker_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">broker_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deployment_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publicly_accessible</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">users</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.GetBrokerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBroker.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.mq.GetBrokerResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.GetBrokerResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
@@ -508,9 +508,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_aws.mq.get_broker">
-<code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">get_broker</code><span class="sig-paren">(</span><em class="sig-param">broker_id=None</em>, <em class="sig-param">broker_name=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.get_broker" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">get_broker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">broker_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">broker_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.get_broker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a MQ Broker.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -22,7 +22,7 @@ meta_desc: "Explore the User resource of the GitLab package, including examples,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, opts=None, </span>can_create_group=None<span class="p">, </span>email=None<span class="p">, </span>is_admin=None<span class="p">, </span>is_external=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>projects_limit=None<span class="p">, </span>reset_password=None<span class="p">, </span>skip_confirmation=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>can_create_group=None<span class="p">, </span>email=None<span class="p">, </span>is_admin=None<span class="p">, </span>is_external=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>projects_limit=None<span class="p">, </span>reset_password=None<span class="p">, </span>skip_confirmation=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

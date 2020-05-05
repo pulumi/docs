@@ -76,7 +76,7 @@ const example = new aws.fsx.WindowsFileSystem("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">WindowsFileSystem</span><span class="p">(resource_name, opts=None, </span>active_directory_id=None<span class="p">, </span>automatic_backup_retention_days=None<span class="p">, </span>copy_tags_to_backups=None<span class="p">, </span>daily_automatic_backup_start_time=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>self_managed_active_directory=None<span class="p">, </span>skip_final_backup=None<span class="p">, </span>storage_capacity=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>throughput_capacity=None<span class="p">, </span>weekly_maintenance_start_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">WindowsFileSystem</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_directory_id=None<span class="p">, </span>automatic_backup_retention_days=None<span class="p">, </span>copy_tags_to_backups=None<span class="p">, </span>daily_automatic_backup_start_time=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>self_managed_active_directory=None<span class="p">, </span>skip_final_backup=None<span class="p">, </span>storage_capacity=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>throughput_capacity=None<span class="p">, </span>weekly_maintenance_start_time=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -353,7 +353,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -477,7 +477,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -601,7 +601,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -725,7 +725,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1253,7 +1253,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1422,7 +1422,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1591,7 +1591,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1760,7 +1760,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1812,6 +1812,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/fsx?tab=doc#WindowsFileSystemSelfManagedActiveDirectoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/fsx?tab=doc#WindowsFileSystemSelfManagedActiveDirectoryOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fsx.Inputs.WindowsFileSystemSelfManagedActiveDirectoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fsx.Outputs.WindowsFileSystemSelfManagedActiveDirectory.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -62,7 +62,7 @@ const resource = new aws.cognito.ResourceServer("resource", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourceServer</span><span class="p">(resource_name, opts=None, </span>identifier=None<span class="p">, </span>name=None<span class="p">, </span>scopes=None<span class="p">, </span>user_pool_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourceServer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>identifier=None<span class="p">, </span>name=None<span class="p">, </span>scopes=None<span class="p">, </span>user_pool_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -854,6 +854,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#ResourceServerScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#ResourceServerScopeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.ResourceServerScopeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.ResourceServerScope.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

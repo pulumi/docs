@@ -126,7 +126,7 @@ After adding inline IAM Policies (e.g. [`aws.iam.RolePolicy` resource](https://w
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>enabled_cluster_log_types=None<span class="p">, </span>encryption_config=None<span class="p">, </span>name=None<span class="p">, </span>role_arn=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vpc_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled_cluster_log_types=None<span class="p">, </span>encryption_config=None<span class="p">, </span>name=None<span class="p">, </span>role_arn=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vpc_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -349,7 +349,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -419,7 +419,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -489,7 +489,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -559,7 +559,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1127,7 +1127,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1259,7 +1259,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1391,7 +1391,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1523,7 +1523,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1566,6 +1566,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterCertificateAuthorityOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.ClusterCertificateAuthority.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1645,6 +1648,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterEncryptionConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterEncryptionConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Inputs.ClusterEncryptionConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.ClusterEncryptionConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1761,6 +1767,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterEncryptionConfigProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterEncryptionConfigProviderOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Inputs.ClusterEncryptionConfigProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.ClusterEncryptionConfigProvider.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1839,6 +1848,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterIdentityOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.ClusterIdentity.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1919,6 +1931,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterIdentityOidcOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.ClusterIdentityOidc.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1997,6 +2012,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterVpcConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterVpcConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Inputs.ClusterVpcConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.ClusterVpcConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

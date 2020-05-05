@@ -1,7 +1,8 @@
 
 ---
 title: "Firewall"
-block_external_search_index: true
+title_tag: "Resource Firewall | Module compute | Package GCP"
+meta_desc: "Explore the Firewall resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Each network has its own firewall controlling access to and from the"
 ---
 
 
@@ -40,7 +41,7 @@ To get more information about Firewall, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Firewall</span><span class="p">(resource_name, opts=None, </span>allows=None<span class="p">, </span>denies=None<span class="p">, </span>description=None<span class="p">, </span>destination_ranges=None<span class="p">, </span>direction=None<span class="p">, </span>disabled=None<span class="p">, </span>enable_logging=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>source_ranges=None<span class="p">, </span>source_service_accounts=None<span class="p">, </span>source_tags=None<span class="p">, </span>target_service_accounts=None<span class="p">, </span>target_tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Firewall</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allows=None<span class="p">, </span>denies=None<span class="p">, </span>description=None<span class="p">, </span>destination_ranges=None<span class="p">, </span>direction=None<span class="p">, </span>disabled=None<span class="p">, </span>enable_logging=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>source_ranges=None<span class="p">, </span>source_service_accounts=None<span class="p">, </span>source_tags=None<span class="p">, </span>target_service_accounts=None<span class="p">, </span>target_tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -227,8 +228,9 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">List&lt;Firewall<wbr>Allow<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-permitted connection.
+    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
+specifies a protocol and port-range tuple that describes a permitted
+connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -237,8 +239,8 @@ permitted connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">List&lt;Firewall<wbr>Deny<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-denied connection.
+    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
+a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -247,7 +249,8 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -256,8 +259,9 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these
-ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
+    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
+traffic that has destination IP address in these ranges. These ranges
+must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -266,8 +270,10 @@ ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS traffic, it is NOT supported
-to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify sourceRanges OR sourceTags.
+    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
+INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
+destinationRanges; For EGRESS traffic, it is NOT supported to specify
+sourceRanges OR sourceTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -276,9 +282,10 @@ to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true,
-the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall
-rule will be enabled.
+    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
+network it is associated with. When set to true, the firewall rule is
+not enforced and the network behaves as if it did not exist. If this
+is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -287,8 +294,9 @@ rule will be enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be
-exported to Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular
+firewall rule. If logging is enabled, logs will be exported to
+Stackdriver.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -297,10 +305,13 @@ exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -309,10 +320,12 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not specified, the value assumed is
-1000. Relative priorities determine precedence of conflicting rules. Lower value of priority implies higher precedence
-(eg, a rule with priority 0 has higher precedence than a rule with priority 1). DENY rules take precedence over ALLOW
-rules having equal priority.
+    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
+inclusive. When not specified, the value assumed is 1000. Relative
+priorities determine precedence of conflicting rules. Lower value of
+priority implies higher precedence (eg, a rule with priority 0 has
+higher precedence than a rule with priority 1). DENY rules take
+precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -331,10 +344,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to traffic that has source IP address in these ranges.
-These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both properties
-are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP that belongs
-to a tag listed in the sourceTags property. The connection does not need to match both properties for the firewall to
+    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
+traffic that has source IP address in these ranges. These ranges must
+be expressed in CIDR format. One or both of sourceRanges and
+sourceTags may be set. If both properties are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP that belongs to a tag listed in the sourceTags property. The
+connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
 
@@ -344,13 +360,17 @@ apply. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only to traffic originating from an instance with a
-service account in this list. Source service accounts cannot be used to control traffic to an instance's external IP
-address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same
-time as sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP address within
-sourceRanges OR the source IP belongs to an instance with service account listed in sourceServiceAccount. The connection
-does not need to match both properties for the firewall to apply. sourceServiceAccounts cannot be used at the same time
-as sourceTags or targetTags.
+    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
+to traffic originating from an instance with a service account in this
+list. Source service accounts cannot be used to control traffic to an
+instance's external IP address because service accounts are associated
+with an instance, not an IP address. sourceRanges can be set at the
+same time as sourceServiceAccounts. If both are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP belongs to an instance with service account listed in
+sourceServiceAccount. The connection does not need to match both
+properties for the firewall to apply. sourceServiceAccounts cannot be
+used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,12 +379,15 @@ as sourceTags or targetTags.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic with source IP that belongs to a tag listed in
-source tags. Source tags cannot be used to control traffic to an instance's external IP address. Because tags are
-associated with an instance, not an IP address. One or both of sourceRanges and sourceTags may be set. If both
-properties are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP
-that belongs to a tag listed in the sourceTags property. The connection does not need to match both properties for the
-firewall to apply.
+    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
+with source IP that belongs to a tag listed in source tags. Source
+tags cannot be used to control traffic to an instance's external IP
+address. Because tags are associated with an instance, not an IP
+address. One or both of sourceRanges and sourceTags may be set. If
+both properties are set, the firewall will apply to traffic that has
+source IP address within sourceRanges OR the source IP that belongs to
+a tag listed in the sourceTags property. The connection does not need
+to match both properties for the firewall to apply.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -373,9 +396,12 @@ firewall to apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither
-targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.
+    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+targetServiceAccounts cannot be used at the same time as targetTags or
+sourceTags. If neither targetServiceAccounts nor targetTags are
+specified, the firewall rule applies to all instances on the specified
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -384,9 +410,10 @@ targetServiceAccounts nor targetTags are specified, the firewall rule applies to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. If no targetTags are specified, the firewall rule applies to all instances on the specified
-network.
+    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+If no targetTags are specified, the firewall rule applies to all
+instances on the specified network.
 {{% /md %}}</dd>
 
 </dl>
@@ -411,8 +438,9 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">[]Firewall<wbr>Allow</a></span>
     </dt>
-    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-permitted connection.
+    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
+specifies a protocol and port-range tuple that describes a permitted
+connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -421,8 +449,8 @@ permitted connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">[]Firewall<wbr>Deny</a></span>
     </dt>
-    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-denied connection.
+    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
+a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -431,7 +459,8 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -440,8 +469,9 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these
-ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
+    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
+traffic that has destination IP address in these ranges. These ranges
+must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -450,8 +480,10 @@ ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS traffic, it is NOT supported
-to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify sourceRanges OR sourceTags.
+    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
+INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
+destinationRanges; For EGRESS traffic, it is NOT supported to specify
+sourceRanges OR sourceTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -460,9 +492,10 @@ to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true,
-the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall
-rule will be enabled.
+    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
+network it is associated with. When set to true, the firewall rule is
+not enforced and the network behaves as if it did not exist. If this
+is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -471,8 +504,9 @@ rule will be enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be
-exported to Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular
+firewall rule. If logging is enabled, logs will be exported to
+Stackdriver.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -481,10 +515,13 @@ exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -493,10 +530,12 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not specified, the value assumed is
-1000. Relative priorities determine precedence of conflicting rules. Lower value of priority implies higher precedence
-(eg, a rule with priority 0 has higher precedence than a rule with priority 1). DENY rules take precedence over ALLOW
-rules having equal priority.
+    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
+inclusive. When not specified, the value assumed is 1000. Relative
+priorities determine precedence of conflicting rules. Lower value of
+priority implies higher precedence (eg, a rule with priority 0 has
+higher precedence than a rule with priority 1). DENY rules take
+precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -515,10 +554,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to traffic that has source IP address in these ranges.
-These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both properties
-are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP that belongs
-to a tag listed in the sourceTags property. The connection does not need to match both properties for the firewall to
+    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
+traffic that has source IP address in these ranges. These ranges must
+be expressed in CIDR format. One or both of sourceRanges and
+sourceTags may be set. If both properties are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP that belongs to a tag listed in the sourceTags property. The
+connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
 
@@ -528,13 +570,17 @@ apply. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only to traffic originating from an instance with a
-service account in this list. Source service accounts cannot be used to control traffic to an instance's external IP
-address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same
-time as sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP address within
-sourceRanges OR the source IP belongs to an instance with service account listed in sourceServiceAccount. The connection
-does not need to match both properties for the firewall to apply. sourceServiceAccounts cannot be used at the same time
-as sourceTags or targetTags.
+    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
+to traffic originating from an instance with a service account in this
+list. Source service accounts cannot be used to control traffic to an
+instance's external IP address because service accounts are associated
+with an instance, not an IP address. sourceRanges can be set at the
+same time as sourceServiceAccounts. If both are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP belongs to an instance with service account listed in
+sourceServiceAccount. The connection does not need to match both
+properties for the firewall to apply. sourceServiceAccounts cannot be
+used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -543,12 +589,15 @@ as sourceTags or targetTags.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic with source IP that belongs to a tag listed in
-source tags. Source tags cannot be used to control traffic to an instance's external IP address. Because tags are
-associated with an instance, not an IP address. One or both of sourceRanges and sourceTags may be set. If both
-properties are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP
-that belongs to a tag listed in the sourceTags property. The connection does not need to match both properties for the
-firewall to apply.
+    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
+with source IP that belongs to a tag listed in source tags. Source
+tags cannot be used to control traffic to an instance's external IP
+address. Because tags are associated with an instance, not an IP
+address. One or both of sourceRanges and sourceTags may be set. If
+both properties are set, the firewall will apply to traffic that has
+source IP address within sourceRanges OR the source IP that belongs to
+a tag listed in the sourceTags property. The connection does not need
+to match both properties for the firewall to apply.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -557,9 +606,12 @@ firewall to apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither
-targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.
+    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+targetServiceAccounts cannot be used at the same time as targetTags or
+sourceTags. If neither targetServiceAccounts nor targetTags are
+specified, the firewall rule applies to all instances on the specified
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -568,9 +620,10 @@ targetServiceAccounts nor targetTags are specified, the firewall rule applies to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. If no targetTags are specified, the firewall rule applies to all instances on the specified
-network.
+    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+If no targetTags are specified, the firewall rule applies to all
+instances on the specified network.
 {{% /md %}}</dd>
 
 </dl>
@@ -595,8 +648,9 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">Firewall<wbr>Allow[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-permitted connection.
+    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
+specifies a protocol and port-range tuple that describes a permitted
+connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -605,8 +659,8 @@ permitted connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">Firewall<wbr>Deny[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-denied connection.
+    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
+a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -615,7 +669,8 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -624,8 +679,9 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these
-ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
+    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
+traffic that has destination IP address in these ranges. These ranges
+must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -634,8 +690,10 @@ ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS traffic, it is NOT supported
-to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify sourceRanges OR sourceTags.
+    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
+INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
+destinationRanges; For EGRESS traffic, it is NOT supported to specify
+sourceRanges OR sourceTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -644,9 +702,10 @@ to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true,
-the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall
-rule will be enabled.
+    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
+network it is associated with. When set to true, the firewall rule is
+not enforced and the network behaves as if it did not exist. If this
+is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -655,8 +714,9 @@ rule will be enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be
-exported to Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular
+firewall rule. If logging is enabled, logs will be exported to
+Stackdriver.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -665,10 +725,13 @@ exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -677,10 +740,12 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not specified, the value assumed is
-1000. Relative priorities determine precedence of conflicting rules. Lower value of priority implies higher precedence
-(eg, a rule with priority 0 has higher precedence than a rule with priority 1). DENY rules take precedence over ALLOW
-rules having equal priority.
+    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
+inclusive. When not specified, the value assumed is 1000. Relative
+priorities determine precedence of conflicting rules. Lower value of
+priority implies higher precedence (eg, a rule with priority 0 has
+higher precedence than a rule with priority 1). DENY rules take
+precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -699,10 +764,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to traffic that has source IP address in these ranges.
-These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both properties
-are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP that belongs
-to a tag listed in the sourceTags property. The connection does not need to match both properties for the firewall to
+    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
+traffic that has source IP address in these ranges. These ranges must
+be expressed in CIDR format. One or both of sourceRanges and
+sourceTags may be set. If both properties are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP that belongs to a tag listed in the sourceTags property. The
+connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
 
@@ -712,13 +780,17 @@ apply. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only to traffic originating from an instance with a
-service account in this list. Source service accounts cannot be used to control traffic to an instance's external IP
-address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same
-time as sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP address within
-sourceRanges OR the source IP belongs to an instance with service account listed in sourceServiceAccount. The connection
-does not need to match both properties for the firewall to apply. sourceServiceAccounts cannot be used at the same time
-as sourceTags or targetTags.
+    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
+to traffic originating from an instance with a service account in this
+list. Source service accounts cannot be used to control traffic to an
+instance's external IP address because service accounts are associated
+with an instance, not an IP address. sourceRanges can be set at the
+same time as sourceServiceAccounts. If both are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP belongs to an instance with service account listed in
+sourceServiceAccount. The connection does not need to match both
+properties for the firewall to apply. sourceServiceAccounts cannot be
+used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -727,12 +799,15 @@ as sourceTags or targetTags.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic with source IP that belongs to a tag listed in
-source tags. Source tags cannot be used to control traffic to an instance's external IP address. Because tags are
-associated with an instance, not an IP address. One or both of sourceRanges and sourceTags may be set. If both
-properties are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP
-that belongs to a tag listed in the sourceTags property. The connection does not need to match both properties for the
-firewall to apply.
+    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
+with source IP that belongs to a tag listed in source tags. Source
+tags cannot be used to control traffic to an instance's external IP
+address. Because tags are associated with an instance, not an IP
+address. One or both of sourceRanges and sourceTags may be set. If
+both properties are set, the firewall will apply to traffic that has
+source IP address within sourceRanges OR the source IP that belongs to
+a tag listed in the sourceTags property. The connection does not need
+to match both properties for the firewall to apply.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -741,9 +816,12 @@ firewall to apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither
-targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.
+    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+targetServiceAccounts cannot be used at the same time as targetTags or
+sourceTags. If neither targetServiceAccounts nor targetTags are
+specified, the firewall rule applies to all instances on the specified
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -752,9 +830,10 @@ targetServiceAccounts nor targetTags are specified, the firewall rule applies to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. If no targetTags are specified, the firewall rule applies to all instances on the specified
-network.
+    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+If no targetTags are specified, the firewall rule applies to all
+instances on the specified network.
 {{% /md %}}</dd>
 
 </dl>
@@ -779,8 +858,9 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">List[Firewall<wbr>Allow]</a></span>
     </dt>
-    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-permitted connection.
+    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
+specifies a protocol and port-range tuple that describes a permitted
+connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -789,8 +869,8 @@ permitted connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">List[Firewall<wbr>Deny]</a></span>
     </dt>
-    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-denied connection.
+    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
+a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -799,7 +879,8 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -808,8 +889,9 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these
-ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
+    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
+traffic that has destination IP address in these ranges. These ranges
+must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -818,8 +900,10 @@ ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS traffic, it is NOT supported
-to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify sourceRanges OR sourceTags.
+    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
+INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
+destinationRanges; For EGRESS traffic, it is NOT supported to specify
+sourceRanges OR sourceTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -828,9 +912,10 @@ to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true,
-the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall
-rule will be enabled.
+    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
+network it is associated with. When set to true, the firewall rule is
+not enforced and the network behaves as if it did not exist. If this
+is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -839,8 +924,9 @@ rule will be enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be
-exported to Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular
+firewall rule. If logging is enabled, logs will be exported to
+Stackdriver.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -849,10 +935,13 @@ exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -861,10 +950,12 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not specified, the value assumed is
-1000. Relative priorities determine precedence of conflicting rules. Lower value of priority implies higher precedence
-(eg, a rule with priority 0 has higher precedence than a rule with priority 1). DENY rules take precedence over ALLOW
-rules having equal priority.
+    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
+inclusive. When not specified, the value assumed is 1000. Relative
+priorities determine precedence of conflicting rules. Lower value of
+priority implies higher precedence (eg, a rule with priority 0 has
+higher precedence than a rule with priority 1). DENY rules take
+precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -883,10 +974,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to traffic that has source IP address in these ranges.
-These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both properties
-are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP that belongs
-to a tag listed in the sourceTags property. The connection does not need to match both properties for the firewall to
+    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
+traffic that has source IP address in these ranges. These ranges must
+be expressed in CIDR format. One or both of sourceRanges and
+sourceTags may be set. If both properties are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP that belongs to a tag listed in the sourceTags property. The
+connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
 
@@ -896,13 +990,17 @@ apply. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only to traffic originating from an instance with a
-service account in this list. Source service accounts cannot be used to control traffic to an instance's external IP
-address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same
-time as sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP address within
-sourceRanges OR the source IP belongs to an instance with service account listed in sourceServiceAccount. The connection
-does not need to match both properties for the firewall to apply. sourceServiceAccounts cannot be used at the same time
-as sourceTags or targetTags.
+    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
+to traffic originating from an instance with a service account in this
+list. Source service accounts cannot be used to control traffic to an
+instance's external IP address because service accounts are associated
+with an instance, not an IP address. sourceRanges can be set at the
+same time as sourceServiceAccounts. If both are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP belongs to an instance with service account listed in
+sourceServiceAccount. The connection does not need to match both
+properties for the firewall to apply. sourceServiceAccounts cannot be
+used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -911,12 +1009,15 @@ as sourceTags or targetTags.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic with source IP that belongs to a tag listed in
-source tags. Source tags cannot be used to control traffic to an instance's external IP address. Because tags are
-associated with an instance, not an IP address. One or both of sourceRanges and sourceTags may be set. If both
-properties are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP
-that belongs to a tag listed in the sourceTags property. The connection does not need to match both properties for the
-firewall to apply.
+    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
+with source IP that belongs to a tag listed in source tags. Source
+tags cannot be used to control traffic to an instance's external IP
+address. Because tags are associated with an instance, not an IP
+address. One or both of sourceRanges and sourceTags may be set. If
+both properties are set, the firewall will apply to traffic that has
+source IP address within sourceRanges OR the source IP that belongs to
+a tag listed in the sourceTags property. The connection does not need
+to match both properties for the firewall to apply.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -925,9 +1026,12 @@ firewall to apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither
-targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.
+    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+targetServiceAccounts cannot be used at the same time as targetTags or
+sourceTags. If neither targetServiceAccounts nor targetTags are
+specified, the firewall rule applies to all instances on the specified
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -936,9 +1040,10 @@ targetServiceAccounts nor targetTags are specified, the firewall rule applies to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. If no targetTags are specified, the firewall rule applies to all instances on the specified
-network.
+    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+If no targetTags are specified, the firewall rule applies to all
+instances on the specified network.
 {{% /md %}}</dd>
 
 </dl>
@@ -1223,8 +1328,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">List&lt;Firewall<wbr>Allow<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-permitted connection.
+    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
+specifies a protocol and port-range tuple that describes a permitted
+connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1242,8 +1348,8 @@ permitted connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">List&lt;Firewall<wbr>Deny<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-denied connection.
+    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
+a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1252,7 +1358,8 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1261,8 +1368,9 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these
-ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
+    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
+traffic that has destination IP address in these ranges. These ranges
+must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1271,8 +1379,10 @@ ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS traffic, it is NOT supported
-to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify sourceRanges OR sourceTags.
+    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
+INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
+destinationRanges; For EGRESS traffic, it is NOT supported to specify
+sourceRanges OR sourceTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1281,9 +1391,10 @@ to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true,
-the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall
-rule will be enabled.
+    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
+network it is associated with. When set to true, the firewall rule is
+not enforced and the network behaves as if it did not exist. If this
+is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1292,8 +1403,9 @@ rule will be enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be
-exported to Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular
+firewall rule. If logging is enabled, logs will be exported to
+Stackdriver.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1302,10 +1414,13 @@ exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1323,10 +1438,12 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not specified, the value assumed is
-1000. Relative priorities determine precedence of conflicting rules. Lower value of priority implies higher precedence
-(eg, a rule with priority 0 has higher precedence than a rule with priority 1). DENY rules take precedence over ALLOW
-rules having equal priority.
+    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
+inclusive. When not specified, the value assumed is 1000. Relative
+priorities determine precedence of conflicting rules. Lower value of
+priority implies higher precedence (eg, a rule with priority 0 has
+higher precedence than a rule with priority 1). DENY rules take
+precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1354,10 +1471,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to traffic that has source IP address in these ranges.
-These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both properties
-are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP that belongs
-to a tag listed in the sourceTags property. The connection does not need to match both properties for the firewall to
+    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
+traffic that has source IP address in these ranges. These ranges must
+be expressed in CIDR format. One or both of sourceRanges and
+sourceTags may be set. If both properties are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP that belongs to a tag listed in the sourceTags property. The
+connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
 
@@ -1367,13 +1487,17 @@ apply. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only to traffic originating from an instance with a
-service account in this list. Source service accounts cannot be used to control traffic to an instance's external IP
-address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same
-time as sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP address within
-sourceRanges OR the source IP belongs to an instance with service account listed in sourceServiceAccount. The connection
-does not need to match both properties for the firewall to apply. sourceServiceAccounts cannot be used at the same time
-as sourceTags or targetTags.
+    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
+to traffic originating from an instance with a service account in this
+list. Source service accounts cannot be used to control traffic to an
+instance's external IP address because service accounts are associated
+with an instance, not an IP address. sourceRanges can be set at the
+same time as sourceServiceAccounts. If both are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP belongs to an instance with service account listed in
+sourceServiceAccount. The connection does not need to match both
+properties for the firewall to apply. sourceServiceAccounts cannot be
+used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1382,12 +1506,15 @@ as sourceTags or targetTags.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic with source IP that belongs to a tag listed in
-source tags. Source tags cannot be used to control traffic to an instance's external IP address. Because tags are
-associated with an instance, not an IP address. One or both of sourceRanges and sourceTags may be set. If both
-properties are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP
-that belongs to a tag listed in the sourceTags property. The connection does not need to match both properties for the
-firewall to apply.
+    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
+with source IP that belongs to a tag listed in source tags. Source
+tags cannot be used to control traffic to an instance's external IP
+address. Because tags are associated with an instance, not an IP
+address. One or both of sourceRanges and sourceTags may be set. If
+both properties are set, the firewall will apply to traffic that has
+source IP address within sourceRanges OR the source IP that belongs to
+a tag listed in the sourceTags property. The connection does not need
+to match both properties for the firewall to apply.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1396,9 +1523,12 @@ firewall to apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither
-targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.
+    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+targetServiceAccounts cannot be used at the same time as targetTags or
+sourceTags. If neither targetServiceAccounts nor targetTags are
+specified, the firewall rule applies to all instances on the specified
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1407,9 +1537,10 @@ targetServiceAccounts nor targetTags are specified, the firewall rule applies to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. If no targetTags are specified, the firewall rule applies to all instances on the specified
-network.
+    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+If no targetTags are specified, the firewall rule applies to all
+instances on the specified network.
 {{% /md %}}</dd>
 
 </dl>
@@ -1425,8 +1556,9 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">[]Firewall<wbr>Allow</a></span>
     </dt>
-    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-permitted connection.
+    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
+specifies a protocol and port-range tuple that describes a permitted
+connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1444,8 +1576,8 @@ permitted connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">[]Firewall<wbr>Deny</a></span>
     </dt>
-    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-denied connection.
+    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
+a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1454,7 +1586,8 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1463,8 +1596,9 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these
-ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
+    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
+traffic that has destination IP address in these ranges. These ranges
+must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1473,8 +1607,10 @@ ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS traffic, it is NOT supported
-to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify sourceRanges OR sourceTags.
+    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
+INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
+destinationRanges; For EGRESS traffic, it is NOT supported to specify
+sourceRanges OR sourceTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1483,9 +1619,10 @@ to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true,
-the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall
-rule will be enabled.
+    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
+network it is associated with. When set to true, the firewall rule is
+not enforced and the network behaves as if it did not exist. If this
+is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1494,8 +1631,9 @@ rule will be enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be
-exported to Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular
+firewall rule. If logging is enabled, logs will be exported to
+Stackdriver.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1504,10 +1642,13 @@ exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1525,10 +1666,12 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not specified, the value assumed is
-1000. Relative priorities determine precedence of conflicting rules. Lower value of priority implies higher precedence
-(eg, a rule with priority 0 has higher precedence than a rule with priority 1). DENY rules take precedence over ALLOW
-rules having equal priority.
+    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
+inclusive. When not specified, the value assumed is 1000. Relative
+priorities determine precedence of conflicting rules. Lower value of
+priority implies higher precedence (eg, a rule with priority 0 has
+higher precedence than a rule with priority 1). DENY rules take
+precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1556,10 +1699,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to traffic that has source IP address in these ranges.
-These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both properties
-are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP that belongs
-to a tag listed in the sourceTags property. The connection does not need to match both properties for the firewall to
+    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
+traffic that has source IP address in these ranges. These ranges must
+be expressed in CIDR format. One or both of sourceRanges and
+sourceTags may be set. If both properties are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP that belongs to a tag listed in the sourceTags property. The
+connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
 
@@ -1569,13 +1715,17 @@ apply. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only to traffic originating from an instance with a
-service account in this list. Source service accounts cannot be used to control traffic to an instance's external IP
-address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same
-time as sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP address within
-sourceRanges OR the source IP belongs to an instance with service account listed in sourceServiceAccount. The connection
-does not need to match both properties for the firewall to apply. sourceServiceAccounts cannot be used at the same time
-as sourceTags or targetTags.
+    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
+to traffic originating from an instance with a service account in this
+list. Source service accounts cannot be used to control traffic to an
+instance's external IP address because service accounts are associated
+with an instance, not an IP address. sourceRanges can be set at the
+same time as sourceServiceAccounts. If both are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP belongs to an instance with service account listed in
+sourceServiceAccount. The connection does not need to match both
+properties for the firewall to apply. sourceServiceAccounts cannot be
+used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1584,12 +1734,15 @@ as sourceTags or targetTags.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic with source IP that belongs to a tag listed in
-source tags. Source tags cannot be used to control traffic to an instance's external IP address. Because tags are
-associated with an instance, not an IP address. One or both of sourceRanges and sourceTags may be set. If both
-properties are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP
-that belongs to a tag listed in the sourceTags property. The connection does not need to match both properties for the
-firewall to apply.
+    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
+with source IP that belongs to a tag listed in source tags. Source
+tags cannot be used to control traffic to an instance's external IP
+address. Because tags are associated with an instance, not an IP
+address. One or both of sourceRanges and sourceTags may be set. If
+both properties are set, the firewall will apply to traffic that has
+source IP address within sourceRanges OR the source IP that belongs to
+a tag listed in the sourceTags property. The connection does not need
+to match both properties for the firewall to apply.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1598,9 +1751,12 @@ firewall to apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither
-targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.
+    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+targetServiceAccounts cannot be used at the same time as targetTags or
+sourceTags. If neither targetServiceAccounts nor targetTags are
+specified, the firewall rule applies to all instances on the specified
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1609,9 +1765,10 @@ targetServiceAccounts nor targetTags are specified, the firewall rule applies to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. If no targetTags are specified, the firewall rule applies to all instances on the specified
-network.
+    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+If no targetTags are specified, the firewall rule applies to all
+instances on the specified network.
 {{% /md %}}</dd>
 
 </dl>
@@ -1627,8 +1784,9 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">Firewall<wbr>Allow[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-permitted connection.
+    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
+specifies a protocol and port-range tuple that describes a permitted
+connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1646,8 +1804,8 @@ permitted connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">Firewall<wbr>Deny[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-denied connection.
+    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
+a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1656,7 +1814,8 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1665,8 +1824,9 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these
-ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
+    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
+traffic that has destination IP address in these ranges. These ranges
+must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1675,8 +1835,10 @@ ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS traffic, it is NOT supported
-to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify sourceRanges OR sourceTags.
+    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
+INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
+destinationRanges; For EGRESS traffic, it is NOT supported to specify
+sourceRanges OR sourceTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1685,9 +1847,10 @@ to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true,
-the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall
-rule will be enabled.
+    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
+network it is associated with. When set to true, the firewall rule is
+not enforced and the network behaves as if it did not exist. If this
+is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1696,8 +1859,9 @@ rule will be enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be
-exported to Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular
+firewall rule. If logging is enabled, logs will be exported to
+Stackdriver.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1706,10 +1870,13 @@ exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1727,10 +1894,12 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not specified, the value assumed is
-1000. Relative priorities determine precedence of conflicting rules. Lower value of priority implies higher precedence
-(eg, a rule with priority 0 has higher precedence than a rule with priority 1). DENY rules take precedence over ALLOW
-rules having equal priority.
+    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
+inclusive. When not specified, the value assumed is 1000. Relative
+priorities determine precedence of conflicting rules. Lower value of
+priority implies higher precedence (eg, a rule with priority 0 has
+higher precedence than a rule with priority 1). DENY rules take
+precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1758,10 +1927,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to traffic that has source IP address in these ranges.
-These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both properties
-are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP that belongs
-to a tag listed in the sourceTags property. The connection does not need to match both properties for the firewall to
+    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
+traffic that has source IP address in these ranges. These ranges must
+be expressed in CIDR format. One or both of sourceRanges and
+sourceTags may be set. If both properties are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP that belongs to a tag listed in the sourceTags property. The
+connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
 
@@ -1771,13 +1943,17 @@ apply. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only to traffic originating from an instance with a
-service account in this list. Source service accounts cannot be used to control traffic to an instance's external IP
-address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same
-time as sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP address within
-sourceRanges OR the source IP belongs to an instance with service account listed in sourceServiceAccount. The connection
-does not need to match both properties for the firewall to apply. sourceServiceAccounts cannot be used at the same time
-as sourceTags or targetTags.
+    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
+to traffic originating from an instance with a service account in this
+list. Source service accounts cannot be used to control traffic to an
+instance's external IP address because service accounts are associated
+with an instance, not an IP address. sourceRanges can be set at the
+same time as sourceServiceAccounts. If both are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP belongs to an instance with service account listed in
+sourceServiceAccount. The connection does not need to match both
+properties for the firewall to apply. sourceServiceAccounts cannot be
+used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1786,12 +1962,15 @@ as sourceTags or targetTags.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic with source IP that belongs to a tag listed in
-source tags. Source tags cannot be used to control traffic to an instance's external IP address. Because tags are
-associated with an instance, not an IP address. One or both of sourceRanges and sourceTags may be set. If both
-properties are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP
-that belongs to a tag listed in the sourceTags property. The connection does not need to match both properties for the
-firewall to apply.
+    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
+with source IP that belongs to a tag listed in source tags. Source
+tags cannot be used to control traffic to an instance's external IP
+address. Because tags are associated with an instance, not an IP
+address. One or both of sourceRanges and sourceTags may be set. If
+both properties are set, the firewall will apply to traffic that has
+source IP address within sourceRanges OR the source IP that belongs to
+a tag listed in the sourceTags property. The connection does not need
+to match both properties for the firewall to apply.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1800,9 +1979,12 @@ firewall to apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither
-targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.
+    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+targetServiceAccounts cannot be used at the same time as targetTags or
+sourceTags. If neither targetServiceAccounts nor targetTags are
+specified, the firewall rule applies to all instances on the specified
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1811,9 +1993,10 @@ targetServiceAccounts nor targetTags are specified, the firewall rule applies to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. If no targetTags are specified, the firewall rule applies to all instances on the specified
-network.
+    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+If no targetTags are specified, the firewall rule applies to all
+instances on the specified network.
 {{% /md %}}</dd>
 
 </dl>
@@ -1829,8 +2012,9 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">List[Firewall<wbr>Allow]</a></span>
     </dt>
-    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-permitted connection.
+    <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
+specifies a protocol and port-range tuple that describes a permitted
+connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1848,8 +2032,8 @@ permitted connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">List[Firewall<wbr>Deny]</a></span>
     </dt>
-    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a
-denied connection.
+    <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
+a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1858,7 +2042,8 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1867,8 +2052,9 @@ denied connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these
-ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
+    <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
+traffic that has destination IP address in these ranges. These ranges
+must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1877,8 +2063,10 @@ ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS traffic, it is NOT supported
-to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify sourceRanges OR sourceTags.
+    <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
+INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
+destinationRanges; For EGRESS traffic, it is NOT supported to specify
+sourceRanges OR sourceTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1887,9 +2075,10 @@ to specify destinationRanges; For EGRESS traffic, it is NOT supported to specify
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated with. When set to true,
-the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall
-rule will be enabled.
+    <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
+network it is associated with. When set to true, the firewall rule is
+not enforced and the network behaves as if it did not exist. If this
+is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1898,8 +2087,9 @@ rule will be enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be
-exported to Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular
+firewall rule. If logging is enabled, logs will be exported to
+Stackdriver.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1908,10 +2098,13 @@ exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1929,10 +2122,12 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not specified, the value assumed is
-1000. Relative priorities determine precedence of conflicting rules. Lower value of priority implies higher precedence
-(eg, a rule with priority 0 has higher precedence than a rule with priority 1). DENY rules take precedence over ALLOW
-rules having equal priority.
+    <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
+inclusive. When not specified, the value assumed is 1000. Relative
+priorities determine precedence of conflicting rules. Lower value of
+priority implies higher precedence (eg, a rule with priority 0 has
+higher precedence than a rule with priority 1). DENY rules take
+precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1960,10 +2155,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to traffic that has source IP address in these ranges.
-These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both properties
-are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP that belongs
-to a tag listed in the sourceTags property. The connection does not need to match both properties for the firewall to
+    <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
+traffic that has source IP address in these ranges. These ranges must
+be expressed in CIDR format. One or both of sourceRanges and
+sourceTags may be set. If both properties are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP that belongs to a tag listed in the sourceTags property. The
+connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
 
@@ -1973,13 +2171,17 @@ apply. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only to traffic originating from an instance with a
-service account in this list. Source service accounts cannot be used to control traffic to an instance's external IP
-address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same
-time as sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP address within
-sourceRanges OR the source IP belongs to an instance with service account listed in sourceServiceAccount. The connection
-does not need to match both properties for the firewall to apply. sourceServiceAccounts cannot be used at the same time
-as sourceTags or targetTags.
+    <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
+to traffic originating from an instance with a service account in this
+list. Source service accounts cannot be used to control traffic to an
+instance's external IP address because service accounts are associated
+with an instance, not an IP address. sourceRanges can be set at the
+same time as sourceServiceAccounts. If both are set, the firewall will
+apply to traffic that has source IP address within sourceRanges OR the
+source IP belongs to an instance with service account listed in
+sourceServiceAccount. The connection does not need to match both
+properties for the firewall to apply. sourceServiceAccounts cannot be
+used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1988,12 +2190,15 @@ as sourceTags or targetTags.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic with source IP that belongs to a tag listed in
-source tags. Source tags cannot be used to control traffic to an instance's external IP address. Because tags are
-associated with an instance, not an IP address. One or both of sourceRanges and sourceTags may be set. If both
-properties are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP
-that belongs to a tag listed in the sourceTags property. The connection does not need to match both properties for the
-firewall to apply.
+    <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
+with source IP that belongs to a tag listed in source tags. Source
+tags cannot be used to control traffic to an instance's external IP
+address. Because tags are associated with an instance, not an IP
+address. One or both of sourceRanges and sourceTags may be set. If
+both properties are set, the firewall will apply to traffic that has
+source IP address within sourceRanges OR the source IP that belongs to
+a tag listed in the sourceTags property. The connection does not need
+to match both properties for the firewall to apply.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2002,9 +2207,12 @@ firewall to apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither
-targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.
+    <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+targetServiceAccounts cannot be used at the same time as targetTags or
+sourceTags. If neither targetServiceAccounts nor targetTags are
+specified, the firewall rule applies to all instances on the specified
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2013,9 +2221,10 @@ targetServiceAccounts nor targetTags are specified, the firewall rule applies to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the network that may make network connections as
-specified in allowed[]. If no targetTags are specified, the firewall rule applies to all instances on the specified
-network.
+    <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
+network that may make network connections as specified in allowed[].
+If no targetTags are specified, the firewall rule applies to all
+instances on the specified network.
 {{% /md %}}</dd>
 
 </dl>
@@ -2054,7 +2263,11 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
+required when creating a firewall rule. This value can either be
+one of the following well known protocol strings (tcp, udp,
+icmp, esp, ah, sctp, ipip), or the IP protocol number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2062,7 +2275,13 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional list of ports to which this rule applies. This field
+is only applicable for UDP or TCP protocol. Each entry must be
+either an integer or a range. If not specified, this rule
+applies to connections through any port.
+Example inputs include: ["22"], ["80","443"], and
+["12345-12349"].
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2077,7 +2296,11 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
+required when creating a firewall rule. This value can either be
+one of the following well known protocol strings (tcp, udp,
+icmp, esp, ah, sctp, ipip), or the IP protocol number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2085,7 +2308,13 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional list of ports to which this rule applies. This field
+is only applicable for UDP or TCP protocol. Each entry must be
+either an integer or a range. If not specified, this rule
+applies to connections through any port.
+Example inputs include: ["22"], ["80","443"], and
+["12345-12349"].
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2100,7 +2329,11 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
+required when creating a firewall rule. This value can either be
+one of the following well known protocol strings (tcp, udp,
+icmp, esp, ah, sctp, ipip), or the IP protocol number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2108,7 +2341,13 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional list of ports to which this rule applies. This field
+is only applicable for UDP or TCP protocol. Each entry must be
+either an integer or a range. If not specified, this rule
+applies to connections through any port.
+Example inputs include: ["22"], ["80","443"], and
+["12345-12349"].
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2123,7 +2362,11 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
+required when creating a firewall rule. This value can either be
+one of the following well known protocol strings (tcp, udp,
+icmp, esp, ah, sctp, ipip), or the IP protocol number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2131,7 +2374,13 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional list of ports to which this rule applies. This field
+is only applicable for UDP or TCP protocol. Each entry must be
+either an integer or a range. If not specified, this rule
+applies to connections through any port.
+Example inputs include: ["22"], ["80","443"], and
+["12345-12349"].
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2161,7 +2410,11 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
+required when creating a firewall rule. This value can either be
+one of the following well known protocol strings (tcp, udp,
+icmp, esp, ah, sctp, ipip), or the IP protocol number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2169,7 +2422,13 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional list of ports to which this rule applies. This field
+is only applicable for UDP or TCP protocol. Each entry must be
+either an integer or a range. If not specified, this rule
+applies to connections through any port.
+Example inputs include: ["22"], ["80","443"], and
+["12345-12349"].
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2184,7 +2443,11 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
+required when creating a firewall rule. This value can either be
+one of the following well known protocol strings (tcp, udp,
+icmp, esp, ah, sctp, ipip), or the IP protocol number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2192,7 +2455,13 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional list of ports to which this rule applies. This field
+is only applicable for UDP or TCP protocol. Each entry must be
+either an integer or a range. If not specified, this rule
+applies to connections through any port.
+Example inputs include: ["22"], ["80","443"], and
+["12345-12349"].
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2207,7 +2476,11 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
+required when creating a firewall rule. This value can either be
+one of the following well known protocol strings (tcp, udp,
+icmp, esp, ah, sctp, ipip), or the IP protocol number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2215,7 +2488,13 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional list of ports to which this rule applies. This field
+is only applicable for UDP or TCP protocol. Each entry must be
+either an integer or a range. If not specified, this rule
+applies to connections through any port.
+Example inputs include: ["22"], ["80","443"], and
+["12345-12349"].
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2230,7 +2509,11 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
+required when creating a firewall rule. This value can either be
+one of the following well known protocol strings (tcp, udp,
+icmp, esp, ah, sctp, ipip), or the IP protocol number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2238,7 +2521,13 @@ network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional list of ports to which this rule applies. This field
+is only applicable for UDP or TCP protocol. Each entry must be
+either an integer or a range. If not specified, this rule
+applies to connections through any port.
+Example inputs include: ["22"], ["80","443"], and
+["12345-12349"].
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2257,8 +2546,7 @@ network.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

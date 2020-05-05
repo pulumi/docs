@@ -3,6 +3,9 @@
 set -o errexit -o pipefail
 set -x
 
+# Optional argument to generate docs for just a single provider.
+REPO_OVERRIDE="${1:-}"
+
 PACKAGES=(
   "pulumi"
   "pulumi_aiven"
@@ -24,6 +27,7 @@ PACKAGES=(
   "pulumi_gitlab"
   "pulumi_kafka"
   "pulumi_keycloak"
+  "pulumi_kong"
   "pulumi_kubernetes"
   "pulumi_linode"
   "pulumi_mailgun"
@@ -46,15 +50,26 @@ PACKAGES=(
   "pulumi_vsphere"
 )
 
-run_pydocgen() {
-  pushd "tools/pydocgen"
-  pipenv --python 3
-  pipenv install
-  for pkg in "${PACKAGES[@]}"; do
-    pipenv run pip install "${pkg}"
-  done
-  pipenv run python -m pydocgen "../../content/docs/reference/pkg"
-  popd
-}
+pushd "tools/pydocgen"
+pipenv --python 3
+pipenv install
 
-run_pydocgen
+if [ -z "${REPO_OVERRIDE:-}" ]; then
+    echo "Building all Python docs..."
+    # Install the Python package for all the providers.
+    for PACKAGE in "${PACKAGES[@]}" ; do \
+        pipenv run pip install "${PACKAGE}"
+    done
+
+    # Run the pydocgen to generate the docs for all the packages.
+    pipenv run python -m pydocgen "../../content/docs/reference/pkg"
+else
+    # Install the Python package and run the pydocgen tool for just the provider that
+    # was requested.
+    echo "Building Python docs for ${REPO_OVERRIDE}..."
+    PACKAGE="pulumi_${REPO_OVERRIDE}"
+    pipenv run pip install "${PACKAGE}"
+    pipenv run python -m pydocgen "../../content/docs/reference/pkg" "${PACKAGE}"
+fi
+
+popd

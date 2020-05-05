@@ -90,7 +90,7 @@ const privateZone = new aws.route53.Zone("private", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Zone</span><span class="p">(resource_name, opts=None, </span>comment=None<span class="p">, </span>delegation_set_id=None<span class="p">, </span>force_destroy=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>vpcs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Zone</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>comment=None<span class="p">, </span>delegation_set_id=None<span class="p">, </span>force_destroy=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>vpcs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1114,6 +1114,9 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneVpcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneVpcOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.ZoneVpcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.ZoneVpc.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

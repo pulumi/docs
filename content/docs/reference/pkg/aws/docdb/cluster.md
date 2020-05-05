@@ -56,7 +56,7 @@ const docdb = new aws.docdb.Cluster("docdb", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>apply_immediately=None<span class="p">, </span>availability_zones=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>cluster_identifier_prefix=None<span class="p">, </span>cluster_members=None<span class="p">, </span>db_cluster_parameter_group_name=None<span class="p">, </span>db_subnet_group_name=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>enabled_cloudwatch_logs_exports=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>final_snapshot_identifier=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>master_password=None<span class="p">, </span>master_username=None<span class="p">, </span>port=None<span class="p">, </span>preferred_backup_window=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>skip_final_snapshot=None<span class="p">, </span>snapshot_identifier=None<span class="p">, </span>storage_encrypted=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>availability_zones=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>cluster_identifier_prefix=None<span class="p">, </span>cluster_members=None<span class="p">, </span>db_cluster_parameter_group_name=None<span class="p">, </span>db_subnet_group_name=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>enabled_cloudwatch_logs_exports=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>final_snapshot_identifier=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>master_password=None<span class="p">, </span>master_username=None<span class="p">, </span>port=None<span class="p">, </span>preferred_backup_window=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>skip_final_snapshot=None<span class="p">, </span>snapshot_identifier=None<span class="p">, </span>storage_encrypted=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -439,7 +439,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -670,7 +670,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -901,7 +901,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1132,7 +1132,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1785,7 +1785,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2061,7 +2061,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2337,7 +2337,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2613,7 +2613,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

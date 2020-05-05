@@ -29,6 +29,17 @@ const postgres_example = new digitalocean.DatabaseCluster("postgres-example", {
     version: "11",
 });
 ```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+postgres_example = digitalocean.DatabaseCluster("postgres-example",
+    engine="pg",
+    node_count=1,
+    region="nyc1",
+    size="db-s-1vcpu-1gb",
+    version="11")
+```
 
 {{% /example %}}
 {{% example %}}
@@ -44,6 +55,17 @@ const mysql_example = new digitalocean.DatabaseCluster("mysql-example", {
     size: "db-s-1vcpu-1gb",
     version: "8",
 });
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+mysql_example = digitalocean.DatabaseCluster("mysql-example",
+    engine="mysql",
+    node_count=1,
+    region="nyc1",
+    size="db-s-1vcpu-1gb",
+    version="8")
 ```
 
 {{% /example %}}
@@ -61,6 +83,17 @@ const redis_example = new digitalocean.DatabaseCluster("redis-example", {
     version: "5",
 });
 ```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+redis_example = digitalocean.DatabaseCluster("redis-example",
+    engine="redis",
+    node_count=1,
+    region="nyc1",
+    size="db-s-1vcpu-1gb",
+    version="5")
+```
 
 {{% /example %}}
 {{% /examples %}}
@@ -76,7 +109,7 @@ const redis_example = new digitalocean.DatabaseCluster("redis-example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatabaseCluster</span><span class="p">(resource_name, opts=None, </span>engine=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>maintenance_windows=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>private_network_uuid=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>sql_mode=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatabaseCluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>engine=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>maintenance_windows=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>private_network_uuid=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>sql_mode=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1956,6 +1989,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#DatabaseClusterMaintenanceWindowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#DatabaseClusterMaintenanceWindowOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.DatabaseClusterMaintenanceWindowArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.DatabaseClusterMaintenanceWindow.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

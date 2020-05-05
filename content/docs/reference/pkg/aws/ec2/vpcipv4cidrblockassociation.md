@@ -46,7 +46,7 @@ const secondaryCidr = new aws.ec2.VpcIpv4CidrBlockAssociation("secondary_cidr", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VpcIpv4CidrBlockAssociation</span><span class="p">(resource_name, opts=None, </span>cidr_block=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VpcIpv4CidrBlockAssociation</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cidr_block=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

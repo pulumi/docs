@@ -1,7 +1,7 @@
 ---
-title: Configure | AWS
-h1: Configure
-linktitle: Configure
+title: Configure AWS | AWS
+h1: Configure AWS
+linktitle: Configure AWS
 meta_desc: This page provides an overview of how to configure an AWS project.
 weight: 4
 menu:

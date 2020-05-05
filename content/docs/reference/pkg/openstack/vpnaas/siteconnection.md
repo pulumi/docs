@@ -45,7 +45,7 @@ const conn1 = new openstack.vpnaas.SiteConnection("conn_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SiteConnection</span><span class="p">(resource_name, opts=None, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>dpds=None<span class="p">, </span>ikepolicy_id=None<span class="p">, </span>initiator=None<span class="p">, </span>ipsecpolicy_id=None<span class="p">, </span>local_ep_group_id=None<span class="p">, </span>local_id=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>peer_address=None<span class="p">, </span>peer_cidrs=None<span class="p">, </span>peer_ep_group_id=None<span class="p">, </span>peer_id=None<span class="p">, </span>psk=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>vpnservice_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SiteConnection</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>dpds=None<span class="p">, </span>ikepolicy_id=None<span class="p">, </span>initiator=None<span class="p">, </span>ipsecpolicy_id=None<span class="p">, </span>local_ep_group_id=None<span class="p">, </span>local_id=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>peer_address=None<span class="p">, </span>peer_cidrs=None<span class="p">, </span>peer_ep_group_id=None<span class="p">, </span>peer_id=None<span class="p">, </span>psk=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>vpnservice_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2013,6 +2013,9 @@ create a connection for another project. Changing this creates a new connection.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/vpnaas?tab=doc#SiteConnectionDpdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/vpnaas?tab=doc#SiteConnectionDpdOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.VPNaaS.Inputs.SiteConnectionDpdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.VPNaaS.Outputs.SiteConnectionDpd.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

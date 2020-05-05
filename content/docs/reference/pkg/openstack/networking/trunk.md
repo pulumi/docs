@@ -69,7 +69,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Trunk</span><span class="p">(resource_name, opts=None, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>sub_ports=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Trunk</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>sub_ports=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1237,6 +1237,9 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#TrunkSubPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#TrunkSubPortOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Networking.Inputs.TrunkSubPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Networking.Outputs.TrunkSubPort.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -123,7 +123,7 @@ const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ContainerV1</span><span class="p">(resource_name, opts=None, </span>acl=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>secret_refs=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ContainerV1</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>secret_refs=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1404,6 +1404,9 @@ below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1AclArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1AclOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Inputs.ContainerV1AclArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Outputs.ContainerV1Acl.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1478,6 +1481,9 @@ below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1AclReadArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1AclReadOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Inputs.ContainerV1AclReadArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Outputs.ContainerV1AclRead.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1674,6 +1680,9 @@ container, when `project_access` is set to `false`.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1ConsumerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Outputs.ContainerV1Consumer.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1788,6 +1797,9 @@ container, when `project_access` is set to `false`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1SecretRefArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1SecretRefOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Inputs.ContainerV1SecretRefArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Outputs.ContainerV1SecretRef.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

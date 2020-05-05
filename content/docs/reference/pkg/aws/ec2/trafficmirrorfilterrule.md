@@ -70,7 +70,7 @@ const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TrafficMirrorFilterRule</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>destination_cidr_block=None<span class="p">, </span>destination_port_range=None<span class="p">, </span>protocol=None<span class="p">, </span>rule_action=None<span class="p">, </span>rule_number=None<span class="p">, </span>source_cidr_block=None<span class="p">, </span>source_port_range=None<span class="p">, </span>traffic_direction=None<span class="p">, </span>traffic_mirror_filter_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TrafficMirrorFilterRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>destination_cidr_block=None<span class="p">, </span>destination_port_range=None<span class="p">, </span>protocol=None<span class="p">, </span>rule_action=None<span class="p">, </span>rule_number=None<span class="p">, </span>source_cidr_block=None<span class="p">, </span>source_port_range=None<span class="p">, </span>traffic_direction=None<span class="p">, </span>traffic_mirror_filter_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1231,6 +1231,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleDestinationPortRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleDestinationPortRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.TrafficMirrorFilterRuleDestinationPortRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.TrafficMirrorFilterRuleDestinationPortRange.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1345,6 +1348,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleSourcePortRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#TrafficMirrorFilterRuleSourcePortRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.TrafficMirrorFilterRuleSourcePortRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.TrafficMirrorFilterRuleSourcePortRange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

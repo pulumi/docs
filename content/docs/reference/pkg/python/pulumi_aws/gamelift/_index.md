@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.gamelift"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.gamelift"></span><dl class="py class">
 <dt id="pulumi_aws.gamelift.Alias">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Alias</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">routing_strategy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Alias" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Alias</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Alias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Gamelift Alias resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -25,7 +25,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the alias.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the alias.</p></li>
 <li><p><strong>routing_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the fleet and/or routing type to use for the alias.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -35,27 +35,27 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">message</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Message text to be used with the <code class="docutils literal notranslate"><span class="pre">TERMINAL</span></code> routing strategy.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of routing strategy. e.g. <code class="docutils literal notranslate"><span class="pre">SIMPLE</span></code> or <code class="docutils literal notranslate"><span class="pre">TERMINAL</span></code></p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Alias.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Alias.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Alias.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias ARN.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Alias.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Alias.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Alias.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Description of the alias.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Alias.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Alias.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Alias.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the alias.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Alias.routing_strategy">
-<code class="sig-name descname">routing_strategy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Alias.routing_strategy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">routing_strategy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Alias.routing_strategy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the fleet and/or routing type to use for the alias.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">fleetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the Gamelift Fleet to point the alias to.</p></li>
@@ -64,15 +64,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Alias.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Alias.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Alias.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.gamelift.Alias.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">routing_strategy=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Alias.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Alias.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Alias resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -85,7 +85,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the alias.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the alias.</p></li>
 <li><p><strong>routing_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the fleet and/or routing type to use for the alias.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -97,9 +97,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.gamelift.Alias.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Alias.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Alias.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -115,9 +115,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.gamelift.Alias.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Alias.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Alias.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -135,9 +135,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.gamelift.Build">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Build</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">storage_location=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Build" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Build</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operating_system</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Build" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Gamelift Build resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -147,7 +147,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the build</p></li>
 <li><p><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Operating system that the game server binaries are built to run on. e.g. <code class="docutils literal notranslate"><span class="pre">WINDOWS_2012</span></code> or <code class="docutils literal notranslate"><span class="pre">AMAZON_LINUX</span></code>.</p></li>
 <li><p><strong>storage_location</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Information indicating where your game build files are stored. See below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version that is associated with this build.</p></li>
 </ul>
 </dd>
@@ -158,27 +158,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the zip file containing your build files.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the access role that allows Amazon GameLift to access your S3 bucket.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Build.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gamelift Build ARN.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Build.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the build</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Build.operating_system">
-<code class="sig-name descname">operating_system</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.operating_system" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">operating_system</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.operating_system" title="Permalink to this definition">¶</a></dt>
 <dd><p>Operating system that the game server binaries are built to run on. e.g. <code class="docutils literal notranslate"><span class="pre">WINDOWS_2012</span></code> or <code class="docutils literal notranslate"><span class="pre">AMAZON_LINUX</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Build.storage_location">
-<code class="sig-name descname">storage_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.storage_location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">storage_location</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.storage_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Information indicating where your game build files are stored. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of your S3 bucket.</p></li>
@@ -187,21 +187,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Build.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Build.version">
-<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Version that is associated with this build.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.gamelift.Build.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">storage_location=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Build.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operating_system</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Build.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Build resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -214,7 +214,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the build</p></li>
 <li><p><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Operating system that the game server binaries are built to run on. e.g. <code class="docutils literal notranslate"><span class="pre">WINDOWS_2012</span></code> or <code class="docutils literal notranslate"><span class="pre">AMAZON_LINUX</span></code>.</p></li>
 <li><p><strong>storage_location</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Information indicating where your game build files are stored. See below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version that is associated with this build.</p></li>
 </ul>
 </dd>
@@ -227,9 +227,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.gamelift.Build.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Build.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Build.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -245,9 +245,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.gamelift.Build.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Build.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Build.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -265,9 +265,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.gamelift.Fleet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Fleet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">build_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ec2_inbound_permissions=None</em>, <em class="sig-param">ec2_instance_type=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">instance_role_arn=None</em>, <em class="sig-param">metric_groups=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_game_session_protection_policy=None</em>, <em class="sig-param">resource_creation_limit_policy=None</em>, <em class="sig-param">runtime_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Fleet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">build_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ec2_inbound_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ec2_instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fleet_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_game_session_protection_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_creation_limit_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Gamelift Fleet resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -285,7 +285,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>new_game_session_protection_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Game session protection policy to apply to all instances in this fleet. e.g. <code class="docutils literal notranslate"><span class="pre">FullProtection</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">NoProtection</span></code>.</p></li>
 <li><p><strong>resource_creation_limit_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.</p></li>
 <li><p><strong>runtime_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Instructions for launching server processes on each instance in the fleet. See below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -313,27 +313,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fleet ARN.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.build_id">
-<code class="sig-name descname">build_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.build_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">build_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.build_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the Gamelift Build to be deployed on the fleet.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Human-readable description of the fleet.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.ec2_inbound_permissions">
-<code class="sig-name descname">ec2_inbound_permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.ec2_inbound_permissions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ec2_inbound_permissions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.ec2_inbound_permissions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Starting value for a range of allowed port numbers.</p></li>
@@ -343,51 +343,51 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.ec2_instance_type">
-<code class="sig-name descname">ec2_instance_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.ec2_instance_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ec2_instance_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.ec2_instance_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of an EC2 instance type. e.g. <code class="docutils literal notranslate"><span class="pre">t2.micro</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.fleet_type">
-<code class="sig-name descname">fleet_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.fleet_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">fleet_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.fleet_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of fleet. This value must be <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> or <code class="docutils literal notranslate"><span class="pre">SPOT</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.instance_role_arn">
-<code class="sig-name descname">instance_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.instance_role_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">instance_role_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.instance_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>ARN of an IAM role that instances in the fleet can assume.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.metric_groups">
-<code class="sig-name descname">metric_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.metric_groups" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">metric_groups</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.metric_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the fleet.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.new_game_session_protection_policy">
-<code class="sig-name descname">new_game_session_protection_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.new_game_session_protection_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">new_game_session_protection_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.new_game_session_protection_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Game session protection policy to apply to all instances in this fleet. e.g. <code class="docutils literal notranslate"><span class="pre">FullProtection</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">NoProtection</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.operating_system">
-<code class="sig-name descname">operating_system</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.operating_system" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">operating_system</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.operating_system" title="Permalink to this definition">¶</a></dt>
 <dd><p>Operating system of the fleet’s computing resources.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.resource_creation_limit_policy">
-<code class="sig-name descname">resource_creation_limit_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.resource_creation_limit_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_creation_limit_policy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.resource_creation_limit_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">newGameSessionsPerCreator</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum number of game sessions that an individual can create during the policy period.</p></li>
@@ -395,9 +395,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.runtime_configuration">
-<code class="sig-name descname">runtime_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.runtime_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">runtime_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.runtime_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instructions for launching server processes on each instance in the fleet. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">gameSessionActivationTimeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum amount of time (in seconds) that a game session can remain in status <code class="docutils literal notranslate"><span class="pre">ACTIVATING</span></code>.</p></li>
@@ -412,15 +412,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.Fleet.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.gamelift.Fleet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">build_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ec2_inbound_permissions=None</em>, <em class="sig-param">ec2_instance_type=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">instance_role_arn=None</em>, <em class="sig-param">log_paths=None</em>, <em class="sig-param">metric_groups=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_game_session_protection_policy=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">resource_creation_limit_policy=None</em>, <em class="sig-param">runtime_configuration=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">build_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ec2_inbound_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ec2_instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fleet_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_paths</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_game_session_protection_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operating_system</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_creation_limit_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runtime_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Fleet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -442,7 +442,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Operating system of the fleet’s computing resources.</p></li>
 <li><p><strong>resource_creation_limit_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.</p></li>
 <li><p><strong>runtime_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Instructions for launching server processes on each instance in the fleet. See below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -472,9 +472,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.gamelift.Fleet.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -490,9 +490,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.gamelift.Fleet.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -510,9 +510,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.gamelift.GameSessionQueue">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">GameSessionQueue</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">destinations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">player_latency_policies=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout_in_seconds=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">GameSessionQueue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destinations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">player_latency_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_in_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Gamelift Game Session Queue resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -522,7 +522,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>destinations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of fleet/alias ARNs used by session queue for placing game sessions.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the session queue.</p></li>
 <li><p><strong>player_latency_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more policies used to choose fleet based on player latency. See below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>timeout_in_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum time a game session request can remain in the queue.</p></li>
 </ul>
 </dd>
@@ -532,27 +532,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">maximumIndividualPlayerLatencyMilliseconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum latency value that is allowed for any player.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">policyDurationSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.GameSessionQueue.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Game Session Queue ARN.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.GameSessionQueue.destinations">
-<code class="sig-name descname">destinations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.destinations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">destinations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.destinations" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of fleet/alias ARNs used by session queue for placing game sessions.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.GameSessionQueue.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the session queue.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.GameSessionQueue.player_latency_policies">
-<code class="sig-name descname">player_latency_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.player_latency_policies" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">player_latency_policies</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.player_latency_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more policies used to choose fleet based on player latency. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">maximumIndividualPlayerLatencyMilliseconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum latency value that is allowed for any player.</p></li>
@@ -560,21 +560,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.GameSessionQueue.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.gamelift.GameSessionQueue.timeout_in_seconds">
-<code class="sig-name descname">timeout_in_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.timeout_in_seconds" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">timeout_in_seconds</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.timeout_in_seconds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum time a game session request can remain in the queue.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.gamelift.GameSessionQueue.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">destinations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">player_latency_policies=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout_in_seconds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destinations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">player_latency_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_in_seconds</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GameSessionQueue resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -587,7 +587,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>destinations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of fleet/alias ARNs used by session queue for placing game sessions.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the session queue.</p></li>
 <li><p><strong>player_latency_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more policies used to choose fleet based on player latency. See below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>timeout_in_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum time a game session request can remain in the queue.</p></li>
 </ul>
 </dd>
@@ -599,9 +599,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.gamelift.GameSessionQueue.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -617,9 +617,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.gamelift.GameSessionQueue.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

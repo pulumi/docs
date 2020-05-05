@@ -15,6 +15,9 @@ Manages a ServiceBus Subscription.
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.eventhub.Subscription has been deprecated in favour of azure.servicebus.Subscription
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Subscription has been deprecated in favour of azure.servicebus.Subscription{{% /md %}}</p>
 
 
 ## Create a Subscription Resource {#create}

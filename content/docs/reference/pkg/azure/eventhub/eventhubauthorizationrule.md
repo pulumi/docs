@@ -15,6 +15,9 @@ Manages a Event Hubs authorization Rule within an Event Hub.
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.eventhub.EventHubAuthorizationRule has been deprecated in favour of azure.eventhub.AuthorizationRule
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.EventHubAuthorizationRule has been deprecated in favour of azure.eventhub.AuthorizationRule{{% /md %}}</p>
 
 
 ## Create a EventHubAuthorizationRule Resource {#create}

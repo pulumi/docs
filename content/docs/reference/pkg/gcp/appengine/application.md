@@ -1,7 +1,8 @@
 
 ---
 title: "Application"
-block_external_search_index: true
+title_tag: "Resource Application | Module appengine | Package GCP"
+meta_desc: "Explore the Application resource of the appengine module, including examples, input properties, output properties, lookup functions, and supporting types. Allows creation and management of an App Engine application."
 ---
 
 
@@ -30,7 +31,7 @@ Allows creation and management of an App Engine application.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Application</span><span class="p">(resource_name, opts=None, </span>auth_domain=None<span class="p">, </span>feature_settings=None<span class="p">, </span>iap=None<span class="p">, </span>location_id=None<span class="p">, </span>project=None<span class="p">, </span>serving_status=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Application</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_domain=None<span class="p">, </span>feature_settings=None<span class="p">, </span>iap=None<span class="p">, </span>location_id=None<span class="p">, </span>project=None<span class="p">, </span>serving_status=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1826,8 +1827,7 @@ and liveness checks.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

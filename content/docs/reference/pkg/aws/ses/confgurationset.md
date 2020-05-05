@@ -11,6 +11,9 @@ meta_desc: "Explore the ConfgurationSet resource of the ses module, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+Deprecated: aws.ses.ConfgurationSet has been deprecated in favour of aws.ses.ConfigurationSet
+
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.ses.ConfgurationSet has been deprecated in favour of aws.ses.ConfigurationSet{{% /md %}}</p>
 
 
 ## Create a ConfgurationSet Resource {#create}
@@ -22,7 +25,7 @@ meta_desc: "Explore the ConfgurationSet resource of the ses module, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ConfgurationSet</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ConfgurationSet</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

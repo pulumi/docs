@@ -46,6 +46,35 @@ const example = new aws.codebuild.Webhook("example", {
 ```
 
 {{% /example %}}
+{{% example %}}
+### GitHub Enterprise
+
+When working with [GitHub Enterprise](https://enterprise.github.com/) source CodeBuild webhooks, the GHE repository webhook must be separately managed (e.g. manually or with the `github_repository_webhook` resource).
+
+More information creating webhooks with GitHub Enterprise can be found in the [CodeBuild User Guide](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-github-enterprise.html).
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as github from "@pulumi/github";
+
+const exampleWebhook = new aws.codebuild.Webhook("example", {
+    projectName: aws_codebuild_project_example.name,
+});
+const exampleRepositoryWebhook = new github.RepositoryWebhook("example", {
+    active: true,
+    configuration: {
+        contentType: "json",
+        insecureSsl: false,
+        secret: exampleWebhook.secret,
+        url: exampleWebhook.payloadUrl,
+    },
+    events: ["push"],
+    repository: github_repository_example.name,
+});
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -59,7 +88,7 @@ const example = new aws.codebuild.Webhook("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Webhook</span><span class="p">(resource_name, opts=None, </span>branch_filter=None<span class="p">, </span>filter_groups=None<span class="p">, </span>project_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Webhook</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch_filter=None<span class="p">, </span>filter_groups=None<span class="p">, </span>project_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -932,6 +961,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#WebhookFilterGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#WebhookFilterGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.Inputs.WebhookFilterGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.Outputs.WebhookFilterGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1010,6 +1042,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#WebhookFilterGroupFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#WebhookFilterGroupFilterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.Inputs.WebhookFilterGroupFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.Outputs.WebhookFilterGroupFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

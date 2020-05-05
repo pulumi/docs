@@ -1,7 +1,8 @@
 
 ---
 title: "Queue"
-block_external_search_index: true
+title_tag: "Resource Queue | Module cloudtasks | Package GCP"
+meta_desc: "Explore the Queue resource of the cloudtasks module, including examples, input properties, output properties, lookup functions, and supporting types. A named resource to which messages are sent by publishers."
 ---
 
 
@@ -36,7 +37,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Queue</span><span class="p">(resource_name, opts=None, </span>app_engine_routing_override=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>rate_limits=None<span class="p">, </span>retry_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Queue</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_engine_routing_override=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>rate_limits=None<span class="p">, </span>retry_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -223,7 +224,8 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
+    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
+to App Engine tasks in this queue  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -251,10 +253,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Rate limits for task dispatches. The queue's actual dispatch rate is the result of: * Number of tasks in the queue *
-User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many
-Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
-spikes.
+    <dd>{{% md %}}Rate limits for task dispatches.
+The queue's actual dispatch rate is the result of:
+* Number of tasks in the queue
+* User-specified throttling: rateLimits, retryConfig, and the queue's state.
+* System throttling due to 429 (Too Many Requests) or 503 (Service
+Unavailable) responses from the worker, high error rates, or to
+smooth sudden large traffic spikes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -263,7 +268,7 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.
+    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -288,7 +293,8 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
-    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
+    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
+to App Engine tasks in this queue  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -316,10 +322,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
     </dt>
-    <dd>{{% md %}}Rate limits for task dispatches. The queue's actual dispatch rate is the result of: * Number of tasks in the queue *
-User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many
-Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
-spikes.
+    <dd>{{% md %}}Rate limits for task dispatches.
+The queue's actual dispatch rate is the result of:
+* Number of tasks in the queue
+* User-specified throttling: rateLimits, retryConfig, and the queue's state.
+* System throttling due to 429 (Too Many Requests) or 503 (Service
+Unavailable) responses from the worker, high error rates, or to
+smooth sudden large traffic spikes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -328,7 +337,7 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.
+    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -353,7 +362,8 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
-    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
+    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
+to App Engine tasks in this queue  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -381,10 +391,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
     </dt>
-    <dd>{{% md %}}Rate limits for task dispatches. The queue's actual dispatch rate is the result of: * Number of tasks in the queue *
-User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many
-Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
-spikes.
+    <dd>{{% md %}}Rate limits for task dispatches.
+The queue's actual dispatch rate is the result of:
+* Number of tasks in the queue
+* User-specified throttling: rateLimits, retryConfig, and the queue's state.
+* System throttling due to 429 (Too Many Requests) or 503 (Service
+Unavailable) responses from the worker, high error rates, or to
+smooth sudden large traffic spikes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -393,7 +406,7 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.
+    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -418,7 +431,8 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Dict[Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override]</a></span>
     </dt>
-    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
+    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
+to App Engine tasks in this queue  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -446,10 +460,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Dict[Queue<wbr>Rate<wbr>Limits]</a></span>
     </dt>
-    <dd>{{% md %}}Rate limits for task dispatches. The queue's actual dispatch rate is the result of: * Number of tasks in the queue *
-User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many
-Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
-spikes.
+    <dd>{{% md %}}Rate limits for task dispatches.
+The queue's actual dispatch rate is the result of:
+* Number of tasks in the queue
+* User-specified throttling: rateLimits, retryConfig, and the queue's state.
+* System throttling due to 429 (Too Many Requests) or 503 (Service
+Unavailable) responses from the worker, high error rates, or to
+smooth sudden large traffic spikes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -458,7 +475,7 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Dict[Queue<wbr>Retry<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.
+    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -671,7 +688,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
+    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
+to App Engine tasks in this queue  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -708,10 +726,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Rate limits for task dispatches. The queue's actual dispatch rate is the result of: * Number of tasks in the queue *
-User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many
-Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
-spikes.
+    <dd>{{% md %}}Rate limits for task dispatches.
+The queue's actual dispatch rate is the result of:
+* Number of tasks in the queue
+* User-specified throttling: rateLimits, retryConfig, and the queue's state.
+* System throttling due to 429 (Too Many Requests) or 503 (Service
+Unavailable) responses from the worker, high error rates, or to
+smooth sudden large traffic spikes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -720,7 +741,7 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.
+    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -736,7 +757,8 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
-    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
+    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
+to App Engine tasks in this queue  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -773,10 +795,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
     </dt>
-    <dd>{{% md %}}Rate limits for task dispatches. The queue's actual dispatch rate is the result of: * Number of tasks in the queue *
-User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many
-Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
-spikes.
+    <dd>{{% md %}}Rate limits for task dispatches.
+The queue's actual dispatch rate is the result of:
+* Number of tasks in the queue
+* User-specified throttling: rateLimits, retryConfig, and the queue's state.
+* System throttling due to 429 (Too Many Requests) or 503 (Service
+Unavailable) responses from the worker, high error rates, or to
+smooth sudden large traffic spikes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -785,7 +810,7 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.
+    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -801,7 +826,8 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
-    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
+    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
+to App Engine tasks in this queue  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -838,10 +864,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
     </dt>
-    <dd>{{% md %}}Rate limits for task dispatches. The queue's actual dispatch rate is the result of: * Number of tasks in the queue *
-User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many
-Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
-spikes.
+    <dd>{{% md %}}Rate limits for task dispatches.
+The queue's actual dispatch rate is the result of:
+* Number of tasks in the queue
+* User-specified throttling: rateLimits, retryConfig, and the queue's state.
+* System throttling due to 429 (Too Many Requests) or 503 (Service
+Unavailable) responses from the worker, high error rates, or to
+smooth sudden large traffic spikes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -850,7 +879,7 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.
+    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -866,7 +895,8 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Dict[Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override]</a></span>
     </dt>
-    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue
+    <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
+to App Engine tasks in this queue  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -903,10 +933,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Dict[Queue<wbr>Rate<wbr>Limits]</a></span>
     </dt>
-    <dd>{{% md %}}Rate limits for task dispatches. The queue's actual dispatch rate is the result of: * Number of tasks in the queue *
-User-specified throttling: rateLimits, retryConfig, and the queue's state. * System throttling due to 429 (Too Many
-Requests) or 503 (Service Unavailable) responses from the worker, high error rates, or to smooth sudden large traffic
-spikes.
+    <dd>{{% md %}}Rate limits for task dispatches.
+The queue's actual dispatch rate is the result of:
+* Number of tasks in the queue
+* User-specified throttling: rateLimits, retryConfig, and the queue's state.
+* System throttling due to 429 (Too Many Requests) or 503 (Service
+Unavailable) responses from the worker, high error rates, or to
+smooth sudden large traffic spikes.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -915,7 +948,7 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Dict[Queue<wbr>Retry<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.
+    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -954,7 +987,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The host that the task is sent to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -962,7 +997,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App instance.
+By default, the task is sent to an instance which is available when the task is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -970,7 +1007,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App service.
+By default, the task is sent to the service which is the default service when the task is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -978,7 +1017,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App version.
+By default, the task is sent to the version which is the default version when the task is attempted.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -993,7 +1034,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The host that the task is sent to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1001,7 +1044,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App instance.
+By default, the task is sent to an instance which is available when the task is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1009,7 +1054,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App service.
+By default, the task is sent to the service which is the default service when the task is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1017,7 +1064,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App version.
+By default, the task is sent to the version which is the default version when the task is attempted.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1032,7 +1081,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The host that the task is sent to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1040,7 +1091,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App instance.
+By default, the task is sent to an instance which is available when the task is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1048,7 +1101,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App service.
+By default, the task is sent to the service which is the default service when the task is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1056,7 +1111,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App version.
+By default, the task is sent to the version which is the default version when the task is attempted.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1071,7 +1128,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The host that the task is sent to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1079,7 +1138,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App instance.
+By default, the task is sent to an instance which is available when the task is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1087,7 +1148,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App service.
+By default, the task is sent to the service which is the default service when the task is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1095,7 +1158,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App version.
+By default, the task is sent to the version which is the default version when the task is attempted.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1125,7 +1190,13 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The max burst size.
+Max burst size limits how fast tasks in queue are processed when many tasks are
+in the queue and the rate is high. This field allows the queue to have a high
+rate so processing starts shortly after a task is enqueued, but still limits
+resource usage when many tasks are enqueued in a short period of time.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1133,7 +1204,11 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to
+be dispatched for this queue. After this threshold has been
+reached, Cloud Tasks stops dispatching tasks until the number of
+concurrent requests decreases.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1141,7 +1216,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
+If unspecified when the queue is created, Cloud Tasks will pick the default.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1156,7 +1233,13 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The max burst size.
+Max burst size limits how fast tasks in queue are processed when many tasks are
+in the queue and the rate is high. This field allows the queue to have a high
+rate so processing starts shortly after a task is enqueued, but still limits
+resource usage when many tasks are enqueued in a short period of time.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1164,7 +1247,11 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to
+be dispatched for this queue. After this threshold has been
+reached, Cloud Tasks stops dispatching tasks until the number of
+concurrent requests decreases.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1172,7 +1259,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
+If unspecified when the queue is created, Cloud Tasks will pick the default.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1187,7 +1276,13 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The max burst size.
+Max burst size limits how fast tasks in queue are processed when many tasks are
+in the queue and the rate is high. This field allows the queue to have a high
+rate so processing starts shortly after a task is enqueued, but still limits
+resource usage when many tasks are enqueued in a short period of time.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1195,7 +1290,11 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to
+be dispatched for this queue. After this threshold has been
+reached, Cloud Tasks stops dispatching tasks until the number of
+concurrent requests decreases.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1203,7 +1302,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
+If unspecified when the queue is created, Cloud Tasks will pick the default.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1218,7 +1319,13 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The max burst size.
+Max burst size limits how fast tasks in queue are processed when many tasks are
+in the queue and the rate is high. This field allows the queue to have a high
+rate so processing starts shortly after a task is enqueued, but still limits
+resource usage when many tasks are enqueued in a short period of time.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1226,7 +1333,11 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to
+be dispatched for this queue. After this threshold has been
+reached, Cloud Tasks stops dispatching tasks until the number of
+concurrent requests decreases.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1234,7 +1345,9 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
+If unspecified when the queue is created, Cloud Tasks will pick the default.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1264,7 +1377,14 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of attempts per task.
+Cloud Tasks will attempt the task maxAttempts times (that is, if
+the first attempt fails, then there will be maxAttempts - 1
+retries). Must be >= -1.
+If unspecified when the queue is created, Cloud Tasks will pick
+the default.
+-1 indicates unlimited attempts.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1272,7 +1392,10 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue's RetryConfig
+specifies that the task should be retried.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1280,7 +1403,11 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time between retries will double maxDoublings times.
+A task's retry interval starts at minBackoff, then doubles maxDoublings times,
+then increases linearly, and finally retries retries at intervals of maxBackoff
+up to maxAttempts times.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1288,7 +1415,13 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If positive, maxRetryDuration specifies the time limit for
+retrying a failed task, measured from when the task was first
+attempted. Once maxRetryDuration time has passed and the task has
+been attempted maxAttempts times, no further attempts will be
+made and the task will be deleted.
+If zero, then the task age is unlimited.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1296,7 +1429,10 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue's RetryConfig
+specifies that the task should be retried.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1311,7 +1447,14 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of attempts per task.
+Cloud Tasks will attempt the task maxAttempts times (that is, if
+the first attempt fails, then there will be maxAttempts - 1
+retries). Must be >= -1.
+If unspecified when the queue is created, Cloud Tasks will pick
+the default.
+-1 indicates unlimited attempts.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1319,7 +1462,10 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue's RetryConfig
+specifies that the task should be retried.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1327,7 +1473,11 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time between retries will double maxDoublings times.
+A task's retry interval starts at minBackoff, then doubles maxDoublings times,
+then increases linearly, and finally retries retries at intervals of maxBackoff
+up to maxAttempts times.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1335,7 +1485,13 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If positive, maxRetryDuration specifies the time limit for
+retrying a failed task, measured from when the task was first
+attempted. Once maxRetryDuration time has passed and the task has
+been attempted maxAttempts times, no further attempts will be
+made and the task will be deleted.
+If zero, then the task age is unlimited.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1343,7 +1499,10 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue's RetryConfig
+specifies that the task should be retried.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1358,7 +1517,14 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of attempts per task.
+Cloud Tasks will attempt the task maxAttempts times (that is, if
+the first attempt fails, then there will be maxAttempts - 1
+retries). Must be >= -1.
+If unspecified when the queue is created, Cloud Tasks will pick
+the default.
+-1 indicates unlimited attempts.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1366,7 +1532,10 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue's RetryConfig
+specifies that the task should be retried.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1374,7 +1543,11 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time between retries will double maxDoublings times.
+A task's retry interval starts at minBackoff, then doubles maxDoublings times,
+then increases linearly, and finally retries retries at intervals of maxBackoff
+up to maxAttempts times.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1382,7 +1555,13 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If positive, maxRetryDuration specifies the time limit for
+retrying a failed task, measured from when the task was first
+attempted. Once maxRetryDuration time has passed and the task has
+been attempted maxAttempts times, no further attempts will be
+made and the task will be deleted.
+If zero, then the task age is unlimited.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1390,7 +1569,10 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue's RetryConfig
+specifies that the task should be retried.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1405,7 +1587,14 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of attempts per task.
+Cloud Tasks will attempt the task maxAttempts times (that is, if
+the first attempt fails, then there will be maxAttempts - 1
+retries). Must be >= -1.
+If unspecified when the queue is created, Cloud Tasks will pick
+the default.
+-1 indicates unlimited attempts.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1413,7 +1602,10 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue's RetryConfig
+specifies that the task should be retried.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1421,7 +1613,11 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time between retries will double maxDoublings times.
+A task's retry interval starts at minBackoff, then doubles maxDoublings times,
+then increases linearly, and finally retries retries at intervals of maxBackoff
+up to maxAttempts times.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1429,7 +1625,13 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If positive, maxRetryDuration specifies the time limit for
+retrying a failed task, measured from when the task was first
+attempted. Once maxRetryDuration time has passed and the task has
+been attempted maxAttempts times, no further attempts will be
+made and the task will be deleted.
+If zero, then the task age is unlimited.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1437,7 +1639,10 @@ spikes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
+maxBackoff duration after it fails, if the queue's RetryConfig
+specifies that the task should be retried.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1456,8 +1661,7 @@ spikes.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

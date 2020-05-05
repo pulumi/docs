@@ -1,7 +1,8 @@
 
 ---
 title: "ExternalVpnGateway"
-block_external_search_index: true
+title_tag: "Resource ExternalVpnGateway | Module compute | Package GCP"
+meta_desc: "Explore the ExternalVpnGateway resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a VPN gateway managed outside of GCP."
 ---
 
 
@@ -26,7 +27,7 @@ To get more information about ExternalVpnGateway, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ExternalVpnGateway</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>interfaces=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>redundancy_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ExternalVpnGateway</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>interfaces=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>redundancy_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -213,7 +214,7 @@ The ExternalVpnGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalvpngatewayinterface">List&lt;External<wbr>Vpn<wbr>Gateway<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of interfaces on this external VPN gateway.
+    <dd>{{% md %}}A list of interfaces on this external VPN gateway.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -222,10 +223,13 @@ The ExternalVpnGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -269,7 +273,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalvpngatewayinterface">[]External<wbr>Vpn<wbr>Gateway<wbr>Interface</a></span>
     </dt>
-    <dd>{{% md %}}A list of interfaces on this external VPN gateway.
+    <dd>{{% md %}}A list of interfaces on this external VPN gateway.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -278,10 +282,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -325,7 +332,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalvpngatewayinterface">External<wbr>Vpn<wbr>Gateway<wbr>Interface[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of interfaces on this external VPN gateway.
+    <dd>{{% md %}}A list of interfaces on this external VPN gateway.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -334,10 +341,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -381,7 +391,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalvpngatewayinterface">List[External<wbr>Vpn<wbr>Gateway<wbr>Interface]</a></span>
     </dt>
-    <dd>{{% md %}}A list of interfaces on this external VPN gateway.
+    <dd>{{% md %}}A list of interfaces on this external VPN gateway.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -390,10 +400,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -670,7 +683,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalvpngatewayinterface">List&lt;External<wbr>Vpn<wbr>Gateway<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of interfaces on this external VPN gateway.
+    <dd>{{% md %}}A list of interfaces on this external VPN gateway.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -679,10 +692,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -735,7 +751,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalvpngatewayinterface">[]External<wbr>Vpn<wbr>Gateway<wbr>Interface</a></span>
     </dt>
-    <dd>{{% md %}}A list of interfaces on this external VPN gateway.
+    <dd>{{% md %}}A list of interfaces on this external VPN gateway.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -744,10 +760,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -800,7 +819,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalvpngatewayinterface">External<wbr>Vpn<wbr>Gateway<wbr>Interface[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of interfaces on this external VPN gateway.
+    <dd>{{% md %}}A list of interfaces on this external VPN gateway.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -809,10 +828,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -865,7 +887,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalvpngatewayinterface">List[External<wbr>Vpn<wbr>Gateway<wbr>Interface]</a></span>
     </dt>
-    <dd>{{% md %}}A list of interfaces on this external VPN gateway.
+    <dd>{{% md %}}A list of interfaces on this external VPN gateway.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -874,10 +896,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -944,7 +969,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/global/externalVpnGateways/{{name}}`
+    <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
+of this external VPN gateway
+* `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
+* `0, 1 - TWO_IPS_REDUNDANCY`
+* `0, 1, 2, 3 - FOUR_IPS_REDUNDANCY`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -953,7 +982,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP address of the interface in the external VPN gateway.
+Only IPv4 is supported. This IP address can be either from
+your on-premise gateway or another Cloud provider’s VPN gateway,
+it cannot be an IP address from Google Compute Engine.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -968,7 +1001,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/global/externalVpnGateways/{{name}}`
+    <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
+of this external VPN gateway
+* `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
+* `0, 1 - TWO_IPS_REDUNDANCY`
+* `0, 1, 2, 3 - FOUR_IPS_REDUNDANCY`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -977,7 +1014,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP address of the interface in the external VPN gateway.
+Only IPv4 is supported. This IP address can be either from
+your on-premise gateway or another Cloud provider’s VPN gateway,
+it cannot be an IP address from Google Compute Engine.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -992,7 +1033,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/global/externalVpnGateways/{{name}}`
+    <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
+of this external VPN gateway
+* `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
+* `0, 1 - TWO_IPS_REDUNDANCY`
+* `0, 1, 2, 3 - FOUR_IPS_REDUNDANCY`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1001,7 +1046,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP address of the interface in the external VPN gateway.
+Only IPv4 is supported. This IP address can be either from
+your on-premise gateway or another Cloud provider’s VPN gateway,
+it cannot be an IP address from Google Compute Engine.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1016,7 +1065,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/global/externalVpnGateways/{{name}}`
+    <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
+of this external VPN gateway
+* `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
+* `0, 1 - TWO_IPS_REDUNDANCY`
+* `0, 1, 2, 3 - FOUR_IPS_REDUNDANCY`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1025,7 +1078,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP address of the interface in the external VPN gateway.
+Only IPv4 is supported. This IP address can be either from
+your on-premise gateway or another Cloud provider’s VPN gateway,
+it cannot be an IP address from Google Compute Engine.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1044,8 +1101,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

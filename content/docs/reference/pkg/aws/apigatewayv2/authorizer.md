@@ -64,7 +64,7 @@ const example = new aws.apigatewayv2.Authorizer("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Authorizer</span><span class="p">(resource_name, opts=None, </span>api_id=None<span class="p">, </span>authorizer_credentials_arn=None<span class="p">, </span>authorizer_type=None<span class="p">, </span>authorizer_uri=None<span class="p">, </span>identity_sources=None<span class="p">, </span>jwt_configuration=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Authorizer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_id=None<span class="p">, </span>authorizer_credentials_arn=None<span class="p">, </span>authorizer_type=None<span class="p">, </span>authorizer_uri=None<span class="p">, </span>identity_sources=None<span class="p">, </span>jwt_configuration=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1072,6 +1072,9 @@ Supported only for HTTP APIs.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#AuthorizerJwtConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#AuthorizerJwtConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Inputs.AuthorizerJwtConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Outputs.AuthorizerJwtConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_gcp.cloudscheduler"></span><dl class="class">
+<span class="target" id="module-pulumi_gcp.cloudscheduler"></span><dl class="py class">
 <dt id="pulumi_gcp.cloudscheduler.Job">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudscheduler.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_engine_http_target=None</em>, <em class="sig-param">attempt_deadline=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_target=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">pubsub_target=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">retry_config=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">time_zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudscheduler.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_engine_http_target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attempt_deadline</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pubsub_target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retry_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>A scheduled job that can publish a pubsub message or a http request
 every X interval of time, using crontab format string.</p>
 <p>To use Cloud Scheduler your project must contain an App Engine app
@@ -154,9 +154,9 @@ A duration in seconds with up to nine fractional digits, terminated by ‘s’.<
 job using the exponential backoff procedure described by maxDoublings.
 Values greater than 5 and negative values are not allowed.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudscheduler.Job.app_engine_http_target">
-<code class="sig-name descname">app_engine_http_target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.app_engine_http_target" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">app_engine_http_target</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.app_engine_http_target" title="Permalink to this definition">¶</a></dt>
 <dd><p>App Engine HTTP target.
 If the job providers a App Engine HTTP target the cron will
 send a request to the service instance  Structure is documented below.</p>
@@ -185,9 +185,9 @@ No spaces are allowed, and the maximum length allowed is 2083 characters</p></li
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudscheduler.Job.attempt_deadline">
-<code class="sig-name descname">attempt_deadline</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.attempt_deadline" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attempt_deadline</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.attempt_deadline" title="Permalink to this definition">¶</a></dt>
 <dd><p>The deadline for job attempts. If the request handler does not respond by this deadline then the request is
 cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
 execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
@@ -199,16 +199,16 @@ A duration in seconds with up to nine fractional digits, terminated by ‘s’. 
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudscheduler.Job.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A human-readable description for the job.
 This string must not contain more than 500 characters.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudscheduler.Job.http_target">
-<code class="sig-name descname">http_target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.http_target" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">http_target</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.http_target" title="Permalink to this definition">¶</a></dt>
 <dd><p>HTTP target.
 If the job providers a http_target the cron will
 send a request to the targeted url  Structure is documented below.</p>
@@ -241,22 +241,22 @@ The service account must be within the same project as the job.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudscheduler.Job.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the job.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudscheduler.Job.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudscheduler.Job.pubsub_target">
-<code class="sig-name descname">pubsub_target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.pubsub_target" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">pubsub_target</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.pubsub_target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pub/Sub target
 If the job providers a Pub/Sub target the cron will publish
 a message to the provided topic  Structure is documented below.</p>
@@ -272,15 +272,15 @@ PublishRequest.name, e.g. <code class="docutils literal notranslate"><span class
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudscheduler.Job.region">
-<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Region where the scheduler job resides</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudscheduler.Job.retry_config">
-<code class="sig-name descname">retry_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.retry_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">retry_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.retry_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>By default, if a job does not complete successfully,
 meaning that an acknowledgement is not received from the handler,
 then it will be retried with exponential backoff according to the settings  Structure is documented below.</p>
@@ -302,22 +302,22 @@ Values greater than 5 and negative values are not allowed.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudscheduler.Job.schedule">
-<code class="sig-name descname">schedule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.schedule" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">schedule</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.schedule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Describes the schedule on which the job will be executed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudscheduler.Job.time_zone">
-<code class="sig-name descname">time_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.time_zone" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">time_zone</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.time_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the time zone to be used in interpreting schedule.
 The value of this field must be a time zone name from the tz database.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.cloudscheduler.Job.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_engine_http_target=None</em>, <em class="sig-param">attempt_deadline=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_target=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">pubsub_target=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">retry_config=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">time_zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_engine_http_target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attempt_deadline</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pubsub_target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retry_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Job resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -447,9 +447,9 @@ Values greater than 5 and negative values are not allowed.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.cloudscheduler.Job.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -465,9 +465,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.cloudscheduler.Job.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

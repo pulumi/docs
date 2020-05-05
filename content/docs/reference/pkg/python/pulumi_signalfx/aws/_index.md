@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-signalfx/issues">pulumi/pulumi-signalfx repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/issues">terraform-providers/terraform-provider-signalfx repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_signalfx.aws"></span><dl class="class">
+<span class="target" id="module-pulumi_signalfx.aws"></span><dl class="py class">
 <dt id="pulumi_signalfx.aws.ExternalIntegration">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">ExternalIntegration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">ExternalIntegration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx AWS CloudWatch integrations using Role ARNs. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
@@ -30,27 +30,27 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.ExternalIntegration.external_id">
-<code class="sig-name descname">external_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.external_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">external_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.external_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The external ID to use with your IAM role and with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.ExternalIntegration.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of this integration</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.ExternalIntegration.signalfx_aws_account">
-<code class="sig-name descname">signalfx_aws_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.signalfx_aws_account" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">signalfx_aws_account</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.signalfx_aws_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_signalfx.aws.ExternalIntegration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">signalfx_aws_account=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">signalfx_aws_account</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ExternalIntegration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -67,9 +67,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_signalfx.aws.ExternalIntegration.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -85,9 +85,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_signalfx.aws.ExternalIntegration.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.ExternalIntegration.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -105,9 +105,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_signalfx.aws.Integration">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_cloudwatch_namespaces=None</em>, <em class="sig-param">custom_namespace_sync_rules=None</em>, <em class="sig-param">enable_aws_usage=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">import_cloud_watch=None</em>, <em class="sig-param">integration_id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">namespace_sync_rules=None</em>, <em class="sig-param">poll_rate=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">use_get_metric_data_method=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_cloudwatch_namespaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_namespace_sync_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_aws_usage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_cloud_watch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_sync_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">poll_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">regions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_get_metric_data_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx AWS CloudWatch integrations. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#monitor-amazon-web-services">Monitoring Amazon Web Services</a>.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
@@ -151,15 +151,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">filterSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function; it can be any valid SignalFlow filter expression.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.custom_cloudwatch_namespaces">
-<code class="sig-name descname">custom_cloudwatch_namespaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.custom_cloudwatch_namespaces" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_cloudwatch_namespaces</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.custom_cloudwatch_namespaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.custom_namespace_sync_rules">
-<code class="sig-name descname">custom_namespace_sync_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.custom_namespace_sync_rules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_namespace_sync_rules</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.custom_namespace_sync_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the <code class="docutils literal notranslate"><span class="pre">custom_cloudwatch_namespaces</span></code> property.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn’t match the filter. The available actions are one of <code class="docutils literal notranslate"><span class="pre">&quot;Include&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;Exclude&quot;</span></code>.</p></li>
@@ -169,45 +169,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.enable_aws_usage">
-<code class="sig-name descname">enable_aws_usage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.enable_aws_usage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_aws_usage</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.enable_aws_usage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If <code class="docutils literal notranslate"><span class="pre">true</span></code>, SignalFx imports the metrics.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the integration is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.external_id">
-<code class="sig-name descname">external_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.external_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">external_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.external_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">external_id</span></code> property from one of a <code class="docutils literal notranslate"><span class="pre">aws.ExternalIntegration</span></code> or <code class="docutils literal notranslate"><span class="pre">aws.TokenIntegration</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.import_cloud_watch">
-<code class="sig-name descname">import_cloud_watch</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.import_cloud_watch" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">import_cloud_watch</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.import_cloud_watch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.integration_id">
-<code class="sig-name descname">integration_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.integration_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">integration_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.integration_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The id of one of a <code class="docutils literal notranslate"><span class="pre">aws.ExternalIntegration</span></code> or <code class="docutils literal notranslate"><span class="pre">aws.TokenIntegration</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.key">
-<code class="sig-name descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.key" title="Permalink to this definition">¶</a></dt>
 <dd><p>If you specify <code class="docutils literal notranslate"><span class="pre">auth_method</span> <span class="pre">=</span> <span class="pre">&quot;SecurityToken&quot;</span></code> in your request to create an AWS integration object, use this property to specify the key.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.namespace_sync_rules">
-<code class="sig-name descname">namespace_sync_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.namespace_sync_rules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">namespace_sync_rules</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.namespace_sync_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the <code class="docutils literal notranslate"><span class="pre">services</span></code> property. If you don’t specify either property, SignalFx syncs all data in all AWS namespaces.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn’t match the filter. The available actions are one of <code class="docutils literal notranslate"><span class="pre">&quot;Include&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;Exclude&quot;</span></code>.</p></li>
@@ -217,45 +217,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.poll_rate">
-<code class="sig-name descname">poll_rate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.poll_rate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">poll_rate</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.poll_rate" title="Permalink to this definition">¶</a></dt>
 <dd><p>AWS poll rate (in seconds). One of <code class="docutils literal notranslate"><span class="pre">60</span></code> or <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.regions">
-<code class="sig-name descname">regions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.regions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">regions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.regions" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of AWS regions that SignalFx should monitor.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.role_arn">
-<code class="sig-name descname">role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.role_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Role ARN that you add to an existing AWS integration object. <strong>Note</strong>: Ensure you use the <code class="docutils literal notranslate"><span class="pre">arn</span></code> property of your role, not the id!</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.services">
-<code class="sig-name descname">services</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.services" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">services</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.services" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with <code class="docutils literal notranslate"><span class="pre">namespace_sync_rule</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.token">
-<code class="sig-name descname">token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.token" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.token" title="Permalink to this definition">¶</a></dt>
 <dd><p>Used with <code class="docutils literal notranslate"><span class="pre">signalfx_aws_token_integration</span></code>. Use this property to specify the token.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.Integration.use_get_metric_data_method">
-<code class="sig-name descname">use_get_metric_data_method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.use_get_metric_data_method" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">use_get_metric_data_method</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.Integration.use_get_metric_data_method" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable the use of Amazon’s <code class="docutils literal notranslate"><span class="pre">GetMetricData</span></code> for collecting metrics. Note that this requires the inclusion of the <code class="docutils literal notranslate"><span class="pre">&quot;cloudwatch:GetMetricData&quot;</span></code> permission.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_signalfx.aws.Integration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_cloudwatch_namespaces=None</em>, <em class="sig-param">custom_namespace_sync_rules=None</em>, <em class="sig-param">enable_aws_usage=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">import_cloud_watch=None</em>, <em class="sig-param">integration_id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">namespace_sync_rules=None</em>, <em class="sig-param">poll_rate=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">use_get_metric_data_method=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_cloudwatch_namespaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_namespace_sync_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_aws_usage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_cloud_watch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_sync_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">poll_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">regions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_get_metric_data_method</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Integration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -298,9 +298,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_signalfx.aws.Integration.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -316,9 +316,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_signalfx.aws.Integration.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.Integration.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -336,9 +336,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_signalfx.aws.TokenIntegration">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">TokenIntegration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">TokenIntegration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx AWS CloudWatch integrations using security tokens. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
@@ -353,27 +353,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.TokenIntegration.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of this integration</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.TokenIntegration.signalfx_aws_account">
-<code class="sig-name descname">signalfx_aws_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.signalfx_aws_account" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">signalfx_aws_account</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.signalfx_aws_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS Account ARN to use with your policies/roles, provided by SignalFx.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.aws.TokenIntegration.token_id">
-<code class="sig-name descname">token_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.token_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.token_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SignalFx-generated AWS token to use with an AWS integration.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_signalfx.aws.TokenIntegration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">signalfx_aws_account=None</em>, <em class="sig-param">token_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">signalfx_aws_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TokenIntegration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -390,9 +390,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_signalfx.aws.TokenIntegration.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -408,9 +408,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_signalfx.aws.TokenIntegration.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.TokenIntegration.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

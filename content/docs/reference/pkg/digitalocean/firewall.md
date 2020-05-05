@@ -14,6 +14,151 @@ Provides a DigitalOcean Cloud Firewall resource. This can be used to create,
 modify, and delete Firewalls.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const webDroplet = new digitalocean.Droplet("webDroplet", {
+    size: "s-1vcpu-1gb",
+    image: "ubuntu-18-04-x64",
+    region: "nyc3",
+});
+const webFirewall = new digitalocean.Firewall("webFirewall", {
+    dropletIds: [webDroplet.id],
+    inbound_rule: [
+        {
+            protocol: "tcp",
+            portRange: "22",
+            sourceAddresses: [
+                "192.168.1.0/24",
+                "2002:1:2::/48",
+            ],
+        },
+        {
+            protocol: "tcp",
+            portRange: "80",
+            sourceAddresses: [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+        {
+            protocol: "tcp",
+            portRange: "443",
+            sourceAddresses: [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+        {
+            protocol: "icmp",
+            sourceAddresses: [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+    ],
+    outbound_rule: [
+        {
+            protocol: "tcp",
+            portRange: "53",
+            destinationAddresses: [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+        {
+            protocol: "udp",
+            portRange: "53",
+            destinationAddresses: [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+        {
+            protocol: "icmp",
+            destinationAddresses: [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+    ],
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+web_droplet = digitalocean.Droplet("webDroplet",
+    size="s-1vcpu-1gb",
+    image="ubuntu-18-04-x64",
+    region="nyc3")
+web_firewall = digitalocean.Firewall("webFirewall",
+    droplet_ids=[web_droplet.id],
+    inbound_rule=[
+        {
+            "protocol": "tcp",
+            "portRange": "22",
+            "sourceAddresses": [
+                "192.168.1.0/24",
+                "2002:1:2::/48",
+            ],
+        },
+        {
+            "protocol": "tcp",
+            "portRange": "80",
+            "sourceAddresses": [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+        {
+            "protocol": "tcp",
+            "portRange": "443",
+            "sourceAddresses": [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+        {
+            "protocol": "icmp",
+            "sourceAddresses": [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+    ],
+    outbound_rule=[
+        {
+            "protocol": "tcp",
+            "portRange": "53",
+            "destinationAddresses": [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+        {
+            "protocol": "udp",
+            "portRange": "53",
+            "destinationAddresses": [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+        {
+            "protocol": "icmp",
+            "destinationAddresses": [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+    ])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -27,7 +172,7 @@ modify, and delete Firewalls.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Firewall</span><span class="p">(resource_name, opts=None, </span>droplet_ids=None<span class="p">, </span>inbound_rules=None<span class="p">, </span>name=None<span class="p">, </span>outbound_rules=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Firewall</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>inbound_rules=None<span class="p">, </span>name=None<span class="p">, </span>outbound_rules=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1108,6 +1253,9 @@ This can be "waiting", "succeeded", or "failed".
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#FirewallInboundRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#FirewallInboundRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.FirewallInboundRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.FirewallInboundRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1406,6 +1554,9 @@ will be accepted.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#FirewallOutboundRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#FirewallOutboundRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.FirewallOutboundRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.FirewallOutboundRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1709,6 +1860,9 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#FirewallPendingChangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.FirewallPendingChange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

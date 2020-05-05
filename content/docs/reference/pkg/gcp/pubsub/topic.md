@@ -1,7 +1,8 @@
 
 ---
 title: "Topic"
-block_external_search_index: true
+title_tag: "Resource Topic | Module pubsub | Package GCP"
+meta_desc: "Explore the Topic resource of the pubsub module, including examples, input properties, output properties, lookup functions, and supporting types. A named resource to which messages are sent by publishers."
 ---
 
 
@@ -56,7 +57,7 @@ const example = new gcp.pubsub.Topic("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Topic</span><span class="p">(resource_name, opts=None, </span>kms_key_name=None<span class="p">, </span>labels=None<span class="p">, </span>message_storage_policy=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Topic</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>kms_key_name=None<span class="p">, </span>labels=None<span class="p">, </span>message_storage_policy=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -234,10 +235,11 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. Your
-project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
-'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. The expected format is
-'projects/*/locations/*/keyRings/*/cryptoKeys/*'
+    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access
+to messages published on this topic. Your project's PubSub service account
+(`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
+`roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -255,8 +257,9 @@ project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not
-present, then no constraints are in effect.
+    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
+messages published to the topic may be stored. If not present, then no
+constraints are in effect.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -291,10 +294,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. Your
-project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
-'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. The expected format is
-'projects/*/locations/*/keyRings/*/cryptoKeys/*'
+    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access
+to messages published on this topic. Your project's PubSub service account
+(`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
+`roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -312,8 +316,9 @@ project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not
-present, then no constraints are in effect.
+    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
+messages published to the topic may be stored. If not present, then no
+constraints are in effect.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -348,10 +353,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. Your
-project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
-'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. The expected format is
-'projects/*/locations/*/keyRings/*/cryptoKeys/*'
+    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access
+to messages published on this topic. Your project's PubSub service account
+(`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
+`roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -369,8 +375,9 @@ project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not
-present, then no constraints are in effect.
+    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
+messages published to the topic may be stored. If not present, then no
+constraints are in effect.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -405,10 +412,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. Your
-project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
-'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. The expected format is
-'projects/*/locations/*/keyRings/*/cryptoKeys/*'
+    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access
+to messages published on this topic. Your project's PubSub service account
+(`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
+`roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,8 +434,9 @@ project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Dict[Topic<wbr>Message<wbr>Storage<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not
-present, then no constraints are in effect.
+    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
+messages published to the topic may be stored. If not present, then no
+constraints are in effect.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -659,10 +668,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. Your
-project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
-'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. The expected format is
-'projects/*/locations/*/keyRings/*/cryptoKeys/*'
+    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access
+to messages published on this topic. Your project's PubSub service account
+(`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
+`roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -680,8 +690,9 @@ project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not
-present, then no constraints are in effect.
+    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
+messages published to the topic may be stored. If not present, then no
+constraints are in effect.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -716,10 +727,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. Your
-project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
-'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. The expected format is
-'projects/*/locations/*/keyRings/*/cryptoKeys/*'
+    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access
+to messages published on this topic. Your project's PubSub service account
+(`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
+`roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -737,8 +749,9 @@ project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not
-present, then no constraints are in effect.
+    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
+messages published to the topic may be stored. If not present, then no
+constraints are in effect.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -773,10 +786,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. Your
-project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
-'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. The expected format is
-'projects/*/locations/*/keyRings/*/cryptoKeys/*'
+    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access
+to messages published on this topic. Your project's PubSub service account
+(`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
+`roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -794,8 +808,9 @@ project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not
-present, then no constraints are in effect.
+    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
+messages published to the topic may be stored. If not present, then no
+constraints are in effect.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -830,10 +845,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. Your
-project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
-'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. The expected format is
-'projects/*/locations/*/keyRings/*/cryptoKeys/*'
+    <dd>{{% md %}}The resource name of the Cloud KMS CryptoKey to be used to protect access
+to messages published on this topic. Your project's PubSub service account
+(`service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com`) must have
+`roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
+The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -851,8 +867,9 @@ project's PubSub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicmessagestoragepolicy">Dict[Topic<wbr>Message<wbr>Storage<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not
-present, then no constraints are in effect.
+    <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
+messages published to the topic may be stored. If not present, then no
+constraints are in effect.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -910,7 +927,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of IDs of GCP regions where messages that are published to
+the topic may be persisted in storage. Messages published by
+publishers running in non-allowed GCP regions (or running outside
+of GCP altogether) will be routed for storage in one of the
+allowed regions. An empty list means that no regions are allowed,
+and is not a valid configuration.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -925,7 +948,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of IDs of GCP regions where messages that are published to
+the topic may be persisted in storage. Messages published by
+publishers running in non-allowed GCP regions (or running outside
+of GCP altogether) will be routed for storage in one of the
+allowed regions. An empty list means that no regions are allowed,
+and is not a valid configuration.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -940,7 +969,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of IDs of GCP regions where messages that are published to
+the topic may be persisted in storage. Messages published by
+publishers running in non-allowed GCP regions (or running outside
+of GCP altogether) will be routed for storage in one of the
+allowed regions. An empty list means that no regions are allowed,
+and is not a valid configuration.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -955,7 +990,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of IDs of GCP regions where messages that are published to
+the topic may be persisted in storage. Messages published by
+publishers running in non-allowed GCP regions (or running outside
+of GCP altogether) will be routed for storage in one of the
+allowed regions. An empty list means that no regions are allowed,
+and is not a valid configuration.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -974,8 +1015,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

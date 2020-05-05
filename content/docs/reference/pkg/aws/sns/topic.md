@@ -79,7 +79,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Topic</span><span class="p">(resource_name, opts=None, </span>application_failure_feedback_role_arn=None<span class="p">, </span>application_success_feedback_role_arn=None<span class="p">, </span>application_success_feedback_sample_rate=None<span class="p">, </span>delivery_policy=None<span class="p">, </span>display_name=None<span class="p">, </span>http_failure_feedback_role_arn=None<span class="p">, </span>http_success_feedback_role_arn=None<span class="p">, </span>http_success_feedback_sample_rate=None<span class="p">, </span>kms_master_key_id=None<span class="p">, </span>lambda_failure_feedback_role_arn=None<span class="p">, </span>lambda_success_feedback_role_arn=None<span class="p">, </span>lambda_success_feedback_sample_rate=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>policy=None<span class="p">, </span>sqs_failure_feedback_role_arn=None<span class="p">, </span>sqs_success_feedback_role_arn=None<span class="p">, </span>sqs_success_feedback_sample_rate=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Topic</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_failure_feedback_role_arn=None<span class="p">, </span>application_success_feedback_role_arn=None<span class="p">, </span>application_success_feedback_sample_rate=None<span class="p">, </span>delivery_policy=None<span class="p">, </span>display_name=None<span class="p">, </span>http_failure_feedback_role_arn=None<span class="p">, </span>http_success_feedback_role_arn=None<span class="p">, </span>http_success_feedback_sample_rate=None<span class="p">, </span>kms_master_key_id=None<span class="p">, </span>lambda_failure_feedback_role_arn=None<span class="p">, </span>lambda_success_feedback_role_arn=None<span class="p">, </span>lambda_success_feedback_sample_rate=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>policy=None<span class="p">, </span>sqs_failure_feedback_role_arn=None<span class="p">, </span>sqs_success_feedback_role_arn=None<span class="p">, </span>sqs_success_feedback_sample_rate=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -419,7 +419,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -597,7 +597,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -775,7 +775,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -953,7 +953,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1373,7 +1373,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1560,7 +1560,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1747,7 +1747,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -1934,7 +1934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>

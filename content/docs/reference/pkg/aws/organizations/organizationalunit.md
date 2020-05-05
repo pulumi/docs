@@ -39,7 +39,7 @@ const example = new aws.organizations.OrganizationalUnit("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OrganizationalUnit</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>parent_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OrganizationalUnit</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>parent_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -767,6 +767,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#OrganizationalUnitAccountOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.OrganizationalUnitAccount.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

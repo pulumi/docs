@@ -43,7 +43,7 @@ git_sha: "6e41506897a3d7bf3985beb8ecdc596638047699"
 
 <h2 id="metrics" data-link-title="metrics">namespace <strong>metrics</strong></h2>
 <h3 class="pdoc-module-header" id="conditionalCheckFailedRequests" data-link-title="conditionalCheckFailedRequests">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L129">
         function <strong>conditionalCheckFailedRequests</strong>
     </a>
 </h3>
@@ -65,7 +65,7 @@ Dimensions: TableName
 Valid Statistics: Minimum, Maximum, Average, SampleCount, Sum
 
 <h3 class="pdoc-module-header" id="consumedReadCapacityUnits" data-link-title="consumedReadCapacityUnits">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L160">
         function <strong>consumedReadCapacityUnits</strong>
     </a>
 </h3>
@@ -101,7 +101,7 @@ Valid Statistics:
 * SampleCount – Number of requests to DynamoDB that consumed read capacity.
 
 <h3 class="pdoc-module-header" id="consumedWriteCapacityUnits" data-link-title="consumedWriteCapacityUnits">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L192">
         function <strong>consumedWriteCapacityUnits</strong>
     </a>
 </h3>
@@ -138,14 +138,14 @@ Valid Statistics:
 * SampleCount – Number of requests to DynamoDB that consumed write capacity.
 
 <h3 class="pdoc-module-header" id="DynamodbMetricChange" data-link-title="DynamodbMetricChange">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L30">
         interface <strong>DynamodbMetricChange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DynamodbMetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L461">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L461">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -155,7 +155,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L430">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L430">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</code></pre>
@@ -165,7 +165,7 @@ will be made.  However, if the property is there by set to [undefined] then the 
 cleared.
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -175,7 +175,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-globalSecondaryIndexName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L40">property <b>globalSecondaryIndexName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L40">property <b>globalSecondaryIndexName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalSecondaryIndexName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -184,7 +184,7 @@ This dimension limits the data to a global secondary index on a table. If you sp
 this, you must also specify [Table].
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L470">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L470">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-operation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L45">property <b>operation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L45">property <b>operation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operation?: <span class='s2'>"PutItem"</span> | <span class='s2'>"DeleteItem"</span> | <span class='s2'>"UpdateItem"</span> | <span class='s2'>"GetItem"</span> | <span class='s2'>"BatchGetItem"</span> | <span class='s2'>"Scan"</span> | <span class='s2'>"Query"</span> | <span class='s2'>"BatchWriteItem"</span> | <span class='s2'>"GetRecords"</span>;</code></pre>
@@ -204,7 +204,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 This dimension limits the data to one of the specified following DynamoDB operations.
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L436">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L436">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -214,7 +214,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default (300s).
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-receivingRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L53">property <b>receivingRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L53">property <b>receivingRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>receivingRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>;</code></pre>
@@ -223,7 +223,7 @@ This dimension limits the data to a particular AWS region. It is used with metri
 originating from replica tables within a DynamoDB global table.
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -233,7 +233,7 @@ property, then no change will be made.  However, if the property is there by set
 [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-streamLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L59">property <b>streamLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L59">property <b>streamLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streamLabel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -242,7 +242,7 @@ This dimension limits the data to a specific stream label. It is used with metri
 originating from Amazon DynamoDB Streams 'GetRecords' operations.
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L34">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L34">property <b>table</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>table?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#Table'>aws.dynamodb.Table</a>;</code></pre>
@@ -250,7 +250,7 @@ originating from Amazon DynamoDB Streams 'GetRecords' operations.
 Optional [Table] this metric should be filtered down to.
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L454">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L454">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
@@ -260,7 +260,7 @@ be made.  However, if the property is there by set to [undefined] then the value
 to the default.
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L478">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L478">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -271,7 +271,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="DynamodbMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L485">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L485">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</code></pre>
@@ -281,14 +281,14 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="DynamodbMetricName" data-link-title="DynamodbMetricName">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L21">
         type <strong>DynamodbMetricName</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> DynamodbMetricName = <span class='s2'>"ConditionalCheckFailedRequests"</span> | <span class='s2'>"ConsumedReadCapacityUnits"</span> | <span class='s2'>"ConsumedWriteCapacityUnits"</span> | <span class='s2'>"OnlineIndexConsumedWriteCapacity"</span> | <span class='s2'>"OnlineIndexPercentageProgress"</span> | <span class='s2'>"OnlineIndexThrottleEvents"</span> | <span class='s2'>"PendingReplicationCount"</span> | <span class='s2'>"ProvisionedReadCapacityUnits"</span> | <span class='s2'>"ProvisionedWriteCapacityUnits"</span> | <span class='s2'>"ReadThrottleEvents"</span> | <span class='s2'>"ReplicationLatency"</span> | <span class='s2'>"ReturnedBytes"</span> | <span class='s2'>"ReturnedItemCount"</span> | <span class='s2'>"ReturnedRecordsCount"</span> | <span class='s2'>"SuccessfulRequestLatency"</span> | <span class='s2'>"SystemErrors"</span> | <span class='s2'>"TimeToLiveDeletedItemCount"</span> | <span class='s2'>"ThrottledRequests"</span> | <span class='s2'>"UserErrors"</span> | <span class='s2'>"WriteThrottleEvents"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="metric" data-link-title="metric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L87">
         function <strong>metric</strong>
     </a>
 </h3>
@@ -322,7 +322,7 @@ along any of the dimensions in the table below.
    name in the current region and the current AWS account.
 
 <h3 class="pdoc-module-header" id="onlineIndexConsumedWriteCapacity" data-link-title="onlineIndexConsumedWriteCapacity">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L220">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L220">
         function <strong>onlineIndexConsumedWriteCapacity</strong>
     </a>
 </h3>
@@ -355,7 +355,7 @@ Valid Statistics:
 * Sum
 
 <h3 class="pdoc-module-header" id="onlineIndexPercentageProgress" data-link-title="onlineIndexPercentageProgress">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L241">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L241">
         function <strong>onlineIndexPercentageProgress</strong>
     </a>
 </h3>
@@ -381,7 +381,7 @@ Valid Statistics:
 * Sum
 
 <h3 class="pdoc-module-header" id="onlineIndexThrottleEvents" data-link-title="onlineIndexThrottleEvents">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L267">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L267">
         function <strong>onlineIndexThrottleEvents</strong>
     </a>
 </h3>
@@ -412,7 +412,7 @@ Valid Statistics:
 * Sum
 
 <h3 class="pdoc-module-header" id="pendingReplicationCount" data-link-title="pendingReplicationCount">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L284">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L284">
         function <strong>pendingReplicationCount</strong>
     </a>
 </h3>
@@ -434,7 +434,7 @@ Valid Statistics:
 * Sum
 
 <h3 class="pdoc-module-header" id="provisionedReadCapacityUnits" data-link-title="provisionedReadCapacityUnits">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L309">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L309">
         function <strong>provisionedReadCapacityUnits</strong>
     </a>
 </h3>
@@ -464,7 +464,7 @@ Valid Statistics:
   capacity units, this statistic might not reflect the true average.
 
 <h3 class="pdoc-module-header" id="provisionedWriteCapacityUnits" data-link-title="provisionedWriteCapacityUnits">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L335">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L335">
         function <strong>provisionedWriteCapacityUnits</strong>
     </a>
 </h3>
@@ -495,7 +495,7 @@ Valid Statistics:
   capacity units, this statistic might not reflect the true average.
 
 <h3 class="pdoc-module-header" id="readThrottleEvents" data-link-title="readThrottleEvents">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L360">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L360">
         function <strong>readThrottleEvents</strong>
     </a>
 </h3>
@@ -525,7 +525,7 @@ Valid Statistics:
 * Sum
 
 <h3 class="pdoc-module-header" id="replicationLatency" data-link-title="replicationLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L378">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L378">
         function <strong>replicationLatency</strong>
     </a>
 </h3>
@@ -548,7 +548,7 @@ Valid Statistics:
 * Maximum
 
 <h3 class="pdoc-module-header" id="returnedBytes" data-link-title="returnedBytes">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L397">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L397">
         function <strong>returnedBytes</strong>
     </a>
 </h3>
@@ -572,7 +572,7 @@ Valid Statistics:
 * Sum
 
 <h3 class="pdoc-module-header" id="returnedItemCount" data-link-title="returnedItemCount">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L421">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L421">
         function <strong>returnedItemCount</strong>
     </a>
 </h3>
@@ -601,7 +601,7 @@ Valid Statistics:
 * Sum
 
 <h3 class="pdoc-module-header" id="returnedRecordsCount" data-link-title="returnedRecordsCount">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L440">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L440">
         function <strong>returnedRecordsCount</strong>
     </a>
 </h3>
@@ -625,7 +625,7 @@ Valid Statistics:
 * Sum
 
 <h3 class="pdoc-module-header" id="successfulRequestLatency" data-link-title="successfulRequestLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L464">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L464">
         function <strong>successfulRequestLatency</strong>
     </a>
 </h3>
@@ -654,7 +654,7 @@ Valid Statistics:
 * SampleCount
 
 <h3 class="pdoc-module-header" id="systemErrors" data-link-title="systemErrors">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L480">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L480">
         function <strong>systemErrors</strong>
     </a>
 </h3>
@@ -675,7 +675,7 @@ Valid Statistics:
 * SampleCount
 
 <h3 class="pdoc-module-header" id="throttledRequests" data-link-title="throttledRequests">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L531">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L531">
         function <strong>throttledRequests</strong>
     </a>
 </h3>
@@ -716,7 +716,7 @@ Valid Statistics:
 * SampleCount
 
 <h3 class="pdoc-module-header" id="timeToLiveDeletedItemCount" data-link-title="timeToLiveDeletedItemCount">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L495">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L495">
         function <strong>timeToLiveDeletedItemCount</strong>
     </a>
 </h3>
@@ -736,7 +736,7 @@ Valid Statistics:
 * Sum
 
 <h3 class="pdoc-module-header" id="userErrors" data-link-title="userErrors">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L556">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L556">
         function <strong>userErrors</strong>
     </a>
 </h3>
@@ -766,7 +766,7 @@ Valid Statistics:
 * SampleCount
 
 <h3 class="pdoc-module-header" id="writeThrottleEvents" data-link-title="writeThrottleEvents">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/dynamodb/metrics.ts#L584">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/dynamodb/metrics.ts#L584">
         function <strong>writeThrottleEvents</strong>
     </a>
 </h3>

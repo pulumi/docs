@@ -13,6 +13,30 @@ meta_desc: "Explore the Domain resource of the Digital Ocean package, including 
 Provides a DigitalOcean domain resource.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+// Create a new domain
+const default = new digitalocean.Domain("default", {
+    name: "example.com",
+    ipAddress: digitalocean_droplet.foo.ipv4_address,
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+# Create a new domain
+default = digitalocean.Domain("default",
+    name="example.com",
+    ip_address=digitalocean_droplet["foo"]["ipv4_address"])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -26,7 +50,7 @@ Provides a DigitalOcean domain resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Domain</span><span class="p">(resource_name, opts=None, </span>ip_address=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Domain</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ip_address=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

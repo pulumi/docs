@@ -117,7 +117,7 @@ for full details on using Replication Groups.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ReplicationGroup</span><span class="p">(resource_name, opts=None, </span>apply_immediately=None<span class="p">, </span>at_rest_encryption_enabled=None<span class="p">, </span>auth_token=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>automatic_failover_enabled=None<span class="p">, </span>availability_zones=None<span class="p">, </span>cluster_mode=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>maintenance_window=None<span class="p">, </span>node_type=None<span class="p">, </span>notification_topic_arn=None<span class="p">, </span>number_cache_clusters=None<span class="p">, </span>parameter_group_name=None<span class="p">, </span>port=None<span class="p">, </span>replication_group_description=None<span class="p">, </span>replication_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_group_names=None<span class="p">, </span>snapshot_arns=None<span class="p">, </span>snapshot_name=None<span class="p">, </span>snapshot_retention_limit=None<span class="p">, </span>snapshot_window=None<span class="p">, </span>subnet_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>transit_encryption_enabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ReplicationGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>at_rest_encryption_enabled=None<span class="p">, </span>auth_token=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>automatic_failover_enabled=None<span class="p">, </span>availability_zones=None<span class="p">, </span>cluster_mode=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>maintenance_window=None<span class="p">, </span>node_type=None<span class="p">, </span>notification_topic_arn=None<span class="p">, </span>number_cache_clusters=None<span class="p">, </span>parameter_group_name=None<span class="p">, </span>port=None<span class="p">, </span>replication_group_description=None<span class="p">, </span>replication_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_group_names=None<span class="p">, </span>snapshot_arns=None<span class="p">, </span>snapshot_name=None<span class="p">, </span>snapshot_retention_limit=None<span class="p">, </span>snapshot_window=None<span class="p">, </span>subnet_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>transit_encryption_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -531,7 +531,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -792,7 +792,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1053,7 +1053,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1314,7 +1314,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1907,7 +1907,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2195,7 +2195,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2483,7 +2483,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2771,7 +2771,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2805,6 +2805,9 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#ReplicationGroupClusterModeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#ReplicationGroupClusterModeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.Inputs.ReplicationGroupClusterModeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.Outputs.ReplicationGroupClusterMode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

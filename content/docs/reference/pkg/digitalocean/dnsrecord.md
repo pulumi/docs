@@ -13,6 +13,51 @@ meta_desc: "Explore the DnsRecord resource of the Digital Ocean package, includi
 Provides a DigitalOcean DNS record resource.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const default = new digitalocean.Domain("default", {name: "example.com"});
+// Add an A record to the domain for www.example.com.
+const www = new digitalocean.DnsRecord("www", {
+    domain: default.name,
+    type: "A",
+    value: "192.168.0.11",
+});
+// Add a MX record for the example.com domain itself.
+const mx = new digitalocean.DnsRecord("mx", {
+    domain: default.name,
+    type: "MX",
+    priority: 10,
+    value: "mail.example.com.",
+});
+export const wwwFqdn = www.fqdn;
+export const mxFqdn = mx.fqdn;
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+default = digitalocean.Domain("default", name="example.com")
+# Add an A record to the domain for www.example.com.
+www = digitalocean.DnsRecord("www",
+    domain=default.name,
+    type="A",
+    value="192.168.0.11")
+# Add a MX record for the example.com domain itself.
+mx = digitalocean.DnsRecord("mx",
+    domain=default.name,
+    type="MX",
+    priority=10,
+    value="mail.example.com.")
+pulumi.export("wwwFqdn", www.fqdn)
+pulumi.export("mxFqdn", mx.fqdn)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -26,7 +71,7 @@ Provides a DigitalOcean DNS record resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DnsRecord</span><span class="p">(resource_name, opts=None, </span>domain=None<span class="p">, </span>flags=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>priority=None<span class="p">, </span>tag=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>weight=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DnsRecord</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain=None<span class="p">, </span>flags=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>priority=None<span class="p">, </span>tag=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

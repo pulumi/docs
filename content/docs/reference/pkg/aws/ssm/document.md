@@ -13,7 +13,7 @@ meta_desc: "Explore the Document resource of the ssm module, including examples,
 Provides an SSM Document resource
 
 > **NOTE on updating SSM documents:** Only documents with a schema version of 2.0
-or greater can update their content once created, see [SSM Schema Features][1]. To update a document with an older
+or greater can update their content once created, see [SSM Schema Features](http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#document-schemas-features). To update a document with an older
 schema version you must recreate the resource.
 
 {{% examples %}}
@@ -49,14 +49,6 @@ const foo = new aws.ssm.Document("foo", {
 
 {{% /example %}}
 {{% /examples %}}
-## attachments_source
-
-The `attachments_source` block supports the following:
-
-* `key` - (Required) The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
-* `values` - (Required) The value describing the location of an attachment to a document
-* `name` - (Optional) The name of the document attachment file
-
 ## Permissions
 
 The permissions attribute specifies how you want to share the document. If you share a document privately,
@@ -79,7 +71,7 @@ The permissions mapping supports the following:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Document</span><span class="p">(resource_name, opts=None, </span>attachments_sources=None<span class="p">, </span>content=None<span class="p">, </span>document_format=None<span class="p">, </span>document_type=None<span class="p">, </span>name=None<span class="p">, </span>permissions=None<span class="p">, </span>tags=None<span class="p">, </span>target_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Document</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attachments_sources=None<span class="p">, </span>content=None<span class="p">, </span>document_format=None<span class="p">, </span>document_type=None<span class="p">, </span>name=None<span class="p">, </span>permissions=None<span class="p">, </span>tags=None<span class="p">, </span>target_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -311,7 +303,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
+    <dd>{{% md %}}A map of tags to assign to the object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -390,7 +382,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
+    <dd>{{% md %}}A map of tags to assign to the object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -469,7 +461,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
+    <dd>{{% md %}}A map of tags to assign to the object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -548,7 +540,7 @@ The Document resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
+    <dd>{{% md %}}A map of tags to assign to the object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1359,7 +1351,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
+    <dd>{{% md %}}A map of tags to assign to the object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1545,7 +1537,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
+    <dd>{{% md %}}A map of tags to assign to the object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1731,7 +1723,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
+    <dd>{{% md %}}A map of tags to assign to the object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1917,7 +1909,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
+    <dd>{{% md %}}A map of tags to assign to the object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1952,6 +1944,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentAttachmentsSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentAttachmentsSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.DocumentAttachmentsSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.DocumentAttachmentsSource.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1965,7 +1960,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1973,7 +1969,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value describing the location of an attachment to a document
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1981,7 +1978,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the document.
+    <dd>{{% md %}}The name of the document attachment file
 {{% /md %}}</dd>
 
 </dl>
@@ -1997,7 +1994,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2005,7 +2003,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value describing the location of an attachment to a document
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2013,7 +2012,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the document.
+    <dd>{{% md %}}The name of the document attachment file
 {{% /md %}}</dd>
 
 </dl>
@@ -2029,7 +2028,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2037,7 +2037,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value describing the location of an attachment to a document
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2045,7 +2046,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the document.
+    <dd>{{% md %}}The name of the document attachment file
 {{% /md %}}</dd>
 
 </dl>
@@ -2061,7 +2062,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2069,7 +2071,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value describing the location of an attachment to a document
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2077,7 +2080,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the document.
+    <dd>{{% md %}}The name of the document attachment file
 {{% /md %}}</dd>
 
 </dl>
@@ -2094,6 +2097,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentParameterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.DocumentParameter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2273,6 +2279,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentPermissionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentPermissionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.DocumentPermissionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.DocumentPermissions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -1708,6 +1708,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertConditionTermArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#AlertConditionTermOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.AlertConditionTermArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.AlertConditionTerm.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

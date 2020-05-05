@@ -37,6 +37,9 @@ const baz = new aws.elb.Attachment("baz", {
 {{% /example %}}
 {{% /examples %}}
 
+Deprecated: aws.elasticloadbalancing.Attachment has been deprecated in favour of aws.elb.Attachment
+
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.Attachment has been deprecated in favour of aws.elb.Attachment{{% /md %}}</p>
 
 
 ## Create a Attachment Resource {#create}
@@ -48,7 +51,7 @@ const baz = new aws.elb.Attachment("baz", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Attachment</span><span class="p">(resource_name, opts=None, </span>elb=None<span class="p">, </span>instance=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Attachment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>elb=None<span class="p">, </span>instance=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

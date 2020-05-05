@@ -1,7 +1,8 @@
 
 ---
 title: "RouterNat"
-block_external_search_index: true
+title_tag: "Resource RouterNat | Module compute | Package GCP"
+meta_desc: "Explore the RouterNat resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A NAT service created in a router."
 ---
 
 
@@ -29,7 +30,7 @@ To get more information about RouterNat, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterNat</span><span class="p">(resource_name, opts=None, </span>drain_nat_ips=None<span class="p">, </span>icmp_idle_timeout_sec=None<span class="p">, </span>log_config=None<span class="p">, </span>min_ports_per_vm=None<span class="p">, </span>name=None<span class="p">, </span>nat_ip_allocate_option=None<span class="p">, </span>nat_ips=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>source_subnetwork_ip_ranges_to_nat=None<span class="p">, </span>subnetworks=None<span class="p">, </span>tcp_established_idle_timeout_sec=None<span class="p">, </span>tcp_transitory_idle_timeout_sec=None<span class="p">, </span>udp_idle_timeout_sec=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RouterNat</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>drain_nat_ips=None<span class="p">, </span>icmp_idle_timeout_sec=None<span class="p">, </span>log_config=None<span class="p">, </span>min_ports_per_vm=None<span class="p">, </span>name=None<span class="p">, </span>nat_ip_allocate_option=None<span class="p">, </span>nat_ips=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>source_subnetwork_ip_ranges_to_nat=None<span class="p">, </span>subnetworks=None<span class="p">, </span>tcp_established_idle_timeout_sec=None<span class="p">, </span>tcp_transitory_idle_timeout_sec=None<span class="p">, </span>udp_idle_timeout_sec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -207,8 +208,9 @@ The RouterNat resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are 'AUTO_ONLY' for only allowing NAT IPs allocated by
-Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses.
+    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are
+`AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
+Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -226,12 +228,16 @@ Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How NAT should be configured per Subnetwork. If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the IP ranges in every
-Subnetwork are allowed to Nat. If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP ranges in every
-Subnetwork are allowed to Nat. 'LIST_OF_SUBNETWORKS': A list of Subnetworks are allowed to Nat (specified in the field
-subnetwork below). Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
-ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other RouterNat section in any Router for this
-network in this region.
+    <dd>{{% md %}}How NAT should be configured per Subnetwork.
+If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
+IP ranges in every Subnetwork are allowed to Nat.
+If `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, all of the primary IP
+ranges in every Subnetwork are allowed to Nat.
+`LIST_OF_SUBNETWORKS`: A list of Subnetworks are allowed to Nat
+(specified in the field subnetwork below). Note that if this field
+contains ALL_SUBNETWORKS_ALL_IP_RANGES or
+ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
+other RouterNat section in any Router for this network in this region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -240,8 +246,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to
-the NAT.
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
+valid static external IPs that have been assigned to the NAT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -259,7 +265,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for logging on NAT
+    <dd>{{% md %}}Configuration for logging on NAT  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -277,7 +283,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the NAT service. The name must be 1-63 characters long and comply with RFC1035.
+    <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -286,7 +292,8 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption is set to MANUAL_ONLY.
+    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
+is set to MANUAL_ONLY.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -314,8 +321,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">List&lt;Router<wbr>Nat<wbr>Subnetwork<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if 'source_subnetwork_ip_ranges_to_nat' is set to
-'LIST_OF_SUBNETWORKS'
+    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
+`source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -324,7 +331,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
+Defaults to 1200s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -333,7 +341,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
+Defaults to 30s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -358,8 +367,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are 'AUTO_ONLY' for only allowing NAT IPs allocated by
-Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses.
+    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are
+`AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
+Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -377,12 +387,16 @@ Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How NAT should be configured per Subnetwork. If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the IP ranges in every
-Subnetwork are allowed to Nat. If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP ranges in every
-Subnetwork are allowed to Nat. 'LIST_OF_SUBNETWORKS': A list of Subnetworks are allowed to Nat (specified in the field
-subnetwork below). Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
-ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other RouterNat section in any Router for this
-network in this region.
+    <dd>{{% md %}}How NAT should be configured per Subnetwork.
+If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
+IP ranges in every Subnetwork are allowed to Nat.
+If `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, all of the primary IP
+ranges in every Subnetwork are allowed to Nat.
+`LIST_OF_SUBNETWORKS`: A list of Subnetworks are allowed to Nat
+(specified in the field subnetwork below). Note that if this field
+contains ALL_SUBNETWORKS_ALL_IP_RANGES or
+ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
+other RouterNat section in any Router for this network in this region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -391,8 +405,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to
-the NAT.
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
+valid static external IPs that have been assigned to the NAT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -410,7 +424,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for logging on NAT
+    <dd>{{% md %}}Configuration for logging on NAT  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -428,7 +442,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the NAT service. The name must be 1-63 characters long and comply with RFC1035.
+    <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -437,7 +451,8 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption is set to MANUAL_ONLY.
+    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
+is set to MANUAL_ONLY.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -465,8 +480,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">[]Router<wbr>Nat<wbr>Subnetwork</a></span>
     </dt>
-    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if 'source_subnetwork_ip_ranges_to_nat' is set to
-'LIST_OF_SUBNETWORKS'
+    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
+`source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -475,7 +490,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
+Defaults to 1200s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -484,7 +500,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
+Defaults to 30s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -509,8 +526,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are 'AUTO_ONLY' for only allowing NAT IPs allocated by
-Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses.
+    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are
+`AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
+Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -528,12 +546,16 @@ Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How NAT should be configured per Subnetwork. If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the IP ranges in every
-Subnetwork are allowed to Nat. If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP ranges in every
-Subnetwork are allowed to Nat. 'LIST_OF_SUBNETWORKS': A list of Subnetworks are allowed to Nat (specified in the field
-subnetwork below). Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
-ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other RouterNat section in any Router for this
-network in this region.
+    <dd>{{% md %}}How NAT should be configured per Subnetwork.
+If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
+IP ranges in every Subnetwork are allowed to Nat.
+If `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, all of the primary IP
+ranges in every Subnetwork are allowed to Nat.
+`LIST_OF_SUBNETWORKS`: A list of Subnetworks are allowed to Nat
+(specified in the field subnetwork below). Note that if this field
+contains ALL_SUBNETWORKS_ALL_IP_RANGES or
+ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
+other RouterNat section in any Router for this network in this region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -542,8 +564,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to
-the NAT.
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
+valid static external IPs that have been assigned to the NAT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -561,7 +583,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for logging on NAT
+    <dd>{{% md %}}Configuration for logging on NAT  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -579,7 +601,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the NAT service. The name must be 1-63 characters long and comply with RFC1035.
+    <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -588,7 +610,8 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption is set to MANUAL_ONLY.
+    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
+is set to MANUAL_ONLY.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -616,8 +639,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">Router<wbr>Nat<wbr>Subnetwork[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if 'source_subnetwork_ip_ranges_to_nat' is set to
-'LIST_OF_SUBNETWORKS'
+    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
+`source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -626,7 +649,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
+Defaults to 1200s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -635,7 +659,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
+Defaults to 30s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -660,8 +685,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are 'AUTO_ONLY' for only allowing NAT IPs allocated by
-Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses.
+    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are
+`AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
+Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -679,12 +705,16 @@ Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How NAT should be configured per Subnetwork. If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the IP ranges in every
-Subnetwork are allowed to Nat. If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP ranges in every
-Subnetwork are allowed to Nat. 'LIST_OF_SUBNETWORKS': A list of Subnetworks are allowed to Nat (specified in the field
-subnetwork below). Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
-ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other RouterNat section in any Router for this
-network in this region.
+    <dd>{{% md %}}How NAT should be configured per Subnetwork.
+If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
+IP ranges in every Subnetwork are allowed to Nat.
+If `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, all of the primary IP
+ranges in every Subnetwork are allowed to Nat.
+`LIST_OF_SUBNETWORKS`: A list of Subnetworks are allowed to Nat
+(specified in the field subnetwork below). Note that if this field
+contains ALL_SUBNETWORKS_ALL_IP_RANGES or
+ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
+other RouterNat section in any Router for this network in this region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -693,8 +723,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to
-the NAT.
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
+valid static external IPs that have been assigned to the NAT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -712,7 +742,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Dict[Router<wbr>Nat<wbr>Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for logging on NAT
+    <dd>{{% md %}}Configuration for logging on NAT  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -730,7 +760,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the NAT service. The name must be 1-63 characters long and comply with RFC1035.
+    <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -739,7 +769,8 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption is set to MANUAL_ONLY.
+    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
+is set to MANUAL_ONLY.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -767,8 +798,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">List[Router<wbr>Nat<wbr>Subnetwork]</a></span>
     </dt>
-    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if 'source_subnetwork_ip_ranges_to_nat' is set to
-'LIST_OF_SUBNETWORKS'
+    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
+`source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -777,7 +808,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
+Defaults to 1200s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -786,7 +818,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
+Defaults to 30s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1008,8 +1041,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to
-the NAT.
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
+valid static external IPs that have been assigned to the NAT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1027,7 +1060,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for logging on NAT
+    <dd>{{% md %}}Configuration for logging on NAT  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1045,7 +1078,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the NAT service. The name must be 1-63 characters long and comply with RFC1035.
+    <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1054,8 +1087,9 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are 'AUTO_ONLY' for only allowing NAT IPs allocated by
-Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses.
+    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are
+`AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
+Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1064,7 +1098,8 @@ Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption is set to MANUAL_ONLY.
+    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
+is set to MANUAL_ONLY.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1101,12 +1136,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How NAT should be configured per Subnetwork. If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the IP ranges in every
-Subnetwork are allowed to Nat. If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP ranges in every
-Subnetwork are allowed to Nat. 'LIST_OF_SUBNETWORKS': A list of Subnetworks are allowed to Nat (specified in the field
-subnetwork below). Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
-ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other RouterNat section in any Router for this
-network in this region.
+    <dd>{{% md %}}How NAT should be configured per Subnetwork.
+If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
+IP ranges in every Subnetwork are allowed to Nat.
+If `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, all of the primary IP
+ranges in every Subnetwork are allowed to Nat.
+`LIST_OF_SUBNETWORKS`: A list of Subnetworks are allowed to Nat
+(specified in the field subnetwork below). Note that if this field
+contains ALL_SUBNETWORKS_ALL_IP_RANGES or
+ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
+other RouterNat section in any Router for this network in this region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1115,8 +1154,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">List&lt;Router<wbr>Nat<wbr>Subnetwork<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if 'source_subnetwork_ip_ranges_to_nat' is set to
-'LIST_OF_SUBNETWORKS'
+    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
+`source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1125,7 +1164,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
+Defaults to 1200s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1134,7 +1174,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
+Defaults to 30s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1159,8 +1200,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to
-the NAT.
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
+valid static external IPs that have been assigned to the NAT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1178,7 +1219,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for logging on NAT
+    <dd>{{% md %}}Configuration for logging on NAT  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1196,7 +1237,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the NAT service. The name must be 1-63 characters long and comply with RFC1035.
+    <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1205,8 +1246,9 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are 'AUTO_ONLY' for only allowing NAT IPs allocated by
-Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses.
+    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are
+`AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
+Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1215,7 +1257,8 @@ Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption is set to MANUAL_ONLY.
+    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
+is set to MANUAL_ONLY.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1252,12 +1295,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How NAT should be configured per Subnetwork. If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the IP ranges in every
-Subnetwork are allowed to Nat. If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP ranges in every
-Subnetwork are allowed to Nat. 'LIST_OF_SUBNETWORKS': A list of Subnetworks are allowed to Nat (specified in the field
-subnetwork below). Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
-ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other RouterNat section in any Router for this
-network in this region.
+    <dd>{{% md %}}How NAT should be configured per Subnetwork.
+If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
+IP ranges in every Subnetwork are allowed to Nat.
+If `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, all of the primary IP
+ranges in every Subnetwork are allowed to Nat.
+`LIST_OF_SUBNETWORKS`: A list of Subnetworks are allowed to Nat
+(specified in the field subnetwork below). Note that if this field
+contains ALL_SUBNETWORKS_ALL_IP_RANGES or
+ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
+other RouterNat section in any Router for this network in this region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1266,8 +1313,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">[]Router<wbr>Nat<wbr>Subnetwork</a></span>
     </dt>
-    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if 'source_subnetwork_ip_ranges_to_nat' is set to
-'LIST_OF_SUBNETWORKS'
+    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
+`source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1276,7 +1323,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
+Defaults to 1200s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1285,7 +1333,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
+Defaults to 30s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1310,8 +1359,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to
-the NAT.
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
+valid static external IPs that have been assigned to the NAT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1329,7 +1378,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for logging on NAT
+    <dd>{{% md %}}Configuration for logging on NAT  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1347,7 +1396,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the NAT service. The name must be 1-63 characters long and comply with RFC1035.
+    <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1356,8 +1405,9 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are 'AUTO_ONLY' for only allowing NAT IPs allocated by
-Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses.
+    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are
+`AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
+Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1366,7 +1416,8 @@ Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption is set to MANUAL_ONLY.
+    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
+is set to MANUAL_ONLY.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1403,12 +1454,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How NAT should be configured per Subnetwork. If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the IP ranges in every
-Subnetwork are allowed to Nat. If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP ranges in every
-Subnetwork are allowed to Nat. 'LIST_OF_SUBNETWORKS': A list of Subnetworks are allowed to Nat (specified in the field
-subnetwork below). Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
-ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other RouterNat section in any Router for this
-network in this region.
+    <dd>{{% md %}}How NAT should be configured per Subnetwork.
+If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
+IP ranges in every Subnetwork are allowed to Nat.
+If `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, all of the primary IP
+ranges in every Subnetwork are allowed to Nat.
+`LIST_OF_SUBNETWORKS`: A list of Subnetworks are allowed to Nat
+(specified in the field subnetwork below). Note that if this field
+contains ALL_SUBNETWORKS_ALL_IP_RANGES or
+ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
+other RouterNat section in any Router for this network in this region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1417,8 +1472,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">Router<wbr>Nat<wbr>Subnetwork[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if 'source_subnetwork_ip_ranges_to_nat' is set to
-'LIST_OF_SUBNETWORKS'
+    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
+`source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1427,7 +1482,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
+Defaults to 1200s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1436,7 +1492,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
+Defaults to 30s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1461,8 +1518,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to
-the NAT.
+    <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
+valid static external IPs that have been assigned to the NAT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1480,7 +1537,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatlogconfig">Dict[Router<wbr>Nat<wbr>Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for logging on NAT
+    <dd>{{% md %}}Configuration for logging on NAT  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1498,7 +1555,7 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the NAT service. The name must be 1-63 characters long and comply with RFC1035.
+    <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1507,8 +1564,9 @@ the NAT.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are 'AUTO_ONLY' for only allowing NAT IPs allocated by
-Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses.
+    <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are
+`AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
+Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1517,7 +1575,8 @@ Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption is set to MANUAL_ONLY.
+    <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
+is set to MANUAL_ONLY.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1554,12 +1613,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How NAT should be configured per Subnetwork. If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the IP ranges in every
-Subnetwork are allowed to Nat. If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP ranges in every
-Subnetwork are allowed to Nat. 'LIST_OF_SUBNETWORKS': A list of Subnetworks are allowed to Nat (specified in the field
-subnetwork below). Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
-ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other RouterNat section in any Router for this
-network in this region.
+    <dd>{{% md %}}How NAT should be configured per Subnetwork.
+If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
+IP ranges in every Subnetwork are allowed to Nat.
+If `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, all of the primary IP
+ranges in every Subnetwork are allowed to Nat.
+`LIST_OF_SUBNETWORKS`: A list of Subnetworks are allowed to Nat
+(specified in the field subnetwork below). Note that if this field
+contains ALL_SUBNETWORKS_ALL_IP_RANGES or
+ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
+other RouterNat section in any Router for this network in this region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1568,8 +1631,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routernatsubnetwork">List[Router<wbr>Nat<wbr>Subnetwork]</a></span>
     </dt>
-    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if 'source_subnetwork_ip_ranges_to_nat' is set to
-'LIST_OF_SUBNETWORKS'
+    <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
+`source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1578,7 +1641,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
+Defaults to 1200s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1587,7 +1651,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+    <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
+Defaults to 30s if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1635,7 +1700,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not to export logs.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1643,7 +1709,9 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the desired filtering of logs on this NAT. Valid
+values are: `"ERRORS_ONLY"`, `"TRANSLATIONS_ONLY"`, `"ALL"`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1658,7 +1726,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not to export logs.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1666,7 +1735,9 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the desired filtering of logs on this NAT. Valid
+values are: `"ERRORS_ONLY"`, `"TRANSLATIONS_ONLY"`, `"ALL"`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1681,7 +1752,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not to export logs.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1689,7 +1761,9 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the desired filtering of logs on this NAT. Valid
+values are: `"ERRORS_ONLY"`, `"TRANSLATIONS_ONLY"`, `"ALL"`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1704,7 +1778,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not to export logs.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1712,7 +1787,9 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the desired filtering of logs on this NAT. Valid
+values are: `"ERRORS_ONLY"`, `"TRANSLATIONS_ONLY"`, `"ALL"`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1742,7 +1819,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Self-link of subnetwork to NAT
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1750,7 +1828,11 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of options for which source IPs in the subnetwork
+should have NAT enabled. Supported values include:
+`ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
+`PRIMARY_IP_RANGE`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1758,7 +1840,11 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the secondary ranges of the subnetwork that are allowed
+to use NAT. This can be populated only if
+`LIST_OF_SECONDARY_IP_RANGES` is one of the values in
+sourceIpRangesToNat
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1773,7 +1859,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Self-link of subnetwork to NAT
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1781,7 +1868,11 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of options for which source IPs in the subnetwork
+should have NAT enabled. Supported values include:
+`ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
+`PRIMARY_IP_RANGE`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1789,7 +1880,11 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the secondary ranges of the subnetwork that are allowed
+to use NAT. This can be populated only if
+`LIST_OF_SECONDARY_IP_RANGES` is one of the values in
+sourceIpRangesToNat
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1804,7 +1899,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Self-link of subnetwork to NAT
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1812,7 +1908,11 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of options for which source IPs in the subnetwork
+should have NAT enabled. Supported values include:
+`ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
+`PRIMARY_IP_RANGE`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1820,7 +1920,11 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the secondary ranges of the subnetwork that are allowed
+to use NAT. This can be populated only if
+`LIST_OF_SECONDARY_IP_RANGES` is one of the values in
+sourceIpRangesToNat
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1835,7 +1939,8 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Self-link of subnetwork to NAT
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1843,7 +1948,11 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of options for which source IPs in the subnetwork
+should have NAT enabled. Supported values include:
+`ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
+`PRIMARY_IP_RANGE`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1851,7 +1960,11 @@ network in this region.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of the secondary ranges of the subnetwork that are allowed
+to use NAT. This can be populated only if
+`LIST_OF_SECONDARY_IP_RANGES` is one of the values in
+sourceIpRangesToNat
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1870,8 +1983,7 @@ network in this region.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

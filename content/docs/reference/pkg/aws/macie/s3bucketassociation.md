@@ -45,7 +45,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">S3BucketAssociation</span><span class="p">(resource_name, opts=None, </span>bucket_name=None<span class="p">, </span>classification_type=None<span class="p">, </span>member_account_id=None<span class="p">, </span>prefix=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">S3BucketAssociation</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket_name=None<span class="p">, </span>classification_type=None<span class="p">, </span>member_account_id=None<span class="p">, </span>prefix=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -773,6 +773,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/macie?tab=doc#S3BucketAssociationClassificationTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/macie?tab=doc#S3BucketAssociationClassificationTypeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Macie.Inputs.S3BucketAssociationClassificationTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Macie.Outputs.S3BucketAssociationClassificationType.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

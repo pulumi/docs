@@ -79,7 +79,7 @@ const testRolePolicy = new aws.iam.RolePolicy("test_role_policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EventStream</span><span class="p">(resource_name, opts=None, </span>application_id=None<span class="p">, </span>destination_stream_arn=None<span class="p">, </span>role_arn=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EventStream</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_id=None<span class="p">, </span>destination_stream_arn=None<span class="p">, </span>role_arn=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -105,7 +105,7 @@ const monitoring = new openstack.identity.ApplicationCredential("monitoring", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ApplicationCredential</span><span class="p">(resource_name, opts=None, </span>access_rules=None<span class="p">, </span>description=None<span class="p">, </span>expires_at=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>roles=None<span class="p">, </span>secret=None<span class="p">, </span>unrestricted=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ApplicationCredential</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_rules=None<span class="p">, </span>description=None<span class="p">, </span>expires_at=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>roles=None<span class="p">, </span>secret=None<span class="p">, </span>unrestricted=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1345,6 +1345,9 @@ credentials or trusts. Changing this creates a new application credential.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity?tab=doc#ApplicationCredentialAccessRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity?tab=doc#ApplicationCredentialAccessRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Identity.Inputs.ApplicationCredentialAccessRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Identity.Outputs.ApplicationCredentialAccessRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

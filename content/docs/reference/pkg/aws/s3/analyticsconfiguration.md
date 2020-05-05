@@ -22,7 +22,7 @@ meta_desc: "Explore the AnalyticsConfiguration resource of the s3 module, includ
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AnalyticsConfiguration</span><span class="p">(resource_name, opts=None, </span>bucket=None<span class="p">, </span>filter=None<span class="p">, </span>name=None<span class="p">, </span>storage_class_analysis=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AnalyticsConfiguration</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket=None<span class="p">, </span>filter=None<span class="p">, </span>name=None<span class="p">, </span>storage_class_analysis=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -719,6 +719,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AnalyticsConfigurationFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AnalyticsConfigurationFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.AnalyticsConfigurationFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.AnalyticsConfigurationFilter.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -826,6 +829,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AnalyticsConfigurationStorageClassAnalysisArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AnalyticsConfigurationStorageClassAnalysisOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.AnalyticsConfigurationStorageClassAnalysisArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.AnalyticsConfigurationStorageClassAnalysis.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -900,6 +906,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AnalyticsConfigurationStorageClassAnalysisDataExportArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AnalyticsConfigurationStorageClassAnalysisDataExportOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.AnalyticsConfigurationStorageClassAnalysisDataExportArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.AnalyticsConfigurationStorageClassAnalysisDataExport.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1008,6 +1017,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AnalyticsConfigurationStorageClassAnalysisDataExportDestinationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestination.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1082,6 +1094,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

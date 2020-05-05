@@ -78,7 +78,7 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GlobalTable</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>replicas=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GlobalTable</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>replicas=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -734,6 +734,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableReplicaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableReplicaOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Inputs.GlobalTableReplicaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GlobalTableReplica.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

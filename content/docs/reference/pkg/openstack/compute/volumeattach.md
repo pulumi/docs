@@ -60,7 +60,7 @@ for (let i = 0; i < 2; i++) {
     }));
 }
 
-export const volume_devices = attachments.map(v => v.device);
+export const volumeDevices = attachments.map(v => v.device);
 ```
 
 Note that the above example will not guarantee that the volumes are attached in
@@ -92,7 +92,7 @@ const attach2 = new openstack.compute.VolumeAttach("attach_2", {
     volumeId: volumes[1].id,
 }, { dependsOn: [attach1] });
 
-export const volume_devices = openstack_compute_volume_attach_v2_attachments.map(v => v.device);
+export const volumeDevices = openstack_compute_volume_attach_v2_attachments.map(v => v.device);
 ```
 
 {{% /example %}}
@@ -145,7 +145,7 @@ to enforce the volume attachments to happen one at a time.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeAttach</span><span class="p">(resource_name, opts=None, </span>device=None<span class="p">, </span>instance_id=None<span class="p">, </span>multiattach=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeAttach</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>device=None<span class="p">, </span>instance_id=None<span class="p">, </span>multiattach=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

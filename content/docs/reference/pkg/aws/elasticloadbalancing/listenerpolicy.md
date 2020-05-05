@@ -93,6 +93,9 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
 
 This example shows how to add a [Predefined Security Policy for ELBs](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html)
 
+Deprecated: aws.elasticloadbalancing.ListenerPolicy has been deprecated in favour of aws.elb.ListenerPolicy
+
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.ListenerPolicy has been deprecated in favour of aws.elb.ListenerPolicy{{% /md %}}</p>
 
 
 ## Create a ListenerPolicy Resource {#create}
@@ -104,7 +107,7 @@ This example shows how to add a [Predefined Security Policy for ELBs](https://do
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ListenerPolicy</span><span class="p">(resource_name, opts=None, </span>load_balancer_name=None<span class="p">, </span>load_balancer_port=None<span class="p">, </span>policy_names=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ListenerPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>load_balancer_name=None<span class="p">, </span>load_balancer_port=None<span class="p">, </span>policy_names=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

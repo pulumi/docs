@@ -51,72 +51,6 @@ const bar = new aws.ecs.Service("bar", {
 
 {{% /example %}}
 {{% /examples %}}
-## capacity_provider_strategy
-
-The `capacity_provider_strategy` configuration block supports the following:
-
-* `capacity_provider` - (Required) The short name or full Amazon Resource Name (ARN) of the capacity provider.
-* `weight` - (Required) The relative percentage of the total number of launched tasks that should use the specified capacity provider.
-* `base` - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
-
-## deployment_controller
-
-The `deployment_controller` configuration block supports the following:
-
-* `type` - (Optional) Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`. Default: `ECS`.
-
-## load_balancer
-
-`load_balancer` supports the following:
-
-* `elb_name` - (Required for ELB Classic) The name of the ELB (Classic) to associate with the service.
-* `target_group_arn` - (Required for ALB/NLB) The ARN of the Load Balancer target group to associate with the service.
-* `container_name` - (Required) The name of the container to associate with the load balancer (as it appears in a container definition).
-* `container_port` - (Required) The port on the container to associate with the load balancer.
-
-> **Version note:** Multiple `load_balancer` configuration block support was added in version 2.22.0 of the provider. This allows configuration of [ECS service support for multiple target groups](https://aws.amazon.com/about-aws/whats-new/2019/07/amazon-ecs-services-now-support-multiple-load-balancer-target-groups/).
-
-## ordered_placement_strategy
-
-`ordered_placement_strategy` supports the following:
-
-* `type` - (Required) The type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
-* `field` - (Optional) For the `spread` placement strategy, valid values are `instanceId` (or `host`,
- which has the same effect), or any platform or custom attribute that is applied to a container instance.
- For the `binpack` type, valid values are `memory` and `cpu`. For the `random` type, this attribute is not
- needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
-
-> **Note:** for `spread`, `host` and `instanceId` will be normalized, by AWS, to be `instanceId`. This means the statefile will show `instanceId` but your config will differ if you use `host`.
-
-## placement_constraints
-
-`placement_constraints` support the following:
-
-* `type` - (Required) The type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
-* `expression` -  (Optional) Cluster Query Language expression to apply to the constraint. Does not need to be specified
-for the `distinctInstance` type.
-For more information, see [Cluster Query Language in the Amazon EC2 Container
-Service Developer
-Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
-
-## network_configuration
-
-`network_configuration` support the following:
-
-* `subnets` - (Required) The subnets associated with the task or service.
-* `security_groups` - (Optional) The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
-* `assign_public_ip` - (Optional) Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
-
-For more information, see [Task Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html)
-
-## service_registries
-
-`service_registries` support the following:
-
-* `registry_arn` - (Required) The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
-* `port` - (Optional) The port value used if your Service Discovery service specified an SRV record.
-* `container_port` - (Optional) The port value, already specified in the task definition, to be used for your service discovery service.
-* `container_name` - (Optional) The container name value, already specified in the task definition, to be used for your service discovery service.
 
 
 
@@ -129,7 +63,7 @@ For more information, see [Task Networking](https://docs.aws.amazon.com/AmazonEC
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Service</span><span class="p">(resource_name, opts=None, </span>capacity_provider_strategies=None<span class="p">, </span>cluster=None<span class="p">, </span>deployment_controller=None<span class="p">, </span>deployment_maximum_percent=None<span class="p">, </span>deployment_minimum_healthy_percent=None<span class="p">, </span>desired_count=None<span class="p">, </span>enable_ecs_managed_tags=None<span class="p">, </span>health_check_grace_period_seconds=None<span class="p">, </span>iam_role=None<span class="p">, </span>launch_type=None<span class="p">, </span>load_balancers=None<span class="p">, </span>name=None<span class="p">, </span>network_configuration=None<span class="p">, </span>ordered_placement_strategies=None<span class="p">, </span>placement_constraints=None<span class="p">, </span>platform_version=None<span class="p">, </span>propagate_tags=None<span class="p">, </span>scheduling_strategy=None<span class="p">, </span>service_registries=None<span class="p">, </span>tags=None<span class="p">, </span>task_definition=None<span class="p">, </span>wait_for_steady_state=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Service</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capacity_provider_strategies=None<span class="p">, </span>cluster=None<span class="p">, </span>deployment_controller=None<span class="p">, </span>deployment_maximum_percent=None<span class="p">, </span>deployment_minimum_healthy_percent=None<span class="p">, </span>desired_count=None<span class="p">, </span>enable_ecs_managed_tags=None<span class="p">, </span>health_check_grace_period_seconds=None<span class="p">, </span>iam_role=None<span class="p">, </span>launch_type=None<span class="p">, </span>load_balancers=None<span class="p">, </span>name=None<span class="p">, </span>network_configuration=None<span class="p">, </span>ordered_placement_strategies=None<span class="p">, </span>placement_constraints=None<span class="p">, </span>platform_version=None<span class="p">, </span>propagate_tags=None<span class="p">, </span>scheduling_strategy=None<span class="p">, </span>service_registries=None<span class="p">, </span>tags=None<span class="p">, </span>task_definition=None<span class="p">, </span>wait_for_steady_state=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2162,6 +2096,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServiceCapacityProviderStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServiceCapacityProviderStrategyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.ServiceCapacityProviderStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.ServiceCapacityProviderStrategy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2175,7 +2112,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The short name or full Amazon Resource Name (ARN) of the capacity provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2183,7 +2121,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2191,7 +2130,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2206,7 +2146,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The short name or full Amazon Resource Name (ARN) of the capacity provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2214,7 +2155,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2222,7 +2164,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2237,7 +2180,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The short name or full Amazon Resource Name (ARN) of the capacity provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2245,7 +2189,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2253,7 +2198,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2268,7 +2214,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The short name or full Amazon Resource Name (ARN) of the capacity provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2276,7 +2223,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2284,7 +2232,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2301,6 +2250,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServiceDeploymentControllerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServiceDeploymentControllerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.ServiceDeploymentControllerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.ServiceDeploymentController.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2314,7 +2266,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`. Default: `ECS`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2329,7 +2282,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`. Default: `ECS`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2344,7 +2298,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`. Default: `ECS`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2359,7 +2314,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`. Default: `ECS`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2376,6 +2332,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServiceLoadBalancerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServiceLoadBalancerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.ServiceLoadBalancerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.ServiceLoadBalancer.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2389,7 +2348,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the container to associate with the load balancer (as it appears in a container definition).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2397,7 +2357,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The port on the container to associate with the load balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2405,7 +2366,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the ELB (Classic) to associate with the service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2413,7 +2375,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Load Balancer target group to associate with the service.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2428,7 +2391,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the container to associate with the load balancer (as it appears in a container definition).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2436,7 +2400,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The port on the container to associate with the load balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2444,7 +2409,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the ELB (Classic) to associate with the service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2452,7 +2418,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Load Balancer target group to associate with the service.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2467,7 +2434,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the container to associate with the load balancer (as it appears in a container definition).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2475,7 +2443,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The port on the container to associate with the load balancer.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2483,7 +2452,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the ELB (Classic) to associate with the service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2491,7 +2461,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Load Balancer target group to associate with the service.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2506,7 +2477,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The port on the container to associate with the load balancer.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2514,7 +2486,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the container to associate with the load balancer (as it appears in a container definition).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2522,7 +2495,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the ELB (Classic) to associate with the service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2530,7 +2504,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Load Balancer target group to associate with the service.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2547,6 +2522,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServiceNetworkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServiceNetworkConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.ServiceNetworkConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.ServiceNetworkConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2560,7 +2538,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The subnets associated with the task or service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2568,7 +2547,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2576,7 +2556,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2591,7 +2572,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The subnets associated with the task or service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2599,7 +2581,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2607,7 +2590,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2622,7 +2606,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The subnets associated with the task or service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2630,7 +2615,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2638,7 +2624,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2653,7 +2640,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The subnets associated with the task or service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2661,7 +2649,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2669,7 +2658,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2686,6 +2676,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServiceOrderedPlacementStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServiceOrderedPlacementStrategyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.ServiceOrderedPlacementStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.ServiceOrderedPlacementStrategy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2699,7 +2692,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2707,7 +2701,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For the `spread` placement strategy, valid values are `instanceId` (or `host`,
+which has the same effect), or any platform or custom attribute that is applied to a container instance.
+For the `binpack` type, valid values are `memory` and `cpu`. For the `random` type, this attribute is not
+needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2722,7 +2720,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2730,7 +2729,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For the `spread` placement strategy, valid values are `instanceId` (or `host`,
+which has the same effect), or any platform or custom attribute that is applied to a container instance.
+For the `binpack` type, valid values are `memory` and `cpu`. For the `random` type, this attribute is not
+needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2745,7 +2748,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2753,7 +2757,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For the `spread` placement strategy, valid values are `instanceId` (or `host`,
+which has the same effect), or any platform or custom attribute that is applied to a container instance.
+For the `binpack` type, valid values are `memory` and `cpu`. For the `random` type, this attribute is not
+needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2768,7 +2776,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2776,7 +2785,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}For the `spread` placement strategy, valid values are `instanceId` (or `host`,
+which has the same effect), or any platform or custom attribute that is applied to a container instance.
+For the `binpack` type, valid values are `memory` and `cpu`. For the `random` type, this attribute is not
+needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2793,6 +2806,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServicePlacementConstraintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServicePlacementConstraintOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.ServicePlacementConstraintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.ServicePlacementConstraint.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2806,7 +2822,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2814,7 +2831,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster Query Language expression to apply to the constraint. Does not need to be specified
+for the `distinctInstance` type.
+For more information, see [Cluster Query Language in the Amazon EC2 Container
+Service Developer
+Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2829,7 +2851,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2837,7 +2860,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster Query Language expression to apply to the constraint. Does not need to be specified
+for the `distinctInstance` type.
+For more information, see [Cluster Query Language in the Amazon EC2 Container
+Service Developer
+Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2852,7 +2880,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2860,7 +2889,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster Query Language expression to apply to the constraint. Does not need to be specified
+for the `distinctInstance` type.
+For more information, see [Cluster Query Language in the Amazon EC2 Container
+Service Developer
+Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2875,7 +2909,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2883,7 +2918,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster Query Language expression to apply to the constraint. Does not need to be specified
+for the `distinctInstance` type.
+For more information, see [Cluster Query Language in the Amazon EC2 Container
+Service Developer
+Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2900,6 +2940,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServiceServiceRegistriesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#ServiceServiceRegistriesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.ServiceServiceRegistriesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.ServiceServiceRegistries.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2913,7 +2956,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2921,7 +2965,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The container name value, already specified in the task definition, to be used for your service discovery service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2929,7 +2974,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The port value, already specified in the task definition, to be used for your service discovery service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2937,7 +2983,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The port value used if your Service Discovery service specified an SRV record.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2952,7 +2999,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2960,7 +3008,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The container name value, already specified in the task definition, to be used for your service discovery service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2968,7 +3017,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The port value, already specified in the task definition, to be used for your service discovery service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2976,7 +3026,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The port value used if your Service Discovery service specified an SRV record.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2991,7 +3042,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2999,7 +3051,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The container name value, already specified in the task definition, to be used for your service discovery service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3007,7 +3060,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The port value, already specified in the task definition, to be used for your service discovery service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3015,7 +3069,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The port value used if your Service Discovery service specified an SRV record.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3030,7 +3085,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3038,7 +3094,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The port value, already specified in the task definition, to be used for your service discovery service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3046,7 +3103,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The container name value, already specified in the task definition, to be used for your service discovery service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3054,7 +3112,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The port value used if your Service Discovery service specified an SRV record.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -103,7 +103,7 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IdentityPoolRoleAttachment</span><span class="p">(resource_name, opts=None, </span>identity_pool_id=None<span class="p">, </span>role_mappings=None<span class="p">, </span>roles=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IdentityPoolRoleAttachment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>identity_pool_id=None<span class="p">, </span>role_mappings=None<span class="p">, </span>roles=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -760,6 +760,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityPoolRoleAttachmentRoleMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityPoolRoleAttachmentRoleMappingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.IdentityPoolRoleAttachmentRoleMappingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.IdentityPoolRoleAttachmentRoleMapping.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -947,6 +950,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityPoolRoleAttachmentRoleMappingMappingRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.IdentityPoolRoleAttachmentRoleMappingMappingRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1133,6 +1139,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityPoolRoleAttachmentRolesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityPoolRoleAttachmentRolesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.IdentityPoolRoleAttachmentRolesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.IdentityPoolRoleAttachmentRoles.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

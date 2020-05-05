@@ -105,7 +105,7 @@ const ourapp = new aws.elb.LoadBalancer("ourapp", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServerCertificate</span><span class="p">(resource_name, opts=None, </span>arn=None<span class="p">, </span>certificate_body=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>path=None<span class="p">, </span>private_key=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServerCertificate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>arn=None<span class="p">, </span>certificate_body=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>path=None<span class="p">, </span>private_key=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -345,7 +345,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
 </dl>
@@ -423,7 +423,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
 </dl>
@@ -501,7 +501,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
 </dl>
@@ -579,7 +579,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
 </dl>
@@ -845,7 +845,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -923,7 +923,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1001,7 +1001,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1079,7 +1079,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

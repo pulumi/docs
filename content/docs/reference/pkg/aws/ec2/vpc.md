@@ -56,7 +56,7 @@ const main = new aws.ec2.Vpc("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Vpc</span><span class="p">(resource_name, opts=None, </span>assign_generated_ipv6_cidr_block=None<span class="p">, </span>cidr_block=None<span class="p">, </span>enable_classiclink=None<span class="p">, </span>enable_classiclink_dns_support=None<span class="p">, </span>enable_dns_hostnames=None<span class="p">, </span>enable_dns_support=None<span class="p">, </span>instance_tenancy=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Vpc</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>assign_generated_ipv6_cidr_block=None<span class="p">, </span>cidr_block=None<span class="p">, </span>enable_classiclink=None<span class="p">, </span>enable_classiclink_dns_support=None<span class="p">, </span>enable_dns_hostnames=None<span class="p">, </span>enable_dns_support=None<span class="p">, </span>instance_tenancy=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -256,7 +256,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -302,7 +302,7 @@ Only valid in regions and accounts that support EC2 Classic.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -340,7 +340,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -386,7 +386,7 @@ Only valid in regions and accounts that support EC2 Classic.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -424,7 +424,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -470,7 +470,7 @@ Only valid in regions and accounts that support EC2 Classic.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -508,7 +508,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -554,7 +554,7 @@ Only valid in regions and accounts that support EC2 Classic.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1161,7 +1161,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1245,7 +1245,7 @@ this VPC. Note that you can change a VPC's main route table by using an
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1327,7 +1327,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1411,7 +1411,7 @@ this VPC. Note that you can change a VPC's main route table by using an
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1493,7 +1493,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1577,7 +1577,7 @@ this VPC. Note that you can change a VPC's main route table by using an
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1659,7 +1659,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1743,7 +1743,7 @@ this VPC. Note that you can change a VPC's main route table by using an
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>

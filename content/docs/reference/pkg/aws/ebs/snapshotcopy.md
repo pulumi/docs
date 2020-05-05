@@ -56,7 +56,7 @@ const exampleCopy = new aws.ebs.SnapshotCopy("example_copy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SnapshotCopy</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>encrypted=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>source_region=None<span class="p">, </span>source_snapshot_id=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SnapshotCopy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>encrypted=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>source_region=None<span class="p">, </span>source_snapshot_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -234,7 +234,8 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region of the source snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -242,7 +243,8 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN for the snapshot to be copied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -269,8 +271,6 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
-* `source_snapshot_id` The ARN for the snapshot to be copied.
-* `source_region` The region of the source snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -279,7 +279,7 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the snapshot.
+    <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
 
 </dl>
@@ -295,7 +295,8 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region of the source snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -303,7 +304,8 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN for the snapshot to be copied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -330,8 +332,6 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
-* `source_snapshot_id` The ARN for the snapshot to be copied.
-* `source_region` The region of the source snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -340,7 +340,7 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the snapshot.
+    <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
 
 </dl>
@@ -356,7 +356,8 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region of the source snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -364,7 +365,8 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN for the snapshot to be copied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -391,8 +393,6 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
-* `source_snapshot_id` The ARN for the snapshot to be copied.
-* `source_region` The region of the source snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -401,7 +401,7 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the snapshot.
+    <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
 
 </dl>
@@ -417,7 +417,8 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region of the source snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -425,7 +426,8 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN for the snapshot to be copied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -452,8 +454,6 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
-* `source_snapshot_id` The ARN for the snapshot to be copied.
-* `source_region` The region of the source snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -462,7 +462,7 @@ The SnapshotCopy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the snapshot.
+    <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
 
 </dl>
@@ -889,8 +889,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
-* `source_snapshot_id` The ARN for the snapshot to be copied.
-* `source_region` The region of the source snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -917,7 +915,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region of the source snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -925,7 +924,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN for the snapshot to be copied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -933,7 +933,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the snapshot.
+    <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -996,8 +996,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
-* `source_snapshot_id` The ARN for the snapshot to be copied.
-* `source_region` The region of the source snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1024,7 +1022,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region of the source snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1032,7 +1031,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN for the snapshot to be copied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1040,7 +1040,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the snapshot.
+    <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1103,8 +1103,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
-* `source_snapshot_id` The ARN for the snapshot to be copied.
-* `source_region` The region of the source snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1131,7 +1129,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region of the source snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1139,7 +1138,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN for the snapshot to be copied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1147,7 +1147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the snapshot.
+    <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1210,8 +1210,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
-* `source_snapshot_id` The ARN for the snapshot to be copied.
-* `source_region` The region of the source snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1238,7 +1236,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region of the source snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1246,7 +1245,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN for the snapshot to be copied.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1254,7 +1254,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the snapshot.
+    <dd>{{% md %}}A map of tags for the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

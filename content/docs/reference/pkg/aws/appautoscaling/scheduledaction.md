@@ -26,7 +26,6 @@ const dynamodbTarget = new aws.appautoscaling.Target("dynamodb", {
     maxCapacity: 100,
     minCapacity: 5,
     resourceId: "table/tableName",
-    roleArn: aws_iam_role_DynamoDBAutoscaleRole.arn,
     scalableDimension: "dynamodb:table:ReadCapacityUnits",
     serviceNamespace: "dynamodb",
 });
@@ -54,7 +53,6 @@ const ecsTarget = new aws.appautoscaling.Target("ecs", {
     maxCapacity: 4,
     minCapacity: 1,
     resourceId: "service/clusterName/serviceName",
-    roleArn: var_ecs_iam_role,
     scalableDimension: "ecs:service:DesiredCount",
     serviceNamespace: "ecs",
 });
@@ -84,7 +82,7 @@ const ecsScheduledAction = new aws.appautoscaling.ScheduledAction("ecs", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ScheduledAction</span><span class="p">(resource_name, opts=None, </span>end_time=None<span class="p">, </span>name=None<span class="p">, </span>resource_id=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>scalable_target_action=None<span class="p">, </span>schedule=None<span class="p">, </span>service_namespace=None<span class="p">, </span>start_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ScheduledAction</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>end_time=None<span class="p">, </span>name=None<span class="p">, </span>resource_id=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>scalable_target_action=None<span class="p">, </span>schedule=None<span class="p">, </span>service_namespace=None<span class="p">, </span>start_time=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1172,6 +1170,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionScalableTargetActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionScalableTargetActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.ScheduledActionScalableTargetAction.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

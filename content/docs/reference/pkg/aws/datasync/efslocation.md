@@ -47,7 +47,7 @@ const example = new aws.datasync.EfsLocation("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EfsLocation</span><span class="p">(resource_name, opts=None, </span>ec2_config=None<span class="p">, </span>efs_file_system_arn=None<span class="p">, </span>subdirectory=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EfsLocation</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ec2_config=None<span class="p">, </span>efs_file_system_arn=None<span class="p">, </span>subdirectory=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -911,6 +911,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/datasync?tab=doc#EfsLocationEc2ConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/datasync?tab=doc#EfsLocationEc2ConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.Inputs.EfsLocationEc2ConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.Outputs.EfsLocationEc2Config.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

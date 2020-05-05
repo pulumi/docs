@@ -80,7 +80,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("MyDemo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IntegrationResponse</span><span class="p">(resource_name, opts=None, </span>content_handling=None<span class="p">, </span>http_method=None<span class="p">, </span>resource_id=None<span class="p">, </span>response_parameters=None<span class="p">, </span>response_templates=None<span class="p">, </span>rest_api=None<span class="p">, </span>selection_pattern=None<span class="p">, </span>status_code=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IntegrationResponse</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content_handling=None<span class="p">, </span>http_method=None<span class="p">, </span>resource_id=None<span class="p">, </span>response_parameters=None<span class="p">, </span>response_templates=None<span class="p">, </span>rest_api=None<span class="p">, </span>selection_pattern=None<span class="p">, </span>status_code=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

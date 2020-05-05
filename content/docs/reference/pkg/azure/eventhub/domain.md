@@ -15,6 +15,9 @@ Manages an EventGrid Domain
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.eventhub.Domain has been deprecated in favour of azure.eventgrid.Domain
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Domain has been deprecated in favour of azure.eventgrid.Domain{{% /md %}}</p>
 
 
 ## Create a Domain Resource {#create}

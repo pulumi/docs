@@ -120,7 +120,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, opts=None, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_router_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_router_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -334,7 +334,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -386,7 +386,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -438,7 +438,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -490,7 +490,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -865,7 +865,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -944,7 +944,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1102,7 +1102,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1136,6 +1136,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpec.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1292,6 +1295,9 @@ Routes are matched based on the specified value, where `0` is the highest priori
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRoute.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1407,6 +1413,9 @@ Routes are matched based on the specified value, where `0` is the highest priori
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteAction.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1489,6 +1498,9 @@ You can specify one or more targets and their relative weights with which to dis
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionWeightedTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionWeightedTargetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteActionWeightedTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteActionWeightedTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1605,6 +1617,9 @@ You can specify one or more targets and their relative weights with which to dis
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatch.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1620,7 +1635,6 @@ You can specify one or more targets and their relative weights with which to dis
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1665,7 +1679,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1710,7 +1723,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1755,7 +1767,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1799,6 +1810,9 @@ This parameter must always start with /, which by itself matches all requests to
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeader.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1951,6 +1965,9 @@ This parameter must always start with /, which by itself matches all requests to
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeaderMatch.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1975,7 +1992,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1984,7 +2000,8 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2028,7 +2045,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2037,7 +2053,8 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2081,7 +2098,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2090,7 +2106,8 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2134,7 +2151,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2143,7 +2159,8 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2177,6 +2194,9 @@ This parameter must always start with /, which by itself matches all requests to
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderMatchRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeaderMatchRange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2293,6 +2313,9 @@ This parameter must always start with /, which by itself matches all requests to
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRoute.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2371,6 +2394,9 @@ This parameter must always start with /, which by itself matches all requests to
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRouteAction.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2454,6 +2480,9 @@ You can specify one or more targets and their relative weights with which to dis
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionWeightedTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionWeightedTargetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteActionWeightedTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRouteActionWeightedTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

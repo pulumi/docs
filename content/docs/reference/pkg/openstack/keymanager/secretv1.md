@@ -22,7 +22,7 @@ meta_desc: "Explore the SecretV1 resource of the keymanager module, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretV1</span><span class="p">(resource_name, opts=None, </span>acl=None<span class="p">, </span>algorithm=None<span class="p">, </span>bit_length=None<span class="p">, </span>expiration=None<span class="p">, </span>metadata=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>payload=None<span class="p">, </span>payload_content_encoding=None<span class="p">, </span>payload_content_type=None<span class="p">, </span>region=None<span class="p">, </span>secret_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretV1</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>algorithm=None<span class="p">, </span>bit_length=None<span class="p">, </span>expiration=None<span class="p">, </span>metadata=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>payload=None<span class="p">, </span>payload_content_encoding=None<span class="p">, </span>payload_content_type=None<span class="p">, </span>region=None<span class="p">, </span>secret_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1887,6 +1887,9 @@ V1 secret.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#SecretV1AclArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#SecretV1AclOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Inputs.SecretV1AclArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Outputs.SecretV1Acl.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1961,6 +1964,9 @@ V1 secret.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#SecretV1AclReadArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#SecretV1AclReadOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Inputs.SecretV1AclReadArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.Outputs.SecretV1AclRead.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

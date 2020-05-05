@@ -826,6 +826,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>Connection<wbr>String</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.81.0+) PolarDB cluster connection string. Only return the Primary endpoint address if security_ips is configured.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -838,6 +847,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Connection<wbr>String</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.81.0+) PolarDB cluster connection string. Only return the Primary endpoint address if security_ips is configured.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -856,6 +874,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>connection<wbr>String</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.81.0+) PolarDB cluster connection string. Only return the Primary endpoint address if security_ips is configured.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -868,6 +895,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>connection_<wbr>string</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.81.0+) PolarDB cluster connection string. Only return the Primary endpoint address if security_ips is configured.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -896,7 +932,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_renew_period=None<span class="p">, </span>db_node_class=None<span class="p">, </span>db_type=None<span class="p">, </span>db_version=None<span class="p">, </span>description=None<span class="p">, </span>maintain_time=None<span class="p">, </span>modify_type=None<span class="p">, </span>parameters=None<span class="p">, </span>pay_type=None<span class="p">, </span>period=None<span class="p">, </span>renewal_status=None<span class="p">, </span>security_ips=None<span class="p">, </span>tags=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_renew_period=None<span class="p">, </span>connection_string=None<span class="p">, </span>db_node_class=None<span class="p">, </span>db_type=None<span class="p">, </span>db_version=None<span class="p">, </span>description=None<span class="p">, </span>maintain_time=None<span class="p">, </span>modify_type=None<span class="p">, </span>parameters=None<span class="p">, </span>pay_type=None<span class="p">, </span>period=None<span class="p">, </span>renewal_status=None<span class="p">, </span>security_ips=None<span class="p">, </span>tags=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1017,6 +1053,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an cluster, in the unit of the month. It is valid when pay_type is `PrePaid`. Valid value:1, 2, 3, 6, 12, 24, 36, Default to 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>String</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.81.0+) PolarDB cluster connection string. Only return the Primary endpoint address if security_ips is configured.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,6 +1210,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Connection<wbr>String</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.81.0+) PolarDB cluster connection string. Only return the Primary endpoint address if security_ips is configured.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Db<wbr>Node<wbr>Class</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1309,6 +1363,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>connection<wbr>String</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.81.0+) PolarDB cluster connection string. Only return the Primary endpoint address if security_ips is configured.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>db<wbr>Node<wbr>Class</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1449,6 +1512,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an cluster, in the unit of the month. It is valid when pay_type is `PrePaid`. Valid value:1, 2, 3, 6, 12, 24, 36, Default to 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection_<wbr>string</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.81.0+) PolarDB cluster connection string. Only return the Primary endpoint address if security_ips is configured.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

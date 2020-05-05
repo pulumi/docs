@@ -51,7 +51,7 @@ const profileFastl4 = new f5bigip.ltm.ProfileFastL4("profile_fastl4", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProfileFastL4</span><span class="p">(resource_name, opts=None, </span>client_timeout=None<span class="p">, </span>defaults_from=None<span class="p">, </span>explicitflow_migration=None<span class="p">, </span>hardware_syncookie=None<span class="p">, </span>idle_timeout=None<span class="p">, </span>iptos_toclient=None<span class="p">, </span>iptos_toserver=None<span class="p">, </span>keepalive_interval=None<span class="p">, </span>name=None<span class="p">, </span>partition=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProfileFastL4</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_timeout=None<span class="p">, </span>defaults_from=None<span class="p">, </span>explicitflow_migration=None<span class="p">, </span>hardware_syncookie=None<span class="p">, </span>idle_timeout=None<span class="p">, </span>iptos_toclient=None<span class="p">, </span>iptos_toserver=None<span class="p">, </span>keepalive_interval=None<span class="p">, </span>name=None<span class="p">, </span>partition=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

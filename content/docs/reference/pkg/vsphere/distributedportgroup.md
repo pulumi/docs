@@ -4271,6 +4271,9 @@ on this port group to be overridden on an individual port.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroupVlanRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroupVlanRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.DistributedPortGroupVlanRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.DistributedPortGroupVlanRange.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

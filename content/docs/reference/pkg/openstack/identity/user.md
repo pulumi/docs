@@ -61,7 +61,7 @@ const user1 = new openstack.identity.User("user_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, opts=None, </span>default_project_id=None<span class="p">, </span>description=None<span class="p">, </span>domain_id=None<span class="p">, </span>enabled=None<span class="p">, </span>extra=None<span class="p">, </span>ignore_change_password_upon_first_use=None<span class="p">, </span>ignore_lockout_failure_attempts=None<span class="p">, </span>ignore_password_expiry=None<span class="p">, </span>multi_factor_auth_enabled=None<span class="p">, </span>multi_factor_auth_rules=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_project_id=None<span class="p">, </span>description=None<span class="p">, </span>domain_id=None<span class="p">, </span>enabled=None<span class="p">, </span>extra=None<span class="p">, </span>ignore_change_password_upon_first_use=None<span class="p">, </span>ignore_lockout_failure_attempts=None<span class="p">, </span>ignore_password_expiry=None<span class="p">, </span>multi_factor_auth_enabled=None<span class="p">, </span>multi_factor_auth_rules=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1517,6 +1517,9 @@ creates a new User.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity?tab=doc#UserMultiFactorAuthRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity?tab=doc#UserMultiFactorAuthRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Identity.Inputs.UserMultiFactorAuthRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Identity.Outputs.UserMultiFactorAuthRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
