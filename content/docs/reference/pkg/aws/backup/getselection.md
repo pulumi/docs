@@ -20,7 +20,7 @@ Use this data source to get information on an existing backup selection.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws_backup_plan_example.id.apply(id => aws.backup.getSelection({
+const example = aws_backup_plan_example.id.apply(id => aws.BackupSelection({
     planId: id,
     selectionId: "selection-id-example",
 }, { async: true }));
