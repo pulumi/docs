@@ -550,7 +550,7 @@ class KeyStack : Stack
 
 {{< /chooser >}}
 
-In this example, we've made the IAM role allowed access to the key in the key policy configurable to an IAM role, and we've also given read permissions to the key to everyone in the account. Let's set some configuration variables so we can be sure we can use this key for our next Pulumi stack:
+In this example, we've created an IAM role which is permitted full access to the key defined in the key policy, and we've also given _read_ permissions to the key to everyone in the account. Let's set some configuration variables so we can be sure we can use this key for our next Pulumi stack:
 
 ```bash
 # Get the current AWS account ID and set it as a config variable
