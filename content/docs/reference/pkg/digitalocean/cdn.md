@@ -13,6 +13,80 @@ meta_desc: "Explore the Cdn resource of the Digital Ocean package, including exa
 Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+#### Basic Example
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+// Create a new Spaces Bucket
+const mybucket = new digitalocean.SpacesBucket("mybucket", {
+    region: "sfo2",
+    acl: "public-read",
+});
+// Add a CDN endpoint to the Spaces Bucket
+const mycdn = new digitalocean.Cdn("mycdn", {origin: mybucket.bucketDomainName});
+export const fqdn = mycdn.endpoint;
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+# Create a new Spaces Bucket
+mybucket = digitalocean.SpacesBucket("mybucket",
+    region="sfo2",
+    acl="public-read")
+# Add a CDN endpoint to the Spaces Bucket
+mycdn = digitalocean.Cdn("mycdn", origin=mybucket.bucket_domain_name)
+pulumi.export("fqdn", mycdn.endpoint)
+```
+
+#### Custom Sub-Domain Example
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+// Create a new Spaces Bucket
+const mybucket = new digitalocean.SpacesBucket("mybucket", {
+    region: "sfo2",
+    acl: "public-read",
+});
+// Create a DigitalOcean managed Let's Encrypt Certificate
+const cert = new digitalocean.Certificate("cert", {
+    type: "lets_encrypt",
+    domains: ["static.example.com"],
+});
+// Add a CDN endpoint with a custom sub-domain to the Spaces Bucket
+const mycdn = new digitalocean.Cdn("mycdn", {
+    origin: mybucket.bucketDomainName,
+    customDomain: "static.example.com",
+    certificateId: cert.id,
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+# Create a new Spaces Bucket
+mybucket = digitalocean.SpacesBucket("mybucket",
+    region="sfo2",
+    acl="public-read")
+# Create a DigitalOcean managed Let's Encrypt Certificate
+cert = digitalocean.Certificate("cert",
+    type="lets_encrypt",
+    domains=["static.example.com"])
+# Add a CDN endpoint with a custom sub-domain to the Spaces Bucket
+mycdn = digitalocean.Cdn("mycdn",
+    origin=mybucket.bucket_domain_name,
+    custom_domain="static.example.com",
+    certificate_id=cert.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 

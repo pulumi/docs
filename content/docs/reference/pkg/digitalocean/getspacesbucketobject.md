@@ -18,6 +18,43 @@ _optionally_ (see below) content of an object stored inside a Spaces bucket.
 downloading large amount of data which would be thrown away in favor of metadata.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+The following example retrieves a text object (which must have a `Content-Type`
+value starting with `text/`) and uses it as the `user_data` for a Droplet:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const bootstrapScript = digitalocean.getSpacesBucketObject({
+    bucket: "ourcorp-deploy-config",
+    region: "nyc3",
+    key: "droplet-bootstrap-script.sh",
+});
+const web = new digitalocean.Droplet("web", {
+    image: "ubuntu-18-04-x64",
+    region: "nyc2",
+    size: "s-1vcpu-1gb",
+    userData: bootstrapScript.then(bootstrapScript => bootstrapScript.body),
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+bootstrap_script = digitalocean.get_spaces_bucket_object(bucket="ourcorp-deploy-config",
+    region="nyc3",
+    key="droplet-bootstrap-script.sh")
+web = digitalocean.Droplet("web",
+    image="ubuntu-18-04-x64",
+    region="nyc2",
+    size="s-1vcpu-1gb",
+    user_data=bootstrap_script.body)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -971,4 +1008,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+</dl>
 

@@ -29,6 +29,17 @@ const postgres_example = new digitalocean.DatabaseCluster("postgres-example", {
     version: "11",
 });
 ```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+postgres_example = digitalocean.DatabaseCluster("postgres-example",
+    engine="pg",
+    node_count=1,
+    region="nyc1",
+    size="db-s-1vcpu-1gb",
+    version="11")
+```
 
 {{% /example %}}
 {{% example %}}
@@ -45,6 +56,17 @@ const mysql_example = new digitalocean.DatabaseCluster("mysql-example", {
     version: "8",
 });
 ```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+mysql_example = digitalocean.DatabaseCluster("mysql-example",
+    engine="mysql",
+    node_count=1,
+    region="nyc1",
+    size="db-s-1vcpu-1gb",
+    version="8")
+```
 
 {{% /example %}}
 {{% example %}}
@@ -60,6 +82,17 @@ const redis_example = new digitalocean.DatabaseCluster("redis-example", {
     size: "db-s-1vcpu-1gb",
     version: "5",
 });
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+redis_example = digitalocean.DatabaseCluster("redis-example",
+    engine="redis",
+    node_count=1,
+    region="nyc1",
+    size="db-s-1vcpu-1gb",
+    version="5")
 ```
 
 {{% /example %}}
@@ -1956,6 +1989,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#DatabaseClusterMaintenanceWindowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#DatabaseClusterMaintenanceWindowOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.DatabaseClusterMaintenanceWindowArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.DatabaseClusterMaintenanceWindow.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

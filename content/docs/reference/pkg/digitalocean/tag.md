@@ -16,6 +16,38 @@ actions on it. Tags created with this resource can be referenced in your Droplet
 configuration via their ID or name.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+// Create a new tag
+const foobar = new digitalocean.Tag("foobar", {});
+// Create a new Droplet in nyc3 with the foobar tag
+const web = new digitalocean.Droplet("web", {
+    image: "ubuntu-18-04-x64",
+    region: "nyc3",
+    size: "s-1vcpu-1gb",
+    tags: [foobar.id],
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+# Create a new tag
+foobar = digitalocean.Tag("foobar")
+# Create a new Droplet in nyc3 with the foobar tag
+web = digitalocean.Droplet("web",
+    image="ubuntu-18-04-x64",
+    region="nyc3",
+    size="s-1vcpu-1gb",
+    tags=[foobar.id])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 

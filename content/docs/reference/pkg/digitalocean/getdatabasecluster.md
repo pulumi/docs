@@ -13,6 +13,27 @@ meta_desc: "Explore the GetDatabaseCluster function of the Digital Ocean package
 Provides information on a DigitalOcean database cluster resource.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const example = digitalocean.getDatabaseCluster({
+    name: "example-cluster",
+});
+export const databaseOutput = example.then(example => example.uri);
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+example = digitalocean.get_database_cluster(name="example-cluster")
+pulumi.export("databaseOutput", example.uri)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -879,6 +900,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetDatabaseClusterMaintenanceWindow">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.GetDatabaseClusterMaintenanceWindow.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -987,4 +1011,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+</dl>
 

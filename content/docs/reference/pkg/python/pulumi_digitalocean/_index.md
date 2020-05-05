@@ -157,6 +157,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_digitalocean.Cdn">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Cdn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Cdn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean CDN Endpoint resource for use with Spaces.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="c1"># Create a new Spaces Bucket</span>
+<span class="n">mybucket</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">SpacesBucket</span><span class="p">(</span><span class="s2">&quot;mybucket&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;sfo2&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;public-read&quot;</span><span class="p">)</span>
+<span class="c1"># Add a CDN endpoint to the Spaces Bucket</span>
+<span class="n">mycdn</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Cdn</span><span class="p">(</span><span class="s2">&quot;mycdn&quot;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="n">mybucket</span><span class="o">.</span><span class="n">bucket_domain_name</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;fqdn&quot;</span><span class="p">,</span> <span class="n">mycdn</span><span class="o">.</span><span class="n">endpoint</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -268,20 +280,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_digitalocean.Certificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Certificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_chain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">leaf_certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Certificate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a DigitalOcean Certificate resource that allows you to manage
-certificates for configuring TLS termination in Load Balancers.
-Certificates created with this resource can be referenced in your
-Load Balancer configuration via their ID. The certificate can either
-be a custom one provided by you or automatically generated one with
-Let’s Encrypt.</p>
+<dd><p>Create a Certificate resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] certificate_chain: The full PEM-formatted trust chain</p>
+<blockquote>
+<div><p>between the certificate authority’s certificate and your domain’s TLS
+certificate. Only valid when type is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>certificate_chain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full PEM-formatted trust chain
-between the certificate authority’s certificate and your domain’s TLS
-certificate. Only valid when type is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
 <li><p><strong>domains</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of fully qualified domain names (FQDNs) for
 which the certificate will be issued. The domains must be managed using
 DigitalOcean’s DNS. Only valid when type is <code class="docutils literal notranslate"><span class="pre">lets_encrypt</span></code>.</p></li>
@@ -423,6 +432,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DatabaseCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eviction_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_windows</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_network_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database cluster resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">postgres_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseCluster</span><span class="p">(</span><span class="s2">&quot;postgres-example&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;pg&quot;</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;db-s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;11&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">mysql_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseCluster</span><span class="p">(</span><span class="s2">&quot;mysql-example&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;mysql&quot;</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;db-s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">redis_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseCluster</span><span class="p">(</span><span class="s2">&quot;redis-example&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;redis&quot;</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;db-s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -654,6 +696,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DatabaseConnectionPool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseConnectionPool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database connection pool resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">postgres_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseCluster</span><span class="p">(</span><span class="s2">&quot;postgres-example&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;pg&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;11&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;db-s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pool_01</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseConnectionPool</span><span class="p">(</span><span class="s2">&quot;pool-01&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="n">postgres_example</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;transaction&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">db_name</span><span class="o">=</span><span class="s2">&quot;defaultdb&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;doadmin&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -810,6 +869,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DatabaseDb">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseDb</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseDb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database resource. When creating a new database cluster, a default database with name <code class="docutils literal notranslate"><span class="pre">defaultdb</span></code> will be created. Then, this resource can be used to provide additional database inside the cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">postgres_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseCluster</span><span class="p">(</span><span class="s2">&quot;postgres-example&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;pg&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;11&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;db-s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">database_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseDb</span><span class="p">(</span><span class="s2">&quot;database-example&quot;</span><span class="p">,</span> <span class="n">cluster_id</span><span class="o">=</span><span class="n">postgres_example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -894,6 +965,50 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a DigitalOcean database firewall resource allowing you to restrict
 connections to your database to trusted sources. You may limit connections to
 specific Droplets, Kubernetes clusters, or IP addresses.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">postgres_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseCluster</span><span class="p">(</span><span class="s2">&quot;postgres-example&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;pg&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;11&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;db-s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">example_fw</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseFirewall</span><span class="p">(</span><span class="s2">&quot;example-fw&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="n">postgres_example</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rule</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ip_addr&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.1.1&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ip_addr&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;192.0.2.0&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">web</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;centos-7-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+<span class="n">postgres_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseCluster</span><span class="p">(</span><span class="s2">&quot;postgres-example&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;pg&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;11&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;db-s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">example_fw</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseFirewall</span><span class="p">(</span><span class="s2">&quot;example-fw&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="n">postgres_example</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rule</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;droplet&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">web</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1009,6 +1124,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DatabaseReplica">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseReplica</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database replica resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">postgres_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseCluster</span><span class="p">(</span><span class="s2">&quot;postgres-example&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;pg&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;11&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;db-s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">read_replica</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseReplica</span><span class="p">(</span><span class="s2">&quot;read-replica&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="n">postgres_example</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;db-s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1166,6 +1296,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Any new users created will always have <code class="docutils literal notranslate"><span class="pre">normal</span></code> role, only the default user that comes with database cluster creation has <code class="docutils literal notranslate"><span class="pre">primary</span></code> role. Additional permissions must be managed manually.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">postgres_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseCluster</span><span class="p">(</span><span class="s2">&quot;postgres-example&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;pg&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;11&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;db-s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">user_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseUser</span><span class="p">(</span><span class="s2">&quot;user-example&quot;</span><span class="p">,</span> <span class="n">cluster_id</span><span class="o">=</span><span class="n">postgres_example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1270,6 +1412,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DnsRecord">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DnsRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weight</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DnsRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean DNS record resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+<span class="c1"># Add an A record to the domain for www.example.com.</span>
+<span class="n">www</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DnsRecord</span><span class="p">(</span><span class="s2">&quot;www&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;192.168.0.11&quot;</span><span class="p">)</span>
+<span class="c1"># Add a MX record for the example.com domain itself.</span>
+<span class="n">mx</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DnsRecord</span><span class="p">(</span><span class="s2">&quot;mx&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="n">default</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MX&quot;</span><span class="p">,</span>
+    <span class="n">priority</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;mail.example.com.&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;wwwFqdn&quot;</span><span class="p">,</span> <span class="n">www</span><span class="o">.</span><span class="n">fqdn</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;mxFqdn&quot;</span><span class="p">,</span> <span class="n">mx</span><span class="o">.</span><span class="n">fqdn</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1423,6 +1584,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.Domain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean domain resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="c1"># Create a new domain</span>
+<span class="n">default</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">digitalocean_droplet</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;ipv4_address&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1517,6 +1687,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a DigitalOcean Droplet resource. This can be used to create,
 modify, and delete Droplets. Droplets also support
 <a class="reference external" href="https://www.terraform.io/docs/provisioners/index.html">provisioning</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="c1"># Create a new Web Droplet in the nyc2 region</span>
+<span class="n">web</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc2&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1813,6 +1993,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DropletSnapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DropletSnapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">droplet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DropletSnapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which can be used to create a snapshot from an existing DigitalOcean Droplet.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">web</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;centos-7-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+<span class="n">web_snapshot</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DropletSnapshot</span><span class="p">(</span><span class="s2">&quot;web-snapshot&quot;</span><span class="p">,</span> <span class="n">droplet_id</span><span class="o">=</span><span class="n">web</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1924,6 +2114,75 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Firewall</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">droplet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inbound_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outbound_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Firewall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Cloud Firewall resource. This can be used to create,
 modify, and delete Firewalls.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">web_droplet</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;webDroplet&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+<span class="n">web_firewall</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;webFirewall&quot;</span><span class="p">,</span>
+    <span class="n">droplet_ids</span><span class="o">=</span><span class="p">[</span><span class="n">web_droplet</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">inbound_rule</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;portRange&quot;</span><span class="p">:</span> <span class="s2">&quot;22&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sourceAddresses&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;192.168.1.0/24&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;2002:1:2::/48&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;portRange&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sourceAddresses&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;::/0&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;portRange&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sourceAddresses&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;::/0&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;icmp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sourceAddresses&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;::/0&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">outbound_rule</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;portRange&quot;</span><span class="p">:</span> <span class="s2">&quot;53&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;destinationAddresses&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;::/0&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;udp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;portRange&quot;</span><span class="p">:</span> <span class="s2">&quot;53&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;destinationAddresses&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;::/0&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;icmp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;destinationAddresses&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;::/0&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2201,6 +2460,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Floating IPs can be assigned to a Droplet either directly on the <code class="docutils literal notranslate"><span class="pre">.FloatingIp</span></code> resource by setting a <code class="docutils literal notranslate"><span class="pre">droplet_id</span></code> or using the <code class="docutils literal notranslate"><span class="pre">.FloatingIpAssignment</span></code> resource, but the two cannot be used together.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">foobar_droplet</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;foobarDroplet&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;sgp1&quot;</span><span class="p">,</span>
+    <span class="n">ipv6</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">private_networking</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">foobar_floating_ip</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">FloatingIp</span><span class="p">(</span><span class="s2">&quot;foobarFloatingIp&quot;</span><span class="p">,</span>
+    <span class="n">droplet_id</span><span class="o">=</span><span class="n">foobar_droplet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="n">foobar_droplet</span><span class="o">.</span><span class="n">region</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2300,6 +2573,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a resource for assigning an existing DigitalOcean Floating IP to a Droplet. This
 makes it easy to provision floating IP addresses that are not tied to the lifecycle of your
 Droplet.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">foobar_floating_ip</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">FloatingIp</span><span class="p">(</span><span class="s2">&quot;foobarFloatingIp&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;sgp1&quot;</span><span class="p">)</span>
+<span class="n">foobar_droplet</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;foobarDroplet&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;sgp1&quot;</span><span class="p">,</span>
+    <span class="n">ipv6</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">private_networking</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">foobar_floating_ip_assignment</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">FloatingIpAssignment</span><span class="p">(</span><span class="s2">&quot;foobarFloatingIpAssignment&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="n">foobar_floating_ip</span><span class="o">.</span><span class="n">ip_address</span><span class="p">,</span>
+    <span class="n">droplet_id</span><span class="o">=</span><span class="n">foobar_droplet</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3496,6 +3784,34 @@ the following attributes:</p>
 <dt id="pulumi_digitalocean.KubernetesCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">KubernetesCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the <a class="reference external" href="https://www.digitalocean.com/docs/kubernetes/">official documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">KubernetesCluster</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">node_pool</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;worker-pool&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;s-2vcpu-2gb&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.15.5-do.1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">KubernetesCluster</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">node_pool</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;autoScale&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;maxNodes&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;minNodes&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;autoscale-worker-pool&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;s-2vcpu-2gb&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.15.5-do.1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3840,6 +4156,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.KubernetesNodePool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">KubernetesNodePool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_scale</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the <code class="docutils literal notranslate"><span class="pre">.KubernetesCluster</span></code> resource, this resource can be used to add additional ones to a cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">KubernetesCluster</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.15.5-do.1&quot;</span><span class="p">,</span>
+    <span class="n">node_pool</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;front-end-pool&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;s-2vcpu-2gb&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">KubernetesNodePool</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;c-2&quot;</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;backend&quot;</span><span class="p">],</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;backend&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">autoscale_pool_01</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">KubernetesNodePool</span><span class="p">(</span><span class="s2">&quot;autoscale-pool-01&quot;</span><span class="p">,</span>
+    <span class="n">cluster_id</span><span class="o">=</span><span class="n">digitalocean_kubernetes_cluster</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-2gb&quot;</span><span class="p">,</span>
+    <span class="n">auto_scale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">min_nodes</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">max_nodes</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4491,7 +4840,44 @@ similar to Amazon’s Access ID and Secret Key.</p>
 the provider’s <code class="docutils literal notranslate"><span class="pre">spaces_access_id</span></code> and <code class="docutils literal notranslate"><span class="pre">spaces_secret_key</span></code> arguments to the
 access ID and secret you generate via the DigitalOcean control panel. For
 example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">static_assets</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">SpacesBucket</span><span class="p">(</span><span class="s2">&quot;static-assets&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>For more information, See <a class="reference external" href="https://www.digitalocean.com/community/tutorials/an-introduction-to-digitalocean-spaces">An Introduction to DigitalOcean Spaces</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">SpacesBucket</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">SpacesBucket</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
+    <span class="n">cors_rules</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;allowedHeaders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;allowedMethods&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;GET&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;allowedOrigins&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;maxAgeSeconds&quot;</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;allowedHeaders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;allowedMethods&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;PUT&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;DELETE&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;allowedOrigins&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;https://www.example.com&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;maxAgeSeconds&quot;</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4943,21 +5329,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_digitalocean.SshKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">SshKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SshKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a DigitalOcean SSH key resource to allow you to manage SSH
-keys for Droplet access. Keys created with this resource
-can be referenced in your Droplet configuration via their ID or
-fingerprint.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSH key for identification</p></li>
-<li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key. If this is a file, it
-can be read using the file interpolation function</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a SshKey resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] name: The name of the SSH key for identification
+:param pulumi.Input[str] public_key: The public key. If this is a file, it</p>
+<blockquote>
+<div><p>can be read using the file interpolation function</p>
+</div></blockquote>
 <dl class="py attribute">
 <dt id="pulumi_digitalocean.SshKey.fingerprint">
 <code class="sig-name descname">fingerprint</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SshKey.fingerprint" title="Permalink to this definition">¶</a></dt>
@@ -5042,6 +5421,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 Droplet resource in order to better organize or facilitate the lookups and
 actions on it. Tags created with this resource can be referenced in your Droplet
 configuration via their ID or name.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="c1"># Create a new tag</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Tag</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">)</span>
+<span class="c1"># Create a new Droplet in nyc3 with the foobar tag</span>
+<span class="n">web</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="n">foobar</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5116,6 +5508,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.Volume">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filesystem_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_filesystem_label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_filesystem_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Block Storage volume which can be attached to a Droplet in order to provide expanded storage.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">foobar_volume</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;foobarVolume&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">initial_filesystem_type</span><span class="o">=</span><span class="s2">&quot;ext4&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;an example volume&quot;</span><span class="p">)</span>
+<span class="n">foobar_droplet</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;foobarDroplet&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">)</span>
+<span class="n">foobar_volume_attachment</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">VolumeAttachment</span><span class="p">(</span><span class="s2">&quot;foobarVolumeAttachment&quot;</span><span class="p">,</span>
+    <span class="n">droplet_id</span><span class="o">=</span><span class="n">foobar_droplet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">volume_id</span><span class="o">=</span><span class="n">foobar_volume</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5278,6 +5687,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Volumes can be attached either directly on the <code class="docutils literal notranslate"><span class="pre">.Droplet</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">.VolumeAttachment</span></code> resource - but the two cannot be used together. If both are used against the same Droplet, the volume attachments will constantly drift.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">foobar_volume</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;foobarVolume&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">initial_filesystem_type</span><span class="o">=</span><span class="s2">&quot;ext4&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;an example volume&quot;</span><span class="p">)</span>
+<span class="n">foobar_droplet</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;foobarDroplet&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">)</span>
+<span class="n">foobar_volume_attachment</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">VolumeAttachment</span><span class="p">(</span><span class="s2">&quot;foobarVolumeAttachment&quot;</span><span class="p">,</span>
+    <span class="n">droplet_id</span><span class="o">=</span><span class="n">foobar_droplet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">volume_id</span><span class="o">=</span><span class="n">foobar_volume</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5360,6 +5786,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.VolumeSnapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">VolumeSnapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.VolumeSnapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot from an existing volume.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">foobar_volume</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;foobarVolume&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;an example volume&quot;</span><span class="p">)</span>
+<span class="n">foobar_volume_snapshot</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">VolumeSnapshot</span><span class="p">(</span><span class="s2">&quot;foobarVolumeSnapshot&quot;</span><span class="p">,</span> <span class="n">volume_id</span><span class="o">=</span><span class="n">foobar_volume</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5480,6 +5916,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a <a class="reference external" href="https://developers.digitalocean.com/documentation/v2/#vpcs">DigitalOcean VPC</a> resource.</p>
 <p>VPCs are virtual networks containing resources that can communicate with each
 other in full isolation, using private IP addresses.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">ip_range</span><span class="o">=</span><span class="s2">&quot;10.10.10.0/24&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example_vpc</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;exampleVpc&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+<span class="n">example_droplet</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;exampleDroplet&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">,</span>
+    <span class="n">vpc_uuid</span><span class="o">=</span><span class="n">example_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5599,6 +6054,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.get_account">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on your DigitalOcean account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_account</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -5616,6 +6077,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.get_database_cluster">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_database_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_database_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information on a DigitalOcean database cluster resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_database_cluster</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-cluster&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;databaseOutput&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">uri</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the database cluster.</p>
@@ -5655,6 +6123,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Droplet snapshots are saved instances of a Droplet. Use this data
 source to retrieve the ID of a DigitalOcean Droplet snapshot for use in other
 resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">web_snapshot</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_droplet_snapshot</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^web&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5781,6 +6257,41 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dt id="pulumi_digitalocean.get_kubernetes_versions">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_kubernetes_versions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">version_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_kubernetes_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to the available DigitalOcean Kubernetes Service versions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_kubernetes_versions</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;k8s-versions&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">valid_versions</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_kubernetes_versions</span><span class="p">()</span>
+<span class="n">example_cluster</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">KubernetesCluster</span><span class="p">(</span><span class="s2">&quot;example-cluster&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;lon1&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">latest_version</span><span class="p">,</span>
+    <span class="n">node_pool</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;s-1vcpu-2gb&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_kubernetes_versions</span><span class="p">(</span><span class="n">version_prefix</span><span class="o">=</span><span class="s2">&quot;1.16.&quot;</span><span class="p">)</span>
+<span class="n">example_cluster</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">KubernetesCluster</span><span class="p">(</span><span class="s2">&quot;example-cluster&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;lon1&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">latest_version</span><span class="p">,</span>
+    <span class="n">node_pool</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;s-1vcpu-2gb&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -5799,6 +6310,13 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on a single DigitalOcean project. If neither the <code class="docutils literal notranslate"><span class="pre">id</span></code> nor <code class="docutils literal notranslate"><span class="pre">name</span></code> attributes are provided,
 then this data source returns the default project.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_project</span><span class="p">()</span>
+<span class="n">staging</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;My Staging Project&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5819,6 +6337,15 @@ will be returned.</p>
 <p>Note: You can use the <cite>`</cite>.Project`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/do/d/project.html">https://www.terraform.io/docs/providers/do/d/project.html</a>&gt;`_ data source to
 obtain metadata about a single project if you already know the <code class="docutils literal notranslate"><span class="pre">id</span></code> to retrieve or the unique
 <code class="docutils literal notranslate"><span class="pre">name</span></code> of the project.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">staging</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_projects</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;environment&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Staging&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5863,6 +6390,13 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_region</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">slug</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on a single DigitalOcean region. This is useful to find out 
 what Droplet sizes and features are supported within a region.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">sfo2</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_region</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="s2">&quot;sfo2&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;regionName&quot;</span><span class="p">,</span> <span class="n">sfo2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>slug</strong> (<em>str</em>) – A human-readable string that is used as a unique identifier for each region.</p>
@@ -5877,6 +6411,15 @@ what Droplet sizes and features are supported within a region.</p>
 filter and sort the results. If no filters are specified, all regions will be returned.</p>
 <p>Note: You can use the <cite>`</cite>.getRegion`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/do/d/region.html">https://www.terraform.io/docs/providers/do/d/region.html</a>&gt;`_ data source
 to obtain metadata about a single region if you already know the <code class="docutils literal notranslate"><span class="pre">slug</span></code> to retrieve.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">available</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_regions</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;available&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;true&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5908,6 +6451,19 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dd><p>Retrieves information about the Droplet sizes that DigitalOcean supports, with
 the ability to filter and sort the results. If no filters are specified, all sizes
 will be returned.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">main</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_sizes</span><span class="p">(</span><span class="nb">filter</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;slug&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+<span class="n">web</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;sgp1&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="n">main</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;slug&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5958,6 +6514,19 @@ one of the values provided here.</p></li>
 <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> (<code class="docutils literal notranslate"><span class="pre">text/*</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>). This is to prevent printing unsafe characters and potentially
 downloading large amount of data which would be thrown away in favor of metadata.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">bootstrap_script</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_spaces_bucket_object</span><span class="p">(</span><span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;ourcorp-deploy-config&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;droplet-bootstrap-script.sh&quot;</span><span class="p">)</span>
+<span class="n">web</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Droplet</span><span class="p">(</span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc2&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
+    <span class="n">user_data</span><span class="o">=</span><span class="n">bootstrap_script</span><span class="o">.</span><span class="n">body</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5995,6 +6564,15 @@ downloading large amount of data which would be thrown away in favor of metadata
 If no filters are specified, all Spaces buckets will be returned.</p>
 <p>Note: You can use the <cite>`</cite>.SpacesBucket`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/do/d/spaces_bucket.html">https://www.terraform.io/docs/providers/do/d/spaces_bucket.html</a>&gt;`_ data source to
 obtain metadata about a single bucket if you already know its <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">region</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">nyc3</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_spaces_buckets</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="p">[{</span>
+    <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;nyc3&quot;</span><span class="p">],</span>
+<span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6061,6 +6639,14 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dd><p>Volume snapshots are saved instances of a block storage volume. Use this data
 source to retrieve the ID of a DigitalOcean volume snapshot for use in other
 resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="n">snapshot</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">get_volume_snapshot</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name_regex</span><span class="o">=</span><span class="s2">&quot;^web&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
