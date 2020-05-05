@@ -1523,6 +1523,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryAppExcludeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryAppExcludeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.RuleIdpDiscoveryAppExcludeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.RuleIdpDiscoveryAppExclude.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1669,6 +1672,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryAppIncludeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryAppIncludeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.RuleIdpDiscoveryAppIncludeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.RuleIdpDiscoveryAppInclude.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1817,6 +1823,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryPlatformIncludeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryPlatformIncludeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.RuleIdpDiscoveryPlatformIncludeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.RuleIdpDiscoveryPlatformInclude.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1955,6 +1964,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryUserIdentifierPatternArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryUserIdentifierPatternOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.RuleIdpDiscoveryUserIdentifierPatternArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.RuleIdpDiscoveryUserIdentifierPattern.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
