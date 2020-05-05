@@ -26,6 +26,7 @@ First, create a KMS key. We also can set an alias on the key to make it easier t
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
 {{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -45,9 +46,11 @@ const alias = new aws.kms.Alias("alias/stack-encryption-key", {
 export const keyArn = key.arn
 export const aliasArn = alias.arn
 ```
+
 {{% /choosable %}}
 
 {{% choosable language javascript %}}
+
 ```javascript
 "use strict";
 const pulumi = require("@pulumi/pulumi");
@@ -70,9 +73,11 @@ const alias = new aws.kms.Alias("alias/stack-encryption-key", {
 exports.keyArn = key.arn;
 exports.aliasArn = alias.arn;
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 import pulumi
 from pulumi_aws import kms
@@ -91,10 +96,11 @@ alias = kms.Alias("alias/stack-encryption-key",
 # Export the arns
 pulumi.export('key_arn',  key.arn)
 ```
+
 {{% /choosable %}}
 
-
 {{% choosable language go %}}
+
 ```go
 package main
 
@@ -130,9 +136,11 @@ func main() {
 	})
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```csharp
 using Pulumi;
 using Kms = Pulumi.Aws.Kms;
@@ -162,6 +170,7 @@ class KeyStack : Stack
     [Output("aliasArn")] public Output<string> AliasArn { get; set; }
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -191,7 +200,9 @@ That user gets access to every KMS key in your account, which would also mean th
 To rectify this, we need to attach a Key Policy to the key. We can do this by updating our previous code:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
+
 {{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -245,6 +256,7 @@ export const keyArn = key.arn
 export const aliasArn = alias.arn
 
 ```
+
 {{% /choosable %}}
 
 {{% choosable language javascript %}}
@@ -310,9 +322,11 @@ exports.aliasArn = alias.arn;
 exports.keyArn = key.arn;
 exports.aliasArn = alias.arn;
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 import pulumi
 import json
@@ -364,6 +378,7 @@ alias = kms.Alias("alias/stack-encryption-key",
 pulumi.export('key_arn',  key.arn)
 pulumi.export('alias_arn', alias.arn)
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -466,9 +481,11 @@ func main() {
 	})
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```csharp
 using Pulumi;
 using Kms = Pulumi.Aws.Kms;
@@ -528,6 +545,7 @@ class KeyStack : Stack
     [Output("aliasArn")] public Output<string> AliasArn { get; set; }
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -549,7 +567,7 @@ Now our key has been created and is adequately scoped; we can create a new stack
 # We need to first retrieve the stack encryption key from our previous stack
 KEY_ALIAS=$(pulumi stack output aliasArn | cut -d/ -f2)
 # Note, we need to set the region we're deploying to
-pulumi new aws-typescript -n <projectname> -s <stackname> -d "An example stack encrypted with AWS KMS" --secrets-provider="awskms://alias/${KEY_ALIAS}?region=us-west-2" --config aws:region=us-west-2 --dir $HOME/git/new-project
+pulumi new aws-<language> -n <projectname> -s <stackname> -d "An example stack encrypted with AWS KMS" --secrets-provider="awskms://alias/${KEY_ALIAS}?region=us-west-2" --config aws:region=us-west-2 --dir $HOME/git/new-stack
 ```
 
 You can check inside your `Pulumi.<stackname>.yaml` for which key you're using to encrypt your secrets:
@@ -583,7 +601,7 @@ To verify that the secret is indeed only accessible to the KMS key we created ea
 import * as pulumi from "@pulumi/pulumi";
 
 const config = new pulumi.Config();
-export const superSecret = config.require("supersecret");
+export const superSecret = config.requireSecret("supersecret");
 ```
 
 {{% /choosable %}}
@@ -595,7 +613,7 @@ export const superSecret = config.require("supersecret");
 const pulumi = require("@pulumi/pulumi");
 
 const config = new pulumi.Config();
-exports.superSecret = config.require("supersecret");
+exports.superSecret = config.requireSecret("supersecret");
 ```
 
 {{% /choosable %}}
@@ -606,7 +624,7 @@ exports.superSecret = config.require("supersecret");
 import pulumi
 config = pulumi.Config()
 
-pulumi.export('superSecret',  config.require("supersecret"))
+pulumi.export('superSecret',  config.require_secret("supersecret"))
 ```
 
 {{% /choosable %}}
@@ -624,9 +642,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		config := config.New(ctx, "")
-		superSecret := config.Require("supersecret")
+		superSecret := config.RequireSecret("supersecret")
 
-		ctx.Export("superSecret", pulumi.String(superSecret))
+		ctx.Export("superSecret", pulumi.Sprintf("%s", superSecret))
 		return nil
 	})
 }
@@ -644,17 +662,18 @@ class AnotherStack : Stack
     public AnotherStack()
     {
         var config = new Config();
-        this.SuperSecret = Output.Create(config.Require("supersecret"));
+        this.SuperSecret = config.RequireSecret("supersecret");
     }
 
     [Output("superSecret")] public Output<string> SuperSecret { get; set; }
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
 
-Now we need to verify if the value is _actually_ encrypted. An easy way to do that is to try and export the secret value without access to the key. In my setup, I use the `AWS_PROFILE` environment variable which refers to a [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to configure access to AWS. If I unset this environment variable, I will no longer be using the AWS credentials that have access to this KMS key. Let's unset the AWS_PROFILE environment variable and then rerun `pulumi up`:
+Now we need to verify if the value is _actually_ encrypted. An easy way to do that is to try and export the secret value without access to the key. How this is done depends on your AWS configuration, however in my setup, I use the `AWS_PROFILE` environment variable which refers to a [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to configure access to AWS. If I unset this environment variable, I will no longer be using the AWS credentials that have access to this KMS key. Let's unset the AWS_PROFILE environment variable and then rerun `pulumi up`:
 
 ```bash
 unset AWS_PROFILE
@@ -663,10 +682,173 @@ error: getting secrets manager: secrets (code=Unknown): InvalidSignatureExceptio
 	status code: 400, request id: 9cf7508d-a7d5-40bb-b40f-98f68e82ac74
 ```
 
-Excellent! We can't read these values without access to this KMS key. We can be safe in the knowledge our secret values are only readable by us, including when stored in the Pulumi state!
+Excellent! We can't read these values without access to this KMS key. We can be safe in the knowledge our secret values are only readable by us.
+
+## Examine the Pulumi State
+
+The final part is to make sure our values are stored encrypted inside the Pulumi state. To do this, we need to use our secret value from earlier and use it in a resource. Let's create an s3 bucket, and write out super secret value to a file in the bucket. Update the Pulumi program you used before like so:
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const config = new pulumi.Config();
+
+const superSecret = config.requireSecret("supersecret");
+
+// Create a private bucket
+const bucket = new aws.s3.Bucket("bucket", {
+    acl: "private",
+});
+
+// Create an object from the secret value
+const superSecretObject = new aws.s3.BucketObject("secret", {
+    bucket: bucket.id,
+    key: "secret",
+    content: superSecret, // use our secret value as the content
+})
+```
+
+{{% /choosable %}}
+
+{{% choosable language javascript %}}
+
+```javascript
+"use strict";
+const pulumi = require("@pulumi/pulumi");
+const aws = require("@pulumi/aws");
+
+const config = new pulumi.Config();
+
+const superSecret = config.requireSecret("supersecret");
+
+// Create a private bucket
+const bucket = new aws.s3.Bucket("bucket", {
+    acl: "private",
+});
+
+const superSecretObject = new aws.s3.BucketObject("secret", {
+    bucket: bucket.id,
+    key: "secret",
+    content: superSecret, // use our secret value as the content
+});
+```
+
+{{% /choosable %}}
+
+{{% chooseable language python %}}
+
+```python
+{{% /chooseable %}}
+import pulumi
+from pulumi_aws import s3
+
+config = pulumi.Config()
+
+superSecret = config.require_secret("supersecret")
+
+# Create a private bucket
+bucket = s3.Bucket('bucket', acl="private")
+
+# Create an object from the secret value
+bucketObject = s3.BucketObject("secret", bucket=bucket.id, key="secret", content=superSecret)
+```
+
+{{% /choosable %}}
+
+{{% chooseable language go %}}
+
+```go
+
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+
+		config := config.New(ctx, "")
+
+		superSecret := config.RequireSecret("supersecret")
+
+		// Create a a private bucket
+		bucket, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{Acl: pulumi.String("private")})
+		if err != nil {
+			return err
+		}
+
+		_, err = s3.NewBucketObject(ctx, "secret", &s3.BucketObjectArgs{
+			Bucket:  bucket.ID(),
+			Key:     pulumi.String("secret"),
+			Content: pulumi.Sprintf("%s", superSecret),
+		})
+
+		ctx.Export("superSecret", pulumi.String(superSecret))
+		return nil
+	})
+}
+```
+
+{{<% /chooseable %>}}
+
+{{% chooseable language csharp %}}
+
+```csharp
+using Pulumi;
+using Pulumi.Aws.S3;
+
+class AnotherStack : Stack
+{
+    public AnotherStack()
+    {
+        var config = new Config();
+        this.SuperSecret = config.RequireSecret("supersecret");
+
+        var bucket = new Bucket("bucket", new BucketArgs {
+            Acl = "private",
+        });
+
+        var bucketObject = new BucketObject("secret", new BucketObjectArgs {
+            Bucket = bucket.Id,
+            Key = "secret",
+            Content = SuperSecret
+
+        });
+    }
+    [Output("superSecret")] public Output<string> SuperSecret { get; set; }
+}
+
+```
+
+{{<% /chooseable %>}}
+
+{{< /chooser >}}
+
+We now need to look inside our Pulumi statefile to verify the value is encoded there. We can do this with `pulumi stack export` and some JSON manipulation magic using [jq](https://stedolan.github.io/jq/):
+
+```bash
+pulumi stack export | jq '.deployment.resources[].outputs | select(.content).content'
+```
+
+The result should look like this:
+
+```json
+{
+  "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+  "ciphertext": "v1:cQ5qr21hTdb2PTM5:ZwEW8pN1kC6fUlppi1eS84D/lodoe54wV2dgEsqu0csu2VyTQg0wTf8Qv7axCQ=="
+}
+```
 
 ## Wrap up
 
-This example showed how to use client-side encryption with AWS KMS, but Pulumi, as mentioned before, has support for Azure KeyVault, Google Cloud KMS, and Hashicorp Vault for storing your keys. You can find examples of how to use these encryption methods in our [examples repo](https://github.com/pulumi/examples/tree/master/secrets-provider) and take a look at our [secrets provider documentation](https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-providers). 
+This example showed how to use client-side encryption with AWS KMS, but Pulumi, as mentioned before, has support for Azure KeyVault, Google Cloud KMS, and Hashicorp Vault for storing your keys. You can find examples of how to use these encryption methods in our [examples repo](https://github.com/pulumi/examples/tree/master/secrets-provider) and take a look at our [secrets provider documentation](https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-providers).
 
 We hope your next compliance audit is more relaxed with this feature available!
