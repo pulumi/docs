@@ -1125,6 +1125,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#CloudProviderSnapshotBackupPolicyPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#CloudProviderSnapshotBackupPolicyPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Inputs.CloudProviderSnapshotBackupPolicyPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.CloudProviderSnapshotBackupPolicyPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1231,6 +1234,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#CloudProviderSnapshotBackupPolicyPolicyPolicyItemArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#CloudProviderSnapshotBackupPolicyPolicyPolicyItemOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Inputs.CloudProviderSnapshotBackupPolicyPolicyPolicyItemArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.CloudProviderSnapshotBackupPolicyPolicyPolicyItem.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
