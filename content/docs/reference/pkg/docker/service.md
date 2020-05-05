@@ -1111,6 +1111,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceAuthOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceAuthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceAuth.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1262,6 +1265,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceConvergeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceConvergeConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceConvergeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceConvergeConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1381,6 +1387,9 @@ all tasks are up when a service is created, or to check if all tasks are success
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceEndpointSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceEndpointSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceEndpointSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceEndpointSpec.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1495,6 +1504,9 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceEndpointSpecPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceEndpointSpecPortOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceEndpointSpecPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceEndpointSpecPort.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1719,6 +1731,9 @@ all tasks are up when a service is created, or to check if all tasks are success
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceLabel.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1833,6 +1848,9 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceModeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceModeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceModeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceMode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1949,6 +1967,9 @@ all tasks are up when a service is created, or to check if all tasks are success
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceModeReplicatedArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceModeReplicatedOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceModeReplicatedArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceModeReplicated.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2023,6 +2044,9 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceRollbackConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceRollbackConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceRollbackConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceRollbackConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2290,6 +2314,9 @@ casting and precision errors.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpec.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2621,6 +2648,9 @@ casting and precision errors.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpec.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3381,6 +3411,9 @@ casting and precision errors.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3640,6 +3673,9 @@ casting and precision errors.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecDnsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecDnsConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecDnsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecDnsConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3790,6 +3826,9 @@ casting and precision errors.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecHealthcheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecHealthcheckOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecHealthcheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecHealthcheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4018,6 +4057,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecHostArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecHostOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecHostArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecHost.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4133,6 +4175,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecLabel.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4247,6 +4292,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecMountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecMountOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecMountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecMount.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4543,6 +4591,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecMountBindOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecMountBindOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecMountBindOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecMountBindOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4621,6 +4672,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecMountTmpfsOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecMountTmpfsOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4736,6 +4790,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecMountVolumeOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecMountVolumeOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecMountVolumeOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecMountVolumeOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4916,6 +4973,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecMountVolumeOptionsLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecMountVolumeOptionsLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecMountVolumeOptionsLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecMountVolumeOptionsLabel.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5030,6 +5090,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecPrivilegesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecPrivilegesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecPrivilegesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecPrivileges.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5146,6 +5209,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecPrivilegesCredentialSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecPrivilegesCredentialSpec.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5260,6 +5326,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5483,6 +5552,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecSecretArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecContainerSpecSecretOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecContainerSpecSecretArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecContainerSpecSecret.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5743,6 +5815,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecLogDriverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecLogDriverOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecLogDriverArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecLogDriver.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5857,6 +5932,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecPlacementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecPlacementOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecPlacementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecPlacement.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6009,6 +6087,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecPlacementPlatformArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecPlacementPlatformOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecPlacementPlatformArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecPlacementPlatform.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6124,6 +6205,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecResourcesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecResourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecResources.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6238,6 +6322,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecResourcesLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecResourcesLimitsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecResourcesLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecResourcesLimits.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6390,6 +6477,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecResourcesLimitsGenericResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecResourcesLimitsGenericResourcesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecResourcesLimitsGenericResourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecResourcesLimitsGenericResources.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6504,6 +6594,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecResourcesReservationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecResourcesReservationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecResourcesReservationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecResourcesReservation.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6656,6 +6749,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecResourcesReservationGenericResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecResourcesReservationGenericResourcesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecResourcesReservationGenericResourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecResourcesReservationGenericResources.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6770,6 +6866,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecRestartPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceTaskSpecRestartPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceTaskSpecRestartPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceTaskSpecRestartPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6957,6 +7056,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceUpdateConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ServiceUpdateConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ServiceUpdateConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
