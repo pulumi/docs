@@ -1157,6 +1157,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#UserFederatedIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#UserFederatedIdentityOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Inputs.UserFederatedIdentityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Outputs.UserFederatedIdentity.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1295,6 +1298,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#UserInitialPasswordArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#UserInitialPasswordOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Inputs.UserInitialPasswordArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Outputs.UserInitialPassword.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
