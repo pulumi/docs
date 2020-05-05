@@ -12,13 +12,13 @@ tags:
     - security
 ---
 
-The secrets in your infrastructure are a vital part of your security model, and provisioning infrastructure is an inherently privileged process. [Previously](https://www.pulumi.com/blog/managing-secrets-with-pulumi/) we introduced secret encryption and started encrypting secret configuration values inside the Pulumi state so that users could be confident their passwords, tokens and other secret values were viewable only by them while managing their infrastructure.
+The secrets in your infrastructure are a vital part of your security model, and provisioning infrastructure is an inherently privileged process. [Previously]({{< relref "/blog/managing-secrets-with-pulumi" >}}) we introduced secret encryption and started encrypting secret configuration values inside the Pulumi state so that users could be confident their passwords, tokens and other secret values were viewable only by them while managing their infrastructure.
 Our first iteration of the encryption used either a passphrase for encrypting the secret or encryption via the Pulumi service backend. However, these options didn't meet the needs of our users who needed more control over their data.
-That's why we also added support for "Cloud Secret Providers", giving users full confidence that their sensitive values are for their eyes only.
+That's why we also added support for "Cloud Secret Providers," giving users full confidence that their sensitive values are for their eyes only.
 
 <!--more-->
 
-Pulumi supports encryption via the [Pulumi service](https://www.pulumi.com/docs/intro/concepts/config/#configuring-secrets-encryption), [AWS KMS](https://aws.amazon.com/kms/), [Azure KeyVault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud KMS](https://cloud.google.com/kms) and [Hashicorp Vault](https://www.vaultproject.io/). This post shows you _one_ example of using a cloud secret provider in a Pulumi stack using AWS KMS.
+Pulumi supports encryption via the [Pulumi service]({{< relref "/docs/intro/concepts/config#configuring-secrets-encryption" >}}), [AWS KMS](https://aws.amazon.com/kms/), [Azure KeyVault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud KMS](https://cloud.google.com/kms) and [Hashicorp Vault](https://www.vaultproject.io/). This post shows you _one_ example of using a cloud secret provider in a Pulumi stack using AWS KMS.
 
 ## Create a KMS Key
 
@@ -849,6 +849,6 @@ The result should look like this:
 
 ## Wrap up
 
-This example showed how to use client-side encryption with AWS KMS, but Pulumi, as mentioned before, has support for Azure KeyVault, Google Cloud KMS, and Hashicorp Vault for storing your keys. You can find examples of how to use these encryption methods in our [examples repo](https://github.com/pulumi/examples/tree/master/secrets-provider) and take a look at our [secrets provider documentation](https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-providers).
+This example showed how to use client-side encryption with AWS KMS, but Pulumi, as mentioned before, has support for Azure KeyVault, Google Cloud KMS, and Hashicorp Vault for storing your keys. You can find examples of how to use these encryption methods in our [examples repo](https://github.com/pulumi/examples/tree/master/secrets-provider) and take a look at our [secrets provider documentation]({{< relref "/docs/intro/concepts/config#available-encryption-providers" >}}).
 
 We hope your next compliance audit is more relaxed with this feature available!
