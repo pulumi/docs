@@ -20,7 +20,7 @@ Use this data source to retrieve information about a repository branch.
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
 
-const development = pulumi.output(github.getBranch({
+const development = pulumi.output(github.Branch({
     branch: "development",
     repository: "example",
 }, { async: true }));

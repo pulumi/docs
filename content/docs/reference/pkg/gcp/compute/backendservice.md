@@ -256,8 +256,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -276,11 +276,16 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
-other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
-destination host will be lost when one or more hosts are added/removed from the destination service. This field
-specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.
+    <dd>{{% md %}}-
+(Optional))
+Consistent Hash-based load balancing can be used to provide soft session
+affinity based on HTTP headers, cookies or other properties. This load balancing
+policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the
+destination service. This field specifies parameters that control consistent
+hashing. This field only applies if the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+set to MAGLEV or RING_HASH.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -289,7 +294,8 @@ INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied requests.
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -338,16 +344,27 @@ load balancing cannot be used with the other. Must be `EXTERNAL` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
-simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
-selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
-load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
-host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
-ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
-the same address as the destination address of the incoming connection before the connection was redirected to the load
-balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
-but has faster table lookup build times and host selection times. For more information about Maglev, refer to
-https://ai.google/research/pubs/pub44824 This field is applicable only when the load_balancing_scheme is set to
+    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
+The possible values are -
+ROUND_ROBIN - This is a simple policy in which each healthy backend
+is selected in round robin order.
+LEAST_REQUEST - An O(1) algorithm which selects two random healthy
+hosts and picks the host which has fewer active requests.
+RING_HASH - The ring/modulo hash load balancer implements consistent
+hashing to backends. The algorithm has the property that the
+addition/removal of a host from a set of N hosts only affects
+1/N of the requests.
+RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client
+connection metadata, i.e., connections are opened
+to the same address as the destination address of
+the incoming connection before the connection
+was redirected to the load balancer.
+MAGLEV - used as a drop in replacement for the ring hash load balancer.
+Maglev is not as stable as ring hash but has faster table lookup
+build times and host selection times. For more information about
+Maglev, refer to https://ai.google/research/pubs/pub44824
+This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
 {{% /md %}}</dd>
 
@@ -357,8 +374,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
-enabled, logs will be exported to Stackdriver.
+    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
+If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -376,8 +393,9 @@ enabled, logs will be exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
+This field is applicable only when the load_balancing_scheme is set
+to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -498,8 +516,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -518,11 +536,16 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
-    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
-other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
-destination host will be lost when one or more hosts are added/removed from the destination service. This field
-specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.
+    <dd>{{% md %}}-
+(Optional))
+Consistent Hash-based load balancing can be used to provide soft session
+affinity based on HTTP headers, cookies or other properties. This load balancing
+policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the
+destination service. This field specifies parameters that control consistent
+hashing. This field only applies if the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+set to MAGLEV or RING_HASH.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -531,7 +554,8 @@ INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied requests.
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -580,16 +604,27 @@ load balancing cannot be used with the other. Must be `EXTERNAL` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
-simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
-selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
-load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
-host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
-ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
-the same address as the destination address of the incoming connection before the connection was redirected to the load
-balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
-but has faster table lookup build times and host selection times. For more information about Maglev, refer to
-https://ai.google/research/pubs/pub44824 This field is applicable only when the load_balancing_scheme is set to
+    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
+The possible values are -
+ROUND_ROBIN - This is a simple policy in which each healthy backend
+is selected in round robin order.
+LEAST_REQUEST - An O(1) algorithm which selects two random healthy
+hosts and picks the host which has fewer active requests.
+RING_HASH - The ring/modulo hash load balancer implements consistent
+hashing to backends. The algorithm has the property that the
+addition/removal of a host from a set of N hosts only affects
+1/N of the requests.
+RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client
+connection metadata, i.e., connections are opened
+to the same address as the destination address of
+the incoming connection before the connection
+was redirected to the load balancer.
+MAGLEV - used as a drop in replacement for the ring hash load balancer.
+Maglev is not as stable as ring hash but has faster table lookup
+build times and host selection times. For more information about
+Maglev, refer to https://ai.google/research/pubs/pub44824
+This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
 {{% /md %}}</dd>
 
@@ -599,8 +634,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
-enabled, logs will be exported to Stackdriver.
+    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
+If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -618,8 +653,9 @@ enabled, logs will be exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
+This field is applicable only when the load_balancing_scheme is set
+to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -740,8 +776,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -760,11 +796,16 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
-    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
-other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
-destination host will be lost when one or more hosts are added/removed from the destination service. This field
-specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.
+    <dd>{{% md %}}-
+(Optional))
+Consistent Hash-based load balancing can be used to provide soft session
+affinity based on HTTP headers, cookies or other properties. This load balancing
+policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the
+destination service. This field specifies parameters that control consistent
+hashing. This field only applies if the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+set to MAGLEV or RING_HASH.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -773,7 +814,8 @@ INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied requests.
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -822,16 +864,27 @@ load balancing cannot be used with the other. Must be `EXTERNAL` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
-simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
-selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
-load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
-host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
-ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
-the same address as the destination address of the incoming connection before the connection was redirected to the load
-balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
-but has faster table lookup build times and host selection times. For more information about Maglev, refer to
-https://ai.google/research/pubs/pub44824 This field is applicable only when the load_balancing_scheme is set to
+    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
+The possible values are -
+ROUND_ROBIN - This is a simple policy in which each healthy backend
+is selected in round robin order.
+LEAST_REQUEST - An O(1) algorithm which selects two random healthy
+hosts and picks the host which has fewer active requests.
+RING_HASH - The ring/modulo hash load balancer implements consistent
+hashing to backends. The algorithm has the property that the
+addition/removal of a host from a set of N hosts only affects
+1/N of the requests.
+RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client
+connection metadata, i.e., connections are opened
+to the same address as the destination address of
+the incoming connection before the connection
+was redirected to the load balancer.
+MAGLEV - used as a drop in replacement for the ring hash load balancer.
+Maglev is not as stable as ring hash but has faster table lookup
+build times and host selection times. For more information about
+Maglev, refer to https://ai.google/research/pubs/pub44824
+This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
 {{% /md %}}</dd>
 
@@ -841,8 +894,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
-enabled, logs will be exported to Stackdriver.
+    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
+If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -860,8 +913,9 @@ enabled, logs will be exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
+This field is applicable only when the load_balancing_scheme is set
+to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -982,8 +1036,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecircuitbreakers">Dict[Backend<wbr>Service<wbr>Circuit<wbr>Breakers]</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1002,11 +1056,16 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Dict[Backend<wbr>Service<wbr>Consistent<wbr>Hash]</a></span>
     </dt>
-    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
-other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
-destination host will be lost when one or more hosts are added/removed from the destination service. This field
-specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.
+    <dd>{{% md %}}-
+(Optional))
+Consistent Hash-based load balancing can be used to provide soft session
+affinity based on HTTP headers, cookies or other properties. This load balancing
+policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the
+destination service. This field specifies parameters that control consistent
+hashing. This field only applies if the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+set to MAGLEV or RING_HASH.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1015,7 +1074,8 @@ INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied requests.
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1064,16 +1124,27 @@ load balancing cannot be used with the other. Must be `EXTERNAL` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
-simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
-selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
-load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
-host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
-ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
-the same address as the destination address of the incoming connection before the connection was redirected to the load
-balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
-but has faster table lookup build times and host selection times. For more information about Maglev, refer to
-https://ai.google/research/pubs/pub44824 This field is applicable only when the load_balancing_scheme is set to
+    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
+The possible values are -
+ROUND_ROBIN - This is a simple policy in which each healthy backend
+is selected in round robin order.
+LEAST_REQUEST - An O(1) algorithm which selects two random healthy
+hosts and picks the host which has fewer active requests.
+RING_HASH - The ring/modulo hash load balancer implements consistent
+hashing to backends. The algorithm has the property that the
+addition/removal of a host from a set of N hosts only affects
+1/N of the requests.
+RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client
+connection metadata, i.e., connections are opened
+to the same address as the destination address of
+the incoming connection before the connection
+was redirected to the load balancer.
+MAGLEV - used as a drop in replacement for the ring hash load balancer.
+Maglev is not as stable as ring hash but has faster table lookup
+build times and host selection times. For more information about
+Maglev, refer to https://ai.google/research/pubs/pub44824
+This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
 {{% /md %}}</dd>
 
@@ -1083,8 +1154,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicelogconfig">Dict[Backend<wbr>Service<wbr>Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
-enabled, logs will be exported to Stackdriver.
+    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
+If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1102,8 +1173,9 @@ enabled, logs will be exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceoutlierdetection">Dict[Backend<wbr>Service<wbr>Outlier<wbr>Detection]</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
+This field is applicable only when the load_balancing_scheme is set
+to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1517,8 +1589,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1537,11 +1609,16 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
-other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
-destination host will be lost when one or more hosts are added/removed from the destination service. This field
-specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.
+    <dd>{{% md %}}-
+(Optional))
+Consistent Hash-based load balancing can be used to provide soft session
+affinity based on HTTP headers, cookies or other properties. This load balancing
+policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the
+destination service. This field specifies parameters that control consistent
+hashing. This field only applies if the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+set to MAGLEV or RING_HASH.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1559,7 +1636,8 @@ INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied requests.
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1629,16 +1707,27 @@ load balancing cannot be used with the other. Must be `EXTERNAL` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
-simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
-selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
-load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
-host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
-ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
-the same address as the destination address of the incoming connection before the connection was redirected to the load
-balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
-but has faster table lookup build times and host selection times. For more information about Maglev, refer to
-https://ai.google/research/pubs/pub44824 This field is applicable only when the load_balancing_scheme is set to
+    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
+The possible values are -
+ROUND_ROBIN - This is a simple policy in which each healthy backend
+is selected in round robin order.
+LEAST_REQUEST - An O(1) algorithm which selects two random healthy
+hosts and picks the host which has fewer active requests.
+RING_HASH - The ring/modulo hash load balancer implements consistent
+hashing to backends. The algorithm has the property that the
+addition/removal of a host from a set of N hosts only affects
+1/N of the requests.
+RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client
+connection metadata, i.e., connections are opened
+to the same address as the destination address of
+the incoming connection before the connection
+was redirected to the load balancer.
+MAGLEV - used as a drop in replacement for the ring hash load balancer.
+Maglev is not as stable as ring hash but has faster table lookup
+build times and host selection times. For more information about
+Maglev, refer to https://ai.google/research/pubs/pub44824
+This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
 {{% /md %}}</dd>
 
@@ -1648,8 +1737,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
-enabled, logs will be exported to Stackdriver.
+    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
+If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1667,8 +1756,9 @@ enabled, logs will be exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
+This field is applicable only when the load_balancing_scheme is set
+to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1786,8 +1876,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1806,11 +1896,16 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
-    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
-other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
-destination host will be lost when one or more hosts are added/removed from the destination service. This field
-specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.
+    <dd>{{% md %}}-
+(Optional))
+Consistent Hash-based load balancing can be used to provide soft session
+affinity based on HTTP headers, cookies or other properties. This load balancing
+policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the
+destination service. This field specifies parameters that control consistent
+hashing. This field only applies if the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+set to MAGLEV or RING_HASH.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1828,7 +1923,8 @@ INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied requests.
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1898,16 +1994,27 @@ load balancing cannot be used with the other. Must be `EXTERNAL` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
-simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
-selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
-load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
-host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
-ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
-the same address as the destination address of the incoming connection before the connection was redirected to the load
-balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
-but has faster table lookup build times and host selection times. For more information about Maglev, refer to
-https://ai.google/research/pubs/pub44824 This field is applicable only when the load_balancing_scheme is set to
+    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
+The possible values are -
+ROUND_ROBIN - This is a simple policy in which each healthy backend
+is selected in round robin order.
+LEAST_REQUEST - An O(1) algorithm which selects two random healthy
+hosts and picks the host which has fewer active requests.
+RING_HASH - The ring/modulo hash load balancer implements consistent
+hashing to backends. The algorithm has the property that the
+addition/removal of a host from a set of N hosts only affects
+1/N of the requests.
+RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client
+connection metadata, i.e., connections are opened
+to the same address as the destination address of
+the incoming connection before the connection
+was redirected to the load balancer.
+MAGLEV - used as a drop in replacement for the ring hash load balancer.
+Maglev is not as stable as ring hash but has faster table lookup
+build times and host selection times. For more information about
+Maglev, refer to https://ai.google/research/pubs/pub44824
+This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
 {{% /md %}}</dd>
 
@@ -1917,8 +2024,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
-enabled, logs will be exported to Stackdriver.
+    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
+If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1936,8 +2043,9 @@ enabled, logs will be exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
+This field is applicable only when the load_balancing_scheme is set
+to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2055,8 +2163,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2075,11 +2183,16 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
-    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
-other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
-destination host will be lost when one or more hosts are added/removed from the destination service. This field
-specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.
+    <dd>{{% md %}}-
+(Optional))
+Consistent Hash-based load balancing can be used to provide soft session
+affinity based on HTTP headers, cookies or other properties. This load balancing
+policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the
+destination service. This field specifies parameters that control consistent
+hashing. This field only applies if the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+set to MAGLEV or RING_HASH.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2097,7 +2210,8 @@ INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied requests.
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2167,16 +2281,27 @@ load balancing cannot be used with the other. Must be `EXTERNAL` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
-simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
-selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
-load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
-host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
-ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
-the same address as the destination address of the incoming connection before the connection was redirected to the load
-balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
-but has faster table lookup build times and host selection times. For more information about Maglev, refer to
-https://ai.google/research/pubs/pub44824 This field is applicable only when the load_balancing_scheme is set to
+    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
+The possible values are -
+ROUND_ROBIN - This is a simple policy in which each healthy backend
+is selected in round robin order.
+LEAST_REQUEST - An O(1) algorithm which selects two random healthy
+hosts and picks the host which has fewer active requests.
+RING_HASH - The ring/modulo hash load balancer implements consistent
+hashing to backends. The algorithm has the property that the
+addition/removal of a host from a set of N hosts only affects
+1/N of the requests.
+RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client
+connection metadata, i.e., connections are opened
+to the same address as the destination address of
+the incoming connection before the connection
+was redirected to the load balancer.
+MAGLEV - used as a drop in replacement for the ring hash load balancer.
+Maglev is not as stable as ring hash but has faster table lookup
+build times and host selection times. For more information about
+Maglev, refer to https://ai.google/research/pubs/pub44824
+This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
 {{% /md %}}</dd>
 
@@ -2186,8 +2311,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
-enabled, logs will be exported to Stackdriver.
+    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
+If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2205,8 +2330,9 @@ enabled, logs will be exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
+This field is applicable only when the load_balancing_scheme is set
+to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2324,8 +2450,8 @@ When the load balancing scheme is INTERNAL, this field is not used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicecircuitbreakers">Dict[Backend<wbr>Service<wbr>Circuit<wbr>Breakers]</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2344,11 +2470,16 @@ connections, but still work to finish started).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceconsistenthash">Dict[Backend<wbr>Service<wbr>Consistent<wbr>Hash]</a></span>
     </dt>
-    <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
-other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
-destination host will be lost when one or more hosts are added/removed from the destination service. This field
-specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.
+    <dd>{{% md %}}-
+(Optional))
+Consistent Hash-based load balancing can be used to provide soft session
+affinity based on HTTP headers, cookies or other properties. This load balancing
+policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the
+destination service. This field specifies parameters that control consistent
+hashing. This field only applies if the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+set to MAGLEV or RING_HASH.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2366,7 +2497,8 @@ INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied requests.
+    <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
+requests.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2436,16 +2568,27 @@ load balancing cannot be used with the other. Must be `EXTERNAL` or
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
-simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
-selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
-load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
-host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
-ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
-the same address as the destination address of the incoming connection before the connection was redirected to the load
-balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
-but has faster table lookup build times and host selection times. For more information about Maglev, refer to
-https://ai.google/research/pubs/pub44824 This field is applicable only when the load_balancing_scheme is set to
+    <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
+The possible values are -
+ROUND_ROBIN - This is a simple policy in which each healthy backend
+is selected in round robin order.
+LEAST_REQUEST - An O(1) algorithm which selects two random healthy
+hosts and picks the host which has fewer active requests.
+RING_HASH - The ring/modulo hash load balancer implements consistent
+hashing to backends. The algorithm has the property that the
+addition/removal of a host from a set of N hosts only affects
+1/N of the requests.
+RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client
+connection metadata, i.e., connections are opened
+to the same address as the destination address of
+the incoming connection before the connection
+was redirected to the load balancer.
+MAGLEV - used as a drop in replacement for the ring hash load balancer.
+Maglev is not as stable as ring hash but has faster table lookup
+build times and host selection times. For more information about
+Maglev, refer to https://ai.google/research/pubs/pub44824
+This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.
 {{% /md %}}</dd>
 
@@ -2455,8 +2598,8 @@ INTERNAL_SELF_MANAGED.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicelogconfig">Dict[Backend<wbr>Service<wbr>Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
-enabled, logs will be exported to Stackdriver.
+    <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
+If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2474,8 +2617,9 @@ enabled, logs will be exported to Stackdriver.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendserviceoutlierdetection">Dict[Backend<wbr>Service<wbr>Outlier<wbr>Detection]</a></span>
     </dt>
-    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
+This field is applicable only when the load_balancing_scheme is set
+to INTERNAL_SELF_MANAGED.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2571,6 +2715,9 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceBackendArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceBackendOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceBackendArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceBackend.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3191,6 +3338,9 @@ range is [0.0, 1.0].
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCdnPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCdnPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceCdnPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceCdnPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3337,6 +3487,9 @@ responses will not be altered.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCdnPolicyCacheKeyPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCdnPolicyCacheKeyPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceCdnPolicyCacheKeyPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceCdnPolicyCacheKeyPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3612,6 +3765,9 @@ delimiters.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCircuitBreakersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCircuitBreakersOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceCircuitBreakersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceCircuitBreakers.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3900,6 +4056,9 @@ Defaults to 3.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCircuitBreakersConnectTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceCircuitBreakersConnectTimeoutOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceCircuitBreakersConnectTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceCircuitBreakersConnectTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4026,6 +4185,9 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceConsistentHashArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceConsistentHashOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceConsistentHashArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceConsistentHash.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4214,6 +4376,9 @@ Defaults to 1024.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceConsistentHashHttpCookieArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceConsistentHashHttpCookieOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceConsistentHashHttpCookieArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceConsistentHashHttpCookie.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4365,6 +4530,9 @@ Defaults to 1024.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceConsistentHashHttpCookieTtlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceConsistentHashHttpCookieTtlOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceConsistentHashHttpCookieTtlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceConsistentHashHttpCookieTtl.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4491,6 +4659,9 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceIapArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceIapOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceIapArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceIap.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4647,6 +4818,9 @@ OAuth2 Client Secret SHA-256 for IAP
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceLogConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceLogConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4773,6 +4947,9 @@ The default value is 1.0.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceOutlierDetectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceOutlierDetectionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceOutlierDetectionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceOutlierDetection.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5317,6 +5494,9 @@ runtime value should be 1900. Defaults to 1900.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceOutlierDetectionBaseEjectionTimeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceOutlierDetectionBaseEjectionTimeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceOutlierDetectionBaseEjectionTimeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceOutlierDetectionBaseEjectionTime.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5443,6 +5623,9 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceOutlierDetectionIntervalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#BackendServiceOutlierDetectionIntervalOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.BackendServiceOutlierDetectionIntervalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.BackendServiceOutlierDetectionInterval.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

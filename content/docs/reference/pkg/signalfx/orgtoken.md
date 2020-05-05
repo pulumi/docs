@@ -1003,6 +1003,9 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenDpmLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenDpmLimitsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.OrgTokenDpmLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.OrgTokenDpmLimits.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1117,6 +1120,9 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenHostOrUsageLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenHostOrUsageLimitsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.OrgTokenHostOrUsageLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.OrgTokenHostOrUsageLimits.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

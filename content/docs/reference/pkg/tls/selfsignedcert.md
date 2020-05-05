@@ -1623,6 +1623,9 @@ certificate will become invalid.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#SelfSignedCertSubjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#SelfSignedCertSubjectOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.Inputs.SelfSignedCertSubjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.Outputs.SelfSignedCertSubject.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

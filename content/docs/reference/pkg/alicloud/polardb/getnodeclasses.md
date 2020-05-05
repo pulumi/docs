@@ -25,14 +25,14 @@ import * as alicloud from "@pulumi/alicloud";
 const resourcesZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "PolarDB",
 }, { async: true }));
-const resourcesNodeClasses = resourcesZones.apply(resourcesZones => alicloud.polardb.getNodeClasses({
+const resourcesPolardbNodeClasses = resourcesZones.apply(resourcesZones => alicloud.PolardbNodeClasses({
     dbType: "MySQL",
     dbVersion: "5.6",
     payType: "Postpaid",
     zoneId: resourcesZones.zones[0].id,
 }, { async: true }));
 
-export const firstPolardbNodeClass = resourcesNodeClasses.classes;
+export const firstPolardbNodeClass = resourcesPolardbNodeClasses.classes;
 ```
 
 {{% /example %}}
@@ -710,6 +710,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb?tab=doc#GetNodeClassesClass">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.PolarDB.Outputs.GetNodeClassesClass.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -824,6 +827,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb?tab=doc#GetNodeClassesClassSupportedEngine">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.PolarDB.Outputs.GetNodeClassesClassSupportedEngine.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -940,6 +946,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb?tab=doc#GetNodeClassesClassSupportedEngineAvailableResource">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.PolarDB.Outputs.GetNodeClassesClassSupportedEngineAvailableResource.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1012,4 +1021,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+</dl>
 

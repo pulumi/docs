@@ -2153,6 +2153,9 @@ create the disk. Provide this when creating the disk.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskDiskEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskDiskEncryptionKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionDiskDiskEncryptionKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionDiskDiskEncryptionKey.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2166,7 +2169,8 @@ create the disk. Provide this when creating the disk.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2202,7 +2206,8 @@ encryption key that protects this resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2238,7 +2243,8 @@ encryption key that protects this resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2274,7 +2280,8 @@ encryption key that protects this resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2312,6 +2319,9 @@ encryption key that protects this resource.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskSourceSnapshotEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskSourceSnapshotEncryptionKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionDiskSourceSnapshotEncryptionKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionDiskSourceSnapshotEncryptionKey.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2325,7 +2335,8 @@ encryption key that protects this resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2361,7 +2372,8 @@ encryption key that protects this resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2397,7 +2409,8 @@ encryption key that protects this resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2433,7 +2446,8 @@ encryption key that protects this resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -1251,6 +1251,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/analysisservices?tab=doc#ServerIpv4FirewallRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/analysisservices?tab=doc#ServerIpv4FirewallRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AnalysisServices.Inputs.ServerIpv4FirewallRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AnalysisServices.Outputs.ServerIpv4FirewallRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

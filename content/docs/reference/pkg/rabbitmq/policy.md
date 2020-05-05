@@ -723,6 +723,9 @@ described below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#PolicyPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#PolicyPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.RabbitMQ.Inputs.PolicyPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.RabbitMQ.Outputs.PolicyPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

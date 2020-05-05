@@ -24,8 +24,8 @@ openstack.loadbalancer.Member resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const members1 = new openstack.loadbalancer.Members("members_1", {
-    members: [
+const members1 = new openstack.LbMembersV2("members_1", {
+    member: [
         {
             address: "192.168.199.23",
             protocolPort: 8080,

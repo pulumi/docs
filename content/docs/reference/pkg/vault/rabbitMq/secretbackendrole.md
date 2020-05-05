@@ -767,6 +767,9 @@ Must be unique within the backend.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/rabbitMq?tab=doc#SecretBackendRoleVhostArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/rabbitMq?tab=doc#SecretBackendRoleVhostOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.RabbitMQ.Inputs.SecretBackendRoleVhostArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.RabbitMQ.Outputs.SecretBackendRoleVhost.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

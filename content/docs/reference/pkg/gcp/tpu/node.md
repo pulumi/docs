@@ -1439,6 +1439,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeNetworkEndpointOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.Outputs.NodeNetworkEndpoint.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1545,6 +1548,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeSchedulingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeSchedulingConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.Inputs.NodeSchedulingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.Outputs.NodeSchedulingConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

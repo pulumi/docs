@@ -28,7 +28,7 @@ Basic Usage
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const newInstance = new alicloud.ddos.DdosCooInstance("newInstance", {
+const newInstance = new alicloud.dns.DdosCooInstance("newInstance", {
     bandwidth: "30",
     baseBandwidth: "30",
     domainCount: "50",

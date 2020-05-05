@@ -23,10 +23,10 @@ Provides a DMS Enterprise Instance resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultEnterpriseInstance = new alicloud.dms.EnterpriseInstance("default", {
+const defaultDmsEnterpriseInstance = new alicloud.DmsEnterpriseInstance("default", {
     databasePassword: "Yourpassword123",
     databaseUser: "your_user_name",
-    dbaUid: Number.parseFloat("1182725234xxxxxxx"),
+    dbaUid: "1182725234xxxxxxx",
     ecsRegion: "cn-shanghai",
     envType: "test",
     exportTimeout: 600,
@@ -38,7 +38,7 @@ const defaultEnterpriseInstance = new alicloud.dms.EnterpriseInstance("default",
     port: 3306,
     queryTimeout: 60,
     safeRule: "自由操作",
-    tid: 12345,
+    tid: "12345",
 });
 ```
 {{% /example %}}
