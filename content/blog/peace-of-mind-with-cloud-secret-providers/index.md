@@ -170,7 +170,7 @@ Creating the key is enough to allow us to start using it for our encryption prov
 
 ## Scoping Permission to our Key
 
-Generally, in AWS, you scope access to resources using IAM roles. However, for sensitive values like KMS keys, IAM roles alone aren't enough to provide the security you might need. As an example, if someone in your AWS account as an IAM role with the following policy attached:
+Generally, in AWS, you scope access to resources using IAM roles. However, for sensitive values like KMS keys, IAM roles alone aren't enough to provide the security you might need. As an example, if someone in your AWS account has an IAM role with the following policy attached:
 
 ```json
 {
@@ -565,7 +565,7 @@ config:
 Now we've initialized our stack we can add a secret configuration value using the secret flag and see the encrypted config value in the stack configuration:
 
 ```bash
-pulumi config set --secret <projectname>:supersecret correct-horse-battery-stable
+pulumi config set --secret supersecret correct-horse-battery-stable
 ```
 
 ## Verify the encryption
@@ -651,7 +651,7 @@ class AnotherStack : Stack
 
 {{< /chooser >}}
 
-Now we need to verify if the value is _actually_ encrypted. An easy way to do that is to try and export the secret value without access to the key. Let's unset the AWS_PROFILE environment variable and then rerun `Pulumi up`:
+Now we need to verify if the value is _actually_ encrypted. An easy way to do that is to try and export the secret value without access to the key. Let's unset the AWS_PROFILE environment variable and then rerun `pulumi up`:
 
 ```bash
 unset AWS_PROFILE
