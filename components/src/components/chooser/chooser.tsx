@@ -2,6 +2,7 @@ import { Component, Element, h, Listen, Prop, State } from "@stencil/core";
 import { Store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { setLanguage, setK8sLanguage, setOS, setCloud } from "../../store/actions/preferences";
+import * as Cookies from "js-cookie";
 
 export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic"
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx"
@@ -194,6 +195,7 @@ export class Chooser {
     }
 
     render() {
+        this.selectSpecifiedLanguage()
         return [
             <ul>
                 {
@@ -207,6 +209,14 @@ export class Chooser {
             </ul>,
             <slot></slot>
         ];
+    }
+    
+    // Sets the chooser language based on value set in cookie `pulumi_language`.
+    private selectSpecifiedLanguage() {
+        const lang = Cookies.default.get("pulumi_language")
+        if (lang) {
+            this.selection = (lang === "nodejs" ? "typescript" : lang) as LanguageKey;
+        }
     }
 
     // The choosable elements of this chooser, if any.
