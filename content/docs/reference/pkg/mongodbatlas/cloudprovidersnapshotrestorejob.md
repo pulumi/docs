@@ -1336,6 +1336,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#CloudProviderSnapshotRestoreJobDeliveryTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#CloudProviderSnapshotRestoreJobDeliveryTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Inputs.CloudProviderSnapshotRestoreJobDeliveryTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.CloudProviderSnapshotRestoreJobDeliveryType.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

@@ -50,7 +50,7 @@ const cluster = new alicloud.adb.Cluster("cluster", {
     payType: "PostPaid",
     vswitchId: defaultSwitch.id,
 });
-const connection = new alicloud.adb.Connection("connection", {
+const connection = new alicloud.AdbConnection("connection", {
     connectionPrefix: "testabc",
     dbClusterId: cluster.id,
 });

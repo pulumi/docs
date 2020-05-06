@@ -274,7 +274,7 @@ if any.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -389,7 +389,7 @@ If unspecified, defaults to EXTERNAL.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -504,7 +504,7 @@ If unspecified, defaults to EXTERNAL.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -619,7 +619,7 @@ If unspecified, defaults to EXTERNAL.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1093,7 +1093,7 @@ if any.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1244,7 +1244,7 @@ If unspecified, defaults to EXTERNAL.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1395,7 +1395,7 @@ If unspecified, defaults to EXTERNAL.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1546,7 +1546,7 @@ If unspecified, defaults to EXTERNAL.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -1085,6 +1085,9 @@ the domain will accept email for sub-domains.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mailgun/sdk/v2/go/mailgun/?tab=doc#DomainReceivingRecordOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mailgun/Pulumi.Mailgun.Outputs.DomainReceivingRecord.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1271,6 +1274,9 @@ the domain will accept email for sub-domains.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mailgun/sdk/v2/go/mailgun/?tab=doc#DomainSendingRecordOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mailgun/Pulumi.Mailgun.Outputs.DomainSendingRecord.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

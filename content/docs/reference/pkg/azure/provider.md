@@ -938,6 +938,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderFeaturesArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Inputs.ProviderFeaturesArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1077,6 +1080,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderFeaturesKeyVaultArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Inputs.ProviderFeaturesKeyVaultArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1184,6 +1190,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderFeaturesVirtualMachineArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Inputs.ProviderFeaturesVirtualMachineArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1258,6 +1267,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#ProviderFeaturesVirtualMachineScaleSetArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Inputs.ProviderFeaturesVirtualMachineScaleSetArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 

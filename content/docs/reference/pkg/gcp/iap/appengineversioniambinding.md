@@ -1147,6 +1147,9 @@ If it is not provided, the project will be parsed from the identifier of the par
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap?tab=doc#AppEngineVersionIamBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap?tab=doc#AppEngineVersionIamBindingConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iap.Inputs.AppEngineVersionIamBindingConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iap.Outputs.AppEngineVersionIamBindingCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

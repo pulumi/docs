@@ -260,7 +260,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -376,7 +376,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -492,7 +492,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -608,7 +608,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1047,7 +1047,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1190,7 +1190,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1333,7 +1333,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1476,7 +1476,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this address. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

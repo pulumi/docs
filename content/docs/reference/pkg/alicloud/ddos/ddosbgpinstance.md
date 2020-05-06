@@ -26,7 +26,7 @@ Basic Usage
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instance = new alicloud.ddos.DdosBgpInstance("instance", {
+const instance = new alicloud.dns.DdosBgpInstance("instance", {
     bandwidth: 201,
     baseBandwidth: 20,
     ipCount: 100,

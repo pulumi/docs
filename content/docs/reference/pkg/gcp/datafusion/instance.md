@@ -1862,6 +1862,9 @@ available, such as support for streaming pipelines, higher number of concurrent 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#InstanceNetworkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#InstanceNetworkConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.Inputs.InstanceNetworkConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.Outputs.InstanceNetworkConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

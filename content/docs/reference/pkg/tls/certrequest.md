@@ -983,6 +983,9 @@ a nested configuration block whose structure is described below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#CertRequestSubjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#CertRequestSubjectOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.Inputs.CertRequestSubjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.Outputs.CertRequestSubject.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

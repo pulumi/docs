@@ -24,7 +24,7 @@ import * as gcp from "@pulumi/gcp";
 const production_instance = new gcp.bigtable.Instance("production-instance", {
     clusters: [{
         clusterId: "tf-instance-cluster",
-        numNodes: 3,
+        numNodes: 1,
         storageType: "HDD",
         zone: "us-central1-b",
     }],
@@ -867,6 +867,9 @@ is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#InstanceClusterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#InstanceClusterOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.Inputs.InstanceClusterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.Outputs.InstanceCluster.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -901,7 +904,7 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in your Cloud Bigtable cluster.
-Required, with a minimum of `3` for a `PRODUCTION` instance. Must be left unset
+Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
 for a `DEVELOPMENT` instance.
 {{% /md %}}</dd>
 
@@ -949,7 +952,7 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in your Cloud Bigtable cluster.
-Required, with a minimum of `3` for a `PRODUCTION` instance. Must be left unset
+Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
 for a `DEVELOPMENT` instance.
 {{% /md %}}</dd>
 
@@ -997,7 +1000,7 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in your Cloud Bigtable cluster.
-Required, with a minimum of `3` for a `PRODUCTION` instance. Must be left unset
+Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
 for a `DEVELOPMENT` instance.
 {{% /md %}}</dd>
 
@@ -1045,7 +1048,7 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in your Cloud Bigtable cluster.
-Required, with a minimum of `3` for a `PRODUCTION` instance. Must be left unset
+Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
 for a `DEVELOPMENT` instance.
 {{% /md %}}</dd>
 

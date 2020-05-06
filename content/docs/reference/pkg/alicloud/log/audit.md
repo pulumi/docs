@@ -26,15 +26,15 @@ Basic Usage
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const example = new alicloud.log.Audit("example", {
+const example = new alicloud.LogAudit("example", {
     aliuid: "12345678",
     displayName: "tf-audit-test",
-    variableMap: {
-        actiontrail_enabled: "true",
-        actiontrail_ttl: "180",
-        oss_access_enabled: "true",
-        oss_access_ttl: "180",
-    },
+    variableMap: [{
+        actiontrailEnabled: "true",
+        actiontrailTtl: "180",
+        ossAccessEnabled: "true",
+        ossAccessTtl: "180",
+    }],
 });
 ```
 Multiple accounts Usage
@@ -43,19 +43,19 @@ Multiple accounts Usage
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const example = new alicloud.log.Audit("example", {
+const example = new alicloud.LogAudit("example", {
     aliuid: "12345678",
     displayName: "tf-audit-test",
-    multiAccounts: [
+    multiAccount: [
         "123456789123",
         "12345678912300123",
     ],
-    variableMap: {
-        actiontrail_enabled: "true",
-        actiontrail_ttl: "180",
-        oss_access_enabled: "true",
-        oss_access_ttl: "180",
-    },
+    variableMap: [{
+        actiontrailEnabled: "true",
+        actiontrailTtl: "180",
+        ossAccessEnabled: "true",
+        ossAccessTtl: "180",
+    }],
 });
 ```
 

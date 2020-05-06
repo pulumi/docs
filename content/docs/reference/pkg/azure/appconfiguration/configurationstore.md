@@ -1187,6 +1187,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appconfiguration?tab=doc#ConfigurationStorePrimaryReadKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppConfiguration.Outputs.ConfigurationStorePrimaryReadKey.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1337,6 +1340,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appconfiguration?tab=doc#ConfigurationStorePrimaryWriteKeyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppConfiguration.Outputs.ConfigurationStorePrimaryWriteKey.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1489,6 +1495,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appconfiguration?tab=doc#ConfigurationStoreSecondaryReadKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppConfiguration.Outputs.ConfigurationStoreSecondaryReadKey.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1639,6 +1648,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appconfiguration?tab=doc#ConfigurationStoreSecondaryWriteKeyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppConfiguration.Outputs.ConfigurationStoreSecondaryWriteKey.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

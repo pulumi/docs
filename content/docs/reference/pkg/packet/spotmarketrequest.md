@@ -972,6 +972,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#SpotMarketRequestInstanceParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#SpotMarketRequestInstanceParametersOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Inputs.SpotMarketRequestInstanceParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Outputs.SpotMarketRequestInstanceParameters.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

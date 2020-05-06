@@ -855,6 +855,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/gcp?tab=doc#IntegrationProjectServiceKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/gcp?tab=doc#IntegrationProjectServiceKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Gcp.Inputs.IntegrationProjectServiceKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Gcp.Outputs.IntegrationProjectServiceKey.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

@@ -1007,6 +1007,9 @@ default, we do not delete missing properties.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/profile?tab=doc#MappingMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/profile?tab=doc#MappingMappingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Profile.Inputs.MappingMappingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Profile.Outputs.MappingMapping.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

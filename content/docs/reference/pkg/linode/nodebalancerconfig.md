@@ -1759,6 +1759,9 @@ the response body of a check request, the backend is considered to be down
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#NodeBalancerConfigNodeStatusOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.NodeBalancerConfigNodeStatus.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

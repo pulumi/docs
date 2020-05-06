@@ -1043,6 +1043,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/endpoints?tab=doc#ServiceApiOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Endpoints.Outputs.ServiceApi.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1214,6 +1217,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/endpoints?tab=doc#ServiceApiMethodOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Endpoints.Outputs.ServiceApiMethod.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1384,6 +1390,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/endpoints?tab=doc#ServiceEndpointOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Endpoints.Outputs.ServiceEndpoint.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
