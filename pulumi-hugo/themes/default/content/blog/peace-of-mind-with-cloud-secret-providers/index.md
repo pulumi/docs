@@ -550,13 +550,13 @@ class KeyStack : Stack
 
 {{< /chooser >}}
 
-In this example, we've created an IAM role which is permitted full access to the key defined in the key policy, and we've also given _read_ permissions to the key to everyone in the account. Let's set some configuration variables so we can be sure we can use this key for our next Pulumi stack:
+In this example, we've created a key policy which allows full access to a defined IAM role, and we've also given _read_ permissions to the key to everyone in this AWS account. We've made the IAM role configurable, so let's set the IAM role now so we can be sure we can use this key for our next Pulumi stack:
 
 ```bash
 # Get the current AWS account ID and set it as a config variable
-aws sts get-caller-identity | jq .Account -r | pulumi config set <projectname>:accountID
+aws sts get-caller-identity | jq .Account -r | pulumi config set accountID
 # Get the current IAM role we're using as set it as a config variable
-aws sts get-caller-identity | jq .Arn -r | pulumi config set <projectname>:iamRole
+aws sts get-caller-identity | jq .Arn -r | pulumi config set iamRole
 ```
 
 ## Initialize a New Stack
