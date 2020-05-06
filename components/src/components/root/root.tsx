@@ -4,6 +4,7 @@ import { Store } from "@stencil/redux";
 import { configureStore } from "../../store";
 import { LanguageKey } from "../chooser/chooser";
 import { setLanguage } from "../../store/actions/preferences";
+import { getQueryVariable } from "../../util/util";
 
 @Component({
     tag: "pulumi-root",
@@ -42,14 +43,21 @@ export class Root {
     }
 
     private setSelectedLanguage() {
-        // Parse and set language from anchor tag if present.
+
+        // Check if language is specified in the query params and set language if present.
+        const queryParamLanguage = getQueryVariable("language");
+        if(queryParamLanguage){
+            this.setLanguage(queryParamLanguage as LanguageKey);
+        }
+
+        // Parse and set language from anchor tag if present, this will override what the query param says if
+        // both are present because the anchor will not work otherwise.
         const anchorTag = window.location.hash;
         if (anchorTag) {
             const matches = /[^~]*$/gm.exec(anchorTag);
             if (matches) {
                 const language = matches[0];
                 this.setLanguage(language as LanguageKey);
-
             }
         }
     }
