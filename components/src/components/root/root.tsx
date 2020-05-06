@@ -30,7 +30,7 @@ export class Root {
     }
 
     componentDidRender() {
-        
+
         // Since this element initializes the store, dispatch a DOM event letting
         // listeners know when rendering is complete.
         this.rendered.emit();

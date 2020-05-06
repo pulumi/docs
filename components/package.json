@@ -22,7 +22,6 @@
     "@stencil/core": "^1.8.8",
     "@stencil/redux": "^0.1.2",
     "@stencil/sass": "^1.1.1",
-    "js-cookie": "^2.2.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
