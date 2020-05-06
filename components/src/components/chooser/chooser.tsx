@@ -114,9 +114,12 @@ export class Chooser {
     setCloud: typeof setCloud;
 
     componentWillLoad() {
-
         // Translate the set of options provided into choices.
         this.parseOptions();
+    }
+
+    componentDidLoad() {
+        this.selectSpecifiedLanguage()
     }
 
     componentDidUnload() {
@@ -195,7 +198,6 @@ export class Chooser {
     }
 
     render() {
-        this.selectSpecifiedLanguage()
         return [
             <ul>
                 {
@@ -215,7 +217,7 @@ export class Chooser {
     private selectSpecifiedLanguage() {
         const lang = Cookies.default.get("pulumi_language")
         if (lang) {
-            this.selection = (lang === "nodejs" ? "typescript" : lang) as LanguageKey;
+            this.selection = lang === "nodejs" ? "typescript" : lang as LanguageKey;
         }
     }
 
