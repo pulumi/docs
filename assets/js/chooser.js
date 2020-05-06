@@ -169,17 +169,6 @@ $(document).on("rendered", function() {
         }
     });
 
-    // Parse and set language from anchor tag if present.
-    var anchorTag = window.location.hash;
-    if (anchorTag) {
-        var matches = /[^~]*$/gm.exec(anchorTag);
-        if (matches) {
-            var language = matches[0];
-            selectChoice("language", language);
-        }
-    }
-    
-
     // If no language is chosen yet, default to TypeScript.
     hideShowChoices("language", selectLanguage, "typescript");
 
