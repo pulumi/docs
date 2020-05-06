@@ -170,12 +170,12 @@ $(document).on("rendered", function() {
     });
 
     // Parse and set language from anchor tag if present.
-    var url = window.location.href
+    var url = window.location.href;
     var anchorTag = url.includes("#") ? url.substring(url.indexOf("#")+1) : "";
     if (anchorTag) {
         var matches = /[^~]*$/gm.exec(anchorTag);
         if (matches) {
-            var language = matches[0]
+            var language = matches[0];
             selectChoice("language", language);
         }
     }

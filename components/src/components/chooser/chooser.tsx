@@ -119,7 +119,7 @@ export class Chooser {
     }
 
     componentDidLoad() {
-        this.selectSpecifiedLanguage()
+        this.selectSpecifiedLanguage();
     }
 
     componentDidUnload() {
@@ -215,7 +215,7 @@ export class Chooser {
     
     // Sets the chooser language based on value set in cookie `pulumi_language`.
     private selectSpecifiedLanguage() {
-        const lang = Cookies.default.get("pulumi_language")
+        const lang = Cookies.default.get("pulumi_language");
         if (lang) {
             this.selection = lang === "nodejs" ? "typescript" : lang as LanguageKey;
         }
