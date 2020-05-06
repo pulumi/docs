@@ -959,6 +959,9 @@ token that the agent provides by default.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#KeyPrefixSubkeyCollectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#KeyPrefixSubkeyCollectionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Inputs.KeyPrefixSubkeyCollectionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Outputs.KeyPrefixSubkeyCollection.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

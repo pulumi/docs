@@ -63,6 +63,21 @@ const bar = new gcp.compute.ResourcePolicy("bar", {
     },
 });
 ```
+## Example Usage - Resource Policy Placement Policy
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const baz = new gcp.compute.ResourcePolicy("baz", {
+    groupPlacementPolicy: [{
+        collocation: "COLLOCATED",
+        vmCount: 2,
+    }],
+    region: "us-central1",
+});
+```
 
 
 
@@ -75,7 +90,7 @@ const bar = new gcp.compute.ResourcePolicy("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourcePolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>snapshot_schedule_policy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourcePolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>group_placement_policy=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>snapshot_schedule_policy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -249,6 +264,15 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
+        <span>Group<wbr>Placement<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -296,6 +320,15 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Placement<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -349,6 +382,15 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>group<wbr>Placement<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -396,6 +438,15 @@ If it is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group_<wbr>placement_<wbr>policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Dict[Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -566,7 +617,7 @@ Get an existing ResourcePolicy resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>snapshot_schedule_policy=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>group_placement_policy=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>snapshot_schedule_policy=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -682,6 +733,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Group<wbr>Placement<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -738,6 +798,15 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Placement<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -800,6 +869,15 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>group<wbr>Placement<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -856,6 +934,15 @@ If it is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group_<wbr>placement_<wbr>policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Dict[Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -924,6 +1011,176 @@ If it is not provided, the provider project is used.
 ## Supporting Types
 
 
+<h4 id="resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicyGroupPlacementPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicyGroupPlacementPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyGroupPlacementPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyGroupPlacementPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicyGroupPlacementPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicyGroupPlacementPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Domain<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
+availability domain, they will not be put in the same low latency network
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Collocation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
+with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
+attached.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vm<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of vms in this placement group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Domain<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
+availability domain, they will not be put in the same low latency network
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Collocation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
+with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
+attached.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vm<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of vms in this placement group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Domain<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
+availability domain, they will not be put in the same low latency network
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>collocation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
+with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
+attached.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>vm<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of vms in this placement group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Domain<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
+availability domain, they will not be put in the same low latency network
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>collocation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
+with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
+attached.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>vm<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Number of vms in this placement group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicy">output</a> API doc for this type.
@@ -931,6 +1188,9 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1083,6 +1343,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyRetentionPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1205,6 +1468,9 @@ Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicySchedule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1357,6 +1623,9 @@ Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1475,6 +1744,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1595,6 +1867,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1673,6 +1948,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1792,6 +2070,9 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicySnapshotProperties.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -710,6 +710,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/template?tab=doc#EmailTranslationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/template?tab=doc#EmailTranslationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Template.Inputs.EmailTranslationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Template.Outputs.EmailTranslation.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

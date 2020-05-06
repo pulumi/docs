@@ -27,7 +27,7 @@ modify, and delete Load Balancers.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>vpc_uuid=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_backend_keepalive=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>vpc_uuid=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -249,6 +249,15 @@ or `least_connections`. The default value is `round_robin`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Enable<wbr>Backend<wbr>Keepalive</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Enable<wbr>Proxy<wbr>Protocol</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
@@ -360,6 +369,15 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Backend<wbr>Keepalive</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -479,6 +497,15 @@ or `least_connections`. The default value is `round_robin`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>enable<wbr>Backend<wbr>Keepalive</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>enable<wbr>Proxy<wbr>Protocol</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
@@ -590,6 +617,15 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable_<wbr>backend_<wbr>keepalive</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -842,7 +878,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>ip=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>urn=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_backend_keepalive=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>ip=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>urn=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -987,6 +1023,15 @@ or `least_connections`. The default value is `round_robin`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Enable<wbr>Backend<wbr>Keepalive</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Enable<wbr>Proxy<wbr>Protocol</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
@@ -1123,6 +1168,15 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Backend<wbr>Keepalive</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1267,6 +1321,15 @@ or `least_connections`. The default value is `round_robin`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>enable<wbr>Backend<wbr>Keepalive</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>enable<wbr>Proxy<wbr>Protocol</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
@@ -1403,6 +1466,15 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable_<wbr>backend_<wbr>keepalive</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

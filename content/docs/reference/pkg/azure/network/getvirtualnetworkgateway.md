@@ -755,6 +755,9 @@ for this Virtual Network Gateway.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetVirtualNetworkGatewayBgpSetting">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetVirtualNetworkGatewayBgpSetting.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -917,6 +920,9 @@ on the on-premises VPN devices.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetVirtualNetworkGatewayIpConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetVirtualNetworkGatewayIpConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1124,6 +1130,9 @@ network can contain at most a single Virtual Network Gateway.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetVirtualNetworkGatewayVpnClientConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetVirtualNetworkGatewayVpnClientConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1416,6 +1425,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetVirtualNetworkGatewayVpnClientConfigurationRevokedCertificate">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetVirtualNetworkGatewayVpnClientConfigurationRevokedCertificate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1527,6 +1539,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetVirtualNetworkGatewayVpnClientConfigurationRootCertificate">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetVirtualNetworkGatewayVpnClientConfigurationRootCertificate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1635,4 +1650,16 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+</dl>
 

@@ -1535,6 +1535,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/jwt?tab=doc#AuthBackendTuneArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/jwt?tab=doc#AuthBackendTuneOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Jwt.Inputs.AuthBackendTuneArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Jwt.Outputs.AuthBackendTune.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

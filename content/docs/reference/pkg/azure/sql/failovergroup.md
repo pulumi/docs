@@ -1187,6 +1187,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql?tab=doc#FailoverGroupPartnerServerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql?tab=doc#FailoverGroupPartnerServerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sql.Inputs.FailoverGroupPartnerServerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sql.Outputs.FailoverGroupPartnerServer.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1338,6 +1341,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql?tab=doc#FailoverGroupReadWriteEndpointFailoverPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql?tab=doc#FailoverGroupReadWriteEndpointFailoverPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sql.Inputs.FailoverGroupReadWriteEndpointFailoverPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sql.Outputs.FailoverGroupReadWriteEndpointFailoverPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1452,6 +1458,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql?tab=doc#FailoverGroupReadonlyEndpointFailoverPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sql?tab=doc#FailoverGroupReadonlyEndpointFailoverPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sql.Inputs.FailoverGroupReadonlyEndpointFailoverPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sql.Outputs.FailoverGroupReadonlyEndpointFailoverPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

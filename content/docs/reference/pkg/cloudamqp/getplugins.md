@@ -295,6 +295,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#GetPluginsPluginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#GetPluginsPlugin">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.CloudAmqp.Inputs.GetPluginsPluginArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.CloudAmqp.Outputs.GetPluginsPlugin.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -459,4 +462,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-cloudamqp">https://github.com/pulumi/pulumi-cloudamqp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).</dd>
+</dl>
 

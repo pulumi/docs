@@ -752,6 +752,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/bot?tab=doc#ChannelDirectLineSiteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/bot?tab=doc#ChannelDirectLineSiteOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Bot.Inputs.ChannelDirectLineSiteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Bot.Outputs.ChannelDirectLineSite.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

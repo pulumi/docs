@@ -20,7 +20,7 @@ Use this data source to get information on an existing backup plan.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.backup.getPlan({
+const example = pulumi.output(aws.BackupPlan({
     planId: "tf_example_backup_plan_id",
 }, { async: true }));
 ```

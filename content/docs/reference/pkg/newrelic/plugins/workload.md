@@ -24,12 +24,13 @@ variable with your Personal API key,
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const foo = new newrelic.plugins.Workload("foo", {
+const foo = new newrelic.Workload("foo", {
     accountId: 12345678,
     entityGuids: ["MjUyMDUyOHxBUE18QVBQTElDQVRJT058MjE1MDM3Nzk1"],
     entitySearchQueries: [{
         query: "name like 'Example application'",
     }],
+    name: "Example workload",
     scopeAccountIds: [12345678],
 });
 ```

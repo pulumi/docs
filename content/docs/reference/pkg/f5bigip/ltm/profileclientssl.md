@@ -4183,6 +4183,9 @@ There can be only one SSL profile with this setting enabled.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#ProfileClientSslCertKeyChainArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#ProfileClientSslCertKeyChainOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Ltm.Inputs.ProfileClientSslCertKeyChainArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Ltm.Outputs.ProfileClientSslCertKeyChain.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

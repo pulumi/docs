@@ -1265,6 +1265,9 @@ error to specify a regex that does not include exactly one capture group.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.MetricBucketOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.MetricBucketOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1424,6 +1427,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsExplicitBucketsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsExplicitBucketsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.MetricBucketOptionsExplicitBucketsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.MetricBucketOptionsExplicitBuckets.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1502,6 +1508,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsExponentialBucketsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsExponentialBucketsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.MetricBucketOptionsExponentialBucketsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.MetricBucketOptionsExponentialBuckets.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1654,6 +1663,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsLinearBucketsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsLinearBucketsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.MetricBucketOptionsLinearBucketsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.MetricBucketOptionsLinearBuckets.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1804,6 +1816,9 @@ Each bucket represents a constant absolute uncertainty on the specific value in 
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricMetricDescriptorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricMetricDescriptorOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.MetricMetricDescriptorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.MetricMetricDescriptor.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2063,6 +2078,9 @@ or just for responses that failed.  Structure is documented below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricMetricDescriptorLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricMetricDescriptorLabelOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.MetricMetricDescriptorLabel.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -1815,6 +1815,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardChartArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardChartOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.DashboardChartArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.DashboardChart.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2038,6 +2041,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardColumnArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardColumnOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.DashboardColumnArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.DashboardColumn.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2224,6 +2230,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardEventOverlayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardEventOverlayOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.DashboardEventOverlayArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.DashboardEventOverlay.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2484,6 +2493,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardEventOverlaySourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardEventOverlaySourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.DashboardEventOverlaySourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.DashboardEventOverlaySource.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2634,6 +2646,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardFilterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.DashboardFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.DashboardFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2822,6 +2837,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGridArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGridOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.DashboardGridArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.DashboardGrid.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2972,6 +2990,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardSelectedEventOverlayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardSelectedEventOverlayOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.DashboardSelectedEventOverlayArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.DashboardSelectedEventOverlay.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3124,6 +3145,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardSelectedEventOverlaySourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardSelectedEventOverlaySourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.DashboardSelectedEventOverlaySourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.DashboardSelectedEventOverlaySource.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3274,6 +3298,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardVariableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardVariableOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.DashboardVariableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.DashboardVariable.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

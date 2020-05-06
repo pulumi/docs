@@ -280,8 +280,8 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -367,8 +367,8 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -454,8 +454,8 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -541,8 +541,8 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Dict[Node<wbr>Template<wbr>Server<wbr>Binding]</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -915,8 +915,8 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1020,8 +1020,8 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1125,8 +1125,8 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1230,8 +1230,8 @@ If it is not provided, the provider region is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Dict[Node<wbr>Template<wbr>Server<wbr>Binding]</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1256,6 +1256,9 @@ maintenance event.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateNodeTypeFlexibilityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateNodeTypeFlexibilityOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.NodeTemplateNodeTypeFlexibilityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.NodeTemplateNodeTypeFlexibility.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1411,6 +1414,9 @@ Use local SSD
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateServerBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateServerBindingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.NodeTemplateServerBindingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.NodeTemplateServerBinding.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

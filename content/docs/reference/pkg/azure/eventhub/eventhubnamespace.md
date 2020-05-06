@@ -1419,6 +1419,9 @@ authorization rule `RootManageSharedAccessKey`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespaceNetworkRulesetsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespaceNetworkRulesetsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventHubNamespaceNetworkRulesetsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventHubNamespaceNetworkRulesets.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1570,6 +1573,9 @@ authorization rule `RootManageSharedAccessKey`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespaceNetworkRulesetsIpRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespaceNetworkRulesetsIpRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventHubNamespaceNetworkRulesetsIpRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventHubNamespaceNetworkRulesetsIpRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1684,6 +1690,9 @@ authorization rule `RootManageSharedAccessKey`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespaceNetworkRulesetsVirtualNetworkRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub?tab=doc#EventHubNamespaceNetworkRulesetsVirtualNetworkRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Inputs.EventHubNamespaceNetworkRulesetsVirtualNetworkRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventHub.Outputs.EventHubNamespaceNetworkRulesetsVirtualNetworkRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

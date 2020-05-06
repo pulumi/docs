@@ -1676,6 +1676,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationAppRoleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationAppRoleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.AzureAD.Inputs.ApplicationAppRoleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.AzureAD.Outputs.ApplicationAppRole.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1934,6 +1937,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationOauth2PermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationOauth2PermissionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.AzureAD.Inputs.ApplicationOauth2PermissionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.AzureAD.Outputs.ApplicationOauth2Permission.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2266,6 +2272,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationRequiredResourceAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationRequiredResourceAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.AzureAD.Inputs.ApplicationRequiredResourceAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.AzureAD.Outputs.ApplicationRequiredResourceAccess.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2380,6 +2389,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationRequiredResourceAccessResourceAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationRequiredResourceAccessResourceAccessOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.AzureAD.Inputs.ApplicationRequiredResourceAccessResourceAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azuread/Pulumi.AzureAD.Outputs.ApplicationRequiredResourceAccessResourceAccess.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

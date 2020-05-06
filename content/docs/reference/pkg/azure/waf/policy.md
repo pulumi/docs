@@ -971,6 +971,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyCustomRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyCustomRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Inputs.PolicyCustomRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Outputs.PolicyCustomRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1194,6 +1197,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyCustomRuleMatchConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyCustomRuleMatchConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Inputs.PolicyCustomRuleMatchConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Outputs.PolicyCustomRuleMatchCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1381,6 +1387,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyCustomRuleMatchConditionMatchVariableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyCustomRuleMatchConditionMatchVariableOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Inputs.PolicyCustomRuleMatchConditionMatchVariableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Outputs.PolicyCustomRuleMatchConditionMatchVariable.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1496,6 +1505,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Inputs.PolicyManagedRulesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Outputs.PolicyManagedRules.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1610,6 +1622,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesExclusionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesExclusionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Inputs.PolicyManagedRulesExclusionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Outputs.PolicyManagedRulesExclusion.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1757,6 +1772,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesManagedRuleSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesManagedRuleSetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Inputs.PolicyManagedRulesManagedRuleSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Outputs.PolicyManagedRulesManagedRuleSet.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1909,6 +1927,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesManagedRuleSetRuleGroupOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesManagedRuleSetRuleGroupOverrideOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Inputs.PolicyManagedRulesManagedRuleSetRuleGroupOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Outputs.PolicyManagedRulesManagedRuleSetRuleGroupOverride.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2023,6 +2044,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyPolicySettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyPolicySettingsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Inputs.PolicyPolicySettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Waf.Outputs.PolicyPolicySettings.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

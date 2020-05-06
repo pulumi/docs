@@ -22,8 +22,8 @@ Get information on an EC2 Transit Gateway Peering Attachment.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
-    filters: [{
+const example = pulumi.output(aws.Ec2TransitGatewayPeeringAttachment({
+    filter: [{
         name: "transit-gateway-attachment-id",
         values: ["tgw-attach-12345678"],
     }],
@@ -38,7 +38,7 @@ const example = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const attachment = pulumi.output(aws.ec2transitgateway.getPeeringAttachment({
+const attachment = pulumi.output(aws.Ec2TransitGatewayPeeringAttachment({
     id: "tgw-attach-12345678",
 }, { async: true }));
 ```

@@ -570,6 +570,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cr?tab=doc#GetReposRepo">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CR.Outputs.GetReposRepo.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -829,6 +832,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cr?tab=doc#GetReposRepoDomainList">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CR.Outputs.GetReposRepoDomainList.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -979,6 +985,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cr?tab=doc#GetReposRepoTag">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CR.Outputs.GetReposRepoTag.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1268,4 +1277,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+</dl>
 

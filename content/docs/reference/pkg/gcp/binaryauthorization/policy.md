@@ -983,6 +983,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyAdmissionWhitelistPatternArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyAdmissionWhitelistPatternOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyAdmissionWhitelistPatternArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.PolicyAdmissionWhitelistPattern.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1073,6 +1076,9 @@ part.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyClusterAdmissionRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyClusterAdmissionRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyClusterAdmissionRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.PolicyClusterAdmissionRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1288,6 +1294,9 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyDefaultAdmissionRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyDefaultAdmissionRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyDefaultAdmissionRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.PolicyDefaultAdmissionRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

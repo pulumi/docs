@@ -2001,6 +2001,9 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionEventTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionEventTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Inputs.FunctionEventTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Outputs.FunctionEventTrigger.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2164,6 +2167,9 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionEventTriggerFailurePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionEventTriggerFailurePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Inputs.FunctionEventTriggerFailurePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Outputs.FunctionEventTriggerFailurePolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2242,6 +2248,9 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionSourceRepositoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionSourceRepositoryOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Inputs.FunctionSourceRepositoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Outputs.FunctionSourceRepository.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

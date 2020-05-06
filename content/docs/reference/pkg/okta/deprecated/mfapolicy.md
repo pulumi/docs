@@ -1663,6 +1663,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyDuoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyDuoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicyDuoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicyDuo.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1769,6 +1772,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyFidoU2fArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyFidoU2fOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicyFidoU2fArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicyFidoU2f.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1877,6 +1883,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyFidoWebauthnArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyFidoWebauthnOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicyFidoWebauthnArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicyFidoWebauthn.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1983,6 +1992,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyGoogleOtpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyGoogleOtpOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicyGoogleOtpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicyGoogleOtp.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2091,6 +2103,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyOktaCallArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyOktaCallOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicyOktaCallArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicyOktaCall.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2197,6 +2212,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyOktaOtpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyOktaOtpOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicyOktaOtpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicyOktaOtp.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2305,6 +2323,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyOktaPasswordArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyOktaPasswordOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicyOktaPasswordArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicyOktaPassword.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2411,6 +2432,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyOktaPushArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyOktaPushOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicyOktaPushArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicyOktaPush.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2519,6 +2543,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyOktaQuestionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyOktaQuestionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicyOktaQuestionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicyOktaQuestion.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2625,6 +2652,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyOktaSmsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyOktaSmsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicyOktaSmsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicyOktaSms.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2733,6 +2763,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyRsaTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyRsaTokenOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicyRsaTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicyRsaToken.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2840,6 +2873,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicySymantecVipArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicySymantecVipOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicySymantecVipArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicySymantecVip.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2946,6 +2982,9 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyYubikeyTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyYubikeyTokenOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.MfaPolicyYubikeyTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.MfaPolicyYubikeyToken.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

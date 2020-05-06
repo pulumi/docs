@@ -2463,6 +2463,9 @@ Repositories are created as private by default.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#ProjectSharedWithGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#ProjectSharedWithGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.Inputs.ProjectSharedWithGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.Outputs.ProjectSharedWithGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

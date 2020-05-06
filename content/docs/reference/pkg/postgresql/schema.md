@@ -947,6 +947,9 @@ policy block supports fields documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#SchemaPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#SchemaPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.PostgreSql.Inputs.SchemaPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.PostgreSql.Outputs.SchemaPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

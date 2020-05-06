@@ -1399,6 +1399,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#VolumeAttachmentTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Outputs.VolumeAttachment.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1473,6 +1476,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#VolumeSnapshotPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#VolumeSnapshotPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Inputs.VolumeSnapshotPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.Outputs.VolumeSnapshotPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

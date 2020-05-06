@@ -1407,6 +1407,9 @@ parameters during deployment.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#StackScriptUserDefinedFieldArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#StackScriptUserDefinedFieldOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.StackScriptUserDefinedFieldArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.StackScriptUserDefinedField.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

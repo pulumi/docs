@@ -2407,6 +2407,9 @@ Instances in a region.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceAlertsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceAlertsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceAlertsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceAlerts.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2610,6 +2613,9 @@ Instances in a region.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceBackupsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceBackups.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2717,6 +2723,9 @@ Instances in a region.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceBackupsScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceBackupsSchedule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2823,6 +2832,9 @@ Instances in a region.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3191,6 +3203,9 @@ Instances in a region.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevices.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3494,6 +3509,9 @@ Instances in a region.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdaOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSda.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3644,6 +3662,9 @@ Instances in a region.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdbOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSdb.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3796,6 +3817,9 @@ Instances in a region.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdcOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSdc.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3946,6 +3970,9 @@ Instances in a region.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSddOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSddArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSdd.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4098,6 +4125,9 @@ Instances in a region.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSde.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4248,6 +4278,9 @@ Instances in a region.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdfArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdfOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdfArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSdf.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4400,6 +4433,9 @@ Instances in a region.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdgArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdgOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdgArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSdg.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4551,6 +4587,9 @@ Instances in a region.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdhArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigDevicesSdhOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigDevicesSdhArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigDevicesSdh.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4701,6 +4740,9 @@ Instances in a region.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigHelpersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceConfigHelpersOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceConfigHelpersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceConfigHelpers.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4920,6 +4962,9 @@ Instances in a region.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceDiskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Inputs.InstanceDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5347,6 +5392,9 @@ Instances in a region.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#InstanceSpecsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.InstanceSpecs.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

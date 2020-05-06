@@ -1,7 +1,8 @@
 
 ---
 title: "Downtime"
-block_external_search_index: true
+title_tag: "Resource Downtime | Package Datadog"
+meta_desc: "Explore the Downtime resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog downtime resource. This can be used to create and manage Datadog downtimes."
 ---
 
 
@@ -50,7 +51,7 @@ const foo = new datadog.Downtime("foo", {
 
 
 
-## Create a Downtime Resource
+## Create a Downtime Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -59,7 +60,7 @@ const foo = new datadog.Downtime("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Downtime</span><span class="p">(resource_name, opts=None, </span>active=None<span class="p">, </span>disabled=None<span class="p">, </span>end=None<span class="p">, </span>end_date=None<span class="p">, </span>message=None<span class="p">, </span>monitor_id=None<span class="p">, </span>monitor_tags=None<span class="p">, </span>recurrence=None<span class="p">, </span>scopes=None<span class="p">, </span>start=None<span class="p">, </span>start_date=None<span class="p">, </span>timezone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Downtime</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>disabled=None<span class="p">, </span>end=None<span class="p">, </span>end_date=None<span class="p">, </span>message=None<span class="p">, </span>monitor_id=None<span class="p">, </span>monitor_tags=None<span class="p">, </span>recurrence=None<span class="p">, </span>scopes=None<span class="p">, </span>start=None<span class="p">, </span>start_date=None<span class="p">, </span>timezone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -140,7 +141,7 @@ const foo = new datadog.Downtime("foo", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -217,7 +218,13 @@ const foo = new datadog.Downtime("foo", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Downtime Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Downtime resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -686,11 +693,79 @@ const foo = new datadog.Downtime("foo", {
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Downtime resource produces the following output properties:
 
 
 
 
-## Look up an Existing Downtime Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Downtime Resource {#look-up}
 
 Get an existing Downtime resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1281,13 +1356,17 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Downtime<wbr>Recurrence</h4>
+
+<h4 id="downtimerecurrence">Downtime<wbr>Recurrence</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#DowntimeRecurrence">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#DowntimeRecurrence">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#DowntimeRecurrenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#DowntimeRecurrenceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.DowntimeRecurrenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.DowntimeRecurrence.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1508,14 +1587,13 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-datadog">https://github.com/pulumi/pulumi-datadog</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
-	
 </dl>
 

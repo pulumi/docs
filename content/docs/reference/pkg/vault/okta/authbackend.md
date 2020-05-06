@@ -1295,6 +1295,9 @@ See below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendGroupTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendGroupTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Okta.Inputs.AuthBackendGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Okta.Outputs.AuthBackendGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1409,6 +1412,9 @@ See below for more details.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendUserTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendUserTypeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Okta.Inputs.AuthBackendUserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Okta.Outputs.AuthBackendUser.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
