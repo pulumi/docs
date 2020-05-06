@@ -169,15 +169,16 @@ pulumi.export('publicHostName', server.public_dns)
 
 ```csharp
 using Pulumi;
+using Pulumi.Aws;
+using Pulumi.Aws.Ec2;
+using Pulumi.Aws.Ec2.Inputs;
 using Pulumi.Aws.Inputs;
 
 class MyStack : Stack
 {
     public MyStack()
     {
-        var size = "t2.micro";     // t2.micro is available in the AWS free tier
-
-        var ami = Pulumi.Aws.GetAmi.InvokeAsync(new Pulumi.Aws.GetAmiArgs
+        var ami = Output.Create(GetAmi.InvokeAsync(new GetAmiArgs
         {
             Filters =
                 {
@@ -189,25 +190,32 @@ class MyStack : Stack
                 },
             Owners = { "137112412989" }, // This owner ID is Amazon
             MostRecent = true,
-        }).Result;
+        }));
 
-        var group = new Pulumi.Aws.Ec2.SecurityGroup("webserver-secgrp", new Pulumi.Aws.Ec2.SecurityGroupArgs
+        var group = new SecurityGroup("webserver-secgrp", new SecurityGroupArgs
         {
-            Ingress = new Pulumi.Aws.Ec2.Inputs.SecurityGroupIngressArgs
+            Ingress = new SecurityGroupIngressArgs
             {
                 Protocol = "tcp",
-                FromPort = 22,
-                ToPort = 22,
-                CidrBlocks = { "0.0.0.0/0" },
+                FromPort = 80,
+                ToPort = 80,
+                CidrBlocks = { "0.0.0.0/0" }
             },
         });
 
-        var server = new Pulumi.Aws.Ec2.Instance("webserver-www", new Pulumi.Aws.Ec2.InstanceArgs
+        var userData = @"
+                    #!/bin/bash
+                    echo ""Hello, World!"" > index.html
+                    nohup python -m SimpleHTTPServer 80 &
+                    ";
+
+        var server = new Instance("webserver-www", new InstanceArgs
         {
-            InstanceType = size,
+            InstanceType = Size,
             VpcSecurityGroupIds = { group.Name }, // reference the security group resource above
-            Ami = ami.Id,
-        });
+            UserData = userData,
+            Ami = ami.Apply(x => x.Id),
+        }); ;
 
         PublicIp = server.PublicIp;
         PublicDns = server.PublicDns;
@@ -218,6 +226,8 @@ class MyStack : Stack
 
     [Output]
     public Output<string> PublicDns { get; set; }
+
+    private const string Size = "t2.micro"; // t2.micro is available in the AWS free tier
 }
 ```
 
