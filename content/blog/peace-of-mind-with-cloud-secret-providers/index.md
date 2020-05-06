@@ -740,10 +740,9 @@ const superSecretObject = new aws.s3.BucketObject("secret", {
 
 {{% /choosable %}}
 
-{{% chooseable language python %}}
+{{% choosable language python %}}
 
 ```python
-{{% /chooseable %}}
 import pulumi
 from pulumi_aws import s3
 
@@ -760,7 +759,7 @@ bucketObject = s3.BucketObject("secret", bucket=bucket.id, key="secret", content
 
 {{% /choosable %}}
 
-{{% chooseable language go %}}
+{{% choosable language go %}}
 
 ```go
 
@@ -797,9 +796,9 @@ func main() {
 }
 ```
 
-{{<% /chooseable %>}}
+{{% /choosable %}}
 
-{{% chooseable language csharp %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using Pulumi;
@@ -828,7 +827,7 @@ class AnotherStack : Stack
 
 ```
 
-{{<% /chooseable %>}}
+{{% /choosable %}}
 
 {{< /chooser >}}
 
