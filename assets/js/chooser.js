@@ -170,8 +170,7 @@ $(document).on("rendered", function() {
     });
 
     // Parse and set language from anchor tag if present.
-    var url = window.location.href;
-    var anchorTag = url.includes("#") ? url.substring(url.indexOf("#")+1) : "";
+    var anchorTag = window.location.hash;
     if (anchorTag) {
         var matches = /[^~]*$/gm.exec(anchorTag);
         if (matches) {
