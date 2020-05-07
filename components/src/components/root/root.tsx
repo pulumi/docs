@@ -31,10 +31,11 @@ export class Root {
 
     componentDidRender() {
 
+        // Set language if specified by query param or is part of an anchor tag (e.g. #anchor~nodejs).
+        this.setSelectedLanguage();
         // Since this element initializes the store, dispatch a DOM event letting
         // listeners know when rendering is complete.
         this.rendered.emit();
-        this.setSelectedLanguage();
     }
 
     render() {
