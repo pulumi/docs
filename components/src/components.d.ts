@@ -37,7 +37,9 @@ export namespace Components {
   interface PulumiExample {}
   interface PulumiExamples {}
   interface PulumiRoot {}
-  interface ScrollTop {}
+  interface PulumiTopButton {
+    'scrollPostion': number;
+  }
 }
 
 declare global {
@@ -73,10 +75,10 @@ declare global {
     new (): HTMLPulumiRootElement;
   };
 
-  interface HTMLScrollTopElement extends Components.ScrollTop, HTMLStencilElement {}
-  var HTMLScrollTopElement: {
-    prototype: HTMLScrollTopElement;
-    new (): HTMLScrollTopElement;
+  interface HTMLPulumiTopButtonElement extends Components.PulumiTopButton, HTMLStencilElement {}
+  var HTMLPulumiTopButtonElement: {
+    prototype: HTMLPulumiTopButtonElement;
+    new (): HTMLPulumiTopButtonElement;
   };
   interface HTMLElementTagNameMap {
     'pulumi-choosable': HTMLPulumiChoosableElement;
@@ -84,7 +86,7 @@ declare global {
     'pulumi-example': HTMLPulumiExampleElement;
     'pulumi-examples': HTMLPulumiExamplesElement;
     'pulumi-root': HTMLPulumiRootElement;
-    'scroll-top': HTMLScrollTopElement;
+    'pulumi-top-button': HTMLPulumiTopButtonElement;
   }
 }
 
@@ -108,7 +110,9 @@ declare namespace LocalJSX {
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;
   }
-  interface ScrollTop {}
+  interface PulumiTopButton {
+    'scrollPostion'?: number;
+  }
 
   interface IntrinsicElements {
     'pulumi-choosable': PulumiChoosable;
@@ -116,7 +120,7 @@ declare namespace LocalJSX {
     'pulumi-example': PulumiExample;
     'pulumi-examples': PulumiExamples;
     'pulumi-root': PulumiRoot;
-    'scroll-top': ScrollTop;
+    'pulumi-top-button': PulumiTopButton;
   }
 }
 
@@ -131,7 +135,7 @@ declare module "@stencil/core" {
       'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
-      'scroll-top': LocalJSX.ScrollTop & JSXBase.HTMLAttributes<HTMLScrollTopElement>;
+      'pulumi-top-button': LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
     }
   }
 }
