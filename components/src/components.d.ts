@@ -37,6 +37,7 @@ export namespace Components {
   interface PulumiExample {}
   interface PulumiExamples {}
   interface PulumiRoot {}
+  interface ScrollTop {}
 }
 
 declare global {
@@ -71,12 +72,19 @@ declare global {
     prototype: HTMLPulumiRootElement;
     new (): HTMLPulumiRootElement;
   };
+
+  interface HTMLScrollTopElement extends Components.ScrollTop, HTMLStencilElement {}
+  var HTMLScrollTopElement: {
+    prototype: HTMLScrollTopElement;
+    new (): HTMLScrollTopElement;
+  };
   interface HTMLElementTagNameMap {
     'pulumi-choosable': HTMLPulumiChoosableElement;
     'pulumi-chooser': HTMLPulumiChooserElement;
     'pulumi-example': HTMLPulumiExampleElement;
     'pulumi-examples': HTMLPulumiExamplesElement;
     'pulumi-root': HTMLPulumiRootElement;
+    'scroll-top': HTMLScrollTopElement;
   }
 }
 
@@ -100,6 +108,7 @@ declare namespace LocalJSX {
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;
   }
+  interface ScrollTop {}
 
   interface IntrinsicElements {
     'pulumi-choosable': PulumiChoosable;
@@ -107,6 +116,7 @@ declare namespace LocalJSX {
     'pulumi-example': PulumiExample;
     'pulumi-examples': PulumiExamples;
     'pulumi-root': PulumiRoot;
+    'scroll-top': ScrollTop;
   }
 }
 
@@ -121,6 +131,7 @@ declare module "@stencil/core" {
       'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
+      'scroll-top': LocalJSX.ScrollTop & JSXBase.HTMLAttributes<HTMLScrollTopElement>;
     }
   }
 }
