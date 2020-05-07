@@ -79,7 +79,7 @@ ci_pull_request::
 	$(MAKE) banner
 	$(MAKE) ensure
 	$(MAKE) build
-	./scripts/check-get-pulumi-links.sh
+	./scripts/check-links.sh pull_request
 	./scripts/run-pulumi.sh preview production
 
 .PHONY: ci_cron
