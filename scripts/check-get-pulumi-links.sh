@@ -4,40 +4,14 @@ set -o nounset -o errexit -o pipefail
 HTTP_SERVER_PORT=8888
 
 check_get_pulumi_links() {
-    # We only want to check the links to https://get.pulumi.com* and since broken-link-checker only
-    # allows the * wildcard and the ability to exclude (instead of include) URLs, we exclude all 
-    # http URLs and all those that start with any letter except "g". Finally we exclude gi* and go*
-    # for github, gist, gitlab, godoc, etc.
-    ./node_modules/.bin/blc http://localhost:$HTTP_SERVER_PORT --recursive --follow \
+    # We only link to get.pulumi.com in /docs/get-started/install/ and /docs/get-started/install/versions
+    npx blc http://localhost:$HTTP_SERVER_PORT/docs/get-started/install/versions/ --follow \
         --exclude-internal \
-        --exclude "http://*" \
-        --exclude "https://a*" \
-        --exclude "https://b*" \
-        --exclude "https://c*" \
-        --exclude "https://d*" \
-        --exclude "https://e*" \
-        --exclude "https://f*" \
-        --exclude "https://h*" \
-        --exclude "https://i*" \
-        --exclude "https://j*" \
-        --exclude "https://k*" \
-        --exclude "https://l*" \
-        --exclude "https://m*" \
-        --exclude "https://n*" \
-        --exclude "https://o*" \
-        --exclude "https://p*" \
-        --exclude "https://q*" \
-        --exclude "https://r*" \
-        --exclude "https://s*" \
-        --exclude "https://t*" \
-        --exclude "https://u*" \
-        --exclude "https://v*" \
-        --exclude "https://w*" \
-        --exclude "https://x*" \
-        --exclude "https://y*" \
-        --exclude "https://z*" \
-        --exclude "https://gi*" \
-        --exclude "https://go*"
+        --exclude "https://www*"
+
+    npx blc http://localhost:$HTTP_SERVER_PORT/docs/get-started/install/ --follow \
+        --exclude-internal \
+        --exclude "https://www*"
 }
 
 retry() {
