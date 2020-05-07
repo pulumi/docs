@@ -47,7 +47,7 @@ export class Root {
 
         // Check if language is specified in the query params and set language if present.
         const queryParamLanguage = getQueryVariable("language");
-        if(queryParamLanguage){
+        if (queryParamLanguage){
             this.setLanguage(queryParamLanguage as LanguageKey);
         }
 
