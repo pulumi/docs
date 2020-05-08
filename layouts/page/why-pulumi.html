@@ -45,8 +45,9 @@
         <div class="container mx-auto uppercase">
             <ul>
                 <li><a href="#for-developers">For Developers</a></li>
-                <li><a href="#for-operators">For Operators</a></li>
-                <li><a href="#for-it-leaders">For IT Leaders</a></li>
+                <li><a href="#for-operators">For DevOps/Infra Teams</a></li>
+                <li><a href="#for-security">For Security Engineers</a></li>
+                <li><a href="#for-it-leaders">For Engineering Leaders</a></li>
             </ul>
         </div>
     </nav>
@@ -84,7 +85,7 @@
                 </div>
             </div>
             <div class="md:flex mx-auto max-w-5xl mb-8 text-center">
-                <div class="md:w/13 p-4">
+                <div class="md:w-1/3 p-4">
                     <img class="inline-block w-32" src="/icons/icon-why-dev-lang.svg">
                     <h3 class="mt-2">Familiar Languages</h3>
                     <p class="text-gray-600">
@@ -92,7 +93,7 @@
                         using familiar languages and IDEs: JavaScript, Python, or Go.
                     </p>
                 </div>
-                <div class="md:w/13 p-4 md:mx-8">
+                <div class="md:w-1/3 p-4 md:mx-8">
                     <img class="inline-block w-32" src="/icons/icon-why-dev-model.svg">
                     <h3 class="mt-2">Programming Model</h3>
                     <p class="text-gray-600">
@@ -100,7 +101,7 @@
                         across any clouds, AWS, Azure, GCP, or Kubernetes.
                     </p>
                 </div>
-                <div class="md:w/13 p-4">
+                <div class="md:w-1/3 p-4">
                     <img class="inline-block w-32" src="/icons/icon-why-dev-packages.svg">
                     <h3 class="mt-2">Real Abstractions</h3>
                     <p class="text-gray-600">
@@ -109,9 +110,12 @@
                     </p>
                 </div>
             </div>
-            <div class="mx-auto text-center">
-                <a class="btn btn-lg btn-blue" href="{{ relref . "/docs/get-started" }}">
-                    Get Started
+            <div class="mx-auto text-center max-w-5xl mt-16">
+                <a class="btn btn-lg btn-orange mr-2" href="{{ relref . "/docs" }}">
+                    READ THE DOCS
+                </a>
+                <a class="btn btn-lg ml-2" href="{{ relref . "/docs/get-started" }}">
+                    GET STARTED
                 </a>
             </div>
         </div>
@@ -124,9 +128,9 @@
                     <img class="w-48" src="/icons/icon-for-devops.png">
                 </div>
                 <div>
-                    <h2>For Operators</h2>
+                    <h2>For DevOps/Infra Teams</h2>
                     <p class="text-xl">
-                        Pulumi enables operators to achieve continuous delivery of cloud applications
+                        Pulumi enables infrastructure teams to achieve continuous delivery of cloud applications
                         and infrastructure in any cloud environment &mdash; AWS, Azure, GCP, Kubernetes,
                         even hybrid and on-premises environments &mdash; with one common approach. By
                         leveraging infrastructure as code combined with real languages, engineers can
@@ -136,7 +140,7 @@
                 </div>
             </div>
             <div class="md:flex mx-auto max-w-5xl mb-8 text-center">
-                <div class="md:w/13 p-4">
+                <div class="md:w-1/3 p-4">
                     <img class="inline-block w-32" src="/icons/icon-why-devops-workflow.svg">
                     <h3 class="mt-2">Infrastructure as Code</h3>
                     <p class="text-gray-600">
@@ -144,7 +148,7 @@
                         deployments, and perform them with perfect auditability.
                     </p>
                 </div>
-                <div class="md:w/13 p-4 md:mx-8">
+                <div class="md:w-1/3 p-4 md:mx-8">
                     <img class="inline-block w-32" src="/icons/icon-why-devops-multicloud.svg">
                     <h3 class="mt-2">Multi-Cloud DevOps</h3>
                     <p class="text-gray-600">
@@ -152,7 +156,7 @@
                         tool, and service &mdash; eliminating YAML and DSL explosion.
                     </p>
                 </div>
-                <div class="md:w/13 p-4">
+                <div class="md:w-1/3 p-4">
                     <img class="inline-block w-32" src="/icons/icon-why-devops-deploy.svg">
                     <h3 class="mt-2">Deploy Continuously</h3>
                     <p class="text-gray-600">
@@ -161,22 +165,79 @@
                     </p>
                 </div>
             </div>
-            <div class="mx-auto text-center">
-                <a class="btn btn-lg btn-orange" href="{{ relref . "/docs/get-started" }}">
-                    Get Started
+            <div class="mx-auto text-center max-w-5xl mt-16">
+                <a class="btn btn-lg btn-orange mr-2" href="{{ relref . "/docs" }}">
+                    READ THE DOCS
+                </a>
+                <a class="btn btn-lg ml-2" href="{{ relref . "/docs/get-started" }}">
+                    GET STARTED
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="for-it-leaders" class="bg-gray-200 py-16 px-4">
+    <section id="for-security" class="bg-gray-200 py-16 px-4">
+        <div class="container mx-auto">
+            <div class="md:flex mx-auto max-w-5xl pb-8 mb-8 border-b border-gray-300">
+                <div class="flex-shrink-0 md:mr-8 mb-8">
+                    <img class="w-48" src="/icons/icon-for-devs.png">
+                </div>
+                <div>
+                    <h2>For Security Engineers</h2>
+                    <p class="text-xl">
+                        Pulumi brings cloud security engineering closer to the infrastructure and
+                        development teams. By using one common workflow that spans any cloud environment,
+                        whether public, private, or hybrid, security teams are able to enforce policies
+                        that accomplish cloud governance projects of all kinds &mdash; security, compliance,
+                        cost control, and more. Help your teams deliver faster with safety and confidence.
+                    </p>
+                </div>
+            </div>
+            <div class="md:flex mx-auto max-w-5xl mb-8 text-center border-b border-gray-300">
+                <div class="md:w-1/3 p-4">
+                    <img class="inline-block w-32" src="/icons/icon-why-devops-workflow.svg">
+                    <h3 class="mt-2">Policy as Code</h3>
+                    <p class="text-gray-600">
+                        Use CrossGuard, Pulumi's policy as code solution that enables
+                        flexible policy authoring and application.
+                    </p>
+                </div>
+                <div class="md:w-1/3 p-4 md:mx-8">
+                    <img class="inline-block w-32" src="/icons/icon-why-ent-grade.svg">
+                    <h3 class="mt-2">Built-In Secrets</h3>
+                    <p class="text-gray-600">
+                        Use Pulumi's built-in secrets management mechanism to ensure that
+                        sensitive infrastructure as code configuration is always encrypted. 
+                    </p>
+                </div>
+                <div class="md:w-1/3 p-4">
+                    <img class="inline-block w-32" src="/icons/icon-why-ent-architecture.svg">
+                    <h3 class="mt-2">Enforce Standards</h3>
+                    <p class="text-gray-600">
+                        Using standard packaging techniques, codify and reuse standard
+                        organizational patterns, with true versioning and easy patching.
+                    </p>
+                </div>
+            </div>
+            <div class="mx-auto text-center max-w-5xl mt-16">
+                <a class="btn btn-lg btn-orange mr-2" href="{{ relref . "/crossguard" }}">
+                    LEARN ABOUT POLICY AS CODE
+                </a>
+                <a class="btn btn-lg ml-2" href="{{ relref . "/docs/get-started" }}">
+                    GET STARTED
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="for-it-leaders" class="py-16 px-4">
         <div class="container mx-auto">
             <div class="md:flex mx-auto max-w-5xl pb-8 mb-8 border-b border-gray-300">
                 <div class="flex-shrink-0 md:mr-8 mb-8">
                     <img class="w-48" src="/icons/icon-for-enterprises.png">
                 </div>
                 <div>
-                    <h2>For IT Leaders</h2>
+                    <h2>For Engineering Leaders</h2>
                     <p class="text-xl">
                         Pulumi has thousands of happy users across companies of all sizes,
                         from startups who want to get a modern cloud infrastructure up in an
@@ -191,7 +252,7 @@
                 </div>
             </div>
             <div class="md:flex mx-auto max-w-5xl mb-8 text-center">
-                <div class="md:w/13 p-4">
+                <div class="md:w-1/3 p-4">
                     <img class="inline-block w-32" src="/icons/icon-why-ent-architecture.svg">
                     <h3 class="mt-2">Modernize</h3>
                     <p class="text-gray-600">
@@ -199,7 +260,7 @@
                         applications and infrastructure, and Dev and DevOps.
                     </p>
                 </div>
-                <div class="md:w/13 p-4 md:mx-8">
+                <div class="md:w-1/3 p-4 md:mx-8">
                     <img class="inline-block w-32" src="/icons/icon-why-ent-multicloud.svg">
                     <h3 class="mt-2">Go Multi-Cloud</h3>
                     <p class="text-gray-600">
@@ -208,7 +269,7 @@
                         delivery.
                     </p>
                 </div>
-                <div class="md:w/13 p-4">
+                <div class="md:w-1/3 p-4">
                     <img class="inline-block w-32" src="/icons/icon-why-ent-grade.svg">
                     <h3 class="mt-2">Enterprise Grade</h3>
                     <p class="text-gray-600">
@@ -217,8 +278,11 @@
                     </p>
                 </div>
             </div>
-            <div class="mx-auto text-center">
-                <a class="btn btn-lg btn-purple" href="{{ relref . "/contact.md" }}">
+            <div class="mx-auto text-center max-w-5xl mt-16">
+                <a class="btn btn-lg btn-orange mr-2" href="{{ relref . "/case-studies" }}">
+                    READ CUSTOMER CASE STUDIES
+                </a>
+                <a class="btn btn-lg ml-2" href="{{ relref . "/contact.md" }}">
                     REQUEST A DEMO
                 </a>
             </div>
