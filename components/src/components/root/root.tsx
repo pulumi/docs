@@ -60,10 +60,11 @@ export class Root {
         // both are present because the anchor will not work otherwise.
         const anchorTag = window.location.hash;
         if (anchorTag) {
-            const matches = /[^~]*$/gm.exec(anchorTag);
-            if (matches) {
-                const language = matches[0];
-                this.setLanguage(language as LanguageKey);
+            const language = anchorTag.split("~")
+                .slice(-1)
+                .find(lang => ["typescript", "javascript", "csharp", "go", "python"].includes(lang));
+            if (language) {
+                this.setLanguage(language[0] as LanguageKey);
             }
         }
     }
