@@ -1,0 +1,27 @@
+pulumi-examples {
+    @apply block border-b border-gray-300 pb-8;
+
+    h3 {
+        @apply cursor-pointer text-xl text-gray-700;
+
+        span {
+            @apply font-bold inline-flex w-6 h-6 mr-2 bg-gray-200 text-blue-700 items-center justify-center rounded-lg;
+            @include fa-glyph("\f105");
+        }
+
+        &.expanded {
+            span {
+                @apply p-0;
+                @include fa-glyph("\f107");
+            }
+        }
+
+        ~ div {
+            display: none;
+
+            &.expanded {
+                display: block;
+            }
+        }
+    }
+}
