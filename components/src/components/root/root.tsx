@@ -1,5 +1,5 @@
 import "@stencil/redux";
-import { Component, Event, EventEmitter, Listen, Prop, h } from "@stencil/core";
+import { Component, Event, EventEmitter, Prop, h } from "@stencil/core";
 import { Store } from "@stencil/redux";
 import { configureStore } from "../../store";
 import { LanguageKey } from "../chooser/chooser";
@@ -17,11 +17,6 @@ export class Root {
 
     @Event()
     rendered: EventEmitter;
-
-    @Listen('hashchange')
-    hashChangeEventHandler(event: CustomEvent) {
-        console.log('Received the event: ', event.detail);
-    }
 
     // Dispatch functions for handling the selection of an option.
     setLanguage: typeof setLanguage;
