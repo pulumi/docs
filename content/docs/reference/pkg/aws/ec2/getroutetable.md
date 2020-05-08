@@ -21,15 +21,20 @@ the Route Table.
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -48,12 +53,13 @@ const route = new aws.ec2.Route("route", {
 });
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetRouteTable {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

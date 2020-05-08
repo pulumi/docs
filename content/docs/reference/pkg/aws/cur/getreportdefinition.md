@@ -21,15 +21,20 @@ Use this data source to get information on an AWS Cost and Usage Report Definiti
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -40,12 +45,13 @@ const reportDefinition = pulumi.output(aws.cur.getReportDefinition({
 }, { async: true }));
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetReportDefinition {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

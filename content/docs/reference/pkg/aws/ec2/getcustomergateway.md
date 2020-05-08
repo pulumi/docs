@@ -17,15 +17,20 @@ Get an existing AWS Customer Gateway.
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -49,12 +54,13 @@ const transit = new aws.ec2.VpnConnection("transit", {
 });
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetCustomerGateway {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

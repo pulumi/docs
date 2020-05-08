@@ -18,16 +18,21 @@ Manages an Amazon API Gateway Version 2 API.
 
 {{% examples %}}
 ## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic WebSocket API
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -39,16 +44,20 @@ const example = new aws.apigatewayv2.Api("example", {
 });
 ```
 {{% /example %}}
+
 ### Basic HTTP API
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -59,11 +68,12 @@ const example = new aws.apigatewayv2.Api("example", {
 });
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Create a Api Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -879,7 +889,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 ## Look up an Existing Api Resource {#look-up}
 
 Get an existing Api resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigatewayv2/#ApiState">ApiState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigatewayv2/#Api">Api</a></span></code></pre></div>

@@ -17,15 +17,20 @@ Provides an SSM Patch Baseline data source. Useful if you wish to reuse the defa
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -38,12 +43,13 @@ const centos = pulumi.output(aws.ssm.getPatchBaseline({
 }, { async: true }));
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetPatchBaseline {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -20,15 +20,20 @@ error if there is more than one match.
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -39,12 +44,13 @@ const myApiGatewayVpcLink = pulumi.output(aws.apigateway.getVpcLink({
 }, { async: true }));
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetVpcLink {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

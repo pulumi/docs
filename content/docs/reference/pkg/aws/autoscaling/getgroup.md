@@ -17,15 +17,20 @@ Use this data source to get information on an existing autoscaling group.
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -36,12 +41,13 @@ const foo = pulumi.output(aws.autoscaling.getGroup({
 }, { async: true }));
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetGroup {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

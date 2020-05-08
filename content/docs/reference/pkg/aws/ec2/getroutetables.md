@@ -17,15 +17,20 @@ This resource can be useful for getting back a list of route table ids to be ref
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -48,12 +53,13 @@ for (let i = 0; i < rts.apply(rts => rts.ids.length); i++) {
 }
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetRouteTables {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

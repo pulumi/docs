@@ -17,15 +17,20 @@ Use this data source to get the Account ID of the [AWS Billing and Cost Manageme
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -68,12 +73,13 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
 });
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetBillingServiceAccount {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

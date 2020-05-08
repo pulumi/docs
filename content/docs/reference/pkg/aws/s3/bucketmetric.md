@@ -16,16 +16,21 @@ Provides a S3 bucket [metrics configuration](http://docs.aws.amazon.com/AmazonS3
 
 {{% examples %}}
 ## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Add metrics configuration for entire S3 bucket
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -37,16 +42,20 @@ const example_entire_bucket = new aws.s3.BucketMetric("example-entire-bucket", {
 });
 ```
 {{% /example %}}
+
 ### Add metrics configuration with S3 bucket object filter
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -65,11 +74,12 @@ const example_filtered = new aws.s3.BucketMetric("example-filtered", {
 });
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Create a BucketMetric Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -461,7 +471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing BucketMetric Resource {#look-up}
 
 Get an existing BucketMetric resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketMetricState">BucketMetricState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketMetric">BucketMetric</a></span></code></pre></div>

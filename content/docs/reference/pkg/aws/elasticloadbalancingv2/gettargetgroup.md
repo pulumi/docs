@@ -25,15 +25,20 @@ Deprecated: aws.elasticloadbalancingv2.getTargetGroup has been deprecated in fav
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -49,13 +54,14 @@ const test = pulumi.output(aws.lb.getTargetGroup({
 }, { async: true }));
 ```
 {{% /example %}}
+
 {{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancingv2.getTargetGroup has been deprecated in favour of aws.lb.getTargetGroup{{% /md %}}</p>
 
 
 ## Using GetTargetGroup {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

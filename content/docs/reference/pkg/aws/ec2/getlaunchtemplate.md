@@ -17,15 +17,20 @@ Provides information about a Launch Template.
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -36,16 +41,20 @@ const defaultLaunchTemplate = pulumi.output(aws.ec2.getLaunchTemplate({
 }, { async: true }));
 ```
 {{% /example %}}
+
 ### Filter
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -59,12 +68,13 @@ const test = pulumi.output(aws.ec2.getLaunchTemplate({
 }, { async: true }));
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetLaunchTemplate {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

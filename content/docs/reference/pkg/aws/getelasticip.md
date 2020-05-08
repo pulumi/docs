@@ -16,16 +16,21 @@ meta_desc: "Explore the GetElasticIp function of the AWS package, including exam
 
 {{% examples %}}
 ## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Search By Allocation ID (VPC only)
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -36,16 +41,20 @@ const byAllocationId = pulumi.output(aws.getElasticIp({
 }, { async: true }));
 ```
 {{% /example %}}
+
 ### Search By Filters (EC2-Classic or VPC)
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -59,16 +68,20 @@ const byFilter = pulumi.output(aws.getElasticIp({
 }, { async: true }));
 ```
 {{% /example %}}
+
 ### Search By Public IP (EC2-Classic or VPC)
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -79,16 +92,20 @@ const byPublicIp = pulumi.output(aws.getElasticIp({
 }, { async: true }));
 ```
 {{% /example %}}
+
 ### Search By Tags (EC2-Classic or VPC)
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -101,12 +118,13 @@ const byTags = pulumi.output(aws.getElasticIp({
 }, { async: true }));
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetElasticIp {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

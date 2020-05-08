@@ -16,16 +16,21 @@ Retrieve information about a Secrets Manager secret version, including its secre
 
 {{% examples %}}
 ## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Retrieve Current Secret Version
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -36,16 +41,20 @@ const example = aws_secretsmanager_secret_example.id.apply(id => aws.secretsmana
 }, { async: true }));
 ```
 {{% /example %}}
+
 ### Retrieve Specific Secret Version
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -57,12 +66,13 @@ const by_version_stage = aws_secretsmanager_secret_example.id.apply(id => aws.se
 }, { async: true }));
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetSecretVersion {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

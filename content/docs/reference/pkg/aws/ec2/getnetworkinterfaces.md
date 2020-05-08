@@ -15,15 +15,20 @@ meta_desc: "Explore the GetNetworkInterfaces function of the ec2 module, includi
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -34,12 +39,13 @@ const exampleNetworkInterfaces = pulumi.output(aws.ec2.getNetworkInterfaces({ as
 export const example = exampleNetworkInterfaces.ids;
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetNetworkInterfaces {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

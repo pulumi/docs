@@ -15,15 +15,20 @@ meta_desc: "Explore the GetEventCategories function of the rds module, including
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -34,12 +39,13 @@ const exampleEventCategories = pulumi.output(aws.rds.getEventCategories({ async:
 export const example = exampleEventCategories.eventCategories;
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetEventCategories {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

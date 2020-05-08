@@ -17,15 +17,20 @@ Use this data source to get the default EBS encryption KMS key in the current re
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -39,12 +44,13 @@ const example = new aws.ebs.Volume("example", {
 });
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetDefaultKmsKey {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -25,15 +25,20 @@ Deprecated: aws.elasticloadbalancing.getLoadBalancer has been deprecated in favo
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -47,13 +52,14 @@ const test = pulumi.output(aws.elb.getLoadBalancer({
 }, { async: true }));
 ```
 {{% /example %}}
+
 {{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.getLoadBalancer has been deprecated in favour of aws.elb.getLoadBalancer{{% /md %}}</p>
 
 
 ## Using GetLoadBalancer {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

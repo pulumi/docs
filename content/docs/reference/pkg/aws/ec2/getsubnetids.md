@@ -21,7 +21,7 @@ This resource can be useful for getting back a set of subnet ids for a vpc.
 
 ## Using GetSubnetIds {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

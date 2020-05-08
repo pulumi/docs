@@ -20,15 +20,20 @@ _optionally_ (see below) content of an object stored inside S3 bucket.
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -45,12 +50,13 @@ const example = new aws.ec2.Instance("example", {
 });
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetBucketObject {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

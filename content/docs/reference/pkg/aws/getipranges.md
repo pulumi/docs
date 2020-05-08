@@ -19,7 +19,7 @@ Use this data source to get the IP ranges of various AWS products and services. 
 
 ## Using GetIpRanges {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -18,15 +18,20 @@ in a given region for the purpose of whitelisting in S3 bucket policy.
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -70,12 +75,13 @@ const bar = new aws.elb.LoadBalancer("bar", {
 });
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetServiceAccount {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

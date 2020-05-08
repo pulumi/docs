@@ -21,15 +21,20 @@ It will not retrieve the private key which is not available through the AWS API.
 {{% examples %}}
 ## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -50,12 +55,13 @@ const elb = new aws.elb.LoadBalancer("elb", {
 });
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetServerCertificate {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

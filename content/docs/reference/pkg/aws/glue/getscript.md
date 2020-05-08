@@ -16,16 +16,21 @@ Use this data source to generate a Glue script from a Directed Acyclic Graph (DA
 
 {{% examples %}}
 ## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Generate Python Script
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -120,16 +125,20 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
 export const pythonScript = example.pythonScript;
 ```
 {{% /example %}}
+
 ### Generate Scala Code
 {{% example csharp %}}
 Coming soon!
 {{% /example %}}
+
 {{% example go %}}
 Coming soon!
 {{% /example %}}
+
 {{% example python %}}
 Coming soon!
 {{% /example %}}
+
 {{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -224,12 +233,13 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
 export const scalaCode = example.scalaCode;
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
 ## Using GetScript {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
