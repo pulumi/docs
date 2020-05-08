@@ -20,7 +20,7 @@ Pulumi supports programming against Kubernetes---Minikube, on-premises and
 cloud-hosted custom Kubernetes clusters, and the managed services from Google
 (GKE), Azure (AKS), and Amazon (EKS). The Pulumi Kubernetes provider
 packages and [CLI]({{< relref "/docs/reference/cli" >}})
-help you accomplish all these within minutes. Upon completing this guid you will have:
+help you accomplish all these within minutes. Upon completing this guide you will have:
 
 - Configured a Pulumi Community Edition account
 - Created a Kubernetes NGINX deployment
