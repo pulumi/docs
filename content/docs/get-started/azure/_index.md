@@ -13,6 +13,14 @@ aliases: ["/docs/quickstart/azure/"]
 
 {{< cloud-intro "Azure" >}}
 
-Let's start with installing Pulumi.
+- Configure a Pulumi Community Edition account
+- Deploy an Azure Resource Group and Storage Account
+- Modify the program to export the storage account’s connection string
+
+Estimated Azure Cost: <strong>Free</strong>
+<br />
+Estimated Time: <strong>10 minutes</strong>
+
+Click the button below to get started with the first step.
 
 {{< get-started-stepper >}}

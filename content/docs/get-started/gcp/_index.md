@@ -13,6 +13,14 @@ aliases: ["/docs/quickstart/gcp/"]
 
 {{< cloud-intro "Google Cloud" >}}
 
-Let's start with installing Pulumi.
+- Configure a Pulumi Community Edition account
+- Deploy a Storage Bucket
+- Modify the bucket to include labels
+
+Estimated GCP Cost: <strong>Free</strong>
+<br />
+Estimated Time: <strong>10 minutes</strong>
+
+Click the button below to get started with the first step.
 
 {{< get-started-stepper >}}
