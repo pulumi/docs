@@ -14,10 +14,21 @@ Manages an AWS DataSync Agent deployed on premises.
 
 > **NOTE:** One of `activation_key` or `ip_address` must be provided for resource creation (agent activation). Neither is required for resource import. If using `ip_address`, this provider must be able to make an HTTP (port 80) GET request to the specified IP address from where it is running. The agent will turn off that HTTP server after activation.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,10 +37,8 @@ const example = new aws.datasync.Agent("example", {
     ipAddress: "1.2.3.4",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Agent Resource {#create}

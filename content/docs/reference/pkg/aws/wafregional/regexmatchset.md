@@ -12,10 +12,21 @@ meta_desc: "Explore the RegexMatchSet resource of the wafregional module, includ
 
 Provides a WAF Regional Regex Match Set Resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -37,10 +48,8 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("example", {
     }],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a RegexMatchSet Resource {#create}

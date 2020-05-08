@@ -40,12 +40,21 @@ from the validation resource where it will be available after the resource creat
 > **Note:** All arguments including the private key will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Edge Optimized (ACM Certificate)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -67,11 +76,18 @@ const exampleRecord = new aws.route53.Record("example", {
     zoneId: aws_route53_zone_example.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Edge Optimized (IAM Certificate)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -97,11 +113,18 @@ const exampleRecord = new aws.route53.Record("example", {
     zoneId: aws_route53_zone_example.id, // See aws.route53.Zone for how to create this
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Regional (ACM Certificate)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -126,11 +149,18 @@ const exampleRecord = new aws.route53.Record("example", {
     zoneId: aws_route53_zone_example.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Regional (IAM Certificate)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -159,10 +189,8 @@ const exampleRecord = new aws.route53.Record("example", {
     zoneId: aws_route53_zone_example.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a DomainName Resource {#create}

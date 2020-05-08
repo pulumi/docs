@@ -12,12 +12,21 @@ meta_desc: "Explore the Application resource of the codedeploy module, including
 
 Provides a CodeDeploy application to be used as a basis for deployments
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### ECS Application
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,11 +35,18 @@ const example = new aws.codedeploy.Application("example", {
     computePlatform: "ECS",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Lambda Application
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -39,11 +55,18 @@ const example = new aws.codedeploy.Application("example", {
     computePlatform: "Lambda",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Server Application
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -52,10 +75,8 @@ const example = new aws.codedeploy.Application("example", {
     computePlatform: "Server",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Application Resource {#create}

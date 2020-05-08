@@ -12,10 +12,21 @@ meta_desc: "Explore the Key resource of the kms module, including examples, inpu
 
 Provides a KMS customer master key.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const key = new aws.kms.Key("a", {
     description: "KMS key 1",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Key Resource {#create}

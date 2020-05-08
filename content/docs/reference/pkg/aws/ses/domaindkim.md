@@ -14,10 +14,21 @@ Provides an SES domain DKIM generation resource.
 
 Domain ownership needs to be confirmed first using [ses_domain_identity Resource](https://www.terraform.io/docs/providers/aws/r/ses_domain_identity.html)
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -39,10 +50,8 @@ for (let i = 0; i < 3; i++) {
     }));
 }
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a DomainDkim Resource {#create}

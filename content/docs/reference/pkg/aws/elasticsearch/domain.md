@@ -12,12 +12,21 @@ meta_desc: "Explore the Domain resource of the elasticsearch module, including e
 
 Manages an AWS Elasticsearch Domain.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Basic Usage
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -35,13 +44,18 @@ const example = new aws.elasticsearch.Domain("example", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Access Policy
-
-> See also: [`aws.elasticsearch.DomainPolicy` resource](https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain_policy.html)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -69,11 +83,18 @@ const example = new aws.elasticsearch.Domain("example", {
 `,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Log Publishing to CloudWatch Logs
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -107,11 +128,18 @@ const exampleDomain = new aws.elasticsearch.Domain("example", {
     }],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### VPC based ES
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -181,10 +209,8 @@ const esDomain = new aws.elasticsearch.Domain("es", {
     },
 }, { dependsOn: [esServiceLinkedRole] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Domain Resource {#create}

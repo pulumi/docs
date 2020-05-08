@@ -12,10 +12,21 @@ meta_desc: "Explore the RouteTable resource of the ec2transitgateway module, inc
 
 Manages an EC2 Transit Gateway Route Table.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const example = new aws.ec2transitgateway.RouteTable("example", {
     transitGatewayId: aws_ec2_transit_gateway_example.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a RouteTable Resource {#create}

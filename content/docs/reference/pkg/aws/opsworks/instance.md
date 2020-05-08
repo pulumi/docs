@@ -12,25 +12,7 @@ meta_desc: "Explore the Instance resource of the opsworks module, including exam
 
 Provides an OpsWorks instance resource.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const my_instance = new aws.opsworks.Instance("my-instance", {
-    instanceType: "t2.micro",
-    layerIds: [aws_opsworks_custom_layer_my_layer.id],
-    os: "Amazon Linux 2015.09",
-    stackId: aws_opsworks_stack_main.id,
-    state: "stopped",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Block devices
 
 Each of the `*_block_device` attributes controls a portion of the AWS
@@ -85,6 +67,33 @@ resources cannot be automatically detected by this provider. After making update
 to block device configuration, resource recreation can be manually triggered by
 using the [`up` command with the --replace argument](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
 
+{{% examples %}}
+## Example Usage
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const my_instance = new aws.opsworks.Instance("my-instance", {
+    instanceType: "t2.micro",
+    layerIds: [aws_opsworks_custom_layer_my_layer.id],
+    os: "Amazon Linux 2015.09",
+    stackId: aws_opsworks_stack_main.id,
+    state: "stopped",
+});
+```
+{{% /example %}}
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the JobDefinition resource of the batch module, including ex
 
 Provides a Batch Job Definition resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -56,10 +67,8 @@ const test = new aws.batch.JobDefinition("test", {
     type: "container",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a JobDefinition Resource {#create}

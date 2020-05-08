@@ -14,10 +14,21 @@ Use this data source to get the ARN of a State Machine in AWS Step
 Function (SFN). By using this data source, you can reference a
 state machine without having to hard code the ARNs as input.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,10 +37,8 @@ const example = pulumi.output(aws.sfn.getStateMachine({
     name: "an_example_sfn_name",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetStateMachine {#using}

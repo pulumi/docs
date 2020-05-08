@@ -12,10 +12,23 @@ meta_desc: "Explore the LoadBalancerCookieStickinessPolicy resource of the elast
 
 Provides a load balancer cookie stickiness policy, which allows an ELB to control the sticky session lifetime of the browser.
 
+
+
+Deprecated: aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy has been deprecated in favour of aws.elb.LoadBalancerCookieStickinessPolicy
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -35,12 +48,8 @@ const foo = new aws.elb.LoadBalancerCookieStickinessPolicy("foo", {
     loadBalancer: lb.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
-Deprecated: aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy has been deprecated in favour of aws.elb.LoadBalancerCookieStickinessPolicy
-
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy has been deprecated in favour of aws.elb.LoadBalancerCookieStickinessPolicy{{% /md %}}</p>
 
 

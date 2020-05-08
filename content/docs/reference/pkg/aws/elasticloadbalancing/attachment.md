@@ -19,10 +19,23 @@ an ELB), and an Elastic Load Balancer resource with
 instances in conjunction with an ELB Attachment resource. Doing so will cause a
 conflict and will overwrite attachments.
 
+
+
+Deprecated: aws.elasticloadbalancing.Attachment has been deprecated in favour of aws.elb.Attachment
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,12 +46,8 @@ const baz = new aws.elb.Attachment("baz", {
     instance: aws_instance_foo.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
-Deprecated: aws.elasticloadbalancing.Attachment has been deprecated in favour of aws.elb.Attachment
-
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.Attachment has been deprecated in favour of aws.elb.Attachment{{% /md %}}</p>
 
 

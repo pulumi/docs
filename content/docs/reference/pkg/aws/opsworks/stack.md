@@ -12,10 +12,21 @@ meta_desc: "Explore the Stack resource of the opsworks module, including example
 
 Provides an OpsWorks stack resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -35,10 +46,8 @@ const main = new aws.opsworks.Stack("main", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Stack Resource {#create}

@@ -18,10 +18,21 @@ deploy the required DNS verification records, and wait for verification to compl
 
 > **WARNING:** This resource implements a part of the verification workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -40,10 +51,8 @@ const exampleVerification = new aws.ses.DomainIdentityVerification("example_veri
     domain: example.id,
 }, { dependsOn: [exampleAmazonsesVerificationRecord] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a DomainIdentityVerification Resource {#create}

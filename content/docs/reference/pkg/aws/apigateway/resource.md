@@ -12,10 +12,21 @@ meta_desc: "Explore the Resource resource of the apigateway module, including ex
 
 Provides an API Gateway Resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +40,8 @@ const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
     restApi: myDemoAPI.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Resource Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the LustreFileSystem resource of the fsx module, including e
 
 Manages a FSx Lustre File System. See the [FSx Lustre Guide](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html) for more information.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,10 +37,8 @@ const example = new aws.fsx.LustreFileSystem("example", {
     subnetIds: aws_subnet_example.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a LustreFileSystem Resource {#create}

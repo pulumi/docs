@@ -12,10 +12,21 @@ meta_desc: "Explore the GetImage function of the ecr module, including examples,
 
 The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const serviceImage = pulumi.output(aws.ecr.getImage({
     repositoryName: "my/service",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetImage {#using}

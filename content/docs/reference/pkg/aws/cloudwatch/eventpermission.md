@@ -12,12 +12,21 @@ meta_desc: "Explore the EventPermission resource of the cloudwatch module, inclu
 
 Provides a resource to create a CloudWatch Events permission to support cross-account events in the current account default event bus.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Account Access
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,11 +36,18 @@ const devAccountAccess = new aws.cloudwatch.EventPermission("DevAccountAccess", 
     statementId: "DevAccountAccess",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Organization Access
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -46,10 +62,8 @@ const organizationAccess = new aws.cloudwatch.EventPermission("OrganizationAcces
     statementId: "OrganizationAccess",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a EventPermission Resource {#create}

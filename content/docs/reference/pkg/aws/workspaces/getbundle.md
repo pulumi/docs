@@ -12,10 +12,21 @@ meta_desc: "Explore the GetBundle function of the workspaces module, including e
 
 Use this data source to get information about a WorkSpaces Bundle.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const example = pulumi.output(aws.workspaces.getBundle({
     bundleId: "wsb-b0s22j3d7",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetBundle {#using}

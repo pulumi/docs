@@ -13,10 +13,21 @@ meta_desc: "Explore the LoadBalancerBackendServerPolicy resource of the elb modu
 Attaches a load balancer policy to an ELB backend server.
 
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,18 +70,8 @@ const wu_tang_backend_auth_policies_443 = new aws.elb.LoadBalancerBackendServerP
     policyNames: [wu_tang_root_ca_backend_auth_policy.policyName],
 });
 ```
-
-Where the file `pubkey` in the current directory contains only the _public key_ of the certificate.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-This example shows how to enable backend authentication for an ELB as well as customize the TLS settings.
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a LoadBalancerBackendServerPolicy Resource {#create}

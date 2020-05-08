@@ -16,28 +16,7 @@ for more information.
 
 > **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see ["Regions and Availability Zones in Amazon Lightsail"](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// Create a new GitLab Lightsail Instance
-const gitlabTest = new aws.lightsail.Instance("gitlab_test", {
-    availabilityZone: "us-east-1b",
-    blueprintId: "string",
-    bundleId: "string",
-    keyPairName: "some_key_name",
-    tags: {
-        foo: "bar",
-    },
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Availability Zones
 
 Lightsail currently supports the following Availability Zones (e.g. `us-east-1a`):
@@ -121,6 +100,36 @@ A Bundle ID ends with one of the following suffixes depending on Availability Zo
 - us-east-2: `2_0`
 - us-west-2: `2_0`
 
+{{% examples %}}
+## Example Usage
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+// Create a new GitLab Lightsail Instance
+const gitlabTest = new aws.lightsail.Instance("gitlab_test", {
+    availabilityZone: "us-east-1b",
+    blueprintId: "string",
+    bundleId: "string",
+    keyPairName: "some_key_name",
+    tags: {
+        foo: "bar",
+    },
+});
+```
+{{% /example %}}
+{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}

@@ -21,12 +21,21 @@ The `aws.ec2.DefaultVpcDhcpOptions` behaves differently from normal resources, i
 this provider does not _create_ this resource, but instead "adopts" it
 into management.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic usage with tags:
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -37,10 +46,8 @@ const defaultDefaultVpcDhcpOptions = new aws.ec2.DefaultVpcDhcpOptions("default"
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a DefaultVpcDhcpOptions Resource {#create}

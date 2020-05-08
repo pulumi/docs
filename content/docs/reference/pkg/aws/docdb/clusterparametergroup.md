@@ -12,10 +12,21 @@ meta_desc: "Explore the ClusterParameterGroup resource of the docdb module, incl
 
 Manages a DocumentDB Cluster Parameter Group
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +40,8 @@ const example = new aws.docdb.ClusterParameterGroup("example", {
     }],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ClusterParameterGroup Resource {#create}

@@ -12,12 +12,21 @@ meta_desc: "Explore the Endpoint resource of the sagemaker module, including exa
 
 Provides a SageMaker Endpoint resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic usage:
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +38,8 @@ const endpoint = new aws.sagemaker.Endpoint("e", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Endpoint Resource {#create}

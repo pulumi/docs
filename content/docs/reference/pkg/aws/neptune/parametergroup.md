@@ -12,10 +12,21 @@ meta_desc: "Explore the ParameterGroup resource of the neptune module, including
 
 Manages a Neptune Parameter Group
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,10 +39,8 @@ const example = new aws.neptune.ParameterGroup("example", {
     }],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ParameterGroup Resource {#create}

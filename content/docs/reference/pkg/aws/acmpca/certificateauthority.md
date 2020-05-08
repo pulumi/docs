@@ -14,12 +14,21 @@ Provides a resource to manage AWS Certificate Manager Private Certificate Author
 
 > **NOTE:** Creating this resource will leave the certificate authority in a `PENDING_CERTIFICATE` status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the `certificate_signing_request` attribute and import the signed certificate using the AWS SDK, CLI or Console. This provider can support another resource to manage that workflow automatically in the future.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Basic
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -35,11 +44,18 @@ const example = new aws.acmpca.CertificateAuthority("example", {
     permanentDeletionTimeInDays: 7,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Enable Certificate Revocation List
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -85,10 +101,8 @@ const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("example
     },
 }, { dependsOn: [exampleBucketPolicy] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a CertificateAuthority Resource {#create}

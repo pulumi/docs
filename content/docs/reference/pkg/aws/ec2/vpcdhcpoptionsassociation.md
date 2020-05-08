@@ -12,10 +12,25 @@ meta_desc: "Explore the VpcDhcpOptionsAssociation resource of the ec2 module, in
 
 Provides a VPC DHCP Options Association resource.
 
+
+## Remarks
+
+* You can only associate one DHCP Options Set to a given VPC ID.
+* Removing the DHCP Options Association automatically sets AWS's `default` DHCP Options Set to the VPC.
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,14 +40,8 @@ const dnsResolver = new aws.ec2.VpcDhcpOptionsAssociation("dns_resolver", {
     vpcId: aws_vpc_foo.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-## Remarks
-
-* You can only associate one DHCP Options Set to a given VPC ID.
-* Removing the DHCP Options Association automatically sets AWS's `default` DHCP Options Set to the VPC.
-
 
 
 ## Create a VpcDhcpOptionsAssociation Resource {#create}

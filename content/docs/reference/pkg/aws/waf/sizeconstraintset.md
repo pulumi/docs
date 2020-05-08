@@ -12,10 +12,21 @@ meta_desc: "Explore the SizeConstraintSet resource of the waf module, including 
 
 Provides a WAF Size Constraint Set Resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -31,10 +42,8 @@ const sizeConstraintSet = new aws.waf.SizeConstraintSet("size_constraint_set", {
     }],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SizeConstraintSet Resource {#create}

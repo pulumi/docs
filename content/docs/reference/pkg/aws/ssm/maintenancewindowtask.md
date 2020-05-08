@@ -12,12 +12,21 @@ meta_desc: "Explore the MaintenanceWindowTask resource of the ssm module, includ
 
 Provides an SSM Maintenance Window Task resource
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Automation Tasks
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -45,11 +54,18 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     windowId: aws_ssm_maintenance_window_example.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Lambda Tasks
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -74,11 +90,18 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     windowId: aws_ssm_maintenance_window_example.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Run Command Tasks
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -114,11 +137,18 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     windowId: aws_ssm_maintenance_window_example.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Step Function Tasks
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -143,10 +173,8 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     windowId: aws_ssm_maintenance_window_example.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a MaintenanceWindowTask Resource {#create}

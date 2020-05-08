@@ -13,10 +13,21 @@ meta_desc: "Explore the GetCluster function of the ecs module, including example
 The ECS Cluster data source allows access to details of a specific
 cluster within an AWS ECS service.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const ecs_mongo = pulumi.output(aws.ecs.getCluster({
     clusterName: "ecs-mongo-production",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetCluster {#using}

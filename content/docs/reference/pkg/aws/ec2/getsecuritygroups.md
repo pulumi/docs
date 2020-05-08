@@ -13,10 +13,21 @@ meta_desc: "Explore the GetSecurityGroups function of the ec2 module, including 
 Use this data source to get IDs and VPC membership of Security Groups that are created
 outside of this provider.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,28 +39,8 @@ const test = pulumi.output(aws.ec2.getSecurityGroups({
     },
 }, { async: true }));
 ```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const test = pulumi.output(aws.ec2.getSecurityGroups({
-    filters: [
-        {
-            name: "group-name",
-            values: ["*nodes*"],
-        },
-        {
-            name: "vpc-id",
-            values: [var_vpc_id],
-        },
-    ],
-}, { async: true }));
-```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetSecurityGroups {#using}

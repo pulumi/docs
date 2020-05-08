@@ -12,12 +12,21 @@ meta_desc: "Explore the Vpc resource of the ec2 module, including examples, inpu
 
 Provides a VPC resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic usage:
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,25 +35,8 @@ const main = new aws.ec2.Vpc("main", {
     cidrBlock: "10.0.0.0/16",
 });
 ```
-
-Basic usage with tags:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const main = new aws.ec2.Vpc("main", {
-    cidrBlock: "10.0.0.0/16",
-    instanceTenancy: "dedicated",
-    tags: {
-        Name: "main",
-    },
-});
-```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Vpc Resource {#create}

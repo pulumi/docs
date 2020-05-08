@@ -12,10 +12,21 @@ meta_desc: "Explore the Snapshot resource of the ebs module, including examples,
 
 Creates a Snapshot of an EBS Volume.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -34,10 +45,8 @@ const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
     volumeId: example.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Snapshot Resource {#create}

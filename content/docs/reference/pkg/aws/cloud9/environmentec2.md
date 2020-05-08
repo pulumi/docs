@@ -12,10 +12,21 @@ meta_desc: "Explore the EnvironmentEC2 resource of the cloud9 module, including 
 
 Provides a Cloud9 EC2 Development Environment.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
     instanceType: "t2.micro",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a EnvironmentEC2 Resource {#create}

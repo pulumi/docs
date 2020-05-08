@@ -24,16 +24,24 @@ one or the other.
 [1]: https://www.terraform.io/docs/providers/aws/d/instance.html
 [2]: https://www.terraform.io/docs/providers/aws/r/network_interface.html
 
+
+## Output Reference
+
+There are no outputs for this resource.
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following provides a very basic example of setting up an instance (provided
-by `instance`) in the default security group, creating a security group
-(provided by `sg`) and then attaching the security group to the instance's
-primary network interface via the `aws.ec2.NetworkInterfaceSecurityGroupAttachment` resource,
-named `sg_attachment`:
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -63,35 +71,8 @@ const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sg_att
     securityGroupId: sg.id,
 });
 ```
-
-In this example, `instance` is provided by the `aws.ec2.Instance` data source,
-fetching an external instance, possibly not managed by this provider.
-`sg_attachment` then attaches to the output instance's `network_interface_id`:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const instance = pulumi.output(aws.ec2.getInstance({
-    instanceId: "i-1234567890abcdef0",
-}, { async: true }));
-const sg = new aws.ec2.SecurityGroup("sg", {
-    tags: {
-        type: "test-security-group",
-    },
-});
-const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sg_attachment", {
-    networkInterfaceId: instance.networkInterfaceId,
-    securityGroupId: sg.id,
-});
-```
-
 {{% /example %}}
 {{% /examples %}}
-## Output Reference
-
-There are no outputs for this resource.
-
 
 
 ## Create a NetworkInterfaceSecurityGroupAttachment Resource {#create}

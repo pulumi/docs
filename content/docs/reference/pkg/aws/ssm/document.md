@@ -16,10 +16,31 @@ Provides an SSM Document resource
 or greater can update their content once created, see [SSM Schema Features](http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#document-schemas-features). To update a document with an older
 schema version you must recreate the resource.
 
+
+## Permissions
+
+The permissions attribute specifies how you want to share the document. If you share a document privately,
+you must specify the AWS user account IDs for those people who can use the document. If you share a document
+publicly, you must specify All as the account ID.
+
+The permissions mapping supports the following:
+
+* `type` - The permission type for the document. The permission type can be `Share`.
+* `account_ids` - The AWS user accounts that should have access to the document. The account IDs can either be a group of account IDs or `All`.
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -46,20 +67,8 @@ const foo = new aws.ssm.Document("foo", {
     documentType: "Command",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-## Permissions
-
-The permissions attribute specifies how you want to share the document. If you share a document privately,
-you must specify the AWS user account IDs for those people who can use the document. If you share a document
-publicly, you must specify All as the account ID.
-
-The permissions mapping supports the following:
-
-* `type` - The permission type for the document. The permission type can be `Share`.
-* `account_ids` - The AWS user accounts that should have access to the document. The account IDs can either be a group of account IDs or `All`.
-
 
 
 ## Create a Document Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the SmsChannel resource of the pinpoint module, including ex
 
 Provides a Pinpoint SMS Channel resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,11 +36,8 @@ const sms = new aws.pinpoint.SmsChannel("sms", {
     applicationId: app.applicationId,
 });
 ```
-
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SmsChannel Resource {#create}

@@ -12,12 +12,21 @@ meta_desc: "Explore the ScheduledAction resource of the appautoscaling module, i
 
 Provides an Application AutoScaling ScheduledAction resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### DynamoDB Table Autoscaling
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -40,11 +49,18 @@ const dynamodbScheduledAction = new aws.appautoscaling.ScheduledAction("dynamodb
     serviceNamespace: dynamodbTarget.serviceNamespace,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### ECS Service Autoscaling
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -67,10 +83,8 @@ const ecsScheduledAction = new aws.appautoscaling.ScheduledAction("ecs", {
     serviceNamespace: ecsTarget.serviceNamespace,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ScheduledAction Resource {#create}

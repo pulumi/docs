@@ -19,10 +19,21 @@ defined in-line. At this time you cannot use a Network ACL with in-line rules
 in conjunction with any Network ACL Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -50,10 +61,8 @@ const main = new aws.ec2.NetworkAcl("main", {
     vpcId: aws_vpc_main.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a NetworkAcl Resource {#create}

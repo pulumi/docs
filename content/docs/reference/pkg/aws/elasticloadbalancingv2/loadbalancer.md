@@ -14,12 +14,23 @@ Provides a Load Balancer resource.
 
 > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
 
+
+
+Deprecated: aws.elasticloadbalancingv2.LoadBalancer has been deprecated in favour of aws.lb.LoadBalancer
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Application Load Balancer
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -40,11 +51,18 @@ const test = new aws.lb.LoadBalancer("test", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Network Load Balancer
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,11 +77,18 @@ const test = new aws.lb.LoadBalancer("test", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Specifying Elastic IPs
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -82,12 +107,8 @@ const example = new aws.lb.LoadBalancer("example", {
     ],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
-Deprecated: aws.elasticloadbalancingv2.LoadBalancer has been deprecated in favour of aws.lb.LoadBalancer
-
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancingv2.LoadBalancer has been deprecated in favour of aws.lb.LoadBalancer{{% /md %}}</p>
 
 

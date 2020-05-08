@@ -12,10 +12,21 @@ meta_desc: "Explore the ByteMatchSet resource of the waf module, including examp
 
 Provides a WAF Byte Match Set Resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -32,10 +43,8 @@ const byteSet = new aws.waf.ByteMatchSet("byte_set", {
     }],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ByteMatchSet Resource {#create}

@@ -16,12 +16,21 @@ Provides an Elastic IP resource.
 
 > **Note:** Do not use `network_interface` to associate the EIP to `aws.lb.LoadBalancer` or `aws.ec2.NatGateway` resources. Instead use the `allocation_id` available in those resources to allow AWS to manage the association, otherwise you will see `AuthFailure` errors.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Single EIP associated with an instance:
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -31,79 +40,8 @@ const lb = new aws.ec2.Eip("lb", {
     vpc: true,
 });
 ```
-
-Multiple EIPs associated with a single network interface:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const multi_ip = new aws.ec2.NetworkInterface("multi-ip", {
-    privateIps: [
-        "10.0.0.10",
-        "10.0.0.11",
-    ],
-    subnetId: aws_subnet_main.id,
-});
-const one = new aws.ec2.Eip("one", {
-    associateWithPrivateIp: "10.0.0.10",
-    networkInterface: multi_ip.id,
-    vpc: true,
-});
-const two = new aws.ec2.Eip("two", {
-    associateWithPrivateIp: "10.0.0.11",
-    networkInterface: multi_ip.id,
-    vpc: true,
-});
-```
-
-Attaching an EIP to an Instance with a pre-assigned private ip (VPC Only):
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const defaultVpc = new aws.ec2.Vpc("default", {
-    cidrBlock: "10.0.0.0/16",
-    enableDnsHostnames: true,
-});
-const gw = new aws.ec2.InternetGateway("gw", {
-    vpcId: defaultVpc.id,
-});
-const tfTestSubnet = new aws.ec2.Subnet("tf_test_subnet", {
-    cidrBlock: "10.0.0.0/24",
-    mapPublicIpOnLaunch: true,
-    vpcId: defaultVpc.id,
-}, { dependsOn: [gw] });
-const foo = new aws.ec2.Instance("foo", {
-    // us-west-2
-    ami: "ami-5189a661",
-    instanceType: "t2.micro",
-    privateIp: "10.0.0.12",
-    subnetId: tfTestSubnet.id,
-});
-const bar = new aws.ec2.Eip("bar", {
-    associateWithPrivateIp: "10.0.0.12",
-    instance: foo.id,
-    vpc: true,
-}, { dependsOn: [gw] });
-```
-
-Allocating EIP from the BYOIP pool:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const byoip_ip = new aws.ec2.Eip("byoip-ip", {
-    publicIpv4Pool: "ipv4pool-ec2-012345",
-    vpc: true,
-});
-```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Eip Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the GetLogGroup function of the cloudwatch module, including
 
 Use this data source to get information about an AWS Cloudwatch Log Group
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const example = pulumi.output(aws.cloudwatch.getLogGroup({
     name: "MyImportantLogs",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetLogGroup {#using}

@@ -14,12 +14,21 @@ Provides a Glue Job resource.
 
 > Glue functionality, such as monitoring and logging of jobs, is typically managed with the `default_arguments` argument. See the [Special Parameters Used by AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html) topic in the Glue developer guide for additional information.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Python Job
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -31,11 +40,18 @@ const example = new aws.glue.Job("example", {
     roleArn: aws_iam_role_example.arn,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Scala Job
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -50,11 +66,18 @@ const example = new aws.glue.Job("example", {
     roleArn: aws_iam_role_example.arn,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Enabling CloudWatch Logs and Metrics
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -72,10 +95,8 @@ const exampleJob = new aws.glue.Job("example", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Job Resource {#create}

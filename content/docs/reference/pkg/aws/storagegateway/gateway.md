@@ -14,12 +14,21 @@ Manages an AWS Storage Gateway file, tape, or volume gateway in the provider reg
 
 > NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving `The specified gateway is not connected` errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### File Gateway
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -31,11 +40,18 @@ const example = new aws.storagegateway.Gateway("example", {
     gatewayType: "FILE_S3",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Tape Gateway
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,11 +65,18 @@ const example = new aws.storagegateway.Gateway("example", {
     tapeDriveType: "IBM-ULT3580-TD5",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Volume Gateway (Cached)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -65,11 +88,18 @@ const example = new aws.storagegateway.Gateway("example", {
     gatewayType: "CACHED",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Volume Gateway (Stored)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -81,10 +111,8 @@ const example = new aws.storagegateway.Gateway("example", {
     gatewayType: "STORED",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Gateway Resource {#create}

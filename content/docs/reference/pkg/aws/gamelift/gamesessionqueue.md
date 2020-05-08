@@ -12,10 +12,21 @@ meta_desc: "Explore the GameSessionQueue resource of the gamelift module, includ
 
 Provides an Gamelift Game Session Queue resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -37,10 +48,8 @@ const test = new aws.gamelift.GameSessionQueue("test", {
     timeoutInSeconds: 60,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a GameSessionQueue Resource {#create}

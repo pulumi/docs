@@ -14,12 +14,21 @@ Manages a S3 Bucket Notification Configuration. For additional information, see 
 
 > **NOTE:** S3 Buckets only support a single notification configuration. Declaring multiple `aws.s3.BucketNotification` resources to the same S3 Bucket will cause a perpetual difference in configuration. See the example "Trigger multiple Lambda functions" for an option.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Add notification configuration to SNS Topic
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,11 +58,18 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
     }],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Add notification configuration to SQS Queue
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -85,11 +101,18 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
     }],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Add multiple notification configurations to SQS Queue
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -130,10 +153,8 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
     ],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a BucketNotification Resource {#create}

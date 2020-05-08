@@ -14,10 +14,21 @@ Associates an AWS account with Amazon Macie as a member account.
 
 > **NOTE:** Before using Amazon Macie for the first time it must be enabled manually. Instructions are [here](https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,10 +37,8 @@ const example = new aws.macie.MemberAccountAssociation("example", {
     memberAccountId: "123456789012",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a MemberAccountAssociation Resource {#create}

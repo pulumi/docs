@@ -12,12 +12,21 @@ meta_desc: "Explore the Certificate resource of the iot module, including exampl
 
 Creates and manages an AWS IoT certificate.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### With CSR
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,11 +37,18 @@ const cert = new aws.iot.Certificate("cert", {
     csr: fs.readFileSync("/my/csr.pem", "utf-8"),
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Without CSR
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,10 +57,8 @@ const cert = new aws.iot.Certificate("cert", {
     active: true,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Certificate Resource {#create}

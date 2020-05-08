@@ -16,12 +16,21 @@ You can simply add neptune instances and Neptune manages the replication. You ca
 meta-parameter to make multiple instances and join them all to the same Neptune Cluster, or you may specify different Cluster Instance resources with various `instance_class` sizes.
 
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example will create a neptune cluster with two neptune instances(one writer and one reader).
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -45,10 +54,8 @@ for (let i = 0; i < 2; i++) {
     }));
 }
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ClusterInstance Resource {#create}

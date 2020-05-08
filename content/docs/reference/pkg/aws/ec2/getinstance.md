@@ -13,10 +13,21 @@ meta_desc: "Explore the GetInstance function of the ec2 module, including exampl
 Use this data source to get the ID of an Amazon EC2 Instance for use in other
 resources.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -35,10 +46,8 @@ const foo = pulumi.output(aws.ec2.getInstance({
     instanceId: "i-instanceid",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetInstance {#using}

@@ -14,10 +14,21 @@ Manages status (recording / stopped) of an AWS Config Configuration Recorder.
 
 > **Note:** Starting Configuration Recorder requires a [Delivery Channel](https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html) to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -72,10 +83,8 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
     role: role.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a RecorderStatus Resource {#create}

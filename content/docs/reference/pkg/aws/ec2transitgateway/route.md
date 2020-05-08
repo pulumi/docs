@@ -12,12 +12,21 @@ meta_desc: "Explore the Route resource of the ec2transitgateway module, includin
 
 Manages an EC2 Transit Gateway Route.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Standard usage
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,11 +37,18 @@ const example = new aws.ec2transitgateway.Route("example", {
     transitGatewayRouteTableId: aws_ec2_transit_gateway_example.associationDefaultRouteTableId,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Blackhole route
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,10 +59,8 @@ const example = new aws.ec2transitgateway.Route("example", {
     transitGatewayRouteTableId: aws_ec2_transit_gateway_example.associationDefaultRouteTableId,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Route Resource {#create}

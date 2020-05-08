@@ -15,10 +15,21 @@ Use this data source to get information about a DB Snapshot for use when provisi
 > **NOTE:** This data source does not apply to snapshots created on Aurora DB clusters.
 See the [`aws.rds.ClusterSnapshot` data source](https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html) for DB Cluster snapshots.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -45,10 +56,8 @@ const dev = new aws.rds.Instance("dev", {
     snapshotIdentifier: latestProdSnapshot.id,
 }, { ignoreChanges: ["snapshotIdentifier"] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetSnapshot {#using}

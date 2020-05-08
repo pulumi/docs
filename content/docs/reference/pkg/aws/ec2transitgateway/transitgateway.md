@@ -12,10 +12,21 @@ meta_desc: "Explore the TransitGateway resource of the ec2transitgateway module,
 
 Manages an EC2 Transit Gateway.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const example = new aws.ec2transitgateway.TransitGateway("example", {
     description: "example",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a TransitGateway Resource {#create}

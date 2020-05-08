@@ -12,48 +12,29 @@ meta_desc: "Explore the GetRegions function of the AWS package, including exampl
 
 Provides information about AWS Regions. Can be used to filter regions i.e. by Opt-In status or only regions enabled for current account. To get details like endpoint and description of each region the data source can be combined with the [`aws..getRegion` data source](https://www.terraform.io/docs/providers/aws/d/region.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Enabled AWS Regions:
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const current = pulumi.output(aws.getRegions({ async: true }));
 ```
-
-All the regions regardless of the availability
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const current = pulumi.output(aws.getRegions({
-    allRegions: true,
-}, { async: true }));
-```
-
-To see regions that are filtered by `"not-opted-in"`, the `all_regions` argument needs to be set to `true` or no results will be returned.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const current = pulumi.output(aws.getRegions({
-    allRegions: true,
-    filters: [{
-        name: "opt-in-status",
-        values: ["not-opted-in"],
-    }],
-}, { async: true }));
-```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetRegions {#using}

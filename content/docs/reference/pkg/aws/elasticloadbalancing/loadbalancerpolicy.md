@@ -12,10 +12,23 @@ meta_desc: "Explore the LoadBalancerPolicy resource of the elasticloadbalancing 
 
 Provides a load balancer policy, which can be attached to an ELB listener or backend server.
 
+
+
+Deprecated: aws.elasticloadbalancing.LoadBalancerPolicy has been deprecated in favour of aws.elb.LoadBalancerPolicy
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,20 +100,8 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
     policyNames: [wu_tang_ssl.policyName],
 });
 ```
-
-Where the file `pubkey` in the current directory contains only the _public key_ of the certificate.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-This example shows how to enable backend authentication for an ELB as well as customize the TLS settings.
-
 {{% /example %}}
 {{% /examples %}}
-
-Deprecated: aws.elasticloadbalancing.LoadBalancerPolicy has been deprecated in favour of aws.elb.LoadBalancerPolicy
-
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.LoadBalancerPolicy has been deprecated in favour of aws.elb.LoadBalancerPolicy{{% /md %}}</p>
 
 

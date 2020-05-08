@@ -16,10 +16,21 @@ Manages [DynamoDB Global Tables V1 (version 2017.11.29)](https://docs.aws.amazon
 
 > Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the [AWS DynamoDB Global Table Requirements](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html) for more information.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -63,10 +74,8 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
     ],
 }, { provider: us_east_1, dependsOn: [us_east_1Table, us_west_2Table] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a GlobalTable Resource {#create}

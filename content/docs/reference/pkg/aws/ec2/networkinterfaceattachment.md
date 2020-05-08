@@ -12,10 +12,21 @@ meta_desc: "Explore the NetworkInterfaceAttachment resource of the ec2 module, i
 
 Attach an Elastic network interface (ENI) resource with EC2 instance.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,10 +37,8 @@ const test = new aws.ec2.NetworkInterfaceAttachment("test", {
     networkInterfaceId: aws_network_interface_test.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a NetworkInterfaceAttachment Resource {#create}

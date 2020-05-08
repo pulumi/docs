@@ -12,10 +12,21 @@ meta_desc: "Explore the DataSource resource of the appsync module, including exa
 
 Provides an AppSync DataSource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -74,10 +85,8 @@ const exampleDataSource = new aws.appsync.DataSource("example", {
     type: "AMAZON_DYNAMODB",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a DataSource Resource {#create}

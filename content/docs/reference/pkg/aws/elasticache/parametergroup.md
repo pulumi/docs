@@ -14,10 +14,21 @@ Provides an ElastiCache parameter group resource.
 
 > **NOTE:** Attempting to remove the `reserved-memory` parameter when `family` is set to `redis2.6` or `redis2.8` may show a perpetual difference in this provider due to an Elasticache API limitation. Leave that parameter configured with any value to workaround the issue.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -36,10 +47,8 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
     ],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ParameterGroup Resource {#create}

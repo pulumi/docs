@@ -12,10 +12,21 @@ meta_desc: "Explore the Response resource of the apigateway module, including ex
 
 Provides an API Gateway Gateway Response for a REST API Gateway.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,10 +44,8 @@ const test = new aws.apigateway.Response("test", {
     statusCode: "401",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Response Resource {#create}

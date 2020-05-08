@@ -12,12 +12,21 @@ meta_desc: "Explore the Policy resource of the appautoscaling module, including 
 
 Provides an Application AutoScaling Policy resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### DynamoDB Table Autoscaling
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -42,11 +51,18 @@ const dynamodbTableReadPolicy = new aws.appautoscaling.Policy("dynamodb_table_re
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### ECS Service Autoscaling
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -74,11 +90,18 @@ const ecsPolicy = new aws.appautoscaling.Policy("ecs_policy", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Preserve desired count when updating an autoscaled ECS Service
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -89,11 +112,18 @@ const ecsService = new aws.ecs.Service("ecs_service", {
     taskDefinition: "taskDefinitionFamily:1",
 }, { ignoreChanges: ["desiredCount"] });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Aurora Read Replica Autoscaling
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -120,10 +150,8 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Policy Resource {#create}

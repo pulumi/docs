@@ -16,12 +16,21 @@ Manages an ECR repository lifecycle policy.
 
 > **NOTE:** The AWS ECR API seems to reorder rules based on `rulePriority`. If you define multiple rules that are not sorted in ascending `rulePriority` order in the this provider code, the resource will be flagged for recreation every deployment.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Policy on untagged image
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,11 +58,18 @@ const foopolicy = new aws.ecr.LifecyclePolicy("foopolicy", {
     repository: foo.name,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Policy on tagged image
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -81,10 +97,8 @@ const foopolicy = new aws.ecr.LifecyclePolicy("foopolicy", {
     repository: foo.name,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a LifecyclePolicy Resource {#create}

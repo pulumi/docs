@@ -12,10 +12,21 @@ meta_desc: "Explore the DocumentationPart resource of the apigateway module, inc
 
 Provides a settings of an API Gateway Documentation Part.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -31,10 +42,8 @@ const exampleDocumentationPart = new aws.apigateway.DocumentationPart("example",
     restApiId: exampleRestApi.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a DocumentationPart Resource {#create}

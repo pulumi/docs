@@ -12,20 +12,29 @@ meta_desc: "Explore the AdminAccount resource of the fms module, including examp
 
 Provides a resource to associate/disassociate an AWS Firewall Manager administrator account. This operation must be performed in the `us-east-1` region.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.fms.AdminAccount("example", {});
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a AdminAccount Resource {#create}

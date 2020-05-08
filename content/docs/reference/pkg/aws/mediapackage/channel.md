@@ -12,10 +12,21 @@ meta_desc: "Explore the Channel resource of the mediapackage module, including e
 
 Provides an AWS Elemental MediaPackage Channel.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const kittens = new aws.mediapackage.Channel("kittens", {
     description: "A channel dedicated to amusing videos of kittens.",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Channel Resource {#create}

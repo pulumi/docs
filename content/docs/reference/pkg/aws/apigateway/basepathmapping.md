@@ -14,10 +14,21 @@ Connects a custom domain name registered via `aws.apigateway.DomainName`
 with a deployed API so that its methods can be called via the
 custom domain name.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,10 +52,8 @@ const test = new aws.apigateway.BasePathMapping("test", {
     stageName: exampleDeployment.stageName,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a BasePathMapping Resource {#create}

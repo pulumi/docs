@@ -12,10 +12,21 @@ meta_desc: "Explore the CatalogDatabase resource of the glue module, including e
 
 Provides a Glue Catalog Database Resource. You can refer to the [Glue Developer Guide](http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html) for a full explanation of the Glue Data Catalog functionality
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const awsGlueCatalogDatabase = new aws.glue.CatalogDatabase("aws.glue.CatalogDat
     name: "MyCatalogDatabase",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a CatalogDatabase Resource {#create}

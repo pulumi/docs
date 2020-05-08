@@ -13,10 +13,21 @@ meta_desc: "Explore the GetContainerDefinition function of the ecs module, inclu
 The ECS container definition data source allows access to details of
 a specific container within an AWS ECS service.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,10 +37,8 @@ const ecs_mongo = aws_ecs_task_definition_mongo.id.apply(id => aws.ecs.getContai
     taskDefinition: id,
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetContainerDefinition {#using}

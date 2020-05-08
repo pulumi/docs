@@ -12,20 +12,29 @@ meta_desc: "Explore the ConfigurationSet resource of the ses module, including e
 
 Provides an SES configuration set resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const test = new aws.ses.ConfigurationSet("test", {});
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ConfigurationSet Resource {#create}

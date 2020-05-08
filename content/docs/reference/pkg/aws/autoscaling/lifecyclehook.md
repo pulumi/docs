@@ -24,10 +24,21 @@ behavior. If you need hooks to run on all instances, add them with
 [`aws.autoscaling.Group`](https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html),
 but take care to not duplicate those hooks with this resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -55,10 +66,8 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
     roleArn: "arn:aws:iam::123456789012:role/S3Access",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a LifecycleHook Resource {#create}

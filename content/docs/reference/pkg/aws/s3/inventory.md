@@ -12,12 +12,21 @@ meta_desc: "Explore the Inventory resource of the s3 module, including examples,
 
 Provides a S3 bucket [inventory configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Add inventory configuration
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -38,11 +47,18 @@ const testInventory = new aws.s3.Inventory("test", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Add inventory configuration with S3 bucket object prefix
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -67,10 +83,8 @@ const test_prefix = new aws.s3.Inventory("test-prefix", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Inventory Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the LogDestinationPolicy resource of the cloudwatch module, 
 
 Provides a CloudWatch Logs destination policy resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -40,10 +51,8 @@ const testDestinationPolicyLogDestinationPolicy = new aws.cloudwatch.LogDestinat
     destinationName: testDestination.name,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a LogDestinationPolicy Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the GroupPolicy resource of the iam module, including exampl
 
 Provides an IAM policy attached to a group.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -40,10 +51,8 @@ const myDeveloperPolicy = new aws.iam.GroupPolicy("my_developer_policy", {
 `,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a GroupPolicy Resource {#create}

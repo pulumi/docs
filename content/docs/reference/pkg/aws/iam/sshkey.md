@@ -12,10 +12,21 @@ meta_desc: "Explore the SshKey resource of the iam module, including examples, i
 
 Uploads an SSH public key and associates it with the specified IAM user.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +40,8 @@ const userSshKey = new aws.iam.SshKey("user", {
     username: userUser.name,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SshKey Resource {#create}

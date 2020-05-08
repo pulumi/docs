@@ -16,10 +16,21 @@ Manages Cost and Usage Report Definitions.
 
 > *NOTE:* If AWS Organizations is enabled, only the master account can use this resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -38,10 +49,8 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
     timeUnit: "HOURLY",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ReportDefinition Resource {#create}

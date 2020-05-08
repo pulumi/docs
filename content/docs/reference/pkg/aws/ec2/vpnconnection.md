@@ -18,12 +18,21 @@ Manages an EC2 VPN connection. These objects can be connected to customer gatewa
 > **Note:** The CIDR blocks in the arguments `tunnel1_inside_cidr` and `tunnel2_inside_cidr` must have a prefix of /30 and be a part of a specific range.
 [Read more about this in the AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### EC2 Transit Gateway
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -40,11 +49,18 @@ const exampleVpnConnection = new aws.ec2.VpnConnection("example", {
     type: exampleCustomerGateway.type,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Virtual Private Gateway
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -67,10 +83,8 @@ const main = new aws.ec2.VpnConnection("main", {
     vpnGatewayId: vpnGateway.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a VpnConnection Resource {#create}

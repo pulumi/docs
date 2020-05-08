@@ -17,10 +17,21 @@ See [Amazon Elastic MapReduce Documentation](https://aws.amazon.com/documentatio
 web interface. Instance Groups are destroyed when the EMR Cluster is destroyed.
 this provider will resize any Instance Group to zero when destroying the resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -31,10 +42,8 @@ const task = new aws.emr.InstanceGroup("task", {
     instanceType: "m5.xlarge",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a InstanceGroup Resource {#create}

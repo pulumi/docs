@@ -12,10 +12,21 @@ meta_desc: "Explore the ReceiptFilter resource of the ses module, including exam
 
 Provides an SES receipt filter resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const filter = new aws.ses.ReceiptFilter("filter", {
     policy: "Block",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ReceiptFilter Resource {#create}

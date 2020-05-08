@@ -12,10 +12,21 @@ meta_desc: "Explore the Pipeline resource of the elastictranscoder module, inclu
 
 Provides an Elastic Transcoder pipeline resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,10 +44,8 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Pipeline Resource {#create}

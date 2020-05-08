@@ -16,10 +16,21 @@ Manages a Config Organization Managed Rule. More information about these rules c
 
 > **NOTE:** Every Organization account except those configured in the `excluded_accounts` argument must have a Configuration Recorder with proper IAM permissions before the rule will successfully create or update. See also the [`aws.cfg.Recorder` resource](https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -32,10 +43,8 @@ const exampleOrganizationManagedRule = new aws.cfg.OrganizationManagedRule("exam
     ruleIdentifier: "IAM_PASSWORD_POLICY",
 }, { dependsOn: [exampleOrganization] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a OrganizationManagedRule Resource {#create}

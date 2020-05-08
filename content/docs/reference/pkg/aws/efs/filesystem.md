@@ -12,12 +12,21 @@ meta_desc: "Explore the FileSystem resource of the efs module, including example
 
 Provides an Elastic File System (EFS) resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### EFS File System w/ tags
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,11 +37,18 @@ const foo = new aws.efs.FileSystem("foo", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Using lifecycle policy
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,10 +59,8 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a FileSystem Resource {#create}

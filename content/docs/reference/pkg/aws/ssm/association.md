@@ -12,10 +12,21 @@ meta_desc: "Explore the Association resource of the ssm module, including exampl
 
 Associates an SSM Document to an instance or EC2 tag.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,10 +38,8 @@ const example = new aws.ssm.Association("example", {
     }],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Association Resource {#create}

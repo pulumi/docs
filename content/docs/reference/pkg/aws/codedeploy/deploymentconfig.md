@@ -12,12 +12,21 @@ meta_desc: "Explore the DeploymentConfig resource of the codedeploy module, incl
 
 Provides a CodeDeploy deployment config for an application
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Server Usage
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -54,11 +63,18 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
     }],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Lambda Usage
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -89,10 +105,8 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
     serviceRoleArn: aws_iam_role_foo_role.arn,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a DeploymentConfig Resource {#create}

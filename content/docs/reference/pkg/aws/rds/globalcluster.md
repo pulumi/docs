@@ -14,10 +14,21 @@ Manages a RDS Global Cluster, which is an Aurora global database spread across m
 
 More information about Aurora global databases can be found in the [Aurora User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database-creating).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -50,10 +61,8 @@ const secondaryClusterInstance = new aws.rds.ClusterInstance("secondary", {
     clusterIdentifier: secondaryCluster.id,
 }, { provider: secondary });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a GlobalCluster Resource {#create}

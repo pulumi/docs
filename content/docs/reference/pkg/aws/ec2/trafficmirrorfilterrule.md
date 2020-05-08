@@ -13,12 +13,21 @@ meta_desc: "Explore the TrafficMirrorFilterRule resource of the ec2 module, incl
 Provides an Traffic mirror filter rule.  
 Read [limits and considerations](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html) for traffic mirroring
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-To create a basic traffic mirror session
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -55,10 +64,8 @@ const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
     trafficMirrorFilterId: filter.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a TrafficMirrorFilterRule Resource {#create}

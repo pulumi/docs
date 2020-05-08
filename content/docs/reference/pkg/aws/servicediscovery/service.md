@@ -12,10 +12,21 @@ meta_desc: "Explore the Service resource of the servicediscovery module, includi
 
 Provides a Service Discovery Service resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,33 +54,8 @@ const exampleService = new aws.servicediscovery.Service("example", {
     },
 });
 ```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const examplePublicDnsNamespace = new aws.servicediscovery.PublicDnsNamespace("example", {
-    description: "example",
-});
-const exampleService = new aws.servicediscovery.Service("example", {
-    dnsConfig: {
-        dnsRecords: [{
-            ttl: 10,
-            type: "A",
-        }],
-        namespaceId: examplePublicDnsNamespace.id,
-    },
-    healthCheckConfig: {
-        failureThreshold: 10,
-        resourcePath: "path",
-        type: "HTTP",
-    },
-});
-```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Service Resource {#create}

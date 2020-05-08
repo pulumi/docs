@@ -15,10 +15,21 @@ Provides a DynamoDB table item resource
 > **Note:** This resource is not meant to be used for managing large amounts of data in your table, it is not designed to scale.
   You should perform **regular backups** of all data in the table, see [AWS docs for more](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -45,10 +56,8 @@ const exampleTableItem = new aws.dynamodb.TableItem("example", {
     tableName: exampleTable.name,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a TableItem Resource {#create}

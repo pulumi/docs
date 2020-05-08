@@ -12,10 +12,21 @@ meta_desc: "Explore the User resource of the quicksight module, including exampl
 
 Resource for managing QuickSight User
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,10 +38,8 @@ const example = new aws.quicksight.User("example", {
     userRole: "AUTHOR",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a User Resource {#create}

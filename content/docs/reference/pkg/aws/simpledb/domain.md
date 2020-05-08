@@ -12,20 +12,29 @@ meta_desc: "Explore the Domain resource of the simpledb module, including exampl
 
 Provides a SimpleDB domain resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const users = new aws.simpledb.Domain("users", {});
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Domain Resource {#create}

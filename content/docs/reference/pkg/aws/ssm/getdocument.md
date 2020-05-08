@@ -12,12 +12,21 @@ meta_desc: "Explore the GetDocument function of the ssm module, including exampl
 
 Gets the contents of the specified Systems Manager document.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-To get the contents of the document owned by AWS.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,23 +38,8 @@ const foo = pulumi.output(aws.ssm.getDocument({
 
 export const content = foo.content;
 ```
-
-To get the contents of the custom document.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const test = aws_ssm_document_test.name.apply(name => aws.ssm.getDocument({
-    documentFormat: "JSON",
-    name: name,
-}, { async: true }));
-```
-
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetDocument {#using}

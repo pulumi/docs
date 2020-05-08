@@ -21,10 +21,28 @@ provides both a standalone ELB Attachment resource
 instances in conjunction with a ELB Attachment resources. Doing so will cause a
 conflict and will overwrite attachments.
 
+
+## Note on ECDSA Key Algorithm
+
+If the ARN of the `ssl_certificate_id` that is pointed to references a
+certificate that was signed by an ECDSA key, note that ELB only supports the
+P256 and P384 curves.  Using a certificate signed by a key using a different
+curve could produce the error `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` in your
+browser.
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -73,17 +91,8 @@ const bar = new aws.elb.LoadBalancer("bar", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-## Note on ECDSA Key Algorithm
-
-If the ARN of the `ssl_certificate_id` that is pointed to references a
-certificate that was signed by an ECDSA key, note that ELB only supports the
-P256 and P384 curves.  Using a certificate signed by a key using a different
-curve could produce the error `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` in your
-browser.
-
 
 
 ## Create a LoadBalancer Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the ContainerPolicy resource of the mediastore module, inclu
 
 Provides a MediaStore Container Policy.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,10 +52,8 @@ const exampleContainerPolicy = new aws.mediastore.ContainerPolicy("example", {
 `,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ContainerPolicy Resource {#create}

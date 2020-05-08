@@ -34,10 +34,21 @@ documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-in
 for more information.
 
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -52,10 +63,8 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SpotInstanceRequest Resource {#create}

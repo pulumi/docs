@@ -24,12 +24,21 @@ Certificates][2] in AWS Documentation.
 > **Note:** All arguments including the private key will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-**Using certs on file:**
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -40,60 +49,8 @@ const testCert = new aws.iam.ServerCertificate("test_cert", {
     privateKey: fs.readFileSync("test-key.pem", "utf-8"),
 });
 ```
-
-**Example with cert in-line:**
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const testCertAlt = new aws.iam.ServerCertificate("test_cert_alt", {
-    certificateBody: `-----BEGIN CERTIFICATE-----
-[......] # cert contents
------END CERTIFICATE-----
-`,
-    privateKey: `-----BEGIN RSA PRIVATE KEY-----
-[......] # cert contents
------END RSA PRIVATE KEY-----
-`,
-});
-```
-
-**Use in combination with an AWS ELB resource:**
-
-Some properties of an IAM Server Certificates cannot be updated while they are
-in use. In order for this provider to effectively manage a Certificate in this situation, it is
-recommended you utilize the `name_prefix` attribute and enable the
-`create_before_destroy` [lifecycle block][lifecycle]. This will allow this provider
-to create a new, updated `aws.iam.ServerCertificate` resource and replace it in
-dependant resources before attempting to destroy the old version.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as fs from "fs";
-
-const testCert = new aws.iam.ServerCertificate("test_cert", {
-    certificateBody: fs.readFileSync("self-ca-cert.pem", "utf-8"),
-    namePrefix: "example-cert",
-    privateKey: fs.readFileSync("test-key.pem", "utf-8"),
-});
-const ourapp = new aws.elb.LoadBalancer("ourapp", {
-    availabilityZones: ["us-west-2a"],
-    crossZoneLoadBalancing: true,
-    listeners: [{
-        instancePort: 8000,
-        instanceProtocol: "http",
-        lbPort: 443,
-        lbProtocol: "https",
-        sslCertificateId: testCert.arn,
-    }],
-});
-```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ServerCertificate Resource {#create}

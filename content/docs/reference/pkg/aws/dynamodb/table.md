@@ -14,13 +14,21 @@ Provides a DynamoDB table resource
 
 > **Note:** It is recommended to use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) for `read_capacity` and/or `write_capacity` if there's [autoscaling policy](https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html) attached to the table.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following dynamodb table description models the table and GSI shown
-in the [AWS SDK example documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.html)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -64,13 +72,18 @@ const basic_dynamodb_table = new aws.dynamodb.Table("basic-dynamodb-table", {
     writeCapacity: 20,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Global Tables
-
-This resource implements support for [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) via `replica` configuration blocks. For working with [DynamoDB Global Tables V1 (version 2017.11.29)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html), see the [`aws.dynamodb.GlobalTable` resource](https://www.terraform.io/docs/providers/aws/r/dynamodb_global_table.html).
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -94,10 +107,8 @@ const example = new aws.dynamodb.Table("example", {
     streamViewType: "NEW_AND_OLD_IMAGES",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Table Resource {#create}

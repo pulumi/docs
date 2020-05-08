@@ -12,10 +12,21 @@ meta_desc: "Explore the BucketPublicAccessBlock resource of the s3 module, inclu
 
 Manages S3 bucket-level Public Access Block configuration. For more information about these settings, see the [AWS S3 Block Public Access documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,10 +38,8 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
     bucket: exampleBucket.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a BucketPublicAccessBlock Resource {#create}

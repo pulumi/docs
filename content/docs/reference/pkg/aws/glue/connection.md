@@ -12,12 +12,21 @@ meta_desc: "Explore the Connection resource of the glue module, including exampl
 
 Provides a Glue Connection resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Non-VPC Connection
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -30,13 +39,18 @@ const example = new aws.glue.Connection("example", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### VPC Connection
-
-For more information, see the [AWS Documentation](https://docs.aws.amazon.com/glue/latest/dg/populate-add-connection.html#connection-JDBC-VPC).
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -54,10 +68,8 @@ const example = new aws.glue.Connection("example", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Connection Resource {#create}

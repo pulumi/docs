@@ -12,12 +12,21 @@ meta_desc: "Explore the GraphQLApi resource of the appsync module, including exa
 
 Provides an AppSync GraphQL API.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### API Key Authentication
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,11 +35,18 @@ const example = new aws.appsync.GraphQLApi("example", {
     authenticationType: "API_KEY",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### AWS Cognito User Pool Authentication
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -44,11 +60,18 @@ const example = new aws.appsync.GraphQLApi("example", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### AWS IAM Authentication
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -57,11 +80,18 @@ const example = new aws.appsync.GraphQLApi("example", {
     authenticationType: "AWS_IAM",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### With Schema
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -77,11 +107,18 @@ type Query {
 `,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### OpenID Connect Authentication
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -93,11 +130,18 @@ const example = new aws.appsync.GraphQLApi("example", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### With Multiple Authentication Providers
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -109,11 +153,18 @@ const example = new aws.appsync.GraphQLApi("example", {
     authenticationType: "API_KEY",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Enabling Logging
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -144,10 +195,8 @@ const exampleGraphQLApi = new aws.appsync.GraphQLApi("example", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a GraphQLApi Resource {#create}

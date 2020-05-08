@@ -12,10 +12,21 @@ meta_desc: "Explore the RouteTableAssociation resource of the ec2transitgateway 
 
 Manages an EC2 Transit Gateway Route Table association.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const example = new aws.ec2transitgateway.RouteTableAssociation("example", {
     transitGatewayRouteTableId: aws_ec2_transit_gateway_route_table_example.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a RouteTableAssociation Resource {#create}

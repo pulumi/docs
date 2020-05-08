@@ -16,13 +16,21 @@ This resource can prove useful when a module accepts a Security Group id as
 an input variable and needs to, for example, determine the id of the
 VPC that the security group belongs to.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example shows how one might accept a Security Group id as a variable
-and use this data source to obtain the data necessary to create a subnet.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -38,10 +46,8 @@ const subnet = new aws.ec2.Subnet("subnet", {
     vpcId: selected.vpcId!,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetSecurityGroup {#using}

@@ -12,10 +12,21 @@ meta_desc: "Explore the ClientCertificate resource of the apigateway module, inc
 
 Provides an API Gateway Client Certificate.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const demo = new aws.apigateway.ClientCertificate("demo", {
     description: "My client certificate",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ClientCertificate Resource {#create}

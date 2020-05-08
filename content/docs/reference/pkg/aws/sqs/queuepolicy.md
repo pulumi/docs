@@ -13,10 +13,21 @@ meta_desc: "Explore the QueuePolicy resource of the sqs module, including exampl
 Allows you to set a policy of an SQS Queue
 while referencing ARN of the queue within the policy.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -45,10 +56,8 @@ const test = new aws.sqs.QueuePolicy("test", {
     queueUrl: queue.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a QueuePolicy Resource {#create}

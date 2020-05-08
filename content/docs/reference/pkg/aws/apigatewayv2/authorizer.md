@@ -13,12 +13,21 @@ meta_desc: "Explore the Authorizer resource of the apigatewayv2 module, includin
 Manages an Amazon API Gateway Version 2 authorizer.
 More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Basic WebSocket API
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -30,11 +39,18 @@ const example = new aws.apigatewayv2.Authorizer("example", {
     identitySources: ["route.request.header.Auth"],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Basic HTTP API
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,10 +65,8 @@ const example = new aws.apigatewayv2.Authorizer("example", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Authorizer Resource {#create}

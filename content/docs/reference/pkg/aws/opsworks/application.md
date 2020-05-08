@@ -12,10 +12,21 @@ meta_desc: "Explore the Application resource of the opsworks module, including e
 
 Provides an OpsWorks application resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -50,10 +61,8 @@ const foo_app = new aws.opsworks.Application("foo-app", {
     type: "rails",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Application Resource {#create}

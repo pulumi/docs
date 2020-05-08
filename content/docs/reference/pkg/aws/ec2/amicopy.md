@@ -22,10 +22,21 @@ it available in another for a multi-region deployment.
 Copying an AMI can take several minutes. The creation of this resource will
 block until the new AMI is available for use on new instances.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -39,10 +50,8 @@ const example = new aws.ec2.AmiCopy("example", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a AmiCopy Resource {#create}

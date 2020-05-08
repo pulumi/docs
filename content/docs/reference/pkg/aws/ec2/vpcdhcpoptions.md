@@ -12,12 +12,28 @@ meta_desc: "Explore the VpcDhcpOptions resource of the ec2 module, including exa
 
 Provides a VPC DHCP Options resource.
 
+
+## Remarks
+
+* Notice that all arguments are optional but you have to specify at least one argument.
+* `domain_name_servers`, `netbios_name_servers`, `ntp_servers` are limited by AWS to maximum four servers only.
+* To actually use the DHCP Options Set you need to associate it to a VPC using [`aws.ec2.VpcDhcpOptionsAssociation`](https://www.terraform.io/docs/providers/aws/r/vpc_dhcp_options_association.html).
+* If you delete a DHCP Options Set, all VPCs using it will be associated to AWS's `default` DHCP Option Set.
+* In most cases unless you're configuring your own DNS you'll want to set `domain_name_servers` to `AmazonProvidedDNS`.
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic usage:
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,38 +45,8 @@ const dnsResolver = new aws.ec2.VpcDhcpOptions("dns_resolver", {
     ],
 });
 ```
-
-Full usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const foo = new aws.ec2.VpcDhcpOptions("foo", {
-    domainName: "service.consul",
-    domainNameServers: [
-        "127.0.0.1",
-        "10.0.0.2",
-    ],
-    netbiosNameServers: ["127.0.0.1"],
-    netbiosNodeType: "2",
-    ntpServers: ["127.0.0.1"],
-    tags: {
-        Name: "foo-name",
-    },
-});
-```
-
 {{% /example %}}
 {{% /examples %}}
-## Remarks
-
-* Notice that all arguments are optional but you have to specify at least one argument.
-* `domain_name_servers`, `netbios_name_servers`, `ntp_servers` are limited by AWS to maximum four servers only.
-* To actually use the DHCP Options Set you need to associate it to a VPC using [`aws.ec2.VpcDhcpOptionsAssociation`](https://www.terraform.io/docs/providers/aws/r/vpc_dhcp_options_association.html).
-* If you delete a DHCP Options Set, all VPCs using it will be associated to AWS's `default` DHCP Option Set.
-* In most cases unless you're configuring your own DNS you'll want to set `domain_name_servers` to `AmazonProvidedDNS`.
-
 
 
 ## Create a VpcDhcpOptions Resource {#create}

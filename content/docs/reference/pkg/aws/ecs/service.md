@@ -16,14 +16,21 @@ Provides an ECS service - effectively a task that is expected to run until an er
 
 See [ECS Services section in AWS developer guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Ignoring Changes to Desired Count
-
-You can use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to create an ECS service with an initial count of running instances, then ignore any changes to that count caused externally (e.g. Application Autoscaling).
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,11 +40,18 @@ const example = new aws.ecs.Service("example", {
     desiredCount: 2,
 }, { ignoreChanges: ["desiredCount"] });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Daemon Scheduling Strategy
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -48,10 +62,8 @@ const bar = new aws.ecs.Service("bar", {
     taskDefinition: aws_ecs_task_definition_bar.arn,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Service Resource {#create}

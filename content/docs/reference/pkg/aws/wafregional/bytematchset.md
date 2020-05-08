@@ -12,10 +12,21 @@ meta_desc: "Explore the ByteMatchSet resource of the wafregional module, includi
 
 Provides a WAF Regional Byte Match Set Resource for use with Application Load Balancer.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -32,10 +43,8 @@ const byteSet = new aws.wafregional.ByteMatchSet("byte_set", {
     }],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ByteMatchSet Resource {#create}

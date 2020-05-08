@@ -14,12 +14,21 @@ Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is
 
 For more details, see the [Amazon Kinesis Firehose Documentation](https://aws.amazon.com/documentation/firehose/).
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Extended S3 Destination
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,11 +92,18 @@ const extendedS3Stream = new aws.kinesis.FirehoseDeliveryStream("extended_s3_str
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### S3 Destination
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -119,11 +135,18 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Redshift Destination
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -164,11 +187,18 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Elasticsearch Destination
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -201,12 +231,18 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     },
 });
 ```
-
-
 {{% /example %}}
-{{% example %}}
 ### Splunk Destination
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -229,10 +265,8 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a FirehoseDeliveryStream Resource {#create}

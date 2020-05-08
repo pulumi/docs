@@ -12,29 +12,7 @@ meta_desc: "Explore the MetricAlarm resource of the cloudwatch module, including
 
 Provides a CloudWatch Metric Alarm resource.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const foobar = new aws.cloudwatch.MetricAlarm("foobar", {
-    alarmDescription: "This metric monitors ec2 cpu utilization",
-    comparisonOperator: "GreaterThanOrEqualToThreshold",
-    evaluationPeriods: 2,
-    insufficientDataActions: [],
-    metricName: "CPUUtilization",
-    namespace: "AWS/EC2",
-    period: 120,
-    statistic: "Average",
-    threshold: 80,
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Example in Conjunction with Scaling Policies
 
 ```typescript
@@ -147,6 +125,37 @@ const xxAnomalyDetection = new aws.cloudwatch.MetricAlarm("xx_anomaly_detection"
 });
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const foobar = new aws.cloudwatch.MetricAlarm("foobar", {
+    alarmDescription: "This metric monitors ec2 cpu utilization",
+    comparisonOperator: "GreaterThanOrEqualToThreshold",
+    evaluationPeriods: 2,
+    insufficientDataActions: [],
+    metricName: "CPUUtilization",
+    namespace: "AWS/EC2",
+    period: 120,
+    statistic: "Average",
+    threshold: 80,
+});
+```
+{{% /example %}}
+{{% /examples %}}
 
 
 ## Create a MetricAlarm Resource {#create}

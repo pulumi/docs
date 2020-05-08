@@ -14,10 +14,21 @@ Provides an Elastic Container Registry Repository Policy.
 
 Note that currently only one policy may be applied to a repository.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -54,10 +65,8 @@ const foopolicy = new aws.ecr.RepositoryPolicy("foopolicy", {
     repository: foo.name,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a RepositoryPolicy Resource {#create}

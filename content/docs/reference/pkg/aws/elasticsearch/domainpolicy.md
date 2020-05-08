@@ -12,10 +12,21 @@ meta_desc: "Explore the DomainPolicy resource of the elasticsearch module, inclu
 
 Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g. ARN)
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -42,10 +53,8 @@ const main = new aws.elasticsearch.DomainPolicy("main", {
     domainName: example.domainName,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a DomainPolicy Resource {#create}

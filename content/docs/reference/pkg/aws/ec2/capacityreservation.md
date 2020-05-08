@@ -12,10 +12,21 @@ meta_desc: "Explore the CapacityReservation resource of the ec2 module, includin
 
 Provides an EC2 Capacity Reservation. This allows you to reserve capacity for your Amazon EC2 instances in a specific Availability Zone for any duration.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,10 +38,8 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
     instanceType: "t2.micro",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a CapacityReservation Resource {#create}

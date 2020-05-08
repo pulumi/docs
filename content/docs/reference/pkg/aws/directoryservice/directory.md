@@ -15,12 +15,21 @@ Provides a Simple or Managed Microsoft directory in AWS Directory Service.
 > **Note:** All arguments including the password and customer username will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### SimpleAD
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -53,11 +62,18 @@ const barDirectory = new aws.directoryservice.Directory("bar", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Microsoft Active Directory (MicrosoftAD)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,11 +107,18 @@ const barDirectory = new aws.directoryservice.Directory("bar", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Microsoft Active Directory Connector (ADConnector)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -128,10 +151,8 @@ const connector = new aws.directoryservice.Directory("connector", {
     type: "ADConnector",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Directory Resource {#create}

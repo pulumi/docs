@@ -18,10 +18,21 @@ a permissive CloudWatch log resource policy must be in place, and
 the Route53 hosted zone must be public.
 See [Configuring Logging for DNS Queries](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html?console_help=true#query-logs-configuring) for additional details.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -55,10 +66,8 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
     zoneId: exampleComZone.zoneId,
 }, { dependsOn: [route53_query_logging_policyLogResourcePolicy] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a QueryLog Resource {#create}

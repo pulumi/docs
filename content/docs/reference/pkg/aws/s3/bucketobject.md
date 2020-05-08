@@ -12,12 +12,21 @@ meta_desc: "Explore the BucketObject resource of the s3 module, including exampl
 
 Provides a S3 bucket object resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Encrypting with KMS Key
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -36,11 +45,18 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
     source: new pulumi.asset.FileAsset("index.html"),
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Server Side Encryption with S3 Default Master Key
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -55,11 +71,18 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
     source: new pulumi.asset.FileAsset("index.html"),
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Server Side Encryption with AWS-Managed Key
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -74,11 +97,18 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
     source: new pulumi.asset.FileAsset("index.html"),
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### S3 Object Lock
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -102,10 +132,8 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
     source: new pulumi.asset.FileAsset("important.txt"),
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a BucketObject Resource {#create}

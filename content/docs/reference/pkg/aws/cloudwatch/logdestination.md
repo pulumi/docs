@@ -12,10 +12,21 @@ meta_desc: "Explore the LogDestination resource of the cloudwatch module, includ
 
 Provides a CloudWatch Logs destination resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const testDestination = new aws.cloudwatch.LogDestination("test_destination", {
     targetArn: aws_kinesis_stream_kinesis_for_cloudwatch.arn,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a LogDestination Resource {#create}

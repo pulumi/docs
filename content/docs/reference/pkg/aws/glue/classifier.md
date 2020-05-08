@@ -14,12 +14,21 @@ Provides a Glue Classifier resource.
 
 > **NOTE:** It is only valid to create one type of classifier (csv, grok, JSON, or XML). Changing classifier types will recreate the classifier.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Csv Classifier
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -38,11 +47,18 @@ const example = new aws.glue.Classifier("example", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Grok Classifier
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -54,11 +70,18 @@ const example = new aws.glue.Classifier("example", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### JSON Classifier
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -69,11 +92,18 @@ const example = new aws.glue.Classifier("example", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### XML Classifier
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -85,10 +115,8 @@ const example = new aws.glue.Classifier("example", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Classifier Resource {#create}

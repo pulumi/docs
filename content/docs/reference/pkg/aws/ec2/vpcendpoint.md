@@ -19,12 +19,21 @@ a VPC Endpoint resource with `route_table_ids` and `subnet_ids` attributes.
 Do not use the same resource ID in both a VPC Endpoint resource and a VPC Endpoint Association resource.
 Doing so will cause a conflict of associations and will overwrite the association.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Basic
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -34,11 +43,18 @@ const s3 = new aws.ec2.VpcEndpoint("s3", {
     vpcId: aws_vpc_main.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Basic w/ Tags
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -51,11 +67,18 @@ const s3 = new aws.ec2.VpcEndpoint("s3", {
     vpcId: aws_vpc_main.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Interface Endpoint Type
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -68,11 +91,18 @@ const ec2 = new aws.ec2.VpcEndpoint("ec2", {
     vpcId: aws_vpc_main.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Non-AWS Service
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -98,12 +128,8 @@ const ptfeServiceRecord = new aws.route53.Record("ptfe_service", {
     zoneId: internal.zoneId!,
 });
 ```
-
-> **NOTE The `dns_entry` output is a list of maps:** This provider interpolation support for lists of maps requires the `lookup` and `[]` until full support of lists of maps is available
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a VpcEndpoint Resource {#create}

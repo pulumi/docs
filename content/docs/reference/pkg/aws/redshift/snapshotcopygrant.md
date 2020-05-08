@@ -14,10 +14,21 @@ Creates a snapshot copy grant that allows AWS Redshift to encrypt copied snapsho
 
 Note that the grant must exist in the destination region, and not in the region of the cluster.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,10 +44,8 @@ const testCluster = new aws.redshift.Cluster("test", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SnapshotCopyGrant Resource {#create}

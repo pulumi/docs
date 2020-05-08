@@ -14,10 +14,21 @@ Manages an EC2 Availability Zone Group, such as updating its opt-in status.
 
 > **NOTE:** This is an advanced resource. The provider will automatically assume management of the EC2 Availability Zone Group without import and perform no actions on removal from configuration.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,10 +38,8 @@ const example = new aws.ec2.AvailabilityZoneGroup("example", {
     optInStatus: "opted-in",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a AvailabilityZoneGroup Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the InternetGateway resource of the ec2 module, including ex
 
 Provides a resource to create a VPC Internet Gateway.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,10 +38,8 @@ const gw = new aws.ec2.InternetGateway("gw", {
     vpcId: aws_vpc_main.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a InternetGateway Resource {#create}

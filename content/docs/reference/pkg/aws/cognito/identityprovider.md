@@ -12,10 +12,21 @@ meta_desc: "Explore the IdentityProvider resource of the cognito module, includi
 
 Provides a Cognito User Identity Provider resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -38,10 +49,8 @@ const exampleProvider = new aws.cognito.IdentityProvider("example_provider", {
     userPoolId: example.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a IdentityProvider Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the GetService function of the servicequotas module, includi
 
 Retrieve information about a Service Quotas Service.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const example = pulumi.output(aws.servicequotas.getService({
     serviceName: "Amazon Virtual Private Cloud (Amazon VPC)",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetService {#using}

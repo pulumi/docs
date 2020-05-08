@@ -12,10 +12,21 @@ meta_desc: "Explore the Directory resource of the workspaces module, including e
 
 Provides a directory registration in AWS WorkSpaces Service
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -52,10 +63,8 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Directory Resource {#create}

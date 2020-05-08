@@ -12,10 +12,21 @@ meta_desc: "Explore the GetUserPools function of the cognito module, including e
 
 Use this data source to get a list of cognito user pools.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -32,10 +43,8 @@ const cognito = new aws.apigateway.Authorizer("cognito", {
     type: "COGNITO_USER_POOLS",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetUserPools {#using}

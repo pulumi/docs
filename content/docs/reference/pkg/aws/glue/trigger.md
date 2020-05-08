@@ -12,12 +12,21 @@ meta_desc: "Explore the Trigger resource of the glue module, including examples,
 
 Manages a Glue Trigger resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Conditional Trigger
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -35,11 +44,18 @@ const example = new aws.glue.Trigger("example", {
     type: "CONDITIONAL",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### On-Demand Trigger
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -51,11 +67,18 @@ const example = new aws.glue.Trigger("example", {
     type: "ON_DEMAND",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Scheduled Trigger
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -68,13 +91,18 @@ const example = new aws.glue.Trigger("example", {
     type: "SCHEDULED",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Conditional Trigger with Crawler Action
-
-**Note:** Triggers can have both a crawler action and a crawler condition, just no example provided.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,13 +120,18 @@ const example = new aws.glue.Trigger("example", {
     type: "CONDITIONAL",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Conditional Trigger with Crawler Condition 
-
-**Note:** Triggers can have both a crawler action and a crawler condition, just no example provided.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -116,10 +149,8 @@ const example = new aws.glue.Trigger("example", {
     type: "CONDITIONAL",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Trigger Resource {#create}

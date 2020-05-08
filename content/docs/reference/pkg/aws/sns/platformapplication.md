@@ -12,12 +12,21 @@ meta_desc: "Explore the PlatformApplication resource of the sns module, includin
 
 Provides an SNS platform application resource
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Apple Push Notification Service (APNS)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,11 +37,18 @@ const apnsApplication = new aws.sns.PlatformApplication("apns_application", {
     platformPrincipal: "<APNS CERTIFICATE>",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Google Cloud Messaging (GCM)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -42,10 +58,8 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
     platformCredential: "<GCM API KEY>",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a PlatformApplication Resource {#create}

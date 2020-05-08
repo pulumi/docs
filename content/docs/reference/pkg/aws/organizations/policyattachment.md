@@ -12,12 +12,21 @@ meta_desc: "Explore the PolicyAttachment resource of the organizations module, i
 
 Provides a resource to attach an AWS Organizations policy to an organization account, root, or unit.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Organization Account
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,11 +36,18 @@ const account = new aws.organizations.PolicyAttachment("account", {
     targetId: "123456789012",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Organization Root
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,11 +57,18 @@ const root = new aws.organizations.PolicyAttachment("root", {
     targetId: aws_organizations_organization_example.roots.0.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Organization Unit
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -55,10 +78,8 @@ const unit = new aws.organizations.PolicyAttachment("unit", {
     targetId: aws_organizations_organizational_unit_example.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a PolicyAttachment Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the StandardsSubscription resource of the securityhub module
 
 Subscribes to a Security Hub standard.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,10 +39,8 @@ const pci321 = new aws.securityhub.StandardsSubscription("pci_321", {
     standardsArn: "arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1",
 }, { dependsOn: [example] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a StandardsSubscription Resource {#create}

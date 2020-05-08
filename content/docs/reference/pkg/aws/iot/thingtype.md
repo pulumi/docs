@@ -12,20 +12,29 @@ meta_desc: "Explore the ThingType resource of the iot module, including examples
 
 Creates and manages an AWS IoT Thing Type.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const foo = new aws.iot.ThingType("foo", {});
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ThingType Resource {#create}

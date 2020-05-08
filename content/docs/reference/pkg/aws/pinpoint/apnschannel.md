@@ -15,10 +15,21 @@ Provides a Pinpoint APNs Channel resource.
 > **Note:** All arguments, including certificates and tokens, will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -31,11 +42,8 @@ const apns = new aws.pinpoint.ApnsChannel("apns", {
     privateKey: fs.readFileSync("./private_key.key", "utf-8"),
 });
 ```
-
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ApnsChannel Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the CustomerGateway resource of the ec2 module, including ex
 
 Provides a customer gateway inside a VPC. These objects can be connected to VPN gateways via VPN connections, and allow you to establish tunnels between your network and the VPC.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +40,8 @@ const main = new aws.ec2.CustomerGateway("main", {
     type: "ipsec.1",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a CustomerGateway Resource {#create}

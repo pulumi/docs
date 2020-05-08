@@ -12,10 +12,21 @@ meta_desc: "Explore the XssMatchSet resource of the wafregional module, includin
 
 Provides a WAF Regional XSS Match Set Resource for use with Application Load Balancer.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -37,10 +48,8 @@ const xssMatchSet = new aws.wafregional.XssMatchSet("xss_match_set", {
     ],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a XssMatchSet Resource {#create}

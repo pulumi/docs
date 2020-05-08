@@ -17,10 +17,21 @@ clusters.
 ElastiCache cluster **outside** of a VPC. If you are using a VPC, see the
 ElastiCache Subnet Group resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -30,10 +41,8 @@ const barSecurityGroup = new aws.elasticache.SecurityGroup("bar", {
     securityGroupNames: [barEc2SecurityGroup.name],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SecurityGroup Resource {#create}

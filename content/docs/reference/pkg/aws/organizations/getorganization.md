@@ -12,12 +12,21 @@ meta_desc: "Explore the GetOrganization function of the organizations module, in
 
 Get information about the organization that the user's account belongs to
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### SNS topic that can be interacted by the organization only
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -48,10 +57,8 @@ const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("sns_topic_policy", {
     policy: snsTopicPolicyPolicyDocument.json,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetOrganization {#using}

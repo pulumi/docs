@@ -12,10 +12,21 @@ meta_desc: "Explore the RuleGroup resource of the wafregional module, including 
 
 Provides a WAF Regional Rule Group Resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -34,10 +45,8 @@ const exampleRuleGroup = new aws.wafregional.RuleGroup("example", {
     metricName: "example",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a RuleGroup Resource {#create}

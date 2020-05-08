@@ -14,13 +14,21 @@ meta_desc: "Explore the GetZone function of the route53 module, including exampl
 
 This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example shows how to get a Hosted Zone from its name and from this data how to create a Record Set.
-
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -37,10 +45,8 @@ const www = new aws.route53.Record("www", {
     zoneId: selected.zoneId!,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetZone {#using}

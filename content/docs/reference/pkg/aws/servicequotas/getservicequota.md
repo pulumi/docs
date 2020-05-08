@@ -12,10 +12,21 @@ meta_desc: "Explore the GetServiceQuota function of the servicequotas module, in
 
 Retrieve information about a Service Quota.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +40,8 @@ const byQuotaName = pulumi.output(aws.servicequotas.getServiceQuota({
     serviceCode: "vpc",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetServiceQuota {#using}

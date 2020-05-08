@@ -14,10 +14,41 @@ Provides an IAM role.
 
 > *NOTE:* If policies are attached to the role via the [`aws.iam.PolicyAttachment` resource](https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html) and you are modifying the role `name` or `path`, the `force_detach_policies` argument must be set to `true` and applied before attempting the operation otherwise you will encounter a `DeleteConflict` error. The [`aws.iam.RolePolicyAttachment` resource (recommended)](https://www.terraform.io/docs/providers/aws/r/iam_role_policy_attachment.html) does not have this requirement.
 
+
+## Example of Using Data Source for Assume Role Policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const instance_assume_role_policy = pulumi.output(aws.iam.getPolicyDocument({
+    statements: [{
+        actions: ["sts:AssumeRole"],
+        principals: [{
+            identifiers: ["ec2.amazonaws.com"],
+            type: "Service",
+        }],
+    }],
+}, { async: true }));
+const instance = new aws.iam.Role("instance", {
+    assumeRolePolicy: instance_assume_role_policy.json,
+    path: "/system/",
+});
+```
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -42,30 +73,8 @@ const testRole = new aws.iam.Role("test_role", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-## Example of Using Data Source for Assume Role Policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const instance_assume_role_policy = pulumi.output(aws.iam.getPolicyDocument({
-    statements: [{
-        actions: ["sts:AssumeRole"],
-        principals: [{
-            identifiers: ["ec2.amazonaws.com"],
-            type: "Service",
-        }],
-    }],
-}, { async: true }));
-const instance = new aws.iam.Role("instance", {
-    assumeRolePolicy: instance_assume_role_policy.json,
-    path: "/system/",
-});
-```
-
 
 
 ## Create a Role Resource {#create}

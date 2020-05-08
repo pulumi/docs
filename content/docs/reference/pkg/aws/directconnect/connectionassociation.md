@@ -12,10 +12,21 @@ meta_desc: "Explore the ConnectionAssociation resource of the directconnect modu
 
 Associates a Direct Connect Connection with a LAG.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,10 +44,8 @@ const exampleConnectionAssociation = new aws.directconnect.ConnectionAssociation
     lagId: exampleLinkAggregationGroup.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ConnectionAssociation Resource {#create}

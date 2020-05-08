@@ -13,10 +13,21 @@ meta_desc: "Explore the PlacementGroup resource of the ec2 module, including exa
 Provides an EC2 placement group. Read more about placement groups
 in [AWS Docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const web = new aws.ec2.PlacementGroup("web", {
     strategy: "cluster",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a PlacementGroup Resource {#create}

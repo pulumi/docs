@@ -21,12 +21,21 @@ Practically no single attribute can be updated except TAGS.
 If you need to delete a cluster, you have to remove its HSM modules first.
 To initialize cluster, you have to add an hsm instance to the cluster then sign CSR and upload it.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example below creates a CloudHSM cluster.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -58,10 +67,8 @@ const cloudhsmV2Cluster = new aws.cloudhsmv2.Cluster("cloudhsm_v2_cluster", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Cluster Resource {#create}

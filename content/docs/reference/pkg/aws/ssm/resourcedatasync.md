@@ -12,10 +12,21 @@ meta_desc: "Explore the ResourceDataSync resource of the ssm module, including e
 
 Provides a SSM resource data sync.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -62,10 +73,8 @@ const foo = new aws.ssm.ResourceDataSync("foo", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ResourceDataSync Resource {#create}

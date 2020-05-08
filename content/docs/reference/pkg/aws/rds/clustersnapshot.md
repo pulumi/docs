@@ -12,10 +12,21 @@ meta_desc: "Explore the ClusterSnapshot resource of the rds module, including ex
 
 Manages a RDS database cluster snapshot for Aurora clusters. For managing RDS database instance snapshots, see the [`aws.rds.Snapshot` resource](https://www.terraform.io/docs/providers/aws/r/db_snapshot.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const example = new aws.rds.ClusterSnapshot("example", {
     dbClusterSnapshotIdentifier: "resourcetestsnapshot1234",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ClusterSnapshot Resource {#create}

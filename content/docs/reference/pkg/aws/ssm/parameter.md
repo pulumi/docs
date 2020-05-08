@@ -12,12 +12,21 @@ meta_desc: "Explore the Parameter resource of the ssm module, including examples
 
 Provides an SSM Parameter resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-To store a basic string parameter:
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,41 +36,8 @@ const foo = new aws.ssm.Parameter("foo", {
     value: "bar",
 });
 ```
-
-To store an encrypted string using the default SSM KMS key:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const defaultInstance = new aws.rds.Instance("default", {
-    allocatedStorage: 10,
-    dbSubnetGroupName: "my_database_subnet_group",
-    engine: "mysql",
-    engineVersion: "5.7.16",
-    instanceClass: "db.t2.micro",
-    name: "mydb",
-    parameterGroupName: "default.mysql5.7",
-    password: var_database_master_password,
-    storageType: "gp2",
-    username: "foo",
-});
-const secret = new aws.ssm.Parameter("secret", {
-    description: "The parameter description",
-    tags: {
-        environment: var_environment,
-    },
-    type: "SecureString",
-    value: var_database_master_password,
-});
-```
-
-> **Note:** The unencrypted value of a SecureString will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Parameter Resource {#create}

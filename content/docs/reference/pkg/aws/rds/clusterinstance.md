@@ -25,10 +25,21 @@ For more information on Amazon Aurora, see [Aurora on Amazon RDS](https://docs.a
 
 > **NOTE:** Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the [`protect` CustomResourceOption](https://www.pulumi.com/docs/intro/concepts/programming-model/#protect) to this resource configuration if you desire protection from accidental deletion.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -53,10 +64,8 @@ for (let i = 0; i < 2; i++) {
     }));
 }
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ClusterInstance Resource {#create}

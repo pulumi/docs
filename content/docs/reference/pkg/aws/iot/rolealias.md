@@ -12,10 +12,21 @@ meta_desc: "Explore the RoleAlias resource of the iot module, including examples
 
 Provides an IoT role alias.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -38,10 +49,8 @@ const alias = new aws.iot.RoleAlias("alias", {
     roleArn: role.arn,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a RoleAlias Resource {#create}

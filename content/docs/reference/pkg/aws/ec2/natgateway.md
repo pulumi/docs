@@ -12,10 +12,21 @@ meta_desc: "Explore the NatGateway resource of the ec2 module, including example
 
 Provides a resource to create a VPC NAT Gateway.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,25 +36,8 @@ const gw = new aws.ec2.NatGateway("gw", {
     subnetId: aws_subnet_public.id,
 });
 ```
-
-Usage with tags:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const gw = new aws.ec2.NatGateway("gw", {
-    allocationId: aws_eip_nat.id,
-    subnetId: aws_subnet_public.id,
-    tags: {
-        Name: "gw NAT",
-    },
-});
-```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a NatGateway Resource {#create}

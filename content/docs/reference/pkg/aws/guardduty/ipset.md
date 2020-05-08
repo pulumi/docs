@@ -14,10 +14,21 @@ Provides a resource to manage a GuardDuty IPSet.
 
 > **Note:** Currently in GuardDuty, users from member accounts cannot upload and further manage IPSets. IPSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the [GuardDuty API Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/create-ip-set.html)
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,10 +52,8 @@ const myIPSetIPSet = new aws.guardduty.IPSet("MyIPSet", {
     location: pulumi.interpolate`https://s3.amazonaws.com/${myIPSetBucketObject.bucket}/${myIPSetBucketObject.key}`,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a IPSet Resource {#create}

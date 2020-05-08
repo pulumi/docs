@@ -12,10 +12,21 @@ meta_desc: "Explore the SecurityConfiguration resource of the emr module, includ
 
 Provides a resource to manage AWS EMR Security Configurations
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -39,10 +50,8 @@ const foo = new aws.emr.SecurityConfiguration("foo", {
 `,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SecurityConfiguration Resource {#create}

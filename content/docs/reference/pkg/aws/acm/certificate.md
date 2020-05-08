@@ -28,12 +28,21 @@ of this provider.
 It's recommended to specify `create_before_destroy = true` in a [lifecycle](https://www.terraform.io/docs/configuration/resources.html#lifecycle) block to replace a certificate
 which is currently in use (eg, by `aws.lb.Listener`).
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Certificate creation
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -46,11 +55,18 @@ const cert = new aws.acm.Certificate("cert", {
     validationMethod: "DNS",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Importing an existing certificate
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -78,10 +94,8 @@ const cert = new aws.acm.Certificate("cert", {
     privateKey: examplePrivateKey.privateKeyPem,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Certificate Resource {#create}

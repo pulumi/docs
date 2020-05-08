@@ -12,10 +12,21 @@ meta_desc: "Explore the ResolverRuleAssociation resource of the route53 module, 
 
 Provides a Route53 Resolver rule association.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const example = new aws.route53.ResolverRuleAssociation("example", {
     vpcId: aws_vpc_foo.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ResolverRuleAssociation Resource {#create}

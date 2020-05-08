@@ -16,10 +16,23 @@ This resource is for additional certificates and does not replace the default ce
 
 > **Note:** `aws.alb.ListenerCertificate` is known as `aws.lb.ListenerCertificate`. The functionality is identical.
 
+
+
+Deprecated: aws.elasticloadbalancingv2.ListenerCertificate has been deprecated in favour of aws.lb.ListenerCertificate
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -32,12 +45,8 @@ const exampleListenerCertificate = new aws.lb.ListenerCertificate("example", {
     listenerArn: frontEndListener.arn,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
-Deprecated: aws.elasticloadbalancingv2.ListenerCertificate has been deprecated in favour of aws.lb.ListenerCertificate
-
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancingv2.ListenerCertificate has been deprecated in favour of aws.lb.ListenerCertificate{{% /md %}}</p>
 
 

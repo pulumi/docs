@@ -12,10 +12,21 @@ meta_desc: "Explore the GetInstance function of the rds module, including exampl
 
 Use this data source to get information about an RDS instance
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const database = pulumi.output(aws.rds.getInstance({
     dbInstanceIdentifier: "my-test-database",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetInstance {#using}

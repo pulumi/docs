@@ -16,12 +16,21 @@ To create a cross-account association, create an [`aws.directconnect.GatewayAsso
 in the AWS account that owns the VGW or transit gateway and then accept the proposal in the AWS account that owns the Direct Connect Gateway
 by creating an `aws.directconnect.GatewayAssociation` resource with the `proposal_id` and `associated_gateway_owner_account_id` attributes set.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### VPN Gateway Association
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -40,11 +49,18 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
     dxGatewayId: exampleGateway.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Transit Gateway Association
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -62,11 +78,18 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
     dxGatewayId: exampleGateway.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Allowed Prefixes
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -89,12 +112,8 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
     dxGatewayId: exampleGateway.id,
 });
 ```
-
-A full example of how to create a VPN Gateway in one AWS account, create a Direct Connect Gateway in a second AWS account, and associate the VPN Gateway with the Direct Connect Gateway via the `aws.directconnect.GatewayAssociationProposal` and `aws.directconnect.GatewayAssociation` resources can be found in [the `./examples/dx-gateway-cross-account-vgw-association` directory within the Github Repository](https://github.com/providers/provider-aws/tree/master/examples/dx-gateway-cross-account-vgw-association).
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a GatewayAssociation Resource {#create}

@@ -13,12 +13,21 @@ meta_desc: "Explore the TrafficMirrorFilter resource of the ec2 module, includin
 Provides an Traffic mirror filter.  
 Read [limits and considerations](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html) for traffic mirroring
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-To create a basic traffic mirror filter
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,10 +37,8 @@ const foo = new aws.ec2.TrafficMirrorFilter("foo", {
     networkServices: ["amazon-dns"],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a TrafficMirrorFilter Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the AmiLaunchPermission resource of the ec2 module, includin
 
 Adds launch permission to Amazon Machine Image (AMI) from another AWS account.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const example = new aws.ec2.AmiLaunchPermission("example", {
     imageId: "ami-12345678",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a AmiLaunchPermission Resource {#create}

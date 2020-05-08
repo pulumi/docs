@@ -12,12 +12,21 @@ meta_desc: "Explore the GetResolverRule function of the route53 module, includin
 
 `aws.route53.ResolverRule` provides details about a specific Route53 Resolver rule.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example shows how to get a Route53 Resolver rule based on its associated domain name and rule type.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,10 +36,8 @@ const example = pulumi.output(aws.route53.getResolverRule({
     ruleType: "SYSTEM",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetResolverRule {#using}

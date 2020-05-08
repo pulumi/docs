@@ -18,10 +18,21 @@ the [`aws.kms.Ciphertext` data source](https://www.terraform.io/docs/providers/a
 > **Note:** All arguments including the plaintext be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -39,10 +50,8 @@ const oauth = new aws.kms.Ciphertext("oauth", {
 `,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Ciphertext Resource {#create}

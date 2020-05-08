@@ -12,10 +12,21 @@ meta_desc: "Explore the JobQueue resource of the batch module, including example
 
 Provides a Batch Job Queue resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +40,8 @@ const testQueue = new aws.batch.JobQueue("test_queue", {
     state: "ENABLED",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a JobQueue Resource {#create}

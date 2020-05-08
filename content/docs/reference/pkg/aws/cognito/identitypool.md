@@ -12,10 +12,21 @@ meta_desc: "Explore the IdentityPool resource of the cognito module, including e
 
 Provides an AWS Cognito Identity Pool.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -47,10 +58,8 @@ const main = new aws.cognito.IdentityPool("main", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a IdentityPool Resource {#create}

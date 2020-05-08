@@ -23,12 +23,21 @@ setting `virtual_service_name` to the name of the service.
 
 The state associated with existing resources will automatically be migrated.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Basic
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -55,11 +64,18 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### AWS Cloud Map Service Discovery
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,11 +107,18 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Listener Health Check
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -130,11 +153,18 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Logging
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -168,10 +198,8 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a VirtualNode Resource {#create}

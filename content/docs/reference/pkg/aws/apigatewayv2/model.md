@@ -12,12 +12,21 @@ meta_desc: "Explore the Model resource of the apigatewayv2 module, including exa
 
 Manages an Amazon API Gateway Version 2 [model](https://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html#models-mappings-models).
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Basic
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -36,10 +45,8 @@ const example = new aws.apigatewayv2.Model("example", {
 `,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Model Resource {#create}

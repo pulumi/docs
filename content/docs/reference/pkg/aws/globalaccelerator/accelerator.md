@@ -12,10 +12,21 @@ meta_desc: "Explore the Accelerator resource of the globalaccelerator module, in
 
 Creates a Global Accelerator accelerator.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -30,10 +41,8 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     ipAddressType: "IPV4",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Accelerator Resource {#create}

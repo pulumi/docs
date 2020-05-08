@@ -12,12 +12,21 @@ meta_desc: "Explore the Crawler resource of the glue module, including examples,
 
 Manages a Glue Crawler. More information can be found in the [AWS Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html)
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### DynamoDB Target
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -30,11 +39,18 @@ const example = new aws.glue.Crawler("example", {
     role: aws_iam_role_example.arn,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### JDBC Target
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -48,11 +64,18 @@ const example = new aws.glue.Crawler("example", {
     role: aws_iam_role_example.arn,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### S3 Target
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -65,12 +88,18 @@ const example = new aws.glue.Crawler("example", {
     }],
 });
 ```
-
-
 {{% /example %}}
-{{% example %}}
 ### Catalog Target
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -94,10 +123,8 @@ const example = new aws.glue.Crawler("example", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Crawler Resource {#create}

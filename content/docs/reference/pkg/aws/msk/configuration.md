@@ -14,10 +14,21 @@ Manages an Amazon Managed Streaming for Kafka configuration. More information ca
 
 > **NOTE:** The API does not support deleting MSK configurations. Removing this resource will only remove the this provider state for it.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +40,8 @@ delete.topic.enable = true
 `,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Configuration Resource {#create}

@@ -18,10 +18,21 @@ The requester can use the `aws.ec2transitgateway.VpcAttachment` resource to mana
 and the accepter can use the `aws.ec2transitgateway.VpcAttachmentAccepter` resource to "adopt" its side of the
 connection into management.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,12 +44,8 @@ const example = new aws.ec2transitgateway.VpcAttachmentAccepter("example", {
     transitGatewayAttachmentId: aws_ec2_transit_gateway_vpc_attachment_example.id,
 });
 ```
-
-A full example of how to how to create a Transit Gateway in one AWS account, share it with a second AWS account, and attach a VPC in the second account to the Transit Gateway via the `aws.ec2transitgateway.VpcAttachment` and `aws.ec2transitgateway.VpcAttachmentAccepter` resources can be found in [the `./examples/transit-gateway-cross-account-vpc-attachment` directory within the Github Repository](https://github.com/providers/provider-aws/tree/master/examples/transit-gateway-cross-account-vpc-attachment).
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a VpcAttachmentAccepter Resource {#create}

@@ -15,10 +15,21 @@ This resource accepts ownership of a transit virtual interface created by anothe
 
 > **NOTE:** AWS allows a Direct Connect hosted transit virtual interface to be deleted from either the allocator's or accepter's side. However, this provider only allows the Direct Connect hosted transit virtual interface to be deleted from the allocator's side by removing the corresponding `aws.directconnect.HostedTransitVirtualInterface` resource from your configuration. Removing a `aws.directconnect.HostedTransitVirtualInterfaceAcceptor` resource from your configuration will remove it from your statefile and management, **but will not delete the Direct Connect virtual interface.**
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -45,10 +56,8 @@ const accepterHostedTransitVirtualInterfaceAcceptor = new aws.directconnect.Host
     virtualInterfaceId: creator.id,
 }, { provider: accepter });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a HostedTransitVirtualInterfaceAcceptor Resource {#create}

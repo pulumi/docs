@@ -17,10 +17,21 @@ Provides an RDS DB option group resource. Documentation of the available options
 * [MySQL Options](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.html)
 * [Oracle Options](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html)
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -50,12 +61,8 @@ const example = new aws.rds.OptionGroup("example", {
     optionGroupDescription: "Option Group",
 });
 ```
-
-> **Note**: Any modifications to the `db_option_group` are set to happen immediately as we default to applying immediately.
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a OptionGroup Resource {#create}

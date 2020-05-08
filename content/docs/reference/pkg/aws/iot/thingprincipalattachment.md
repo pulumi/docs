@@ -12,10 +12,21 @@ meta_desc: "Explore the ThingPrincipalAttachment resource of the iot module, inc
 
 Attaches Principal to AWS IoT Thing.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -31,10 +42,8 @@ const att = new aws.iot.ThingPrincipalAttachment("att", {
     thing: example.name,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ThingPrincipalAttachment Resource {#create}

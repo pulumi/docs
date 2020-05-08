@@ -12,10 +12,21 @@ meta_desc: "Explore the ProductSubscription resource of the securityhub module, 
 
 Subscribes to a Security Hub product.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,10 +37,8 @@ const exampleProductSubscription = new aws.securityhub.ProductSubscription("exam
     productArn: pulumi.interpolate`arn:aws:securityhub:${current.name!}:733251395267:product/alertlogic/althreatmanagement`,
 }, { dependsOn: [exampleAccount] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ProductSubscription Resource {#create}

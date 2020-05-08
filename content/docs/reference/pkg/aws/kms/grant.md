@@ -12,10 +12,21 @@ meta_desc: "Explore the Grant resource of the kms module, including examples, in
 
 Provides a resource-based access control mechanism for a KMS customer master key.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -52,10 +63,8 @@ const grant = new aws.kms.Grant("a", {
     ],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Grant Resource {#create}

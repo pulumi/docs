@@ -12,10 +12,21 @@ meta_desc: "Explore the Rule resource of the waf module, including examples, inp
 
 Provides a WAF Rule Resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -35,10 +46,8 @@ const wafrule = new aws.waf.Rule("wafrule", {
     }],
 }, { dependsOn: [ipset] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Rule Resource {#create}

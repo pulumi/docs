@@ -12,20 +12,29 @@ meta_desc: "Explore the Activity resource of the sfn module, including examples,
 
 Provides a Step Function Activity resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const sfnActivity = new aws.sfn.Activity("sfn_activity", {});
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Activity Resource {#create}

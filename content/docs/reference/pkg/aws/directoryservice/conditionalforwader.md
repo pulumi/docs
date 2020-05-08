@@ -12,10 +12,21 @@ meta_desc: "Explore the ConditionalForwader resource of the directoryservice mod
 
 Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +40,8 @@ const example = new aws.directoryservice.ConditionalForwader("example", {
     remoteDomainName: "example.com",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ConditionalForwader Resource {#create}

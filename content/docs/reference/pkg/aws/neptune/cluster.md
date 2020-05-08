@@ -20,10 +20,21 @@ phase because a modification has not yet taken place. You can use the
 `apply_immediately` flag to instruct the service to apply the change immediately
 (see documentation below).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -38,13 +49,8 @@ const defaultCluster = new aws.neptune.Cluster("default", {
     skipFinalSnapshot: true,
 });
 ```
-
-> **Note:** AWS Neptune does not support user name/password–based access control.
-See the AWS [Docs](https://docs.aws.amazon.com/neptune/latest/userguide/limits.html) for more information.
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Cluster Resource {#create}

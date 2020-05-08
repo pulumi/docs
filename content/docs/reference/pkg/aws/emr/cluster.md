@@ -18,10 +18,21 @@ To configure [Instance Groups](https://docs.aws.amazon.com/emr/latest/Management
 
 > Support for [Instance Fleets](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-fleets) will be made available in an upcoming release.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -132,23 +143,18 @@ const cluster = new aws.emr.Cluster("cluster", {
     terminationProtection: false,
 });
 ```
-
-The `aws.emr.Cluster` resource typically requires two IAM roles, one for the EMR Cluster
-to use as a service, and another to place on your Cluster Instances to interact
-with AWS from those instances. The suggested role policy template for the EMR service is `AmazonElasticMapReduceRole`,
-and `AmazonElasticMapReduceforEC2Role` for the EC2 profile. See the [Getting
-Started](https://docs.aws.amazon.com/ElasticMapReduce/latest/ManagementGuide/emr-gs-launch-sample-cluster.html)
-guide for more information on these IAM roles. There is also a fully-bootable
-example this provider configuration at the bottom of this page.
-
 {{% /example %}}
-{{% example %}}
 ### Enable Debug Logging
-
-[Debug logging in EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-debugging.html)
-is implemented as a step. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other
-steps are being managed outside of this provider.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -164,13 +170,18 @@ const example = new aws.emr.Cluster("example", {
     }],
 }, { ignoreChanges: ["stepConcurrencyLevel", "steps"] });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Multiple Node Master Instance Group
-
-Available in EMR version 5.23.0 and later, an EMR Cluster can be launched with three master nodes for high availability. Additional information about this functionality and its requirements can be found in the [EMR Management Guide](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-ha.html).
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -196,10 +207,8 @@ const exampleCluster = new aws.emr.Cluster("example", {
     terminationProtection: true,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Cluster Resource {#create}

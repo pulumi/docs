@@ -16,10 +16,21 @@ Requests automatic route propagation between a VPN gateway and a route table.
 the `propagating_vgws` argument set. If that argument is set, any route
 propagation not explicitly listed in its value will be removed.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +40,8 @@ const example = new aws.ec2.VpnGatewayRoutePropagation("example", {
     vpnGatewayId: aws_vpn_gateway_example.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a VpnGatewayRoutePropagation Resource {#create}

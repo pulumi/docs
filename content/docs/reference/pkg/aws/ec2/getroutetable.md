@@ -16,13 +16,21 @@ This resource can prove useful when a module accepts a Subnet id as
 an input variable and needs to, for example, add a route in
 the Route Table.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example shows how one might accept a Route Table id as a variable
-and use this data source to obtain the data necessary to create a route.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -39,10 +47,8 @@ const route = new aws.ec2.Route("route", {
     vpcPeeringConnectionId: "pcx-45ff3dc1",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetRouteTable {#using}

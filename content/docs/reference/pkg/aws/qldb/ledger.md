@@ -14,20 +14,29 @@ Provides an AWS Quantum Ledger Database (QLDB) resource
 
 > **NOTE:** Deletion protection is enabled by default. To successfully delete this resource via this provider, `deletion_protection = false` must be applied before attempting deletion.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const sample_ledger = new aws.qldb.Ledger("sample-ledger", {});
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Ledger Resource {#create}

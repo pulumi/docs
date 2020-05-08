@@ -12,10 +12,21 @@ meta_desc: "Explore the GetCustomerGateway function of the ec2 module, including
 
 Get an existing AWS Customer Gateway.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -37,10 +48,8 @@ const transit = new aws.ec2.VpnConnection("transit", {
     vpnGatewayId: main.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetCustomerGateway {#using}

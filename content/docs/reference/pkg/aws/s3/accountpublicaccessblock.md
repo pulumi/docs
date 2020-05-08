@@ -16,10 +16,21 @@ Manages S3 account-level Public Access Block configuration. For more information
 
 > Advanced usage: To use a custom API endpoint for this resource, use the [`s3control` endpoint provider configuration](https://www.terraform.io/docs/providers/aws/index.html#s3control), not the `s3` endpoint provider configuration.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +40,8 @@ const example = new aws.s3.AccountPublicAccessBlock("example", {
     blockPublicPolicy: true,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a AccountPublicAccessBlock Resource {#create}

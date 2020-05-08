@@ -16,10 +16,21 @@ Provides a CodeCommit Trigger Resource.
 in all regions - available regions are listed
 [the AWS Docs](https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -36,10 +47,8 @@ const testTrigger = new aws.codecommit.Trigger("test", {
     }],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Trigger Resource {#create}

@@ -19,14 +19,21 @@ which provides some details about a specific availability zone.
 
 > When [Local Zones](https://aws.amazon.com/about-aws/global-infrastructure/localzones/) are enabled in a region, by default the API and this data source include both Local Zones and Availability Zones. To return only Availability Zones, see the example section below.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### By Filter
-
-All Local Zones (regardless of opt-in status):
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -42,24 +49,8 @@ const example = pulumi.output(aws.getAvailabilityZones({
     }],
 }, { async: true }));
 ```
-
-Only Availability Zones (no Local Zones):
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = pulumi.output(aws.getAvailabilityZones({
-    filters: [{
-        name: "opt-in-status",
-        values: ["opt-in-not-required"],
-    }],
-}, { async: true }));
-```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetAvailabilityZones {#using}

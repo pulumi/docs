@@ -14,14 +14,21 @@ Manages a FSx Windows File System. See the [FSx Windows Guide](https://docs.aws.
 
 > **NOTE:** Either the `active_directory_id` argument or `self_managed_active_directory` configuration block must be specified.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Using AWS Directory Service
-
-Additional information for using AWS Directory Service with Windows File Systems can be found in the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/fsx-aws-managed-ad.html).
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -34,13 +41,18 @@ const example = new aws.fsx.WindowsFileSystem("example", {
     throughputCapacity: 1024,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Using a Self-Managed Microsoft Active Directory
-
-Additional information for using AWS Directory Service with Windows File Systems can be found in the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html).
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -61,10 +73,8 @@ const example = new aws.fsx.WindowsFileSystem("example", {
     throughputCapacity: 1024,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a WindowsFileSystem Resource {#create}

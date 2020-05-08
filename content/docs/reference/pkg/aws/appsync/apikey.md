@@ -12,10 +12,21 @@ meta_desc: "Explore the ApiKey resource of the appsync module, including example
 
 Provides an AppSync API Key.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,10 +39,8 @@ const exampleApiKey = new aws.appsync.ApiKey("example", {
     expires: "2018-05-03T04:00:00Z",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ApiKey Resource {#create}

@@ -12,12 +12,21 @@ meta_desc: "Explore the GetVpcDhcpOptions function of the ec2 module, including 
 
 Retrieve information about an EC2 DHCP Options configuration.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Lookup by DHCP Options ID
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,11 +35,18 @@ const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
     dhcpOptionsId: "dopts-12345678",
 }, { async: true }));
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Lookup by Filter
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -48,10 +64,8 @@ const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
     ],
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetVpcDhcpOptions {#using}

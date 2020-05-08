@@ -17,25 +17,7 @@ the infrastructure that runs those applications.
 Environments are often things such as `development`, `integration`, or
 `production`.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const tftest = new aws.elasticbeanstalk.Application("tftest", {
-    description: "tf-test-desc",
-});
-const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
-    application: tftest.name,
-    solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Option Settings
 
 Some options can be stack-specific, check [AWS Docs](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html)
@@ -75,6 +57,33 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 });
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const tftest = new aws.elasticbeanstalk.Application("tftest", {
+    description: "tf-test-desc",
+});
+const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
+    application: tftest.name,
+    solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
+});
+```
+{{% /example %}}
+{{% /examples %}}
 
 
 ## Create a Environment Resource {#create}

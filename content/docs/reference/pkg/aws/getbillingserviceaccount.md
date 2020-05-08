@@ -12,10 +12,21 @@ meta_desc: "Explore the GetBillingServiceAccount function of the AWS package, in
 
 Use this data source to get the Account ID of the [AWS Billing and Cost Management Service Account](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-getting-started.html#step-2) for the purpose of whitelisting in S3 bucket policy.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -56,11 +67,8 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
 `,
 });
 ```
-
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetBillingServiceAccount {#using}

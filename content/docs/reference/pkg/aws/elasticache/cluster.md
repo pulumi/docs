@@ -21,12 +21,21 @@ place. You can use the `apply_immediately` flag to instruct the service to apply
 change immediately. Using `apply_immediately` can result in a brief downtime as the server reboots.
 See the AWS Docs on [Modifying an ElastiCache Cache Cluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Clusters.Modify.html) for more information.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Memcached Cluster
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -39,11 +48,18 @@ const example = new aws.elasticache.Cluster("example", {
     port: 11211,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Redis Instance
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -57,13 +73,18 @@ const example = new aws.elasticache.Cluster("example", {
     port: 6379,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Redis Cluster Mode Disabled Read Replica Instance
-
-These inherit their settings from the replication group.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -72,10 +93,8 @@ const replica = new aws.elasticache.Cluster("replica", {
     replicationGroupId: aws_elasticache_replication_group_example.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Cluster Resource {#create}

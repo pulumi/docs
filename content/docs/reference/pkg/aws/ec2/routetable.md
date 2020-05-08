@@ -31,10 +31,21 @@ this resource will delete any propagating gateways not explicitly listed in
 `propagating_vgws`. Omit this argument when defining route propagation using
 the separate resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -56,10 +67,8 @@ const routeTable = new aws.ec2.RouteTable("r", {
     vpcId: aws_vpc_default.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a RouteTable Resource {#create}

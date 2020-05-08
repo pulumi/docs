@@ -18,12 +18,21 @@ and a single `subnet_id`) and a VPC Endpoint resource with a `subnet_ids`
 attribute. Do not use the same subnet ID in both a VPC Endpoint resource and a VPC Endpoint Subnet
 Association resource. Doing so will cause a conflict of associations and will overwrite the association.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic usage:
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,10 +42,8 @@ const snEc2 = new aws.ec2.VpcEndpointSubnetAssociation("sn_ec2", {
     vpcEndpointId: aws_vpc_endpoint_ec2.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a VpcEndpointSubnetAssociation Resource {#create}

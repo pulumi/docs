@@ -12,10 +12,21 @@ meta_desc: "Explore the UserGroup resource of the cognito module, including exam
 
 Provides a Cognito User Group resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -52,10 +63,8 @@ const mainUserGroup = new aws.cognito.UserGroup("main", {
     userPoolId: mainUserPool.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a UserGroup Resource {#create}

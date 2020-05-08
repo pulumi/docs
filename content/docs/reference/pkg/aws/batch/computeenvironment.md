@@ -18,10 +18,21 @@ For information about compute environment, see [Compute Environments](http://doc
 > **Note:** To prevent a race condition during environment deletion, make sure to set `depends_on` to the related `aws.iam.RolePolicyAttachment`;
 otherwise, the policy may be destroyed too soon and the compute environment will then get stuck in the `DELETING` state, see [Troubleshooting AWS Batch](http://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html) .
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -97,10 +108,8 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
     type: "MANAGED",
 }, { dependsOn: [awsBatchServiceRoleRolePolicyAttachment] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ComputeEnvironment Resource {#create}

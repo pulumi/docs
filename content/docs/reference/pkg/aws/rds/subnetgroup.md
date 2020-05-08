@@ -12,10 +12,21 @@ meta_desc: "Explore the SubnetGroup resource of the rds module, including exampl
 
 Provides an RDS DB subnet group resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -30,10 +41,8 @@ const defaultSubnetGroup = new aws.rds.SubnetGroup("default", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SubnetGroup Resource {#create}

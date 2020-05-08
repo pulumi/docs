@@ -12,10 +12,21 @@ meta_desc: "Explore the Listener resource of the globalaccelerator module, inclu
 
 Provides a Global Accelerator listener.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -39,10 +50,8 @@ const exampleListener = new aws.globalaccelerator.Listener("example", {
     protocol: "TCP",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Listener Resource {#create}

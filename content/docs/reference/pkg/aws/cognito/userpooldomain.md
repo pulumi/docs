@@ -12,12 +12,21 @@ meta_desc: "Explore the UserPoolDomain resource of the cognito module, including
 
 Provides a Cognito User Pool Domain resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Amazon Cognito domain
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,11 +37,18 @@ const main = new aws.cognito.UserPoolDomain("main", {
     userPoolId: example.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Custom Cognito domain
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -44,12 +60,8 @@ const main = new aws.cognito.UserPoolDomain("main", {
     userPoolId: example.id,
 });
 ```
-
-
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a UserPoolDomain Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the EventStream resource of the pinpoint module, including e
 
 Provides a Pinpoint Event Stream resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -63,11 +74,8 @@ const testRolePolicy = new aws.iam.RolePolicy("test_role_policy", {
     role: testRole.id,
 });
 ```
-
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a EventStream Resource {#create}

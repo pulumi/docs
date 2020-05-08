@@ -22,12 +22,21 @@ When RAM Sharing with AWS Organizations is not enabled:
 - Organization and Organizational Unit principals cannot be used.
 - For AWS Account ID principals, a resource share invitation is sent and must be accepted before resources become available. See the [`aws.ram.ResourceShareAccepter` resource](https://www.terraform.io/docs/providers/aws/r/ram_resource_share_accepter.html) to accept these invitations.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### AWS Account ID
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,11 +50,18 @@ const examplePrincipalAssociation = new aws.ram.PrincipalAssociation("example", 
     resourceShareArn: exampleResourceShare.arn,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### AWS Organization
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -55,10 +71,8 @@ const example = new aws.ram.PrincipalAssociation("example", {
     resourceShareArn: aws_ram_resource_share_example.arn,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a PrincipalAssociation Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the UserPolicy resource of the iam module, including example
 
 Provides an IAM policy attached to a user.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,10 +54,8 @@ const lbAccessKey = new aws.iam.AccessKey("lb", {
     user: lbUser.name,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a UserPolicy Resource {#create}

@@ -13,10 +13,21 @@ meta_desc: "Explore the VpcEndpointConnectionNotification resource of the ec2 mo
 Provides a VPC Endpoint connection notification resource.
 Connection notifications notify subscribers of VPC Endpoint events.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -48,10 +59,8 @@ const fooVpcEndpointConnectionNotification = new aws.ec2.VpcEndpointConnectionNo
     vpcEndpointServiceId: fooVpcEndpointService.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a VpcEndpointConnectionNotification Resource {#create}

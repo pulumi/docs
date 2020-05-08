@@ -14,10 +14,21 @@ Associates an S3 resource with Amazon Macie for monitoring and data classificati
 
 > **NOTE:** Before using Amazon Macie for the first time it must be enabled manually. Instructions are [here](https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -30,10 +41,8 @@ const example = new aws.macie.S3BucketAssociation("example", {
     prefix: "data",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a S3BucketAssociation Resource {#create}

@@ -17,10 +17,21 @@ the infrastructure that runs those applications.
 This resource creates an application that has one configuration template named
 `default`, and no application versions
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -34,10 +45,8 @@ const tftest = new aws.elasticbeanstalk.Application("tftest", {
     description: "tf-test-desc",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Application Resource {#create}

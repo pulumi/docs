@@ -20,12 +20,21 @@ deploy the required validation records and wait for validation to complete.
 > **WARNING:** This resource implements a part of the validation workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
 
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### DNS Validation with Route 53
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -54,11 +63,18 @@ const frontEnd = new aws.lb.Listener("front_end", {
     certificateArn: certCertificateValidation.certificateArn,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Alternative Domains DNS Validation with Route 53
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -113,13 +129,18 @@ const frontEnd = new aws.lb.Listener("front_end", {
     certificateArn: certCertificateValidation.certificateArn,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Email Validation
-
-In this situation, the resource is simply a waiter for manual email approval of ACM certificates.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -132,10 +153,8 @@ const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
     certificateArn: certCertificate.arn,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a CertificateValidation Resource {#create}

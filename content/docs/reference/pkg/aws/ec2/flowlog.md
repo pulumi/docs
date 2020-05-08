@@ -13,12 +13,21 @@ meta_desc: "Explore the FlowLog resource of the ec2 module, including examples, 
 Provides a VPC/Subnet/ENI Flow Log to capture IP traffic for a specific network
 interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucket.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### CloudWatch Logging
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -67,11 +76,18 @@ const exampleRolePolicy = new aws.iam.RolePolicy("example", {
     role: exampleRole.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### S3 Logging
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -84,10 +100,8 @@ const exampleFlowLog = new aws.ec2.FlowLog("example", {
     vpcId: aws_vpc_example.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a FlowLog Resource {#create}

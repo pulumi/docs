@@ -17,23 +17,7 @@ For information about CloudFront distributions, see the
 origin access identities, see
 [Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content][2].
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-The following example below creates a CloudFront origin access identity.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_access_identity", {
-    comment: "Some comment",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Using With CloudFront
 
 Normally, when referencing an origin access identity in CloudFront, you need to
@@ -88,6 +72,29 @@ const example = new aws.s3.BucketPolicy("example", {
 [3]: https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html
 [4]: https://www.terraform.io/docs/providers/aws/r/s3_bucket.html
 
+{{% examples %}}
+## Example Usage
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_access_identity", {
+    comment: "Some comment",
+});
+```
+{{% /example %}}
+{{% /examples %}}
 
 
 ## Create a OriginAccessIdentity Resource {#create}

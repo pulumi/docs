@@ -14,10 +14,21 @@ This data source can be used to fetch information about a specific
 IAM instance profile. By using this data source, you can reference IAM
 instance profile properties without having to hard code ARNs as input.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,10 +37,8 @@ const example = pulumi.output(aws.iam.getInstanceProfile({
     name: "an_example_instance_profile_name",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetInstanceProfile {#using}

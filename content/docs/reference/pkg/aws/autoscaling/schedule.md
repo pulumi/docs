@@ -12,10 +12,21 @@ meta_desc: "Explore the Schedule resource of the autoscaling module, including e
 
 Provides an AutoScaling Schedule resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -39,10 +50,8 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobar", {
     startTime: "2016-12-11T18:00:00Z",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Schedule Resource {#create}

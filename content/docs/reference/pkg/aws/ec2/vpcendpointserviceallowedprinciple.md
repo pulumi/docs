@@ -18,12 +18,21 @@ and a VPC Endpoint Service resource with an `allowed_principals` attribute. Do n
 a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
 and will overwrite the association.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic usage:
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -34,10 +43,8 @@ const allowMeToFoo = new aws.ec2.VpcEndpointServiceAllowedPrinciple("allow_me_to
     vpcEndpointServiceId: aws_vpc_endpoint_service_foo.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a VpcEndpointServiceAllowedPrinciple Resource {#create}

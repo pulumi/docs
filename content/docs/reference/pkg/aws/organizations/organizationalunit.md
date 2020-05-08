@@ -12,10 +12,21 @@ meta_desc: "Explore the OrganizationalUnit resource of the organizations module,
 
 Provides a resource to create an organizational unit.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const example = new aws.organizations.OrganizationalUnit("example", {
     parentId: aws_organizations_organization_example.roots.0.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a OrganizationalUnit Resource {#create}

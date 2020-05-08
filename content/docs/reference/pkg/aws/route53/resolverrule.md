@@ -12,12 +12,21 @@ meta_desc: "Explore the ResolverRule resource of the route53 module, including e
 
 Provides a Route53 Resolver rule.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### System rule
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,11 +36,18 @@ const sys = new aws.route53.ResolverRule("sys", {
     ruleType: "SYSTEM",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Forward rule
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -48,10 +64,8 @@ const fwd = new aws.route53.ResolverRule("fwd", {
     }],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ResolverRule Resource {#create}

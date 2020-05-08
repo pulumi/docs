@@ -13,10 +13,21 @@ meta_desc: "Explore the GetStack function of the cloudformation module, includin
 The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,10 +44,8 @@ const web = new aws.ec2.Instance("web", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetStack {#using}

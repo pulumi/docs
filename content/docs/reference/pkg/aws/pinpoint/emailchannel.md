@@ -12,10 +12,21 @@ meta_desc: "Explore the EmailChannel resource of the pinpoint module, including 
 
 Provides a Pinpoint Email Channel resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -64,11 +75,8 @@ const rolePolicy = new aws.iam.RolePolicy("role_policy", {
     role: role.id,
 });
 ```
-
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a EmailChannel Resource {#create}

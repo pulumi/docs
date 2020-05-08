@@ -12,10 +12,21 @@ meta_desc: "Explore the EventRule resource of the cloudwatch module, including e
 
 Provides a CloudWatch Event Rule resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -50,10 +61,8 @@ const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
     policy: snsTopicPolicy.json,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a EventRule Resource {#create}

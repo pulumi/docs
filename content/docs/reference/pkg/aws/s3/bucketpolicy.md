@@ -12,12 +12,21 @@ meta_desc: "Explore the BucketPolicy resource of the s3 module, including exampl
 
 Attaches a policy to an S3 bucket resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Basic Usage
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -44,10 +53,8 @@ const bucketPolicy = new aws.s3.BucketPolicy("b", {
 `,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a BucketPolicy Resource {#create}

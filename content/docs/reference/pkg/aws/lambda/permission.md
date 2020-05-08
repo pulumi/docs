@@ -13,52 +13,7 @@ meta_desc: "Explore the Permission resource of the lambda module, including exam
 Creates a Lambda permission to allow external sources invoking the Lambda function
 (e.g. CloudWatch Event Rule, SNS or S3).
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const iamForLambda = new aws.iam.Role("iam_for_lambda", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "lambda.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
-});
-const testLambda = new aws.lambda.Function("test_lambda", {
-    code: new pulumi.asset.FileArchive("lambdatest.zip"),
-    handler: "exports.handler",
-    role: iamForLambda.arn,
-    runtime: "nodejs8.10",
-});
-const testAlias = new aws.lambda.Alias("test_alias", {
-    description: "a sample description",
-    functionName: testLambda.functionName,
-    functionVersion: "$LATEST",
-});
-const allowCloudwatch = new aws.lambda.Permission("allow_cloudwatch", {
-    action: "lambda:InvokeFunction",
-    function: testLambda.functionName,
-    principal: "events.amazonaws.com",
-    qualifier: testAlias.name,
-    sourceArn: "arn:aws:events:eu-west-1:111122223333:rule/RunDaily",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Usage with SNS
 
 ```typescript
@@ -118,6 +73,60 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
 });
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const iamForLambda = new aws.iam.Role("iam_for_lambda", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`,
+});
+const testLambda = new aws.lambda.Function("test_lambda", {
+    code: new pulumi.asset.FileArchive("lambdatest.zip"),
+    handler: "exports.handler",
+    role: iamForLambda.arn,
+    runtime: "nodejs8.10",
+});
+const testAlias = new aws.lambda.Alias("test_alias", {
+    description: "a sample description",
+    functionName: testLambda.functionName,
+    functionVersion: "$LATEST",
+});
+const allowCloudwatch = new aws.lambda.Permission("allow_cloudwatch", {
+    action: "lambda:InvokeFunction",
+    function: testLambda.functionName,
+    principal: "events.amazonaws.com",
+    qualifier: testAlias.name,
+    sourceArn: "arn:aws:events:eu-west-1:111122223333:rule/RunDaily",
+});
+```
+{{% /example %}}
+{{% /examples %}}
 
 
 ## Create a Permission Resource {#create}

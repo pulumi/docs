@@ -12,10 +12,21 @@ meta_desc: "Explore the VpcAttachment resource of the ec2transitgateway module, 
 
 Manages an EC2 Transit Gateway VPC Attachment. For examples of custom route table association and propagation, see the EC2 Transit Gateway Networking Examples Guide.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,12 +37,8 @@ const example = new aws.ec2transitgateway.VpcAttachment("example", {
     vpcId: aws_vpc_example.id,
 });
 ```
-
-A full example of how to create a Transit Gateway in one AWS account, share it with a second AWS account, and attach a VPC in the second account to the Transit Gateway via the `aws.ec2transitgateway.VpcAttachment` and `aws.ec2transitgateway.VpcAttachmentAccepter` resources can be found in [the `./examples/transit-gateway-cross-account-vpc-attachment` directory within the Github Repository](https://github.com/providers/provider-aws/tree/master/examples/transit-gateway-cross-account-vpc-attachment).
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a VpcAttachment Resource {#create}

@@ -12,12 +12,21 @@ meta_desc: "Explore the CatalogTable resource of the glue module, including exam
 
 Provides a Glue Catalog Table Resource. You can refer to the [Glue Developer Guide](http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html) for a full explanation of the Glue Data Catalog functionality.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Basic Table
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,11 +36,18 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
     name: "MyCatalogTable",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Parquet Table for Athena
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,10 +99,8 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
     tableType: "EXTERNAL_TABLE",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a CatalogTable Resource {#create}

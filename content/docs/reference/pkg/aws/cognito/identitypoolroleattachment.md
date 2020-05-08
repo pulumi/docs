@@ -12,10 +12,21 @@ meta_desc: "Explore the IdentityPoolRoleAttachment resource of the cognito modul
 
 Provides an AWS Cognito Identity Pool Roles Attachment.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,10 +99,8 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a IdentityPoolRoleAttachment Resource {#create}

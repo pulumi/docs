@@ -12,10 +12,21 @@ meta_desc: "Explore the GetRule function of the waf module, including examples, 
 
 `aws.waf.Rule` Retrieves a WAF Rule Resource Id.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const example = pulumi.output(aws.waf.getRule({
     name: "tfWAFRule",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetRule {#using}

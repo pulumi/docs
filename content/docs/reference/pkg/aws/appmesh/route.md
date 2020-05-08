@@ -12,12 +12,21 @@ meta_desc: "Explore the Route resource of the appmesh module, including examples
 
 Provides an AWS App Mesh route resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### HTTP Routing
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -46,11 +55,18 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     virtualRouterName: aws_appmesh_virtual_router_serviceb.name,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### HTTP Header Routing
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -81,11 +97,18 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     virtualRouterName: aws_appmesh_virtual_router_serviceb.name,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### TCP Routing
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -105,10 +128,8 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     virtualRouterName: aws_appmesh_virtual_router_serviceb.name,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Route Resource {#create}

@@ -13,10 +13,21 @@ meta_desc: "Explore the GetAmi function of the AWS package, including examples, 
 Use this data source to get the ID of a registered AMI for use in other
 resources.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -42,10 +53,8 @@ const example = pulumi.output(aws.getAmi({
     owners: ["self"],
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetAmi {#using}

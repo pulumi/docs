@@ -12,10 +12,21 @@ meta_desc: "Explore the ParameterGroup resource of the redshift module, includin
 
 Provides a Redshift Cluster parameter group resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -38,10 +49,8 @@ const bar = new aws.redshift.ParameterGroup("bar", {
     ],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ParameterGroup Resource {#create}

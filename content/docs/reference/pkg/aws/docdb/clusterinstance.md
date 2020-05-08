@@ -19,10 +19,21 @@ meta-parameter to make multiple instances and join them all to the same DocDB
 Cluster, or you may specify different Cluster Instance resources with various
 `instance_class` sizes.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -46,10 +57,8 @@ for (let i = 0; i < 2; i++) {
     }));
 }
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ClusterInstance Resource {#create}

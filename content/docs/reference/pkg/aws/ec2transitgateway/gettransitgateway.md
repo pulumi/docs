@@ -12,12 +12,21 @@ meta_desc: "Explore the GetTransitGateway function of the ec2transitgateway modu
 
 Get information on an EC2 Transit Gateway.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### By Filter
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,11 +38,18 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
     }],
 }, { async: true }));
 ```
-
 {{% /example %}}
-{{% example %}}
 ### By Identifier
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -42,10 +58,8 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
     id: "tgw-12345678",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetTransitGateway {#using}

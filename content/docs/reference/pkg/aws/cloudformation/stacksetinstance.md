@@ -16,10 +16,21 @@ Manages a CloudFormation StackSet Instance. Instances are managed in the account
 
 > **NOTE:** To retain the Stack during resource destroy, ensure `retain_stack` has been set to `true` in the state first. This must be completed _before_ a deployment that would destroy the resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -30,11 +41,18 @@ const example = new aws.cloudformation.StackSetInstance("example", {
     stackSetName: aws_cloudformation_stack_set_example.name,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Example IAM Setup in Target Account
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -70,10 +88,8 @@ const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy = n
     role: aWSCloudFormationStackSetExecutionRole.name,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a StackSetInstance Resource {#create}

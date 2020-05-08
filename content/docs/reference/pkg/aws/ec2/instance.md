@@ -13,10 +13,21 @@ meta_desc: "Explore the Instance resource of the ec2 module, including examples,
 Provides an EC2 instance resource. This allows instances to be created, updated,
 and deleted. Instances also support [provisioning](https://www.terraform.io/docs/provisioners/index.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,10 +54,8 @@ const web = new aws.ec2.Instance("web", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Instance Resource {#create}

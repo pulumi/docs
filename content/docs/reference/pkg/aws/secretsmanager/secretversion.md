@@ -14,12 +14,21 @@ Provides a resource to manage AWS Secrets Manager secret version including its s
 
 > **NOTE:** If the `AWSCURRENT` staging label is present on this version during resource deletion, that label cannot be removed and will be skipped to prevent errors when fully deleting the secret. That label will leave this secret version active even after the resource is deleted from this provider unless the secret itself is deleted. Move the `AWSCURRENT` staging label before or after deleting this resource from this provider to fully trigger version deprecation if necessary.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Simple String Value
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +38,8 @@ const example = new aws.secretsmanager.SecretVersion("example", {
     secretString: "example-string-to-protect",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SecretVersion Resource {#create}

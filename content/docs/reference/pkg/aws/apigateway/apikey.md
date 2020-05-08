@@ -14,20 +14,29 @@ Provides an API Gateway API Key.
 
 > **NOTE:** Since the API Gateway usage plans feature was launched on August 11, 2016, usage plans are now **required** to associate an API key with an API stage.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const myDemoApiKey = new aws.apigateway.ApiKey("MyDemoApiKey", {});
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ApiKey Resource {#create}

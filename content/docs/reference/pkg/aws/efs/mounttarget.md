@@ -12,10 +12,21 @@ meta_desc: "Explore the MountTarget resource of the efs module, including exampl
 
 Provides an Elastic File System (EFS) mount target.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,10 +44,8 @@ const alphaMountTarget = new aws.efs.MountTarget("alpha", {
     subnetId: alphaSubnet.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a MountTarget Resource {#create}

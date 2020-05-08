@@ -12,14 +12,21 @@ meta_desc: "Explore the SmbFileShare resource of the storagegateway module, incl
 
 Manages an AWS Storage Gateway SMB File Share.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Active Directory Authentication
-
-> **NOTE:** The gateway must have already joined the Active Directory domain prior to SMB file share creation. e.g. via "SMB Settings" in the AWS Storage Gateway console or `smb_active_directory_settings` in the [`aws.storagegateway.Gateway` resource](https://www.terraform.io/docs/providers/aws/r/storagegateway_gateway.html).
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -31,13 +38,18 @@ const example = new aws.storagegateway.SmbFileShare("example", {
     roleArn: aws_iam_role_example.arn,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Guest Authentication
-
-> **NOTE:** The gateway must have already had the SMB guest password set prior to SMB file share creation. e.g. via "SMB Settings" in the AWS Storage Gateway console or `smb_guest_password` in the [`aws.storagegateway.Gateway` resource](https://www.terraform.io/docs/providers/aws/r/storagegateway_gateway.html).
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,10 +61,8 @@ const example = new aws.storagegateway.SmbFileShare("example", {
     roleArn: aws_iam_role_example.arn,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SmbFileShare Resource {#create}

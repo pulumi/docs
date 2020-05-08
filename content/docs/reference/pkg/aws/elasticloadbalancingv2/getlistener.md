@@ -18,10 +18,23 @@ This data source can prove useful when a module accepts an LB Listener as an
 input variable and needs to know the LB it is attached to, or other
 information specific to the listener in question.
 
+
+
+Deprecated: aws.elasticloadbalancingv2.getListener has been deprecated in favour of aws.lb.getListener
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -40,12 +53,8 @@ const selected443 = selected.apply(selected => aws.lb.getListener({
     port: 443,
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
-Deprecated: aws.elasticloadbalancingv2.getListener has been deprecated in favour of aws.lb.getListener
-
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancingv2.getListener has been deprecated in favour of aws.lb.getListener{{% /md %}}</p>
 
 

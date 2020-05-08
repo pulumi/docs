@@ -12,10 +12,21 @@ meta_desc: "Explore the SamplingRule resource of the xray module, including exam
 
 Creates and manages an AWS XRay Sampling Rule.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -37,10 +48,8 @@ const example = new aws.xray.SamplingRule("example", {
     version: 1,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SamplingRule Resource {#create}

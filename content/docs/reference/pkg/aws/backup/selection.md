@@ -12,16 +12,21 @@ meta_desc: "Explore the Selection resource of the backup module, including examp
 
 Manages selection conditions for AWS Backup plan resources.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### IAM Role
-
-> For more information about creating and managing IAM Roles for backups and restores, see the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/iam-service-roles.html).
-
-The below example creates an IAM role with the default managed IAM Policy for allowing AWS Backup to create backups.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,11 +54,18 @@ const exampleSelection = new aws.backup.Selection("example", {
     iamRoleArn: exampleRole.arn,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Selecting Backups By Tag
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -68,11 +80,18 @@ const example = new aws.backup.Selection("example", {
     }],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Selecting Backups By Resource
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,10 +106,8 @@ const example = new aws.backup.Selection("example", {
     ],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Selection Resource {#create}

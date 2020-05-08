@@ -16,16 +16,34 @@ Manages an AWS Storage Gateway cached iSCSI volume.
 
 > **NOTE:** The gateway must have an upload buffer added (e.g. via the [`aws.storagegateway.UploadBuffer`](https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html) resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as `UPLOAD BUFFER NOT CONFIGURED`.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-> **NOTE:** These examples are referencing the [`aws.storagegateway.Cache`](https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html) resource `gateway_arn` attribute to ensure this provider properly adds cache before creating the volume. If you are not using this method, you may need to declare an expicit dependency (e.g. via `depends_on = ["aws_storagegateway_cache.example"]`) to ensure proper ordering.
-
+{{% example csharp %}}
+Coming soon!
 {{% /example %}}
-{{% example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+Coming soon!
+{{% /example %}}
 ### Create Empty Cached iSCSI Volume
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -37,11 +55,18 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
     volumeSizeInBytes: 5368709120, // 5 GB
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Create Cached iSCSI Volume From Snapshot
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -54,11 +79,18 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
     volumeSizeInBytes: aws_ebs_snapshot_example.volumeSize.apply(volumeSize => (((volumeSize * 1024) * 1024) * 1024)),
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Create Cached iSCSI Volume From Source Volume
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -71,10 +103,8 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
     volumeSizeInBytes: aws_storagegateway_cached_iscsi_volume_existing.volumeSizeInBytes,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a CachesIscsiVolume Resource {#create}

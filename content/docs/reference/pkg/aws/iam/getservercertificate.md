@@ -12,10 +12,25 @@ meta_desc: "Explore the GetServerCertificate function of the iam module, includi
 
 Use this data source to lookup information about IAM Server Certificates.
 
+
+## Import 
+
+The import function will read in certificate body, certificate chain (if it exists), id, name, path, and arn. 
+It will not retrieve the private key which is not available through the AWS API.   
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -34,14 +49,8 @@ const elb = new aws.elb.LoadBalancer("elb", {
     }],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-## Import 
-
-The import function will read in certificate body, certificate chain (if it exists), id, name, path, and arn. 
-It will not retrieve the private key which is not available through the AWS API.   
-
 
 
 ## Using GetServerCertificate {#using}

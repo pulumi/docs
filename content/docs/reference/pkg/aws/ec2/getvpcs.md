@@ -14,12 +14,21 @@ This resource can be useful for getting back a list of VPC Ids for a region.
 
 The following example retrieves a list of VPC Ids with a custom tag of `service` set to a value of "production".
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following shows outputing all VPC Ids.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -32,27 +41,8 @@ const fooVpcs = pulumi.output(aws.ec2.getVpcs({
 
 export const foo = fooVpcs.ids;
 ```
-
-An example use case would be interpolate the `aws.ec2.getVpcs` output into `count` of an aws.ec2.FlowLog resource.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const fooVpcs = pulumi.output(aws.ec2.getVpcs({ async: true }));
-const testFlowLog: aws.ec2.FlowLog[] = [];
-for (let i = 0; i < fooVpcs.apply(fooVpcs => fooVpcs.ids.length); i++) {
-    testFlowLog.push(new aws.ec2.FlowLog(`test_flow_log-${i}`, {
-        vpcId: fooVpcs.apply(fooVpcs => fooVpcs.ids[i]),
-    }));
-}
-
-export const foo = fooVpcs.ids;
-```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetVpcs {#using}

@@ -12,19 +12,7 @@ meta_desc: "Explore the Topic resource of the sns module, including examples, in
 
 Provides an SNS topic resource
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const userUpdates = new aws.sns.Topic("user_updates", {});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Example with Delivery Policy
 
 ```typescript
@@ -68,6 +56,27 @@ const userUpdates = new aws.sns.Topic("user_updates", {
 
 The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role_arn` arguments are used to give Amazon SNS write access to use CloudWatch Logs on your behalf. The `<endpoint>_success_feedback_sample_rate` argument is for specifying the sample rate percentage (0-100) of successfully delivered messages. After you configure the  `<endpoint>_failure_feedback_role_arn` argument, then all failed message deliveries generate CloudWatch Logs.
 
+{{% examples %}}
+## Example Usage
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const userUpdates = new aws.sns.Topic("user_updates", {});
+```
+{{% /example %}}
+{{% /examples %}}
 
 
 ## Create a Topic Resource {#create}

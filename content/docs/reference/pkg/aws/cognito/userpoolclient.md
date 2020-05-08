@@ -12,12 +12,21 @@ meta_desc: "Explore the UserPoolClient resource of the cognito module, including
 
 Provides a Cognito User Pool Client resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Create a basic user pool client
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,11 +36,18 @@ const client = new aws.cognito.UserPoolClient("client", {
     userPoolId: pool.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Create a user pool client with no SRP authentication
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,11 +59,18 @@ const client = new aws.cognito.UserPoolClient("client", {
     userPoolId: pool.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Create a user pool client with pinpoint analytics
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -98,10 +121,8 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
     userPoolId: testUserPool.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a UserPoolClient Resource {#create}

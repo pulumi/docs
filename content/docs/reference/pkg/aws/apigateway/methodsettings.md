@@ -12,10 +12,21 @@ meta_desc: "Explore the MethodSettings resource of the apigateway module, includ
 
 Provides an API Gateway Method Settings, e.g. logging or monitoring.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -65,10 +76,8 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
     stageName: testStage.stageName,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a MethodSettings Resource {#create}

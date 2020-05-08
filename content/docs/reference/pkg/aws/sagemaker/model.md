@@ -12,12 +12,21 @@ meta_desc: "Explore the Model resource of the sagemaker module, including exampl
 
 Provides a SageMaker model resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic usage:
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,10 +50,8 @@ const role = new aws.iam.Role("r", {
     assumeRolePolicy: assumeRole.json,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Model Resource {#create}

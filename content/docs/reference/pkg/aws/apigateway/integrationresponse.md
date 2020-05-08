@@ -15,10 +15,21 @@ Provides an HTTP Method Integration Response for an API Gateway Resource.
 > **Note:** Depends on having `aws.apigateway.Integration` inside your rest api. To ensure this
 you might need to add an explicit `depends_on` for clean runs.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -65,10 +76,8 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("MyDemo
     statusCode: response200.statusCode,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a IntegrationResponse Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the UserProfile resource of the opsworks module, including e
 
 Provides an OpsWorks User Profile resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
     userArn: aws_iam_user_user.arn,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a UserProfile Resource {#create}

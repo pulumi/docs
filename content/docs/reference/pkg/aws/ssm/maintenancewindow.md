@@ -12,10 +12,21 @@ meta_desc: "Explore the MaintenanceWindow resource of the ssm module, including 
 
 Provides an SSM Maintenance Window resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,10 +37,8 @@ const production = new aws.ssm.MaintenanceWindow("production", {
     schedule: "cron(0 16 ? * TUE *)",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a MaintenanceWindow Resource {#create}

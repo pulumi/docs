@@ -12,22 +12,29 @@ meta_desc: "Explore the UserPool resource of the cognito module, including examp
 
 Provides a Cognito User Pool resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Basic configuration
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const pool = new aws.cognito.UserPool("pool", {});
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a UserPool Resource {#create}

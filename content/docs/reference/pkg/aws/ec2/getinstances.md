@@ -18,10 +18,21 @@ or to make it easier for an operator to connect through bastion host(s).
 instances (e.g. managed via autoscaling group), as the output may change at any time
 and you'd need to re-run `apply` every time an instance comes up or dies.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -46,10 +57,8 @@ for (let i = 0; i < testInstances.apply(testInstances => testInstances.ids.lengt
     }));
 }
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetInstances {#using}

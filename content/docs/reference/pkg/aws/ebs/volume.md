@@ -12,10 +12,21 @@ meta_desc: "Explore the Volume resource of the ebs module, including examples, i
 
 Manages a single EBS volume.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,12 +39,8 @@ const example = new aws.ebs.Volume("example", {
     },
 });
 ```
-
-> **NOTE**: One of `size` or `snapshot_id` is required when specifying an EBS volume
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Volume Resource {#create}

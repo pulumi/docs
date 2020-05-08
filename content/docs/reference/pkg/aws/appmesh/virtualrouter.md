@@ -24,10 +24,21 @@ These resource can be imported using `import`.
 
 The state associated with existing resources will automatically be migrated.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -44,10 +55,8 @@ const serviceb = new aws.appmesh.VirtualRouter("serviceb", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a VirtualRouter Resource {#create}

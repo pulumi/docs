@@ -14,12 +14,21 @@ Provides a Load Balancer resource.
 
 > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Application Load Balancer
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -40,11 +49,18 @@ const test = new aws.lb.LoadBalancer("test", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Network Load Balancer
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,11 +75,18 @@ const test = new aws.lb.LoadBalancer("test", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Specifying Elastic IPs
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -82,10 +105,8 @@ const example = new aws.lb.LoadBalancer("example", {
     ],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a LoadBalancer Resource {#create}

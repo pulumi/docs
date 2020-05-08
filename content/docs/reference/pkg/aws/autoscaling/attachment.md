@@ -19,10 +19,21 @@ an ELB), and an AutoScaling Group resource with
 load balancers in conjunction with an ASG Attachment resource. Doing so will cause a
 conflict and will overwrite attachments.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,21 +44,8 @@ const asgAttachmentBar = new aws.autoscaling.Attachment("asg_attachment_bar", {
     elb: aws_elb_bar.id,
 });
 ```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// Create a new ALB Target Group attachment
-const asgAttachmentBar = new aws.autoscaling.Attachment("asg_attachment_bar", {
-    albTargetGroupArn: aws_alb_target_group_test.arn,
-    autoscalingGroupName: aws_autoscaling_group_asg.id,
-});
-```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Attachment Resource {#create}

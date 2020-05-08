@@ -12,10 +12,21 @@ meta_desc: "Explore the ServiceLinkedRole resource of the iam module, including 
 
 Provides an [IAM service-linked role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const elasticbeanstalk = new aws.iam.ServiceLinkedRole("elasticbeanstalk", {
     awsServiceName: "elasticbeanstalk.amazonaws.com",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ServiceLinkedRole Resource {#create}

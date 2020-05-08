@@ -14,10 +14,21 @@ Provides a Glue Workflow resource.
 The workflow graph (DAG) can be build using the `aws.glue.Trigger` resource. 
 See the example below for creating a graph with four nodes (two triggers and two jobs). 
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -44,10 +55,8 @@ const example_inner = new aws.glue.Trigger("example-inner", {
     workflowName: example.name,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Workflow Resource {#create}

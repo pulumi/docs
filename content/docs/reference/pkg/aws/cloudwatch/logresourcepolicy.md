@@ -12,12 +12,21 @@ meta_desc: "Explore the LogResourcePolicy resource of the cloudwatch module, inc
 
 Provides a resource to manage a CloudWatch log resource policy.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Elasticsearch Log Publishing
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,11 +50,18 @@ const elasticsearch_log_publishing_policyLogResourcePolicy = new aws.cloudwatch.
     policyName: "elasticsearch-log-publishing-policy",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Route53 Query Logging
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -68,10 +84,8 @@ const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogReso
     policyName: "route53-query-logging-policy",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a LogResourcePolicy Resource {#create}

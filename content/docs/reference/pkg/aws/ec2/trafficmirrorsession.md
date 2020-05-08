@@ -13,12 +13,21 @@ meta_desc: "Explore the TrafficMirrorSession resource of the ec2 module, includi
 Provides an Traffic mirror session.  
 Read [limits and considerations](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html) for traffic mirroring
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-To create a basic traffic mirror session
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -37,10 +46,8 @@ const session = new aws.ec2.TrafficMirrorSession("session", {
     trafficMirrorTargetId: target.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a TrafficMirrorSession Resource {#create}

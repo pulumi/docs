@@ -12,10 +12,21 @@ meta_desc: "Explore the ClusterSnapshot resource of the neptune module, includin
 
 Manages a Neptune database cluster snapshot.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const example = new aws.neptune.ClusterSnapshot("example", {
     dbClusterSnapshotIdentifier: "resourcetestsnapshot1234",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ClusterSnapshot Resource {#create}

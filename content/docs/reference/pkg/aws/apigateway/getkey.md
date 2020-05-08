@@ -13,10 +13,21 @@ meta_desc: "Explore the GetKey function of the apigateway module, including exam
 Use this data source to get the name and value of a pre-existing API Key, for
 example to supply credentials for a dependency microservice.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const myApiKey = pulumi.output(aws.apigateway.getKey({
     id: "ru3mpjgse6",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetKey {#using}

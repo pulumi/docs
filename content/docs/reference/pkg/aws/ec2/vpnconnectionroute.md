@@ -12,10 +12,21 @@ meta_desc: "Explore the VpnConnectionRoute resource of the ec2 module, including
 
 Provides a static route between a VPN connection and a customer gateway.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -42,10 +53,8 @@ const office = new aws.ec2.VpnConnectionRoute("office", {
     vpnConnectionId: main.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a VpnConnectionRoute Resource {#create}

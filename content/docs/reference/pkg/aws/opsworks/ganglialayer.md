@@ -12,10 +12,21 @@ meta_desc: "Explore the GangliaLayer resource of the opsworks module, including 
 
 Provides an OpsWorks Ganglia layer resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -25,10 +36,8 @@ const monitor = new aws.opsworks.GangliaLayer("monitor", {
     stackId: aws_opsworks_stack_main.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a GangliaLayer Resource {#create}

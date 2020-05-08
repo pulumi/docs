@@ -12,10 +12,21 @@ meta_desc: "Explore the Resolver resource of the appsync module, including examp
 
 Provides an AppSync Resolver.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,10 +98,8 @@ const mutationPipelineTest = new aws.appsync.Resolver("Mutation_pipelineTest", {
     type: "Mutation",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Resolver Resource {#create}

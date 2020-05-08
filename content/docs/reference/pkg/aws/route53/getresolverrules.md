@@ -12,12 +12,21 @@ meta_desc: "Explore the GetResolverRules function of the route53 module, includi
 
 `aws.route53.getResolverRules` provides details about a set of Route53 Resolver rules.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example shows how to get Route53 Resolver rules based on tags.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,10 +37,8 @@ const example = pulumi.output(aws.route53.getResolverRules({
     }],
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetResolverRules {#using}

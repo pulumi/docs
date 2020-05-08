@@ -12,12 +12,21 @@ meta_desc: "Explore the BucketMetric resource of the s3 module, including exampl
 
 Provides a S3 bucket [metrics configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html) resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Add metrics configuration for entire S3 bucket
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,11 +36,18 @@ const example_entire_bucket = new aws.s3.BucketMetric("example-entire-bucket", {
     bucket: example.bucket,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Add metrics configuration with S3 bucket object filter
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -48,10 +64,8 @@ const example_filtered = new aws.s3.BucketMetric("example-filtered", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a BucketMetric Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the Permission resource of the opsworks module, including ex
 
 Provides an OpsWorks permission resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,10 +39,8 @@ const myStackPermission = new aws.opsworks.Permission("my_stack_permission", {
     userArn: aws_iam_user_user.arn,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Permission Resource {#create}

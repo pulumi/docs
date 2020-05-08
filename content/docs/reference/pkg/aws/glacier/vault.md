@@ -14,10 +14,21 @@ Provides a Glacier Vault Resource. You can refer to the [Glacier Developer Guide
 
 > **NOTE:** When removing a Glacier Vault, the Vault must be empty.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -52,10 +63,8 @@ const myArchive = new aws.glacier.Vault("my_archive", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Vault Resource {#create}

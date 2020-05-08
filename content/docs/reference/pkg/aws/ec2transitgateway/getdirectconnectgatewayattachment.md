@@ -12,12 +12,21 @@ meta_desc: "Explore the GetDirectConnectGatewayAttachment function of the ec2tra
 
 Get information on an EC2 Transit Gateway's attachment to a Direct Connect Gateway.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### By Transit Gateway and Direct Connect Gateway Identifiers
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,10 +36,8 @@ const example = pulumi.all([aws_dx_gateway_example.id, aws_ec2_transit_gateway_e
     transitGatewayId: aws_ec2_transit_gateway_exampleId,
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetDirectConnectGatewayAttachment {#using}

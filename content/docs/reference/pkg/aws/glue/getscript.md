@@ -12,12 +12,21 @@ meta_desc: "Explore the GetScript function of the glue module, including example
 
 Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG).
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Generate Python Script
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -110,11 +119,18 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
 
 export const pythonScript = example.pythonScript;
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Generate Scala Code
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -207,10 +223,8 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
 
 export const scalaCode = example.scalaCode;
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetScript {#using}

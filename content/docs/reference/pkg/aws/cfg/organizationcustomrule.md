@@ -16,10 +16,21 @@ Manages a Config Organization Custom Rule. More information about these rules ca
 
 > **NOTE:** The proper Lambda permission to allow the AWS Config service invoke the Lambda Function must be in place before the rule will successfully create or update. See also the [`aws.lambda.Permission` resource](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -38,10 +49,8 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
     triggerTypes: ["ConfigurationItemChangeNotification"],
 }, { dependsOn: [examplePermission, exampleOrganization] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a OrganizationCustomRule Resource {#create}

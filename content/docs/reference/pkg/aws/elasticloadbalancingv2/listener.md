@@ -14,12 +14,23 @@ Provides a Load Balancer Listener resource.
 
 > **Note:** `aws.alb.Listener` is known as `aws.lb.Listener`. The functionality is identical.
 
+
+
+Deprecated: aws.elasticloadbalancingv2.Listener has been deprecated in favour of aws.lb.Listener
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Forward Action
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -38,11 +49,18 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     sslPolicy: "ELBSecurityPolicy-2016-08",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Redirect Action
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -62,11 +80,18 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     protocol: "HTTP",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Fixed-response Action
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -86,11 +111,18 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     protocol: "HTTP",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Authenticate-cognito Action
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -120,11 +152,18 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     protocol: "HTTP",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Authenticate-oidc Action
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -154,13 +193,8 @@ const frontEndListener = new aws.lb.Listener("front_end", {
     protocol: "HTTP",
 });
 ```
-
-
 {{% /example %}}
 {{% /examples %}}
-
-Deprecated: aws.elasticloadbalancingv2.Listener has been deprecated in favour of aws.lb.Listener
-
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancingv2.Listener has been deprecated in favour of aws.lb.Listener{{% /md %}}</p>
 
 

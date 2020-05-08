@@ -14,25 +14,7 @@ Provides the ability to register instances and containers with an Application Lo
 
 > **Note:** `aws.alb.TargetGroupAttachment` is known as `aws.lb.TargetGroupAttachment`. The functionality is identical.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const testTargetGroup = new aws.lb.TargetGroup("test", {});
-const testInstance = new aws.ec2.Instance("test", {});
-const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
-    port: 80,
-    targetGroupArn: testTargetGroup.arn,
-    targetId: testInstance.id,
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Usage with lambda
 
 ```typescript
@@ -57,6 +39,33 @@ const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
 
 Deprecated: aws.elasticloadbalancingv2.TargetGroupAttachment has been deprecated in favour of aws.lb.TargetGroupAttachment
 
+{{% examples %}}
+## Example Usage
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testTargetGroup = new aws.lb.TargetGroup("test", {});
+const testInstance = new aws.ec2.Instance("test", {});
+const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
+    port: 80,
+    targetGroupArn: testTargetGroup.arn,
+    targetId: testInstance.id,
+});
+```
+{{% /example %}}
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancingv2.TargetGroupAttachment has been deprecated in favour of aws.lb.TargetGroupAttachment{{% /md %}}</p>
 
 

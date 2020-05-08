@@ -12,10 +12,21 @@ meta_desc: "Explore the StateMachine resource of the sfn module, including examp
 
 Provides a Step Function State Machine resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -36,10 +47,8 @@ const sfnStateMachine = new aws.sfn.StateMachine("sfn_state_machine", {
     roleArn: aws_iam_role_iam_for_sfn.arn,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a StateMachine Resource {#create}

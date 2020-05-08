@@ -12,10 +12,21 @@ meta_desc: "Explore the GeoMatchSet resource of the waf module, including exampl
 
 Provides a WAF Geo Match Set Resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,10 +44,8 @@ const geoMatchSet = new aws.waf.GeoMatchSet("geo_match_set", {
     ],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a GeoMatchSet Resource {#create}

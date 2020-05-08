@@ -13,10 +13,23 @@ meta_desc: "Explore the LoadBalancerBackendServerPolicy resource of the elasticl
 Attaches a load balancer policy to an ELB backend server.
 
 
+
+
+Deprecated: aws.elasticloadbalancing.LoadBalancerBackendServerPolicy has been deprecated in favour of aws.elb.LoadBalancerBackendServerPolicy
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,20 +72,8 @@ const wu_tang_backend_auth_policies_443 = new aws.elb.LoadBalancerBackendServerP
     policyNames: [wu_tang_root_ca_backend_auth_policy.policyName],
 });
 ```
-
-Where the file `pubkey` in the current directory contains only the _public key_ of the certificate.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-This example shows how to enable backend authentication for an ELB as well as customize the TLS settings.
-
 {{% /example %}}
 {{% /examples %}}
-
-Deprecated: aws.elasticloadbalancing.LoadBalancerBackendServerPolicy has been deprecated in favour of aws.elb.LoadBalancerBackendServerPolicy
-
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.LoadBalancerBackendServerPolicy has been deprecated in favour of aws.elb.LoadBalancerBackendServerPolicy{{% /md %}}</p>
 
 

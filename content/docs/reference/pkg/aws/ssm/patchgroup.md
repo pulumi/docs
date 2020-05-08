@@ -12,10 +12,21 @@ meta_desc: "Explore the PatchGroup resource of the ssm module, including example
 
 Provides an SSM Patch Group resource
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,10 +39,8 @@ const patchgroup = new aws.ssm.PatchGroup("patchgroup", {
     patchGroup: "patch-group-name",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a PatchGroup Resource {#create}

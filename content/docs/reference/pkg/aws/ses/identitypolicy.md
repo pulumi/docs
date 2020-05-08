@@ -12,10 +12,21 @@ meta_desc: "Explore the IdentityPolicy resource of the ses module, including exa
 
 Manages a SES Identity Policy. More information about SES Sending Authorization Policies can be found in the [SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization-policies.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,10 +52,8 @@ const exampleIdentityPolicy = new aws.ses.IdentityPolicy("example", {
     policy: examplePolicyDocument.json,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a IdentityPolicy Resource {#create}

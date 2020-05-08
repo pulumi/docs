@@ -14,124 +14,7 @@ Provides an AutoScaling Group resource.
 
 > **Note:** You must specify either `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const test = new aws.ec2.PlacementGroup("test", {
-    strategy: "cluster",
-});
-const bar = new aws.autoscaling.Group("bar", {
-    desiredCapacity: 4,
-    forceDelete: true,
-    healthCheckGracePeriod: 300,
-    healthCheckType: "ELB",
-    initialLifecycleHooks: [{
-        defaultResult: "CONTINUE",
-        heartbeatTimeout: 2000,
-        lifecycleTransition: "autoscaling:EC2_INSTANCE_LAUNCHING",
-        name: "foobar",
-        notificationMetadata: `{
-  "foo": "bar"
-}
-`,
-        notificationTargetArn: "arn:aws:sqs:us-east-1:444455556666:queue1*",
-        roleArn: "arn:aws:iam::123456789012:role/S3Access",
-    }],
-    launchConfiguration: aws_launch_configuration_foobar.name,
-    maxSize: 5,
-    minSize: 2,
-    placementGroup: test.id,
-    tags: [
-        {
-            key: "foo",
-            propagateAtLaunch: true,
-            value: "bar",
-        },
-        {
-            key: "lorem",
-            propagateAtLaunch: false,
-            value: "ipsum",
-        },
-    ],
-    vpcZoneIdentifiers: [
-        aws_subnet_example1.id,
-        aws_subnet_example2.id,
-    ],
-}, { timeouts: {
-    delete: "15m",
-} });
-```
-
-{{% /example %}}
-{{% example %}}
-### With Latest Version Of Launch Template
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const foobar = new aws.ec2.LaunchTemplate("foobar", {
-    imageId: "ami-1a2b3c",
-    instanceType: "t2.micro",
-    namePrefix: "foobar",
-});
-const bar = new aws.autoscaling.Group("bar", {
-    availabilityZones: ["us-east-1a"],
-    desiredCapacity: 1,
-    launchTemplate: {
-        id: foobar.id,
-        version: "$Latest",
-    },
-    maxSize: 1,
-    minSize: 1,
-});
-```
-
-{{% /example %}}
-{{% example %}}
-### Mixed Instances Policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleLaunchTemplate = new aws.ec2.LaunchTemplate("example", {
-    imageId: aws_ami_example.id,
-    instanceType: "c5.large",
-    namePrefix: "example",
-});
-const exampleGroup = new aws.autoscaling.Group("example", {
-    availabilityZones: ["us-east-1a"],
-    desiredCapacity: 1,
-    maxSize: 1,
-    minSize: 1,
-    mixedInstancesPolicy: {
-        launchTemplate: {
-            launchTemplateSpecification: {
-                launchTemplateId: exampleLaunchTemplate.id,
-            },
-            overrides: [
-                {
-                    instanceType: "c4.large",
-                    weightedCapacity: "3",
-                },
-                {
-                    instanceType: "c3.large",
-                    weightedCapacity: "2",
-                },
-            ],
-        },
-    },
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Interpolated tags
 
 ```typescript
@@ -226,6 +109,146 @@ number of configuration problems. See the [AWS Docs on Load Balancer
 Troubleshooting](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-troubleshooting.html)
 for more information.
 
+{{% examples %}}
+## Example Usage
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = new aws.ec2.PlacementGroup("test", {
+    strategy: "cluster",
+});
+const bar = new aws.autoscaling.Group("bar", {
+    desiredCapacity: 4,
+    forceDelete: true,
+    healthCheckGracePeriod: 300,
+    healthCheckType: "ELB",
+    initialLifecycleHooks: [{
+        defaultResult: "CONTINUE",
+        heartbeatTimeout: 2000,
+        lifecycleTransition: "autoscaling:EC2_INSTANCE_LAUNCHING",
+        name: "foobar",
+        notificationMetadata: `{
+  "foo": "bar"
+}
+`,
+        notificationTargetArn: "arn:aws:sqs:us-east-1:444455556666:queue1*",
+        roleArn: "arn:aws:iam::123456789012:role/S3Access",
+    }],
+    launchConfiguration: aws_launch_configuration_foobar.name,
+    maxSize: 5,
+    minSize: 2,
+    placementGroup: test.id,
+    tags: [
+        {
+            key: "foo",
+            propagateAtLaunch: true,
+            value: "bar",
+        },
+        {
+            key: "lorem",
+            propagateAtLaunch: false,
+            value: "ipsum",
+        },
+    ],
+    vpcZoneIdentifiers: [
+        aws_subnet_example1.id,
+        aws_subnet_example2.id,
+    ],
+}, { timeouts: {
+    delete: "15m",
+} });
+```
+{{% /example %}}
+### With Latest Version Of Launch Template
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const foobar = new aws.ec2.LaunchTemplate("foobar", {
+    imageId: "ami-1a2b3c",
+    instanceType: "t2.micro",
+    namePrefix: "foobar",
+});
+const bar = new aws.autoscaling.Group("bar", {
+    availabilityZones: ["us-east-1a"],
+    desiredCapacity: 1,
+    launchTemplate: {
+        id: foobar.id,
+        version: "$Latest",
+    },
+    maxSize: 1,
+    minSize: 1,
+});
+```
+{{% /example %}}
+### Mixed Instances Policy
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleLaunchTemplate = new aws.ec2.LaunchTemplate("example", {
+    imageId: aws_ami_example.id,
+    instanceType: "c5.large",
+    namePrefix: "example",
+});
+const exampleGroup = new aws.autoscaling.Group("example", {
+    availabilityZones: ["us-east-1a"],
+    desiredCapacity: 1,
+    maxSize: 1,
+    minSize: 1,
+    mixedInstancesPolicy: {
+        launchTemplate: {
+            launchTemplateSpecification: {
+                launchTemplateId: exampleLaunchTemplate.id,
+            },
+            overrides: [
+                {
+                    instanceType: "c4.large",
+                    weightedCapacity: "3",
+                },
+                {
+                    instanceType: "c3.large",
+                    weightedCapacity: "2",
+                },
+            ],
+        },
+    },
+});
+```
+{{% /example %}}
+{{% /examples %}}
 
 
 ## Create a Group Resource {#create}

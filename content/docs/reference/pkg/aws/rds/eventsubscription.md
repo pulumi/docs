@@ -12,10 +12,28 @@ meta_desc: "Explore the EventSubscription resource of the rds module, including 
 
 Provides a DB event subscription resource.
 
+
+## Attributes
+
+The following additional atttributes are provided:
+
+* `id` - The name of the RDS event notification subscription
+* `arn` - The Amazon Resource Name of the RDS event notification subscription
+* `customer_aws_id` - The AWS customer account associated with the RDS event notification subscription
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -50,17 +68,8 @@ const defaultEventSubscription = new aws.rds.EventSubscription("default", {
     sourceType: "db-instance",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-## Attributes
-
-The following additional atttributes are provided:
-
-* `id` - The name of the RDS event notification subscription
-* `arn` - The Amazon Resource Name of the RDS event notification subscription
-* `customer_aws_id` - The AWS customer account associated with the RDS event notification subscription
-
 
 
 ## Create a EventSubscription Resource {#create}

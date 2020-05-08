@@ -12,10 +12,21 @@ meta_desc: "Explore the IpSet resource of the wafregional module, including exam
 
 Provides a WAF Regional IPSet Resource for use with Application Load Balancer.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,10 +44,8 @@ const ipset = new aws.wafregional.IpSet("ipset", {
     ],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a IpSet Resource {#create}

@@ -12,12 +12,21 @@ meta_desc: "Explore the EventDestination resource of the ses module, including e
 
 Provides an SES event destination
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### CloudWatch Destination
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -36,11 +45,18 @@ const cloudwatch = new aws.ses.EventDestination("cloudwatch", {
     ],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Kinesis Destination
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -58,11 +74,18 @@ const kinesis = new aws.ses.EventDestination("kinesis", {
     ],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### SNS Destination
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -79,10 +102,8 @@ const sns = new aws.ses.EventDestination("sns", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a EventDestination Resource {#create}

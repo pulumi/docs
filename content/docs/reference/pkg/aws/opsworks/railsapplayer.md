@@ -12,10 +12,21 @@ meta_desc: "Explore the RailsAppLayer resource of the opsworks module, including
 
 Provides an OpsWorks Ruby on Rails application layer resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const app = new aws.opsworks.RailsAppLayer("app", {
     stackId: aws_opsworks_stack_main.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a RailsAppLayer Resource {#create}

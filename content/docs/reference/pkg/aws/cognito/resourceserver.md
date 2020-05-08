@@ -12,12 +12,21 @@ meta_desc: "Explore the ResourceServer resource of the cognito module, including
 
 Provides a Cognito Resource Server.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Create a basic resource server
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,11 +37,18 @@ const resource = new aws.cognito.ResourceServer("resource", {
     userPoolId: pool.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Create a resource server with sample-scope
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -47,10 +63,8 @@ const resource = new aws.cognito.ResourceServer("resource", {
     userPoolId: pool.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ResourceServer Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the GetCluster function of the cloudhsmv2 module, including 
 
 Use this data source to get information about a CloudHSM v2 cluster
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const cluster = pulumi.output(aws.cloudhsmv2.getCluster({
     clusterId: "cluster-testclusterid",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetCluster {#using}

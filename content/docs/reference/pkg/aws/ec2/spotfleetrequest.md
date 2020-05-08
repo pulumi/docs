@@ -13,12 +13,21 @@ meta_desc: "Explore the SpotFleetRequest resource of the ec2 module, including e
 Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
 instances to be requested on the Spot market.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Using launch specifications
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -58,11 +67,18 @@ const cheapCompute = new aws.ec2.SpotFleetRequest("cheap_compute", {
     validUntil: "2019-11-04T20:44:20Z",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Using multiple launch specifications
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -88,11 +104,8 @@ const foo = new aws.ec2.SpotFleetRequest("foo", {
     validUntil: "2019-11-04T20:44:20Z",
 });
 ```
-
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SpotFleetRequest Resource {#create}

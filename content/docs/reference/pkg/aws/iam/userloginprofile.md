@@ -14,10 +14,21 @@ Manages an IAM User Login Profile with limited support for password creation dur
 
 > To reset an IAM User login password via this provider, you can use delete and recreate this resource or change any of the arguments.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,10 +44,8 @@ const exampleUserLoginProfile = new aws.iam.UserLoginProfile("example", {
 
 export const password = exampleUserLoginProfile.encryptedPassword;
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a UserLoginProfile Resource {#create}

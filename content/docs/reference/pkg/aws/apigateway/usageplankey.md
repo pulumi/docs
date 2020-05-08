@@ -12,10 +12,21 @@ meta_desc: "Explore the UsagePlanKey resource of the apigateway module, includin
 
 Provides an API Gateway Usage Plan Key.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -34,10 +45,8 @@ const main = new aws.apigateway.UsagePlanKey("main", {
     usagePlanId: myusageplan.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a UsagePlanKey Resource {#create}

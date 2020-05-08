@@ -30,12 +30,21 @@ for more information.
 > **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Aurora MySQL 2.x (MySQL 5.7)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -56,11 +65,18 @@ const defaultCluster = new aws.rds.Cluster("default", {
     preferredBackupWindow: "07:00-09:00",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Aurora MySQL 1.x (MySQL 5.6)
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -79,11 +95,18 @@ const defaultCluster = new aws.rds.Cluster("default", {
     preferredBackupWindow: "07:00-09:00",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Aurora with PostgreSQL engine
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -103,13 +126,18 @@ const postgresql = new aws.rds.Cluster("postgresql", {
     preferredBackupWindow: "07:00-09:00",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Aurora Multi-Master Cluster
-
-> More information about Aurora Multi-Master Clusters can be found in the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html).
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -123,10 +151,8 @@ const example = new aws.rds.Cluster("example", {
     skipFinalSnapshot: true,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Cluster Resource {#create}

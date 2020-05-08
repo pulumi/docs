@@ -12,10 +12,21 @@ meta_desc: "Explore the GetInternetGateway function of the ec2 module, including
 
 `aws.ec2.InternetGateway` provides details about a specific Internet Gateway.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -30,10 +41,8 @@ const defaultInternetGateway = pulumi.output(aws.ec2.getInternetGateway({
     }],
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetInternetGateway {#using}

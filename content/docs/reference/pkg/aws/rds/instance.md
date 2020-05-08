@@ -37,12 +37,21 @@ Amazon RDS supports three types of instance classes: Standard, Memory Optimized,
 and Burstable Performance. For more information please read the AWS RDS documentation
 about [DB Instance Class Types](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html)
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Basic Usage
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,13 +68,18 @@ const defaultInstance = new aws.rds.Instance("default", {
     username: "foo",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Storage Autoscaling
-
-To enable Storage Autoscaling with instances that support the feature, define the `max_allocated_storage` argument higher than the `allocated_storage` argument. This provider will automatically hide differences with the `allocated_storage` argument value if autoscaling occurs.
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -75,10 +89,8 @@ const example = new aws.rds.Instance("example", {
     maxAllocatedStorage: 100,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Instance Resource {#create}

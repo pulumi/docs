@@ -12,10 +12,21 @@ meta_desc: "Explore the Webhook resource of the codepipeline module, including e
 
 Provides a CodePipeline Webhook.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -89,10 +100,8 @@ const barRepositoryWebhook = new github.RepositoryWebhook("bar", {
     repository: github_repository_repo.name,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Webhook Resource {#create}

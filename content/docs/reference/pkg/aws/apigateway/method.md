@@ -12,32 +12,7 @@ meta_desc: "Explore the Method resource of the apigateway module, including exam
 
 Provides a HTTP Method for an API Gateway Resource.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
-    description: "This is my API for demonstration purposes",
-});
-const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
-    parentId: myDemoAPI.rootResourceId,
-    pathPart: "mydemoresource",
-    restApi: myDemoAPI.id,
-});
-const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
-    authorization: "NONE",
-    httpMethod: "GET",
-    resourceId: myDemoResource.id,
-    restApi: myDemoAPI.id,
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Usage with Cognito User Pool Authorizer
 
 ```typescript
@@ -73,6 +48,40 @@ const any = new aws.apigateway.Method("any", {
 });
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
+    description: "This is my API for demonstration purposes",
+});
+const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
+    parentId: myDemoAPI.rootResourceId,
+    pathPart: "mydemoresource",
+    restApi: myDemoAPI.id,
+});
+const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
+    authorization: "NONE",
+    httpMethod: "GET",
+    resourceId: myDemoResource.id,
+    restApi: myDemoAPI.id,
+});
+```
+{{% /example %}}
+{{% /examples %}}
 
 
 ## Create a Method Resource {#create}

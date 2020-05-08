@@ -12,10 +12,21 @@ meta_desc: "Explore the StaticWebLayer resource of the opsworks module, includin
 
 Provides an OpsWorks static web server layer resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const web = new aws.opsworks.StaticWebLayer("web", {
     stackId: aws_opsworks_stack_main.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a StaticWebLayer Resource {#create}

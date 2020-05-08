@@ -12,12 +12,21 @@ meta_desc: "Explore the Bucket resource of the s3 module, including examples, in
 
 Provides a S3 bucket resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Private Bucket w/ Tags
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -30,11 +39,18 @@ const bucket = new aws.s3.Bucket("b", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Static Website Hosting
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -58,11 +74,18 @@ const bucket = new aws.s3.Bucket("b", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Using CORS
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -81,11 +104,18 @@ const bucket = new aws.s3.Bucket("b", {
     }],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Using versioning
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -97,11 +127,18 @@ const bucket = new aws.s3.Bucket("b", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Enable Logging
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -117,11 +154,18 @@ const bucket = new aws.s3.Bucket("b", {
     }],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Using object lifecycle
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -185,11 +229,18 @@ const versioningBucket = new aws.s3.Bucket("versioning_bucket", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Using replication configuration
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -279,11 +330,18 @@ const replicationRolePolicyAttachment = new aws.iam.RolePolicyAttachment("replic
     role: replicationRole.name,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Enable Default Server Side Encryption
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -303,11 +361,18 @@ const mybucket = new aws.s3.Bucket("mybucket", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Using ACL policy grants
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -331,10 +396,8 @@ const bucket = new aws.s3.Bucket("bucket", {
     ],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Bucket Resource {#create}

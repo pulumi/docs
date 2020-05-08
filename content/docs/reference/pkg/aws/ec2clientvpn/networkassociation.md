@@ -13,10 +13,21 @@ meta_desc: "Explore the NetworkAssociation resource of the ec2clientvpn module, 
 Provides network associations for AWS Client VPN endpoints. For more information on usage, please see the 
 [AWS Client VPN Administrator's Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -26,10 +37,8 @@ const example = new aws.ec2clientvpn.NetworkAssociation("example", {
     subnetId: aws_subnet_example.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a NetworkAssociation Resource {#create}

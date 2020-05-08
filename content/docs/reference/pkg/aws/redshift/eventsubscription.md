@@ -12,10 +12,28 @@ meta_desc: "Explore the EventSubscription resource of the redshift module, inclu
 
 Provides a Redshift event subscription resource.
 
+
+## Attributes
+
+The following additional atttributes are provided:
+
+* `arn` - Amazon Resource Name (ARN) of the Redshift event notification subscription
+* `id` - The name of the Redshift event notification subscription
+* `customer_aws_id` - The AWS customer account associated with the Redshift event notification subscription
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,17 +59,8 @@ const defaultEventSubscription = new aws.redshift.EventSubscription("default", {
     },
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-## Attributes
-
-The following additional atttributes are provided:
-
-* `arn` - Amazon Resource Name (ARN) of the Redshift event notification subscription
-* `id` - The name of the Redshift event notification subscription
-* `customer_aws_id` - The AWS customer account associated with the Redshift event notification subscription
-
 
 
 ## Create a EventSubscription Resource {#create}

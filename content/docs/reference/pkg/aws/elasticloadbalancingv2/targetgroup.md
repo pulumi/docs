@@ -14,12 +14,23 @@ Provides a Target Group resource for use with Load Balancer resources.
 
 > **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
 
+
+
+Deprecated: aws.elasticloadbalancingv2.TargetGroup has been deprecated in favour of aws.lb.TargetGroup
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Instance Target Group
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -33,11 +44,18 @@ const test = new aws.lb.TargetGroup("test", {
     vpcId: main.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### IP Target Group
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -52,11 +70,18 @@ const ip_example = new aws.lb.TargetGroup("ip-example", {
     vpcId: main.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Lambda Target Group
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -65,12 +90,8 @@ const lambda_example = new aws.lb.TargetGroup("lambda-example", {
     targetType: "lambda",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
-Deprecated: aws.elasticloadbalancingv2.TargetGroup has been deprecated in favour of aws.lb.TargetGroup
-
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancingv2.TargetGroup has been deprecated in favour of aws.lb.TargetGroup{{% /md %}}</p>
 
 

@@ -12,10 +12,21 @@ meta_desc: "Explore the MemcachedLayer resource of the opsworks module, includin
 
 Provides an OpsWorks memcached layer resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
     stackId: aws_opsworks_stack_main.id,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a MemcachedLayer Resource {#create}

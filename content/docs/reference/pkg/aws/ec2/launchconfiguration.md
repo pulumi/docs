@@ -12,36 +12,7 @@ meta_desc: "Explore the LaunchConfiguration resource of the ec2 module, includin
 
 Provides a resource to create a new launch configuration, used for autoscaling groups.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const ubuntu = pulumi.output(aws.getAmi({
-    filters: [
-        {
-            name: "name",
-            values: ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
-        },
-        {
-            name: "virtualization-type",
-            values: ["hvm"],
-        },
-    ],
-    mostRecent: true,
-    owners: ["099720109477"], // Canonical
-}, { async: true }));
-const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
-    imageId: ubuntu.id,
-    instanceType: "t2.micro",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Using with AutoScaling Groups
 
 Launch Configurations cannot be updated after creation with the Amazon
@@ -179,6 +150,44 @@ cannot currently be detected by this provider. After updating to block device
 configuration, resource recreation can be manually triggered by using the
 [`up` command with the --replace argument](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
 
+{{% examples %}}
+## Example Usage
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const ubuntu = pulumi.output(aws.getAmi({
+    filters: [
+        {
+            name: "name",
+            values: ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
+        },
+        {
+            name: "virtualization-type",
+            values: ["hvm"],
+        },
+    ],
+    mostRecent: true,
+    owners: ["099720109477"], // Canonical
+}, { async: true }));
+const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
+    imageId: ubuntu.id,
+    instanceType: "t2.micro",
+});
+```
+{{% /example %}}
+{{% /examples %}}
 
 
 ## Create a LaunchConfiguration Resource {#create}

@@ -12,10 +12,21 @@ meta_desc: "Explore the Snapshot resource of the rds module, including examples,
 
 Manages a RDS database instance snapshot. For managing RDS database cluster snapshots, see the [`aws.rds.ClusterSnapshot` resource](https://www.terraform.io/docs/providers/aws/r/db_cluster_snapshot.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -37,10 +48,8 @@ const test = new aws.rds.Snapshot("test", {
     dbSnapshotIdentifier: "testsnapshot1234",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Snapshot Resource {#create}

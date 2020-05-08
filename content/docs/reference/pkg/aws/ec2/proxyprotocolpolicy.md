@@ -12,10 +12,21 @@ meta_desc: "Explore the ProxyProtocolPolicy resource of the ec2 module, includin
 
 Provides a proxy protocol policy, which allows an ELB to carry a client connection information to a backend.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -45,10 +56,8 @@ const smtp = new aws.ec2.ProxyProtocolPolicy("smtp", {
     loadBalancer: lb.name,
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ProxyProtocolPolicy Resource {#create}

@@ -12,12 +12,21 @@ meta_desc: "Explore the ConfigurationAggregator resource of the cfg module, incl
 
 Manages an AWS Config Configuration Aggregator
 
+
+
 {{% examples %}}
 ## Example Usage
-
-{{% example %}}
 ### Account Based Aggregation
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,11 +38,18 @@ const account = new aws.cfg.ConfigurationAggregator("account", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
 ### Organization Based Aggregation
-
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -65,10 +81,8 @@ const organizationConfigurationAggregator = new aws.cfg.ConfigurationAggregator(
     },
 }, { dependsOn: [organizationRolePolicyAttachment] });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a ConfigurationAggregator Resource {#create}

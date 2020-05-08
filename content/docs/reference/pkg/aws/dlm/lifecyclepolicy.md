@@ -12,10 +12,21 @@ meta_desc: "Explore the LifecyclePolicy resource of the dlm module, including ex
 
 Provides a [Data Lifecycle Manager (DLM) lifecycle policy](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html) for managing snapshots.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -89,10 +100,8 @@ const example = new aws.dlm.LifecyclePolicy("example", {
     state: "ENABLED",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a LifecyclePolicy Resource {#create}

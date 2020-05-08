@@ -12,10 +12,21 @@ meta_desc: "Explore the SqlInjectionMatchSet resource of the wafregional module,
 
 Provides a WAF Regional SQL Injection Match Set Resource for use with Application Load Balancer.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -29,10 +40,8 @@ const sqlInjectionMatchSet = new aws.wafregional.SqlInjectionMatchSet("sql_injec
     }],
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a SqlInjectionMatchSet Resource {#create}

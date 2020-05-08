@@ -12,10 +12,21 @@ meta_desc: "Explore the Dashboard resource of the cloudwatch module, including e
 
 Provides a CloudWatch Dashboard resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -60,10 +71,8 @@ const main = new aws.cloudwatch.Dashboard("main", {
     dashboardName: "my-dashboard",
 });
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Create a Dashboard Resource {#create}

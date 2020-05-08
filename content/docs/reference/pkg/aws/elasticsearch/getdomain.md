@@ -12,10 +12,21 @@ meta_desc: "Explore the GetDomain function of the elasticsearch module, includin
 
 Use this data source to get information about an Elasticsearch Domain
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -24,10 +35,8 @@ const myDomain = pulumi.output(aws.elasticsearch.getDomain({
     domainName: "my-domain-name",
 }, { async: true }));
 ```
-
 {{% /example %}}
 {{% /examples %}}
-
 
 
 ## Using GetDomain {#using}
