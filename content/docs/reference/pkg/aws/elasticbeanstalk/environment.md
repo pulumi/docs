@@ -17,25 +17,7 @@ the infrastructure that runs those applications.
 Environments are often things such as `development`, `integration`, or
 `production`.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const tftest = new aws.elasticbeanstalk.Application("tftest", {
-    description: "tf-test-desc",
-});
-const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
-    application: tftest.name,
-    solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Option Settings
 
 Some options can be stack-specific, check [AWS Docs](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html)
@@ -75,10 +57,43 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 });
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const tftest = new aws.elasticbeanstalk.Application("tftest", {
+    description: "tf-test-desc",
+});
+const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
+    application: tftest.name,
+    solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Environment Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1258,7 +1273,7 @@ the configuration.
 ## Look up an Existing Environment Resource {#look-up}
 
 Get an existing Environment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#EnvironmentState">EnvironmentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#Environment">Environment</a></span></code></pre></div>

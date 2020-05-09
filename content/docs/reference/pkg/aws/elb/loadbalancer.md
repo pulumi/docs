@@ -21,10 +21,33 @@ provides both a standalone ELB Attachment resource
 instances in conjunction with a ELB Attachment resources. Doing so will cause a
 conflict and will overwrite attachments.
 
+
+## Note on ECDSA Key Algorithm
+
+If the ARN of the `ssl_certificate_id` that is pointed to references a
+certificate that was signed by an ECDSA key, note that ELB only supports the
+P256 and P384 curves.  Using a certificate signed by a key using a different
+curve could produce the error `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` in your
+browser.
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -73,21 +96,13 @@ const bar = new aws.elb.LoadBalancer("bar", {
     },
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-## Note on ECDSA Key Algorithm
-
-If the ARN of the `ssl_certificate_id` that is pointed to references a
-certificate that was signed by an ECDSA key, note that ELB only supports the
-P256 and P384 curves.  Using a certificate signed by a key using a different
-curve could produce the error `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` in your
-browser.
-
 
 
 ## Create a LoadBalancer Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1115,7 +1130,7 @@ instances. Only available on ELBs launched in a VPC.
 ## Look up an Existing LoadBalancer Resource {#look-up}
 
 Get an existing LoadBalancer resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancerState">LoadBalancerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancer">LoadBalancer</a></span></code></pre></div>

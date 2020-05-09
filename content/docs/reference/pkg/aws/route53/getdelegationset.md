@@ -14,12 +14,26 @@ meta_desc: "Explore the GetDelegationSet function of the route53 module, includi
 
 This data source allows to find a list of name servers associated with a specific delegation set.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example shows how to get a delegation set from its id.
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,15 +42,14 @@ const dset = pulumi.output(aws.route53.getDelegationSet({
     id: "MQWGHCBFAKEID",
 }, { async: true }));
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetDelegationSet {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

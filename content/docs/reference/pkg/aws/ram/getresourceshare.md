@@ -12,22 +12,7 @@ meta_desc: "Explore the GetResourceShare function of the ram module, including e
 
 `aws.ram.ResourceShare` Retrieve information about a RAM Resource Share.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = pulumi.output(aws.ram.getResourceShare({
-    name: "example",
-    resourceOwner: "SELF",
-}, { async: true }));
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Search by filters
 
 ```typescript
@@ -44,11 +29,41 @@ const tagFilter = pulumi.output(aws.ram.getResourceShare({
 }, { async: true }));
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = pulumi.output(aws.ram.getResourceShare({
+    name: "example",
+    resourceOwner: "SELF",
+}, { async: true }));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetResourceShare {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

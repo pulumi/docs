@@ -13,12 +13,26 @@ meta_desc: "Explore the Stage resource of the apigatewayv2 module, including exa
 Manages an Amazon API Gateway Version 2 stage.
 More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -27,14 +41,13 @@ const example = new aws.apigatewayv2.Stage("example", {
     apiId: aws_apigatewayv2_api_example.id,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Stage Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -842,7 +855,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`
 ## Look up an Existing Stage Resource {#look-up}
 
 Get an existing Stage resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigatewayv2/#StageState">StageState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigatewayv2/#Stage">Stage</a></span></code></pre></div>

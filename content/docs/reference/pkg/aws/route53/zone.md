@@ -12,27 +12,48 @@ meta_desc: "Explore the Zone resource of the route53 module, including examples,
 
 Manages a Route53 Hosted Zone.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Public Zone
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const primary = new aws.route53.Zone("primary", {});
 ```
-
 {{% /example %}}
-{{% example %}}
+
 ### Public Subdomain Zone
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-For use in subdomains, note that you need to create a
-`aws.route53.Record` of type `NS` as well as the subdomain
-zone.
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -56,15 +77,22 @@ const dev_ns = new aws.route53.Record("dev-ns", {
     zoneId: main.zoneId,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
+
 ### Private Zone
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-> **NOTE:** This provider provides both exclusive VPC associations defined in-line in this resource via `vpc` configuration blocks and a separate [Zone VPC Association](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) resource. At this time, you cannot use in-line VPC associations in conjunction with any `aws.route53.ZoneAssociation` resources with the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to manage additional associations via the `aws.route53.ZoneAssociation` resource.
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-> **NOTE:** Private zones require at least one VPC association at all times.
+{{% example python %}}
+Coming soon!
+{{% /example %}}
 
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -75,14 +103,13 @@ const privateZone = new aws.route53.Zone("private", {
     }],
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Zone Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -658,7 +685,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 ## Look up an Existing Zone Resource {#look-up}
 
 Get an existing Zone resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#ZoneState">ZoneState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#Zone">Zone</a></span></code></pre></div>

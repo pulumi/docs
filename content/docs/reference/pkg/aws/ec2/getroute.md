@@ -16,13 +16,26 @@ This resource can prove useful when finding the resource
 associated with a CIDR. For example, finding the peering
 connection associated with a CIDR value.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example shows how one might use a CIDR value to find a network interface id
-and use this to create a data source of that network interface.
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,15 +54,14 @@ const interfaceNetworkInterface = route.apply(route => aws.ec2.getNetworkInterfa
     networkInterfaceId: route.networkInterfaceId!,
 }, { async: true }));
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetRoute {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

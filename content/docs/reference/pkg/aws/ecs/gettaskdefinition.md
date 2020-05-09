@@ -21,7 +21,7 @@ a specific AWS ECS task definition.
 
 ## Using GetTaskDefinition {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

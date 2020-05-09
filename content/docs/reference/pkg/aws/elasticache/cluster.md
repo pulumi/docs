@@ -21,12 +21,26 @@ place. You can use the `apply_immediately` flag to instruct the service to apply
 change immediately. Using `apply_immediately` can result in a brief downtime as the server reboots.
 See the AWS Docs on [Modifying an ElastiCache Cache Cluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Clusters.Modify.html) for more information.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Memcached Cluster
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -39,11 +53,22 @@ const example = new aws.elasticache.Cluster("example", {
     port: 11211,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Redis Instance
 
+### Redis Instance
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -57,13 +82,22 @@ const example = new aws.elasticache.Cluster("example", {
     port: 6379,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
+
 ### Redis Cluster Mode Disabled Read Replica Instance
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-These inherit their settings from the replication group.
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -72,14 +106,13 @@ const replica = new aws.elasticache.Cluster("replica", {
     replicationGroupId: aws_elasticache_replication_group_example.id,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Cluster Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1407,7 +1440,7 @@ Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
 ## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#Cluster">Cluster</a></span></code></pre></div>

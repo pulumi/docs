@@ -15,12 +15,26 @@ Provides details about a specific S3 bucket.
 This resource may prove useful when setting up a Route53 record, or an origin for a CloudFront
 Distribution.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Route53 Record
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,11 +55,22 @@ const example = new aws.route53.Record("example", {
     zoneId: testZone.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### CloudFront Origin
 
+### CloudFront Origin
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -60,15 +85,14 @@ const test = new aws.cloudfront.Distribution("test", {
     }],
 });
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetBucket {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -12,12 +12,26 @@ meta_desc: "Explore the GetPatchBaseline function of the ssm module, including e
 
 Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-To retrieve a baseline provided by AWS:
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,29 +42,14 @@ const centos = pulumi.output(aws.ssm.getPatchBaseline({
     owner: "AWS",
 }, { async: true }));
 ```
-
-To retrieve a baseline on your account:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const defaultCustom = pulumi.output(aws.ssm.getPatchBaseline({
-    defaultBaseline: true,
-    namePrefix: "MyCustomBaseline",
-    operatingSystem: "WINDOWS",
-    owner: "Self",
-}, { async: true }));
-```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetPatchBaseline {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

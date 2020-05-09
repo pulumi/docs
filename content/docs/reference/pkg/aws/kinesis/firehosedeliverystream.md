@@ -14,12 +14,26 @@ Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is
 
 For more details, see the [Amazon Kinesis Firehose Documentation](https://aws.amazon.com/documentation/firehose/).
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Extended S3 Destination
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -83,11 +97,22 @@ const extendedS3Stream = new aws.kinesis.FirehoseDeliveryStream("extended_s3_str
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### S3 Destination
 
+### S3 Destination
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -119,11 +144,22 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Redshift Destination
 
+### Redshift Destination
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -164,11 +200,22 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Elasticsearch Destination
 
+### Elasticsearch Destination
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -201,12 +248,22 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     },
 });
 ```
-
-
 {{% /example %}}
-{{% example %}}
-### Splunk Destination
 
+### Splunk Destination
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -229,14 +286,13 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     },
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a FirehoseDeliveryStream Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1000,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing FirehoseDeliveryStream Resource {#look-up}
 
 Get an existing FirehoseDeliveryStream resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#FirehoseDeliveryStreamState">FirehoseDeliveryStreamState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#FirehoseDeliveryStream">FirehoseDeliveryStream</a></span></code></pre></div>
