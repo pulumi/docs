@@ -25,22 +25,26 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example creates a compute cluster comprised of three hosts,
-making use of the
-[`vsphere..ComputeCluster`][tf-vsphere-compute-cluster-resource] resource. DPM
-will be disabled in the cluster as it is the default setting, but we override
-the setting of the first host referenced by the
-[`vsphere..Host`][tf-vsphere-host-data-source] data source (`esxi1`) by using
-the `vsphere..DpmHostOverride` resource so it will be powered off when the
-cluster does not need it to service virtual machines.
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-[tf-vsphere-compute-cluster-resource]: /docs/providers/vsphere/r/compute_cluster.html
-[tf-vsphere-host-data-source]: /docs/providers/vsphere/d/host.html
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -76,14 +80,13 @@ const dpmHostOverride = new vsphere.DpmHostOverride("dpm_host_override", {
     hostSystemId: hostsHost[0].id,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a DpmHostOverride Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -531,7 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DpmHostOverride Resource {#look-up}
 
 Get an existing DpmHostOverride resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DpmHostOverrideState">DpmHostOverrideState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DpmHostOverride">DpmHostOverride</a></span></code></pre></div>

@@ -17,10 +17,26 @@ that you want to use to create virtual machines in using the
 
 [docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -33,22 +49,22 @@ const pool = datacenter.apply(datacenter => vsphere.getResourcePool({
     name: "resource-pool-1",
 }, { async: true }));
 ```
-
 {{% /example %}}
-{{% example %}}
+
 ### Specifying the root resource pool for a standalone host
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-> **NOTE:** Fetching the root resource pool for a cluster can now be done
-directly via the [`vsphere..ComputeCluster`][docs-compute-cluster-data-source]
-data source.
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-[docs-compute-cluster-data-source]: /docs/providers/vsphere/d/compute_cluster.html
+{{% example python %}}
+Coming soon!
+{{% /example %}}
 
-All compute resources in vSphere (clusters, standalone hosts, and standalone
-ESXi) have a resource pool, even if one has not been explicitly created. This
-resource pool is referred to as the _root resource pool_ and can be looked up
-by specifying the path as per the example below:
-
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -58,20 +74,14 @@ const pool = vsphere_datacenter_dc.id.apply(id => vsphere.getResourcePool({
     name: "esxi1/Resources",
 }, { async: true }));
 ```
-
-For more information on the root resource pool, see [Managing Resource
-Pools][vmware-docs-resource-pools] in the vSphere documentation.
-
-[vmware-docs-resource-pools]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetResourcePool {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

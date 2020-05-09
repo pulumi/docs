@@ -15,7 +15,7 @@ meta_desc: "Explore the GetCustomAttribute function of the vSphere package, incl
 
 ## Using GetCustomAttribute {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
