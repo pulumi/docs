@@ -14,12 +14,33 @@ Volume snapshots are saved instances of a block storage volume. Use this data
 source to retrieve the ID of a DigitalOcean volume snapshot for use in other
 resources.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Get the volume snapshot:
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+snapshot = digitalocean.get_volume_snapshot(most_recent=True,
+    name_regex="^web",
+    region="nyc3")
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -30,53 +51,14 @@ const snapshot = pulumi.output(digitalocean.getVolumeSnapshot({
     region: "nyc3",
 }, { async: true }));
 ```
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-snapshot = digitalocean.get_volume_snapshot(most_recent=True,
-    name_regex="^web",
-    region="nyc3")
-```
-
-Reuse the data about a volume snapshot to create a new volume based on it:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as digitalocean from "@pulumi/digitalocean";
-
-const snapshot = digitalocean.getVolumeSnapshot({
-    nameRegex: "^web",
-    region: "nyc3",
-    mostRecent: true,
-});
-const foobar = new digitalocean.Volume("foobar", {
-    region: "nyc3",
-    size: 100,
-    snapshotId: snapshot.then(snapshot => snapshot.id),
-});
-```
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-snapshot = digitalocean.get_volume_snapshot(name_regex="^web",
-    region="nyc3",
-    most_recent=True)
-foobar = digitalocean.Volume("foobar",
-    region="nyc3",
-    size=100,
-    snapshot_id=snapshot.id)
-```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetVolumeSnapshot {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

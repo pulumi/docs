@@ -15,7 +15,7 @@ meta_desc: "Explore the GetTag function of the Digital Ocean package, including 
 
 ## Using GetTag {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

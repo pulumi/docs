@@ -15,7 +15,7 @@ meta_desc: "Explore the GetDomain function of the Digital Ocean package, includi
 
 ## Using GetDomain {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -13,10 +13,94 @@ meta_desc: "Explore the Firewall resource of the Digital Ocean package, includin
 Provides a DigitalOcean Cloud Firewall resource. This can be used to create,
 modify, and delete Firewalls.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+web_droplet = digitalocean.Droplet("webDroplet",
+    size="s-1vcpu-1gb",
+    image="ubuntu-18-04-x64",
+    region="nyc3")
+web_firewall = digitalocean.Firewall("webFirewall",
+    droplet_ids=[web_droplet.id],
+    inbound_rule=[
+        {
+            "protocol": "tcp",
+            "portRange": "22",
+            "sourceAddresses": [
+                "192.168.1.0/24",
+                "2002:1:2::/48",
+            ],
+        },
+        {
+            "protocol": "tcp",
+            "portRange": "80",
+            "sourceAddresses": [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+        {
+            "protocol": "tcp",
+            "portRange": "443",
+            "sourceAddresses": [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+        {
+            "protocol": "icmp",
+            "sourceAddresses": [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+    ],
+    outbound_rule=[
+        {
+            "protocol": "tcp",
+            "portRange": "53",
+            "destinationAddresses": [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+        {
+            "protocol": "udp",
+            "portRange": "53",
+            "destinationAddresses": [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+        {
+            "protocol": "icmp",
+            "destinationAddresses": [
+                "0.0.0.0/0",
+                "::/0",
+            ],
+        },
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -88,83 +172,13 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     ],
 });
 ```
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-web_droplet = digitalocean.Droplet("webDroplet",
-    size="s-1vcpu-1gb",
-    image="ubuntu-18-04-x64",
-    region="nyc3")
-web_firewall = digitalocean.Firewall("webFirewall",
-    droplet_ids=[web_droplet.id],
-    inbound_rule=[
-        {
-            "protocol": "tcp",
-            "portRange": "22",
-            "sourceAddresses": [
-                "192.168.1.0/24",
-                "2002:1:2::/48",
-            ],
-        },
-        {
-            "protocol": "tcp",
-            "portRange": "80",
-            "sourceAddresses": [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-        {
-            "protocol": "tcp",
-            "portRange": "443",
-            "sourceAddresses": [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-        {
-            "protocol": "icmp",
-            "sourceAddresses": [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-    ],
-    outbound_rule=[
-        {
-            "protocol": "tcp",
-            "portRange": "53",
-            "destinationAddresses": [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-        {
-            "protocol": "udp",
-            "portRange": "53",
-            "destinationAddresses": [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-        {
-            "protocol": "icmp",
-            "destinationAddresses": [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-    ])
-```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Firewall Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -768,7 +782,7 @@ This can be "waiting", "succeeded", or "failed".
 ## Look up an Existing Firewall Resource {#look-up}
 
 Get an existing Firewall resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#FirewallState">FirewallState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Firewall">Firewall</a></span></code></pre></div>

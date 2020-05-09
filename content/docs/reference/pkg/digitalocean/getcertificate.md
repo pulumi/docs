@@ -15,7 +15,7 @@ meta_desc: "Explore the GetCertificate function of the Digital Ocean package, in
 
 ## Using GetCertificate {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
