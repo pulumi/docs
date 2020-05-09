@@ -12,12 +12,26 @@ meta_desc: "Explore the GetGroup function of the GitLab package, including examp
 
 Provides details about a specific group in the gitlab provider.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-**By group's ID**
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
@@ -26,26 +40,14 @@ const foo = pulumi.output(gitlab.getGroup({
     groupId: 123,
 }, { async: true }));
 ```
-
-**By group's full path**
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gitlab from "@pulumi/gitlab";
-
-const foo = pulumi.output(gitlab.getGroup({
-    fullPath: "foo/bar",
-}, { async: true }));
-```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetGroup {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
