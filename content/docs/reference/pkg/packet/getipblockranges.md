@@ -23,7 +23,7 @@ The datasource has 4 list attributes: `global_ipv4`, `public_ipv4`, `private_ipv
 
 ## Using GetIpBlockRanges {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
