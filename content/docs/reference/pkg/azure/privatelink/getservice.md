@@ -21,7 +21,7 @@ Use this data source to access information about an existing Private Link Servic
 
 ## Using GetService {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

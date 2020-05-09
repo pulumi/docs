@@ -19,7 +19,7 @@ Uses this data source to access information about an existing Managed Applicatio
 
 ## Using GetDefinition {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -19,7 +19,7 @@ Deprecated: azure.core.getUserAssignedIdentity has been deprecated in favour of 
 
 ## Using GetUserAssignedIdentity {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

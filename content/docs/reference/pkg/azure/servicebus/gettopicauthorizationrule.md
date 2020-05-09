@@ -12,10 +12,26 @@ meta_desc: "Explore the GetTopicAuthorizationRule function of the servicebus mod
 
 Use this data source to access information about a ServiceBus Topic Authorization Rule within a ServiceBus Topic.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -29,15 +45,14 @@ const example = pulumi.output(azure.servicebus.getTopicAuthorizationRule({
 
 export const servicebusAuthorizationRuleId = azurem_servicebus_topic_authorization_rule_example.id;
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetTopicAuthorizationRule {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

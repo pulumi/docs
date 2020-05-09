@@ -19,7 +19,7 @@ Use this data source to access information about all the Subscriptions currently
 
 ## Using GetSubscriptions {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
