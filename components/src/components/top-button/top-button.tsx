@@ -1,31 +1,34 @@
-import { Component, Listen, Prop, h } from '@stencil/core';
+import { Component, Listen, State, h } from '@stencil/core';
 
 // Scroll to top button.
 @Component({
-  tag: 'pulumi-top-button',
-  styleUrl: 'top-button.scss',
+  tag: "pulumi-top-button",
+  styleUrl: "top-button.scss",
   shadow: false
 })
-
 export class TopButton {
 
-  @Prop({ mutable: true })
-  scrollPostion: number;
+  @State()
+  visible: boolean;
 
-  @Listen('scroll', { target: 'window' })
+  @Listen("scroll", { target: "window" })
   handleScroll() {
-    this.scrollPostion = window.scrollY;
+    this.visible = window.scrollY > 2500;
   }
 
   componentWillRender() {
-    this.scrollPostion = window.scrollY;
+    this.visible = window.scrollY > 2500;
   }
 
   render() {
     return (
       <div>
-          <a class="top-button fas fa-chevron-up" title="Scroll to top" style={{display: this.scrollPostion < 2500 ? "none" : ""}}></a>
+          <a class="top-button fas fa-chevron-up" title="Scroll to top" onClick={this.onClick} style={{display: this.visible ? "" : "none"}}></a>
       </div>
     );
+  }
+
+  onClick() {
+    window.scrollTo(0, 0)
   }
 }

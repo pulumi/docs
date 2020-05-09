@@ -37,9 +37,7 @@ export namespace Components {
   interface PulumiExample {}
   interface PulumiExamples {}
   interface PulumiRoot {}
-  interface PulumiTopButton {
-    'scrollPostion': number;
-  }
+  interface PulumiTopButton {}
 }
 
 declare global {
@@ -110,9 +108,7 @@ declare namespace LocalJSX {
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;
   }
-  interface PulumiTopButton {
-    'scrollPostion'?: number;
-  }
+  interface PulumiTopButton {}
 
   interface IntrinsicElements {
     'pulumi-choosable': PulumiChoosable;
