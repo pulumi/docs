@@ -21,7 +21,7 @@ Use this data source to get a list of dimension values matching the provided que
 
 ## Using GetDimensionValues {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
