@@ -12,26 +12,7 @@ meta_desc: "Explore the Cluster resource of the containerinfra module, including
 
 Manages a V1 Magnum cluster resource within OpenStack.
 
-{{% examples %}}
-## Example Usage
 
-{{% example %}}
-### Create a Cluster
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as openstack from "@pulumi/openstack";
-
-const cluster1 = new openstack.containerinfra.Cluster("cluster_1", {
-    clusterTemplateId: "b9a45c5c-cd03-4958-82aa-b80bf93cb922",
-    keypair: "ssh_keypair",
-    masterCount: 3,
-    nodeCount: 5,
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Argument reference
 
 The following arguments are supported:
@@ -124,10 +105,42 @@ The following attributes are exported:
   * `client_key` - The client's RSA key
   * `client_certificate` - The client's certificate
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a Cluster
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const cluster1 = new openstack.containerinfra.Cluster("cluster_1", {
+    clusterTemplateId: "b9a45c5c-cd03-4958-82aa-b80bf93cb922",
+    keypair: "ssh_keypair",
+    masterCount: 3,
+    nodeCount: 5,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1211,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/containerinfra/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/containerinfra/#Cluster">Cluster</a></span></code></pre></div>

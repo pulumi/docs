@@ -13,12 +13,26 @@ meta_desc: "Explore the VolumeAttach resource of the compute module, including e
 Attaches a Block Storage Volume to an Instance using the OpenStack
 Compute (Nova) v2 API.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic attachment of a single volume to a single instance
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -34,11 +48,22 @@ const va1 = new openstack.compute.VolumeAttach("va_1", {
     volumeId: volume1.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Attaching multiple volumes to a single instance
 
+### Attaching multiple volumes to a single instance
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -62,46 +87,22 @@ for (let i = 0; i < 2; i++) {
 
 export const volumeDevices = attachments.map(v => v.device);
 ```
-
-Note that the above example will not guarantee that the volumes are attached in
-a deterministic manner. The volumes will be attached in a seemingly random
-order.
-
-If you want to ensure that the volumes are attached in a given order, create
-explicit dependencies between the volumes, such as:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as openstack from "@pulumi/openstack";
-
-const volumes: openstack.blockstorage.VolumeV2[] = [];
-for (let i = 0; i < 2; i++) {
-    volumes.push(new openstack.blockstorage.VolumeV2(`volumes-${i}`, {
-        size: 1,
-    }));
-}
-const instance1 = new openstack.compute.Instance("instance_1", {
-    securityGroups: ["default"],
-});
-const attach1 = new openstack.compute.VolumeAttach("attach_1", {
-    instanceId: instance1.id,
-    volumeId: volumes[0].id,
-});
-const attach2 = new openstack.compute.VolumeAttach("attach_2", {
-    instanceId: instance1.id,
-    volumeId: volumes[1].id,
-}, { dependsOn: [attach1] });
-
-export const volumeDevices = openstack_compute_volume_attach_v2_attachments.map(v => v.device);
-```
-
 {{% /example %}}
-{{% example %}}
+
 ### Using Multiattach-enabled volumes
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-Multiattach Volumes are dependent upon your OpenStack cloud and not all
-clouds support multiattach.
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -127,17 +128,13 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
     volumeId: openstack_blockstorage_volume_v2_volume_1.id,
 }, { dependsOn: [va1] });
 ```
-
-It is recommended to use `depends_on` for the attach resources
-to enforce the volume attachments to happen one at a time.
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a VolumeAttach Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -621,7 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing VolumeAttach Resource {#look-up}
 
 Get an existing VolumeAttach resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#VolumeAttachState">VolumeAttachState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#VolumeAttach">VolumeAttach</a></span></code></pre></div>
