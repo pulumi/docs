@@ -12,12 +12,26 @@ meta_desc: "Explore the GetRelease function of the GitHub package, including exa
 
 Use this data source to retrieve information about a GitHub release in a specific repository.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
-To retrieve the latest release that is present in a repository:
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
@@ -28,43 +42,14 @@ const example = pulumi.output(github.getRelease({
     retrieveBy: "latest",
 }, { async: true }));
 ```
-
-To retrieve a specific release from a repository based on it's ID:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as github from "@pulumi/github";
-
-const example = pulumi.output(github.getRelease({
-    id: 12345,
-    owner: "example-owner",
-    repository: "example-repository",
-    retrieveBy: "id",
-}, { async: true }));
-```
-
-Finally, to retrieve a release based on it's tag:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as github from "@pulumi/github";
-
-const example = pulumi.output(github.getRelease({
-    owner: "example-owner",
-    releaseTag: "v1.0.0",
-    repository: "example-repository",
-    retrieveBy: "tag",
-}, { async: true }));
-```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetRelease {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
