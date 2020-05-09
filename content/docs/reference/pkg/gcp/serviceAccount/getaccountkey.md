@@ -20,7 +20,7 @@ Get service account public key. For more information, see [the official document
 
 ## Using GetAccountKey {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

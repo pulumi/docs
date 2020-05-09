@@ -17,7 +17,7 @@ See more about [regions and zones](https://cloud.google.com/compute/docs/regions
 
 ## Using GetRegions {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

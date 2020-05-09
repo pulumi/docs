@@ -20,7 +20,7 @@ the official [API](https://cloud.google.com/compute/docs/reference/latest/global
 
 ## Using GetGlobalAddress {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

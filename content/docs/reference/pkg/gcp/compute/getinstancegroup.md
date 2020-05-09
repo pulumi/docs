@@ -28,7 +28,7 @@ const all = pulumi.output(gcp.compute.getInstanceGroup({
 
 ## Using GetInstanceGroup {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

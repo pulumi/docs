@@ -20,7 +20,7 @@ Get information about a Google Compute Image. Check that your service account ha
 
 ## Using GetImage {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
