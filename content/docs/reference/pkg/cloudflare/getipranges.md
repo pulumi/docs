@@ -19,7 +19,7 @@ Use this data source to get the [IP ranges](https://www.cloudflare.com/ips/) of 
 
 ## Using GetIpRanges {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

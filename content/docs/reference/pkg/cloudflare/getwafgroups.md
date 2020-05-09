@@ -19,7 +19,7 @@ Use this data source to look up [WAF Rule Groups](https://api.cloudflare.com/#wa
 
 ## Using GetWafGroups {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
