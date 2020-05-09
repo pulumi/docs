@@ -16,10 +16,26 @@ Depending of the availability, there are 2 types of Rancher v2 docker registries
 - Project registry: Available to all namespaces in the `project_id`
 - Namespaced registry: Available to just `namespace_id` in the `project_id`
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -30,27 +46,14 @@ const foo = pulumi.output(rancher2.getRegistry({
     projectId: "<project_id>",
 }, { async: true }));
 ```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as rancher2 from "@pulumi/rancher2";
-
-// Retrieve a rancher2 Namespaced Registry
-const foo = pulumi.output(rancher2.getRegistry({
-    name: "<name>",
-    namespaceId: "<namespace_id>",
-    projectId: "<project_id>",
-}, { async: true }));
-```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetRegistry {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

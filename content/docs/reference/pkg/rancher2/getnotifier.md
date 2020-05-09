@@ -12,10 +12,26 @@ meta_desc: "Explore the GetNotifier function of the Rancher 2 package, including
 
 Use this data source to retrieve information about a Rancher v2 notifier.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -25,15 +41,14 @@ const foo = pulumi.output(rancher2.getNotifier({
     name: "foo",
 }, { async: true }));
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetNotifier {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

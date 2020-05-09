@@ -12,10 +12,28 @@ meta_desc: "Explore the GetRoleTempalte function of the Rancher 2 package, inclu
 
 Use this data source to retrieve information about a Rancher v2 role template resource.
 
+
+
+Deprecated: rancher2.getRoleTempalte has been deprecated in favour of rancher2.getRoleTemplate
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -24,18 +42,15 @@ const foo = pulumi.output(rancher2.getRoleTemplate({
     name: "foo",
 }, { async: true }));
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-
-Deprecated: rancher2.getRoleTempalte has been deprecated in favour of rancher2.getRoleTemplate
-
 <p class="resource-deprecated">Deprecated: {{% md %}}rancher2.getRoleTempalte has been deprecated in favour of rancher2.getRoleTemplate{{% /md %}}</p>
 
 
 ## Using GetRoleTempalte {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

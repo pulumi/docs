@@ -15,7 +15,7 @@ meta_desc: "Explore the GetClusterScan function of the Rancher 2 package, includ
 
 ## Using GetClusterScan {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
