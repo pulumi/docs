@@ -15,7 +15,7 @@ meta_desc: "Explore the GetPlugin function of the plugins module, including exam
 
 ## Using GetPlugin {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

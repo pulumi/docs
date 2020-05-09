@@ -15,7 +15,7 @@ meta_desc: "Explore the GetKeyTransaction function of the New Relic package, inc
 
 ## Using GetKeyTransaction {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -15,7 +15,7 @@ meta_desc: "Explore the GetPluginComponent function of the plugins module, inclu
 
 ## Using GetPluginComponent {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
