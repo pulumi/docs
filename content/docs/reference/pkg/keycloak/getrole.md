@@ -60,7 +60,7 @@ In addition to the arguments listed above, the following computed attributes are
 
 ## Using GetRole {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

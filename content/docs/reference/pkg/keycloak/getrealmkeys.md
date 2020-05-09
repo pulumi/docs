@@ -32,7 +32,7 @@ The following arguments are supported:
 
 ## Using GetRealmKeys {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

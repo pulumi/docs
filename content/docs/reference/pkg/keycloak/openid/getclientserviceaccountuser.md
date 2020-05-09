@@ -15,7 +15,7 @@ meta_desc: "Explore the GetClientServiceAccountUser function of the openid modul
 
 ## Using GetClientServiceAccountUser {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
