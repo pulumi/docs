@@ -12,104 +12,7 @@ meta_desc: "Explore the Elastigroup resource of the gcp module, including exampl
 
 Provides a Spotinst elastigroup GCP resource.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as spotinst from "@pulumi/spotinst";
-
-const example = new spotinst.gcp.Elastigroup("example", {
-    availabilityZones: [
-        "asia-east1-c",
-        "us-central1-a",
-    ],
-    backendServicesConfig: [{
-        ports: [{
-            portName: "port-name",
-            ports: [
-                8000,
-                6000,
-            ],
-        }],
-        serviceName: "spotinst-elb-backend-service",
-    }],
-    description: "spotinst gcp group",
-    desiredCapacity: 1,
-    disks: [{
-        autoDelete: true,
-        boot: true,
-        deviceName: "device",
-        initializeParams: [{
-            diskSizeGb: 10,
-            diskType: "pd-standard",
-            sourceImage: "",
-        }],
-        interface: "SCSI",
-        mode: "READ_WRITE",
-        type: "PERSISTENT",
-    }],
-    drainingTimeout: 180,
-    // on_demand_count      = 2
-    fallbackToOndemand: true,
-    instanceTypesCustoms: [{
-        memoryGiB: 7.5,
-        vCPU: 2,
-    }],
-    instanceTypesOndemand: ["n1-standard-1"],
-    instanceTypesPreemptibles: [
-        "n1-standard-1",
-        "n1-standard-2",
-    ],
-    labels: [{
-        key: "test_key",
-        value: "test_value",
-    }],
-    maxSize: 1,
-    minSize: 0,
-    networkInterfaces: [{
-        network: "spot-network",
-    }],
-    preemptiblePercentage: 50,
-    scaling: [{
-        up: [{
-            action: [{
-                adjustment: 1,
-                type: "adjustment",
-            }],
-            cooldown: 300,
-            dimensions: [{
-                name: "storage_type",
-                value: "pd-ssd",
-            }],
-            evaluationPeriods: 1,
-            metricName: "instance/disk/read_ops_count",
-            namespace: "compute",
-            operator: "gte",
-            period: 300,
-            policyName: "scale_up_1",
-            source: "stackdriver",
-            statistic: "average",
-            threshold: 10000,
-            unit: "percent",
-        }],
-    }],
-    serviceAccount: "example@myProject.iam.gservicecct.com",
-    startupScript: "",
-    subnets: [{
-        region: "asia-east1",
-        subnetNames: "",
-    }],
-    tags: [
-        "http",
-        "https",
-    ],
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## GPU
 
 * `gpu` - (Optional) Defines the GPU configuration.
@@ -239,10 +142,122 @@ Usage:
 import * as pulumi from "@pulumi/pulumi";
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const example = new spotinst.gcp.Elastigroup("example", {
+    availabilityZones: [
+        "asia-east1-c",
+        "us-central1-a",
+    ],
+    backendServicesConfig: [{
+        ports: [{
+            portName: "port-name",
+            ports: [
+                8000,
+                6000,
+            ],
+        }],
+        serviceName: "spotinst-elb-backend-service",
+    }],
+    description: "spotinst gcp group",
+    desiredCapacity: 1,
+    disks: [{
+        autoDelete: true,
+        boot: true,
+        deviceName: "device",
+        initializeParams: [{
+            diskSizeGb: 10,
+            diskType: "pd-standard",
+            sourceImage: "",
+        }],
+        interface: "SCSI",
+        mode: "READ_WRITE",
+        type: "PERSISTENT",
+    }],
+    drainingTimeout: 180,
+    // on_demand_count      = 2
+    fallbackToOndemand: true,
+    instanceTypesCustoms: [{
+        memoryGiB: 7.5,
+        vCPU: 2,
+    }],
+    instanceTypesOndemand: ["n1-standard-1"],
+    instanceTypesPreemptibles: [
+        "n1-standard-1",
+        "n1-standard-2",
+    ],
+    labels: [{
+        key: "test_key",
+        value: "test_value",
+    }],
+    maxSize: 1,
+    minSize: 0,
+    networkInterfaces: [{
+        network: "spot-network",
+    }],
+    preemptiblePercentage: 50,
+    scaling: [{
+        up: [{
+            action: [{
+                adjustment: 1,
+                type: "adjustment",
+            }],
+            cooldown: 300,
+            dimensions: [{
+                name: "storage_type",
+                value: "pd-ssd",
+            }],
+            evaluationPeriods: 1,
+            metricName: "instance/disk/read_ops_count",
+            namespace: "compute",
+            operator: "gte",
+            period: 300,
+            policyName: "scale_up_1",
+            source: "stackdriver",
+            statistic: "average",
+            threshold: 10000,
+            unit: "percent",
+        }],
+    }],
+    serviceAccount: "example@myProject.iam.gservicecct.com",
+    startupScript: "",
+    subnets: [{
+        region: "asia-east1",
+        subnetNames: "",
+    }],
+    tags: [
+        "http",
+        "https",
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Elastigroup Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1690,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Elastigroup Resource {#look-up}
 
 Get an existing Elastigroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gcp/#ElastigroupState">ElastigroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gcp/#Elastigroup">Elastigroup</a></span></code></pre></div>
