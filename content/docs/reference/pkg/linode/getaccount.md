@@ -14,21 +14,7 @@ Provides information about a Linode account.
 
 This data source should not be used in conjuction with the `LINODE_DEBUG` option.  See the [debugging notes](https://www.terraform.io/docs/providers/linode/index.html#debugging) for more details.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-The following example shows how one might use this data source to access account details.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const account = pulumi.output(linode.getAccount({ async: true }));
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Attributes
 
 The Linode Account resource exports the following attributes:
@@ -57,11 +43,38 @@ The Linode Account resource exports the following attributes:
 
 * `balance` - This Account's balance, in US dollars.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const account = pulumi.output(linode.getAccount({ async: true }));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAccount {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

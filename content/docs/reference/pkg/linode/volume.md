@@ -14,12 +14,33 @@ Provides a Linode Volume resource.  This can be used to create, modify, and dele
 
 For more information, see [How to Use Block Storage with Your Linode](https://www.linode.com/docs/platform/block-storage/how-to-use-block-storage-with-your-linode/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createVolume).
 
+
+## Attributes
+
+This resource exports the following attributes:
+
+* `status` - The label of the Linode Volume.
+
+* `filesystem_path` - The full filesystem path for the Volume based on the Volume's label. The path is "/dev/disk/by-id/scsi-0Linode_Volume_" + the Volume label
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example shows how one might use this resource to configure a Block Storage Volume attached to a Linode Instance.
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -36,42 +57,13 @@ const foobar = new linode.Volume("foobar", {
     region: foobaz.region,
 });
 ```
-
-Volumes can also be attached using the Linode Instance config device map.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const foo = new linode.Instance("foo", {
-    configs: [{
-        devices: {
-            sda: {
-                volumeId: 123,
-            },
-        },
-        kernel: "linode/latest-64bit",
-        label: "boot-existing-volume",
-    }],
-    region: "us-east",
-    type: "g6-nanode-1",
-});
-```
-
 {{% /example %}}
+
 {{% /examples %}}
-## Attributes
-
-This resource exports the following attributes:
-
-* `status` - The label of the Linode Volume.
-
-* `filesystem_path` - The full filesystem path for the Volume based on the Volume's label. The path is "/dev/disk/by-id/scsi-0Linode_Volume_" + the Volume label
-
 
 
 ## Create a Volume Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -611,7 +603,7 @@ Volume label.
 ## Look up an Existing Volume Resource {#look-up}
 
 Get an existing Volume resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#VolumeState">VolumeState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#Volume">Volume</a></span></code></pre></div>
