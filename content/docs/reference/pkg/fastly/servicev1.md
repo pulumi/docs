@@ -18,158 +18,50 @@ The Service resource requires a domain name that is correctly set up to direct
 traffic to the Fastly service. See Fastly's guide on [Adding CNAME Records][fastly-cname]
 on their documentation site for guidance.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic usage:
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as fastly from "@pulumi/fastly";
-
-const demo = new fastly.Servicev1("demo", {
-    backends: [{
-        address: "127.0.0.1",
-        name: "localhost",
-        port: 80,
-    }],
-    domains: [{
-        comment: "demo",
-        name: "demo.notexample.com",
-    }],
-    forceDestroy: true,
-});
-```
-
-Basic usage with an Amazon S3 Website and that removes the `x-amz-request-id` header:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as fastly from "@pulumi/fastly";
-
-const website = new aws.s3.Bucket("website", {
-    acl: "public-read",
-    website: {
-        errorDocument: "error.html",
-        indexDocument: "index.html",
-    },
-});
-const demo = new fastly.Servicev1("demo", {
-    backends: [{
-        address: "demo.notexample.com.s3-website-us-west-2.amazonaws.com",
-        name: "AWS S3 hosting",
-        port: 80,
-    }],
-    defaultHost: pulumi.interpolate`${website.name}.s3-website-us-west-2.amazonaws.com`,
-    domains: [{
-        comment: "demo",
-        name: "demo.notexample.com",
-    }],
-    forceDestroy: true,
-    gzips: [{
-        contentTypes: [
-            "text/html",
-            "text/css",
-        ],
-        extensions: [
-            "css",
-            "js",
-        ],
-        name: "file extensions and content types",
-    }],
-    headers: [{
-        action: "delete",
-        destination: "http.x-amz-request-id",
-        name: "remove x-amz-request-id",
-        type: "cache",
-    }],
-});
-```
-
-Basic usage with [custom
-VCL](https://docs.fastly.com/guides/vcl/uploading-custom-vcl) (must be
-enabled on your Fastly account):
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as fastly from "@pulumi/fastly";
-import * as fs from "fs";
-
-const demo = new fastly.Servicev1("demo", {
-    backends: [{
-        address: "127.0.0.1",
-        name: "localhost",
-        port: 80,
-    }],
-    domains: [{
-        comment: "demo",
-        name: "demo.notexample.com",
-    }],
-    forceDestroy: true,
-    vcls: [
-        {
-            content: fs.readFileSync(`./my_custom_main.vcl`, "utf-8"),
-            main: true,
-            name: "my_custom_main_vcl",
-        },
-        {
-            content: fs.readFileSync(`./my_custom_library.vcl`, "utf-8"),
-            name: "my_custom_library_vcl",
-        },
-    ],
-});
-```
-
-Basic usage with [custom Director](https://docs.fastly.com/api/config#director):
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as fastly from "@pulumi/fastly";
-
-const demo = new fastly.Servicev1("demo", {
-    backends: [
-        {
-            address: "127.0.0.1",
-            name: "origin1",
-            port: 80,
-        },
-        {
-            address: "127.0.0.2",
-            name: "origin2",
-            port: 80,
-        },
-    ],
-    directors: [{
-        backends: [
-            "origin1",
-            "origin2",
-        ],
-        name: "mydirector",
-        quorum: 0,
-        type: 3,
-    }],
-    domains: [{
-        comment: "demo",
-        name: "demo.notexample.com",
-    }],
-    forceDestroy: true,
-});
-```
-
-> **Note:** For an AWS S3 Bucket, the Backend address is
-`<domain>.s3-website-<region>.amazonaws.com`. The `default_host` attribute
-should be set to `<bucket_name>.s3-website-<region>.amazonaws.com`. See the
-Fastly documentation on [Amazon S3][fastly-s3].
-
+{{% example csharp %}}
+Coming soon!
 {{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fastly from "@pulumi/fastly";
+
+const demo = new fastly.Servicev1("demo", {
+    backends: [{
+        address: "127.0.0.1",
+        name: "localhost",
+        port: 80,
+    }],
+    domains: [{
+        comment: "demo",
+        name: "demo.notexample.com",
+    }],
+    forceDestroy: true,
+});
+```
+{{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Servicev1 Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1757,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Servicev1 Resource {#look-up}
 
 Get an existing Servicev1 resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/fastly/#Servicev1State">Servicev1State</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/fastly/#Servicev1">Servicev1</a></span></code></pre></div>
