@@ -59,7 +59,7 @@ export class Root {
                 .slice(-1)
                 .find(lang => ["typescript", "javascript", "csharp", "go", "python"].includes(lang));
             if (language) {
-                this.setLanguage(language[0] as LanguageKey);
+                this.setLanguage(language as LanguageKey);
             }
         }
     }
