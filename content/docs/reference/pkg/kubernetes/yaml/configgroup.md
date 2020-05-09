@@ -28,7 +28,7 @@ ConfigGroup creates a set of Kubernetes resources from Kubernetes YAML text. The
 
 
 ## Create a ConfigGroup Resource {#create}
-{{< chooser language "javascript,typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

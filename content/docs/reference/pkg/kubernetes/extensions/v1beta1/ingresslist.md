@@ -14,7 +14,7 @@ IngressList is a collection of Ingress.
 
 
 ## Create a IngressList Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -381,8 +381,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ingressbackend">Ingress<wbr>Backend<wbr>Args</a></span>
@@ -422,8 +422,8 @@ Implementations are required to support all path types. Defaults to Implementati
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ingressbackend">Ingress<wbr>Backend</a></span>
@@ -463,8 +463,8 @@ Implementations are required to support all path types. Defaults to Implementati
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ingressbackend">Ingress<wbr>Backend</a></span>
@@ -504,8 +504,8 @@ Implementations are required to support all path types. Defaults to Implementati
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ingressbackend">Dict[Ingress<wbr>Backend]</a></span>
@@ -560,8 +560,8 @@ Implementations are required to support all path types. Defaults to Implementati
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Paths</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpingresspath">List&lt;HTTPIngress<wbr>Path<wbr>Args&gt;</a></span>
@@ -575,8 +575,8 @@ Implementations are required to support all path types. Defaults to Implementati
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Paths</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpingresspath">[]HTTPIngress<wbr>Path</a></span>
@@ -590,8 +590,8 @@ Implementations are required to support all path types. Defaults to Implementati
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>paths</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpingresspath">HTTPIngress<wbr>Path[]</a></span>
@@ -605,8 +605,8 @@ Implementations are required to support all path types. Defaults to Implementati
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>paths</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpingresspath">List[HTTPIngress<wbr>Path]</a></span>
@@ -774,6 +774,22 @@ Implementations are required to support all path types. Defaults to Implementati
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the referenced service.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;double, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies the port of the referenced service.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Resource</span>
@@ -782,28 +798,28 @@ Implementations are required to support all path types. Defaults to Implementati
     </dt>
     <dd>{{% md %}}Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Service<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the referenced service.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Service<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;double, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Specifies the port of the referenced service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the referenced service.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specifies the port of the referenced service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -813,28 +829,28 @@ Implementations are required to support all path types. Defaults to Implementati
     </dt>
     <dd>{{% md %}}Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Service<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the referenced service.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Service<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Specifies the port of the referenced service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>service<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the referenced service.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>service<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number | string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the port of the referenced service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -844,28 +860,28 @@ Implementations are required to support all path types. Defaults to Implementati
     </dt>
     <dd>{{% md %}}Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>service<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the referenced service.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>service<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number | string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the port of the referenced service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>service_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the referenced service.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>service_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number | string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the port of the referenced service.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -874,22 +890,6 @@ Implementations are required to support all path types. Defaults to Implementati
         <span class="property-type"><a href="#typedlocalobjectreference">Dict[Typed<wbr>Local<wbr>Object<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>service_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the referenced service.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>service_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number | string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the port of the referenced service.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1774,7 +1774,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -1821,7 +1821,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -1868,7 +1868,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -1915,7 +1915,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>fields_<wbr>v1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -2584,6 +2584,22 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Uid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
@@ -2599,22 +2615,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Uid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2623,6 +2623,22 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Uid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
@@ -2639,28 +2655,28 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Uid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>uid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2678,28 +2694,28 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>uid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>uid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2716,22 +2732,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>uid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2755,6 +2755,14 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name is the name of resource being referenced{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Api<wbr>Group</span>
@@ -2762,14 +2770,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name is the name of resource being referenced{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2778,6 +2778,14 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name is the name of resource being referenced{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Api<wbr>Group</span>
@@ -2786,20 +2794,20 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name is the name of resource being referenced{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name is the name of resource being referenced{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2809,20 +2817,20 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name is the name of resource being referenced{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name is the name of resource being referenced{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2831,14 +2839,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Name is the name of resource being referenced{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

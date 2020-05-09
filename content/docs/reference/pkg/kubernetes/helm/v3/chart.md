@@ -15,7 +15,7 @@ ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `
 
 
 ## Create a Chart Resource {#create}
-{{< chooser language "javascript,typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

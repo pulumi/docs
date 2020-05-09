@@ -14,7 +14,7 @@ SelfSubjectRulesReview enumerates the set of actions the current user can perfor
 
 
 ## Create a SelfSubjectRulesReview Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -425,7 +425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span>Fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -472,7 +472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span>Fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -519,7 +519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span>fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -566,7 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span>fields_<wbr>v1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -616,6 +616,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Verbs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Non<wbr>Resource<wbr>URLs</span>
@@ -623,14 +631,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  "*" means all.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Verbs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -639,6 +639,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Verbs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Non<wbr>Resource<wbr>URLs</span>
@@ -647,20 +655,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  "*" means all.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Verbs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>verbs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -670,20 +678,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  "*" means all.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>verbs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>verbs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -692,14 +700,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  "*" means all.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>verbs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  "*" means all.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1342,6 +1342,22 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Uid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
@@ -1357,22 +1373,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Uid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1381,6 +1381,22 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Uid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
@@ -1397,28 +1413,28 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Uid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>uid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1436,28 +1452,28 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>uid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>uid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1474,22 +1490,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>uid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1513,6 +1513,14 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Verbs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Api<wbr>Groups</span>
@@ -1537,14 +1545,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}Resources is a list of resources this rule applies to.  "*" means all in the specified apiGroups.
  "*/foo" represents the subresource 'foo' for all resources in the specified apiGroups.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Verbs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1553,6 +1553,14 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Verbs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Api<wbr>Groups</span>
@@ -1578,20 +1586,20 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     <dd>{{% md %}}Resources is a list of resources this rule applies to.  "*" means all in the specified apiGroups.
  "*/foo" represents the subresource 'foo' for all resources in the specified apiGroups.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Verbs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>verbs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1618,20 +1626,20 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     <dd>{{% md %}}Resources is a list of resources this rule applies to.  "*" means all in the specified apiGroups.
  "*/foo" represents the subresource 'foo' for all resources in the specified apiGroups.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>verbs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>verbs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1657,14 +1665,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}Resources is a list of resources this rule applies to.  "*" means all in the specified apiGroups.
  "*/foo" represents the subresource 'foo' for all resources in the specified apiGroups.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>verbs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1763,6 +1763,30 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Incomplete</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Incomplete is true when the rules returned by this call are incomplete. This is most commonly encountered when an authorizer, such as an external authorizer, doesn't support rules evaluation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Non<wbr>Resource<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nonresourcerule">List&lt;Non<wbr>Resource<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}NonResourceRules is the list of actions the subject is allowed to perform on non-resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcerule">List&lt;Resource<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}ResourceRules is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Evaluation<wbr>Error</span>
@@ -1771,36 +1795,36 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}EvaluationError can appear in combination with Rules. It indicates an error occurred during rule evaluation, such as an authorizer that doesn't support rule evaluation, and that ResourceRules and/or NonResourceRules may be incomplete.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Incomplete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Incomplete is true when the rules returned by this call are incomplete. This is most commonly encountered when an authorizer, such as an external authorizer, doesn't support rules evaluation.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Non<wbr>Resource<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonresourcerule">List&lt;Non<wbr>Resource<wbr>Rule<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}NonResourceRules is the list of actions the subject is allowed to perform on non-resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Resource<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerule">List&lt;Resource<wbr>Rule<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}ResourceRules is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Incomplete</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Incomplete is true when the rules returned by this call are incomplete. This is most commonly encountered when an authorizer, such as an external authorizer, doesn't support rules evaluation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Non<wbr>Resource<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nonresourcerule">[]Non<wbr>Resource<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}NonResourceRules is the list of actions the subject is allowed to perform on non-resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcerule">[]Resource<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}ResourceRules is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1810,36 +1834,36 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}EvaluationError can appear in combination with Rules. It indicates an error occurred during rule evaluation, such as an authorizer that doesn't support rule evaluation, and that ResourceRules and/or NonResourceRules may be incomplete.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Incomplete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Incomplete is true when the rules returned by this call are incomplete. This is most commonly encountered when an authorizer, such as an external authorizer, doesn't support rules evaluation.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Non<wbr>Resource<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonresourcerule">[]Non<wbr>Resource<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}NonResourceRules is the list of actions the subject is allowed to perform on non-resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Resource<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerule">[]Resource<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}ResourceRules is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>incomplete</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Incomplete is true when the rules returned by this call are incomplete. This is most commonly encountered when an authorizer, such as an external authorizer, doesn't support rules evaluation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>non<wbr>Resource<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nonresourcerule">Non<wbr>Resource<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}NonResourceRules is the list of actions the subject is allowed to perform on non-resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcerule">Resource<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}ResourceRules is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1849,36 +1873,36 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}EvaluationError can appear in combination with Rules. It indicates an error occurred during rule evaluation, such as an authorizer that doesn't support rule evaluation, and that ResourceRules and/or NonResourceRules may be incomplete.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>incomplete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Incomplete is true when the rules returned by this call are incomplete. This is most commonly encountered when an authorizer, such as an external authorizer, doesn't support rules evaluation.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>non<wbr>Resource<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonresourcerule">Non<wbr>Resource<wbr>Rule[]</a></span>
-    </dt>
-    <dd>{{% md %}}NonResourceRules is the list of actions the subject is allowed to perform on non-resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>resource<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerule">Resource<wbr>Rule[]</a></span>
-    </dt>
-    <dd>{{% md %}}ResourceRules is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>incomplete</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Incomplete is true when the rules returned by this call are incomplete. This is most commonly encountered when an authorizer, such as an external authorizer, doesn't support rules evaluation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>non_<wbr>resource_<wbr>rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nonresourcerule">List[Non<wbr>Resource<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}NonResourceRules is the list of actions the subject is allowed to perform on non-resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcerule">List[Resource<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}ResourceRules is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1887,30 +1911,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}EvaluationError can appear in combination with Rules. It indicates an error occurred during rule evaluation, such as an authorizer that doesn't support rule evaluation, and that ResourceRules and/or NonResourceRules may be incomplete.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>incomplete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Incomplete is true when the rules returned by this call are incomplete. This is most commonly encountered when an authorizer, such as an external authorizer, doesn't support rules evaluation.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>non_<wbr>resource_<wbr>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonresourcerule">List[Non<wbr>Resource<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}NonResourceRules is the list of actions the subject is allowed to perform on non-resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>resource_<wbr>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerule">List[Resource<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}ResourceRules is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
