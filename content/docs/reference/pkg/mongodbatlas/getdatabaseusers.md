@@ -23,7 +23,7 @@ Each user has a set of roles that provide access to the project’s databases. U
 
 ## Using GetDatabaseUsers {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

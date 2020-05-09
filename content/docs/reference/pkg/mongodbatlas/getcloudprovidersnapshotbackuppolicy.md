@@ -21,7 +21,7 @@ meta_desc: "Explore the GetCloudProviderSnapshotBackupPolicy function of the mon
 
 ## Using GetCloudProviderSnapshotBackupPolicy {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

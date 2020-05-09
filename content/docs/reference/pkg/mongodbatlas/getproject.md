@@ -14,11 +14,26 @@ meta_desc: "Explore the GetProject function of the mongodbatlas package, includi
 
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Using project_id attribute to query
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
@@ -43,10 +58,22 @@ const testProject = testMongodbatlasProject.id.apply(id => mongodbatlas.getProje
     projectId: id,
 }, { async: true }));
 ```
-
 {{% /example %}}
-{{% example %}}
+
 ### Using name attribute to query
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
@@ -71,15 +98,14 @@ const testProject = testMongodbatlasProject.name.apply(name => mongodbatlas.getP
     name: name,
 }, { async: true }));
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetProject {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

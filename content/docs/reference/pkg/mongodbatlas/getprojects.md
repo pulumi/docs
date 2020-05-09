@@ -14,10 +14,26 @@ meta_desc: "Explore the GetProjects function of the mongodbatlas package, includ
 
 > **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
@@ -40,15 +56,14 @@ const testMongodbatlasProject = new mongodbatlas.Project("test", {
 });
 const testProject = pulumi.output(mongodbatlas.getProject({ async: true }));
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetProjects {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
