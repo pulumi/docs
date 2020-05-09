@@ -21,7 +21,7 @@ This data source provides availability zones for mongoDB that can be accessed by
 
 ## Using GetZones {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

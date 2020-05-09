@@ -12,10 +12,26 @@ meta_desc: "Explore the GetQueues function of the mns module, including examples
 
 This data source provides a list of MNS queues in an Alibaba Cloud account according to the specified parameters.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -26,15 +42,14 @@ const queues = pulumi.output(alicloud.mns.getQueues({
 
 export const firstQueueId = queues.queues[0].id;
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetQueues {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -12,10 +12,26 @@ meta_desc: "Explore the GetRouteEntries function of the cen module, including ex
 
 This data source provides CEN Route Entries available to the user.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -27,15 +43,14 @@ const entry = pulumi.output(alicloud.cen.getRouteEntries({
 
 export const firstRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrBlock;
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetRouteEntries {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

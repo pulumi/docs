@@ -12,10 +12,26 @@ meta_desc: "Explore the GetGroups function of the apigateway module, including e
 
 This data source provides the api groups of the current Alibaba Cloud user.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -26,15 +42,14 @@ const dataApigatway = pulumi.output(alicloud.apigateway.getGroups({
 
 export const firstGroupId = dataApigatway.groups[0].id;
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetGroups {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

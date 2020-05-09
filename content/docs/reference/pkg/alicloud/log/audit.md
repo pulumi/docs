@@ -16,56 +16,48 @@ In addition to inheriting all SLS functions, it also enhances the real-time auto
 
 > **NOTE:** Available in 1.81.0
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic Usage
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const example = new alicloud.LogAudit("example", {
-    aliuid: "12345678",
-    displayName: "tf-audit-test",
-    variableMap: [{
-        actiontrailEnabled: "true",
-        actiontrailTtl: "180",
-        ossAccessEnabled: "true",
-        ossAccessTtl: "180",
-    }],
-});
-```
-Multiple accounts Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const example = new alicloud.LogAudit("example", {
-    aliuid: "12345678",
-    displayName: "tf-audit-test",
-    multiAccount: [
-        "123456789123",
-        "12345678912300123",
-    ],
-    variableMap: [{
-        actiontrailEnabled: "true",
-        actiontrailTtl: "180",
-        ossAccessEnabled: "true",
-        ossAccessTtl: "180",
-    }],
-});
-```
-
+{{% example csharp %}}
+Coming soon!
 {{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = new alicloud.log.Audit("example", {
+    aliuid: "12345678",
+    displayName: "tf-audit-test",
+    variableMap: {
+        actiontrail_enabled: "true",
+        actiontrail_ttl: "180",
+        oss_access_enabled: "true",
+        oss_access_ttl: "180",
+    },
+});
+```
+{{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Audit Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -493,7 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Audit Resource {#look-up}
 
 Get an existing Audit resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/log/#AuditState">AuditState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/log/#Audit">Audit</a></span></code></pre></div>

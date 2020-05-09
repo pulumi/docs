@@ -15,7 +15,7 @@ meta_desc: "Explore the GetDomainGroups function of the dns module, including ex
 
 ## Using GetDomainGroups {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

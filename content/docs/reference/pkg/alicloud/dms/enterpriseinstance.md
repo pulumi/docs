@@ -15,18 +15,34 @@ Provides a DMS Enterprise Instance resource.
 > **NOTE:** API users must first register in DMS.
 > **NOTE:** Available in 1.81.0+.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultDmsEnterpriseInstance = new alicloud.DmsEnterpriseInstance("default", {
+const defaultEnterpriseInstance = new alicloud.dms.EnterpriseInstance("default", {
     databasePassword: "Yourpassword123",
     databaseUser: "your_user_name",
-    dbaUid: "1182725234xxxxxxx",
+    dbaUid: Number.parseFloat("1182725234xxxxxxx"),
     ecsRegion: "cn-shanghai",
     envType: "test",
     exportTimeout: 600,
@@ -38,16 +54,16 @@ const defaultDmsEnterpriseInstance = new alicloud.DmsEnterpriseInstance("default
     port: 3306,
     queryTimeout: 60,
     safeRule: "自由操作",
-    tid: "12345",
+    tid: 12345,
 });
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a EnterpriseInstance Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1255,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing EnterpriseInstance Resource {#look-up}
 
 Get an existing EnterpriseInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dms/#EnterpriseInstanceState">EnterpriseInstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dms/#EnterpriseInstance">EnterpriseInstance</a></span></code></pre></div>

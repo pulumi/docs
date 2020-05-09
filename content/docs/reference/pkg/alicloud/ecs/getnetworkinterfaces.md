@@ -14,10 +14,42 @@ Use this data source to get a list of elastic network interfaces according to th
 
 For information about elastic network interface and how to use it, see [Elastic Network Interface](https://www.alibabacloud.com/help/doc-detail/58496.html)
 
+
+##  Argument Reference
+
+The following arguments are supported:
+
+* `ids` - (Optional)  A list of ENI IDs.
+* `name_regex` - (Optional) A regex string to filter results by ENI name.
+* `vpc_id` - (Optional) The VPC ID linked to ENIs.
+* `vswitch_id` - (Optional) The VSwitch ID linked to ENIs.
+* `private_ip` - (Optional) The primary private IP address of the ENI.
+* `security_group_id` - (Optional) The security group ID linked to ENIs.
+* `name` - (Optional) The name of the ENIs.
+* `type` - (Optional) The type of ENIs, Only support for "Primary" or "Secondary".
+* `instance_id` - (Optional) The ECS instance ID that the ENI is attached to.
+* `tags` - (Optional) A map of tags assigned to ENIs.
+* `output_file` - (Optional) The name of output file that saves the filter results.
+* `resource_group_id` - (Optional, ForceNew, Available in 1.57.0+) The Id of resource group which the network interface belongs.
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -78,31 +110,14 @@ const defaultNetworkInterfaces = pulumi.all([attachment.networkInterfaceId, inst
 
 export const eni0Name = defaultNetworkInterfaces.interfaces[0].name;
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-##  Argument Reference
-
-The following arguments are supported:
-
-* `ids` - (Optional)  A list of ENI IDs.
-* `name_regex` - (Optional) A regex string to filter results by ENI name.
-* `vpc_id` - (Optional) The VPC ID linked to ENIs.
-* `vswitch_id` - (Optional) The VSwitch ID linked to ENIs.
-* `private_ip` - (Optional) The primary private IP address of the ENI.
-* `security_group_id` - (Optional) The security group ID linked to ENIs.
-* `name` - (Optional) The name of the ENIs.
-* `type` - (Optional) The type of ENIs, Only support for "Primary" or "Secondary".
-* `instance_id` - (Optional) The ECS instance ID that the ENI is attached to.
-* `tags` - (Optional) A map of tags assigned to ENIs.
-* `output_file` - (Optional) The name of output file that saves the filter results.
-* `resource_group_id` - (Optional, ForceNew, Available in 1.57.0+) The Id of resource group which the network interface belongs.
-
 
 
 ## Using GetNetworkInterfaces {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

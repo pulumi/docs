@@ -14,10 +14,26 @@ Provides a new resource to manage [Action Trail](https://www.alibabacloud.com/he
 
 > **NOTE:** Available in 1.35.0+
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -30,14 +46,13 @@ const foo = new alicloud.actiontrail.Trail("foo", {
     roleName: alicloud_ram_role_policy_attachment_attach.roleName,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Trail Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -573,7 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Trail Resource {#look-up}
 
 Get an existing Trail resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/actiontrail/#TrailState">TrailState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/actiontrail/#Trail">Trail</a></span></code></pre></div>
