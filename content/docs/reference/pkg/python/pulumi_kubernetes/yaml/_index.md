@@ -29,7 +29,6 @@ on the supplied callable.</p>
 <p>Alternatively, use getfullargspec() for an API with a similar namedtuple
 based interface, but full support for annotations and keyword-only
 parameters.</p>
-<p>Deprecated since Python 3.5, use <code class="docutils literal notranslate"><span class="pre">inspect.getfullargspec()</span></code>.</p>
 </dd></dl>
 
 <dl class="py class">
