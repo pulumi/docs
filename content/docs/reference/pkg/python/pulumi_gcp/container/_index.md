@@ -209,6 +209,13 @@ Set <code class="docutils literal notranslate"><span class="pre">enabled</span> 
 If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gcePersistentDiskCsiDriverConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">horizontalPodAutoscaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
 has based on the resource usage of the existing pods.
@@ -662,6 +669,13 @@ cluster. It is disabled by default. Set <code class="docutils literal notranslat
 <li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - .
 The status of the NodeLocal DNSCache addon. It is disabled by default.
 Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gcePersistentDiskCsiDriverConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - .
+Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
@@ -1651,6 +1665,13 @@ cluster. It is disabled by default. Set <code class="docutils literal notranslat
 <li><p><code class="docutils literal notranslate"><span class="pre">dnsCacheConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
 The status of the NodeLocal DNSCache addon. It is disabled by default.
 Set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
+If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gcePersistentDiskCsiDriverConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - .
+Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set <code class="docutils literal notranslate"><span class="pre">enabled</span> <span class="pre">=</span> <span class="pre">true</span></code> to enable.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>

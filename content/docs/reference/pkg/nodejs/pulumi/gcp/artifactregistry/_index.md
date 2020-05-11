@@ -1,8 +1,8 @@
 ---
-title: "Module sourcerepo"
-title_tag: "Module sourcerepo | Package @pulumi/gcp | Node.js SDK"
-linktitle: "sourcerepo"
-meta_desc: "Explore members of the sourcerepo module in the @pulumi/gcp package."
+title: "Module artifactregistry"
+title_tag: "Module artifactregistry | Package @pulumi/gcp | Node.js SDK"
+linktitle: "artifactregistry"
+meta_desc: "Explore members of the artifactregistry module in the @pulumi/gcp package."
 git_sha: "4f9751b414e5856f057afa7ea0c7e9f21e9deb2f"
 ---
 
@@ -10,10 +10,10 @@ git_sha: "4f9751b414e5856f057afa7ea0c7e9f21e9deb2f"
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
 
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-google)
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta)
 > distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
 > first check the [`pulumi/pulumi-gcp` repo](https://github.com/pulumi/pulumi-gcp/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-google` repo](https://github.com/terraform-providers/terraform-provider-google/issues).
+> please consult the source [`terraform-providers/terraform-provider-google-beta` repo](https://github.com/terraform-providers/terraform-provider-google-beta/issues).
 
 
 
@@ -43,57 +43,18 @@ git_sha: "4f9751b414e5856f057afa7ea0c7e9f21e9deb2f"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Repository" data-link-title="Repository">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L7">
         Resource <strong>Repository</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Repository</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
-
-A repository (or repo) is a Git repository storing versioned source content.
-
-To get more information about Repository, see:
-
-* [API documentation](https://cloud.google.com/source-repositories/docs/reference/rest/v1/projects.repos)
-* How-to Guides
-    * [Official Documentation](https://cloud.google.com/source-repositories/)
-
-#### Example Usage - Sourcerepo Repository Basic
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const myRepo = new gcp.sourcerepo.Repository("my-repo", {});
-```
-#### Example Usage - Sourcerepo Repository Full
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const test-account = new gcp.serviceAccount.Account("test-account", {
-    accountId: "my-account",
-    displayName: "Test Service Account",
-});
-const topic = new gcp.pubsub.Topic("topic", {});
-const my-repo = new gcp.sourcerepo.Repository("my-repo", {pubsub_configs: [{
-    topic: topic.id,
-    messageFormat: "JSON",
-    serviceAccountEmail: test-account.email,
-}]});
-```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sourcerepo_repository.html.markdown.
-
 <h4 class="pdoc-member-header" id="Repository-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Repository(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#RepositoryArgs'>RepositoryArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Repository(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RepositoryArgs'>RepositoryArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 
 Create a Repository resource with the given unique name, arguments, and options.
@@ -103,7 +64,7 @@ Create a Repository resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Repository-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L16">method <b>get</b></a>
 </h4>
 
 
@@ -114,14 +75,14 @@ Get an existing Repository resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Repository-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Repository-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L27">method <b>isInstance</b></a>
 </h4>
 
 
@@ -131,8 +92,32 @@ properties used to qualify the lookup.
 Returns true if the given object is an instance of Repository.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
+<h4 class="pdoc-member-header" id="Repository-createTime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L37">property <b>createTime</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The time when the repository was created.
+
+<h4 class="pdoc-member-header" id="Repository-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L41">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The user-provided description of the repository.
+
+<h4 class="pdoc-member-header" id="Repository-format">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L45">property <b>format</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The format of packages that are stored in the repoitory.
+
 <h4 class="pdoc-member-header" id="Repository-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -140,17 +125,36 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.
 
+<h4 class="pdoc-member-header" id="Repository-labels">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L53">property <b>labels</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Labels with user-defined metadata.
+This field may contain up to 64 entries. Label keys and values may be no
+longer than 63 characters. Label keys must begin with a lowercase letter
+and may only contain lowercase letters, numeric characters, underscores,
+and dashes.
+
+<h4 class="pdoc-member-header" id="Repository-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L57">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the location this repository is located in.
+
 <h4 class="pdoc-member-header" id="Repository-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Resource name of the repository, of the form `{{repo}}`.
-The repo name may contain slashes. eg, `name/with/slash`
+The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1"
 
 <h4 class="pdoc-member-header" id="Repository-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L85">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L66">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,33 +162,25 @@ The repo name may contain slashes. eg, `name/with/slash`
 The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
-<h4 class="pdoc-member-header" id="Repository-pubsubConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L90">property <b>pubsubConfigs</b></a>
+<h4 class="pdoc-member-header" id="Repository-repositoryId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L71">property <b>repositoryId</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>pubsubConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RepositoryPubsubConfig'>RepositoryPubsubConfig</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>repositoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-How this repository publishes a change in the repository through Cloud Pub/Sub.
-Keyed by the topic names.  Structure is documented below.
+The last part of the repository name, for example:
+"repo1"
 
-<h4 class="pdoc-member-header" id="Repository-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L94">property <b>size</b></a>
+<h4 class="pdoc-member-header" id="Repository-updateTime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L75">property <b>updateTime</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The disk usage of the repo, in bytes.
-
-<h4 class="pdoc-member-header" id="Repository-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L98">property <b>url</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-URL to clone the repository from Google Cloud Source Repositories.
+The time when the repository was last updated.
 
 <h4 class="pdoc-member-header" id="Repository-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -193,76 +189,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RepositoryIamBinding" data-link-title="RepositoryIamBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L9">
         Resource <strong>RepositoryIamBinding</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>RepositoryIamBinding</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
-
-Three different resources help you manage your IAM policy for Cloud Pub/Sub Topic. Each of these resources serves a different use case:
-
-* `gcp.pubsub.TopicIAMPolicy`: Authoritative. Sets the IAM policy for the topic and replaces any existing policy already attached.
-* `gcp.pubsub.TopicIAMBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the topic are preserved.
-* `gcp.pubsub.TopicIAMMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the topic are preserved.
-
-> **Note:** `gcp.pubsub.TopicIAMPolicy` **cannot** be used in conjunction with `gcp.pubsub.TopicIAMBinding` and `gcp.pubsub.TopicIAMMember` or they will fight over what your policy should be.
-
-> **Note:** `gcp.pubsub.TopicIAMBinding` resources **can be** used in conjunction with `gcp.pubsub.TopicIAMMember` resources **only if** they do not grant privilege to the same role.
-
-
-
-#### google\_pubsub\_topic\_iam\_policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const admin = gcp.organizations.getIAMPolicy({
-    binding: [{
-        role: "roles/viewer",
-        members: ["user:jane@example.com"],
-    }],
-});
-const policy = new gcp.pubsub.TopicIAMPolicy("policy", {
-    project: google_pubsub_topic.example.project,
-    topic: google_pubsub_topic.example.name,
-    policyData: admin.then(admin => admin.policyData),
-});
-```
-
-#### google\_pubsub\_topic\_iam\_binding
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const binding = new gcp.pubsub.TopicIAMBinding("binding", {
-    project: google_pubsub_topic.example.project,
-    topic: google_pubsub_topic.example.name,
-    role: "roles/viewer",
-    members: ["user:jane@example.com"],
-});
-```
-
-#### google\_pubsub\_topic\_iam\_member
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const member = new gcp.pubsub.TopicIAMMember("member", {
-    project: google_pubsub_topic.example.project,
-    topic: google_pubsub_topic.example.name,
-    role: "roles/viewer",
-    member: "user:jane@example.com",
-});
-```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_topic_iam.html.markdown.
-
 <h4 class="pdoc-member-header" id="RepositoryIamBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L61"> <b>constructor</b></a>
 </h4>
 
 
@@ -276,7 +210,7 @@ Create a RepositoryIamBinding resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RepositoryIamBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L80">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L18">method <b>get</b></a>
 </h4>
 
 
@@ -287,14 +221,14 @@ Get an existing RepositoryIamBinding resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RepositoryIamBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L71">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RepositoryIamBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L29">method <b>isInstance</b></a>
 </h4>
 
 
@@ -305,12 +239,12 @@ Returns true if the given object is an instance of RepositoryIamBinding.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RepositoryIamBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L98">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L36">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RepositoryIamBindingCondition'>RepositoryIamBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryIamBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L102">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L40">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -318,7 +252,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="RepositoryIamBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -326,13 +260,22 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.
 
+<h4 class="pdoc-member-header" id="RepositoryIamBinding-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L45">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the location this repository is located in.
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L103">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L46">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryIamBinding-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L108">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L51">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -341,22 +284,25 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RepositoryIamBinding-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L109">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L55">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L115">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L61">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The role that should be applied. Only one
-`gcp.pubsub.TopicIAMBinding` can be used per role. Note that custom roles must be of the format
+`gcp.artifactregistry.RepositoryIamBinding` can be used per role. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="RepositoryIamBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L71">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -365,76 +311,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RepositoryIamMember" data-link-title="RepositoryIamMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L9">
         Resource <strong>RepositoryIamMember</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>RepositoryIamMember</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
-
-Three different resources help you manage your IAM policy for Cloud Pub/Sub Topic. Each of these resources serves a different use case:
-
-* `gcp.pubsub.TopicIAMPolicy`: Authoritative. Sets the IAM policy for the topic and replaces any existing policy already attached.
-* `gcp.pubsub.TopicIAMBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the topic are preserved.
-* `gcp.pubsub.TopicIAMMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the topic are preserved.
-
-> **Note:** `gcp.pubsub.TopicIAMPolicy` **cannot** be used in conjunction with `gcp.pubsub.TopicIAMBinding` and `gcp.pubsub.TopicIAMMember` or they will fight over what your policy should be.
-
-> **Note:** `gcp.pubsub.TopicIAMBinding` resources **can be** used in conjunction with `gcp.pubsub.TopicIAMMember` resources **only if** they do not grant privilege to the same role.
-
-
-
-#### google\_pubsub\_topic\_iam\_policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const admin = gcp.organizations.getIAMPolicy({
-    binding: [{
-        role: "roles/viewer",
-        members: ["user:jane@example.com"],
-    }],
-});
-const policy = new gcp.pubsub.TopicIAMPolicy("policy", {
-    project: google_pubsub_topic.example.project,
-    topic: google_pubsub_topic.example.name,
-    policyData: admin.then(admin => admin.policyData),
-});
-```
-
-#### google\_pubsub\_topic\_iam\_binding
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const binding = new gcp.pubsub.TopicIAMBinding("binding", {
-    project: google_pubsub_topic.example.project,
-    topic: google_pubsub_topic.example.name,
-    role: "roles/viewer",
-    members: ["user:jane@example.com"],
-});
-```
-
-#### google\_pubsub\_topic\_iam\_member
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const member = new gcp.pubsub.TopicIAMMember("member", {
-    project: google_pubsub_topic.example.project,
-    topic: google_pubsub_topic.example.name,
-    role: "roles/viewer",
-    member: "user:jane@example.com",
-});
-```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_topic_iam.html.markdown.
-
 <h4 class="pdoc-member-header" id="RepositoryIamMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L61"> <b>constructor</b></a>
 </h4>
 
 
@@ -448,7 +332,7 @@ Create a RepositoryIamMember resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RepositoryIamMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L80">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L18">method <b>get</b></a>
 </h4>
 
 
@@ -459,14 +343,14 @@ Get an existing RepositoryIamMember resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RepositoryIamMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L71">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RepositoryIamMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L29">method <b>isInstance</b></a>
 </h4>
 
 
@@ -477,12 +361,12 @@ Returns true if the given object is an instance of RepositoryIamMember.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RepositoryIamMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L98">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L36">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RepositoryIamMemberCondition'>RepositoryIamMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryIamMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L102">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L40">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -490,7 +374,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="RepositoryIamMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -498,13 +382,22 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.
 
+<h4 class="pdoc-member-header" id="RepositoryIamMember-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L45">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the location this repository is located in.
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L103">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L46">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryIamMember-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L108">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L51">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -513,22 +406,25 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RepositoryIamMember-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L109">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L55">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L115">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L61">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The role that should be applied. Only one
-`gcp.pubsub.TopicIAMBinding` can be used per role. Note that custom roles must be of the format
+`gcp.artifactregistry.RepositoryIamBinding` can be used per role. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="RepositoryIamMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L71">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -537,76 +433,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RepositoryIamPolicy" data-link-title="RepositoryIamPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L9">
         Resource <strong>RepositoryIamPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>RepositoryIamPolicy</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
-
-Three different resources help you manage your IAM policy for Cloud Pub/Sub Topic. Each of these resources serves a different use case:
-
-* `gcp.pubsub.TopicIAMPolicy`: Authoritative. Sets the IAM policy for the topic and replaces any existing policy already attached.
-* `gcp.pubsub.TopicIAMBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the topic are preserved.
-* `gcp.pubsub.TopicIAMMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the topic are preserved.
-
-> **Note:** `gcp.pubsub.TopicIAMPolicy` **cannot** be used in conjunction with `gcp.pubsub.TopicIAMBinding` and `gcp.pubsub.TopicIAMMember` or they will fight over what your policy should be.
-
-> **Note:** `gcp.pubsub.TopicIAMBinding` resources **can be** used in conjunction with `gcp.pubsub.TopicIAMMember` resources **only if** they do not grant privilege to the same role.
-
-
-
-#### google\_pubsub\_topic\_iam\_policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const admin = gcp.organizations.getIAMPolicy({
-    binding: [{
-        role: "roles/viewer",
-        members: ["user:jane@example.com"],
-    }],
-});
-const policy = new gcp.pubsub.TopicIAMPolicy("policy", {
-    project: google_pubsub_topic.example.project,
-    topic: google_pubsub_topic.example.name,
-    policyData: admin.then(admin => admin.policyData),
-});
-```
-
-#### google\_pubsub\_topic\_iam\_binding
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const binding = new gcp.pubsub.TopicIAMBinding("binding", {
-    project: google_pubsub_topic.example.project,
-    topic: google_pubsub_topic.example.name,
-    role: "roles/viewer",
-    members: ["user:jane@example.com"],
-});
-```
-
-#### google\_pubsub\_topic\_iam\_member
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const member = new gcp.pubsub.TopicIAMMember("member", {
-    project: google_pubsub_topic.example.project,
-    topic: google_pubsub_topic.example.name,
-    role: "roles/viewer",
-    member: "user:jane@example.com",
-});
-```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_topic_iam.html.markdown.
-
 <h4 class="pdoc-member-header" id="RepositoryIamPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L112"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -620,7 +454,7 @@ Create a RepositoryIamPolicy resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RepositoryIamPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L80">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L18">method <b>get</b></a>
 </h4>
 
 
@@ -631,14 +465,14 @@ Get an existing RepositoryIamPolicy resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RepositoryIamPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L71">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RepositoryIamPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L29">method <b>isInstance</b></a>
 </h4>
 
 
@@ -649,7 +483,7 @@ Returns true if the given object is an instance of RepositoryIamPolicy.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RepositoryIamPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L101">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L39">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -657,7 +491,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="RepositoryIamPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -665,8 +499,17 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.
 
+<h4 class="pdoc-member-header" id="RepositoryIamPolicy-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L44">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the location this repository is located in.
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L106">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L49">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -675,7 +518,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="RepositoryIamPolicy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L111">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L54">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -684,12 +527,15 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RepositoryIamPolicy-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L112">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L58">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L71">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -701,7 +547,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="RepositoryArgs" data-link-title="RepositoryArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L178">
         interface <strong>RepositoryArgs</strong>
     </a>
 </h3>
@@ -710,17 +556,44 @@ deployments.
 
 The set of arguments for constructing a Repository resource.
 
-<h4 class="pdoc-member-header" id="RepositoryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L173">property <b>name</b></a>
+<h4 class="pdoc-member-header" id="RepositoryArgs-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L182">property <b>description</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Resource name of the repository, of the form `{{repo}}`.
-The repo name may contain slashes. eg, `name/with/slash`
+The user-provided description of the repository.
+
+<h4 class="pdoc-member-header" id="RepositoryArgs-format">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L186">property <b>format</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The format of packages that are stored in the repoitory.
+
+<h4 class="pdoc-member-header" id="RepositoryArgs-labels">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L194">property <b>labels</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+Labels with user-defined metadata.
+This field may contain up to 64 entries. Label keys and values may be no
+longer than 63 characters. Label keys must begin with a lowercase letter
+and may only contain lowercase letters, numeric characters, underscores,
+and dashes.
+
+<h4 class="pdoc-member-header" id="RepositoryArgs-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L198">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the location this repository is located in.
 
 <h4 class="pdoc-member-header" id="RepositoryArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L178">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L203">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -728,17 +601,17 @@ The repo name may contain slashes. eg, `name/with/slash`
 The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
-<h4 class="pdoc-member-header" id="RepositoryArgs-pubsubConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L183">property <b>pubsubConfigs</b></a>
+<h4 class="pdoc-member-header" id="RepositoryArgs-repositoryId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L208">property <b>repositoryId</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pubsubConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RepositoryPubsubConfig'>RepositoryPubsubConfig</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>repositoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-How this repository publishes a change in the repository through Cloud Pub/Sub.
-Keyed by the topic names.  Structure is documented below.
+The last part of the repository name, for example:
+"repo1"
 
 <h3 class="pdoc-module-header" id="RepositoryIamBindingArgs" data-link-title="RepositoryIamBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L147">
         interface <strong>RepositoryIamBindingArgs</strong>
     </a>
 </h3>
@@ -748,17 +621,26 @@ Keyed by the topic names.  Structure is documented below.
 The set of arguments for constructing a RepositoryIamBinding resource.
 
 <h4 class="pdoc-member-header" id="RepositoryIamBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L192">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L148">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RepositoryIamBindingCondition'>RepositoryIamBindingCondition</a>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="RepositoryIamBindingArgs-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L153">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the location this repository is located in.
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L193">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L154">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryIamBindingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L198">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L159">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -767,22 +649,25 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RepositoryIamBindingArgs-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L199">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L163">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L205">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L169">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The role that should be applied. Only one
-`gcp.pubsub.TopicIAMBinding` can be used per role. Note that custom roles must be of the format
+`gcp.artifactregistry.RepositoryIamBinding` can be used per role. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="RepositoryIamBindingState" data-link-title="RepositoryIamBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L115">
         interface <strong>RepositoryIamBindingState</strong>
     </a>
 </h3>
@@ -792,25 +677,34 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering RepositoryIamBinding resources.
 
 <h4 class="pdoc-member-header" id="RepositoryIamBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L168">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L116">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RepositoryIamBindingCondition'>RepositoryIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryIamBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L172">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L120">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 (Computed) The etag of the IAM policy.
 
+<h4 class="pdoc-member-header" id="RepositoryIamBindingState-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L125">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the location this repository is located in.
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L173">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L126">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryIamBindingState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L178">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L131">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -819,22 +713,25 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RepositoryIamBindingState-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L179">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L135">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamBinding.ts#L185">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamBinding.ts#L141">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The role that should be applied. Only one
-`gcp.pubsub.TopicIAMBinding` can be used per role. Note that custom roles must be of the format
+`gcp.artifactregistry.RepositoryIamBinding` can be used per role. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="RepositoryIamMemberArgs" data-link-title="RepositoryIamMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L147">
         interface <strong>RepositoryIamMemberArgs</strong>
     </a>
 </h3>
@@ -844,17 +741,26 @@ The role that should be applied. Only one
 The set of arguments for constructing a RepositoryIamMember resource.
 
 <h4 class="pdoc-member-header" id="RepositoryIamMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L192">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L148">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RepositoryIamMemberCondition'>RepositoryIamMemberCondition</a>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="RepositoryIamMemberArgs-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L153">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the location this repository is located in.
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L193">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L154">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryIamMemberArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L198">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L159">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -863,22 +769,25 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RepositoryIamMemberArgs-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L199">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L163">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L205">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L169">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The role that should be applied. Only one
-`gcp.pubsub.TopicIAMBinding` can be used per role. Note that custom roles must be of the format
+`gcp.artifactregistry.RepositoryIamBinding` can be used per role. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="RepositoryIamMemberState" data-link-title="RepositoryIamMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L115">
         interface <strong>RepositoryIamMemberState</strong>
     </a>
 </h3>
@@ -888,25 +797,34 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering RepositoryIamMember resources.
 
 <h4 class="pdoc-member-header" id="RepositoryIamMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L168">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L116">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RepositoryIamMemberCondition'>RepositoryIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryIamMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L172">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L120">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 (Computed) The etag of the IAM policy.
 
+<h4 class="pdoc-member-header" id="RepositoryIamMemberState-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L125">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the location this repository is located in.
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L173">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L126">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RepositoryIamMemberState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L178">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L131">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -915,22 +833,25 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RepositoryIamMemberState-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L179">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L135">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamMember.ts#L185">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamMember.ts#L141">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The role that should be applied. Only one
-`gcp.pubsub.TopicIAMBinding` can be used per role. Note that custom roles must be of the format
+`gcp.artifactregistry.RepositoryIamBinding` can be used per role. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="RepositoryIamPolicyArgs" data-link-title="RepositoryIamPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L134">
         interface <strong>RepositoryIamPolicyArgs</strong>
     </a>
 </h3>
@@ -939,8 +860,17 @@ The role that should be applied. Only one
 
 The set of arguments for constructing a RepositoryIamPolicy resource.
 
+<h4 class="pdoc-member-header" id="RepositoryIamPolicyArgs-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L139">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the location this repository is located in.
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L183">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L144">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -949,7 +879,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="RepositoryIamPolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L188">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L149">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -958,12 +888,15 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RepositoryIamPolicyArgs-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L189">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L153">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Used to find the parent resource to bind the IAM policy to
+
 <h3 class="pdoc-module-header" id="RepositoryIamPolicyState" data-link-title="RepositoryIamPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L105">
         interface <strong>RepositoryIamPolicyState</strong>
     </a>
 </h3>
@@ -973,15 +906,24 @@ If it is not provided, the project will be parsed from the identifier of the par
 Input properties used for looking up and filtering RepositoryIamPolicy resources.
 
 <h4 class="pdoc-member-header" id="RepositoryIamPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L161">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L109">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 (Computed) The etag of the IAM policy.
 
+<h4 class="pdoc-member-header" id="RepositoryIamPolicyState-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L114">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the location this repository is located in.
+Used to find the parent resource to bind the IAM policy to
+
 <h4 class="pdoc-member-header" id="RepositoryIamPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L166">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L119">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -990,7 +932,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="RepositoryIamPolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L171">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L124">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -999,12 +941,15 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RepositoryIamPolicyState-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repositoryIamPolicy.ts#L172">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repositoryIamPolicy.ts#L128">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Used to find the parent resource to bind the IAM policy to
+
 <h3 class="pdoc-module-header" id="RepositoryState" data-link-title="RepositoryState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L130">
         interface <strong>RepositoryState</strong>
     </a>
 </h3>
@@ -1013,17 +958,60 @@ If it is not provided, the project will be parsed from the identifier of the par
 
 Input properties used for looking up and filtering Repository resources.
 
+<h4 class="pdoc-member-header" id="RepositoryState-createTime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L134">property <b>createTime</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The time when the repository was created.
+
+<h4 class="pdoc-member-header" id="RepositoryState-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L138">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The user-provided description of the repository.
+
+<h4 class="pdoc-member-header" id="RepositoryState-format">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L142">property <b>format</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The format of packages that are stored in the repoitory.
+
+<h4 class="pdoc-member-header" id="RepositoryState-labels">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L150">property <b>labels</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+Labels with user-defined metadata.
+This field may contain up to 64 entries. Label keys and values may be no
+longer than 63 characters. Label keys must begin with a lowercase letter
+and may only contain lowercase letters, numeric characters, underscores,
+and dashes.
+
+<h4 class="pdoc-member-header" id="RepositoryState-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L154">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the location this repository is located in.
+
 <h4 class="pdoc-member-header" id="RepositoryState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L158">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Resource name of the repository, of the form `{{repo}}`.
-The repo name may contain slashes. eg, `name/with/slash`
+The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1"
 
 <h4 class="pdoc-member-header" id="RepositoryState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L149">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L163">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1031,28 +1019,20 @@ The repo name may contain slashes. eg, `name/with/slash`
 The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
-<h4 class="pdoc-member-header" id="RepositoryState-pubsubConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L154">property <b>pubsubConfigs</b></a>
+<h4 class="pdoc-member-header" id="RepositoryState-repositoryId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L168">property <b>repositoryId</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>pubsubConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RepositoryPubsubConfig'>RepositoryPubsubConfig</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>repositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-How this repository publishes a change in the repository through Cloud Pub/Sub.
-Keyed by the topic names.  Structure is documented below.
+The last part of the repository name, for example:
+"repo1"
 
-<h4 class="pdoc-member-header" id="RepositoryState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L158">property <b>size</b></a>
+<h4 class="pdoc-member-header" id="RepositoryState-updateTime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/artifactregistry/repository.ts#L172">property <b>updateTime</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The disk usage of the repo, in bytes.
-
-<h4 class="pdoc-member-header" id="RepositoryState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/4f9751b414e5856f057afa7ea0c7e9f21e9deb2f/sdk/nodejs/sourcerepo/repository.ts#L162">property <b>url</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-URL to clone the repository from Google Cloud Source Repositories.
+The time when the repository was last updated.
 

@@ -828,8 +828,7 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.  Structure is documented below.</p></li>
 <li><p><strong>endpoints_api_service</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.  Structure is documented below.</p></li>
 <li><p><strong>entrypoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The entrypoint for the application.  Structure is documented below.</p></li>
-<li><p><strong>env_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Environment variables available to the application. As these are not returned in the API request, Terraform will not
-detect any changes made outside of the Terraform config.</p></li>
+<li><p><strong>env_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.</p></li>
 <li><p><strong>inbound_services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Before an application can receive email or XMPP messages, the application must be configured to enable the service.</p></li>
 <li><p><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
@@ -1151,8 +1150,7 @@ the configuration ID. In this case, configId must be omitted.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_gcp.appengine.FlexibleAppVersion.env_variables">
 <code class="sig-name descname">env_variables</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.FlexibleAppVersion.env_variables" title="Permalink to this definition">¶</a></dt>
-<dd><p>Environment variables available to the application. As these are not returned in the API request, Terraform will not
-detect any changes made outside of the Terraform config.</p>
+<dd><p>Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1344,8 +1342,7 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <li><p><strong>deployment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.  Structure is documented below.</p></li>
 <li><p><strong>endpoints_api_service</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Code and application artifacts that make up this version.  Structure is documented below.</p></li>
 <li><p><strong>entrypoint</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The entrypoint for the application.  Structure is documented below.</p></li>
-<li><p><strong>env_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Environment variables available to the application. As these are not returned in the API request, Terraform will not
-detect any changes made outside of the Terraform config.</p></li>
+<li><p><strong>env_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.</p></li>
 <li><p><strong>inbound_services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Before an application can receive email or XMPP messages, the application must be configured to enable the service.</p></li>
 <li><p><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G

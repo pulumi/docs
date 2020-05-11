@@ -106,23 +106,24 @@ hosted by the Cloud DNS service.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description field. Defaults to ‘Managed by Terraform’.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description field. Defaults to ‘Managed by Pulumi’.</p></li>
 <li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS name of this managed zone, for instance “example.com.”.</p></li>
 <li><p><strong>dnssec_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – DNSSEC configuration  Structure is documented below.</p></li>
-<li><p><strong>forwarding_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
-contains the set of destinations to forward to.</p></li>
+<li><p><strong>forwarding_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence for this field indicates that outbound forwarding is enabled
+for this zone. The value of this field contains the set of destinations
+to forward to.  Structure is documented below.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value label pairs to assign to this ManagedZone.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User assigned name for this resource.
 Must be unique within the project.</p></li>
-<li><p><strong>peering_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
-network to peer with.</p></li>
+<li><p><strong>peering_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that DNS Peering is enabled for this
+zone. The value of this field contains the network to peer with.  Structure is documented below.</p></li>
 <li><p><strong>private_visibility_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – For privately visible zones, the set of Virtual Private Cloud
 resources that the zone is visible from.  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>reverse_lookup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
-automatically configured records for VPC resources. This only applies to networks listed under
-‘private_visibility_config’.</p></li>
+<li><p><strong>reverse_lookup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+lookup queries using automatically configured records for VPC resources. This only applies
+to networks listed under <code class="docutils literal notranslate"><span class="pre">private_visibility_config</span></code>.</p></li>
 <li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone’s visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
 Must be one of: <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p></li>
@@ -177,7 +178,7 @@ This should be formatted like
 </ul>
 <p>The <strong>private_visibility_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of VPC networks that can see this zone. Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to forward queries to.
 This should be formatted like
@@ -188,7 +189,7 @@ This should be formatted like
 <dl class="py attribute">
 <dt id="pulumi_gcp.dns.ManagedZone.description">
 <code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>A textual description field. Defaults to ‘Managed by Terraform’.</p>
+<dd><p>A textual description field. Defaults to ‘Managed by Pulumi’.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -228,8 +229,9 @@ non_existence can only be updated when the state is <code class="docutils litera
 <dl class="py attribute">
 <dt id="pulumi_gcp.dns.ManagedZone.forwarding_config">
 <code class="sig-name descname">forwarding_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.forwarding_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
-contains the set of destinations to forward to.</p>
+<dd><p>The presence for this field indicates that outbound forwarding is enabled
+for this zone. The value of this field contains the set of destinations
+to forward to.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">targetNameServers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of target name servers to forward to. Cloud DNS will
 select the best available name server if more than
@@ -266,8 +268,8 @@ Must be unique within the project.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.dns.ManagedZone.peering_config">
 <code class="sig-name descname">peering_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.peering_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
-network to peer with.</p>
+<dd><p>The presence of this field indicates that DNS Peering is enabled for this
+zone. The value of this field contains the network to peer with.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">targetNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The network with which to peer.  Structure is documented below.</p>
 <ul>
@@ -285,7 +287,7 @@ This should be formatted like
 <dd><p>For privately visible zones, the set of Virtual Private Cloud
 resources that the zone is visible from.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of VPC networks that can see this zone. Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The fully qualified URL of the VPC network to forward queries to.
 This should be formatted like
@@ -305,9 +307,9 @@ If it is not provided, the provider project is used.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.dns.ManagedZone.reverse_lookup">
 <code class="sig-name descname">reverse_lookup</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone.reverse_lookup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
-automatically configured records for VPC resources. This only applies to networks listed under
-‘private_visibility_config’.</p>
+<dd><p>Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+lookup queries using automatically configured records for VPC resources. This only applies
+to networks listed under <code class="docutils literal notranslate"><span class="pre">private_visibility_config</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -329,24 +331,25 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description field. Defaults to ‘Managed by Terraform’.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description field. Defaults to ‘Managed by Pulumi’.</p></li>
 <li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS name of this managed zone, for instance “example.com.”.</p></li>
 <li><p><strong>dnssec_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – DNSSEC configuration  Structure is documented below.</p></li>
-<li><p><strong>forwarding_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
-contains the set of destinations to forward to.</p></li>
+<li><p><strong>forwarding_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence for this field indicates that outbound forwarding is enabled
+for this zone. The value of this field contains the set of destinations
+to forward to.  Structure is documented below.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value label pairs to assign to this ManagedZone.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User assigned name for this resource.
 Must be unique within the project.</p></li>
 <li><p><strong>name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Delegate your managed_zone to these virtual name servers; defined by the server</p></li>
-<li><p><strong>peering_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
-network to peer with.</p></li>
+<li><p><strong>peering_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The presence of this field indicates that DNS Peering is enabled for this
+zone. The value of this field contains the network to peer with.  Structure is documented below.</p></li>
 <li><p><strong>private_visibility_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – For privately visible zones, the set of Virtual Private Cloud
 resources that the zone is visible from.  Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>reverse_lookup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
-automatically configured records for VPC resources. This only applies to networks listed under
-‘private_visibility_config’.</p></li>
+<li><p><strong>reverse_lookup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+lookup queries using automatically configured records for VPC resources. This only applies
+to networks listed under <code class="docutils literal notranslate"><span class="pre">private_visibility_config</span></code>.</p></li>
 <li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone’s visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources.
 Must be one of: <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p></li>
@@ -401,7 +404,7 @@ This should be formatted like
 </ul>
 <p>The <strong>private_visibility_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">networks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of VPC networks that can see this zone. Structure is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully qualified URL of the VPC network to forward queries to.
 This should be formatted like

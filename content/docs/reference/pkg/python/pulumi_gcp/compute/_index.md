@@ -49,7 +49,7 @@ if any.</p></li>
 <li><p><strong>address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of address to reserve, either INTERNAL or EXTERNAL.
 If unspecified, defaults to EXTERNAL.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this address. A list of key-&gt;value pairs.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this address.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression <code class="docutils literal notranslate"><span class="pre">a-z?</span></code>
@@ -118,7 +118,7 @@ If unspecified, defaults to EXTERNAL.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.Address.labels">
 <code class="sig-name descname">labels</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Address.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>Labels to apply to this address. A list of key-&gt;value pairs.</p>
+<dd><p>Labels to apply to this address.  A list of key-&gt;value pairs.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -205,7 +205,7 @@ If unspecified, defaults to EXTERNAL.</p></li>
 <li><p><strong>creation_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creation timestamp in RFC3339 text format.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
 <li><p><strong>label_fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint used for optimistic locking of this resource. Used internally during updates.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this address. A list of key-&gt;value pairs.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this address.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression <code class="docutils literal notranslate"><span class="pre">a-z?</span></code>
@@ -513,11 +513,50 @@ maximum number of replicas should not be lower than minimal number
 of replicas.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A filter string to be used as the filter string for
+a Stackdriver Monitoring TimeSeries.list API call.
+This filter is used to select a specific TimeSeries for
+the purpose of autoscaling and to determine whether the metric
+is exporting per-instance or per-group data.
+You can only use the AND operator for joining selectors.
+You can only use direct equality comparison operator (=) without
+any functions for each selector.
+You can specify the metric in both the filter string and in the
+metric field. However, if specified in both places, the metric must
+be identical.
+The monitored resource type determines what kind of values are
+expected for the metric. If it is a gce_instance, the autoscaler
+expects the metric to include a separate TimeSeries for each
+instance in a group. In such a case, you cannot filter on resource
+labels.
+If the resource type is any other value, the autoscaler expects
+this metric to contain values that apply to the entire autoscaled
+instance group and resource label filtering can be performed to
+point autoscaler at the correct TimeSeries to scale upon.
+This is called a per-group metric for the purpose of autoscaling.
+If not specified, the type defaults to gce_instance.
+You should provide a filter that is selective enough to pick just
+one TimeSeries for the autoscaled group or for each of the instances
+(if you are using gce_instance resource type). If multiple
+TimeSeries are returned upon the query execution, the autoscaler
+will sum their respective values to obtain its scaling value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier (type) of the Stackdriver Monitoring metric.
 The metric cannot have negative values.
 The metric must have a value type of INT64 or DOUBLE.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - If scaling is based on a per-group metric value that represents the
+total amount of work to be done or resource usage, set this value to
+an amount assigned for a single instance of the scaled group.
+The autoscaler will keep the number of instances proportional to the
+value of this metric, the metric itself should not change value due
+to group resizing.
+For example, a good metric to use with the target is
+<code class="docutils literal notranslate"><span class="pre">pubsub.googleapis.com/subscription/num_undelivered_messages</span></code>
+or a custom metric exporting the total number of requests coming to
+your instances.
+A bad example would be a metric exporting an average or median
+latency, since this value can’t include a chunk assignable to a
+single instance, it could be better used with utilization_target
+instead.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
@@ -571,11 +610,50 @@ maximum number of replicas should not be lower than minimal number
 of replicas.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metrics</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A filter string to be used as the filter string for
+a Stackdriver Monitoring TimeSeries.list API call.
+This filter is used to select a specific TimeSeries for
+the purpose of autoscaling and to determine whether the metric
+is exporting per-instance or per-group data.
+You can only use the AND operator for joining selectors.
+You can only use direct equality comparison operator (=) without
+any functions for each selector.
+You can specify the metric in both the filter string and in the
+metric field. However, if specified in both places, the metric must
+be identical.
+The monitored resource type determines what kind of values are
+expected for the metric. If it is a gce_instance, the autoscaler
+expects the metric to include a separate TimeSeries for each
+instance in a group. In such a case, you cannot filter on resource
+labels.
+If the resource type is any other value, the autoscaler expects
+this metric to contain values that apply to the entire autoscaled
+instance group and resource label filtering can be performed to
+point autoscaler at the correct TimeSeries to scale upon.
+This is called a per-group metric for the purpose of autoscaling.
+If not specified, the type defaults to gce_instance.
+You should provide a filter that is selective enough to pick just
+one TimeSeries for the autoscaled group or for each of the instances
+(if you are using gce_instance resource type). If multiple
+TimeSeries are returned upon the query execution, the autoscaler
+will sum their respective values to obtain its scaling value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The identifier (type) of the Stackdriver Monitoring metric.
 The metric cannot have negative values.
 The metric must have a value type of INT64 or DOUBLE.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - If scaling is based on a per-group metric value that represents the
+total amount of work to be done or resource usage, set this value to
+an amount assigned for a single instance of the scaled group.
+The autoscaler will keep the number of instances proportional to the
+value of this metric, the metric itself should not change value due
+to group resizing.
+For example, a good metric to use with the target is
+<code class="docutils literal notranslate"><span class="pre">pubsub.googleapis.com/subscription/num_undelivered_messages</span></code>
+or a custom metric exporting the total number of requests coming to
+your instances.
+A bad example would be a metric exporting an average or median
+latency, since this value can’t include a chunk assignable to a
+single instance, it could be better used with utilization_target
+instead.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
@@ -702,11 +780,50 @@ maximum number of replicas should not be lower than minimal number
 of replicas.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A filter string to be used as the filter string for
+a Stackdriver Monitoring TimeSeries.list API call.
+This filter is used to select a specific TimeSeries for
+the purpose of autoscaling and to determine whether the metric
+is exporting per-instance or per-group data.
+You can only use the AND operator for joining selectors.
+You can only use direct equality comparison operator (=) without
+any functions for each selector.
+You can specify the metric in both the filter string and in the
+metric field. However, if specified in both places, the metric must
+be identical.
+The monitored resource type determines what kind of values are
+expected for the metric. If it is a gce_instance, the autoscaler
+expects the metric to include a separate TimeSeries for each
+instance in a group. In such a case, you cannot filter on resource
+labels.
+If the resource type is any other value, the autoscaler expects
+this metric to contain values that apply to the entire autoscaled
+instance group and resource label filtering can be performed to
+point autoscaler at the correct TimeSeries to scale upon.
+This is called a per-group metric for the purpose of autoscaling.
+If not specified, the type defaults to gce_instance.
+You should provide a filter that is selective enough to pick just
+one TimeSeries for the autoscaled group or for each of the instances
+(if you are using gce_instance resource type). If multiple
+TimeSeries are returned upon the query execution, the autoscaler
+will sum their respective values to obtain its scaling value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier (type) of the Stackdriver Monitoring metric.
 The metric cannot have negative values.
 The metric must have a value type of INT64 or DOUBLE.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - If scaling is based on a per-group metric value that represents the
+total amount of work to be done or resource usage, set this value to
+an amount assigned for a single instance of the scaled group.
+The autoscaler will keep the number of instances proportional to the
+value of this metric, the metric itself should not change value due
+to group resizing.
+For example, a good metric to use with the target is
+<code class="docutils literal notranslate"><span class="pre">pubsub.googleapis.com/subscription/num_undelivered_messages</span></code>
+or a custom metric exporting the total number of requests coming to
+your instances.
+A bad example would be a metric exporting an average or median
+latency, since this value can’t include a chunk assignable to a
+single instance, it could be better used with utilization_target
+instead.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
@@ -832,11 +949,50 @@ maximum number of replicas should not be lower than minimal number
 of replicas.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A filter string to be used as the filter string for
+a Stackdriver Monitoring TimeSeries.list API call.
+This filter is used to select a specific TimeSeries for
+the purpose of autoscaling and to determine whether the metric
+is exporting per-instance or per-group data.
+You can only use the AND operator for joining selectors.
+You can only use direct equality comparison operator (=) without
+any functions for each selector.
+You can specify the metric in both the filter string and in the
+metric field. However, if specified in both places, the metric must
+be identical.
+The monitored resource type determines what kind of values are
+expected for the metric. If it is a gce_instance, the autoscaler
+expects the metric to include a separate TimeSeries for each
+instance in a group. In such a case, you cannot filter on resource
+labels.
+If the resource type is any other value, the autoscaler expects
+this metric to contain values that apply to the entire autoscaled
+instance group and resource label filtering can be performed to
+point autoscaler at the correct TimeSeries to scale upon.
+This is called a per-group metric for the purpose of autoscaling.
+If not specified, the type defaults to gce_instance.
+You should provide a filter that is selective enough to pick just
+one TimeSeries for the autoscaled group or for each of the instances
+(if you are using gce_instance resource type). If multiple
+TimeSeries are returned upon the query execution, the autoscaler
+will sum their respective values to obtain its scaling value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier (type) of the Stackdriver Monitoring metric.
 The metric cannot have negative values.
 The metric must have a value type of INT64 or DOUBLE.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - If scaling is based on a per-group metric value that represents the
+total amount of work to be done or resource usage, set this value to
+an amount assigned for a single instance of the scaled group.
+The autoscaler will keep the number of instances proportional to the
+value of this metric, the metric itself should not change value due
+to group resizing.
+For example, a good metric to use with the target is
+<code class="docutils literal notranslate"><span class="pre">pubsub.googleapis.com/subscription/num_undelivered_messages</span></code>
+or a custom metric exporting the total number of requests coming to
+your instances.
+A bad example would be a metric exporting an average or median
+latency, since this value can’t include a chunk assignable to a
+single instance, it could be better used with utilization_target
+instead.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
@@ -890,11 +1046,50 @@ maximum number of replicas should not be lower than minimal number
 of replicas.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metrics</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A filter string to be used as the filter string for
+a Stackdriver Monitoring TimeSeries.list API call.
+This filter is used to select a specific TimeSeries for
+the purpose of autoscaling and to determine whether the metric
+is exporting per-instance or per-group data.
+You can only use the AND operator for joining selectors.
+You can only use direct equality comparison operator (=) without
+any functions for each selector.
+You can specify the metric in both the filter string and in the
+metric field. However, if specified in both places, the metric must
+be identical.
+The monitored resource type determines what kind of values are
+expected for the metric. If it is a gce_instance, the autoscaler
+expects the metric to include a separate TimeSeries for each
+instance in a group. In such a case, you cannot filter on resource
+labels.
+If the resource type is any other value, the autoscaler expects
+this metric to contain values that apply to the entire autoscaled
+instance group and resource label filtering can be performed to
+point autoscaler at the correct TimeSeries to scale upon.
+This is called a per-group metric for the purpose of autoscaling.
+If not specified, the type defaults to gce_instance.
+You should provide a filter that is selective enough to pick just
+one TimeSeries for the autoscaled group or for each of the instances
+(if you are using gce_instance resource type). If multiple
+TimeSeries are returned upon the query execution, the autoscaler
+will sum their respective values to obtain its scaling value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The identifier (type) of the Stackdriver Monitoring metric.
 The metric cannot have negative values.
 The metric must have a value type of INT64 or DOUBLE.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - If scaling is based on a per-group metric value that represents the
+total amount of work to be done or resource usage, set this value to
+an amount assigned for a single instance of the scaled group.
+The autoscaler will keep the number of instances proportional to the
+value of this metric, the metric itself should not change value due
+to group resizing.
+For example, a good metric to use with the target is
+<code class="docutils literal notranslate"><span class="pre">pubsub.googleapis.com/subscription/num_undelivered_messages</span></code>
+or a custom metric exporting the total number of requests coming to
+your instances.
+A bad example would be a metric exporting an average or median
+latency, since this value can’t include a chunk assignable to a
+single instance, it could be better used with utilization_target
+instead.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
@@ -1021,11 +1216,50 @@ maximum number of replicas should not be lower than minimal number
 of replicas.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A filter string to be used as the filter string for
+a Stackdriver Monitoring TimeSeries.list API call.
+This filter is used to select a specific TimeSeries for
+the purpose of autoscaling and to determine whether the metric
+is exporting per-instance or per-group data.
+You can only use the AND operator for joining selectors.
+You can only use direct equality comparison operator (=) without
+any functions for each selector.
+You can specify the metric in both the filter string and in the
+metric field. However, if specified in both places, the metric must
+be identical.
+The monitored resource type determines what kind of values are
+expected for the metric. If it is a gce_instance, the autoscaler
+expects the metric to include a separate TimeSeries for each
+instance in a group. In such a case, you cannot filter on resource
+labels.
+If the resource type is any other value, the autoscaler expects
+this metric to contain values that apply to the entire autoscaled
+instance group and resource label filtering can be performed to
+point autoscaler at the correct TimeSeries to scale upon.
+This is called a per-group metric for the purpose of autoscaling.
+If not specified, the type defaults to gce_instance.
+You should provide a filter that is selective enough to pick just
+one TimeSeries for the autoscaled group or for each of the instances
+(if you are using gce_instance resource type). If multiple
+TimeSeries are returned upon the query execution, the autoscaler
+will sum their respective values to obtain its scaling value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier (type) of the Stackdriver Monitoring metric.
 The metric cannot have negative values.
 The metric must have a value type of INT64 or DOUBLE.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">singleInstanceAssignment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - If scaling is based on a per-group metric value that represents the
+total amount of work to be done or resource usage, set this value to
+an amount assigned for a single instance of the scaled group.
+The autoscaler will keep the number of instances proportional to the
+value of this metric, the metric itself should not change value due
+to group resizing.
+For example, a good metric to use with the target is
+<code class="docutils literal notranslate"><span class="pre">pubsub.googleapis.com/subscription/num_undelivered_messages</span></code>
+or a custom metric exporting the total number of requests coming to
+your instances.
+A bad example would be a metric exporting an average or median
+latency, since this value can’t include a chunk assignable to a
+single instance, it could be better used with utilization_target
+instead.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.</p></li>
@@ -1126,7 +1360,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.AwaitableGetInstanceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">AwaitableGetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">allow_stopping_for_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_ip_forward</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">current_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_display</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_accelerators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedulings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scratch_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shielded_instance_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.AwaitableGetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">AwaitableGetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">allow_stopping_for_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_ip_forward</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">current_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_display</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_accelerators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedulings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scratch_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shielded_instance_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.AwaitableGetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -1539,16 +1773,25 @@ maximum allowed value for TTL is one day.
 When the load balancing scheme is INTERNAL, this field is not used.</p></li>
 <li><p><strong>backends</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The set of backends that serve this BackendService.  Structure is documented below.</p></li>
 <li><p><strong>cdn_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cloud CDN configuration for this BackendService.  Structure is documented below.</p></li>
-<li><p><strong>circuit_breakers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings controlling the volume of connections to a backend service. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p></li>
+<li><p><strong>circuit_breakers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings controlling the volume of connections to a backend service. This field
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.</p></li>
 <li><p><strong>connection_draining_timeout_sec</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Time for which instance will be drained (not accept new
 connections, but still work to finish started).</p></li>
-<li><p><strong>consistent_hash</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
-other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
-destination host will be lost when one or more hosts are added/removed from the destination service. This field
-specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.</p></li>
-<li><p><strong>custom_request_headers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Headers that the HTTP/S load balancer should add to proxied requests.</p></li>
+<li><p><strong>consistent_hash</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <ul>
+<li></li>
+</ul>
+<p>(Optional))
+Consistent Hash-based load balancing can be used to provide soft session
+affinity based on HTTP headers, cookies or other properties. This load balancing
+policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the
+destination service. This field specifies parameters that control consistent
+hashing. This field only applies if the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+set to MAGLEV or RING_HASH.  Structure is documented below.</p>
+</p></li>
+<li><p><strong>custom_request_headers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Headers that the HTTP/S load balancer should add to proxied
+requests.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.
 Provide this property when you create the resource.</p></li>
 <li><p><strong>enable_cdn</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, enable Cloud CDN for this BackendService.</p></li>
@@ -1561,22 +1804,34 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
 external load balancing. A backend service created for one type of
 load balancing cannot be used with the other. Must be <code class="docutils literal notranslate"><span class="pre">EXTERNAL</span></code> or
 <code class="docutils literal notranslate"><span class="pre">INTERNAL_SELF_MANAGED</span></code> for a global backend service. Defaults to <code class="docutils literal notranslate"><span class="pre">EXTERNAL</span></code>.</p></li>
-<li><p><strong>locality_lb_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
-simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
-selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
-load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
-host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
-ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
-the same address as the destination address of the incoming connection before the connection was redirected to the load
-balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
-but has faster table lookup build times and host selection times. For more information about Maglev, refer to
-<a class="reference external" href="https://ai.google/research/pubs/pub44824">https://ai.google/research/pubs/pub44824</a> This field is applicable only when the load_balancing_scheme is set to
+<li><p><strong>locality_lb_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancing algorithm used within the scope of the locality.
+The possible values are -
+ROUND_ROBIN - This is a simple policy in which each healthy backend
+is selected in round robin order.
+LEAST_REQUEST - An O(1) algorithm which selects two random healthy
+hosts and picks the host which has fewer active requests.
+RING_HASH - The ring/modulo hash load balancer implements consistent
+hashing to backends. The algorithm has the property that the
+addition/removal of a host from a set of N hosts only affects
+1/N of the requests.
+RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client
+connection metadata, i.e., connections are opened
+to the same address as the destination address of
+the incoming connection before the connection
+was redirected to the load balancer.
+MAGLEV - used as a drop in replacement for the ring hash load balancer.
+Maglev is not as stable as ring hash but has faster table lookup
+build times and host selection times. For more information about
+Maglev, refer to <a class="reference external" href="https://ai.google/research/pubs/pub44824">https://ai.google/research/pubs/pub44824</a>
+This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.</p></li>
-<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
-enabled, logs will be exported to Stackdriver.</p></li>
+<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – This field denotes the logging options for the load balancer traffic served by this backend service.
+If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cookie.</p></li>
-<li><p><strong>outlier_detection</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p></li>
+<li><p><strong>outlier_detection</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings controlling eviction of unhealthy hosts from the load balancing pool.
+This field is applicable only when the load_balancing_scheme is set
+to INTERNAL_SELF_MANAGED.  Structure is documented below.</p></li>
 <li><p><strong>port_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of backend port. The same name should appear in the instance
 groups referenced by this service. Required when the load balancing
 scheme is EXTERNAL.</p></li>
@@ -1927,8 +2182,8 @@ responses will not be altered.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.BackendService.circuit_breakers">
 <code class="sig-name descname">circuit_breakers</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.circuit_breakers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Settings controlling the volume of connections to a backend service. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p>
+<dd><p>Settings controlling the volume of connections to a backend service. This field
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The timeout for new network connections to hosts.  Structure is documented below.</p>
 <ul>
@@ -1964,11 +2219,18 @@ connections, but still work to finish started).</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.BackendService.consistent_hash">
 <code class="sig-name descname">consistent_hash</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.consistent_hash" title="Permalink to this definition">¶</a></dt>
-<dd><p>Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
-other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
-destination host will be lost when one or more hosts are added/removed from the destination service. This field
-specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.</p>
+<dd><ul class="simple">
+<li></li>
+</ul>
+<p>(Optional))
+Consistent Hash-based load balancing can be used to provide soft session
+affinity based on HTTP headers, cookies or other properties. This load balancing
+policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the
+destination service. This field specifies parameters that control consistent
+hashing. This field only applies if the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+set to MAGLEV or RING_HASH.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">httpCookie</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
@@ -2008,7 +2270,8 @@ Defaults to 1024.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.BackendService.custom_request_headers">
 <code class="sig-name descname">custom_request_headers</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.custom_request_headers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Headers that the HTTP/S load balancer should add to proxied requests.</p>
+<dd><p>Headers that the HTTP/S load balancer should add to proxied
+requests.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2063,24 +2326,35 @@ load balancing cannot be used with the other. Must be <code class="docutils lite
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.BackendService.locality_lb_policy">
 <code class="sig-name descname">locality_lb_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.locality_lb_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
-simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
-selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
-load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
-host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
-ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
-the same address as the destination address of the incoming connection before the connection was redirected to the load
-balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
-but has faster table lookup build times and host selection times. For more information about Maglev, refer to
-<a class="reference external" href="https://ai.google/research/pubs/pub44824">https://ai.google/research/pubs/pub44824</a> This field is applicable only when the load_balancing_scheme is set to
+<dd><p>The load balancing algorithm used within the scope of the locality.
+The possible values are -
+ROUND_ROBIN - This is a simple policy in which each healthy backend
+is selected in round robin order.
+LEAST_REQUEST - An O(1) algorithm which selects two random healthy
+hosts and picks the host which has fewer active requests.
+RING_HASH - The ring/modulo hash load balancer implements consistent
+hashing to backends. The algorithm has the property that the
+addition/removal of a host from a set of N hosts only affects
+1/N of the requests.
+RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client
+connection metadata, i.e., connections are opened
+to the same address as the destination address of
+the incoming connection before the connection
+was redirected to the load balancer.
+MAGLEV - used as a drop in replacement for the ring hash load balancer.
+Maglev is not as stable as ring hash but has faster table lookup
+build times and host selection times. For more information about
+Maglev, refer to <a class="reference external" href="https://ai.google/research/pubs/pub44824">https://ai.google/research/pubs/pub44824</a>
+This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.BackendService.log_config">
 <code class="sig-name descname">log_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.log_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
-enabled, logs will be exported to Stackdriver.</p>
+<dd><p>This field denotes the logging options for the load balancer traffic served by this backend service.
+If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable logging for the load balancer traffic served by this backend service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sampleRate</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - This field can only be specified if logging is enabled for this backend service. The value of
@@ -2099,8 +2373,9 @@ The default value is 1.0.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.BackendService.outlier_detection">
 <code class="sig-name descname">outlier_detection</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.outlier_detection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p>
+<dd><p>Settings controlling eviction of unhealthy hosts from the load balancing pool.
+This field is applicable only when the load_balancing_scheme is set
+to INTERNAL_SELF_MANAGED.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">baseEjectionTime</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
@@ -2226,17 +2501,26 @@ maximum allowed value for TTL is one day.
 When the load balancing scheme is INTERNAL, this field is not used.</p></li>
 <li><p><strong>backends</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The set of backends that serve this BackendService.  Structure is documented below.</p></li>
 <li><p><strong>cdn_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cloud CDN configuration for this BackendService.  Structure is documented below.</p></li>
-<li><p><strong>circuit_breakers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings controlling the volume of connections to a backend service. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p></li>
+<li><p><strong>circuit_breakers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings controlling the volume of connections to a backend service. This field
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.  Structure is documented below.</p></li>
 <li><p><strong>connection_draining_timeout_sec</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Time for which instance will be drained (not accept new
 connections, but still work to finish started).</p></li>
-<li><p><strong>consistent_hash</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or
-other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular
-destination host will be lost when one or more hosts are added/removed from the destination service. This field
-specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.</p></li>
+<li><p><strong>consistent_hash</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <ul>
+<li></li>
+</ul>
+<p>(Optional))
+Consistent Hash-based load balancing can be used to provide soft session
+affinity based on HTTP headers, cookies or other properties. This load balancing
+policy is applicable only for HTTP connections. The affinity to a particular
+destination host will be lost when one or more hosts are added/removed from the
+destination service. This field specifies parameters that control consistent
+hashing. This field only applies if the load_balancing_scheme is set to
+INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+set to MAGLEV or RING_HASH.  Structure is documented below.</p>
+</p></li>
 <li><p><strong>creation_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creation timestamp in RFC3339 text format.</p></li>
-<li><p><strong>custom_request_headers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Headers that the HTTP/S load balancer should add to proxied requests.</p></li>
+<li><p><strong>custom_request_headers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Headers that the HTTP/S load balancer should add to proxied
+requests.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.
 Provide this property when you create the resource.</p></li>
 <li><p><strong>enable_cdn</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, enable Cloud CDN for this BackendService.</p></li>
@@ -2250,22 +2534,34 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
 external load balancing. A backend service created for one type of
 load balancing cannot be used with the other. Must be <code class="docutils literal notranslate"><span class="pre">EXTERNAL</span></code> or
 <code class="docutils literal notranslate"><span class="pre">INTERNAL_SELF_MANAGED</span></code> for a global backend service. Defaults to <code class="docutils literal notranslate"><span class="pre">EXTERNAL</span></code>.</p></li>
-<li><p><strong>locality_lb_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancing algorithm used within the scope of the locality. The possible values are - ROUND_ROBIN - This is a
-simple policy in which each healthy backend is selected in round robin order. LEAST_REQUEST - An O(1) algorithm which
-selects two random healthy hosts and picks the host which has fewer active requests. RING_HASH - The ring/modulo hash
-load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a
-host from a set of N hosts only affects 1/N of the requests. RANDOM - The load balancer selects a random healthy host.
-ORIGINAL_DESTINATION - Backend host is selected based on the client connection metadata, i.e., connections are opened to
-the same address as the destination address of the incoming connection before the connection was redirected to the load
-balancer. MAGLEV - used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash
-but has faster table lookup build times and host selection times. For more information about Maglev, refer to
-<a class="reference external" href="https://ai.google/research/pubs/pub44824">https://ai.google/research/pubs/pub44824</a> This field is applicable only when the load_balancing_scheme is set to
+<li><p><strong>locality_lb_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancing algorithm used within the scope of the locality.
+The possible values are -
+ROUND_ROBIN - This is a simple policy in which each healthy backend
+is selected in round robin order.
+LEAST_REQUEST - An O(1) algorithm which selects two random healthy
+hosts and picks the host which has fewer active requests.
+RING_HASH - The ring/modulo hash load balancer implements consistent
+hashing to backends. The algorithm has the property that the
+addition/removal of a host from a set of N hosts only affects
+1/N of the requests.
+RANDOM - The load balancer selects a random healthy host.
+ORIGINAL_DESTINATION - Backend host is selected based on the client
+connection metadata, i.e., connections are opened
+to the same address as the destination address of
+the incoming connection before the connection
+was redirected to the load balancer.
+MAGLEV - used as a drop in replacement for the ring hash load balancer.
+Maglev is not as stable as ring hash but has faster table lookup
+build times and host selection times. For more information about
+Maglev, refer to <a class="reference external" href="https://ai.google/research/pubs/pub44824">https://ai.google/research/pubs/pub44824</a>
+This field is applicable only when the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED.</p></li>
-<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – This field denotes the logging options for the load balancer traffic served by this backend service. If logging is
-enabled, logs will be exported to Stackdriver.</p></li>
+<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – This field denotes the logging options for the load balancer traffic served by this backend service.
+If logging is enabled, logs will be exported to Stackdriver.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cookie.</p></li>
-<li><p><strong>outlier_detection</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the
-load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</p></li>
+<li><p><strong>outlier_detection</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings controlling eviction of unhealthy hosts from the load balancing pool.
+This field is applicable only when the load_balancing_scheme is set
+to INTERNAL_SELF_MANAGED.  Structure is documented below.</p></li>
 <li><p><strong>port_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of backend port. The same name should appear in the instance
 groups referenced by this service. Required when the load balancing
 scheme is EXTERNAL.</p></li>
@@ -3990,25 +4286,37 @@ Otherwise only allows from the local region the ILB is located at.</p></li>
 for INTERNAL load balancing.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource. Provide this property when
 you create the resource.</p></li>
-<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule’s load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~&gt; <strong>NOTE</strong>: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule’s load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. &gt; <strong>NOTE</strong>: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.</p></li>
 <li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP protocol to which this rule applies. Valid options are TCP,
 UDP, ESP, AH, SCTP or ICMP.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.</p></li>
-<li><p><strong>is_mirroring_collector</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether or not this load balancer can be used as a collector for packet mirroring. To prevent mirroring loops,
-instances behind this load balancer will not have their traffic mirrored even if a PacketMirroring rule applies to them.
-This can only be set to true for load balancers that have their loadBalancingScheme set to INTERNAL.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this forwarding rule. A list of key-&gt;value pairs.</p></li>
+<li><p><strong>is_mirroring_collector</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether or not this load balancer can be used
+as a collector for packet mirroring. To prevent mirroring loops,
+instances behind this load balancer will not have their traffic
+mirrored even if a PacketMirroring rule applies to them. This
+can only be set to true for load balancers that have their
+loadBalancingScheme set to INTERNAL.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>load_balancing_scheme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This signifies what the ForwardingRule will be used for and can be
 EXTERNAL, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
 Cloud VPN gateways, protocol forwarding to VMs from an external IP address,
@@ -4127,17 +4435,26 @@ you create the resource.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.ForwardingRule.ip_address">
 <code class="sig-name descname">ip_address</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ForwardingRule.ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule’s load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~&gt; <strong>NOTE</strong>: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.</p>
+<dd><p>The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule’s load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. &gt; <strong>NOTE</strong>: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4152,9 +4469,12 @@ valid.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.ForwardingRule.is_mirroring_collector">
 <code class="sig-name descname">is_mirroring_collector</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ForwardingRule.is_mirroring_collector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates whether or not this load balancer can be used as a collector for packet mirroring. To prevent mirroring loops,
-instances behind this load balancer will not have their traffic mirrored even if a PacketMirroring rule applies to them.
-This can only be set to true for load balancers that have their loadBalancingScheme set to INTERNAL.</p>
+<dd><p>Indicates whether or not this load balancer can be used
+as a collector for packet mirroring. To prevent mirroring loops,
+instances behind this load balancer will not have their traffic
+mirrored even if a PacketMirroring rule applies to them. This
+can only be set to true for load balancers that have their
+loadBalancingScheme set to INTERNAL.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4166,7 +4486,7 @@ This can only be set to true for load balancers that have their loadBalancingSch
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.ForwardingRule.labels">
 <code class="sig-name descname">labels</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ForwardingRule.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>Labels to apply to this forwarding rule. A list of key-&gt;value pairs.</p>
+<dd><p>Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4328,26 +4648,38 @@ for INTERNAL load balancing.</p></li>
 <li><p><strong>creation_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creation timestamp in RFC3339 text format.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource. Provide this property when
 you create the resource.</p></li>
-<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule’s load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~&gt; <strong>NOTE</strong>: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule’s load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. &gt; <strong>NOTE</strong>: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.</p></li>
 <li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP protocol to which this rule applies. Valid options are TCP,
 UDP, ESP, AH, SCTP or ICMP.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.</p></li>
-<li><p><strong>is_mirroring_collector</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether or not this load balancer can be used as a collector for packet mirroring. To prevent mirroring loops,
-instances behind this load balancer will not have their traffic mirrored even if a PacketMirroring rule applies to them.
-This can only be set to true for load balancers that have their loadBalancingScheme set to INTERNAL.</p></li>
+<li><p><strong>is_mirroring_collector</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether or not this load balancer can be used
+as a collector for packet mirroring. To prevent mirroring loops,
+instances behind this load balancer will not have their traffic
+mirrored even if a PacketMirroring rule applies to them. This
+can only be set to true for load balancers that have their
+loadBalancingScheme set to INTERNAL.</p></li>
 <li><p><strong>label_fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint used for optimistic locking of this resource. Used internally during updates.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this forwarding rule. A list of key-&gt;value pairs.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>load_balancing_scheme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This signifies what the ForwardingRule will be used for and can be
 EXTERNAL, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
 Cloud VPN gateways, protocol forwarding to VMs from an external IP address,
@@ -4954,7 +5286,7 @@ that protects this image.</p>
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.GetInstanceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">GetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">allow_stopping_for_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_ip_forward</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">current_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_display</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_accelerators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedulings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scratch_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shielded_instance_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">GetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">allow_stopping_for_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_ip_forward</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">current_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_display</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_accelerators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedulings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scratch_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shielded_instance_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstance.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.GetInstanceResult.attached_disks">
@@ -5553,7 +5885,7 @@ address or omitted to allow GCP to choose a valid one for you.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource.</p></li>
 <li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version that will be used by this address. Valid options are
 <code class="docutils literal notranslate"><span class="pre">IPV4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPV6</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this address. A list of key-&gt;value pairs.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this address.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
@@ -5624,7 +5956,7 @@ address or omitted to allow GCP to choose a valid one for you.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.GlobalAddress.labels">
 <code class="sig-name descname">labels</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalAddress.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>Labels to apply to this address. A list of key-&gt;value pairs.</p>
+<dd><p>Labels to apply to this address.  A list of key-&gt;value pairs.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -5709,7 +6041,7 @@ address or omitted to allow GCP to choose a valid one for you.</p></li>
 <li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version that will be used by this address. Valid options are
 <code class="docutils literal notranslate"><span class="pre">IPV4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPV6</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.</p></li>
 <li><p><strong>label_fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint used for optimistic locking of this resource. Used internally during updates.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this address. A list of key-&gt;value pairs.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this address.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
@@ -5795,23 +6127,32 @@ balancing.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource. Provide this property when
 you create the resource.</p></li>
-<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule’s load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~&gt; <strong>NOTE</strong>: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule’s load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. &gt; <strong>NOTE</strong>: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.</p></li>
 <li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP protocol to which this rule applies. Valid options are TCP,
 UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.</p></li>
 <li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version that will be used by this global forwarding rule.
 Valid options are IPV4 or IPV6.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this forwarding rule. A list of key-&gt;value pairs.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>load_balancing_scheme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This signifies what the GlobalForwardingRule will be used for.
 The value of INTERNAL_SELF_MANAGED means that this will be used for
 Internal Global HTTP(S) LB. The value of EXTERNAL means that this
@@ -5835,9 +6176,11 @@ metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.</p></li>
-<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field is not used for external load balancing. For INTERNAL_SELF_MANAGED load balancing, this field identifies the
-network that the load balanced IP should belong to for this global forwarding rule. If this field is not specified, the
-default network will be used.</p></li>
+<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field is not used for external load balancing.
+For INTERNAL_SELF_MANAGED load balancing, this field
+identifies the network that the load balanced IP should belong to
+for this global forwarding rule. If this field is not specified,
+the default network will be used.</p></li>
 <li><p><strong>port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field is used along with the target field for TargetHttpProxy,
 TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
 TargetPool, TargetInstance.
@@ -5900,17 +6243,26 @@ you create the resource.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.GlobalForwardingRule.ip_address">
 <code class="sig-name descname">ip_address</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalForwardingRule.ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule’s load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~&gt; <strong>NOTE</strong>: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.</p>
+<dd><p>The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule’s load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. &gt; <strong>NOTE</strong>: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -5937,7 +6289,7 @@ Valid options are IPV4 or IPV6.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.GlobalForwardingRule.labels">
 <code class="sig-name descname">labels</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalForwardingRule.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>Labels to apply to this forwarding rule. A list of key-&gt;value pairs.</p>
+<dd><p>Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -5999,9 +6351,11 @@ provided metadata.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.GlobalForwardingRule.network">
 <code class="sig-name descname">network</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalForwardingRule.network" title="Permalink to this definition">¶</a></dt>
-<dd><p>This field is not used for external load balancing. For INTERNAL_SELF_MANAGED load balancing, this field identifies the
-network that the load balanced IP should belong to for this global forwarding rule. If this field is not specified, the
-default network will be used.</p>
+<dd><p>This field is not used for external load balancing.
+For INTERNAL_SELF_MANAGED load balancing, this field
+identifies the network that the load balanced IP should belong to
+for this global forwarding rule. If this field is not specified,
+the default network will be used.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -6062,24 +6416,33 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this resource. Provide this property when
 you create the resource.</p></li>
-<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule’s load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~&gt; <strong>NOTE</strong>: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule’s load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. &gt; <strong>NOTE</strong>: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.</p></li>
 <li><p><strong>ip_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP protocol to which this rule applies. Valid options are TCP,
 UDP, ESP, AH, SCTP or ICMP. When the load balancing scheme is
 INTERNAL_SELF_MANAGED, only TCP is valid.</p></li>
 <li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version that will be used by this global forwarding rule.
 Valid options are IPV4 or IPV6.</p></li>
 <li><p><strong>label_fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint used for optimistic locking of this resource. Used internally during updates.</p></li>
-<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this forwarding rule. A list of key-&gt;value pairs.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.</p></li>
 <li><p><strong>load_balancing_scheme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This signifies what the GlobalForwardingRule will be used for.
 The value of INTERNAL_SELF_MANAGED means that this will be used for
 Internal Global HTTP(S) LB. The value of EXTERNAL means that this
@@ -6103,9 +6466,11 @@ metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.</p></li>
-<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field is not used for external load balancing. For INTERNAL_SELF_MANAGED load balancing, this field identifies the
-network that the load balanced IP should belong to for this global forwarding rule. If this field is not specified, the
-default network will be used.</p></li>
+<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field is not used for external load balancing.
+For INTERNAL_SELF_MANAGED load balancing, this field
+identifies the network that the load balanced IP should belong to
+for this global forwarding rule. If this field is not specified,
+the default network will be used.</p></li>
 <li><p><strong>port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field is used along with the target field for TargetHttpProxy,
 TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
 TargetPool, TargetInstance.
@@ -6692,7 +7057,7 @@ consecutive successes. The default value is 2.</p></li>
 <li><p><strong>http2_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>http_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>https_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
-<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configure logging on this health check.</p></li>
+<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configure logging on this health check.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
@@ -7000,7 +7365,7 @@ can only be ASCII.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.HealthCheck.log_config">
 <code class="sig-name descname">log_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.HealthCheck.log_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configure logging on this health check.</p>
+<dd><p>Configure logging on this health check.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether or not to export logs. This is false by default,
 which means no health check logging will be done.</p></li>
@@ -7142,7 +7507,7 @@ consecutive successes. The default value is 2.</p></li>
 <li><p><strong>http2_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>http_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>https_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
-<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configure logging on this health check.</p></li>
+<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configure logging on this health check.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
@@ -8101,7 +8466,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.Instance">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_stopping_for_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_ip_forward</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_display</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_accelerators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scratch_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shielded_instance_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_stopping_for_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_ip_forward</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_display</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_accelerators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scratch_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shielded_instance_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VM instance resource within GCE. For more information see
 <a class="reference external" href="https://cloud.google.com/compute/docs/instances">the official documentation</a>
 and
@@ -8156,6 +8521,7 @@ Changing this forces a new resource to be created.</p></li>
 be specified multiple times. Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
+<li><p><strong>resource_policies</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – – A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.</p></li>
 <li><p><strong>scheduling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The scheduling strategy to use. More details about
 this configuration option are detailed below.</p></li>
 <li><p><strong>scratch_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Scratch disks to attach to the instance. This can be
@@ -8589,6 +8955,12 @@ is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_gcp.compute.Instance.resource_policies">
+<code class="sig-name descname">resource_policies</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Instance.resource_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>– A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_gcp.compute.Instance.scheduling">
 <code class="sig-name descname">scheduling</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Instance.scheduling" title="Permalink to this definition">¶</a></dt>
 <dd><p>The scheduling strategy to use. More details about
@@ -8683,7 +9055,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
 
 <dl class="py method">
 <dt id="pulumi_gcp.compute.Instance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_stopping_for_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_ip_forward</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">current_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_display</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_accelerators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scratch_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shielded_instance_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Instance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_stopping_for_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_ip_forward</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">current_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_display</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_accelerators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scratch_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shielded_instance_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -8743,6 +9115,7 @@ Changing this forces a new resource to be created.</p></li>
 be specified multiple times. Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
+<li><p><strong>resource_policies</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – – A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.</p></li>
 <li><p><strong>scheduling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The scheduling strategy to use. More details about
 this configuration option are detailed below.</p></li>
 <li><p><strong>scratch_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Scratch disks to attach to the instance. This can be
@@ -8955,7 +9328,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.InstanceFromTemplate">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceFromTemplate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_stopping_for_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_ip_forward</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_display</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_accelerators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scratch_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shielded_instance_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_instance_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceFromTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceFromTemplate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_stopping_for_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_ip_forward</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_display</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_accelerators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scratch_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shielded_instance_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_instance_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceFromTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VM instance resource within GCE. For more information see
 <a class="reference external" href="https://cloud.google.com/compute/docs/instances">the official documentation</a>
 and
@@ -9082,7 +9455,7 @@ set, the provider zone is used.</p>
 
 <dl class="py method">
 <dt id="pulumi_gcp.compute.InstanceFromTemplate.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_stopping_for_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_ip_forward</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">current_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_display</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_accelerators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scratch_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shielded_instance_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_instance_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceFromTemplate.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_stopping_for_update</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_disk</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_ip_forward</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">current_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_display</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_accelerators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_cpu_platform</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scratch_disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shielded_instance_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_instance_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceFromTemplate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing InstanceFromTemplate resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -12772,8 +13145,8 @@ be specified.  Structure is documented below.</p></li>
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region where nodes using the node template will be created.
 If it is not provided, the provider region is used.</p></li>
-<li><p><strong>server_binding</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.</p></li>
+<li><p><strong>server_binding</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
@@ -12868,8 +13241,8 @@ If it is not provided, the provider region is used.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.NodeTemplate.server_binding">
 <code class="sig-name descname">server_binding</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate.server_binding" title="Permalink to this definition">¶</a></dt>
-<dd><p>The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.</p>
+<dd><p>The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of server binding policy. If <code class="docutils literal notranslate"><span class="pre">RESTART_NODE_ON_ANY_SERVER</span></code>,
 nodes using this template will restart on any physical server
@@ -12912,8 +13285,8 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region where nodes using the node template will be created.
 If it is not provided, the provider region is used.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
-<li><p><strong>server_binding</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.</p></li>
+<li><p><strong>server_binding</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
@@ -15064,7 +15437,7 @@ create the disk. Provide this when creating the disk.</p></li>
 </dl>
 <p>The <strong>disk_encryption_key</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the encryption key that is stored in Google Cloud KMS.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rawKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
@@ -15073,7 +15446,7 @@ encryption key that protects this resource.</p></li>
 </ul>
 <p>The <strong>source_snapshot_encryption_key</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the encryption key that is stored in Google Cloud KMS.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rawKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
@@ -15106,7 +15479,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the encryption key that is stored in Google Cloud KMS.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rawKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha256</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
@@ -15219,7 +15592,7 @@ valid values:</p>
 if the source snapshot is protected by a customer-supplied encryption
 key.  Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the encryption key that is stored in Google Cloud KMS.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rawKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha256</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -
@@ -15329,7 +15702,7 @@ create the disk. Provide this when creating the disk.</p></li>
 </dl>
 <p>The <strong>disk_encryption_key</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the encryption key that is stored in Google Cloud KMS.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rawKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
@@ -15338,7 +15711,7 @@ encryption key that protects this resource.</p></li>
 </ul>
 <p>The <strong>source_snapshot_encryption_key</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the encryption key that is stored in Google Cloud KMS.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rawKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha256</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
@@ -15529,7 +15902,7 @@ consecutive successes. The default value is 2.</p></li>
 <li><p><strong>http2_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>http_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>https_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
-<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configure logging on this health check.</p></li>
+<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configure logging on this health check.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
@@ -15839,7 +16212,7 @@ can only be ASCII.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.RegionHealthCheck.log_config">
 <code class="sig-name descname">log_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionHealthCheck.log_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configure logging on this health check.</p>
+<dd><p>Configure logging on this health check.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether or not to export logs. This is false by default,
 which means no health check logging will be done.</p></li>
@@ -15988,7 +16361,7 @@ consecutive successes. The default value is 2.</p></li>
 <li><p><strong>http2_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>http_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
 <li><p><strong>https_health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested object resource  Structure is documented below.</p></li>
-<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configure logging on this health check.</p></li>
+<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configure logging on this health check.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
@@ -19476,13 +19849,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gcp.compute.ResourcePolicy">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">ResourcePolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_schedule_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ResourcePolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">ResourcePolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_placement_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_schedule_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ResourcePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A policy that can be attached to a resource to specify or schedule actions on that resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group_placement_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy for creating snapshots of persistent disks.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource, provided by the client when initially creating
 the resource. The resource name must be 1-63 characters long, and comply
 with RFC1035. Specifically, the name must be 1-63 characters long and
@@ -19497,6 +19871,16 @@ If it is not provided, the provider project is used.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>group_placement_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityDomainCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of availability domains instances will be spread across. If two instances are in different
+availability domain, they will not be put in the same low latency network</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">collocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+Specify <code class="docutils literal notranslate"><span class="pre">COLLOCATED</span></code> to enable collocation. Can only be specified with <code class="docutils literal notranslate"><span class="pre">vm_count</span></code>. If compute instances are created
+with a COLLOCATED policy, then exactly <code class="docutils literal notranslate"><span class="pre">vm_count</span></code> instances must be created at the same time with the resource policy
+attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vmCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of vms in this placement group.</p></li>
+</ul>
 <p>The <strong>snapshot_schedule_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Retention policy applied to snapshots created by this resource policy.  Structure is documented below.</p>
@@ -19545,6 +19929,21 @@ It must be in format “HH:MM”, where HH : [00-23] and MM : [00-00] GMT.</p></
 </ul>
 </li>
 </ul>
+<dl class="py attribute">
+<dt id="pulumi_gcp.compute.ResourcePolicy.group_placement_policy">
+<code class="sig-name descname">group_placement_policy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ResourcePolicy.group_placement_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Policy for creating snapshots of persistent disks.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityDomainCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of availability domains instances will be spread across. If two instances are in different
+availability domain, they will not be put in the same low latency network</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">collocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+Specify <code class="docutils literal notranslate"><span class="pre">COLLOCATED</span></code> to enable collocation. Can only be specified with <code class="docutils literal notranslate"><span class="pre">vm_count</span></code>. If compute instances are created
+with a COLLOCATED policy, then exactly <code class="docutils literal notranslate"><span class="pre">vm_count</span></code> instances must be created at the same time with the resource policy
+attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vmCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of vms in this placement group.</p></li>
+</ul>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.ResourcePolicy.name">
 <code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ResourcePolicy.name" title="Permalink to this definition">¶</a></dt>
@@ -19631,7 +20030,7 @@ It must be in format “HH:MM”, where HH : [00-23] and MM : [00-00] GMT.</p></
 
 <dl class="py method">
 <dt id="pulumi_gcp.compute.ResourcePolicy.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_schedule_policy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ResourcePolicy.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_placement_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_schedule_policy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ResourcePolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ResourcePolicy resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -19640,6 +20039,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group_placement_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy for creating snapshots of persistent disks.  Structure is documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource, provided by the client when initially creating
 the resource. The resource name must be 1-63 characters long, and comply
 with RFC1035. Specifically, the name must be 1-63 characters long and
@@ -19655,6 +20055,16 @@ If it is not provided, the provider project is used.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>group_placement_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityDomainCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of availability domains instances will be spread across. If two instances are in different
+availability domain, they will not be put in the same low latency network</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">collocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+Specify <code class="docutils literal notranslate"><span class="pre">COLLOCATED</span></code> to enable collocation. Can only be specified with <code class="docutils literal notranslate"><span class="pre">vm_count</span></code>. If compute instances are created
+with a COLLOCATED policy, then exactly <code class="docutils literal notranslate"><span class="pre">vm_count</span></code> instances must be created at the same time with the resource policy
+attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vmCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of vms in this placement group.</p></li>
+</ul>
 <p>The <strong>snapshot_schedule_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Retention policy applied to snapshots created by this resource policy.  Structure is documented below.</p>
@@ -22454,19 +22864,22 @@ Only networks that are in the distributed mode can have subnetworks.</p></li>
 access Google APIs and services by using Private Google Access.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>purpose</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The purpose of the resource. This field can be either PRIVATE or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose
-set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.</p></li>
+<li><p><strong>purpose</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be
-set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A
-BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining.</p></li>
-<li><p><strong>secondary_ip_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such
-VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary
-ranges. <strong>Note</strong>: This field uses <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attr-as-block mode</a>
-to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following
-syntax: ‘example=[]’ For more details about this behavior, see <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value">this
-section</a>.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining.</p></li>
+<li><p><strong>secondary_ip_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of configurations for secondary IP ranges for VM instances
+contained in this subnetwork. The primary IP of such VM must belong
+to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+to either primary or secondary ranges. Structure is documented below.</p></li>
 </ul>
 </dd>
 </dl>
@@ -22593,9 +23006,12 @@ If it is not provided, the provider project is used.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.Subnetwork.purpose">
 <code class="sig-name descname">purpose</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Subnetwork.purpose" title="Permalink to this definition">¶</a></dt>
-<dd><p>The purpose of the resource. This field can be either PRIVATE or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose
-set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.</p>
+<dd><p>The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -22607,20 +23023,20 @@ If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_B
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.Subnetwork.role">
 <code class="sig-name descname">role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Subnetwork.role" title="Permalink to this definition">¶</a></dt>
-<dd><p>The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be
-set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A
-BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining.</p>
+<dd><p>The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.Subnetwork.secondary_ip_ranges">
 <code class="sig-name descname">secondary_ip_ranges</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Subnetwork.secondary_ip_ranges" title="Permalink to this definition">¶</a></dt>
-<dd><p>An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such
-VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary
-ranges. <strong>Note</strong>: This field uses <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attr-as-block mode</a>
-to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following
-syntax: ‘example=[]’ For more details about this behavior, see <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value">this
-section</a>.</p>
+<dd><p>An array of configurations for secondary IP ranges for VM instances
+contained in this subnetwork. The primary IP of such VM must belong
+to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+to either primary or secondary ranges. Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_cidr_range</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
@@ -22676,20 +23092,22 @@ Only networks that are in the distributed mode can have subnetworks.</p></li>
 access Google APIs and services by using Private Google Access.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
-<li><p><strong>purpose</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The purpose of the resource. This field can be either PRIVATE or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose
-set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.</p></li>
+<li><p><strong>purpose</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be
-set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A
-BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining.</p></li>
-<li><p><strong>secondary_ip_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such
-VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary
-ranges. <strong>Note</strong>: This field uses <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attr-as-block mode</a>
-to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following
-syntax: ‘example=[]’ For more details about this behavior, see <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value">this
-section</a>.</p>
-</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining.</p></li>
+<li><p><strong>secondary_ip_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of configurations for secondary IP ranges for VM instances
+contained in this subnetwork. The primary IP of such VM must belong
+to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+to either primary or secondary ranges. Structure is documented below.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
 </ul>
 </dd>
@@ -26697,9 +27115,10 @@ be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.</p></li>
 <li><p><strong>peer_external_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the peer side external VPN gateway to which this VPN tunnel is connected.</p></li>
 <li><p><strong>peer_external_gateway_interface</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interface ID of the external VPN gateway to which this VPN tunnel is connected.</p></li>
-<li><p><strong>peer_gcp_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected. If provided, the VPN tunnel will
-automatically use the same vpn_gateway_interface ID in the peer GCP VPN gateway. This field must reference a
-‘google_compute_ha_vpn_gateway’ resource.</p></li>
+<li><p><strong>peer_gcp_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
+If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
+ID in the peer GCP VPN gateway.
+This field must reference a <code class="docutils literal notranslate"><span class="pre">compute.HaVpnGateway</span></code> resource.</p></li>
 <li><p><strong>peer_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP address of the peer VPN gateway. Only IPv4 is supported.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -26713,8 +27132,9 @@ Only IPv4 is supported.</p></li>
 gateway and the peer VPN gateway.</p></li>
 <li><p><strong>target_vpn_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the Target VPN gateway with which this VPN tunnel is
 associated.</p></li>
-<li><p><strong>vpn_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the VPN gateway with which this VPN tunnel is associated. This must be used if a High Availability VPN gateway
-resource is created. This field must reference a ‘google_compute_ha_vpn_gateway’ resource.</p></li>
+<li><p><strong>vpn_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the VPN gateway with which this VPN tunnel is associated.
+This must be used if a High Availability VPN gateway resource is created.
+This field must reference a <code class="docutils literal notranslate"><span class="pre">compute.HaVpnGateway</span></code> resource.</p></li>
 <li><p><strong>vpn_gateway_interface</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interface ID of the VPN gateway with which this VPN tunnel is associated.</p></li>
 </ul>
 </dd>
@@ -26793,9 +27213,10 @@ except the last character, which cannot be a dash.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.VPNTunnel.peer_gcp_gateway">
 <code class="sig-name descname">peer_gcp_gateway</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.VPNTunnel.peer_gcp_gateway" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected. If provided, the VPN tunnel will
-automatically use the same vpn_gateway_interface ID in the peer GCP VPN gateway. This field must reference a
-‘google_compute_ha_vpn_gateway’ resource.</p>
+<dd><p>URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
+If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
+ID in the peer GCP VPN gateway.
+This field must reference a <code class="docutils literal notranslate"><span class="pre">compute.HaVpnGateway</span></code> resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -26867,8 +27288,9 @@ associated.</p>
 <dl class="py attribute">
 <dt id="pulumi_gcp.compute.VPNTunnel.vpn_gateway">
 <code class="sig-name descname">vpn_gateway</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.VPNTunnel.vpn_gateway" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL of the VPN gateway with which this VPN tunnel is associated. This must be used if a High Availability VPN gateway
-resource is created. This field must reference a ‘google_compute_ha_vpn_gateway’ resource.</p>
+<dd><p>URL of the VPN gateway with which this VPN tunnel is associated.
+This must be used if a High Availability VPN gateway resource is created.
+This field must reference a <code class="docutils literal notranslate"><span class="pre">compute.HaVpnGateway</span></code> resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -26909,9 +27331,10 @@ be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.</p></li>
 <li><p><strong>peer_external_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the peer side external VPN gateway to which this VPN tunnel is connected.</p></li>
 <li><p><strong>peer_external_gateway_interface</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interface ID of the external VPN gateway to which this VPN tunnel is connected.</p></li>
-<li><p><strong>peer_gcp_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected. If provided, the VPN tunnel will
-automatically use the same vpn_gateway_interface ID in the peer GCP VPN gateway. This field must reference a
-‘google_compute_ha_vpn_gateway’ resource.</p></li>
+<li><p><strong>peer_gcp_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
+If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
+ID in the peer GCP VPN gateway.
+This field must reference a <code class="docutils literal notranslate"><span class="pre">compute.HaVpnGateway</span></code> resource.</p></li>
 <li><p><strong>peer_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP address of the peer VPN gateway. Only IPv4 is supported.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
@@ -26928,8 +27351,9 @@ gateway and the peer VPN gateway.</p></li>
 <li><p><strong>target_vpn_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the Target VPN gateway with which this VPN tunnel is
 associated.</p></li>
 <li><p><strong>tunnel_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the resource. This identifier is defined by the server.</p></li>
-<li><p><strong>vpn_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the VPN gateway with which this VPN tunnel is associated. This must be used if a High Availability VPN gateway
-resource is created. This field must reference a ‘google_compute_ha_vpn_gateway’ resource.</p></li>
+<li><p><strong>vpn_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the VPN gateway with which this VPN tunnel is associated.
+This must be used if a High Availability VPN gateway resource is created.
+This field must reference a <code class="docutils literal notranslate"><span class="pre">compute.HaVpnGateway</span></code> resource.</p></li>
 <li><p><strong>vpn_gateway_interface</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interface ID of the VPN gateway with which this VPN tunnel is associated.</p></li>
 </ul>
 </dd>

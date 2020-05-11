@@ -930,6 +930,817 @@ in order to grant IAM permissions.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gcp.bigquery.Job">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extract</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_timeout_ms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Job" title="Permalink to this definition">¶</a></dt>
+<dd><p>Jobs are actions that BigQuery runs on your behalf to load data, export data, query data, or copy data.
+Once a BigQuery job is created, it cannot be changed or deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>copy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Copies a table.  Structure is documented below.</p></li>
+<li><p><strong>extract</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures an extract job.  Structure is documented below.</p></li>
+<li><p><strong>job*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id13"><span class="problematic" id="id14">*</span></a>), or dashes (-). The maximum length is 1,024 characters.</p>
+</p></li>
+<li><p><strong>job_timeout_ms</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this job. You can use these to organize and group your jobs.</p></li>
+<li><p><strong>load</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures a load job.  Structure is documented below.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location of the job. The default value is US.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures a query job.  Structure is documented below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>copy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
+CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
+The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+The BigQuery Service Account associated with your project requires access to this encryption key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationTable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The destination table.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Source tables to copy.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
+WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
+The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
+</ul>
+<p>The <strong>extract</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">compression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
+The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
+The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
+The default value for models is SAVED_MODEL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationUris</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
+Default is ‘,’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">printHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to print out a header row in the results. Default is true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceModel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A reference to the model being exported.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceTable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A reference to the table being exported.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useAvroLogicalTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use logical types when extracting to AVRO format.</p></li>
+</ul>
+<p>The <strong>load</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowJaggedRows</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
+If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
+an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowQuotedNewlines</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
+The default value is false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autodetect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if we should automatically infer the options and schema for CSV and JSON sources.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
+CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
+The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+The BigQuery Service Account associated with your project requires access to this encryption key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationTable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The destination table.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
+The default value is UTF-8. BigQuery decodes the data after the raw, binary data
+has been split using the values of the quote and fieldDelimiter properties.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
+Default is ‘,’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreUnknownValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if BigQuery should allow extra values that are not represented in the table schema.
+If true, the extra values are ignored. If false, records with extra columns are treated as bad records,
+and if there are too many bad records, an invalid error is returned in the job result.
+The default value is false. The sourceFormat property determines what BigQuery treats as an extra value:
+CSV: Trailing columns
+JSON: Named values that don’t match any column names</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBadRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
+an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nullMarker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a string that represents a null value in a CSV file. The default value is the empty string. If you set this
+property to a custom value, BigQuery throws an error if an
+empty string is present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the empty string as
+an empty value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectionFields</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - If sourceFormat is set to “DATASTORE_BACKUP”, indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
+Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
+If any named property isn’t found in the Cloud Datastore backup, an invalid error is returned in the job result.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quote</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
+and then uses the first byte of the encoded string to split the data in its raw, binary state.
+The default value is a double-quote (‘”’). If your data does not contain quoted sections, set the property value to an empty string.
+If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaUpdateOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skipLeadingRows</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
+The default value is 0. This property is useful if you have header rows in the file that should be skipped.
+When autodetect is on, the behavior is the following:
+skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
+the row is read as data. Otherwise data is read starting from the second row.
+skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row.
+skipLeadingRows = N &gt; 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
+row N is just skipped. Otherwise row N is used to extract column names for the detected schema.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The format of the data files. For CSV files, specify “CSV”. For datastore backups, specify “DATASTORE_BACKUP”.
+For newline-delimited JSON, specify “NEWLINE_DELIMITED_JSON”. For Avro, specify “AVRO”. For parquet, specify “PARQUET”.
+For orc, specify “ORC”. The default value is CSV.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceUris</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The fully-qualified URIs that point to your data in Google Cloud.
+For Google Cloud Storage URIs: Each URI can contain one ‘<em>’ wildcard character
+and it must come after the ‘bucket’ name. Size limits related to load jobs apply
+to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
+specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
+For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the ‘</em>’ wildcard character is not allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_partitioning</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Time-based partitioning specification for the destination table.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">expirationMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - If not set, the table is partitioned by pseudo column ‘_PARTITIONTIME’; if set, the table is partitioned by this field.
+The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
+A wrapper is used here because an empty string is an invalid value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
+but in OnePlatform the field will be treated as unset.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
+WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
+The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
+</ul>
+<p>The <strong>query</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowLargeResults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
+Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
+However, you must still set destinationTable when result size exceeds the allowed maximum response size.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
+CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
+The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultDataset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+The BigQuery Service Account associated with your project requires access to this encryption key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationTable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The destination table.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flattenResults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
+allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumBillingTier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
+If unspecified, this will be set to your project default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumBytesBilled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
+If unspecified, this will be set to your project default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameterMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (&#64;myparam) query parameters in this query.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Configures a query job.  Structure is documented below.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaUpdateOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scriptOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Options controlling the execution of scripts.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyResultStatement</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Determines which statement in the script represents the “key result”,
+used to populate the schema and query results of the script job. Default is LAST.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statementByteBudget</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Limit on the number of bytes billed per statement. Exceeding this budget results in an error.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statementTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Timeout period for each statement in a script.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useLegacySql</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether to use BigQuery’s legacy SQL dialect for this query. The default value is true.
+If set to false, the query will use BigQuery’s standard SQL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useQueryCache</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
+tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
+The default value is true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userDefinedFunctionResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Describes user-defined function resources used in the query.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">inlineCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An inline resource that contains code for a user-defined function (UDF).
+Providing a inline code resource is equivalent to providing a URI for a file containing the same code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A code resource to load from a Google Cloud Storage URI (gs://bucket/path).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
+WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
+The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Job.copy">
+<code class="sig-name descname">copy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Job.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies a table.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
+CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
+The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+The BigQuery Service Account associated with your project requires access to this encryption key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationTable</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The destination table.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceTables</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Source tables to copy.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
+WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
+The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Job.extract">
+<code class="sig-name descname">extract</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Job.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures an extract job.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">compression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
+The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
+The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
+The default value for models is SAVED_MODEL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationUris</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
+Default is ‘,’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">printHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to print out a header row in the results. Default is true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceModel</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A reference to the model being exported.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceTable</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A reference to the table being exported.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useAvroLogicalTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to use logical types when extracting to AVRO format.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Job.job_id">
+<code class="sig-name descname">job_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Job.job_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Job.job_timeout_ms">
+<code class="sig-name descname">job_timeout_ms</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Job.job_timeout_ms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Job.job_type">
+<code class="sig-name descname">job_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Job.job_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the job.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Job.labels">
+<code class="sig-name descname">labels</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Job.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>The labels associated with this job. You can use these to organize and group your jobs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Job.load">
+<code class="sig-name descname">load</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Job.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures a load job.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowJaggedRows</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
+If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
+an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowQuotedNewlines</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
+The default value is false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autodetect</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates if we should automatically infer the options and schema for CSV and JSON sources.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
+CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
+The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+The BigQuery Service Account associated with your project requires access to this encryption key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationTable</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The destination table.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
+The default value is UTF-8. BigQuery decodes the data after the raw, binary data
+has been split using the values of the quote and fieldDelimiter properties.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
+Default is ‘,’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreUnknownValues</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates if BigQuery should allow extra values that are not represented in the table schema.
+If true, the extra values are ignored. If false, records with extra columns are treated as bad records,
+and if there are too many bad records, an invalid error is returned in the job result.
+The default value is false. The sourceFormat property determines what BigQuery treats as an extra value:
+CSV: Trailing columns
+JSON: Named values that don’t match any column names</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBadRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
+an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nullMarker</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a string that represents a null value in a CSV file. The default value is the empty string. If you set this
+property to a custom value, BigQuery throws an error if an
+empty string is present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the empty string as
+an empty value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectionFields</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - If sourceFormat is set to “DATASTORE_BACKUP”, indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
+Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
+If any named property isn’t found in the Cloud Datastore backup, an invalid error is returned in the job result.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quote</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
+and then uses the first byte of the encoded string to split the data in its raw, binary state.
+The default value is a double-quote (‘”’). If your data does not contain quoted sections, set the property value to an empty string.
+If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaUpdateOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skipLeadingRows</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
+The default value is 0. This property is useful if you have header rows in the file that should be skipped.
+When autodetect is on, the behavior is the following:
+skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
+the row is read as data. Otherwise data is read starting from the second row.
+skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row.
+skipLeadingRows = N &gt; 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
+row N is just skipped. Otherwise row N is used to extract column names for the detected schema.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The format of the data files. For CSV files, specify “CSV”. For datastore backups, specify “DATASTORE_BACKUP”.
+For newline-delimited JSON, specify “NEWLINE_DELIMITED_JSON”. For Avro, specify “AVRO”. For parquet, specify “PARQUET”.
+For orc, specify “ORC”. The default value is CSV.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceUris</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The fully-qualified URIs that point to your data in Google Cloud.
+For Google Cloud Storage URIs: Each URI can contain one ‘<em>’ wildcard character
+and it must come after the ‘bucket’ name. Size limits related to load jobs apply
+to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
+specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
+For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the ‘</em>’ wildcard character is not allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_partitioning</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Time-based partitioning specification for the destination table.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">expirationMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - If not set, the table is partitioned by pseudo column ‘_PARTITIONTIME’; if set, the table is partitioned by this field.
+The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
+A wrapper is used here because an empty string is an invalid value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
+but in OnePlatform the field will be treated as unset.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
+WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
+The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Job.location">
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Job.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The geographic location of the job. The default value is US.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Job.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Job.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Job.query">
+<code class="sig-name descname">query</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Job.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures a query job.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowLargeResults</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
+Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
+However, you must still set destinationTable when result size exceeds the allowed maximum response size.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
+CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
+The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultDataset</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+The BigQuery Service Account associated with your project requires access to this encryption key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationTable</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The destination table.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flattenResults</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
+allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumBillingTier</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
+If unspecified, this will be set to your project default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumBytesBilled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
+If unspecified, this will be set to your project default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameterMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (&#64;myparam) query parameters in this query.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Configures a query job.  Structure is documented below.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaUpdateOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scriptOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Options controlling the execution of scripts.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyResultStatement</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Determines which statement in the script represents the “key result”,
+used to populate the schema and query results of the script job. Default is LAST.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statementByteBudget</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Limit on the number of bytes billed per statement. Exceeding this budget results in an error.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statementTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Timeout period for each statement in a script.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useLegacySql</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether to use BigQuery’s legacy SQL dialect for this query. The default value is true.
+If set to false, the query will use BigQuery’s standard SQL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useQueryCache</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
+tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
+The default value is true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userDefinedFunctionResources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Describes user-defined function resources used in the query.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">inlineCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An inline resource that contains code for a user-defined function (UDF).
+Providing a inline code resource is equivalent to providing a URI for a file containing the same code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A code resource to load from a Google Cloud Storage URI (gs://bucket/path).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
+WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
+The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gcp.bigquery.Job.user_email">
+<code class="sig-name descname">user_email</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Job.user_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>Email address of the user who ran the job.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.Job.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extract</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_timeout_ms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_email</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Job.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Job resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>copy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Copies a table.  Structure is documented below.</p></li>
+<li><p><strong>extract</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures an extract job.  Structure is documented below.</p></li>
+<li><p><strong>job*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (<a href="#id17"><span class="problematic" id="id18">*</span></a>), or dashes (-). The maximum length is 1,024 characters.</p>
+</p></li>
+<li><p><strong>job_timeout_ms</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.</p></li>
+<li><p><strong>job_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the job.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this job. You can use these to organize and group your jobs.</p></li>
+<li><p><strong>load</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures a load job.  Structure is documented below.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The geographic location of the job. The default value is US.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures a query job.  Structure is documented below.</p></li>
+<li><p><strong>user_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Email address of the user who ran the job.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>copy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
+CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
+The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+The BigQuery Service Account associated with your project requires access to this encryption key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationTable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The destination table.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceTables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Source tables to copy.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
+WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
+The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
+</ul>
+<p>The <strong>extract</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">compression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
+The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
+The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
+The default value for models is SAVED_MODEL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationUris</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
+Default is ‘,’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">printHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to print out a header row in the results. Default is true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceModel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A reference to the model being exported.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceTable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A reference to the table being exported.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useAvroLogicalTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to use logical types when extracting to AVRO format.</p></li>
+</ul>
+<p>The <strong>load</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowJaggedRows</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
+If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
+an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowQuotedNewlines</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
+The default value is false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autodetect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if we should automatically infer the options and schema for CSV and JSON sources.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
+CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
+The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+The BigQuery Service Account associated with your project requires access to this encryption key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationTable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The destination table.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
+The default value is UTF-8. BigQuery decodes the data after the raw, binary data
+has been split using the values of the quote and fieldDelimiter properties.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
+Default is ‘,’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreUnknownValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if BigQuery should allow extra values that are not represented in the table schema.
+If true, the extra values are ignored. If false, records with extra columns are treated as bad records,
+and if there are too many bad records, an invalid error is returned in the job result.
+The default value is false. The sourceFormat property determines what BigQuery treats as an extra value:
+CSV: Trailing columns
+JSON: Named values that don’t match any column names</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBadRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
+an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nullMarker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a string that represents a null value in a CSV file. The default value is the empty string. If you set this
+property to a custom value, BigQuery throws an error if an
+empty string is present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the empty string as
+an empty value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectionFields</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - If sourceFormat is set to “DATASTORE_BACKUP”, indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
+Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
+If any named property isn’t found in the Cloud Datastore backup, an invalid error is returned in the job result.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quote</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
+and then uses the first byte of the encoded string to split the data in its raw, binary state.
+The default value is a double-quote (‘”’). If your data does not contain quoted sections, set the property value to an empty string.
+If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaUpdateOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skipLeadingRows</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
+The default value is 0. This property is useful if you have header rows in the file that should be skipped.
+When autodetect is on, the behavior is the following:
+skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
+the row is read as data. Otherwise data is read starting from the second row.
+skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row.
+skipLeadingRows = N &gt; 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
+row N is just skipped. Otherwise row N is used to extract column names for the detected schema.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The format of the data files. For CSV files, specify “CSV”. For datastore backups, specify “DATASTORE_BACKUP”.
+For newline-delimited JSON, specify “NEWLINE_DELIMITED_JSON”. For Avro, specify “AVRO”. For parquet, specify “PARQUET”.
+For orc, specify “ORC”. The default value is CSV.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceUris</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The fully-qualified URIs that point to your data in Google Cloud.
+For Google Cloud Storage URIs: Each URI can contain one ‘<em>’ wildcard character
+and it must come after the ‘bucket’ name. Size limits related to load jobs apply
+to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
+specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
+For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the ‘</em>’ wildcard character is not allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_partitioning</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Time-based partitioning specification for the destination table.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">expirationMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - If not set, the table is partitioned by pseudo column ‘_PARTITIONTIME’; if set, the table is partitioned by this field.
+The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
+A wrapper is used here because an empty string is an invalid value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
+but in OnePlatform the field will be treated as unset.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
+WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
+The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
+</ul>
+<p>The <strong>query</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowLargeResults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
+Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
+However, you must still set destinationTable when result size exceeds the allowed maximum response size.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the job is allowed to create new tables. The following values are supported:
+CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+CREATE_NEVER: The table must already exist. If it does not, a ‘notFound’ error is returned in the job result.
+The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultDataset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationEncryptionConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+The BigQuery Service Account associated with your project requires access to this encryption key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationTable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The destination table.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dataset containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the project containing this model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the table.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flattenResults</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
+allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumBillingTier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
+If unspecified, this will be set to your project default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumBytesBilled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
+If unspecified, this will be set to your project default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameterMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (&#64;myparam) query parameters in this query.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Configures a query job.  Structure is documented below.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaUpdateOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
+supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
+when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators.
+For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified:
+ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
+ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scriptOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Options controlling the execution of scripts.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyResultStatement</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Determines which statement in the script represents the “key result”,
+used to populate the schema and query results of the script job. Default is LAST.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statementByteBudget</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Limit on the number of bytes billed per statement. Exceeding this budget results in an error.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statementTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Timeout period for each statement in a script.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useLegacySql</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether to use BigQuery’s legacy SQL dialect for this query. The default value is true.
+If set to false, the query will use BigQuery’s standard SQL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useQueryCache</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
+tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
+The default value is true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userDefinedFunctionResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Describes user-defined function resources used in the query.  Structure is documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">inlineCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An inline resource that contains code for a user-defined function (UDF).
+Providing a inline code resource is equivalent to providing a URI for a file containing the same code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A code resource to load from a Google Cloud Storage URI (gs://bucket/path).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeDisposition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action that occurs if the destination table already exists. The following values are supported:
+WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
+WRITE_APPEND: If the table already exists, BigQuery appends the data to the table.
+WRITE_EMPTY: If the table already exists and contains data, a ‘duplicate’ error is returned in the job result.
+The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Creation, truncation and append actions occur as one atomic update upon job completion.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.Job.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Job.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gcp.bigquery.Job.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Job.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gcp.bigquery.Reservation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Reservation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_idle_slots</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slot_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation" title="Permalink to this definition">¶</a></dt>
 <dd><p>A reservation is a mechanism used to guarantee BigQuery slots to users.</p>
