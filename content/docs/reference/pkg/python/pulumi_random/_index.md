@@ -79,6 +79,22 @@ type-4 UUID.</p>
 the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">server_random_id</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomId</span><span class="p">(</span><span class="s2">&quot;serverRandomId&quot;</span><span class="p">,</span>
+    <span class="n">byte_length</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+    <span class="n">keepers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ami_id&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;ami_id&quot;</span><span class="p">],</span>
+    <span class="p">})</span>
+<span class="n">server_instance</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;serverInstance&quot;</span><span class="p">,</span>
+    <span class="n">ami</span><span class="o">=</span><span class="n">server_random_id</span><span class="o">.</span><span class="n">keepers</span><span class="p">[</span><span class="s2">&quot;amiId&quot;</span><span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="n">server_random_id</span><span class="o">.</span><span class="n">hex</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">hex</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;web-server </span><span class="si">{</span><span class="nb">hex</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -217,6 +233,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">priority</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomInteger</span><span class="p">(</span><span class="s2">&quot;priority&quot;</span><span class="p">,</span>
+    <span class="n">keepers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;listener_arn&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;listener_arn&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="nb">max</span><span class="o">=</span><span class="mi">50000</span><span class="p">,</span>
+    <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">alb</span><span class="o">.</span><span class="n">ListenerRule</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;target_group_arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">listener_arn</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;listener_arn&quot;</span><span class="p">],</span>
+    <span class="n">priority</span><span class="o">=</span><span class="n">priority</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -338,6 +373,22 @@ the raw state as plain-text. <a class="reference external" href="https://www.ter
 state</a>.</p>
 </div></blockquote>
 <p>This resource <em>does</em> use a cryptographic random number generator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">password</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomPassword</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+    <span class="n">length</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+    <span class="n">special</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">override_special</span><span class="o">=</span><span class="s2">&quot;_%@&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">rds</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">instance_class</span><span class="o">=</span><span class="s2">&quot;db.t3.micro&quot;</span><span class="p">,</span>
+    <span class="n">allocated_storage</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;mysql&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;someone&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">random_string</span><span class="p">[</span><span class="s2">&quot;password&quot;</span><span class="p">][</span><span class="s2">&quot;result&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -409,6 +460,20 @@ used as unique identifiers for other resources.</p>
 the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">server_random_pet</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomPet</span><span class="p">(</span><span class="s2">&quot;serverRandomPet&quot;</span><span class="p">,</span> <span class="n">keepers</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;ami_id&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;ami_id&quot;</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="n">server_instance</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;serverInstance&quot;</span><span class="p">,</span>
+    <span class="n">ami</span><span class="o">=</span><span class="n">server_random_pet</span><span class="o">.</span><span class="n">keepers</span><span class="p">[</span><span class="s2">&quot;amiId&quot;</span><span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="n">server_random_pet</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;web-server-</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -514,6 +579,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_random.</code><code class="sig-name descname">RandomShuffle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">result_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomShuffle" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource <code class="docutils literal notranslate"><span class="pre">.RandomShuffle</span></code> generates a random permutation of a list
 of strings given as an argument.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">az</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomShuffle</span><span class="p">(</span><span class="s2">&quot;az&quot;</span><span class="p">,</span>
+    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;us-west-1a&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-1c&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-1d&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;us-west-1e&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">result_count</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">availability_zones</span><span class="o">=</span><span class="n">az</span><span class="o">.</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -635,6 +715,15 @@ characters and optionally special characters.</p>
 used it in a password. For backwards compatibility it will
 continue to exist. For unique ids please use random_id, for sensitive
 random values please use random_password.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">random</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomString</span><span class="p">(</span><span class="s2">&quot;random&quot;</span><span class="p">,</span>
+    <span class="n">length</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+    <span class="n">override_special</span><span class="o">=</span><span class="s2">&quot;/@£$$&quot;</span><span class="p">,</span>
+    <span class="n">special</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -840,6 +929,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 used as unique identifiers for other resources.</p>
 <p>This resource uses the <code class="docutils literal notranslate"><span class="pre">hashicorp/go-uuid</span></code> to generate a UUID-formatted string
 for use with services needed a unique string identifier.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">test_random_uuid</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomUuid</span><span class="p">(</span><span class="s2">&quot;testRandomUuid&quot;</span><span class="p">)</span>
+<span class="n">test_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;testResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;Central US&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
