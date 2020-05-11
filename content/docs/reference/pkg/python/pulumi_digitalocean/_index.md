@@ -169,6 +169,24 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;fqdn&quot;</span><span class="p">,</span> <span class="n">mycdn</span><span class="o">.</span><span class="n">endpoint</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_digitalocean</span> <span class="k">as</span> <span class="nn">digitalocean</span>
+
+<span class="c1"># Create a new Spaces Bucket</span>
+<span class="n">mybucket</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">SpacesBucket</span><span class="p">(</span><span class="s2">&quot;mybucket&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;sfo2&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="s2">&quot;public-read&quot;</span><span class="p">)</span>
+<span class="c1"># Create a DigitalOcean managed Let&#39;s Encrypt Certificate</span>
+<span class="n">cert</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Certificate</span><span class="p">(</span><span class="s2">&quot;cert&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;lets_encrypt&quot;</span><span class="p">,</span>
+    <span class="n">domains</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;static.example.com&quot;</span><span class="p">])</span>
+<span class="c1"># Add a CDN endpoint with a custom sub-domain to the Spaces Bucket</span>
+<span class="n">mycdn</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">Cdn</span><span class="p">(</span><span class="s2">&quot;mycdn&quot;</span><span class="p">,</span>
+    <span class="n">origin</span><span class="o">=</span><span class="n">mybucket</span><span class="o">.</span><span class="n">bucket_domain_name</span><span class="p">,</span>
+    <span class="n">custom_domain</span><span class="o">=</span><span class="s2">&quot;static.example.com&quot;</span><span class="p">,</span>
+    <span class="n">certificate_id</span><span class="o">=</span><span class="n">cert</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
