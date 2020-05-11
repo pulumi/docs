@@ -22,7 +22,6 @@ cloud-hosted custom Kubernetes clusters, and the managed services from Google
 packages and [CLI]({{< relref "/docs/reference/cli" >}})
 help you accomplish all these within minutes. Upon completing this guide you will have:
 
-- Configured a Pulumi Community Edition account
 - Created a Kubernetes NGINX deployment
 - Modify your program to deploy to MiniKube
 

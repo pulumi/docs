@@ -13,7 +13,6 @@ aliases: ["/docs/quickstart/gcp/"]
 
 {{< cloud-intro "Google Cloud" >}}
 
-- Configure a Pulumi Community Edition account
 - Deploy a Storage Bucket
 - Modify the bucket to include labels
 

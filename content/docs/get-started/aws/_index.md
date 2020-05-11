@@ -13,9 +13,8 @@ aliases: ["/docs/quickstart/aws/"]
 
 {{< cloud-intro "AWS" >}}
 
-- Configure a Pulumi Community Edition account
 - Deploy a S3 Bucket
-- Modify the bucket to include a KMS key
+- Modify the bucket to protect the bucket's contents with server-side encryption
 
 Estimated AWS Cost: <strong>Free</strong>
 <br />

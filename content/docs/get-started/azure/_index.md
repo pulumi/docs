@@ -13,7 +13,6 @@ aliases: ["/docs/quickstart/azure/"]
 
 {{< cloud-intro "Azure" >}}
 
-- Configure a Pulumi Community Edition account
 - Deploy an Azure Resource Group and Storage Account
 - Modify the program to export the storage account’s connection string
 
