@@ -30,63 +30,9 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as vsphere from "@pulumi/vsphere";
-
-const config = new pulumi.Config();
-const datacenter = config.get("datacenter") || "dc1";
-const hosts = config.get("hosts") || [
-    "esxi1",
-    "esxi2",
-    "esxi3",
-];
-
-const dc = pulumi.output(vsphere.getDatacenter({
-    name: datacenter,
-}, { async: true }));
-const hostsHost: pulumi.Output<vsphere.GetHostResult>[] = [];
-for (let i = 0; i < hosts.length; i++) {
-    hostsHost.push(dc.apply(dc => vsphere.getHost({
-        datacenterId: dc.id,
-        name: hosts[i],
-    }, { async: true })));
-}
-const computeCluster = new vsphere.ComputeCluster("compute_cluster", {
-    datacenterId: dc.id,
-    drsAutomationLevel: "fullyAutomated",
-    drsEnabled: true,
-    haEnabled: true,
-    hostSystemIds: hostsHost.map(v => v.id),
-});
-const clusterHostGroup = new vsphere.ComputeClusterHostGroup("cluster_host_group", {
-    computeClusterId: computeCluster.id,
-    hostSystemIds: hostsHost.map(v => v.id),
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a ComputeClusterHostGroup Resource {#create}

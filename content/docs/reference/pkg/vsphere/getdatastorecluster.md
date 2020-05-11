@@ -38,7 +38,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+datacenter = vsphere.get_datacenter(name="dc1")
+datastore_cluster = vsphere.get_datastore_cluster(datacenter_id=data["vsphere..Datacenter"]["dc"]["id"],
+    name="datastore-cluster1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

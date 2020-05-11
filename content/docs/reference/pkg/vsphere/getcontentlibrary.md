@@ -31,7 +31,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+library = vsphere.get_content_library(name="Content Library Test")
+```
 {{% /example %}}
 
 {{% example typescript %}}

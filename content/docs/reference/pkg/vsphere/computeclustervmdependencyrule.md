@@ -45,7 +45,54 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="dc1")
+datastore = vsphere.get_datastore(datacenter_id=dc.id,
+    name="datastore1")
+cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
+    name="cluster1")
+network = vsphere.get_network(datacenter_id=dc.id,
+    name="network1")
+vm1 = vsphere.VirtualMachine("vm1",
+    datastore_id=datastore.id,
+    disks=[{
+        "label": "disk0",
+        "size": 20,
+    }],
+    guest_id="other3xLinux64Guest",
+    memory=2048,
+    network_interfaces=[{
+        "networkId": network.id,
+    }],
+    num_cpus=2,
+    resource_pool_id=cluster.resource_pool_id)
+vm2 = vsphere.VirtualMachine("vm2",
+    datastore_id=datastore.id,
+    disks=[{
+        "label": "disk0",
+        "size": 20,
+    }],
+    guest_id="other3xLinux64Guest",
+    memory=2048,
+    network_interfaces=[{
+        "networkId": network.id,
+    }],
+    num_cpus=2,
+    resource_pool_id=cluster.resource_pool_id)
+cluster_vm_group1 = vsphere.ComputeClusterVmGroup("clusterVmGroup1",
+    compute_cluster_id=cluster.id,
+    virtual_machine_ids=[vm1.id])
+cluster_vm_group2 = vsphere.ComputeClusterVmGroup("clusterVmGroup2",
+    compute_cluster_id=cluster.id,
+    virtual_machine_ids=[vm2.id])
+cluster_vm_dependency_rule = vsphere.ComputeClusterVmDependencyRule("clusterVmDependencyRule",
+    compute_cluster_id=cluster.id,
+    dependency_vm_group_name=cluster_vm_group1.name,
+    vm_group_name=cluster_vm_group2.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}

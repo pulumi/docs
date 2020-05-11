@@ -48,7 +48,36 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="dc1")
+datastore = vsphere.get_datastore(datacenter_id=dc.id,
+    name="datastore1")
+cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
+    name="cluster1")
+network = vsphere.get_network(datacenter_id=dc.id,
+    name="network1")
+vm = []
+for range in [{"value": i} for i in range(0, 2)]:
+    vm.append(vsphere.VirtualMachine(f"vm-{range['value']}",
+        datastore_id=datastore.id,
+        disks=[{
+            "label": "disk0",
+            "size": 20,
+        }],
+        guest_id="other3xLinux64Guest",
+        memory=2048,
+        network_interfaces=[{
+            "networkId": network.id,
+        }],
+        num_cpus=2,
+        resource_pool_id=cluster.resource_pool_id))
+cluster_vm_group = vsphere.ComputeClusterVmGroup("clusterVmGroup",
+    compute_cluster_id=cluster.id,
+    virtual_machine_ids=[__item.id for __item in vm])
+```
 {{% /example %}}
 
 {{% example typescript %}}

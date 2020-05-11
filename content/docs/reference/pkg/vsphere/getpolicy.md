@@ -33,7 +33,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+policy = vsphere.get_policy(name="policy1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -25,64 +25,9 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as vsphere from "@pulumi/vsphere";
-
-const config = new pulumi.Config();
-const datacenter = config.get("datacenter") || "dc1";
-const hosts = config.get("hosts") || [
-    "esxi1",
-    "esxi2",
-    "esxi3",
-];
-
-const dc = pulumi.output(vsphere.getDatacenter({
-    name: datacenter,
-}, { async: true }));
-const hostsHost: pulumi.Output<vsphere.GetHostResult>[] = [];
-for (let i = 0; i < hosts.length; i++) {
-    hostsHost.push(dc.apply(dc => vsphere.getHost({
-        datacenterId: dc.id,
-        name: hosts[i],
-    }, { async: true })));
-}
-const computeCluster = new vsphere.ComputeCluster("compute_cluster", {
-    datacenterId: dc.id,
-    drsAutomationLevel: "fullyAutomated",
-    drsEnabled: true,
-    hostSystemIds: hostsHost.map(v => v.id),
-});
-const dpmHostOverride = new vsphere.DpmHostOverride("dpm_host_override", {
-    computeClusterId: computeCluster.id,
-    dpmAutomationLevel: "automated",
-    dpmEnabled: true,
-    hostSystemId: hostsHost[0].id,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a DpmHostOverride Resource {#create}

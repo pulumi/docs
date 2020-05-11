@@ -28,7 +28,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+license_key = vsphere.License("licenseKey",
+    labels={
+        "VpxClientLicenseLabel": "Hello World",
+        "Workflow": "Hello World",
+    },
+    license_key="452CQ-2EK54-K8742-00000-00000")
+```
 {{% /example %}}
 
 {{% example typescript %}}

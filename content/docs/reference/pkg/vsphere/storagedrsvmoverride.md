@@ -37,7 +37,37 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="dc1")
+datastore_cluster = vsphere.get_datastore_cluster(datacenter_id=dc.id,
+    name="datastore-cluster1")
+member_datastore = vsphere.get_datastore(datacenter_id=dc.id,
+    name="datastore-cluster1-member1")
+pool = vsphere.get_resource_pool(datacenter_id=dc.id,
+    name="cluster1/Resources")
+network = vsphere.get_network(datacenter_id=dc.id,
+    name="public")
+vm = vsphere.VirtualMachine("vm",
+    datastore_id=member_datastore.id,
+    disks=[{
+        "label": "disk0",
+        "size": 20,
+    }],
+    guest_id="other3xLinux64Guest",
+    memory=1024,
+    network_interfaces=[{
+        "networkId": network.id,
+    }],
+    num_cpus=2,
+    resource_pool_id=pool.id)
+drs_vm_override = vsphere.StorageDrsVmOverride("drsVmOverride",
+    datastore_cluster_id=datastore_cluster.id,
+    sdrs_enabled=False,
+    virtual_machine_id=vm.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -49,7 +49,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+demo1 = vsphere.VirtualMachineSnapshot("demo1",
+    consolidate="true",
+    description="This is Demo Snapshot",
+    memory="true",
+    quiesce="true",
+    remove_children="false",
+    snapshot_name="Snapshot Name",
+    virtual_machine_uuid="9aac5551-a351-4158-8c5c-15a71e8ec5c9")
+```
 {{% /example %}}
 
 {{% example typescript %}}

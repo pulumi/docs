@@ -46,7 +46,36 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="dc1")
+datastore_cluster = vsphere.get_datastore_cluster(datacenter_id=dc.id,
+    name="datastore-cluster1")
+cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
+    name="cluster1")
+network = vsphere.get_network(datacenter_id=dc.id,
+    name="network1")
+vm = []
+for range in [{"value": i} for i in range(0, 2)]:
+    vm.append(vsphere.VirtualMachine(f"vm-{range['value']}",
+        datastore_cluster_id=datastore_cluster.id,
+        disks=[{
+            "label": "disk0",
+            "size": 20,
+        }],
+        guest_id="other3xLinux64Guest",
+        memory=2048,
+        network_interfaces=[{
+            "networkId": network.id,
+        }],
+        num_cpus=2,
+        resource_pool_id=cluster.resource_pool_id))
+cluster_vm_anti_affinity_rule = vsphere.DatastoreClusterVmAntiAffinityRule("clusterVmAntiAffinityRule",
+    datastore_cluster_id=datastore_cluster.id,
+    virtual_machine_ids=[__item.id for __item in vm])
+```
 {{% /example %}}
 
 {{% example typescript %}}

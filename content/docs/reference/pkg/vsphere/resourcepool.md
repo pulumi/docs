@@ -34,7 +34,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+config = pulumi.Config()
+datacenter = config.get("datacenter")
+if datacenter is None:
+    datacenter = "dc1"
+cluster = config.get("cluster")
+if cluster is None:
+    cluster = "cluster1"
+dc = vsphere.get_datacenter(name=datacenter)
+compute_cluster = vsphere.get_compute_cluster(datacenter_id=dc.id,
+    name=cluster)
+resource_pool = vsphere.ResourcePool("resourcePool", parent_resource_pool_id=compute_cluster.resource_pool_id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

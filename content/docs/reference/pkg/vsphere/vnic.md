@@ -12,6 +12,128 @@ meta_desc: "Explore the Vnic resource of the vSphere package, including examples
 
 Provides a VMware vSphere vnic resource.
 
+## Example Usages
+
+**Create a vnic attached to a distributed virtual switch using the vmotion TCP/IP stack:**
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const dc = vsphere.getDatacenter({
+    name: "mydc",
+});
+const h1 = dc.then(dc => vsphere.getHost({
+    name: "esxi1.host.test",
+    datacenterId: dc.id,
+}));
+const d1 = new vsphere.DistributedVirtualSwitch("d1", {
+    datacenterId: dc.then(dc => dc.id),
+    host: [{
+        hostSystemId: h1.then(h1 => h1.id),
+        devices: ["vnic3"],
+    }],
+});
+const p1 = new vsphere.DistributedPortGroup("p1", {
+    vlanId: 1234,
+    distributedVirtualSwitchUuid: d1.id,
+});
+const v1 = new vsphere.Vnic("v1", {
+    host: h1.then(h1 => h1.id),
+    distributedSwitchPort: d1.id,
+    distributedPortGroup: p1.id,
+    ipv4: {
+        dhcp: true,
+    },
+    netstack: "vmotion",
+});
+```
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="mydc")
+h1 = vsphere.get_host(name="esxi1.host.test",
+    datacenter_id=dc.id)
+d1 = vsphere.DistributedVirtualSwitch("d1",
+    datacenter_id=dc.id,
+    host=[{
+        "hostSystemId": h1.id,
+        "devices": ["vnic3"],
+    }])
+p1 = vsphere.DistributedPortGroup("p1",
+    vlan_id=1234,
+    distributed_virtual_switch_uuid=d1.id)
+v1 = vsphere.Vnic("v1",
+    host=h1.id,
+    distributed_switch_port=d1.id,
+    distributed_port_group=p1.id,
+    ipv4={
+        "dhcp": True,
+    },
+    netstack="vmotion")
+```
+
+**Create a vnic attached to a portgroup using the default TCP/IP stack:**
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const dc = vsphere.getDatacenter({
+    name: "mydc",
+});
+const h1 = dc.then(dc => vsphere.getHost({
+    name: "esxi1.host.test",
+    datacenterId: dc.id,
+}));
+const hvs1 = new vsphere.HostVirtualSwitch("hvs1", {
+    hostSystemId: h1.then(h1 => h1.id),
+    networkAdapters: [
+        "vmnic3",
+        "vmnic4",
+    ],
+    activeNics: ["vmnic3"],
+    standbyNics: ["vmnic4"],
+});
+const p1 = new vsphere.HostPortGroup("p1", {
+    virtualSwitchName: hvs1.name,
+    hostSystemId: h1.then(h1 => h1.id),
+});
+const v1 = new vsphere.Vnic("v1", {
+    host: h1.then(h1 => h1.id),
+    portgroup: p1.name,
+    ipv4: {
+        dhcp: true,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dc = vsphere.get_datacenter(name="mydc")
+h1 = vsphere.get_host(name="esxi1.host.test",
+    datacenter_id=dc.id)
+hvs1 = vsphere.HostVirtualSwitch("hvs1",
+    host_system_id=h1.id,
+    network_adapters=[
+        "vmnic3",
+        "vmnic4",
+    ],
+    active_nics=["vmnic3"],
+    standby_nics=["vmnic4"])
+p1 = vsphere.HostPortGroup("p1",
+    virtual_switch_name=hvs1.name,
+    host_system_id=h1.id)
+v1 = vsphere.Vnic("v1",
+    host=h1.id,
+    portgroup=p1.name,
+    ipv4={
+        "dhcp": True,
+    })
+```
+
 ## Importing 
 
 An existing vNic can be [imported][docs-import] into this resource
@@ -21,6 +143,9 @@ via supplying the vNic's ID. An example is below:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+```
+```python
+import pulumi
 ```
 
 The above would import the the vnic `vmk2` from host with ID `host-123`.

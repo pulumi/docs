@@ -36,85 +36,6 @@ connections.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as vsphere from "@pulumi/vsphere";
-
-const config = new pulumi.Config();
-const esxiHosts = config.get("esxiHosts") || [
-    "esxi1",
-    "esxi2",
-    "esxi3",
-];
-const networkInterfaces = config.get("networkInterfaces") || [
-    "vmnic0",
-    "vmnic1",
-    "vmnic2",
-    "vmnic3",
-];
-
-const dc = pulumi.output(vsphere.getDatacenter({
-    name: "dc1",
-}, { async: true }));
-const host: pulumi.Output<vsphere.GetHostResult>[] = [];
-for (let i = 0; i < esxiHosts.length; i++) {
-    host.push(dc.apply(dc => vsphere.getHost({
-        datacenterId: dc.id,
-        name: esxiHosts[i],
-    }, { async: true })));
-}
-const dvs = new vsphere.DistributedVirtualSwitch("dvs", {
-    activeUplinks: [
-        "uplink1",
-        "uplink2",
-    ],
-    datacenterId: dc.id,
-    hosts: [
-        {
-            devices: networkInterfaces,
-            hostSystemId: host[0].id,
-        },
-        {
-            devices: networkInterfaces,
-            hostSystemId: host[1].id,
-        },
-        {
-            devices: networkInterfaces,
-            hostSystemId: host[2].id,
-        },
-    ],
-    standbyUplinks: [
-        "uplink3",
-        "uplink4",
-    ],
-    uplinks: [
-        "uplink1",
-        "uplink2",
-        "uplink3",
-        "uplink4",
-    ],
-});
-const pg = new vsphere.DistributedPortGroup("pg", {
-    distributedVirtualSwitchUuid: dvs.id,
-    vlanId: 1000,
-});
-```
-{{% /example %}}
-
 ### Overriding DVS policies
 {{% example csharp %}}
 Coming soon!
@@ -125,7 +46,27 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_vsphere as vsphere
+
+dvs = vsphere.DistributedVirtualSwitch("dvs",
+    active_uplinks=["tfup1"],
+    datacenter_id=data["vsphere..Datacenter"]["dc"]["id"],
+    standby_uplinks=["tfup2"],
+    uplinks=[
+        "tfup1",
+        "tfup2",
+    ])
+pg = vsphere.DistributedPortGroup("pg",
+    active_uplinks=[
+        "tfup1",
+        "tfup2",
+    ],
+    distributed_virtual_switch_uuid=dvs.id,
+    standby_uplinks=[],
+    vlan_id=1000)
+```
 {{% /example %}}
 
 {{% example typescript %}}
