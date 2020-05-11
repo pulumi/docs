@@ -59,7 +59,7 @@ const main = digitalocean.getSizes({
 const web = new digitalocean.Droplet("web", {
     image: "ubuntu-18-04-x64",
     region: "sgp1",
-    size: main.then(main => main.sizes)[0].then(main => main.slug),
+    size: main.then(main => main.sizes)[0].then(sizes => sizes.slug),
 });
 ```
 {{% /example %}}
