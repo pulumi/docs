@@ -14,11 +14,66 @@ Manages a ServiceBus Topic.
 
 **Note** Topics can only be created in Namespaces with an SKU of `standard` or higher.
 
-{{% examples %}}
-{{% /examples %}}
+
 
 Deprecated: azure.eventhub.Topic has been deprecated in favour of azure.servicebus.Topic
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_namespace = azure.servicebus.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    tags={
+        "source": "example",
+    })
+example_topic = azure.servicebus.Topic("exampleTopic",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name,
+    enable_partitioning=True)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+    tags: {
+        source: "example",
+    },
+});
+const exampleTopic = new azure.servicebus.Topic("exampleTopic", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleNamespace.name,
+    enablePartitioning: true,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Topic has been deprecated in favour of azure.servicebus.Topic{{% /md %}}</p>
 
 

@@ -12,9 +12,84 @@ meta_desc: "Explore the SubnetRouteTableAssociation resource of the network modu
 
 Associates a Route Table with a Subnet within a Virtual Network.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_route_table = azure.network.RouteTable("exampleRouteTable",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    route=[{
+        "name": "example",
+        "addressPrefix": "10.100.0.0/14",
+        "nextHopType": "VirtualAppliance",
+        "nextHopInIpAddress": "10.10.1.1",
+    }])
+example_subnet_route_table_association = azure.network.SubnetRouteTableAssociation("exampleSubnetRouteTableAssociation",
+    subnet_id=example_subnet.id,
+    route_table_id=example_route_table.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleRouteTable = new azure.network.RouteTable("exampleRouteTable", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    route: [{
+        name: "example",
+        addressPrefix: "10.100.0.0/14",
+        nextHopType: "VirtualAppliance",
+        nextHopInIpAddress: "10.10.1.1",
+    }],
+});
+const exampleSubnetRouteTableAssociation = new azure.network.SubnetRouteTableAssociation("exampleSubnetRouteTableAssociation", {
+    subnetId: exampleSubnet.id,
+    routeTableId: exampleRouteTable.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SubnetRouteTableAssociation Resource {#create}

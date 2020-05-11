@@ -12,9 +12,57 @@ meta_desc: "Explore the Account resource of the cognitive module, including exam
 
 Manages a Cognitive Services Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.cognitive.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    kind="Face",
+    sku_name="S0",
+    tags={
+        "Acceptance": "Test",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.cognitive.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    kind: "Face",
+    skuName: "S0",
+    tags: {
+        Acceptance: "Test",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

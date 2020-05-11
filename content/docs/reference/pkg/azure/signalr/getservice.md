@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.signalr.get_service(name="test-signalr",
+    resource_group_name="signalr-resource-group")
+```
 {{% /example %}}
 
 {{% example typescript %}}

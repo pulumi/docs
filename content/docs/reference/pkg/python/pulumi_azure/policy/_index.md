@@ -17,6 +17,50 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.policy.Assignment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">Assignment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_definition_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Assignment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the specified Policy Definition at the specified Scope. Also, Policy Set Definitions are supported.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_definition</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">policy</span><span class="o">.</span><span class="n">Definition</span><span class="p">(</span><span class="s2">&quot;exampleDefinition&quot;</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="s2">&quot;Custom&quot;</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;All&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;my-policy-definition&quot;</span><span class="p">,</span>
+    <span class="n">policy_rule</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;     {</span>
+<span class="s2">    &quot;if&quot;: {</span>
+<span class="s2">      &quot;not&quot;: {</span>
+<span class="s2">        &quot;field&quot;: &quot;location&quot;,</span>
+<span class="s2">        &quot;in&quot;: &quot;[parameters(&#39;allowedLocations&#39;)]&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">    },</span>
+<span class="s2">    &quot;then&quot;: {</span>
+<span class="s2">      &quot;effect&quot;: &quot;audit&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;      {</span>
+<span class="s2">    &quot;allowedLocations&quot;: {</span>
+<span class="s2">      &quot;type&quot;: &quot;Array&quot;,</span>
+<span class="s2">      &quot;metadata&quot;: {</span>
+<span class="s2">        &quot;description&quot;: &quot;The list of allowed locations for resources.&quot;,</span>
+<span class="s2">        &quot;displayName&quot;: &quot;Allowed locations&quot;,</span>
+<span class="s2">        &quot;strongType&quot;: &quot;location&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_assignment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">policy</span><span class="o">.</span><span class="n">Assignment</span><span class="p">(</span><span class="s2">&quot;exampleAssignment&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy_definition_id</span><span class="o">=</span><span class="n">example_definition</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Policy Assignment created via an Acceptance Test&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;My Example Policy Assignment&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;allowedLocations&quot;: {</span>
+<span class="s2">    &quot;value&quot;: [ &quot;West Europe&quot; ]</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -183,6 +227,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">Definition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a policy rule definition on a management group or your provider subscription.</p>
 <p>Policy definitions do not take effect until they are assigned to a scope using a Policy Assignment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">policy</span><span class="o">.</span><span class="n">Definition</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;acceptance test policy definition&quot;</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;    {</span>
+<span class="s2">    &quot;category&quot;: &quot;General&quot;</span>
+<span class="s2">    }</span>
+
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;Indexed&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;      {</span>
+<span class="s2">    &quot;allowedLocations&quot;: {</span>
+<span class="s2">      &quot;type&quot;: &quot;Array&quot;,</span>
+<span class="s2">      &quot;metadata&quot;: {</span>
+<span class="s2">        &quot;description&quot;: &quot;The list of allowed locations for resources.&quot;,</span>
+<span class="s2">        &quot;displayName&quot;: &quot;Allowed locations&quot;,</span>
+<span class="s2">        &quot;strongType&quot;: &quot;location&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">policy_rule</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;     {</span>
+<span class="s2">    &quot;if&quot;: {</span>
+<span class="s2">      &quot;not&quot;: {</span>
+<span class="s2">        &quot;field&quot;: &quot;location&quot;,</span>
+<span class="s2">        &quot;in&quot;: &quot;[parameters(&#39;allowedLocations&#39;)]&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">    },</span>
+<span class="s2">    &quot;then&quot;: {</span>
+<span class="s2">      &quot;effect&quot;: &quot;audit&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="s2">&quot;Custom&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -441,6 +525,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong>  Policy set definitions (also known as policy initiatives) do not take effect until they are assigned to a scope using a Policy Set Assignment.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">policy</span><span class="o">.</span><span class="n">PolicySetDefinition</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test Policy Set&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;    {</span>
+<span class="s2">        &quot;allowedLocations&quot;: {</span>
+<span class="s2">            &quot;type&quot;: &quot;Array&quot;,</span>
+<span class="s2">            &quot;metadata&quot;: {</span>
+<span class="s2">                &quot;description&quot;: &quot;The list of allowed locations for resources.&quot;,</span>
+<span class="s2">                &quot;displayName&quot;: &quot;Allowed locations&quot;,</span>
+<span class="s2">                &quot;strongType&quot;: &quot;location&quot;</span>
+<span class="s2">            }</span>
+<span class="s2">        }</span>
+<span class="s2">    }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">policy_definitions</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;    [</span>
+<span class="s2">        {</span>
+<span class="s2">            &quot;parameters&quot;: {</span>
+<span class="s2">                &quot;listOfAllowedLocations&quot;: {</span>
+<span class="s2">                    &quot;value&quot;: &quot;[parameters(&#39;allowedLocations&#39;)]&quot;</span>
+<span class="s2">                }</span>
+<span class="s2">            },</span>
+<span class="s2">            &quot;policyDefinitionId&quot;: &quot;/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988&quot;</span>
+<span class="s2">        }</span>
+<span class="s2">    ]</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="s2">&quot;Custom&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -571,6 +687,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.policy.Remediation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">Remediation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_assignment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_definition_reference_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Remediation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Policy Remediation at the specified Scope.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_definition</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">policy</span><span class="o">.</span><span class="n">Definition</span><span class="p">(</span><span class="s2">&quot;exampleDefinition&quot;</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="s2">&quot;Custom&quot;</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;All&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;my-policy-definition&quot;</span><span class="p">,</span>
+    <span class="n">policy_rule</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;    {</span>
+<span class="s2">    &quot;if&quot;: {</span>
+<span class="s2">      &quot;not&quot;: {</span>
+<span class="s2">        &quot;field&quot;: &quot;location&quot;,</span>
+<span class="s2">        &quot;in&quot;: &quot;[parameters(&#39;allowedLocations&#39;)]&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">    },</span>
+<span class="s2">    &quot;then&quot;: {</span>
+<span class="s2">      &quot;effect&quot;: &quot;audit&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;    {</span>
+<span class="s2">    &quot;allowedLocations&quot;: {</span>
+<span class="s2">      &quot;type&quot;: &quot;Array&quot;,</span>
+<span class="s2">      &quot;metadata&quot;: {</span>
+<span class="s2">        &quot;description&quot;: &quot;The list of allowed locations for resources.&quot;,</span>
+<span class="s2">        &quot;displayName&quot;: &quot;Allowed locations&quot;,</span>
+<span class="s2">        &quot;strongType&quot;: &quot;location&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">example_assignment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">policy</span><span class="o">.</span><span class="n">Assignment</span><span class="p">(</span><span class="s2">&quot;exampleAssignment&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">policy_definition_id</span><span class="o">=</span><span class="n">example_definition</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Policy Assignment created via an Acceptance Test&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;My Example Policy Assignment&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;allowedLocations&quot;: {</span>
+<span class="s2">    &quot;value&quot;: [ &quot;West Europe&quot; ]</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">example_remediation</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">policy</span><span class="o">.</span><span class="n">Remediation</span><span class="p">(</span><span class="s2">&quot;exampleRemediation&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">example_assignment</span><span class="o">.</span><span class="n">scope</span><span class="p">,</span>
+    <span class="n">policy_assignment_id</span><span class="o">=</span><span class="n">example_assignment</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">location_filters</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;West Europe&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -677,6 +841,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.policy.get_policy_defintion">
 <code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">get_policy_defintion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.get_policy_defintion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about a Policy Definition, both custom and built in. Retrieves Policy Definitions from your current subscription by default.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">policy</span><span class="o">.</span><span class="n">get_policy_defintion</span><span class="p">(</span><span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Allowed resource types&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -692,6 +863,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.policy.get_policy_set_definition">
 <code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">get_policy_set_definition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.get_policy_set_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Policy Set Definition.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">policy</span><span class="o">.</span><span class="n">get_policy_set_definition</span><span class="p">(</span><span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Policy Set Definition Example&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -13,9 +13,62 @@ meta_desc: "Explore the BoolVariable resource of the automation module, includin
 Manages a boolean variable in Azure Automation
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_account = azure.automation.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku=[{
+        "name": "Basic",
+    }])
+example_bool_variable = azure.automation.BoolVariable("exampleBoolVariable",
+    resource_group_name=example_resource_group.name,
+    automation_account_name=example_account.name,
+    value=False)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleAccount = new azure.automation.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: [{
+        name: "Basic",
+    }],
+});
+const exampleBoolVariable = new azure.automation.BoolVariable("exampleBoolVariable", {
+    resourceGroupName: exampleResourceGroup.name,
+    automationAccountName: exampleAccount.name,
+    value: false,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BoolVariable Resource {#create}

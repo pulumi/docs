@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.kusto.get_cluster(name="kustocluster",
+    resource_group_name="test_resource_group")
+```
 {{% /example %}}
 
 {{% example typescript %}}

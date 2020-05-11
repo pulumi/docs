@@ -30,7 +30,27 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="West US")
+vault = azure.recoveryservices.Vault("vault",
+    location=rg.location,
+    resource_group_name=rg.name,
+    sku="Standard")
+policy = azure.backup.PolicyFileShare("policy",
+    backup={
+        "frequency": "Daily",
+        "time": "23:00",
+    },
+    recovery_vault_name=vault.name,
+    resource_group_name=rg.name,
+    retention_daily={
+        "count": 10,
+    },
+    timezone="UTC")
+```
 {{% /example %}}
 
 {{% example typescript %}}

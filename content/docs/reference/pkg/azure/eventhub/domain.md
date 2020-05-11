@@ -12,11 +12,55 @@ meta_desc: "Explore the Domain resource of the eventhub module, including exampl
 
 Manages an EventGrid Domain
 
-{{% examples %}}
-{{% /examples %}}
+
 
 Deprecated: azure.eventhub.Domain has been deprecated in favour of azure.eventgrid.Domain
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
+example_domain = azure.eventgrid.Domain("exampleDomain",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tags={
+        "environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
+const exampleDomain = new azure.eventgrid.Domain("exampleDomain", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tags: {
+        environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Domain has been deprecated in favour of azure.eventgrid.Domain{{% /md %}}</p>
 
 

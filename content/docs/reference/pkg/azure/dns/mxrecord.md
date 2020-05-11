@@ -12,9 +12,77 @@ meta_desc: "Explore the MxRecord resource of the dns module, including examples,
 
 Enables you to manage DNS MX Records within Azure DNS.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_zone = azure.dns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+example_mx_record = azure.dns.MxRecord("exampleMxRecord",
+    zone_name=example_zone.name,
+    resource_group_name=example_resource_group.name,
+    ttl=300,
+    record=[
+        {
+            "preference": 10,
+            "exchange": "mail1.contoso.com",
+        },
+        {
+            "preference": 20,
+            "exchange": "mail2.contoso.com",
+        },
+    ],
+    tags={
+        "Environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleZone = new azure.dns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const exampleMxRecord = new azure.dns.MxRecord("exampleMxRecord", {
+    zoneName: exampleZone.name,
+    resourceGroupName: exampleResourceGroup.name,
+    ttl: 300,
+    record: [
+        {
+            preference: 10,
+            exchange: "mail1.contoso.com",
+        },
+        {
+            preference: 20,
+            exchange: "mail2.contoso.com",
+        },
+    ],
+    tags: {
+        Environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MxRecord Resource {#create}

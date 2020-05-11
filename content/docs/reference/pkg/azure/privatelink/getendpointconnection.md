@@ -14,9 +14,46 @@ Use this data source to access the connection status information about an existi
 
 > **NOTE** Private Endpoint is currently in Public Preview.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.privatelink.get_endpoint_connection(name="example-private-endpoint",
+    resource_group_name="example-rg")
+pulumi.export("privateEndpointStatus", example.private_service_connections[0].status)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.privatelink.getEndpointConnection({
+    name: "example-private-endpoint",
+    resourceGroupName: "example-rg",
+});
+export const privateEndpointStatus = example.then(example => example.privateServiceConnections[0].status);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetEndpointConnection {#using}

@@ -12,9 +12,46 @@ meta_desc: "Explore the GetZone function of the dns module, including examples, 
 
 Use this data source to access information about an existing DNS Zone.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.dns.get_zone(name="search-eventhubns",
+    resource_group_name="search-service")
+pulumi.export("dnsZoneId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.dns.getZone({
+    name: "search-eventhubns",
+    resourceGroupName: "search-service",
+});
+export const dnsZoneId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetZone {#using}

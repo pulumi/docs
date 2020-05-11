@@ -12,9 +12,64 @@ meta_desc: "Explore the IdentityProviderTwitter resource of the apimanagement mo
 
 Manages an API Management Twitter Identity Provider.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_service = azure.apimanagement.Service("exampleService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    publisher_name="My Company",
+    publisher_email="company@mycompany.io",
+    sku_name="Developer_1")
+example_identity_provider_twitter = azure.apimanagement.IdentityProviderTwitter("exampleIdentityProviderTwitter",
+    resource_group_name=example_resource_group.name,
+    api_management_name=example_service.name,
+    api_key="00000000000000000000000000000000",
+    api_secret_key="00000000000000000000000000000000")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleService = new azure.apimanagement.Service("exampleService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    publisherName: "My Company",
+    publisherEmail: "company@mycompany.io",
+    skuName: "Developer_1",
+});
+const exampleIdentityProviderTwitter = new azure.apimanagement.IdentityProviderTwitter("exampleIdentityProviderTwitter", {
+    resourceGroupName: exampleResourceGroup.name,
+    apiManagementName: exampleService.name,
+    apiKey: "00000000000000000000000000000000",
+    apiSecretKey: "00000000000000000000000000000000",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IdentityProviderTwitter Resource {#create}

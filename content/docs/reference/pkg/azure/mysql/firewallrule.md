@@ -12,6 +12,66 @@ meta_desc: "Explore the FirewallRule resource of the mysql module, including exa
 
 Manages a Firewall Rule for a MySQL Server
 
+## Example Usage (Single IP Address)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleServer = new azure.mysql.Server("exampleServer", {});
+// ...
+const exampleFirewallRule = new azure.mysql.FirewallRule("exampleFirewallRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    startIpAddress: "40.112.8.12",
+    endIpAddress: "40.112.8.12",
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_server = azure.mysql.Server("exampleServer")
+# ...
+example_firewall_rule = azure.mysql.FirewallRule("exampleFirewallRule",
+    resource_group_name=example_resource_group.name,
+    server_name=example_server.name,
+    start_ip_address="40.112.8.12",
+    end_ip_address="40.112.8.12")
+```
+
+## Example Usage (IP Range)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleServer = new azure.mysql.Server("exampleServer", {});
+// ...
+const exampleFirewallRule = new azure.mysql.FirewallRule("exampleFirewallRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    startIpAddress: "40.112.0.0",
+    endIpAddress: "40.112.255.255",
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_server = azure.mysql.Server("exampleServer")
+# ...
+example_firewall_rule = azure.mysql.FirewallRule("exampleFirewallRule",
+    resource_group_name=example_resource_group.name,
+    server_name=example_server.name,
+    start_ip_address="40.112.0.0",
+    end_ip_address="40.112.255.255")
+```
+
 
 
 ## Create a FirewallRule Resource {#create}

@@ -16,9 +16,137 @@ Manages a Private Endpoint.
 
 Azure Private Endpoint is a network interface that connects you privately and securely to a service powered by Azure Private Link. Private Endpoint uses a private IP address from your VNet, effectively bringing the service into your VNet. The service could be an Azure service such as Azure Storage, SQL, etc. or your own Private Link Service.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+service = azure.network.Subnet("service",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.1.0/24",
+    enforce_private_link_service_network_policies=True)
+endpoint = azure.network.Subnet("endpoint",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24",
+    enforce_private_link_endpoint_network_policies=True)
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    sku="Standard",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static")
+example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
+    sku="Standard",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    frontend_ip_configuration=[{
+        "name": example_public_ip.name,
+        "publicIpAddressId": example_public_ip.id,
+    }])
+example_link_service = azure.privatedns.LinkService("exampleLinkService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    nat_ip_configuration=[{
+        "name": example_public_ip.name,
+        "primary": True,
+        "subnetId": service.id,
+    }],
+    load_balancer_frontend_ip_configuration_ids=[example_load_balancer.frontend_ip_configurations[0].id])
+example_endpoint = azure.privatelink.Endpoint("exampleEndpoint",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    subnet_id=endpoint.id,
+    private_service_connection={
+        "name": "example-privateserviceconnection",
+        "privateConnectionResourceId": example_link_service.id,
+        "isManualConnection": False,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const service = new azure.network.Subnet("service", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.1.0/24",
+    enforcePrivateLinkServiceNetworkPolicies: true,
+});
+const endpoint = new azure.network.Subnet("endpoint", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+    enforcePrivateLinkEndpointNetworkPolicies: true,
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    sku: "Standard",
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+});
+const exampleLoadBalancer = new azure.lb.LoadBalancer("exampleLoadBalancer", {
+    sku: "Standard",
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    frontend_ip_configuration: [{
+        name: examplePublicIp.name,
+        publicIpAddressId: examplePublicIp.id,
+    }],
+});
+const exampleLinkService = new azure.privatedns.LinkService("exampleLinkService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    nat_ip_configuration: [{
+        name: examplePublicIp.name,
+        primary: true,
+        subnetId: service.id,
+    }],
+    loadBalancerFrontendIpConfigurationIds: [exampleLoadBalancer.frontendIpConfigurations.apply(frontendIpConfigurations => frontendIpConfigurations[0].id)],
+});
+const exampleEndpoint = new azure.privatelink.Endpoint("exampleEndpoint", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    subnetId: endpoint.id,
+    private_service_connection: {
+        name: "example-privateserviceconnection",
+        privateConnectionResourceId: exampleLinkService.id,
+        isManualConnection: false,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Endpoint Resource {#create}

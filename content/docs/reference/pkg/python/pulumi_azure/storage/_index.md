@@ -17,6 +17,51 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.storage.Account">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_kind</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_replication_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">blob_properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_https_traffic_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_hns_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">queue_properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">static_website</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Storage Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;GRS&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">service_endpoints</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;Microsoft.Sql&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Microsoft.Storage&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">,</span>
+    <span class="n">network_rules</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;defaultAction&quot;</span><span class="p">:</span> <span class="s2">&quot;Deny&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ipRules&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;100.0.0.1&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;virtualNetworkSubnetIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -679,6 +724,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> Only one <code class="docutils literal notranslate"><span class="pre">storage.AccountNetworkRules</span></code> can be tied to an <code class="docutils literal notranslate"><span class="pre">storage.Account</span></code>. Spurious changes will occur if more than <code class="docutils literal notranslate"><span class="pre">storage.AccountNetworkRules</span></code> is tied to the same <code class="docutils literal notranslate"><span class="pre">storage.Account</span></code>.</p>
 <p><strong>NOTE:</strong> Deleting this resource updates the storage account back to the default values it had when the storage account was created.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">service_endpoints</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Microsoft.Storage&quot;</span><span class="p">])</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;GRS&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">AccountNetworkRules</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">azurerm_resource_group</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">azurerm_storage_account</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">default_action</span><span class="o">=</span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+    <span class="n">ip_rules</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">],</span>
+    <span class="n">virtual_network_subnet_ids</span><span class="o">=</span><span class="p">[</span><span class="n">azurerm_subnet</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
+    <span class="n">bypasses</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Metrics&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -820,6 +895,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.storage.Blob">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Blob</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parallelism</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_container_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Blob within a Storage Container.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_blob</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Blob</span><span class="p">(</span><span class="s2">&quot;exampleBlob&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_container_name</span><span class="o">=</span><span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Block&quot;</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">FileAsset</span><span class="p">(</span><span class="s2">&quot;some-local-file.zip&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -995,6 +1089,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.storage.Container">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Container</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_access_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Container within an Azure Storage Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1215,6 +1326,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> This Resource requires using Azure Active Directory to connect to Azure Storage, which in turn requires the <code class="docutils literal notranslate"><span class="pre">Storage</span></code> specific roles - which are not granted by default.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">,</span>
+    <span class="n">account_kind</span><span class="o">=</span><span class="s2">&quot;StorageV2&quot;</span><span class="p">,</span>
+    <span class="n">is_hns_enabled</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
+<span class="n">example_data_lake_gen2_filesystem</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">DataLakeGen2Filesystem</span><span class="p">(</span><span class="s2">&quot;exampleDataLakeGen2Filesystem&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_id</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;hello&quot;</span><span class="p">:</span> <span class="s2">&quot;aGVsbG8=&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1666,6 +1795,61 @@ for more information.</p>
 <dt id="pulumi_azure.storage.ManagementPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">ManagementPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ManagementPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Storage Account Management Policy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;westus&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">,</span>
+    <span class="n">account_kind</span><span class="o">=</span><span class="s2">&quot;BlobStorage&quot;</span><span class="p">)</span>
+<span class="n">example_management_policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">ManagementPolicy</span><span class="p">(</span><span class="s2">&quot;exampleManagementPolicy&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_id</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">rule</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;rule1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;filters&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;prefixMatches&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;container1/prefix1&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;blobTypes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;blockBlob&quot;</span><span class="p">],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;base_blob&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;tierToCoolAfterDaysSinceModificationGreaterThan&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                    <span class="s2">&quot;tierToArchiveAfterDaysSinceModificationGreaterThan&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+                    <span class="s2">&quot;deleteAfterDaysSinceModificationGreaterThan&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;snapshot&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;deleteAfterDaysSinceCreationGreaterThan&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;rule2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;filters&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;prefixMatches&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;container2/prefix1&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;container2/prefix2&quot;</span><span class="p">,</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;blobTypes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;blockBlob&quot;</span><span class="p">],</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;base_blob&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;tierToCoolAfterDaysSinceModificationGreaterThan&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+                    <span class="s2">&quot;tierToArchiveAfterDaysSinceModificationGreaterThan&quot;</span><span class="p">:</span> <span class="mi">51</span><span class="p">,</span>
+                    <span class="s2">&quot;deleteAfterDaysSinceModificationGreaterThan&quot;</span><span class="p">:</span> <span class="mi">101</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;snapshot&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;deleteAfterDaysSinceCreationGreaterThan&quot;</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1828,6 +2012,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.storage.Queue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Queue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Queue within an Azure Storage Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_queue</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;exampleQueue&quot;</span><span class="p">,</span> <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1918,6 +2114,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.storage.Share">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Share</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">quota</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Share" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a File Share within Azure Storage.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_share</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Share</span><span class="p">(</span><span class="s2">&quot;exampleShare&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">quota</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2073,6 +2283,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.storage.ShareDirectory">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">ShareDirectory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">share_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ShareDirectory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Directory within an Azure Storage File Share.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_share</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Share</span><span class="p">(</span><span class="s2">&quot;exampleShare&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">quota</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">example_share_directory</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">ShareDirectory</span><span class="p">(</span><span class="s2">&quot;exampleShareDirectory&quot;</span><span class="p">,</span>
+    <span class="n">share_name</span><span class="o">=</span><span class="n">example_share</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2171,6 +2398,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.storage.Table">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Table within an Azure Storage Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_table</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;exampleTable&quot;</span><span class="p">,</span> <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2296,6 +2535,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.storage.TableEntity">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">TableEntity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">row_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">table_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.TableEntity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Entity within a Table in an Azure Storage Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;westus&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_table</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span><span class="s2">&quot;exampleTable&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_table_entity</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">TableEntity</span><span class="p">(</span><span class="s2">&quot;exampleTableEntity&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">table_name</span><span class="o">=</span><span class="n">example_table</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">partition_key</span><span class="o">=</span><span class="s2">&quot;examplepartition&quot;</span><span class="p">,</span>
+    <span class="n">row_key</span><span class="o">=</span><span class="s2">&quot;exmamplerow&quot;</span><span class="p">,</span>
+    <span class="n">entity</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;example&quot;</span><span class="p">:</span> <span class="s2">&quot;sample&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2474,6 +2735,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.storage.get_account">
 <code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.get_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Storage Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;packerimages&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;packer-storage&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;storageAccountTier&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">account_tier</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2489,6 +2758,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">get_account_blob_container_sas</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cache_control</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_disposition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_encoding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_language</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiry</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">https_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.get_account_blob_container_sas" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to obtain a Shared Access Signature (SAS Token) for an existing Storage Account Blob Container.</p>
 <p>Shared access signatures allow fine-grained, ephemeral access control to various aspects of an Azure Storage Account Blob Container.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">rg</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;rg&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;westus&quot;</span><span class="p">)</span>
+<span class="n">storage</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;storage&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;container&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">storage</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">storage</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">,</span> <span class="n">container</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">primary_connection_string</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get_account_blob_container_sas</span><span class="p">(</span><span class="n">connection_string</span><span class="o">=</span><span class="n">primary_connection_string</span><span class="p">,</span>
+    <span class="n">container_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">https_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;168.1.5.65&quot;</span><span class="p">,</span>
+    <span class="n">start</span><span class="o">=</span><span class="s2">&quot;2018-03-21&quot;</span><span class="p">,</span>
+    <span class="n">expiry</span><span class="o">=</span><span class="s2">&quot;2018-03-21&quot;</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;read&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;add&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;create&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;write&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;delete&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;list&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">cache_control</span><span class="o">=</span><span class="s2">&quot;max-age=5&quot;</span><span class="p">,</span>
+    <span class="n">content_disposition</span><span class="o">=</span><span class="s2">&quot;inline&quot;</span><span class="p">,</span>
+    <span class="n">content_encoding</span><span class="o">=</span><span class="s2">&quot;deflate&quot;</span><span class="p">,</span>
+    <span class="n">content_language</span><span class="o">=</span><span class="s2">&quot;en-US&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">))</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;sasUrlQueryString&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">sas</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2568,6 +2872,14 @@ and <em>not</em> a <a class="reference external" href="https://docs.microsoft.co
 <dt id="pulumi_azure.storage.get_policy">
 <code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">get_policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">storage_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.get_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Storage Management Policy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;storageaccountname&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;resourcegroupname&quot;</span><span class="p">)</span>
+<span class="n">example_policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get_policy</span><span class="p">(</span><span class="n">storage_account_id</span><span class="o">=</span><span class="n">azurerm_storage_account</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>storage_account_id</strong> (<em>str</em>) – Specifies the id of the storage account to retrieve the management policy for.</p>
@@ -2579,6 +2891,13 @@ and <em>not</em> a <a class="reference external" href="https://docs.microsoft.co
 <dt id="pulumi_azure.storage.get_storage_container">
 <code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">get_storage_container</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.get_storage_container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Storage Container.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get_storage_container</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-container-name&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="s2">&quot;example-storage-account-name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -32,7 +32,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westus")
+example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="PerGB2018")
+example_workspace = azure.securitycenter.Workspace("exampleWorkspace",
+    scope="/subscriptions/00000000-0000-0000-0000-000000000000",
+    workspace_id=example_analytics_workspace.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

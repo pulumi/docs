@@ -12,9 +12,59 @@ meta_desc: "Explore the Registry resource of the containerservice module, includ
 
 Manages an Azure Container Registry.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="West US")
+acr = azure.containerservice.Registry("acr",
+    resource_group_name=rg.name,
+    location=rg.location,
+    sku="Premium",
+    admin_enabled=False,
+    georeplication_locations=[
+        "East US",
+        "West Europe",
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "West US"});
+const acr = new azure.containerservice.Registry("acr", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    sku: "Premium",
+    adminEnabled: false,
+    georeplicationLocations: [
+        "East US",
+        "West Europe",
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Registry Resource {#create}

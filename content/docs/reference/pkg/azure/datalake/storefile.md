@@ -31,7 +31,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_store = azure.datalake.Store("exampleStore",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_store_file = azure.datalake.StoreFile("exampleStoreFile",
+    local_file_path="/path/to/local/file",
+    remote_file_path="/path/created/for/remote/file",
+    resource_group_name=example_resource_group.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}

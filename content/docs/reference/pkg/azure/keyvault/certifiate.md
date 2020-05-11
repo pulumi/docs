@@ -12,6 +12,219 @@ meta_desc: "Explore the Certifiate resource of the keyvault module, including ex
 
 Manages a Key Vault Certificate.
 
+## Example Usage (Generating a new certificate)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "standard",
+    access_policy: [{
+        tenantId: current.then(current => current.tenantId),
+        objectId: current.then(current => current.objectId),
+        certificatePermissions: [
+            "create",
+            "delete",
+            "deleteissuers",
+            "get",
+            "getissuers",
+            "import",
+            "list",
+            "listissuers",
+            "managecontacts",
+            "manageissuers",
+            "setissuers",
+            "update",
+        ],
+        keyPermissions: [
+            "backup",
+            "create",
+            "decrypt",
+            "delete",
+            "encrypt",
+            "get",
+            "import",
+            "list",
+            "purge",
+            "recover",
+            "restore",
+            "sign",
+            "unwrapKey",
+            "update",
+            "verify",
+            "wrapKey",
+        ],
+        secretPermissions: [
+            "backup",
+            "delete",
+            "get",
+            "list",
+            "purge",
+            "recover",
+            "restore",
+            "set",
+        ],
+    }],
+    tags: {
+        environment: "Production",
+    },
+});
+const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", {
+    keyVaultId: exampleKeyVault.id,
+    certificate_policy: {
+        issuer_parameters: {
+            name: "Self",
+        },
+        key_properties: {
+            exportable: true,
+            keySize: 2048,
+            keyType: "RSA",
+            reuseKey: true,
+        },
+        lifetime_action: [{
+            action: {
+                actionType: "AutoRenew",
+            },
+            trigger: {
+                daysBeforeExpiry: 30,
+            },
+        }],
+        secret_properties: {
+            contentType: "application/x-pkcs12",
+        },
+        x509_certificate_properties: {
+            extendedKeyUsages: ["1.3.6.1.5.5.7.3.1"],
+            keyUsages: [
+                "cRLSign",
+                "dataEncipherment",
+                "digitalSignature",
+                "keyAgreement",
+                "keyCertSign",
+                "keyEncipherment",
+            ],
+            subject_alternative_names: {
+                dnsNames: [
+                    "internal.contoso.com",
+                    "domain.hello.world",
+                ],
+            },
+            subject: "CN=hello-world",
+            validityInMonths: 12,
+        },
+    },
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="standard",
+    access_policy=[{
+        "tenantId": current.tenant_id,
+        "objectId": current.object_id,
+        "certificatePermissions": [
+            "create",
+            "delete",
+            "deleteissuers",
+            "get",
+            "getissuers",
+            "import",
+            "list",
+            "listissuers",
+            "managecontacts",
+            "manageissuers",
+            "setissuers",
+            "update",
+        ],
+        "keyPermissions": [
+            "backup",
+            "create",
+            "decrypt",
+            "delete",
+            "encrypt",
+            "get",
+            "import",
+            "list",
+            "purge",
+            "recover",
+            "restore",
+            "sign",
+            "unwrapKey",
+            "update",
+            "verify",
+            "wrapKey",
+        ],
+        "secretPermissions": [
+            "backup",
+            "delete",
+            "get",
+            "list",
+            "purge",
+            "recover",
+            "restore",
+            "set",
+        ],
+    }],
+    tags={
+        "environment": "Production",
+    })
+example_certificate = azure.keyvault.Certificate("exampleCertificate",
+    key_vault_id=example_key_vault.id,
+    certificate_policy={
+        "issuer_parameters": {
+            "name": "Self",
+        },
+        "key_properties": {
+            "exportable": True,
+            "keySize": 2048,
+            "keyType": "RSA",
+            "reuseKey": True,
+        },
+        "lifetime_action": [{
+            "action": {
+                "actionType": "AutoRenew",
+            },
+            "trigger": {
+                "daysBeforeExpiry": 30,
+            },
+        }],
+        "secret_properties": {
+            "contentType": "application/x-pkcs12",
+        },
+        "x509_certificate_properties": {
+            "extendedKeyUsages": ["1.3.6.1.5.5.7.3.1"],
+            "keyUsages": [
+                "cRLSign",
+                "dataEncipherment",
+                "digitalSignature",
+                "keyAgreement",
+                "keyCertSign",
+                "keyEncipherment",
+            ],
+            "subject_alternative_names": {
+                "dnsNames": [
+                    "internal.contoso.com",
+                    "domain.hello.world",
+                ],
+            },
+            "subject": "CN=hello-world",
+            "validityInMonths": 12,
+        },
+    })
+```
+
 Deprecated: azure.keyvault.Certifiate has been deprecated in favour of azure.keyvault.Certificate
 
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.keyvault.Certifiate has been deprecated in favour of azure.keyvault.Certificate{{% /md %}}</p>

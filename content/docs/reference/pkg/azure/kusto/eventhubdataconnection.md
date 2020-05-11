@@ -12,9 +12,120 @@ meta_desc: "Explore the EventhubDataConnection resource of the kusto module, inc
 
 Manages a Kusto (also known as Azure Data Explorer) EventHub Data Connection
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="East US")
+cluster = azure.kusto.Cluster("cluster",
+    location=rg.location,
+    resource_group_name=rg.name,
+    sku={
+        "name": "Standard_D13_v2",
+        "capacity": 2,
+    })
+database = azure.kusto.Database("database",
+    resource_group_name=rg.name,
+    location=rg.location,
+    cluster_name=cluster.name,
+    hot_cache_period="P7D",
+    soft_delete_period="P31D")
+eventhub_ns = azure.eventhub.EventHubNamespace("eventhubNs",
+    location=rg.location,
+    resource_group_name=rg.name,
+    sku="Standard")
+eventhub = azure.eventhub.EventHub("eventhub",
+    namespace_name=eventhub_ns.name,
+    resource_group_name=rg.name,
+    partition_count=1,
+    message_retention=1)
+consumer_group = azure.eventhub.ConsumerGroup("consumerGroup",
+    namespace_name=eventhub_ns.name,
+    eventhub_name=eventhub.name,
+    resource_group_name=rg.name)
+eventhub_connection = azure.kusto.EventhubDataConnection("eventhubConnection",
+    resource_group_name=rg.name,
+    location=rg.location,
+    cluster_name=cluster.name,
+    database_name=database.name,
+    eventhub_id=azurerm_eventhub["evenhub"]["id"],
+    consumer_group=consumer_group.name,
+    table_name="my-table",
+    mapping_rule_name="my-table-mapping",
+    data_format="JSON")
+#(Optional)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "East US"});
+const cluster = new azure.kusto.Cluster("cluster", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    sku: {
+        name: "Standard_D13_v2",
+        capacity: 2,
+    },
+});
+const database = new azure.kusto.Database("database", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    clusterName: cluster.name,
+    hotCachePeriod: "P7D",
+    softDeletePeriod: "P31D",
+});
+const eventhubNs = new azure.eventhub.EventHubNamespace("eventhubNs", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    sku: "Standard",
+});
+const eventhub = new azure.eventhub.EventHub("eventhub", {
+    namespaceName: eventhubNs.name,
+    resourceGroupName: rg.name,
+    partitionCount: 1,
+    messageRetention: 1,
+});
+const consumerGroup = new azure.eventhub.ConsumerGroup("consumerGroup", {
+    namespaceName: eventhubNs.name,
+    eventhubName: eventhub.name,
+    resourceGroupName: rg.name,
+});
+const eventhubConnection = new azure.kusto.EventhubDataConnection("eventhubConnection", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    clusterName: cluster.name,
+    databaseName: database.name,
+    eventhubId: azurerm_eventhub.evenhub.id,
+    consumerGroup: consumerGroup.name,
+    tableName: "my-table",
+    mappingRuleName: "my-table-mapping",
+    dataFormat: "JSON",
+});
+//(Optional)
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventhubDataConnection Resource {#create}

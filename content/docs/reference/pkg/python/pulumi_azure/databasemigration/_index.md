@@ -102,6 +102,31 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Destroying a Database Migration Project will leave any outstanding tasks untouched. This is to avoid unexpectedly deleting any tasks managed outside of this provider.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">databasemigration</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_subnet_id</span><span class="o">=</span><span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Standard_1vCores&quot;</span><span class="p">)</span>
+<span class="n">example_project</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">databasemigration</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;exampleProject&quot;</span><span class="p">,</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">zurerm_resource_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;location&quot;</span><span class="p">],</span>
+    <span class="n">source_platform</span><span class="o">=</span><span class="s2">&quot;SQL&quot;</span><span class="p">,</span>
+    <span class="n">target_platform</span><span class="o">=</span><span class="s2">&quot;SQLDB&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -227,6 +252,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Destroying a Database Migration Service will leave any outstanding tasks untouched. This is to avoid unexpectedly deleting any tasks managed outside of this provide.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">databasemigration</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Standard_1vCores&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -341,6 +385,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.databasemigration.get_project">
 <code class="sig-prename descclassname">pulumi_azure.databasemigration.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.databasemigration.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Database Migration Project.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">databasemigration</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-dbms-project&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-rg&quot;</span><span class="p">,</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;example-dbms&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -356,6 +409,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.databasemigration.get_service">
 <code class="sig-prename descclassname">pulumi_azure.databasemigration.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.databasemigration.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Database Migration Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">databasemigration</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-dms&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-rg&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;azurermDmsId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

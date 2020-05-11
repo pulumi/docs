@@ -20,6 +20,23 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Azure allows only one active directory can be joined to a single subscription at a time for NetApp Account.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">active_directory</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;dnsServers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;westcentralus.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;organizationalUnit&quot;</span><span class="p">:</span> <span class="s2">&quot;OU=FirstLevel&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;aduserpwd&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;smbServerName&quot;</span><span class="p">:</span> <span class="s2">&quot;SMBSERVER&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;aduser&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -280,6 +297,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.Pool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">Pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size_in_tb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.Pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Pool within a NetApp Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_pool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="s2">&quot;examplePool&quot;</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">service_level</span><span class="o">=</span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span>
+    <span class="n">size_in_tb</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -402,6 +434,54 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.Snapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a NetApp Snapshot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">delegation</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;netapp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service_delegation&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft.Netapp/volumes&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;Microsoft.Network/networkinterfaces/*&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Microsoft.Network/virtualNetworks/subnets/join/action&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">}])</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_pool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="s2">&quot;examplePool&quot;</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">service_level</span><span class="o">=</span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span>
+    <span class="n">size_in_tb</span><span class="o">=</span><span class="s2">&quot;4&quot;</span><span class="p">)</span>
+<span class="n">example_volume</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;exampleVolume&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">pool_name</span><span class="o">=</span><span class="n">example_pool</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">volume_path</span><span class="o">=</span><span class="s2">&quot;my-unique-file-path&quot;</span><span class="p">,</span>
+    <span class="n">service_level</span><span class="o">=</span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">azurerm_subnet</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">storage_quota_in_gb</span><span class="o">=</span><span class="s2">&quot;100&quot;</span><span class="p">)</span>
+<span class="n">example_snapshot</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">Snapshot</span><span class="p">(</span><span class="s2">&quot;exampleSnapshot&quot;</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">pool_name</span><span class="o">=</span><span class="n">example_pool</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">volume_name</span><span class="o">=</span><span class="n">example_volume</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -524,6 +604,49 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.Volume">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">export_policy_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocols</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_quota_in_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a NetApp Volume.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">])</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">,</span>
+    <span class="n">delegation</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;netapp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service_delegation&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft.Netapp/volumes&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;Microsoft.Network/networkinterfaces/*&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Microsoft.Network/virtualNetworks/subnets/join/action&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">}])</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_pool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="s2">&quot;examplePool&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">service_level</span><span class="o">=</span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span>
+    <span class="n">size_in_tb</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">example_volume</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;exampleVolume&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">pool_name</span><span class="o">=</span><span class="n">example_pool</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">volume_path</span><span class="o">=</span><span class="s2">&quot;my-unique-file-path&quot;</span><span class="p">,</span>
+    <span class="n">service_level</span><span class="o">=</span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;NFSv4.1&quot;</span><span class="p">],</span>
+    <span class="n">storage_quota_in_gb</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -718,6 +841,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.get_account">
 <code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.get_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uses this data source to access information about an existing NetApp Account.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;acctestRG&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;acctestnetappaccount&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;netappAccountId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -732,6 +863,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.get_pool">
 <code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">get_pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.get_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uses this data source to access information about an existing NetApp Pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">get_pool</span><span class="p">(</span><span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;acctestRG&quot;</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="s2">&quot;acctestnetappaccount&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;acctestnetapppool&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;netappPoolId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -747,6 +887,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.get_snapshot">
 <code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">get_snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uses this data source to access information about an existing NetApp Snapshot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">get_snapshot</span><span class="p">(</span><span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;acctestRG&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;acctestnetappsnapshot&quot;</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="s2">&quot;acctestnetappaccount&quot;</span><span class="p">,</span>
+    <span class="n">pool_name</span><span class="o">=</span><span class="s2">&quot;acctestnetapppool&quot;</span><span class="p">,</span>
+    <span class="n">volume_name</span><span class="o">=</span><span class="s2">&quot;acctestnetappvolume&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;netappSnapshotId&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;netapp.Snapshot&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -764,6 +915,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.get_volume">
 <code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">get_volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.get_volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uses this data source to access information about an existing NetApp Volume.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">netapp</span><span class="o">.</span><span class="n">get_volume</span><span class="p">(</span><span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;acctestRG&quot;</span><span class="p">,</span>
+    <span class="n">account_name</span><span class="o">=</span><span class="s2">&quot;acctestnetappaccount&quot;</span><span class="p">,</span>
+    <span class="n">pool_name</span><span class="o">=</span><span class="s2">&quot;acctestnetapppool&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-volume&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;netappVolumeId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

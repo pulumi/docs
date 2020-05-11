@@ -12,6 +12,73 @@ meta_desc: "Explore the ExpressRouteCircuitPeering resource of the network modul
 
 Manages an ExpressRoute Circuit Peering.
 
+## Example Usage (Creating a Microsoft Peering)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleExpressRouteCircuit = new azure.network.ExpressRouteCircuit("exampleExpressRouteCircuit", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    serviceProviderName: "Equinix",
+    peeringLocation: "Silicon Valley",
+    bandwidthInMbps: 50,
+    sku: {
+        tier: "Standard",
+        family: "MeteredData",
+    },
+    allowClassicOperations: false,
+    tags: {
+        environment: "Production",
+    },
+});
+const exampleExpressRouteCircuitPeering = new azure.network.ExpressRouteCircuitPeering("exampleExpressRouteCircuitPeering", {
+    peeringType: "MicrosoftPeering",
+    expressRouteCircuitName: exampleExpressRouteCircuit.name,
+    resourceGroupName: exampleResourceGroup.name,
+    peerAsn: 100,
+    primaryPeerAddressPrefix: "123.0.0.0/30",
+    secondaryPeerAddressPrefix: "123.0.0.4/30",
+    vlanId: 300,
+    microsoft_peering_config: {
+        advertisedPublicPrefixes: ["123.1.0.0/24"],
+    },
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_express_route_circuit = azure.network.ExpressRouteCircuit("exampleExpressRouteCircuit",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    service_provider_name="Equinix",
+    peering_location="Silicon Valley",
+    bandwidth_in_mbps=50,
+    sku={
+        "tier": "Standard",
+        "family": "MeteredData",
+    },
+    allow_classic_operations=False,
+    tags={
+        "environment": "Production",
+    })
+example_express_route_circuit_peering = azure.network.ExpressRouteCircuitPeering("exampleExpressRouteCircuitPeering",
+    peering_type="MicrosoftPeering",
+    express_route_circuit_name=example_express_route_circuit.name,
+    resource_group_name=example_resource_group.name,
+    peer_asn=100,
+    primary_peer_address_prefix="123.0.0.0/30",
+    secondary_peer_address_prefix="123.0.0.4/30",
+    vlan_id=300,
+    microsoft_peering_config={
+        "advertisedPublicPrefixes": ["123.1.0.0/24"],
+    })
+```
+
 
 
 ## Create a ExpressRouteCircuitPeering Resource {#create}

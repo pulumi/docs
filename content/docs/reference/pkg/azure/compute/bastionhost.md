@@ -14,9 +14,86 @@ Manages a Bastion Host.
 
 > **Note:** Bastion Hosts are a preview feature in Azure, and therefore are only supported in a select number of regions. [Read more](https://docs.microsoft.com/en-us/azure/bastion/bastion-faq).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["192.168.1.0/24"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="192.168.1.224/27")
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static",
+    sku="Standard")
+example_bastion_host = azure.compute.BastionHost("exampleBastionHost",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configuration={
+        "name": "configuration",
+        "subnetId": example_subnet.id,
+        "publicIpAddressId": example_public_ip.id,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["192.168.1.0/24"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "192.168.1.224/27",
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+    sku: "Standard",
+});
+const exampleBastionHost = new azure.compute.BastionHost("exampleBastionHost", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ip_configuration: {
+        name: "configuration",
+        subnetId: exampleSubnet.id,
+        publicIpAddressId: examplePublicIp.id,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BastionHost Resource {#create}

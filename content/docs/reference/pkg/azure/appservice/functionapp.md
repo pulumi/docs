@@ -12,6 +12,115 @@ meta_desc: "Explore the FunctionApp resource of the appservice module, including
 
 Manages a Function App.
 
+## Example Usage (with App Service Plan)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westus2"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+const exampleFunctionApp = new azure.appservice.FunctionApp("exampleFunctionApp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    storageAccountName: exampleAccount.name,
+    storageAccountAccessKey: exampleAccount.primaryAccessKey,
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westus2")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    storage_account_name=example_account.name,
+    storage_account_access_key=example_account.primary_access_key)
+```
+## Example Usage (in a Consumption Plan)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westus2"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    kind: "FunctionApp",
+    sku: {
+        tier: "Dynamic",
+        size: "Y1",
+    },
+});
+const exampleFunctionApp = new azure.appservice.FunctionApp("exampleFunctionApp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+    storageAccountName: exampleAccount.name,
+    storageAccountAccessKey: exampleAccount.primaryAccessKey,
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westus2")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    kind="FunctionApp",
+    sku={
+        "tier": "Dynamic",
+        "size": "Y1",
+    })
+example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id,
+    storage_account_name=example_account.name,
+    storage_account_access_key=example_account.primary_access_key)
+```
+
 
 
 ## Create a FunctionApp Resource {#create}

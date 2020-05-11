@@ -14,9 +14,60 @@ Manages an Extension for a Virtual Machine Scale Set.
 
 > **NOTE:** This resource is not intended to be used with the `azure.compute.ScaleSet` resource - instead it's intended for this to be used with the `azure.compute.LinuxVirtualMachineScaleSet` and `azure.compute.WindowsVirtualMachineScaleSet` resources.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import json
+import pulumi_azure as azure
+
+example_linux_virtual_machine_scale_set = azure.compute.LinuxVirtualMachineScaleSet("exampleLinuxVirtualMachineScaleSet")
+#...
+example_virtual_machine_scale_set_extension = azure.compute.VirtualMachineScaleSetExtension("exampleVirtualMachineScaleSetExtension",
+    virtual_machine_scale_set_id=example_linux_virtual_machine_scale_set.id,
+    publisher="Microsoft.Azure.Extensions",
+    type="CustomScript",
+    type_handler_version="2.0",
+    settings=json.dumps({
+        "commandToExecute": "echo $HOSTNAME",
+    }))
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleLinuxVirtualMachineScaleSet = new azure.compute.LinuxVirtualMachineScaleSet("exampleLinuxVirtualMachineScaleSet", {});
+//...
+const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineScaleSetExtension("exampleVirtualMachineScaleSetExtension", {
+    virtualMachineScaleSetId: exampleLinuxVirtualMachineScaleSet.id,
+    publisher: "Microsoft.Azure.Extensions",
+    type: "CustomScript",
+    typeHandlerVersion: "2.0",
+    settings: JSON.stringify({
+        commandToExecute: `echo $HOSTNAME`,
+    }),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualMachineScaleSetExtension Resource {#create}

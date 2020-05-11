@@ -12,9 +12,56 @@ meta_desc: "Explore the AnalyticsAccount resource of the datalake module, includ
 
 Manages an Azure Data Lake Analytics Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_store = azure.datalake.Store("exampleStore",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location)
+example_analytics_account = azure.datalake.AnalyticsAccount("exampleAnalyticsAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    default_store_account_name=example_store.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleStore = new azure.datalake.Store("exampleStore", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+});
+const exampleAnalyticsAccount = new azure.datalake.AnalyticsAccount("exampleAnalyticsAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    defaultStoreAccountName: exampleStore.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AnalyticsAccount Resource {#create}

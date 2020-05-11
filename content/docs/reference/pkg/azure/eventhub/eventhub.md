@@ -12,9 +12,68 @@ meta_desc: "Explore the EventHub resource of the eventhub module, including exam
 
 Manages a Event Hubs as a nested resource within a Event Hubs namespace.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_event_hub_namespace = azure.eventhub.EventHubNamespace("exampleEventHubNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    capacity=1,
+    tags={
+        "environment": "Production",
+    })
+example_event_hub = azure.eventhub.EventHub("exampleEventHub",
+    namespace_name=example_event_hub_namespace.name,
+    resource_group_name=example_resource_group.name,
+    partition_count=2,
+    message_retention=1)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleEventHubNamespace = new azure.eventhub.EventHubNamespace("exampleEventHubNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+    capacity: 1,
+    tags: {
+        environment: "Production",
+    },
+});
+const exampleEventHub = new azure.eventhub.EventHub("exampleEventHub", {
+    namespaceName: exampleEventHubNamespace.name,
+    resourceGroupName: exampleResourceGroup.name,
+    partitionCount: 2,
+    messageRetention: 1,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventHub Resource {#create}

@@ -12,9 +12,46 @@ meta_desc: "Explore the GetManagedDisk function of the compute module, including
 
 Use this data source to access information about an existing Managed Disk.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+existing = azure.compute.get_managed_disk(name="example-datadisk",
+    resource_group_name="example-resources")
+pulumi.export("id", existing.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const existing = azure.compute.getManagedDisk({
+    name: "example-datadisk",
+    resourceGroupName: "example-resources",
+});
+export const id = existing.then(existing => existing.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetManagedDisk {#using}

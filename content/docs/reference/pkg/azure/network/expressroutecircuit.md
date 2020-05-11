@@ -12,9 +12,67 @@ meta_desc: "Explore the ExpressRouteCircuit resource of the network module, incl
 
 Manages an ExpressRoute circuit.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_express_route_circuit = azure.network.ExpressRouteCircuit("exampleExpressRouteCircuit",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    service_provider_name="Equinix",
+    peering_location="Silicon Valley",
+    bandwidth_in_mbps=50,
+    sku={
+        "tier": "Standard",
+        "family": "MeteredData",
+    },
+    tags={
+        "environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleExpressRouteCircuit = new azure.network.ExpressRouteCircuit("exampleExpressRouteCircuit", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    serviceProviderName: "Equinix",
+    peeringLocation: "Silicon Valley",
+    bandwidthInMbps: 50,
+    sku: {
+        tier: "Standard",
+        family: "MeteredData",
+    },
+    tags: {
+        environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ExpressRouteCircuit Resource {#create}

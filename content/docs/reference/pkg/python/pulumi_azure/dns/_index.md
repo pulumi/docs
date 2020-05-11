@@ -17,6 +17,35 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.dns.ARecord">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">ARecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.ARecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS A Records within Azure DNS.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_a_record</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ARecord</span><span class="p">(</span><span class="s2">&quot;exampleARecord&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.180.17&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
+    <span class="n">ip_version</span><span class="o">=</span><span class="s2">&quot;IPv4&quot;</span><span class="p">)</span>
+<span class="n">example_a_record</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">ARecord</span><span class="p">(</span><span class="s2">&quot;exampleARecord&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">target_resource_id</span><span class="o">=</span><span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -138,6 +167,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.dns.AaaaRecord">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">AaaaRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.AaaaRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS AAAA Records within Azure DNS.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_aaaa_record</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">AaaaRecord</span><span class="p">(</span><span class="s2">&quot;exampleAaaaRecord&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
+    <span class="n">ip_version</span><span class="o">=</span><span class="s2">&quot;IPv6&quot;</span><span class="p">)</span>
+<span class="n">example_aaaa_record</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">AaaaRecord</span><span class="p">(</span><span class="s2">&quot;exampleAaaaRecord&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">target_resource_id</span><span class="o">=</span><span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -264,6 +321,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.dns.CNameRecord">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">CNameRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">record</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.CNameRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS CNAME Records within Azure DNS.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_c_name_record</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">CNameRecord</span><span class="p">(</span><span class="s2">&quot;exampleCNameRecord&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">record</span><span class="o">=</span><span class="s2">&quot;contoso.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">target</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">CNameRecord</span><span class="p">(</span><span class="s2">&quot;target&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">record</span><span class="o">=</span><span class="s2">&quot;contoso.com&quot;</span><span class="p">)</span>
+<span class="n">example_c_name_record</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">CNameRecord</span><span class="p">(</span><span class="s2">&quot;exampleCNameRecord&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">target_resource_id</span><span class="o">=</span><span class="n">target</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -385,6 +471,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.dns.CaaRecord">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">CaaRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.CaaRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS CAA Records within Azure DNS.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_caa_record</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">CaaRecord</span><span class="p">(</span><span class="s2">&quot;exampleCaaRecord&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">record</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;flags&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;issue&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;flags&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;issue&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;example.net&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;flags&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;issuewild&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;;&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;flags&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;iodef&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;mailto:user@nonexisting.tld&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -559,6 +681,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.dns.MxRecord">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">MxRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.MxRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS MX Records within Azure DNS.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_mx_record</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">MxRecord</span><span class="p">(</span><span class="s2">&quot;exampleMxRecord&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">record</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;preference&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;exchange&quot;</span><span class="p">:</span> <span class="s2">&quot;mail1.contoso.com&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;preference&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+            <span class="s2">&quot;exchange&quot;</span><span class="p">:</span> <span class="s2">&quot;mail2.contoso.com&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -694,6 +840,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.dns.NsRecord">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">NsRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.NsRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS NS Records within Azure DNS.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_ns_record</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">NsRecord</span><span class="p">(</span><span class="s2">&quot;exampleNsRecord&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;ns1.contoso.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ns2.contoso.com&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -815,6 +979,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.dns.PtrRecord">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">PtrRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.PtrRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS PTR Records within Azure DNS.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_ptr_record</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">PtrRecord</span><span class="p">(</span><span class="s2">&quot;examplePtrRecord&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">records</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;yourdomain.com&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -936,6 +1112,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.dns.SrvRecord">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">SrvRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.SrvRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS SRV Records within Azure DNS.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_srv_record</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">SrvRecord</span><span class="p">(</span><span class="s2">&quot;exampleSrvRecord&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">record</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+        <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;target1.contoso.com&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1077,6 +1273,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.dns.TxtRecord">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">TxtRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.TxtRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS TXT Records within Azure DNS.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_zone</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;exampleZone&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_txt_record</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">TxtRecord</span><span class="p">(</span><span class="s2">&quot;exampleTxtRecord&quot;</span><span class="p">,</span>
+    <span class="n">zone_name</span><span class="o">=</span><span class="n">example_zone</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="n">record</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;google-site-authenticator&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;more site information here&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1209,6 +1427,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.dns.Zone">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to manage DNS zones within Azure DNS. These zones are hosted on Azure’s name servers to which you can delegate the zone from the parent domain.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_public</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;example-public&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_private</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">privatedns</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;example-private&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1320,6 +1546,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.dns.get_zone">
 <code class="sig-prename descclassname">pulumi_azure.dns.</code><code class="sig-name descname">get_zone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.get_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing DNS Zone.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">dns</span><span class="o">.</span><span class="n">get_zone</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;search-eventhubns&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;dnsZoneId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

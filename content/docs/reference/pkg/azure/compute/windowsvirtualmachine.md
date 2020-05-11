@@ -22,9 +22,110 @@ Manages a Windows Virtual Machine.
 
 > In this release there's a known issue where the `public_ip_address` and `public_ip_addresses` fields may not be fully populated for Dynamic Public IP's.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configuration=[{
+        "name": "internal",
+        "subnetId": example_subnet.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+example_windows_virtual_machine = azure.compute.WindowsVirtualMachine("exampleWindowsVirtualMachine",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    size="Standard_F2",
+    admin_username="adminuser",
+    admin_password="P@$$w0rd1234!",
+    network_interface_ids=[example_network_interface.id],
+    os_disk={
+        "caching": "ReadWrite",
+        "storageAccountType": "Standard_LRS",
+    },
+    source_image_reference={
+        "publisher": "MicrosoftWindowsServer",
+        "offer": "WindowsServer",
+        "sku": "2016-Datacenter",
+        "version": "latest",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ip_configuration: [{
+        name: "internal",
+        subnetId: exampleSubnet.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const exampleWindowsVirtualMachine = new azure.compute.WindowsVirtualMachine("exampleWindowsVirtualMachine", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    size: "Standard_F2",
+    adminUsername: "adminuser",
+    adminPassword: `P@$$w0rd1234!`,
+    networkInterfaceIds: [exampleNetworkInterface.id],
+    os_disk: {
+        caching: "ReadWrite",
+        storageAccountType: "Standard_LRS",
+    },
+    source_image_reference: {
+        publisher: "MicrosoftWindowsServer",
+        offer: "WindowsServer",
+        sku: "2016-Datacenter",
+        version: "latest",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WindowsVirtualMachine Resource {#create}

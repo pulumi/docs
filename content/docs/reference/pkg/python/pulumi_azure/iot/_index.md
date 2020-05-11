@@ -32,6 +32,26 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.iot.ConsumerGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">ConsumerGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eventhub_endpoint_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iothub_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.ConsumerGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Consumer Group within an IotHub</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_io_t_hub</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">IoTHub</span><span class="p">(</span><span class="s2">&quot;exampleIoTHub&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;purpose&quot;</span><span class="p">:</span> <span class="s2">&quot;testing&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_consumer_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">ConsumerGroup</span><span class="p">(</span><span class="s2">&quot;exampleConsumerGroup&quot;</span><span class="p">,</span>
+    <span class="n">iothub_name</span><span class="o">=</span><span class="n">example_io_t_hub</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">eventhub_endpoint_name</span><span class="o">=</span><span class="s2">&quot;events&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -130,6 +150,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.iot.DpsSharedAccessPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">DpsSharedAccessPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enrollment_read</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enrollment_write</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iothub_dps_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_read</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registration_write</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.DpsSharedAccessPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an IotHub Device Provisioning Service Shared Access Policy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_iot_hub_dps</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">IotHubDps</span><span class="p">(</span><span class="s2">&quot;exampleIotHubDps&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_dps_shared_access_policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">DpsSharedAccessPolicy</span><span class="p">(</span><span class="s2">&quot;exampleDpsSharedAccessPolicy&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">iothub_dps_name</span><span class="o">=</span><span class="n">example_iot_hub_dps</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">enrollment_write</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">enrollment_read</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -291,6 +329,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Endpoints can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">azurerm_iothub_endpoint_*</span></code> resources - but the two ways of defining the endpoints cannot be used together. If both are used against the same IoTHub, spurious changes will occur. Also, defining a <code class="docutils literal notranslate"><span class="pre">azurerm_iothub_endpoint_*</span></code> resource and another endpoint of a different type directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource is not supported.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;East US&quot;</span><span class="p">)</span>
+<span class="n">example_event_hub_namespace</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">eventhub</span><span class="o">.</span><span class="n">EventHubNamespace</span><span class="p">(</span><span class="s2">&quot;exampleEventHubNamespace&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Basic&quot;</span><span class="p">)</span>
+<span class="n">example_event_hub</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">eventhub</span><span class="o">.</span><span class="n">EventHub</span><span class="p">(</span><span class="s2">&quot;exampleEventHub&quot;</span><span class="p">,</span>
+    <span class="n">namespace_name</span><span class="o">=</span><span class="n">example_event_hub_namespace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">partition_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">message_retention</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">example_authorization_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">eventhub</span><span class="o">.</span><span class="n">AuthorizationRule</span><span class="p">(</span><span class="s2">&quot;exampleAuthorizationRule&quot;</span><span class="p">,</span>
+    <span class="n">namespace_name</span><span class="o">=</span><span class="n">example_event_hub_namespace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">eventhub_name</span><span class="o">=</span><span class="n">example_event_hub</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">listen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">send</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">manage</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">example_io_t_hub</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">IoTHub</span><span class="p">(</span><span class="s2">&quot;exampleIoTHub&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;B1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Basic&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;purpose&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_endpoint_eventhub</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">EndpointEventhub</span><span class="p">(</span><span class="s2">&quot;exampleEndpointEventhub&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">iothub_name</span><span class="o">=</span><span class="n">example_io_t_hub</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">connection_string</span><span class="o">=</span><span class="n">example_authorization_rule</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -376,6 +451,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Endpoints can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">azurerm_iothub_endpoint_*</span></code> resources - but the two ways of defining the endpoints cannot be used together. If both are used against the same IoTHub, spurious changes will occur. Also, defining a <code class="docutils literal notranslate"><span class="pre">azurerm_iothub_endpoint_*</span></code> resource and another endpoint of a different type directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource is not supported.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;East US&quot;</span><span class="p">)</span>
+<span class="n">example_namespace</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">servicebus</span><span class="o">.</span><span class="n">Namespace</span><span class="p">(</span><span class="s2">&quot;exampleNamespace&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+<span class="n">example_queue</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">servicebus</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="s2">&quot;exampleQueue&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">namespace_name</span><span class="o">=</span><span class="n">example_namespace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">enable_partitioning</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">example_queue_authorization_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">servicebus</span><span class="o">.</span><span class="n">QueueAuthorizationRule</span><span class="p">(</span><span class="s2">&quot;exampleQueueAuthorizationRule&quot;</span><span class="p">,</span>
+    <span class="n">namespace_name</span><span class="o">=</span><span class="n">example_namespace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">queue_name</span><span class="o">=</span><span class="n">example_queue</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">listen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">send</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">manage</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">example_io_t_hub</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">IoTHub</span><span class="p">(</span><span class="s2">&quot;exampleIoTHub&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;B1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Basic&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;purpose&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_endpoint_servicebus_queue</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">EndpointServicebusQueue</span><span class="p">(</span><span class="s2">&quot;exampleEndpointServicebusQueue&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">iothub_name</span><span class="o">=</span><span class="n">example_io_t_hub</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">connection_string</span><span class="o">=</span><span class="n">example_queue_authorization_rule</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -461,6 +572,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Endpoints can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">azurerm_iothub_endpoint_*</span></code> resources - but the two ways of defining the endpoints cannot be used together. If both are used against the same IoTHub, spurious changes will occur. Also, defining a <code class="docutils literal notranslate"><span class="pre">azurerm_iothub_endpoint_*</span></code> resource and another endpoint of a different type directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource is not supported.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;East US&quot;</span><span class="p">)</span>
+<span class="n">example_namespace</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">servicebus</span><span class="o">.</span><span class="n">Namespace</span><span class="p">(</span><span class="s2">&quot;exampleNamespace&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+<span class="n">example_topic</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">servicebus</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span><span class="s2">&quot;exampleTopic&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">namespace_name</span><span class="o">=</span><span class="n">example_namespace</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_topic_authorization_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">servicebus</span><span class="o">.</span><span class="n">TopicAuthorizationRule</span><span class="p">(</span><span class="s2">&quot;exampleTopicAuthorizationRule&quot;</span><span class="p">,</span>
+    <span class="n">namespace_name</span><span class="o">=</span><span class="n">example_namespace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">topic_name</span><span class="o">=</span><span class="n">example_topic</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">listen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">send</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">manage</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">example_io_t_hub</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">IoTHub</span><span class="p">(</span><span class="s2">&quot;exampleIoTHub&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;B1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;Basic&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;purpose&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_endpoint_servicebus_topic</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">EndpointServicebusTopic</span><span class="p">(</span><span class="s2">&quot;exampleEndpointServicebusTopic&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">iothub_name</span><span class="o">=</span><span class="n">example_io_t_hub</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">connection_string</span><span class="o">=</span><span class="n">example_topic_authorization_rule</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -546,6 +692,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Endpoints can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">azurerm_iothub_endpoint_*</span></code> resources - but the two ways of defining the endpoints cannot be used together. If both are used against the same IoTHub, spurious changes will occur. Also, defining a <code class="docutils literal notranslate"><span class="pre">azurerm_iothub_endpoint_*</span></code> resource and another endpoint of a different type directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource is not supported.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_io_t_hub</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">IoTHub</span><span class="p">(</span><span class="s2">&quot;exampleIoTHub&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_endpoint_storage_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">EndpointStorageContainer</span><span class="p">(</span><span class="s2">&quot;exampleEndpointStorageContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">iothub_name</span><span class="o">=</span><span class="n">example_io_t_hub</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_name</span><span class="o">=</span><span class="s2">&quot;acctestcont&quot;</span><span class="p">,</span>
+    <span class="n">connection_string</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_connection_string</span><span class="p">,</span>
+    <span class="n">file_name_format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{iothub}</span><span class="s2">/</span><span class="si">{partition}</span><span class="s2">_</span><span class="si">{YYYY}</span><span class="s2">_</span><span class="si">{MM}</span><span class="s2">_</span><span class="si">{DD}</span><span class="s2">_</span><span class="si">{HH}</span><span class="s2">_</span><span class="si">{mm}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">batch_frequency_in_seconds</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="n">max_chunk_size_in_bytes</span><span class="o">=</span><span class="mi">10485760</span><span class="p">,</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;JSON&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -691,6 +868,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>Note:</strong> Fallback route can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">iot.FallbackRoute</span></code> resource - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.</p>
 <p><strong>Note:</strong> Since this resource is provisioned by default, the Azure Provider will not check for the presence of an existing resource prior to attempting to create it.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_io_t_hub</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">IoTHub</span><span class="p">(</span><span class="s2">&quot;exampleIoTHub&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;purpose&quot;</span><span class="p">:</span> <span class="s2">&quot;testing&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_endpoint_storage_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">EndpointStorageContainer</span><span class="p">(</span><span class="s2">&quot;exampleEndpointStorageContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">iothub_name</span><span class="o">=</span><span class="n">example_io_t_hub</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">connection_string</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_connection_string</span><span class="p">,</span>
+    <span class="n">batch_frequency_in_seconds</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="n">max_chunk_size_in_bytes</span><span class="o">=</span><span class="mi">10485760</span><span class="p">,</span>
+    <span class="n">container_name</span><span class="o">=</span><span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;Avro&quot;</span><span class="p">,</span>
+    <span class="n">file_name_format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{iothub}</span><span class="s2">/</span><span class="si">{partition}</span><span class="s2">_</span><span class="si">{YYYY}</span><span class="s2">_</span><span class="si">{MM}</span><span class="s2">_</span><span class="si">{DD}</span><span class="s2">_</span><span class="si">{HH}</span><span class="s2">_</span><span class="si">{mm}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">example_fallback_route</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">FallbackRoute</span><span class="p">(</span><span class="s2">&quot;exampleFallbackRoute&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">iothub_name</span><span class="o">=</span><span class="n">example_io_t_hub</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">endpoint_names</span><span class="o">=</span><span class="p">[</span><span class="n">example_endpoint_storage_container</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -916,6 +1133,77 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> Routes can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">iot.Route</span></code> resource - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.</p>
 <p><strong>NOTE:</strong> Fallback route can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">iot.FallbackRoute</span></code> resource - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;Canada Central&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_event_hub_namespace</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">eventhub</span><span class="o">.</span><span class="n">EventHubNamespace</span><span class="p">(</span><span class="s2">&quot;exampleEventHubNamespace&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Basic&quot;</span><span class="p">)</span>
+<span class="n">example_event_hub</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">eventhub</span><span class="o">.</span><span class="n">EventHub</span><span class="p">(</span><span class="s2">&quot;exampleEventHub&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">namespace_name</span><span class="o">=</span><span class="n">example_event_hub_namespace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">partition_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">message_retention</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">example_authorization_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">eventhub</span><span class="o">.</span><span class="n">AuthorizationRule</span><span class="p">(</span><span class="s2">&quot;exampleAuthorizationRule&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">namespace_name</span><span class="o">=</span><span class="n">example_event_hub_namespace</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">eventhub_name</span><span class="o">=</span><span class="n">example_event_hub</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">send</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">example_io_t_hub</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">IoTHub</span><span class="p">(</span><span class="s2">&quot;exampleIoTHub&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">endpoint</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AzureIotHub.StorageContainer&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;connectionString&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_connection_string</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;export&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;batchFrequencyInSeconds&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+            <span class="s2">&quot;maxChunkSizeInBytes&quot;</span><span class="p">:</span> <span class="mi">10485760</span><span class="p">,</span>
+            <span class="s2">&quot;containerName&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;Avro&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fileNameFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{iothub}</span><span class="s2">/</span><span class="si">{partition}</span><span class="s2">_</span><span class="si">{YYYY}</span><span class="s2">_</span><span class="si">{MM}</span><span class="s2">_</span><span class="si">{DD}</span><span class="s2">_</span><span class="si">{HH}</span><span class="s2">_</span><span class="si">{mm}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AzureIotHub.EventHub&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;connectionString&quot;</span><span class="p">:</span> <span class="n">example_authorization_rule</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;export2&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">route</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;export&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DeviceMessages&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;endpointNames&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;export&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;export2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DeviceMessages&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;endpointNames&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;export2&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;purpose&quot;</span><span class="p">:</span> <span class="s2">&quot;testing&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1373,6 +1661,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.iot.IotHubDps">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">IotHubDps</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linked_hubs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.IotHubDps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an IotHub Device Provisioning Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_iot_hub_dps</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">IotHubDps</span><span class="p">(</span><span class="s2">&quot;exampleIotHubDps&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1555,6 +1856,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Routes can be defined either directly on the <code class="docutils literal notranslate"><span class="pre">iot.IoTHub</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">iot.Route</span></code> resourcs - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_io_t_hub</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">IoTHub</span><span class="p">(</span><span class="s2">&quot;exampleIoTHub&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;purpose&quot;</span><span class="p">:</span> <span class="s2">&quot;testing&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_endpoint_storage_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">EndpointStorageContainer</span><span class="p">(</span><span class="s2">&quot;exampleEndpointStorageContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">iothub_name</span><span class="o">=</span><span class="n">example_io_t_hub</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">connection_string</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_connection_string</span><span class="p">,</span>
+    <span class="n">batch_frequency_in_seconds</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="n">max_chunk_size_in_bytes</span><span class="o">=</span><span class="mi">10485760</span><span class="p">,</span>
+    <span class="n">container_name</span><span class="o">=</span><span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;Avro&quot;</span><span class="p">,</span>
+    <span class="n">file_name_format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{iothub}</span><span class="s2">/</span><span class="si">{partition}</span><span class="s2">_</span><span class="si">{YYYY}</span><span class="s2">_</span><span class="si">{MM}</span><span class="s2">_</span><span class="si">{DD}</span><span class="s2">_</span><span class="si">{HH}</span><span class="s2">_</span><span class="si">{mm}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">example_route</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">Route</span><span class="p">(</span><span class="s2">&quot;exampleRoute&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">iothub_name</span><span class="o">=</span><span class="n">example_io_t_hub</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="s2">&quot;DeviceMessages&quot;</span><span class="p">,</span>
+    <span class="n">condition</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">endpoint_names</span><span class="o">=</span><span class="p">[</span><span class="n">example_endpoint_storage_container</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1677,6 +2019,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.iot.SharedAccessPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">SharedAccessPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iothub_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_read</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_write</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.SharedAccessPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an IotHub Shared Access Policy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_io_t_hub</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">IoTHub</span><span class="p">(</span><span class="s2">&quot;exampleIoTHub&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;S1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_shared_access_policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">SharedAccessPolicy</span><span class="p">(</span><span class="s2">&quot;exampleSharedAccessPolicy&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">iothub_name</span><span class="o">=</span><span class="n">example_io_t_hub</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">registry_read</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">registry_write</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1827,6 +2187,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.iot.get_dps">
 <code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">get_dps</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.get_dps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing IotHub Device Provisioning Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">get_dps</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;iot_hub_dps_test&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;iothub_dps_rg&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1841,6 +2208,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.iot.get_dps_shared_access_policy">
 <code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">get_dps_shared_access_policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">iothub_dps_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.get_dps_shared_access_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing IotHub Device Provisioning Service Shared Access Policy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">get_dps_shared_access_policy</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">azurerm_resource_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">iothub_dps_name</span><span class="o">=</span><span class="n">azurerm_iothub_dps</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1856,6 +2231,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.iot.get_shared_access_policy">
 <code class="sig-prename descclassname">pulumi_azure.iot.</code><code class="sig-name descname">get_shared_access_policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">iothub_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.iot.get_shared_access_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing IotHub Shared Access Policy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">iot</span><span class="o">.</span><span class="n">get_shared_access_policy</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">azurerm_resource_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">iothub_name</span><span class="o">=</span><span class="n">azurerm_iothub</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

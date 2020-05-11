@@ -12,9 +12,44 @@ meta_desc: "Explore the GetPolicySetDefinition function of the policy module, in
 
 Use this data source to access information about an existing Policy Set Definition.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.policy.get_policy_set_definition(display_name="Policy Set Definition Example")
+pulumi.export("id", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.policy.getPolicySetDefinition({
+    displayName: "Policy Set Definition Example",
+});
+export const id = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetPolicySetDefinition {#using}

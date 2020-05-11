@@ -14,9 +14,102 @@ Use this data source to obtain a Shared Access Signature (SAS Token) for an exis
 
 Shared access signatures allow fine-grained, ephemeral access control to various aspects of an Azure Storage Account Blob Container.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="westus")
+storage = azure.storage.Account("storage",
+    resource_group_name=rg.name,
+    location=rg.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+container = azure.storage.Container("container",
+    resource_group_name=rg.name,
+    storage_account_name=storage.name,
+    container_access_type="private")
+example = pulumi.Output.all(storage.primary_connection_string, container.name).apply(lambda primary_connection_string, name: azure.storage.get_account_blob_container_sas(connection_string=primary_connection_string,
+    container_name=name,
+    https_only=True,
+    ip_address="168.1.5.65",
+    start="2018-03-21",
+    expiry="2018-03-21",
+    permissions={
+        "read": True,
+        "add": True,
+        "create": False,
+        "write": False,
+        "delete": True,
+        "list": True,
+    },
+    cache_control="max-age=5",
+    content_disposition="inline",
+    content_encoding="deflate",
+    content_language="en-US",
+    content_type="application/json"))
+pulumi.export("sasUrlQueryString", example.sas)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "westus"});
+const storage = new azure.storage.Account("storage", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const container = new azure.storage.Container("container", {
+    resourceGroupName: rg.name,
+    storageAccountName: storage.name,
+    containerAccessType: "private",
+});
+const example = pulumi.all([storage.primaryConnectionString, container.name]).apply(([primaryConnectionString, name]) => azure.storage.getAccountBlobContainerSAS({
+    connectionString: primaryConnectionString,
+    containerName: name,
+    httpsOnly: true,
+    ipAddress: "168.1.5.65",
+    start: "2018-03-21",
+    expiry: "2018-03-21",
+    permissions: {
+        read: true,
+        add: true,
+        create: false,
+        write: false,
+        "delete": true,
+        list: true,
+    },
+    cacheControl: "max-age=5",
+    contentDisposition: "inline",
+    contentEncoding: "deflate",
+    contentLanguage: "en-US",
+    contentType: "application/json",
+}));
+export const sasUrlQueryString = example.sas;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAccountBlobContainerSAS {#using}

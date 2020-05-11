@@ -12,9 +12,67 @@ meta_desc: "Explore the AnalyticsFirewallRule resource of the datalake module, i
 
 Manages a Azure Data Lake Analytics Firewall Rule.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_store = azure.datalake.Store("exampleStore",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location)
+example_analytics_account = azure.datalake.AnalyticsAccount("exampleAnalyticsAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    default_store_account_name=example_store.name)
+example_analytics_firewall_rule = azure.datalake.AnalyticsFirewallRule("exampleAnalyticsFirewallRule",
+    account_name=azurerm_data_lake_analytics["example"]["name"],
+    resource_group_name=example_resource_group.name,
+    start_ip_address="1.2.3.4",
+    end_ip_address="2.3.4.5")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleStore = new azure.datalake.Store("exampleStore", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+});
+const exampleAnalyticsAccount = new azure.datalake.AnalyticsAccount("exampleAnalyticsAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    defaultStoreAccountName: exampleStore.name,
+});
+const exampleAnalyticsFirewallRule = new azure.datalake.AnalyticsFirewallRule("exampleAnalyticsFirewallRule", {
+    accountName: azurerm_data_lake_analytics.example.name,
+    resourceGroupName: exampleResourceGroup.name,
+    startIpAddress: "1.2.3.4",
+    endIpAddress: "2.3.4.5",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AnalyticsFirewallRule Resource {#create}

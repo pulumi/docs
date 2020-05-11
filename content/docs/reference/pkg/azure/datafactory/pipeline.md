@@ -12,9 +12,54 @@ meta_desc: "Explore the Pipeline resource of the datafactory module, including e
 
 Manages a Pipeline inside a Azure Data Factory.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_factory = azure.datafactory.Factory("exampleFactory",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_pipeline = azure.datafactory.Pipeline("examplePipeline",
+    resource_group_name=example_resource_group.name,
+    data_factory_name=example_factory.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const examplePipeline = new azure.datafactory.Pipeline("examplePipeline", {
+    resourceGroupName: exampleResourceGroup.name,
+    dataFactoryName: exampleFactory.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Pipeline Resource {#create}

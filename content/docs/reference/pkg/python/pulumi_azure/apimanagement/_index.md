@@ -17,6 +17,29 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.apimanagement.Api">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Api</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocols</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revision</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">soap_pass_through</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subscription_key_parameter_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_set_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Api" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API within an API Management Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;My Company&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@exmaple.com&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_api</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Api</span><span class="p">(</span><span class="s2">&quot;exampleApi&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">revision</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Example API&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">protocols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;https&quot;</span><span class="p">],</span>
+    <span class="n">import_</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;contentFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;swagger-link-json&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contentValue&quot;</span><span class="p">:</span> <span class="s2">&quot;http://conferenceapi.azurewebsites.net/?format=json&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -42,7 +65,7 @@ anything, please consult the source <a class="reference external" href="https://
 :param pulumi.Input[str] version_set_id: The ID of the Version Set which this API is associated with.</p>
 <p>The <strong>import_</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The format of the content from which the API Definition should be imported. Possible values are: <code class="docutils literal notranslate"><span class="pre">swagger-json</span></code>, <code class="docutils literal notranslate"><span class="pre">swagger-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-xml</span></code>, <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> and <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The format of the content from which the API Definition should be imported. Possible values are: <code class="docutils literal notranslate"><span class="pre">openapi</span></code>, <code class="docutils literal notranslate"><span class="pre">openapi+json</span></code>, <code class="docutils literal notranslate"><span class="pre">openapi+json-link</span></code>, <code class="docutils literal notranslate"><span class="pre">openapi-link</span></code>, <code class="docutils literal notranslate"><span class="pre">swagger-json</span></code>, <code class="docutils literal notranslate"><span class="pre">swagger-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-xml</span></code>, <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> and <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">contentValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Content from which the API Definition should be imported. When a <code class="docutils literal notranslate"><span class="pre">content_format</span></code> of <code class="docutils literal notranslate"><span class="pre">*-link-*</span></code> is specified this must be a URL, otherwise this must be defined inline.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">wsdlSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">wsdl_selector</span></code> block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when <code class="docutils literal notranslate"><span class="pre">content_format</span></code> is <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> or <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p>
 <ul>
@@ -79,7 +102,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">import_</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Api.import_" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">import</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The format of the content from which the API Definition should be imported. Possible values are: <code class="docutils literal notranslate"><span class="pre">swagger-json</span></code>, <code class="docutils literal notranslate"><span class="pre">swagger-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-xml</span></code>, <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> and <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The format of the content from which the API Definition should be imported. Possible values are: <code class="docutils literal notranslate"><span class="pre">openapi</span></code>, <code class="docutils literal notranslate"><span class="pre">openapi+json</span></code>, <code class="docutils literal notranslate"><span class="pre">openapi+json-link</span></code>, <code class="docutils literal notranslate"><span class="pre">openapi-link</span></code>, <code class="docutils literal notranslate"><span class="pre">swagger-json</span></code>, <code class="docutils literal notranslate"><span class="pre">swagger-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-xml</span></code>, <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> and <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">contentValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Content from which the API Definition should be imported. When a <code class="docutils literal notranslate"><span class="pre">content_format</span></code> of <code class="docutils literal notranslate"><span class="pre">*-link-*</span></code> is specified this must be a URL, otherwise this must be defined inline.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">wsdlSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">wsdl_selector</span></code> block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when <code class="docutils literal notranslate"><span class="pre">content_format</span></code> is <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> or <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p>
 <ul>
@@ -199,7 +222,7 @@ properties used to qualify the lookup.</p>
 :param pulumi.Input[str] version_set_id: The ID of the Version Set which this API is associated with.</p>
 <p>The <strong>import_</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The format of the content from which the API Definition should be imported. Possible values are: <code class="docutils literal notranslate"><span class="pre">swagger-json</span></code>, <code class="docutils literal notranslate"><span class="pre">swagger-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-xml</span></code>, <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> and <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The format of the content from which the API Definition should be imported. Possible values are: <code class="docutils literal notranslate"><span class="pre">openapi</span></code>, <code class="docutils literal notranslate"><span class="pre">openapi+json</span></code>, <code class="docutils literal notranslate"><span class="pre">openapi+json-link</span></code>, <code class="docutils literal notranslate"><span class="pre">openapi-link</span></code>, <code class="docutils literal notranslate"><span class="pre">swagger-json</span></code>, <code class="docutils literal notranslate"><span class="pre">swagger-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-xml</span></code>, <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> and <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">contentValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Content from which the API Definition should be imported. When a <code class="docutils literal notranslate"><span class="pre">content_format</span></code> of <code class="docutils literal notranslate"><span class="pre">*-link-*</span></code> is specified this must be a URL, otherwise this must be defined inline.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">wsdlSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">wsdl_selector</span></code> block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when <code class="docutils literal notranslate"><span class="pre">content_format</span></code> is <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> or <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p>
 <ul>
@@ -257,6 +280,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.ApiOperation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">ApiOperation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">responses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Operation within an API Management Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_api</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;search-api&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="s2">&quot;search-api-management&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">,</span>
+    <span class="n">revision</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+<span class="n">example_api_operation</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">ApiOperation</span><span class="p">(</span><span class="s2">&quot;exampleApiOperation&quot;</span><span class="p">,</span>
+    <span class="n">operation_id</span><span class="o">=</span><span class="s2">&quot;user-delete&quot;</span><span class="p">,</span>
+    <span class="n">api_name</span><span class="o">=</span><span class="n">example_api</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_api</span><span class="o">.</span><span class="n">api_management_name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_api</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Delete User Operation&quot;</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;DELETE&quot;</span><span class="p">,</span>
+    <span class="n">url_template</span><span class="o">=</span><span class="s2">&quot;/users/</span><span class="si">{id}</span><span class="s2">/delete&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This can only be done by the logged in user.&quot;</span><span class="p">,</span>
+    <span class="n">response</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;statusCode&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -660,6 +704,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.ApiOperationPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">ApiOperationPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">xml_content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">xml_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management API Operation Policy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_api_operation</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">ApiOperation</span><span class="p">(</span><span class="s2">&quot;exampleApiOperation&quot;</span><span class="p">)</span>
+<span class="c1">#...</span>
+<span class="n">example_api_operation_policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">ApiOperationPolicy</span><span class="p">(</span><span class="s2">&quot;exampleApiOperationPolicy&quot;</span><span class="p">,</span>
+    <span class="n">api_name</span><span class="o">=</span><span class="n">example_api_operation</span><span class="o">.</span><span class="n">api_name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_api_operation</span><span class="o">.</span><span class="n">api_management_name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_api_operation</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">operation_id</span><span class="o">=</span><span class="n">example_api_operation</span><span class="o">.</span><span class="n">operation_id</span><span class="p">,</span>
+    <span class="n">xml_content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;&lt;policies&gt;</span>
+<span class="s2">  &lt;inbound&gt;</span>
+<span class="s2">    &lt;find-and-replace from=&quot;xyz&quot; to=&quot;abc&quot; /&gt;</span>
+<span class="s2">  &lt;/inbound&gt;</span>
+<span class="s2">&lt;/policies&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -872,6 +934,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.ApiSchema">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">ApiSchema</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Schema within an API Management Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_api</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;search-api&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="s2">&quot;search-api-management&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">,</span>
+    <span class="n">revision</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+<span class="n">example_api_schema</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">ApiSchema</span><span class="p">(</span><span class="s2">&quot;exampleApiSchema&quot;</span><span class="p">,</span>
+    <span class="n">api_name</span><span class="o">=</span><span class="n">example_api</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_api</span><span class="o">.</span><span class="n">api_management_name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_api</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">schema_id</span><span class="o">=</span><span class="s2">&quot;example-sche,a&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/vnd.ms-azure-apim.xsd+xml&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;api_management_api_schema.xml&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -986,6 +1064,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.ApiVersionSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">ApiVersionSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_header_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_query_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versioning_scheme</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiVersionSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Version Set within an API Management Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;pub1&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;pub1@email.com&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_api_version_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">ApiVersionSet</span><span class="p">(</span><span class="s2">&quot;exampleApiVersionSet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;ExampleAPIVersionSet&quot;</span><span class="p">,</span>
+    <span class="n">versioning_scheme</span><span class="o">=</span><span class="s2">&quot;Segment&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1116,6 +1211,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.AuthorizationServer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">AuthorizationServer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_methods</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bearer_token_sending_methods</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_authentication_methods</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_registration_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grant_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_owner_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_owner_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">support_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_body_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.AuthorizationServer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Authorization Server within an API Management Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_api</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;search-api&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="s2">&quot;search-api-management&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">,</span>
+    <span class="n">revision</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+<span class="n">example_authorization_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">AuthorizationServer</span><span class="p">(</span><span class="s2">&quot;exampleAuthorizationServer&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;apimanagement.Service&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;apimanagement.Service&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;resource_group_name&quot;</span><span class="p">],</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test Server&quot;</span><span class="p">,</span>
+    <span class="n">authorization_endpoint</span><span class="o">=</span><span class="s2">&quot;https://example.mydomain.com/client/authorize&quot;</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;42424242-4242-4242-4242-424242424242&quot;</span><span class="p">,</span>
+    <span class="n">client_registration_endpoint</span><span class="o">=</span><span class="s2">&quot;https://example.mydomain.com/client/register&quot;</span><span class="p">,</span>
+    <span class="n">grant_types</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;authorizationCode&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1759,6 +1871,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.Diagnostic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Diagnostic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Diagnostic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Service Diagnostic.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">test_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;testResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">test_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;testService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">test_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">test_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;My Company&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@mycompany.io&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">test_diagnostic</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Diagnostic</span><span class="p">(</span><span class="s2">&quot;testDiagnostic&quot;</span><span class="p">,</span>
+    <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;applicationinsights&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">test_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">test_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2199,6 +2328,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.Group">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;pub1&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;pub1@email.com&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;exampleGroup&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Example Group&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is an example API management group.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2321,6 +2467,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.GroupUser">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">GroupUser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.GroupUser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management User Assignment to a Group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_user</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;my-user&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="s2">&quot;example-apim&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">)</span>
+<span class="n">example_group_user</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">GroupUser</span><span class="p">(</span><span class="s2">&quot;exampleGroupUser&quot;</span><span class="p">,</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="n">example_user</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="s2">&quot;example-group&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_user</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_user</span><span class="o">.</span><span class="n">api_management_name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2419,6 +2578,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.IdentityProviderAad">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">IdentityProviderAad</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed_tenants</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.IdentityProviderAad" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management AAD Identity Provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;My Company&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@mycompany.io&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_identity_provider_aad</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">IdentityProviderAad</span><span class="p">(</span><span class="s2">&quot;exampleIdentityProviderAad&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;00000000000000000000000000000000&quot;</span><span class="p">,</span>
+    <span class="n">allowed_tenants</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2525,6 +2702,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.IdentityProviderFacebook">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">IdentityProviderFacebook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.IdentityProviderFacebook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Facebook Identity Provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;My Company&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@mycompany.io&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_identity_provider_facebook</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">IdentityProviderFacebook</span><span class="p">(</span><span class="s2">&quot;exampleIdentityProviderFacebook&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">app_id</span><span class="o">=</span><span class="s2">&quot;00000000000000000000000000000000&quot;</span><span class="p">,</span>
+    <span class="n">app_secret</span><span class="o">=</span><span class="s2">&quot;00000000000000000000000000000000&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2623,6 +2817,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.IdentityProviderGoogle">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">IdentityProviderGoogle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.IdentityProviderGoogle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Google Identity Provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;My Company&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@mycompany.io&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_identity_provider_google</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">IdentityProviderGoogle</span><span class="p">(</span><span class="s2">&quot;exampleIdentityProviderGoogle&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;00000000.apps.googleusercontent.com&quot;</span><span class="p">,</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;00000000000000000000000000000000&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2721,6 +2932,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.IdentityProviderMicrosoft">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">IdentityProviderMicrosoft</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.IdentityProviderMicrosoft" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Microsoft Identity Provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;My Company&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@mycompany.io&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_identity_provider_microsoft</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">IdentityProviderMicrosoft</span><span class="p">(</span><span class="s2">&quot;exampleIdentityProviderMicrosoft&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;00000000000000000000000000000000&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2819,6 +3047,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.IdentityProviderTwitter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">IdentityProviderTwitter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_secret_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.IdentityProviderTwitter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Twitter Identity Provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;My Company&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@mycompany.io&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_identity_provider_twitter</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">IdentityProviderTwitter</span><span class="p">(</span><span class="s2">&quot;exampleIdentityProviderTwitter&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;00000000000000000000000000000000&quot;</span><span class="p">,</span>
+    <span class="n">api_secret_key</span><span class="o">=</span><span class="s2">&quot;00000000000000000000000000000000&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2917,6 +3162,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.Logger">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Logger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_insights</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">buffered</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eventhub</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Logger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Logger within an API Management Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_insights</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appinsights</span><span class="o">.</span><span class="n">Insights</span><span class="p">(</span><span class="s2">&quot;exampleInsights&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">application_type</span><span class="o">=</span><span class="s2">&quot;Other&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;My Company&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@exmaple.com&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_logger</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Logger</span><span class="p">(</span><span class="s2">&quot;exampleLogger&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">application_insights</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;instrumentationKey&quot;</span><span class="p">:</span> <span class="n">example_insights</span><span class="o">.</span><span class="n">instrumentation_key</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3061,9 +3328,166 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_azure.apimanagement.NamedValue">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">NamedValue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.NamedValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an API Management Named Value.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;pub1&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;pub1@email.com&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_named_value</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">NamedValue</span><span class="p">(</span><span class="s2">&quot;exampleNamedValue&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;ExampleProperty&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Example Value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_management_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the API Management Service in which the API Management Named Value should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name of this API Management Named Value.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the API Management Named Value. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the API Management Named Value should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>secret</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the API Management Named Value is secret. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tags to be applied to the API Management Named Value.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of this API Management Named Value.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_azure.apimanagement.NamedValue.api_management_name">
+<code class="sig-name descname">api_management_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.NamedValue.api_management_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the API Management Service in which the API Management Named Value should exist. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.apimanagement.NamedValue.display_name">
+<code class="sig-name descname">display_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.NamedValue.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The display name of this API Management Named Value.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.apimanagement.NamedValue.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.NamedValue.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the API Management Named Value. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.apimanagement.NamedValue.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.NamedValue.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Resource Group in which the API Management Named Value should exist. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.apimanagement.NamedValue.secret">
+<code class="sig-name descname">secret</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.NamedValue.secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether the API Management Named Value is secret. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.apimanagement.NamedValue.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.NamedValue.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tags to be applied to the API Management Named Value.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.apimanagement.NamedValue.value">
+<code class="sig-name descname">value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.NamedValue.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of this API Management Named Value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.apimanagement.NamedValue.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.NamedValue.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing NamedValue resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_management_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the API Management Service in which the API Management Named Value should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name of this API Management Named Value.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the API Management Named Value. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the API Management Named Value should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>secret</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the API Management Named Value is secret. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tags to be applied to the API Management Named Value.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of this API Management Named Value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.apimanagement.NamedValue.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.NamedValue.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.apimanagement.NamedValue.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.NamedValue.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_azure.apimanagement.OpenIdConnectProvider">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">OpenIdConnectProvider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.OpenIdConnectProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an OpenID Connect Provider within a API Management Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;My Company&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@exmaple.com&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_open_id_connect_provider</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">OpenIdConnectProvider</span><span class="p">(</span><span class="s2">&quot;exampleOpenIdConnectProvider&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;00001111-2222-3333-4444-555566667777&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Example Provider&quot;</span><span class="p">,</span>
+    <span class="n">metadata_endpoint</span><span class="o">=</span><span class="s2">&quot;https://example.com/example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3194,6 +3618,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.Product">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Product</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">approval_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">published</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subscription_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subscriptions_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Product" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Product.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;My Company&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@exmaple.com&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_product</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Product</span><span class="p">(</span><span class="s2">&quot;exampleProduct&quot;</span><span class="p">,</span>
+    <span class="n">product_id</span><span class="o">=</span><span class="s2">&quot;test-product&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Test Product&quot;</span><span class="p">,</span>
+    <span class="n">subscription_required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">approval_required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">published</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3340,6 +3784,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.ProductApi">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">ProductApi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management API Assignment to a Product.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-api&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">example_api</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;search-api&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">revision</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+<span class="n">example_product</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_product</span><span class="p">(</span><span class="n">product_id</span><span class="o">=</span><span class="s2">&quot;my-product&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">)</span>
+<span class="n">example_product_api</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">ProductApi</span><span class="p">(</span><span class="s2">&quot;exampleProductApi&quot;</span><span class="p">,</span>
+    <span class="n">api_name</span><span class="o">=</span><span class="n">example_api</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">product_id</span><span class="o">=</span><span class="n">example_product</span><span class="o">.</span><span class="n">product_id</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3438,6 +3901,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.ProductGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">ProductGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Product Assignment to a Group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-api&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">example_product</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_product</span><span class="p">(</span><span class="n">product_id</span><span class="o">=</span><span class="s2">&quot;my-product&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">)</span>
+<span class="n">example_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-group&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">)</span>
+<span class="n">example_product_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">ProductGroup</span><span class="p">(</span><span class="s2">&quot;exampleProductGroup&quot;</span><span class="p">,</span>
+    <span class="n">product_id</span><span class="o">=</span><span class="n">example_product</span><span class="o">.</span><span class="n">product_id</span><span class="p">,</span>
+    <span class="n">group_name</span><span class="o">=</span><span class="n">example_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3536,6 +4017,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.ProductPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">ProductPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">xml_content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">xml_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Product Policy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_product</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_product</span><span class="p">(</span><span class="n">product_id</span><span class="o">=</span><span class="s2">&quot;my-product&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="s2">&quot;example-apim&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">)</span>
+<span class="n">example_product_policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">ProductPolicy</span><span class="p">(</span><span class="s2">&quot;exampleProductPolicy&quot;</span><span class="p">,</span>
+    <span class="n">product_id</span><span class="o">=</span><span class="n">example_product</span><span class="o">.</span><span class="n">product_id</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_product</span><span class="o">.</span><span class="n">api_management_name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_product</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">xml_content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;&lt;policies&gt;</span>
+<span class="s2">  &lt;inbound&gt;</span>
+<span class="s2">    &lt;find-and-replace from=&quot;xyz&quot; to=&quot;abc&quot; /&gt;</span>
+<span class="s2">  &lt;/inbound&gt;</span>
+<span class="s2">&lt;/policies&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3642,6 +4141,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.Property">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Property.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;pub1&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;pub1@email.com&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_property</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Property</span><span class="p">(</span><span class="s2">&quot;exampleProperty&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;ExampleProperty&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Example Value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3764,6 +4280,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">additional_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_sender_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocols</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publisher_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publisher_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sign_in</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sign_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_network_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_network_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;My Company&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@exmaple.com&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">,</span>
+    <span class="n">policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;xmlContent&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;    &lt;policies&gt;</span>
+<span class="s2">      &lt;inbound /&gt;</span>
+<span class="s2">      &lt;backend /&gt;</span>
+<span class="s2">      &lt;outbound /&gt;</span>
+<span class="s2">      &lt;on-error /&gt;</span>
+<span class="s2">    &lt;/policies&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3784,7 +4321,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>security</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">security</span></code> block as defined below.</p></li>
 <li><p><strong>sign_in</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sign_in</span></code> block as defined below.</p></li>
 <li><p><strong>sign_up</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sign_up</span></code> block as defined below.</p></li>
-<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">sku_name</span></code> is a string consisting of two parts separated by an underscore(_). The fist part is the <code class="docutils literal notranslate"><span class="pre">name</span></code>, valid values include: <code class="docutils literal notranslate"><span class="pre">Developer</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. The second part is the <code class="docutils literal notranslate"><span class="pre">capacity</span></code> (e.g. the number of deployed units of the <code class="docutils literal notranslate"><span class="pre">sku</span></code>), which must be a positive <code class="docutils literal notranslate"><span class="pre">integer</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">Developer_1</span></code>).</p></li>
+<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">sku_name</span></code> is a string consisting of two parts separated by an underscore(_). The fist part is the <code class="docutils literal notranslate"><span class="pre">name</span></code>, valid values include: <code class="docutils literal notranslate"><span class="pre">Consumption</span></code>, <code class="docutils literal notranslate"><span class="pre">Developer</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. The second part is the <code class="docutils literal notranslate"><span class="pre">capacity</span></code> (e.g. the number of deployed units of the <code class="docutils literal notranslate"><span class="pre">sku</span></code>), which must be a positive <code class="docutils literal notranslate"><span class="pre">integer</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">Developer_1</span></code>).</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags assigned to the resource.</p></li>
 <li><p><strong>virtual_network_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">virtual_network_configuration</span></code> block as defined below. Required when <code class="docutils literal notranslate"><span class="pre">virtual_network_type</span></code> is <code class="docutils literal notranslate"><span class="pre">External</span></code> or <code class="docutils literal notranslate"><span class="pre">Internal</span></code>.</p></li>
 <li><p><strong>virtual_network_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of virtual network you want to use, valid values include: <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">External</span></code>, <code class="docutils literal notranslate"><span class="pre">Internal</span></code>.</p></li>
@@ -4099,7 +4636,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.apimanagement.Service.sku_name">
 <code class="sig-name descname">sku_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Service.sku_name" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">sku_name</span></code> is a string consisting of two parts separated by an underscore(_). The fist part is the <code class="docutils literal notranslate"><span class="pre">name</span></code>, valid values include: <code class="docutils literal notranslate"><span class="pre">Developer</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. The second part is the <code class="docutils literal notranslate"><span class="pre">capacity</span></code> (e.g. the number of deployed units of the <code class="docutils literal notranslate"><span class="pre">sku</span></code>), which must be a positive <code class="docutils literal notranslate"><span class="pre">integer</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">Developer_1</span></code>).</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">sku_name</span></code> is a string consisting of two parts separated by an underscore(_). The fist part is the <code class="docutils literal notranslate"><span class="pre">name</span></code>, valid values include: <code class="docutils literal notranslate"><span class="pre">Consumption</span></code>, <code class="docutils literal notranslate"><span class="pre">Developer</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. The second part is the <code class="docutils literal notranslate"><span class="pre">capacity</span></code> (e.g. the number of deployed units of the <code class="docutils literal notranslate"><span class="pre">sku</span></code>), which must be a positive <code class="docutils literal notranslate"><span class="pre">integer</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">Developer_1</span></code>).</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4155,7 +4692,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>security</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">security</span></code> block as defined below.</p></li>
 <li><p><strong>sign_in</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sign_in</span></code> block as defined below.</p></li>
 <li><p><strong>sign_up</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sign_up</span></code> block as defined below.</p></li>
-<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">sku_name</span></code> is a string consisting of two parts separated by an underscore(_). The fist part is the <code class="docutils literal notranslate"><span class="pre">name</span></code>, valid values include: <code class="docutils literal notranslate"><span class="pre">Developer</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. The second part is the <code class="docutils literal notranslate"><span class="pre">capacity</span></code> (e.g. the number of deployed units of the <code class="docutils literal notranslate"><span class="pre">sku</span></code>), which must be a positive <code class="docutils literal notranslate"><span class="pre">integer</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">Developer_1</span></code>).</p></li>
+<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">sku_name</span></code> is a string consisting of two parts separated by an underscore(_). The fist part is the <code class="docutils literal notranslate"><span class="pre">name</span></code>, valid values include: <code class="docutils literal notranslate"><span class="pre">Consumption</span></code>, <code class="docutils literal notranslate"><span class="pre">Developer</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. The second part is the <code class="docutils literal notranslate"><span class="pre">capacity</span></code> (e.g. the number of deployed units of the <code class="docutils literal notranslate"><span class="pre">sku</span></code>), which must be a positive <code class="docutils literal notranslate"><span class="pre">integer</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">Developer_1</span></code>).</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags assigned to the resource.</p></li>
 <li><p><strong>virtual_network_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">virtual_network_configuration</span></code> block as defined below. Required when <code class="docutils literal notranslate"><span class="pre">virtual_network_type</span></code> is <code class="docutils literal notranslate"><span class="pre">External</span></code> or <code class="docutils literal notranslate"><span class="pre">Internal</span></code>.</p></li>
 <li><p><strong>virtual_network_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of virtual network you want to use, valid values include: <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">External</span></code>, <code class="docutils literal notranslate"><span class="pre">Internal</span></code>.</p></li>
@@ -4302,6 +4839,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.Subscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Subscription</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">primary_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secondary_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subscription_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Subscription within a API Management Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-apim&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">example_product</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_product</span><span class="p">(</span><span class="n">product_id</span><span class="o">=</span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">)</span>
+<span class="n">example_user</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;11111111-1111-1111-1111-111111111111&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">)</span>
+<span class="n">example_subscription</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Subscription</span><span class="p">(</span><span class="s2">&quot;exampleSubscription&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="n">example_user</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">product_id</span><span class="o">=</span><span class="n">example_product</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Parser API&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4424,6 +4980,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.User">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">confirmation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">first_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">note</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management User.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;exampleService&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">publisher_name</span><span class="o">=</span><span class="s2">&quot;My Company&quot;</span><span class="p">,</span>
+    <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@exmaple.com&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">)</span>
+<span class="n">example_user</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;exampleUser&quot;</span><span class="p">,</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;5931a75ae4bbd512288c680b&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">first_name</span><span class="o">=</span><span class="s2">&quot;Example&quot;</span><span class="p">,</span>
+    <span class="n">last_name</span><span class="o">=</span><span class="s2">&quot;User&quot;</span><span class="p">,</span>
+    <span class="n">email</span><span class="o">=</span><span class="s2">&quot;user@example.com&quot;</span><span class="p">,</span>
+    <span class="n">state</span><span class="o">=</span><span class="s2">&quot;active&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4570,6 +5146,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.get_api">
 <code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">get_api</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revision</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.get_api" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing API Management API.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;search-api&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="s2">&quot;search-api-management&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">,</span>
+    <span class="n">revision</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;apiManagementApiId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4586,6 +5172,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.get_api_version_set">
 <code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">get_api_version_set</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.get_api_version_set" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uses this data source to access information about an API Version Set within an API Management Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_api_version_set</span><span class="p">(</span><span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="s2">&quot;example-api&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-api-version-set&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;apiManagementApiVersionSetId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4601,6 +5196,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.get_group">
 <code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">get_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing API Management Group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-group&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="s2">&quot;example-apim&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;groupType&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4616,6 +5220,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.get_product">
 <code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">get_product</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">api_management_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.get_product" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing API Management Product.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_product</span><span class="p">(</span><span class="n">product_id</span><span class="o">=</span><span class="s2">&quot;my-product&quot;</span><span class="p">,</span>
+    <span class="n">api_management_name</span><span class="o">=</span><span class="s2">&quot;example-apim&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;productTerms&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">terms</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4631,6 +5244,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.apimanagement.get_service">
 <code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing API Management Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;search-api&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;search-service&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;apiManagementId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

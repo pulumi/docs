@@ -14,9 +14,69 @@ Manages a Azure Database Migration Service.
 
 > **NOTE:** Destroying a Database Migration Service will leave any outstanding tasks untouched. This is to avoid unexpectedly deleting any tasks managed outside of this provide.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.1.0/24")
+example_service = azure.databasemigration.Service("exampleService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    subnet_id=example_subnet.id,
+    sku_name="Standard_1vCores")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.1.0/24",
+});
+const exampleService = new azure.databasemigration.Service("exampleService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    subnetId: exampleSubnet.id,
+    skuName: "Standard_1vCores",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}

@@ -17,6 +17,79 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.monitoring.ActionGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">ActionGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arm_role_receivers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">automation_runbook_receivers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_app_push_receivers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_function_receivers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_receivers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">itsm_receivers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logic_app_receivers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">short_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sms_receivers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">voice_receivers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webhook_receivers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Action Group within Azure Monitor.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_action_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">ActionGroup</span><span class="p">(</span><span class="s2">&quot;exampleActionGroup&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">short_name</span><span class="o">=</span><span class="s2">&quot;p0action&quot;</span><span class="p">,</span>
+    <span class="n">arm_role_receiver</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;armroleaction&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;roleId&quot;</span><span class="p">:</span> <span class="s2">&quot;de139f84-1756-47ae-9be6-808fbbe84772&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;useCommonAlertSchema&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">automation_runbook_receiver</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;action_name_1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;automationAccountId&quot;</span><span class="p">:</span> <span class="s2">&quot;/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-runbooks/providers/microsoft.automation/automationaccounts/aaa001&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runbookName&quot;</span><span class="p">:</span> <span class="s2">&quot;my runbook&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;webhookResourceId&quot;</span><span class="p">:</span> <span class="s2">&quot;/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-runbooks/providers/microsoft.automation/automationaccounts/aaa001/webhooks/webhook_alert&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;isGlobalRunbook&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;serviceUri&quot;</span><span class="p">:</span> <span class="s2">&quot;https://s13events.azure-automation.net/webhooks?token=randomtoken&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;useCommonAlertSchema&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">azure_app_push_receiver</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;pushtoadmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;emailAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;admin@contoso.com&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">azure_function_receiver</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;funcaction&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;functionAppResourceId&quot;</span><span class="p">:</span> <span class="s2">&quot;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-funcapp/providers/Microsoft.Web/sites/funcapp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;functionName&quot;</span><span class="p">:</span> <span class="s2">&quot;myfunc&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;httpTriggerUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/trigger&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;useCommonAlertSchema&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">email_receiver</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;sendtoadmin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;emailAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;admin@contoso.com&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;sendtodevops&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;emailAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;devops@contoso.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;useCommonAlertSchema&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">itsm_receiver</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;createorupdateticket&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;workspaceId&quot;</span><span class="p">:</span> <span class="s2">&quot;6eee3a18-aac3-40e4-b98e-1f309f329816&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;connectionId&quot;</span><span class="p">:</span> <span class="s2">&quot;53de6956-42b4-41ba-be3c-b154cdf17b13&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ticketConfiguration&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;southcentralus&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">logic_app_receiver</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;logicappaction&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resourceId&quot;</span><span class="p">:</span> <span class="s2">&quot;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-logicapp/providers/Microsoft.Logic/workflows/logicapp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;callbackUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://logicapptriggerurl/...&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;useCommonAlertSchema&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">sms_receiver</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;oncallmsg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;countryCode&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;phoneNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;1231231234&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">voice_receiver</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;remotesupport&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;countryCode&quot;</span><span class="p">:</span> <span class="s2">&quot;86&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;phoneNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;13888888888&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">webhook_receiver</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;callmyapiaswell&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;serviceUri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/alert&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;useCommonAlertSchema&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -397,6 +470,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.ActivityLogAlert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">ActivityLogAlert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">criteria</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActivityLogAlert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Activity Log Alert within Azure Monitor.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">main_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;mainResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">main_action_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">ActionGroup</span><span class="p">(</span><span class="s2">&quot;mainActionGroup&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">short_name</span><span class="o">=</span><span class="s2">&quot;p0action&quot;</span><span class="p">,</span>
+    <span class="n">webhook_receiver</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;callmyapi&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;serviceUri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/alert&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">to_monitor</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;toMonitor&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;GRS&quot;</span><span class="p">)</span>
+<span class="n">main_activity_log_alert</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">ActivityLogAlert</span><span class="p">(</span><span class="s2">&quot;mainActivityLogAlert&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">scopes</span><span class="o">=</span><span class="p">[</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This alert will monitor a specific storage account updates.&quot;</span><span class="p">,</span>
+    <span class="n">criteria</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;resourceId&quot;</span><span class="p">:</span> <span class="n">to_monitor</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;operationName&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft.Storage/storageAccounts/write&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Recommendation&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">action</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;actionGroupId&quot;</span><span class="p">:</span> <span class="n">main_action_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;webhookProperties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -579,6 +685,216 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.AutoscaleSetting">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">AutoscaleSetting</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AutoscaleSetting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_scale_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ScaleSet</span><span class="p">(</span><span class="s2">&quot;exampleScaleSet&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">example_autoscale_setting</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">AutoscaleSetting</span><span class="p">(</span><span class="s2">&quot;exampleAutoscaleSetting&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">target_resource_id</span><span class="o">=</span><span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">profile</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;defaultProfile&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;metric_trigger&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;Percentage CPU&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;GreaterThan&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;scale_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Increase&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeCount&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;metric_trigger&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;Percentage CPU&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;LessThan&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;scale_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Decrease&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeCount&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">notification</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sendToSubscriptionAdministrator&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;sendToSubscriptionCoAdministrator&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;customEmails&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;admin@contoso.com&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_scale_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ScaleSet</span><span class="p">(</span><span class="s2">&quot;exampleScaleSet&quot;</span><span class="p">)</span>
+<span class="n">example_autoscale_setting</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">AutoscaleSetting</span><span class="p">(</span><span class="s2">&quot;exampleAutoscaleSetting&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">notification</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;customEmails&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;admin@contoso.com&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;sendToSubscriptionAdministrator&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;sendToSubscriptionCoAdministrator&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">profiles</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="s2">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Weekends&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;recurrence&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;Saturday&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Sunday&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Week&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;hours&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+            <span class="s2">&quot;minutes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;timezone&quot;</span><span class="p">:</span> <span class="s2">&quot;Pacific Standard Time&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;metricTrigger&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;Percentage CPU&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;GreaterThan&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+                    <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;scaleAction&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Increase&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeCount&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;metricTrigger&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;Percentage CPU&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;LessThan&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                    <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;scaleAction&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Decrease&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeCount&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">target_resource_id</span><span class="o">=</span><span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_scale_set</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ScaleSet</span><span class="p">(</span><span class="s2">&quot;exampleScaleSet&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">example_autoscale_setting</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">AutoscaleSetting</span><span class="p">(</span><span class="s2">&quot;exampleAutoscaleSetting&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">target_resource_id</span><span class="o">=</span><span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">profile</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;forJuly&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;metric_trigger&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;Percentage CPU&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;GreaterThan&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;scale_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Increase&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeCount&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;metric_trigger&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;Percentage CPU&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;LessThan&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;scale_action&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Decrease&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeCount&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;fixed_date&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;timezone&quot;</span><span class="p">:</span> <span class="s2">&quot;Pacific Standard Time&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-07-01T00:00:00Z&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;end&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-07-31T23:59:59Z&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+    <span class="n">notification</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sendToSubscriptionAdministrator&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;sendToSubscriptionCoAdministrator&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;customEmails&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;admin@contoso.com&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -930,6 +1246,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.DiagnosticSetting">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">DiagnosticSetting</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eventhub_authorization_rule_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eventhub_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_analytics_destination_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_analytics_workspace_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metrics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.DiagnosticSetting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Diagnostic Setting for an existing Resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;examplestoracc&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">name</span><span class="p">))</span>
+<span class="n">example_key_vault</span> <span class="o">=</span> <span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">get_key_vault</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-vault&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">name</span><span class="p">))</span>
+<span class="n">example_diagnostic_setting</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">DiagnosticSetting</span><span class="p">(</span><span class="s2">&quot;exampleDiagnosticSetting&quot;</span><span class="p">,</span>
+    <span class="n">logs</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;AuditEvent&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;retentionPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+    <span class="n">metrics</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;AllMetrics&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;retentionPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+    <span class="n">storage_account_id</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">target_resource_id</span><span class="o">=</span><span class="n">example_key_vault</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1405,6 +1747,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> It’s only possible to configure one Log Profile per Subscription. If you are trying to create more than one Log Profile, an error with <code class="docutils literal notranslate"><span class="pre">StatusCode=409</span></code> will occur.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;eastus&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;GRS&quot;</span><span class="p">)</span>
+<span class="n">example_event_hub_namespace</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">eventhub</span><span class="o">.</span><span class="n">EventHubNamespace</span><span class="p">(</span><span class="s2">&quot;exampleEventHubNamespace&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">capacity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">example_log_profile</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">LogProfile</span><span class="p">(</span><span class="s2">&quot;exampleLogProfile&quot;</span><span class="p">,</span>
+    <span class="n">categories</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Delete&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Write&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">locations</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;westus&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;global&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">servicebus_rule_id</span><span class="o">=</span><span class="n">example_event_hub_namespace</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">/authorizationrules/RootManageSharedAccessKey&quot;</span><span class="p">),</span>
+    <span class="n">storage_account_id</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">retention_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1536,6 +1910,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.MetricAlert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">MetricAlert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_mitigate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">criterias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frequency</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">severity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">window_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Metric Alert within Azure Monitor.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">main_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;mainResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">to_monitor</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;toMonitor&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">main_action_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">ActionGroup</span><span class="p">(</span><span class="s2">&quot;mainActionGroup&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">short_name</span><span class="o">=</span><span class="s2">&quot;exampleact&quot;</span><span class="p">,</span>
+    <span class="n">webhook_receiver</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;callmyapi&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;serviceUri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/alert&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">MetricAlert</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">scopes</span><span class="o">=</span><span class="p">[</span><span class="n">to_monitor</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Action will be triggered when Transactions count is greater than 50.&quot;</span><span class="p">,</span>
+    <span class="n">criteria</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;metricNamespace&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft.Storage/storageAccounts&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;Transactions&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;aggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Total&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;GreaterThan&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="s2">&quot;dimension&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ApiName&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;Include&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+    <span class="n">action</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;actionGroupId&quot;</span><span class="p">:</span> <span class="n">main_action_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2127,6 +2538,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.get_action_group">
 <code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_action_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_action_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the properties of an Action Group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_action_group</span><span class="p">(</span><span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-rg&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfex-actiongroup&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;actionGroupId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2141,6 +2560,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.get_diagnostic_categories">
 <code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_diagnostic_categories</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_diagnostic_categories" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about the Monitor Diagnostics Categories supported by an existing Resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_key_vault</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">keyvault</span><span class="o">.</span><span class="n">get_key_vault</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">azurerm_key_vault</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">azurerm_key_vault</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;resource_group_name&quot;</span><span class="p">])</span>
+<span class="n">example_diagnostic_categories</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_diagnostic_categories</span><span class="p">(</span><span class="n">resource_id</span><span class="o">=</span><span class="n">example_key_vault</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>resource_id</strong> (<em>str</em>) – The ID of an existing Resource which Monitor Diagnostics Categories should be retrieved for.</p>
@@ -2152,6 +2579,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.get_log_profile">
 <code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_log_profile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_log_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the properties of a Log Profile.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_log_profile</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;test-logprofile&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;logProfileStorageAccountId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">storage_account_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Specifies the Name of the Log Profile.</p>
@@ -2163,6 +2597,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.get_scheduled_query_rules_alert">
 <code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_scheduled_query_rules_alert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_scheduled_query_rules_alert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the properties of an AlertingAction scheduled query rule.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_scheduled_query_rules_alert</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfex-queryrule&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-rg&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;queryRuleId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2177,6 +2619,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.get_scheduled_query_rules_log">
 <code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_scheduled_query_rules_log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_scheduled_query_rules_log" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the properties of a LogToMetricAction scheduled query rule.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">get_scheduled_query_rules_log</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;tfex-queryrule&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-rg&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;queryRuleId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

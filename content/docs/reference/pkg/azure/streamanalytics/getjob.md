@@ -12,9 +12,46 @@ meta_desc: "Explore the GetJob function of the streamanalytics module, including
 
 Use this data source to access information about an existing Stream Analytics Job.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.streamanalytics.get_job(name="example-job",
+    resource_group_name="example-resources")
+pulumi.export("jobId", example.job_id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.streamanalytics.getJob({
+    name: "example-job",
+    resourceGroupName: "example-resources",
+});
+export const jobId = example.then(example => example.jobId);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetJob {#using}

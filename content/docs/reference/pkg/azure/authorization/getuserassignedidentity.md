@@ -12,6 +12,29 @@ meta_desc: "Explore the GetUserAssignedIdentity function of the authorization mo
 
 Use this data source to access information about an existing User Assigned Identity.
 
+## Example Usage (reference an existing)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.authorization.getUserAssignedIdentity({
+    name: "name_of_user_assigned_identity",
+    resourceGroupName: "name_of_resource_group",
+});
+export const uaiClientId = example.then(example => example.clientId);
+export const uaiPrincipalId = example.then(example => example.principalId);
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.authorization.get_user_assigned_identity(name="name_of_user_assigned_identity",
+    resource_group_name="name_of_resource_group")
+pulumi.export("uaiClientId", example.client_id)
+pulumi.export("uaiPrincipalId", example.principal_id)
+```
+
 
 
 ## Using GetUserAssignedIdentity {#using}

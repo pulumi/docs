@@ -12,11 +12,81 @@ meta_desc: "Explore the EventHubConsumerGroup resource of the eventhub module, i
 
 Manages a Event Hubs Consumer Group as a nested resource within an Event Hub.
 
-{{% examples %}}
-{{% /examples %}}
+
 
 Deprecated: azure.eventhub.EventHubConsumerGroup has been deprecated in favour of azure.eventhub.ConsumerGroup
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_event_hub_namespace = azure.eventhub.EventHubNamespace("exampleEventHubNamespace",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    sku="Basic",
+    capacity=2,
+    tags={
+        "environment": "Production",
+    })
+example_event_hub = azure.eventhub.EventHub("exampleEventHub",
+    namespace_name=example_event_hub_namespace.name,
+    resource_group_name=example_resource_group.name,
+    partition_count=2,
+    message_retention=2)
+example_consumer_group = azure.eventhub.ConsumerGroup("exampleConsumerGroup",
+    namespace_name=example_event_hub_namespace.name,
+    eventhub_name=example_event_hub.name,
+    resource_group_name=example_resource_group.name,
+    user_metadata="some-meta-data")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleEventHubNamespace = new azure.eventhub.EventHubNamespace("exampleEventHubNamespace", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Basic",
+    capacity: 2,
+    tags: {
+        environment: "Production",
+    },
+});
+const exampleEventHub = new azure.eventhub.EventHub("exampleEventHub", {
+    namespaceName: exampleEventHubNamespace.name,
+    resourceGroupName: exampleResourceGroup.name,
+    partitionCount: 2,
+    messageRetention: 2,
+});
+const exampleConsumerGroup = new azure.eventhub.ConsumerGroup("exampleConsumerGroup", {
+    namespaceName: exampleEventHubNamespace.name,
+    eventhubName: exampleEventHub.name,
+    resourceGroupName: exampleResourceGroup.name,
+    userMetadata: "some-meta-data",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.EventHubConsumerGroup has been deprecated in favour of azure.eventhub.ConsumerGroup{{% /md %}}</p>
 
 

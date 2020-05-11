@@ -18,9 +18,92 @@ Manages network rules inside of a Azure Storage Account.
 
 > **NOTE:** Deleting this resource updates the storage account back to the default values it had when the storage account was created.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24",
+    service_endpoints=["Microsoft.Storage"])
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="GRS",
+    tags={
+        "environment": "staging",
+    })
+test = azure.storage.AccountNetworkRules("test",
+    resource_group_name=azurerm_resource_group["test"]["name"],
+    storage_account_name=azurerm_storage_account["test"]["name"],
+    default_action="Allow",
+    ip_rules=["127.0.0.1"],
+    virtual_network_subnet_ids=[azurerm_subnet["test"]["id"]],
+    bypasses=["Metrics"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+    serviceEndpoints: ["Microsoft.Storage"],
+});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "GRS",
+    tags: {
+        environment: "staging",
+    },
+});
+const test = new azure.storage.AccountNetworkRules("test", {
+    resourceGroupName: azurerm_resource_group.test.name,
+    storageAccountName: azurerm_storage_account.test.name,
+    defaultAction: "Allow",
+    ipRules: ["127.0.0.1"],
+    virtualNetworkSubnetIds: [azurerm_subnet.test.id],
+    bypasses: ["Metrics"],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccountNetworkRules Resource {#create}

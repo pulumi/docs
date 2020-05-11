@@ -17,7 +17,79 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.role.Assignment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.role.</code><code class="sig-name descname">Assignment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_definition_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_definition_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_service_principal_aad_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.role.Assignment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assigns a given Principal (User or Application) to a given Role.</p>
-<p>Deprecated: azure.Assignment has been deprecated in favour of azure.Assignment</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_subscription</span><span class="p">()</span>
+<span class="n">example_client_config</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_assignment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">authorization</span><span class="o">.</span><span class="n">Assignment</span><span class="p">(</span><span class="s2">&quot;exampleAssignment&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">role_definition_name</span><span class="o">=</span><span class="s2">&quot;Reader&quot;</span><span class="p">,</span>
+    <span class="n">principal_id</span><span class="o">=</span><span class="n">example_client_config</span><span class="o">.</span><span class="n">object_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_subscription</span><span class="p">()</span>
+<span class="n">example_client_config</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_role_definition</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">authorization</span><span class="o">.</span><span class="n">RoleDefinition</span><span class="p">(</span><span class="s2">&quot;exampleRoleDefinition&quot;</span><span class="p">,</span>
+    <span class="n">role_definition_id</span><span class="o">=</span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Microsoft.Resources/subscriptions/resourceGroups/read&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;notActions&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="p">}],</span>
+    <span class="n">assignable_scopes</span><span class="o">=</span><span class="p">[</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+<span class="n">example_assignment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">authorization</span><span class="o">.</span><span class="n">Assignment</span><span class="p">(</span><span class="s2">&quot;exampleAssignment&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">role_definition_id</span><span class="o">=</span><span class="n">example_role_definition</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">principal_id</span><span class="o">=</span><span class="n">example_client_config</span><span class="o">.</span><span class="n">object_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_subscription</span><span class="p">()</span>
+<span class="n">example_client_config</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_role_definition</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">authorization</span><span class="o">.</span><span class="n">RoleDefinition</span><span class="p">(</span><span class="s2">&quot;exampleRoleDefinition&quot;</span><span class="p">,</span>
+    <span class="n">role_definition_id</span><span class="o">=</span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Microsoft.Resources/subscriptions/resourceGroups/read&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;notActions&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="p">}],</span>
+    <span class="n">assignable_scopes</span><span class="o">=</span><span class="p">[</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+<span class="n">example_assignment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">authorization</span><span class="o">.</span><span class="n">Assignment</span><span class="p">(</span><span class="s2">&quot;exampleAssignment&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">role_definition_id</span><span class="o">=</span><span class="n">example_role_definition</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">principal_id</span><span class="o">=</span><span class="n">example_client_config</span><span class="o">.</span><span class="n">client_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_subscription</span><span class="p">()</span>
+<span class="n">example_client_config</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">get_group</span><span class="p">()</span>
+<span class="n">example_role_definition</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">authorization</span><span class="o">.</span><span class="n">RoleDefinition</span><span class="p">(</span><span class="s2">&quot;exampleRoleDefinition&quot;</span><span class="p">,</span>
+    <span class="n">role_definition_id</span><span class="o">=</span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Microsoft.Resources/subscriptions/resourceGroups/read&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;notActions&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="p">}],</span>
+    <span class="n">assignable_scopes</span><span class="o">=</span><span class="p">[</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+<span class="n">example_assignment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">authorization</span><span class="o">.</span><span class="n">Assignment</span><span class="p">(</span><span class="s2">&quot;exampleAssignment&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;management.Group&quot;</span><span class="p">][</span><span class="s2">&quot;primary&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">role_definition_id</span><span class="o">=</span><span class="n">example_role_definition</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">principal_id</span><span class="o">=</span><span class="n">example_client_config</span><span class="o">.</span><span class="n">client_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Deprecated: azure.role.Assignment has been deprecated in favour of azure.authorization.Assignment</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -144,7 +216,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.role.Definition">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.role.</code><code class="sig-name descname">Definition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assignable_scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_definition_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.role.Definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a custom Role Definition, used to assign Roles to Users/Principals. See <a class="reference external" href="https://docs.microsoft.com/en-us/azure/role-based-access-control/role-definitions">‘Understand role definitions’</a> in the Azure documentation for more details.</p>
-<p>Deprecated: azure.Definition has been deprecated in favour of azure.RoleDefinition</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">primary</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_subscription</span><span class="p">()</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">authorization</span><span class="o">.</span><span class="n">RoleDefinition</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a custom role created&quot;</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;notActions&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="p">}],</span>
+    <span class="n">assignable_scopes</span><span class="o">=</span><span class="p">[</span><span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Deprecated: azure.role.Definition has been deprecated in favour of azure.authorization.RoleDefinition</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -290,7 +376,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_azure.role.get_role_definition">
 <code class="sig-prename descclassname">pulumi_azure.role.</code><code class="sig-name descname">get_role_definition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_definition_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.role.get_role_definition" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deprecated: azure.getRoleDefinition has been deprecated in favour of azure.getRoleDefinition</p>
+<dd><p>Deprecated: azure.role.getRoleDefinition has been deprecated in favour of azure.authorization.getRoleDefinition</p>
 </dd></dl>
 
 </div>

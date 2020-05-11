@@ -12,9 +12,48 @@ meta_desc: "Explore the GetService function of the healthcare module, including 
 
 Use this data source to access information about an existing Healthcare Service
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.healthcare.get_service(name="example-healthcare_service",
+    resource_group_name="example-resources",
+    location="westus2")
+pulumi.export("healthcareServiceId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.healthcare.getService({
+    name: "example-healthcare_service",
+    resourceGroupName: "example-resources",
+    location: "westus2",
+});
+export const healthcareServiceId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetService {#using}

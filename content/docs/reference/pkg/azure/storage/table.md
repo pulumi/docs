@@ -12,9 +12,53 @@ meta_desc: "Explore the Table resource of the storage module, including examples
 
 Manages a Table within an Azure Storage Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_table = azure.storage.Table("exampleTable", storage_account_name=example_account.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName: exampleAccount.name});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Table Resource {#create}

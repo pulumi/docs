@@ -12,9 +12,53 @@ meta_desc: "Explore the CnameRecord resource of the privatedns module, including
 
 Enables you to manage DNS CNAME Records within Azure Private DNS.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_zone = azure.privatedns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+example_cname_record = azure.privatedns.CnameRecord("exampleCnameRecord",
+    zone_name=example_zone.name,
+    resource_group_name=example_resource_group.name,
+    ttl=300,
+    record="contoso.com")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleZone = new azure.privatedns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const exampleCnameRecord = new azure.privatedns.CnameRecord("exampleCnameRecord", {
+    zoneName: exampleZone.name,
+    resourceGroupName: exampleResourceGroup.name,
+    ttl: 300,
+    record: "contoso.com",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CnameRecord Resource {#create}

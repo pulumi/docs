@@ -12,6 +12,100 @@ meta_desc: "Explore the Volume resource of the netapp module, including examples
 
 Manages a NetApp Volume.
 
+## NetApp Volume Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    addressSpaces: ["10.0.0.0/16"],
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+    delegation: [{
+        name: "netapp",
+        service_delegation: {
+            name: "Microsoft.Netapp/volumes",
+            actions: [
+                "Microsoft.Network/networkinterfaces/*",
+                "Microsoft.Network/virtualNetworks/subnets/join/action",
+            ],
+        },
+    }],
+});
+const exampleAccount = new azure.netapp.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const examplePool = new azure.netapp.Pool("examplePool", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    accountName: exampleAccount.name,
+    serviceLevel: "Premium",
+    sizeInTb: 4,
+});
+const exampleVolume = new azure.netapp.Volume("exampleVolume", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    accountName: exampleAccount.name,
+    poolName: examplePool.name,
+    volumePath: "my-unique-file-path",
+    serviceLevel: "Premium",
+    subnetId: exampleSubnet.id,
+    protocols: ["NFSv4.1"],
+    storageQuotaInGb: 100,
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    address_spaces=["10.0.0.0/16"])
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24",
+    delegation=[{
+        "name": "netapp",
+        "service_delegation": {
+            "name": "Microsoft.Netapp/volumes",
+            "actions": [
+                "Microsoft.Network/networkinterfaces/*",
+                "Microsoft.Network/virtualNetworks/subnets/join/action",
+            ],
+        },
+    }])
+example_account = azure.netapp.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_pool = azure.netapp.Pool("examplePool",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    account_name=example_account.name,
+    service_level="Premium",
+    size_in_tb=4)
+example_volume = azure.netapp.Volume("exampleVolume",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    account_name=example_account.name,
+    pool_name=example_pool.name,
+    volume_path="my-unique-file-path",
+    service_level="Premium",
+    subnet_id=example_subnet.id,
+    protocols=["NFSv4.1"],
+    storage_quota_in_gb=100)
+```
+
 
 
 ## Create a Volume Resource {#create}

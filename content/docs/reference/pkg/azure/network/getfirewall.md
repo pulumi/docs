@@ -12,9 +12,46 @@ meta_desc: "Explore the GetFirewall function of the network module, including ex
 
 Use this data source to access information about an existing Azure Firewall.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.get_firewall(name="firewall1",
+    resource_group_name="firewall-RG")
+pulumi.export("firewallPrivateIp", example.ip_configurations[0].private_ip_address)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.network.getFirewall({
+    name: "firewall1",
+    resourceGroupName: "firewall-RG",
+});
+export const firewallPrivateIp = example.then(example => example.ipConfigurations[0].privateIpAddress);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetFirewall {#using}

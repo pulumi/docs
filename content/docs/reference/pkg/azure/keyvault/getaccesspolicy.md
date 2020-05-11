@@ -12,9 +12,44 @@ meta_desc: "Explore the GetAccessPolicy function of the keyvault module, includi
 
 Use this data source to access information about the permissions from the Management Key Vault Templates.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+contributor = azure.keyvault.get_access_policy(name="Key Management")
+pulumi.export("accessPolicyKeyPermissions", contributor.key_permissions)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const contributor = azure.keyvault.getAccessPolicy({
+    name: "Key Management",
+});
+export const accessPolicyKeyPermissions = contributor.then(contributor => contributor.keyPermissions);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAccessPolicy {#using}

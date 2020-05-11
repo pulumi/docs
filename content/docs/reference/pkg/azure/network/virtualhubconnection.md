@@ -12,9 +12,74 @@ meta_desc: "Explore the VirtualHubConnection resource of the network module, inc
 
 Manages a Connection for a Virtual Hub.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["172.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+test = azure.network.VirtualWan("test",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location)
+example_virtual_hub = azure.network.VirtualHub("exampleVirtualHub",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    virtual_wan_id=azurerm_virtual_wan["example"]["id"],
+    address_prefix="10.0.1.0/24")
+example_virtual_hub_connection = azure.network.VirtualHubConnection("exampleVirtualHubConnection",
+    virtual_hub_id=example_virtual_hub.id,
+    remote_virtual_network_id=example_virtual_network.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["172.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const test = new azure.network.VirtualWan("test", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+});
+const exampleVirtualHub = new azure.network.VirtualHub("exampleVirtualHub", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    virtualWanId: azurerm_virtual_wan.example.id,
+    addressPrefix: "10.0.1.0/24",
+});
+const exampleVirtualHubConnection = new azure.network.VirtualHubConnection("exampleVirtualHubConnection", {
+    virtualHubId: exampleVirtualHub.id,
+    remoteVirtualNetworkId: exampleVirtualNetwork.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualHubConnection Resource {#create}

@@ -52,7 +52,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.managementgroups.ManagementGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.managementgroups.</code><code class="sig-name descname">ManagementGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_management_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subscription_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Management Group.</p>
-<p>Deprecated: azure.ManagementGroup has been deprecated in favour of azure.Group</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_subscription</span><span class="p">()</span>
+<span class="n">example_parent</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;exampleParent&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;ParentGroup&quot;</span><span class="p">,</span>
+    <span class="n">subscription_ids</span><span class="o">=</span><span class="p">[</span><span class="n">current</span><span class="o">.</span><span class="n">subscription_id</span><span class="p">])</span>
+<span class="n">example_child</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;exampleChild&quot;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;ChildGroup&quot;</span><span class="p">,</span>
+    <span class="n">parent_management_group_id</span><span class="o">=</span><span class="n">example_parent</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">subscription_ids</span><span class="o">=</span><span class="p">[</span><span class="n">current</span><span class="o">.</span><span class="n">subscription_id</span><span class="p">])</span>
+<span class="c1"># other subscription IDs can go here</span>
+</pre></div>
+</div>
+<p>Deprecated: azure.managementgroups.ManagementGroup has been deprecated in favour of azure.management.Group</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -159,7 +173,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.managementgroups.get_management_group">
 <code class="sig-prename descclassname">pulumi_azure.managementgroups.</code><code class="sig-name descname">get_management_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.get_management_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Management Group.</p>
-<p>Deprecated: azure.getManagementGroup has been deprecated in favour of azure.getGroup</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;displayName&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">display_name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Deprecated: azure.managementgroups.getManagementGroup has been deprecated in favour of azure.management.getGroup</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

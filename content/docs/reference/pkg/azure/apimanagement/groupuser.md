@@ -13,9 +13,57 @@ meta_desc: "Explore the GroupUser resource of the apimanagement module, includin
 Manages an API Management User Assignment to a Group.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_user = azure.apimanagement.get_user(user_id="my-user",
+    api_management_name="example-apim",
+    resource_group_name="search-service")
+example_group_user = azure.apimanagement.GroupUser("exampleGroupUser",
+    user_id=example_user.id,
+    group_name="example-group",
+    resource_group_name=example_user.resource_group_name,
+    api_management_name=example_user.api_management_name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleUser = azure.apimanagement.getUser({
+    userId: "my-user",
+    apiManagementName: "example-apim",
+    resourceGroupName: "search-service",
+});
+const exampleGroupUser = new azure.apimanagement.GroupUser("exampleGroupUser", {
+    userId: exampleUser.then(exampleUser => exampleUser.id),
+    groupName: "example-group",
+    resourceGroupName: exampleUser.then(exampleUser => exampleUser.resourceGroupName),
+    apiManagementName: exampleUser.then(exampleUser => exampleUser.apiManagementName),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GroupUser Resource {#create}

@@ -12,9 +12,76 @@ meta_desc: "Explore the Api resource of the apimanagement module, including exam
 
 Manages an API within an API Management Service.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_service = azure.apimanagement.Service("exampleService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    publisher_name="My Company",
+    publisher_email="company@exmaple.com",
+    sku_name="Developer_1")
+example_api = azure.apimanagement.Api("exampleApi",
+    resource_group_name=example_resource_group.name,
+    api_management_name=example_service.name,
+    revision="1",
+    display_name="Example API",
+    path="example",
+    protocols=["https"],
+    import_={
+        "contentFormat": "swagger-link-json",
+        "contentValue": "http://conferenceapi.azurewebsites.net/?format=json",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleService = new azure.apimanagement.Service("exampleService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    publisherName: "My Company",
+    publisherEmail: "company@exmaple.com",
+    skuName: "Developer_1",
+});
+const exampleApi = new azure.apimanagement.Api("exampleApi", {
+    resourceGroupName: exampleResourceGroup.name,
+    apiManagementName: exampleService.name,
+    revision: "1",
+    displayName: "Example API",
+    path: "example",
+    protocols: ["https"],
+    "import": {
+        contentFormat: "swagger-link-json",
+        contentValue: "http://conferenceapi.azurewebsites.net/?format=json",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Api Resource {#create}

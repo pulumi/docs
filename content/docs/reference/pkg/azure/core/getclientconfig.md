@@ -12,9 +12,42 @@ meta_desc: "Explore the GetClientConfig function of the core module, including e
 
 Use this data source to access the configuration of the AzureRM provider.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+pulumi.export("accountId", current.client_id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+export const accountId = current.then(current => current.clientId);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetClientConfig {#using}

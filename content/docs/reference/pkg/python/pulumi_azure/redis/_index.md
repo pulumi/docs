@@ -22,6 +22,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.redis.Cache">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.redis.</code><code class="sig-name descname">Cache</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_non_ssl_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">family</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_tls_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">patch_schedules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_static_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shard_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.Cache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Redis Cache.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="c1"># NOTE: the Name used for Redis needs to be globally unique</span>
+<span class="n">example_cache</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">Cache</span><span class="p">(</span><span class="s2">&quot;exampleCache&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">capacity</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="s2">&quot;C&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">enable_non_ssl_port</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">minimum_tls_version</span><span class="o">=</span><span class="s2">&quot;1.2&quot;</span><span class="p">,</span>
+    <span class="n">redis_configuration</span><span class="o">=</span><span class="p">{})</span>
+</pre></div>
+</div>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -384,6 +400,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.redis.FirewallRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.redis.</code><code class="sig-name descname">FirewallRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_cache_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.FirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Firewall Rule associated with a Redis Cache.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+<span class="kn">import</span> <span class="nn">pulumi_random</span> <span class="k">as</span> <span class="nn">random</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomId</span><span class="p">(</span><span class="s2">&quot;server&quot;</span><span class="p">,</span>
+    <span class="n">keepers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;azi_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">byte_length</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_cache</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">Cache</span><span class="p">(</span><span class="s2">&quot;exampleCache&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="s2">&quot;P&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span>
+    <span class="n">enable_non_ssl_port</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">redis_configuration</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;maxclients&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
+        <span class="s2">&quot;maxmemoryReserved&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;maxmemoryDelta&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;maxmemoryPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;allkeys-lru&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_firewall_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">FirewallRule</span><span class="p">(</span><span class="s2">&quot;exampleFirewallRule&quot;</span><span class="p">,</span>
+    <span class="n">redis_cache_name</span><span class="o">=</span><span class="n">example_cache</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">start_ip</span><span class="o">=</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+    <span class="n">end_ip</span><span class="o">=</span><span class="s2">&quot;2.3.4.5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -592,6 +638,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.redis.get_cache">
 <code class="sig-prename descclassname">pulumi_azure.redis.</code><code class="sig-name descname">get_cache</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.get_cache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Redis Cache</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">get_cache</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;myrediscache&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;redis-cache&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;primaryAccessKey&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;hostname&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">hostname</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

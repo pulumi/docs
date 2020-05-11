@@ -12,9 +12,48 @@ meta_desc: "Explore the GetSubnet function of the network module, including exam
 
 Use this data source to access information about an existing Subnet within a Virtual Network.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.get_subnet(name="backend",
+    virtual_network_name="production",
+    resource_group_name="networking")
+pulumi.export("subnetId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.network.getSubnet({
+    name: "backend",
+    virtualNetworkName: "production",
+    resourceGroupName: "networking",
+});
+export const subnetId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSubnet {#using}

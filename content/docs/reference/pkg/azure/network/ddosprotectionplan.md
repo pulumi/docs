@@ -14,9 +14,47 @@ Manages an AzureNetwork DDoS Protection Plan.
 
 > **NOTE** Azure only allows `one` DDoS Protection Plan per region.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_ddos_protection_plan = azure.network.DdosProtectionPlan("exampleDdosProtectionPlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleDdosProtectionPlan = new azure.network.DdosProtectionPlan("exampleDdosProtectionPlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DdosProtectionPlan Resource {#create}

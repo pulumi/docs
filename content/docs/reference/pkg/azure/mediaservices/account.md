@@ -12,9 +12,66 @@ meta_desc: "Explore the Account resource of the mediaservices module, including 
 
 Manages a Media Services Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="GRS")
+example_mediaservices_account_account = azure.mediaservices.Account("exampleMediaservices/accountAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    storage_account=[{
+        "id": example_account.id,
+        "isPrimary": True,
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "GRS",
+});
+const exampleMediaservices/accountAccount = new azure.mediaservices.Account("exampleMediaservices/accountAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    storage_account: [{
+        id: exampleAccount.id,
+        isPrimary: true,
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

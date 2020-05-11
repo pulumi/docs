@@ -12,6 +12,64 @@ meta_desc: "Explore the Image resource of the compute module, including examples
 
 Manages a custom virtual machine image that can be used to create virtual machines.
 
+## Example Usage Creating from VHD
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleImage = new azure.compute.Image("exampleImage", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    os_disk: {
+        osType: "Linux",
+        osState: "Generalized",
+        blobUri: "{blob_uri}",
+        sizeGb: 30,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_image = azure.compute.Image("exampleImage",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    os_disk={
+        "osType": "Linux",
+        "osState": "Generalized",
+        "blobUri": "{blob_uri}",
+        "sizeGb": 30,
+    })
+```
+
+## Example Usage Creating from Virtual Machine (VM must be generalized beforehand)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleImage = new azure.compute.Image("exampleImage", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    sourceVirtualMachineId: "{vm_id}",
+});
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_image = azure.compute.Image("exampleImage",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    source_virtual_machine_id="{vm_id}")
+```
+
 
 
 ## Create a Image Resource {#create}

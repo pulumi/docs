@@ -12,9 +12,92 @@ meta_desc: "Explore the Workspace resource of the machinelearning module, includ
 
 Manages a Azure Machine Learning Workspace
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_insights = azure.appinsights.Insights("exampleInsights",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    application_type="web")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="premium")
+example_account = azure.storage.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    account_tier="Standard",
+    account_replication_type="GRS")
+example_workspace = azure.machinelearning.Workspace("exampleWorkspace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    application_insights_id=example_insights.id,
+    key_vault_id=example_key_vault.id,
+    storage_account_id=example_account.id,
+    identity={
+        "type": "SystemAssigned",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleInsights = new azure.appinsights.Insights("exampleInsights", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    applicationType: "web",
+});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "premium",
+});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    accountTier: "Standard",
+    accountReplicationType: "GRS",
+});
+const exampleWorkspace = new azure.machinelearning.Workspace("exampleWorkspace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    applicationInsightsId: exampleInsights.id,
+    keyVaultId: exampleKeyVault.id,
+    storageAccountId: exampleAccount.id,
+    identity: {
+        type: "SystemAssigned",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Workspace Resource {#create}

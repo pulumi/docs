@@ -12,9 +12,75 @@ meta_desc: "Explore the Job resource of the streamanalytics module, including ex
 
 Manages a Stream Analytics Job.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_job = azure.streamanalytics.Job("exampleJob",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    compatibility_level="1.1",
+    data_locale="en-GB",
+    events_late_arrival_max_delay_in_seconds=60,
+    events_out_of_order_max_delay_in_seconds=50,
+    events_out_of_order_policy="Adjust",
+    output_error_policy="Drop",
+    streaming_units=3,
+    tags={
+        "environment": "Example",
+    },
+    transformation_query="""    SELECT *
+    INTO [YourOutputAlias]
+    FROM [YourInputAlias]
+""")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleJob = new azure.streamanalytics.Job("exampleJob", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    compatibilityLevel: "1.1",
+    dataLocale: "en-GB",
+    eventsLateArrivalMaxDelayInSeconds: 60,
+    eventsOutOfOrderMaxDelayInSeconds: 50,
+    eventsOutOfOrderPolicy: "Adjust",
+    outputErrorPolicy: "Drop",
+    streamingUnits: 3,
+    tags: {
+        environment: "Example",
+    },
+    transformationQuery: `    SELECT *
+    INTO [YourOutputAlias]
+    FROM [YourInputAlias]
+`,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Job Resource {#create}

@@ -12,9 +12,48 @@ meta_desc: "Explore the GetGroup function of the apimanagement module, including
 
 Use this data source to access information about an existing API Management Group.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.apimanagement.get_group(name="my-group",
+    api_management_name="example-apim",
+    resource_group_name="search-service")
+pulumi.export("groupType", example.type)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.apimanagement.getGroup({
+    name: "my-group",
+    apiManagementName: "example-apim",
+    resourceGroupName: "search-service",
+});
+export const groupType = example.then(example => example.type);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetGroup {#using}

@@ -12,9 +12,53 @@ meta_desc: "Explore the PlacementGroup resource of the proximity module, includi
 
 Manages a proximity placement group for virtual machines, virtual machine scale sets and availability sets.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_placement_group = azure.proximity.PlacementGroup("examplePlacementGroup",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tags={
+        "environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const examplePlacementGroup = new azure.proximity.PlacementGroup("examplePlacementGroup", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tags: {
+        environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PlacementGroup Resource {#create}

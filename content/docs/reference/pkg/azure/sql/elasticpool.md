@@ -14,9 +14,72 @@ Allows you to manage an Azure SQL Elastic Pool.
 
 > **NOTE:** -  This version of the `Elasticpool` resource is being **deprecated** and should no longer be used. Please use the azure.mssql.ElasticPool version instead.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_sql_server = azure.sql.SqlServer("exampleSqlServer",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    version="12.0",
+    administrator_login="4dm1n157r470r",
+    administrator_login_password="4-v3ry-53cr37-p455w0rd")
+example_elastic_pool = azure.sql.ElasticPool("exampleElasticPool",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    server_name=example_sql_server.name,
+    edition="Basic",
+    dtu=50,
+    db_dtu_min=0,
+    db_dtu_max=5,
+    pool_size=5000)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    version: "12.0",
+    administratorLogin: "4dm1n157r470r",
+    administratorLoginPassword: "4-v3ry-53cr37-p455w0rd",
+});
+const exampleElasticPool = new azure.sql.ElasticPool("exampleElasticPool", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    serverName: exampleSqlServer.name,
+    edition: "Basic",
+    dtu: 50,
+    dbDtuMin: 0,
+    dbDtuMax: 5,
+    poolSize: 5000,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ElasticPool Resource {#create}

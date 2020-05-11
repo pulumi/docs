@@ -14,9 +14,69 @@ Promotes an App Service Slot to Production within an App Service.
 
 > **Note:** When using Slots - the `app_settings`, `connection_string` and `site_config` blocks on the `azure.appservice.AppService` resource will be overwritten when promoting a Slot using the `azure.appservice.ActiveSlot` resource.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+server = random.RandomId("server")
+# ...
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup")
+# ...
+example_plan = azure.appservice.Plan("examplePlan")
+# ...
+example_app_service = azure.appservice.AppService("exampleAppService")
+# ...
+example_slot = azure.appservice.Slot("exampleSlot")
+# ...
+example_active_slot = azure.appservice.ActiveSlot("exampleActiveSlot",
+    resource_group_name=example_resource_group.name,
+    app_service_name=example_app_service.name,
+    app_service_slot_name=example_slot.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const server = new random.RandomId("server", {});
+// ...
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {});
+// ...
+const examplePlan = new azure.appservice.Plan("examplePlan", {});
+// ...
+const exampleAppService = new azure.appservice.AppService("exampleAppService", {});
+// ...
+const exampleSlot = new azure.appservice.Slot("exampleSlot", {});
+// ...
+const exampleActiveSlot = new azure.appservice.ActiveSlot("exampleActiveSlot", {
+    resourceGroupName: exampleResourceGroup.name,
+    appServiceName: exampleAppService.name,
+    appServiceSlotName: exampleSlot.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ActiveSlot Resource {#create}

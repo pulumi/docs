@@ -12,9 +12,55 @@ meta_desc: "Explore the IotHubDps resource of the iot module, including examples
 
 Manages an IotHub Device Provisioning Service.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_iot_hub_dps = azure.iot.IotHubDps("exampleIotHubDps",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku={
+        "name": "S1",
+        "capacity": "1",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleIotHubDps = new azure.iot.IotHubDps("exampleIotHubDps", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    sku: {
+        name: "S1",
+        capacity: "1",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IotHubDps Resource {#create}

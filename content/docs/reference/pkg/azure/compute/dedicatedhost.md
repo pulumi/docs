@@ -12,9 +12,60 @@ meta_desc: "Explore the DedicatedHost resource of the compute module, including 
 
 Manage a Dedicated Host within a Dedicated Host Group.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_dedicated_host_group = azure.compute.DedicatedHostGroup("exampleDedicatedHostGroup",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    platform_fault_domain_count=2)
+example_dedicated_host = azure.compute.DedicatedHost("exampleDedicatedHost",
+    location=example_resource_group.location,
+    dedicated_host_group_id=example_dedicated_host_group.id,
+    sku_name="DSv3-Type1",
+    platform_fault_domain=1)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleDedicatedHostGroup = new azure.compute.DedicatedHostGroup("exampleDedicatedHostGroup", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    platformFaultDomainCount: 2,
+});
+const exampleDedicatedHost = new azure.compute.DedicatedHost("exampleDedicatedHost", {
+    location: exampleResourceGroup.location,
+    dedicatedHostGroupId: exampleDedicatedHostGroup.id,
+    skuName: "DSv3-Type1",
+    platformFaultDomain: 1,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DedicatedHost Resource {#create}

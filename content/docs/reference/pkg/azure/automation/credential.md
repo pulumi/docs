@@ -12,9 +12,66 @@ meta_desc: "Explore the Credential resource of the automation module, including 
 
 Manages a Automation Credential.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.automation.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku=[{
+        "name": "Basic",
+    }])
+example_credential = azure.automation.Credential("exampleCredential",
+    resource_group_name=example_resource_group.name,
+    automation_account_name=example_account.name,
+    username="example_user",
+    password="example_pwd",
+    description="This is an example credential")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.automation.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: [{
+        name: "Basic",
+    }],
+});
+const exampleCredential = new azure.automation.Credential("exampleCredential", {
+    resourceGroupName: exampleResourceGroup.name,
+    automationAccountName: exampleAccount.name,
+    username: "example_user",
+    password: "example_pwd",
+    description: "This is an example credential",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Credential Resource {#create}

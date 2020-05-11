@@ -12,9 +12,54 @@ meta_desc: "Explore the SpringCloudApp resource of the appplatform module, inclu
 
 Manage an Azure Spring Cloud Application.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="Southeast Asia")
+example_spring_cloud_service = azure.appplatform.SpringCloudService("exampleSpringCloudService",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location)
+example_spring_cloud_app = azure.appplatform.SpringCloudApp("exampleSpringCloudApp",
+    resource_group_name=example_resource_group.name,
+    service_name=example_spring_cloud_service.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "Southeast Asia"});
+const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exampleSpringCloudService", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+});
+const exampleSpringCloudApp = new azure.appplatform.SpringCloudApp("exampleSpringCloudApp", {
+    resourceGroupName: exampleResourceGroup.name,
+    serviceName: exampleSpringCloudService.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SpringCloudApp Resource {#create}

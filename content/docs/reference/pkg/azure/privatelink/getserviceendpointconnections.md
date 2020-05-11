@@ -14,9 +14,46 @@ Use this data source to access endpoint connection information about an existing
 
 > **NOTE** Private Link is currently in Public Preview.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.privatelink.get_service_endpoint_connections(service_id=azurerm_private_link_service["example"]["id"],
+    resource_group_name=azurerm_resource_group["example"]["name"])
+pulumi.export("privateEndpointStatus", example.private_endpoint_connections[0].status)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.privatelink.getServiceEndpointConnections({
+    serviceId: azurerm_private_link_service.example.id,
+    resourceGroupName: azurerm_resource_group.example.name,
+});
+export const privateEndpointStatus = example.then(example => example.privateEndpointConnections[0].status);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetServiceEndpointConnections {#using}

@@ -12,9 +12,69 @@ meta_desc: "Explore the SpringCloudService resource of the appplatform module, i
 
 Manages an Azure Spring Cloud Service.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="Southeast Asia")
+example_spring_cloud_service = azure.appplatform.SpringCloudService("exampleSpringCloudService",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    config_server_git_setting={
+        "uri": "https://github.com/Azure-Samples/piggymetrics",
+        "label": "config",
+        "searchPaths": [
+            "dir1",
+            "dir2",
+        ],
+    },
+    tags={
+        "Env": "staging",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "Southeast Asia"});
+const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exampleSpringCloudService", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    config_server_git_setting: {
+        uri: "https://github.com/Azure-Samples/piggymetrics",
+        label: "config",
+        searchPaths: [
+            "dir1",
+            "dir2",
+        ],
+    },
+    tags: {
+        Env: "staging",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SpringCloudService Resource {#create}

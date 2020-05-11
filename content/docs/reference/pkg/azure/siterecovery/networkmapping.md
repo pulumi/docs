@@ -12,9 +12,104 @@ meta_desc: "Explore the NetworkMapping resource of the siterecovery module, incl
 
 Manages a site recovery network mapping on Azure. A network mapping decides how to translate connected netwroks when a VM is migrated from one region to another.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+primary_resource_group = azure.core.ResourceGroup("primaryResourceGroup", location="West US")
+secondary_resource_group = azure.core.ResourceGroup("secondaryResourceGroup", location="East US")
+vault = azure.recoveryservices.Vault("vault",
+    location=secondary_resource_group.location,
+    resource_group_name=secondary_resource_group.name,
+    sku="Standard")
+primary_fabric = azure.siterecovery.Fabric("primaryFabric",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    location=primary_resource_group.location)
+secondary_fabric = azure.siterecovery.Fabric("secondaryFabric",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    location=secondary_resource_group.location)
+# Avoids issues with crearing fabrics simultainusly
+primary_virtual_network = azure.network.VirtualNetwork("primaryVirtualNetwork",
+    resource_group_name=primary_resource_group.name,
+    address_spaces=["192.168.1.0/24"],
+    location=primary_resource_group.location)
+secondary_virtual_network = azure.network.VirtualNetwork("secondaryVirtualNetwork",
+    resource_group_name=secondary_resource_group.name,
+    address_spaces=["192.168.2.0/24"],
+    location=secondary_resource_group.location)
+recovery_mapping = azure.siterecovery.NetworkMapping("recovery-mapping",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    source_recovery_fabric_name="primary-fabric",
+    target_recovery_fabric_name="secondary-fabric",
+    source_network_id=primary_virtual_network.id,
+    target_network_id=secondary_virtual_network.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const primaryResourceGroup = new azure.core.ResourceGroup("primaryResourceGroup", {location: "West US"});
+const secondaryResourceGroup = new azure.core.ResourceGroup("secondaryResourceGroup", {location: "East US"});
+const vault = new azure.recoveryservices.Vault("vault", {
+    location: secondaryResourceGroup.location,
+    resourceGroupName: secondaryResourceGroup.name,
+    sku: "Standard",
+});
+const primaryFabric = new azure.siterecovery.Fabric("primaryFabric", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    location: primaryResourceGroup.location,
+});
+const secondaryFabric = new azure.siterecovery.Fabric("secondaryFabric", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    location: secondaryResourceGroup.location,
+});
+// Avoids issues with crearing fabrics simultainusly
+const primaryVirtualNetwork = new azure.network.VirtualNetwork("primaryVirtualNetwork", {
+    resourceGroupName: primaryResourceGroup.name,
+    addressSpaces: ["192.168.1.0/24"],
+    location: primaryResourceGroup.location,
+});
+const secondaryVirtualNetwork = new azure.network.VirtualNetwork("secondaryVirtualNetwork", {
+    resourceGroupName: secondaryResourceGroup.name,
+    addressSpaces: ["192.168.2.0/24"],
+    location: secondaryResourceGroup.location,
+});
+const recovery-mapping = new azure.siterecovery.NetworkMapping("recovery-mapping", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    sourceRecoveryFabricName: "primary-fabric",
+    targetRecoveryFabricName: "secondary-fabric",
+    sourceNetworkId: primaryVirtualNetwork.id,
+    targetNetworkId: secondaryVirtualNetwork.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkMapping Resource {#create}

@@ -219,6 +219,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note</strong> A bot can only have a single Slack Channel associated with it.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
+<span class="n">example_channels_registration</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">ChannelsRegistration</span><span class="p">(</span><span class="s2">&quot;exampleChannelsRegistration&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+    <span class="n">microsoft_app_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">client_id</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;F0&quot;</span><span class="p">)</span>
+<span class="n">example_channel_slack</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">ChannelSlack</span><span class="p">(</span><span class="s2">&quot;exampleChannelSlack&quot;</span><span class="p">,</span>
+    <span class="n">bot_name</span><span class="o">=</span><span class="n">example_channels_registration</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;exampleId&quot;</span><span class="p">,</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;exampleSecret&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_channels_registration</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">verification_token</span><span class="o">=</span><span class="s2">&quot;exampleVerificationToken&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -344,6 +363,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note</strong> A bot can only have a single MS Teams Channel associated with it.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
+<span class="n">example_channels_registration</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">ChannelsRegistration</span><span class="p">(</span><span class="s2">&quot;exampleChannelsRegistration&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+    <span class="n">microsoft_app_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">client_id</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;F0&quot;</span><span class="p">)</span>
+<span class="n">example_channel_teams</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">ChannelTeams</span><span class="p">(</span><span class="s2">&quot;exampleChannelTeams&quot;</span><span class="p">,</span>
+    <span class="n">bot_name</span><span class="o">=</span><span class="n">example_channels_registration</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">calling_web_hook</span><span class="o">=</span><span class="s2">&quot;https://example2.com/&quot;</span><span class="p">,</span>
+    <span class="n">enable_calling</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_channels_registration</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -450,6 +487,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.bot.ChannelsRegistration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.bot.</code><code class="sig-name descname">ChannelsRegistration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">developer_app_insights_api_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">developer_app_insights_application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">developer_app_insights_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">microsoft_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.bot.ChannelsRegistration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Bot Channels Registration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
+<span class="n">example_channels_registration</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">ChannelsRegistration</span><span class="p">(</span><span class="s2">&quot;exampleChannelsRegistration&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+    <span class="n">microsoft_app_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">client_id</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;F0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -604,6 +653,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.bot.Connection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.bot.</code><code class="sig-name descname">Connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bot_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.bot.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Bot Connection.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
+<span class="n">example_channels_registration</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">ChannelsRegistration</span><span class="p">(</span><span class="s2">&quot;exampleChannelsRegistration&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+    <span class="n">microsoft_app_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">client_id</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;F0&quot;</span><span class="p">)</span>
+<span class="n">example_connection</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span><span class="s2">&quot;exampleConnection&quot;</span><span class="p">,</span>
+    <span class="n">bot_name</span><span class="o">=</span><span class="n">example_channels_registration</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;exampleId&quot;</span><span class="p">,</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;exampleSecret&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_channels_registration</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">service_provider_name</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -750,6 +818,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.bot.WebApp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.bot.</code><code class="sig-name descname">WebApp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">developer_app_insights_api_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">developer_app_insights_application_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">developer_app_insights_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">luis_app_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">luis_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">microsoft_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.bot.WebApp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Bot Web App.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
+<span class="n">example_web_app</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">WebApp</span><span class="p">(</span><span class="s2">&quot;exampleWebApp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+    <span class="n">microsoft_app_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">client_id</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;F0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

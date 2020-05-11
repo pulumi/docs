@@ -12,9 +12,69 @@ meta_desc: "Explore the Server resource of the analysisservices module, includin
 
 Manages an Analysis Services Server.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="northeurope")
+server = azure.analysisservices.Server("server",
+    location="northeurope",
+    resource_group_name=rg.name,
+    sku="S0",
+    admin_users=["myuser@domain.tld"],
+    enable_power_bi_service=True,
+    ipv4_firewall_rule=[{
+        "name": "myRule1",
+        "rangeStart": "210.117.252.0",
+        "rangeEnd": "210.117.252.255",
+    }],
+    tags={
+        "abc": 123,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "northeurope"});
+const server = new azure.analysisservices.Server("server", {
+    location: "northeurope",
+    resourceGroupName: rg.name,
+    sku: "S0",
+    adminUsers: ["myuser@domain.tld"],
+    enablePowerBiService: true,
+    ipv4_firewall_rule: [{
+        name: "myRule1",
+        rangeStart: "210.117.252.0",
+        rangeEnd: "210.117.252.255",
+    }],
+    tags: {
+        abc: 123,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Server Resource {#create}
@@ -276,7 +336,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this values is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
+    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this value is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -372,7 +432,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this values is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
+    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this value is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -468,7 +528,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this values is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
+    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this value is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -564,7 +624,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this values is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
+    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this value is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -875,7 +935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this values is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
+    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this value is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -980,7 +1040,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this values is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
+    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this value is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1085,7 +1145,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this values is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
+    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this value is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1190,7 +1250,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this values is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
+    <dd>{{% md %}}Controls how the read-write server is used in the query pool. If this value is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

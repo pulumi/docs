@@ -13,6 +13,30 @@ meta_desc: "Explore the GetPool function of the netapp module, including example
 Uses this data source to access information about an existing NetApp Pool.
 
 
+## NetApp Pool Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.netapp.getPool({
+    resourceGroupName: "acctestRG",
+    accountName: "acctestnetappaccount",
+    name: "acctestnetapppool",
+});
+export const netappPoolId = example.then(example => example.id);
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.netapp.get_pool(resource_group_name="acctestRG",
+    account_name="acctestnetappaccount",
+    name="acctestnetapppool")
+pulumi.export("netappPoolId", example.id)
+```
+
+
 
 ## Using GetPool {#using}
 

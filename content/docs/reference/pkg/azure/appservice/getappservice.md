@@ -12,9 +12,46 @@ meta_desc: "Explore the GetAppService function of the appservice module, includi
 
 Use this data source to access information about an existing App Service.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.appservice.get_app_service(name="search-app-service",
+    resource_group_name="search-service")
+pulumi.export("appServiceId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.appservice.getAppService({
+    name: "search-app-service",
+    resourceGroupName: "search-service",
+});
+export const appServiceId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAppService {#using}
@@ -261,7 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Connection String.
+    <dd>{{% md %}}The name for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -427,7 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Connection String.
+    <dd>{{% md %}}The name for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -593,7 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Connection String.
+    <dd>{{% md %}}The name for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -759,7 +796,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Connection String.
+    <dd>{{% md %}}The name for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1063,6 +1100,15 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>Health<wbr>Check<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The health check path to be pinged by App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>Http2Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
@@ -1273,6 +1319,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service for this AppService.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Health<wbr>Check<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The health check path to be pinged by App Service.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1491,6 +1546,15 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>health<wbr>Check<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The health check path to be pinged by App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>http2Enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
@@ -1701,6 +1765,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service for this AppService.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>health<wbr>Check<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The health check path to be pinged by App Service.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2010,6 +2083,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>Virtual<wbr>Network<wbr>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -2030,6 +2121,24 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Address used for this IP Restriction.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2058,6 +2167,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>virtual<wbr>Network<wbr>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -2078,6 +2205,24 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IP Address used for this IP Restriction.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-required"

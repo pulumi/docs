@@ -12,9 +12,113 @@ meta_desc: "Explore the NetworkWatcherFlowLog resource of the network module, in
 
 Manages a Network Watcher Flow Log.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+test_resource_group = azure.core.ResourceGroup("testResourceGroup", location="eastus")
+test_network_security_group = azure.network.NetworkSecurityGroup("testNetworkSecurityGroup",
+    location=test_resource_group.location,
+    resource_group_name=test_resource_group.name)
+test_network_watcher = azure.network.NetworkWatcher("testNetworkWatcher",
+    location=test_resource_group.location,
+    resource_group_name=test_resource_group.name)
+test_account = azure.storage.Account("testAccount",
+    resource_group_name=test_resource_group.name,
+    location=test_resource_group.location,
+    account_tier="Standard",
+    account_kind="StorageV2",
+    account_replication_type="LRS",
+    enable_https_traffic_only=True)
+test_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("testAnalyticsWorkspace",
+    location=test_resource_group.location,
+    resource_group_name=test_resource_group.name,
+    sku="PerGB2018")
+test_network_watcher_flow_log = azure.network.NetworkWatcherFlowLog("testNetworkWatcherFlowLog",
+    network_watcher_name=test_network_watcher.name,
+    resource_group_name=test_resource_group.name,
+    network_security_group_id=test_network_security_group.id,
+    storage_account_id=test_account.id,
+    enabled=True,
+    retention_policy={
+        "enabled": True,
+        "days": 7,
+    },
+    traffic_analytics={
+        "enabled": True,
+        "workspaceId": test_analytics_workspace.workspace_id,
+        "workspaceRegion": test_analytics_workspace.location,
+        "workspaceResourceId": test_analytics_workspace.id,
+        "intervalInMinutes": 10,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const testResourceGroup = new azure.core.ResourceGroup("testResourceGroup", {location: "eastus"});
+const testNetworkSecurityGroup = new azure.network.NetworkSecurityGroup("testNetworkSecurityGroup", {
+    location: testResourceGroup.location,
+    resourceGroupName: testResourceGroup.name,
+});
+const testNetworkWatcher = new azure.network.NetworkWatcher("testNetworkWatcher", {
+    location: testResourceGroup.location,
+    resourceGroupName: testResourceGroup.name,
+});
+const testAccount = new azure.storage.Account("testAccount", {
+    resourceGroupName: testResourceGroup.name,
+    location: testResourceGroup.location,
+    accountTier: "Standard",
+    accountKind: "StorageV2",
+    accountReplicationType: "LRS",
+    enableHttpsTrafficOnly: true,
+});
+const testAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace("testAnalyticsWorkspace", {
+    location: testResourceGroup.location,
+    resourceGroupName: testResourceGroup.name,
+    sku: "PerGB2018",
+});
+const testNetworkWatcherFlowLog = new azure.network.NetworkWatcherFlowLog("testNetworkWatcherFlowLog", {
+    networkWatcherName: testNetworkWatcher.name,
+    resourceGroupName: testResourceGroup.name,
+    networkSecurityGroupId: testNetworkSecurityGroup.id,
+    storageAccountId: testAccount.id,
+    enabled: true,
+    retention_policy: {
+        enabled: true,
+        days: 7,
+    },
+    traffic_analytics: {
+        enabled: true,
+        workspaceId: testAnalyticsWorkspace.workspaceId,
+        workspaceRegion: testAnalyticsWorkspace.location,
+        workspaceResourceId: testAnalyticsWorkspace.id,
+        intervalInMinutes: 10,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkWatcherFlowLog Resource {#create}

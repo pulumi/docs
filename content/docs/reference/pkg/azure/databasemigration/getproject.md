@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.databasemigration.get_project(name="example-dbms-project",
+    resource_group_name="example-rg",
+    service_name="example-dbms")
+pulumi.export("name", example.name)
+```
 {{% /example %}}
 
 {{% example typescript %}}

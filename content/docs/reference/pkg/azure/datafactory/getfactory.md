@@ -12,9 +12,46 @@ meta_desc: "Explore the GetFactory function of the datafactory module, including
 
 Use this data source to access information about an existing Azure Data Factory (Version 2).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.datafactory.get_factory(name=azurerm_data_factory["example"]["name"],
+    resource_group_name=azurerm_data_factory["example"]["resource_group_name"])
+pulumi.export("dataFactoryId", azurerm_data_factory["example"]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.datafactory.getFactory({
+    name: azurerm_data_factory.example.name,
+    resourceGroupName: azurerm_data_factory.example.resource_group_name,
+});
+export const dataFactoryId = azurerm_data_factory.example.id;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetFactory {#using}

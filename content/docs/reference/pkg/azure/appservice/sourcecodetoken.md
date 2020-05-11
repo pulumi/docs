@@ -30,7 +30,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.appservice.SourceCodeToken("example",
+    token="7e57735e77e577e57",
+    type="GitHub")
+```
 {{% /example %}}
 
 {{% example typescript %}}

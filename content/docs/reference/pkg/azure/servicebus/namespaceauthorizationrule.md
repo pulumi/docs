@@ -12,9 +12,68 @@ meta_desc: "Explore the NamespaceAuthorizationRule resource of the servicebus mo
 
 Manages a ServiceBus Namespace authorization Rule within a ServiceBus.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_namespace = azure.servicebus.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    tags={
+        "source": "example",
+    })
+example_namespace_authorization_rule = azure.servicebus.NamespaceAuthorizationRule("exampleNamespaceAuthorizationRule",
+    namespace_name=example_namespace.name,
+    resource_group_name=example_resource_group.name,
+    listen=True,
+    send=True,
+    manage=False)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+    tags: {
+        source: "example",
+    },
+});
+const exampleNamespaceAuthorizationRule = new azure.servicebus.NamespaceAuthorizationRule("exampleNamespaceAuthorizationRule", {
+    namespaceName: exampleNamespace.name,
+    resourceGroupName: exampleResourceGroup.name,
+    listen: true,
+    send: true,
+    manage: false,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NamespaceAuthorizationRule Resource {#create}

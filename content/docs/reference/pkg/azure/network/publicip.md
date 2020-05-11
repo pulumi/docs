@@ -12,9 +12,55 @@ meta_desc: "Explore the PublicIp resource of the network module, including examp
 
 Manages a Public IP Address.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static",
+    tags={
+        "environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+    tags: {
+        environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PublicIp Resource {#create}

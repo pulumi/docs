@@ -12,9 +12,64 @@ meta_desc: "Explore the AdvancedThreatProtection resource of the securitycenter 
 
 Manages a resources Advanced Threat Protection setting.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="northeurope")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=azurerm_resource_group["example"]["name"],
+    location=azurerm_resource_group["example"]["location"],
+    account_tier="Standard",
+    account_replication_type="LRS",
+    tags={
+        "environment": "example",
+    })
+example_advanced_threat_protection = azure.securitycenter.AdvancedThreatProtection("exampleAdvancedThreatProtection",
+    target_resource_id=example_account.id,
+    enabled=True)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "northeurope"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: azurerm_resource_group.example.name,
+    location: azurerm_resource_group.example.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+    tags: {
+        environment: "example",
+    },
+});
+const exampleAdvancedThreatProtection = new azure.securitycenter.AdvancedThreatProtection("exampleAdvancedThreatProtection", {
+    targetResourceId: exampleAccount.id,
+    enabled: true,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AdvancedThreatProtection Resource {#create}

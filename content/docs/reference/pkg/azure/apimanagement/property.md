@@ -13,9 +13,64 @@ meta_desc: "Explore the Property resource of the apimanagement module, including
 Manages an API Management Property.
 
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_service = azure.apimanagement.Service("exampleService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    publisher_name="pub1",
+    publisher_email="pub1@email.com",
+    sku_name="Developer_1")
+example_property = azure.apimanagement.Property("exampleProperty",
+    resource_group_name=example_resource_group.name,
+    api_management_name=example_service.name,
+    display_name="ExampleProperty",
+    value="Example Value")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleService = new azure.apimanagement.Service("exampleService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    publisherName: "pub1",
+    publisherEmail: "pub1@email.com",
+    skuName: "Developer_1",
+});
+const exampleProperty = new azure.apimanagement.Property("exampleProperty", {
+    resourceGroupName: exampleResourceGroup.name,
+    apiManagementName: exampleService.name,
+    displayName: "ExampleProperty",
+    value: "Example Value",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Property Resource {#create}

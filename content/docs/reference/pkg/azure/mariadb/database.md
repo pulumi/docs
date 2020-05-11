@@ -12,9 +12,78 @@ meta_desc: "Explore the Database resource of the mariadb module, including examp
 
 Manages a MariaDB Database within a MariaDB Server
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westeurope")
+example_server = azure.mariadb.Server("exampleServer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="B_Gen5_2",
+    storage_profile={
+        "storageMb": 51200,
+        "backupRetentionDays": 7,
+        "geoRedundantBackup": "Disabled",
+    },
+    administrator_login="acctestun",
+    administrator_login_password="H@Sh1CoR3!",
+    version="10.2",
+    ssl_enforcement="Enabled")
+example_database = azure.mariadb.Database("exampleDatabase",
+    resource_group_name=example_resource_group.name,
+    server_name=example_server.name,
+    charset="utf8",
+    collation="utf8_general_ci")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westeurope"});
+const exampleServer = new azure.mariadb.Server("exampleServer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "B_Gen5_2",
+    storage_profile: {
+        storageMb: 51200,
+        backupRetentionDays: 7,
+        geoRedundantBackup: "Disabled",
+    },
+    administratorLogin: "acctestun",
+    administratorLoginPassword: "H@Sh1CoR3!",
+    version: "10.2",
+    sslEnforcement: "Enabled",
+});
+const exampleDatabase = new azure.mariadb.Database("exampleDatabase", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    charset: "utf8",
+    collation: "utf8_general_ci",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}

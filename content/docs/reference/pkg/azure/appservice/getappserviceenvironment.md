@@ -12,9 +12,46 @@ meta_desc: "Explore the GetAppServiceEnvironment function of the appservice modu
 
 Use this data source to access information about an existing App Service Environment
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.appservice.get_app_service_environment(name="example-ase",
+    resource_group_name="example-rg")
+pulumi.export("appServiceEnvironmentId", data["azure.appservice.Environment"]["id"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.appservice.getAppServiceEnvironment({
+    name: "example-ase",
+    resourceGroupName: "example-rg",
+});
+export const appServiceEnvironmentId = data.azurerm_app_service_environment.id;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAppServiceEnvironment {#using}

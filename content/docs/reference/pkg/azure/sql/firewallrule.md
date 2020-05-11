@@ -12,9 +12,64 @@ meta_desc: "Explore the FirewallRule resource of the sql module, including examp
 
 Allows you to manage an Azure SQL Firewall Rule
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_sql_server = azure.sql.SqlServer("exampleSqlServer",
+    resource_group_name=example_resource_group.name,
+    location="West US",
+    version="12.0",
+    administrator_login="4dm1n157r470r",
+    administrator_login_password="4-v3ry-53cr37-p455w0rd")
+example_firewall_rule = azure.sql.FirewallRule("exampleFirewallRule",
+    resource_group_name=example_resource_group.name,
+    server_name=example_sql_server.name,
+    start_ip_address="10.0.17.62",
+    end_ip_address="10.0.17.62")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: "West US",
+    version: "12.0",
+    administratorLogin: "4dm1n157r470r",
+    administratorLoginPassword: "4-v3ry-53cr37-p455w0rd",
+});
+const exampleFirewallRule = new azure.sql.FirewallRule("exampleFirewallRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleSqlServer.name,
+    startIpAddress: "10.0.17.62",
+    endIpAddress: "10.0.17.62",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallRule Resource {#create}

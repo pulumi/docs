@@ -12,9 +12,71 @@ meta_desc: "Explore the Cluster resource of the servicefabric module, including 
 
 Manages a Service Fabric Cluster.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_cluster = azure.servicefabric.Cluster("exampleCluster",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    reliability_level="Bronze",
+    upgrade_mode="Manual",
+    cluster_code_version="6.5.639.9590",
+    vm_image="Windows",
+    management_endpoint="https://example:80",
+    node_type=[{
+        "name": "first",
+        "instanceCount": 3,
+        "isPrimary": True,
+        "clientEndpointPort": 2020,
+        "httpEndpointPort": 80,
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleCluster = new azure.servicefabric.Cluster("exampleCluster", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    reliabilityLevel: "Bronze",
+    upgradeMode: "Manual",
+    clusterCodeVersion: "6.5.639.9590",
+    vmImage: "Windows",
+    managementEndpoint: "https://example:80",
+    node_type: [{
+        name: "first",
+        instanceCount: 3,
+        isPrimary: true,
+        clientEndpointPort: 2020,
+        httpEndpointPort: 80,
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

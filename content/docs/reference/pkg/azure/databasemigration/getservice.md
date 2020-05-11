@@ -29,7 +29,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.databasemigration.get_service(name="example-dms",
+    resource_group_name="example-rg")
+pulumi.export("azurermDmsId", example.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

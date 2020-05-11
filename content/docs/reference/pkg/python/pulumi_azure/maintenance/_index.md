@@ -14,9 +14,27 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.maintenance"></span><dl class="py class">
+<dt id="pulumi_azure.maintenance.AwaitableGetConfigurationResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.maintenance.</code><code class="sig-name descname">AwaitableGetConfigurationResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.maintenance.AwaitableGetConfigurationResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_azure.maintenance.Configuration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.maintenance.</code><code class="sig-name descname">Configuration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.maintenance.Configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a maintenance configuration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_configuration</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">maintenance</span><span class="o">.</span><span class="n">Configuration</span><span class="p">(</span><span class="s2">&quot;exampleConfiguration&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;All&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Env&quot;</span><span class="p">:</span> <span class="s2">&quot;prod&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -117,6 +135,58 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_azure.maintenance.GetConfigurationResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.maintenance.</code><code class="sig-name descname">GetConfigurationResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.maintenance.GetConfigurationResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getConfiguration.</p>
+<dl class="py attribute">
+<dt id="pulumi_azure.maintenance.GetConfigurationResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.maintenance.GetConfigurationResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.maintenance.GetConfigurationResult.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.maintenance.GetConfigurationResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Azure location where the resource exists.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.maintenance.GetConfigurationResult.scope">
+<code class="sig-name descname">scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.maintenance.GetConfigurationResult.scope" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scope of the Maintenance Configuration.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.maintenance.GetConfigurationResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.maintenance.GetConfigurationResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_azure.maintenance.get_configuration">
+<code class="sig-prename descclassname">pulumi_azure.maintenance.</code><code class="sig-name descname">get_configuration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.maintenance.get_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Maintenance Configuration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">existing</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">maintenance</span><span class="o">.</span><span class="n">get_configuration</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-mc&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="n">azurerm_maintenance_configuration</span><span class="p">[</span><span class="s2">&quot;existing&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Maintenance Configuration.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the Resource Group where this Maintenance Configuration exists.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

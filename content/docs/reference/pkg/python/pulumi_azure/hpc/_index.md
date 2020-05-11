@@ -20,6 +20,26 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>Note</strong>: During the first several months of the GA release, a request must be made to the Azure HPC Cache team to add your subscription to the access list before it can be used to create a cache instance. Fill out <a class="reference external" href="https://aka.ms/onboard-hpc-cache">this form</a> to request access.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">)</span>
+<span class="n">example_cache</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hpc</span><span class="o">.</span><span class="n">Cache</span><span class="p">(</span><span class="s2">&quot;exampleCache&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">cache_size_in_gb</span><span class="o">=</span><span class="mi">3072</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Standard_2G&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -141,6 +161,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hpc.CacheBlobTarget">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hpc.</code><code class="sig-name descname">CacheBlobTarget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_container_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Blob Target within a HPC Cache.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+<span class="kn">import</span> <span class="nn">pulumi_azuread</span> <span class="k">as</span> <span class="nn">azuread</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;exampleSubnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">)</span>
+<span class="n">example_cache</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hpc</span><span class="o">.</span><span class="n">Cache</span><span class="p">(</span><span class="s2">&quot;exampleCache&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">cache_size_in_gb</span><span class="o">=</span><span class="mi">3072</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Standard_2G&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span> <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_service_principal</span> <span class="o">=</span> <span class="n">azuread</span><span class="o">.</span><span class="n">get_service_principal</span><span class="p">(</span><span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;HPC Cache Resource Provider&quot;</span><span class="p">)</span>
+<span class="n">example_storage_account_contrib</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">authorization</span><span class="o">.</span><span class="n">Assignment</span><span class="p">(</span><span class="s2">&quot;exampleStorageAccountContrib&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">role_definition_name</span><span class="o">=</span><span class="s2">&quot;Storage Account Contributor&quot;</span><span class="p">,</span>
+    <span class="n">principal_id</span><span class="o">=</span><span class="n">example_service_principal</span><span class="o">.</span><span class="n">object_id</span><span class="p">)</span>
+<span class="n">example_storage_blob_data_contrib</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">authorization</span><span class="o">.</span><span class="n">Assignment</span><span class="p">(</span><span class="s2">&quot;exampleStorageBlobDataContrib&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">role_definition_name</span><span class="o">=</span><span class="s2">&quot;Storage Blob Data Contributor&quot;</span><span class="p">,</span>
+    <span class="n">principal_id</span><span class="o">=</span><span class="n">example_service_principal</span><span class="o">.</span><span class="n">object_id</span><span class="p">)</span>
+<span class="n">example_cache_blob_target</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hpc</span><span class="o">.</span><span class="n">CacheBlobTarget</span><span class="p">(</span><span class="s2">&quot;exampleCacheBlobTarget&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">cache_name</span><span class="o">=</span><span class="n">example_cache</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_container_id</span><span class="o">=</span><span class="n">example_container</span><span class="o">.</span><span class="n">resource_manager_id</span><span class="p">,</span>
+    <span class="n">namespace_path</span><span class="o">=</span><span class="s2">&quot;/blob_storage&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

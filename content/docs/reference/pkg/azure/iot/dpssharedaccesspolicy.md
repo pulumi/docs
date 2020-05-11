@@ -12,9 +12,66 @@ meta_desc: "Explore the DpsSharedAccessPolicy resource of the iot module, includ
 
 Manages an IotHub Device Provisioning Service Shared Access Policy
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_iot_hub_dps = azure.iot.IotHubDps("exampleIotHubDps",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku={
+        "name": "S1",
+        "capacity": "1",
+    })
+example_dps_shared_access_policy = azure.iot.DpsSharedAccessPolicy("exampleDpsSharedAccessPolicy",
+    resource_group_name=example_resource_group.name,
+    iothub_dps_name=example_iot_hub_dps.name,
+    enrollment_write=True,
+    enrollment_read=True)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleIotHubDps = new azure.iot.IotHubDps("exampleIotHubDps", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    sku: {
+        name: "S1",
+        capacity: "1",
+    },
+});
+const exampleDpsSharedAccessPolicy = new azure.iot.DpsSharedAccessPolicy("exampleDpsSharedAccessPolicy", {
+    resourceGroupName: exampleResourceGroup.name,
+    iothubDpsName: exampleIotHubDps.name,
+    enrollmentWrite: true,
+    enrollmentRead: true,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DpsSharedAccessPolicy Resource {#create}

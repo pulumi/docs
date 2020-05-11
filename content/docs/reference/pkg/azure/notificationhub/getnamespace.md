@@ -12,9 +12,46 @@ meta_desc: "Explore the GetNamespace function of the notificationhub module, inc
 
 Use this data source to access information about an existing Notification Hub Namespace.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.notificationhub.get_namespace(name="my-namespace",
+    resource_group_name="my-resource-group")
+pulumi.export("servicebusEndpoint", example.servicebus_endpoint)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.notificationhub.getNamespace({
+    name: "my-namespace",
+    resourceGroupName: "my-resource-group",
+});
+export const servicebusEndpoint = example.then(example => example.servicebusEndpoint);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetNamespace {#using}

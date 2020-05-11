@@ -25,6 +25,25 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. <a class="reference external" href="https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview">Read More</a></p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">rg</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;rg&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">vault</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">recoveryservices</span><span class="o">.</span><span class="n">Vault</span><span class="p">(</span><span class="s2">&quot;vault&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+<span class="n">sa</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">ContainerStorageAccount</span><span class="p">(</span><span class="s2">&quot;container&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -136,6 +155,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. <a class="reference external" href="https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview">Read More</a></p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">rg</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;rg&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">vault</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">recoveryservices</span><span class="o">.</span><span class="n">Vault</span><span class="p">(</span><span class="s2">&quot;vault&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+<span class="n">policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">PolicyFileShare</span><span class="p">(</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">backup</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Daily&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;23:00&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">retention_daily</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">timezone</span><span class="o">=</span><span class="s2">&quot;UTC&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -275,6 +315,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.backup.PolicyVM">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.backup.</code><code class="sig-name descname">PolicyVM</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recovery_vault_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_daily</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_monthly</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_weekly</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_yearly</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timezone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.backup.PolicyVM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Backup VM Backup Policy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_vault</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">recoveryservices</span><span class="o">.</span><span class="n">Vault</span><span class="p">(</span><span class="s2">&quot;exampleVault&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+<span class="n">example_policy_vm</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">PolicyVM</span><span class="p">(</span><span class="s2">&quot;examplePolicyVM&quot;</span><span class="p">,</span>
+    <span class="n">backup</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Daily&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;23:00&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">example_vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">retention_daily</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">retention_monthly</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s2">&quot;weekdays&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Sunday&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;weeks&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;First&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Last&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">retention_weekly</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+        <span class="s2">&quot;weekdays&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Sunday&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Friday&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Saturday&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">retention_yearly</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">77</span><span class="p">,</span>
+        <span class="s2">&quot;months&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;January&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;weekdays&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Sunday&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;weeks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Last&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">timezone</span><span class="o">=</span><span class="s2">&quot;UTC&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -504,6 +591,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. <a class="reference external" href="https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview">Read More</a></p>
 <p><strong>NOTE</strong> Azure Backup for Azure File Shares does not support Soft Delete at this time. Deleting this resource will also delete all associated backup data. Please exercise caution. Consider using <cite>``protect`</cite> &lt;<a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#protect">https://www.pulumi.com/docs/intro/concepts/programming-model/#protect</a>&gt;`_ to guard against accidental deletion.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">rg</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;rg&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">vault</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">recoveryservices</span><span class="o">.</span><span class="n">Vault</span><span class="p">(</span><span class="s2">&quot;vault&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+<span class="n">sa</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;sa&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_share</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Share</span><span class="p">(</span><span class="s2">&quot;exampleShare&quot;</span><span class="p">,</span> <span class="n">storage_account_name</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">protection_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">ContainerStorageAccount</span><span class="p">(</span><span class="s2">&quot;protection-container&quot;</span><span class="p">,</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_id</span><span class="o">=</span><span class="n">sa</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">example_policy_file_share</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">PolicyFileShare</span><span class="p">(</span><span class="s2">&quot;examplePolicyFileShare&quot;</span><span class="p">,</span>
+    <span class="n">backup</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Daily&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;23:00&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">retention_daily</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">share1</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">ProtectedFileShare</span><span class="p">(</span><span class="s2">&quot;share1&quot;</span><span class="p">,</span>
+    <span class="n">backup_policy_id</span><span class="o">=</span><span class="n">example_policy_file_share</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source_file_share_name</span><span class="o">=</span><span class="n">example_share</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source_storage_account_id</span><span class="o">=</span><span class="n">protection_container</span><span class="o">.</span><span class="n">storage_account_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -610,6 +733,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.backup.ProtectedVM">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.backup.</code><code class="sig-name descname">ProtectedVM</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup_policy_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recovery_vault_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_vm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.backup.ProtectedVM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages Azure Backup for an Azure VM</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_vault</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">recoveryservices</span><span class="o">.</span><span class="n">Vault</span><span class="p">(</span><span class="s2">&quot;exampleVault&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+<span class="n">example_policy_vm</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">PolicyVM</span><span class="p">(</span><span class="s2">&quot;examplePolicyVM&quot;</span><span class="p">,</span>
+    <span class="n">backup</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;Daily&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;23:00&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">example_vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">vm1</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">ProtectedVM</span><span class="p">(</span><span class="s2">&quot;vm1&quot;</span><span class="p">,</span>
+    <span class="n">backup_policy_id</span><span class="o">=</span><span class="n">example_policy_vm</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="n">example_vault</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">source_vm_id</span><span class="o">=</span><span class="n">azurerm_virtual_machine</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -716,6 +861,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.backup.get_policy_vm">
 <code class="sig-prename descclassname">pulumi_azure.backup.</code><code class="sig-name descname">get_policy_vm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recovery_vault_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.backup.get_policy_vm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing VM Backup Policy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">get_policy_vm</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;policy&quot;</span><span class="p">,</span>
+    <span class="n">recovery_vault_name</span><span class="o">=</span><span class="s2">&quot;recovery_vault&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;resource_group&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

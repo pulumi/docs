@@ -12,9 +12,48 @@ meta_desc: "Explore the GetProduct function of the apimanagement module, includi
 
 Use this data source to access information about an existing API Management Product.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.apimanagement.get_product(product_id="my-product",
+    api_management_name="example-apim",
+    resource_group_name="search-service")
+pulumi.export("productTerms", example.terms)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.apimanagement.getProduct({
+    productId: "my-product",
+    apiManagementName: "example-apim",
+    resourceGroupName: "search-service",
+});
+export const productTerms = example.then(example => example.terms);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetProduct {#using}

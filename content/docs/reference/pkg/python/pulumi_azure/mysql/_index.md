@@ -20,6 +20,29 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>Note:</strong> Since this resource is provisioned by default, the Azure Provider will not check for the presence of an existing resource prior to attempting to create it.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="s2">&quot;exampleServer&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;GP_Gen5_2&quot;</span><span class="p">,</span>
+    <span class="n">storage_profile</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;storageMb&quot;</span><span class="p">:</span> <span class="mi">5120</span><span class="p">,</span>
+        <span class="s2">&quot;backupRetentionDays&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s2">&quot;geoRedundantBackup&quot;</span><span class="p">:</span> <span class="s2">&quot;Disabled&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;psqladminun&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;H@Sh1CoR3!&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;5.7&quot;</span><span class="p">,</span>
+    <span class="n">ssl_enforcement</span><span class="o">=</span><span class="s2">&quot;Enabled&quot;</span><span class="p">)</span>
+<span class="n">example_configuration</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">Configuration</span><span class="p">(</span><span class="s2">&quot;exampleConfiguration&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;600&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -119,6 +142,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.mysql.Database">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mysql.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">charset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">collation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mysql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a MySQL Database within a MySQL Server</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="s2">&quot;exampleServer&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;B_Gen5_2&quot;</span><span class="p">,</span>
+    <span class="n">storage_profile</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;storageMb&quot;</span><span class="p">:</span> <span class="mi">5120</span><span class="p">,</span>
+        <span class="s2">&quot;backupRetentionDays&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s2">&quot;geoRedundantBackup&quot;</span><span class="p">:</span> <span class="s2">&quot;Disabled&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;mysqladminun&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;H@Sh1CoR3!&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;5.7&quot;</span><span class="p">,</span>
+    <span class="n">ssl_enforcement</span><span class="o">=</span><span class="s2">&quot;Enabled&quot;</span><span class="p">)</span>
+<span class="n">example_database</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;exampleDatabase&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">charset</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">,</span>
+    <span class="n">collation</span><span class="o">=</span><span class="s2">&quot;utf8_unicode_ci&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -228,6 +275,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.mysql.FirewallRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mysql.</code><code class="sig-name descname">FirewallRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mysql.FirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Firewall Rule for a MySQL Server</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="s2">&quot;exampleServer&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">example_firewall_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">FirewallRule</span><span class="p">(</span><span class="s2">&quot;exampleFirewallRule&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">start_ip_address</span><span class="o">=</span><span class="s2">&quot;40.112.8.12&quot;</span><span class="p">,</span>
+    <span class="n">end_ip_address</span><span class="o">=</span><span class="s2">&quot;40.112.8.12&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="s2">&quot;exampleServer&quot;</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">example_firewall_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">FirewallRule</span><span class="p">(</span><span class="s2">&quot;exampleFirewallRule&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">start_ip_address</span><span class="o">=</span><span class="s2">&quot;40.112.0.0&quot;</span><span class="p">,</span>
+    <span class="n">end_ip_address</span><span class="o">=</span><span class="s2">&quot;40.112.255.255&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -334,6 +407,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.mysql.Server">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mysql.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">administrator_login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">administrator_login_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_network_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_enforcement</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mysql.Server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a MySQL Server.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="s2">&quot;exampleServer&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;B_Gen5_2&quot;</span><span class="p">,</span>
+    <span class="n">storage_profile</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;storageMb&quot;</span><span class="p">:</span> <span class="mi">5120</span><span class="p">,</span>
+        <span class="s2">&quot;backupRetentionDays&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s2">&quot;geoRedundantBackup&quot;</span><span class="p">:</span> <span class="s2">&quot;Disabled&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;mysqladminun&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;H@Sh1CoR3!&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;5.7&quot;</span><span class="p">,</span>
+    <span class="n">ssl_enforcement</span><span class="o">=</span><span class="s2">&quot;Enabled&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -519,6 +611,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> MySQL Virtual Network Rules <cite>can only be used with SKU Tiers of ``GeneralPurpose`</cite> or <code class="docutils literal notranslate"><span class="pre">MemoryOptimized</span></code> &lt;<a class="reference external" href="https://docs.microsoft.com/en-us/azure/mysql/concepts-data-access-and-security-vnet">https://docs.microsoft.com/en-us/azure/mysql/concepts-data-access-and-security-vnet</a>&gt;`_</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.7.29.0/29&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">internal</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.7.29.0/29&quot;</span><span class="p">,</span>
+    <span class="n">service_endpoints</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Microsoft.Sql&quot;</span><span class="p">])</span>
+<span class="n">example_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="s2">&quot;exampleServer&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;mysqladminun&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;H@Sh1CoR3!&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;5.7&quot;</span><span class="p">,</span>
+    <span class="n">ssl_enforcement</span><span class="o">=</span><span class="s2">&quot;Enabled&quot;</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;GP_Gen5_2&quot;</span><span class="p">,</span>
+    <span class="n">storage_profile</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;storageMb&quot;</span><span class="p">:</span> <span class="mi">5120</span><span class="p">,</span>
+        <span class="s2">&quot;backupRetentionDays&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s2">&quot;geoRedundantBackup&quot;</span><span class="p">:</span> <span class="s2">&quot;Disabled&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_virtual_network_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">VirtualNetworkRule</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetworkRule&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">internal</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

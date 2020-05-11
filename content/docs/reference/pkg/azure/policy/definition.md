@@ -30,7 +30,46 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+policy = azure.policy.Definition("policy",
+    display_name="acceptance test policy definition",
+    metadata="""    {
+    "category": "General"
+    }
+  
+
+""",
+    mode="Indexed",
+    parameters="""	{
+    "allowedLocations": {
+      "type": "Array",
+      "metadata": {
+        "description": "The list of allowed locations for resources.",
+        "displayName": "Allowed locations",
+        "strongType": "location"
+      }
+    }
+  }
+
+""",
+    policy_rule="""	{
+    "if": {
+      "not": {
+        "field": "location",
+        "in": "[parameters('allowedLocations')]"
+      }
+    },
+    "then": {
+      "effect": "audit"
+    }
+  }
+
+""",
+    policy_type="Custom")
+```
 {{% /example %}}
 
 {{% example typescript %}}

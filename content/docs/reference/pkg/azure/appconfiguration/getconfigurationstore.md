@@ -12,9 +12,46 @@ meta_desc: "Explore the GetConfigurationStore function of the appconfiguration m
 
 Use this data source to access information about an existing App Configuration.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.appconfiguration.get_configuration_store(name="existing",
+    resource_group_name="existing")
+pulumi.export("id", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.appconfiguration.getConfigurationStore({
+    name: "existing",
+    resourceGroupName: "existing",
+});
+export const id = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetConfigurationStore {#using}

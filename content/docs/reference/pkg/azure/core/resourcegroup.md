@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.core.ResourceGroup("example", location="West Europe")
+```
 {{% /example %}}
 
 {{% example typescript %}}

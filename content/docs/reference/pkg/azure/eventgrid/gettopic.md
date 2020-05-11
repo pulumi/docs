@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.eventgrid.get_topic(name="my-eventgrid-topic",
+    resource_group_name="example-resources")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -12,9 +12,64 @@ meta_desc: "Explore the Diagnostic resource of the apimanagement module, includi
 
 Manages an API Management Service Diagnostic.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+test_resource_group = azure.core.ResourceGroup("testResourceGroup", location="West Europe")
+test_service = azure.apimanagement.Service("testService",
+    location=test_resource_group.location,
+    resource_group_name=test_resource_group.name,
+    publisher_name="My Company",
+    publisher_email="company@mycompany.io",
+    sku_name="Developer_1")
+test_diagnostic = azure.apimanagement.Diagnostic("testDiagnostic",
+    identifier="applicationinsights",
+    resource_group_name=test_resource_group.name,
+    api_management_name=test_service.name,
+    enabled=True)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const testResourceGroup = new azure.core.ResourceGroup("testResourceGroup", {location: "West Europe"});
+const testService = new azure.apimanagement.Service("testService", {
+    location: testResourceGroup.location,
+    resourceGroupName: testResourceGroup.name,
+    publisherName: "My Company",
+    publisherEmail: "company@mycompany.io",
+    skuName: "Developer_1",
+});
+const testDiagnostic = new azure.apimanagement.Diagnostic("testDiagnostic", {
+    identifier: "applicationinsights",
+    resourceGroupName: testResourceGroup.name,
+    apiManagementName: testService.name,
+    enabled: true,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Diagnostic Resource {#create}

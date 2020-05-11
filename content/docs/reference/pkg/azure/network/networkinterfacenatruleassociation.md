@@ -12,9 +12,123 @@ meta_desc: "Explore the NetworkInterfaceNatRuleAssociation resource of the netwo
 
 Manages the association between a Network Interface and a Load Balancer's NAT Rule.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static")
+example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    frontend_ip_configuration=[{
+        "name": "primary",
+        "publicIpAddressId": example_public_ip.id,
+    }])
+example_nat_rule = azure.lb.NatRule("exampleNatRule",
+    resource_group_name=example_resource_group.name,
+    loadbalancer_id=example_load_balancer.id,
+    protocol="Tcp",
+    frontend_port=3389,
+    backend_port=3389,
+    frontend_ip_configuration_name="primary")
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configuration=[{
+        "name": "testconfiguration1",
+        "subnetId": example_subnet.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+example_network_interface_nat_rule_association = azure.network.NetworkInterfaceNatRuleAssociation("exampleNetworkInterfaceNatRuleAssociation",
+    network_interface_id=example_network_interface.id,
+    ip_configuration_name="testconfiguration1",
+    nat_rule_id=example_nat_rule.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+});
+const exampleLoadBalancer = new azure.lb.LoadBalancer("exampleLoadBalancer", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    frontend_ip_configuration: [{
+        name: "primary",
+        publicIpAddressId: examplePublicIp.id,
+    }],
+});
+const exampleNatRule = new azure.lb.NatRule("exampleNatRule", {
+    resourceGroupName: exampleResourceGroup.name,
+    loadbalancerId: exampleLoadBalancer.id,
+    protocol: "Tcp",
+    frontendPort: 3389,
+    backendPort: 3389,
+    frontendIpConfigurationName: "primary",
+});
+const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ip_configuration: [{
+        name: "testconfiguration1",
+        subnetId: exampleSubnet.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const exampleNetworkInterfaceNatRuleAssociation = new azure.network.NetworkInterfaceNatRuleAssociation("exampleNetworkInterfaceNatRuleAssociation", {
+    networkInterfaceId: exampleNetworkInterface.id,
+    ipConfigurationName: "testconfiguration1",
+    natRuleId: exampleNatRule.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkInterfaceNatRuleAssociation Resource {#create}

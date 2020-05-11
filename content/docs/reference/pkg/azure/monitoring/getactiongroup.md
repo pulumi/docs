@@ -12,9 +12,46 @@ meta_desc: "Explore the GetActionGroup function of the monitoring module, includ
 
 Use this data source to access the properties of an Action Group.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.monitoring.get_action_group(resource_group_name="example-rg",
+    name="tfex-actiongroup")
+pulumi.export("actionGroupId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.monitoring.getActionGroup({
+    resourceGroupName: "example-rg",
+    name: "tfex-actiongroup",
+});
+export const actionGroupId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetActionGroup {#using}

@@ -12,9 +12,201 @@ meta_desc: "Explore the NetworkInterfaceApplicationGatewayBackendAddressPoolAsso
 
 Manages the association between a Network Interface and a Application Gateway's Backend Address Pool.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+frontend = azure.network.Subnet("frontend",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.1.0/24")
+backend = azure.network.Subnet("backend",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Dynamic")
+backend_address_pool_name = example_virtual_network.name.apply(lambda name: f"{name}-beap")
+frontend_port_name = example_virtual_network.name.apply(lambda name: f"{name}-feport")
+frontend_ip_configuration_name = example_virtual_network.name.apply(lambda name: f"{name}-feip")
+http_setting_name = example_virtual_network.name.apply(lambda name: f"{name}-be-htst")
+listener_name = example_virtual_network.name.apply(lambda name: f"{name}-httplstn")
+request_routing_rule_name = example_virtual_network.name.apply(lambda name: f"{name}-rqrt")
+network = azure.network.ApplicationGateway("network",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku={
+        "name": "Standard_Small",
+        "tier": "Standard",
+        "capacity": 2,
+    },
+    gateway_ip_configuration=[{
+        "name": "my-gateway-ip-configuration",
+        "subnetId": frontend.id,
+    }],
+    frontend_port=[{
+        "name": frontend_port_name,
+        "port": 80,
+    }],
+    frontend_ip_configuration=[{
+        "name": frontend_ip_configuration_name,
+        "publicIpAddressId": example_public_ip.id,
+    }],
+    backend_address_pool=[{
+        "name": backend_address_pool_name,
+    }],
+    backend_http_settings=[{
+        "name": http_setting_name,
+        "cookieBasedAffinity": "Disabled",
+        "port": 80,
+        "protocol": "Http",
+        "requestTimeout": 1,
+    }],
+    http_listener=[{
+        "name": listener_name,
+        "frontendIpConfigurationName": frontend_ip_configuration_name,
+        "frontendPortName": frontend_port_name,
+        "protocol": "Http",
+    }],
+    request_routing_rule=[{
+        "name": request_routing_rule_name,
+        "ruleType": "Basic",
+        "httpListenerName": listener_name,
+        "backendAddressPoolName": backend_address_pool_name,
+        "backendHttpSettingsName": http_setting_name,
+    }])
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configuration=[{
+        "name": "testconfiguration1",
+        "subnetId": frontend.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+example_network_interface_application_gateway_backend_address_pool_association = azure.network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation("exampleNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation",
+    network_interface_id=example_network_interface.id,
+    ip_configuration_name="testconfiguration1",
+    backend_address_pool_id=network.backend_address_pools[0].id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const frontend = new azure.network.Subnet("frontend", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.1.0/24",
+});
+const backend = new azure.network.Subnet("backend", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Dynamic",
+});
+const backendAddressPoolName = pulumi.interpolate`${exampleVirtualNetwork.name}-beap`;
+const frontendPortName = pulumi.interpolate`${exampleVirtualNetwork.name}-feport`;
+const frontendIpConfigurationName = pulumi.interpolate`${exampleVirtualNetwork.name}-feip`;
+const httpSettingName = pulumi.interpolate`${exampleVirtualNetwork.name}-be-htst`;
+const listenerName = pulumi.interpolate`${exampleVirtualNetwork.name}-httplstn`;
+const requestRoutingRuleName = pulumi.interpolate`${exampleVirtualNetwork.name}-rqrt`;
+const network = new azure.network.ApplicationGateway("network", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    sku: {
+        name: "Standard_Small",
+        tier: "Standard",
+        capacity: 2,
+    },
+    gateway_ip_configuration: [{
+        name: "my-gateway-ip-configuration",
+        subnetId: frontend.id,
+    }],
+    frontend_port: [{
+        name: frontendPortName,
+        port: 80,
+    }],
+    frontend_ip_configuration: [{
+        name: frontendIpConfigurationName,
+        publicIpAddressId: examplePublicIp.id,
+    }],
+    backend_address_pool: [{
+        name: backendAddressPoolName,
+    }],
+    backend_http_settings: [{
+        name: httpSettingName,
+        cookieBasedAffinity: "Disabled",
+        port: 80,
+        protocol: "Http",
+        requestTimeout: 1,
+    }],
+    http_listener: [{
+        name: listenerName,
+        frontendIpConfigurationName: frontendIpConfigurationName,
+        frontendPortName: frontendPortName,
+        protocol: "Http",
+    }],
+    request_routing_rule: [{
+        name: requestRoutingRuleName,
+        ruleType: "Basic",
+        httpListenerName: listenerName,
+        backendAddressPoolName: backendAddressPoolName,
+        backendHttpSettingsName: httpSettingName,
+    }],
+});
+const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ip_configuration: [{
+        name: "testconfiguration1",
+        subnetId: frontend.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const exampleNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation = new azure.network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation("exampleNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation", {
+    networkInterfaceId: exampleNetworkInterface.id,
+    ipConfigurationName: "testconfiguration1",
+    backendAddressPoolId: network.backendAddressPools.apply(backendAddressPools => backendAddressPools[0].id),
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation Resource {#create}

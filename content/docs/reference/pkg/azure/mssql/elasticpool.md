@@ -12,9 +12,86 @@ meta_desc: "Explore the ElasticPool resource of the mssql module, including exam
 
 Allows you to manage an Azure SQL Elastic Pool via the `v3.0` API which allows for `vCore` and `DTU` based configurations.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westeurope")
+example_sql_server = azure.sql.SqlServer("exampleSqlServer",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    version="12.0",
+    administrator_login="4dm1n157r470r",
+    administrator_login_password="4-v3ry-53cr37-p455w0rd")
+example_elastic_pool = azure.mssql.ElasticPool("exampleElasticPool",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    server_name=example_sql_server.name,
+    license_type="LicenseIncluded",
+    max_size_gb=756,
+    sku={
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "family": "Gen5",
+        "capacity": 4,
+    },
+    per_database_settings={
+        "minCapacity": 0.25,
+        "maxCapacity": 4,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westeurope"});
+const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    version: "12.0",
+    administratorLogin: "4dm1n157r470r",
+    administratorLoginPassword: "4-v3ry-53cr37-p455w0rd",
+});
+const exampleElasticPool = new azure.mssql.ElasticPool("exampleElasticPool", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    serverName: exampleSqlServer.name,
+    licenseType: "LicenseIncluded",
+    maxSizeGb: 756,
+    sku: {
+        name: "GP_Gen5",
+        tier: "GeneralPurpose",
+        family: "Gen5",
+        capacity: 4,
+    },
+    per_database_settings: {
+        minCapacity: 0.25,
+        maxCapacity: 4,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ElasticPool Resource {#create}

@@ -12,9 +12,97 @@ meta_desc: "Explore the OutputBlob resource of the streamanalytics module, inclu
 
 Manages a Stream Analytics Output to Blob Storage.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.get_resource_group(name="example-resources")
+example_job = azure.streamanalytics.get_job(name="example-job",
+    resource_group_name=azurerm_resource_group["example"]["name"])
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_container = azure.storage.Container("exampleContainer",
+    resource_group_name=example_resource_group.name,
+    storage_account_name=example_account.name,
+    container_access_type="private")
+example_output_blob = azure.streamanalytics.OutputBlob("exampleOutputBlob",
+    stream_analytics_job_name=example_job.name,
+    resource_group_name=example_job.resource_group_name,
+    storage_account_name=example_account.name,
+    storage_account_key=example_account.primary_access_key,
+    storage_container_name=example_container.name,
+    path_pattern="some-pattern",
+    date_format="yyyy-MM-dd",
+    time_format="HH",
+    serialization={
+        "type": "Csv",
+        "encoding": "UTF8",
+        "fieldDelimiter": ",",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = azure.core.getResourceGroup({
+    name: "example-resources",
+});
+const exampleJob = azure.streamanalytics.getJob({
+    name: "example-job",
+    resourceGroupName: azurerm_resource_group.example.name,
+});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.name),
+    location: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.location),
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleContainer = new azure.storage.Container("exampleContainer", {
+    resourceGroupName: exampleResourceGroup.then(exampleResourceGroup => exampleResourceGroup.name),
+    storageAccountName: exampleAccount.name,
+    containerAccessType: "private",
+});
+const exampleOutputBlob = new azure.streamanalytics.OutputBlob("exampleOutputBlob", {
+    streamAnalyticsJobName: exampleJob.then(exampleJob => exampleJob.name),
+    resourceGroupName: exampleJob.then(exampleJob => exampleJob.resourceGroupName),
+    storageAccountName: exampleAccount.name,
+    storageAccountKey: exampleAccount.primaryAccessKey,
+    storageContainerName: exampleContainer.name,
+    pathPattern: "some-pattern",
+    dateFormat: "yyyy-MM-dd",
+    timeFormat: "HH",
+    serialization: {
+        type: "Csv",
+        encoding: "UTF8",
+        fieldDelimiter: ",",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OutputBlob Resource {#create}

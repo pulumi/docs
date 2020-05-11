@@ -12,9 +12,46 @@ meta_desc: "Explore the GetStore function of the datalake module, including exam
 
 Use this data source to access information about an existing Data Lake Store.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.datalake.get_store(name="testdatalake",
+    resource_group_name="testdatalake")
+pulumi.export("dataLakeStoreId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.datalake.getStore({
+    name: "testdatalake",
+    resourceGroupName: "testdatalake",
+});
+export const dataLakeStoreId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetStore {#using}

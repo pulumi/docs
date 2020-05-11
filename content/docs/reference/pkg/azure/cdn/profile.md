@@ -12,9 +12,57 @@ meta_desc: "Explore the Profile resource of the cdn module, including examples, 
 
 Manages a CDN Profile to create a collection of CDN Endpoints.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_profile = azure.cdn.Profile("exampleProfile",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    sku="Standard_Verizon",
+    tags={
+        "environment": "Production",
+        "cost_center": "MSFT",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleProfile = new azure.cdn.Profile("exampleProfile", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard_Verizon",
+    tags: {
+        environment: "Production",
+        cost_center: "MSFT",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Profile Resource {#create}

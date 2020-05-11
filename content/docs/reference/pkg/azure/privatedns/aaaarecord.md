@@ -12,9 +12,59 @@ meta_desc: "Explore the AAAARecord resource of the privatedns module, including 
 
 Enables you to manage DNS AAAA Records within Azure Private DNS.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+test_resource_group = azure.core.ResourceGroup("testResourceGroup", location="West US")
+test_zone = azure.privatedns.Zone("testZone", resource_group_name=test_resource_group.name)
+test_aaaa_record = azure.privatedns.AAAARecord("testAAAARecord",
+    zone_name=test_zone.name,
+    resource_group_name=test_resource_group.name,
+    ttl=300,
+    records=[
+        "fd5d:70bc:930e:d008:0000:0000:0000:7334",
+        "fd5d:70bc:930e:d008::7335",
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const testResourceGroup = new azure.core.ResourceGroup("testResourceGroup", {location: "West US"});
+const testZone = new azure.privatedns.Zone("testZone", {resourceGroupName: testResourceGroup.name});
+const testAAAARecord = new azure.privatedns.AAAARecord("testAAAARecord", {
+    zoneName: testZone.name,
+    resourceGroupName: testResourceGroup.name,
+    ttl: 300,
+    records: [
+        "fd5d:70bc:930e:d008:0000:0000:0000:7334",
+        "fd5d:70bc:930e:d008::7335",
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AAAARecord Resource {#create}

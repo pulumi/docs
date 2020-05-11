@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+test = azure.eventhub.get_authorization_rule(eventhub_name=azurerm_eventhub["test"]["name"],
+    name="test",
+    namespace_name=azurerm_eventhub_namespace["test"]["name"],
+    resource_group_name=azurerm_resource_group["test"]["name"])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -416,6 +424,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Primary Connection String for the Event Hubs Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -438,6 +455,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the Event Hubs Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Secondary Connection String for the Event Hubs Authorization Rule.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -532,6 +558,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Primary Connection String for the Event Hubs Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -554,6 +589,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the Event Hubs Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Secondary Connection String for the Event Hubs Authorization Rule.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -648,6 +692,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Primary Connection String for the Event Hubs Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -670,6 +723,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the Event Hubs Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Secondary Connection String for the Event Hubs Authorization Rule.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -764,6 +826,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>primary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Primary Connection String for the Event Hubs Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>primary_<wbr>key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -786,6 +857,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the Event Hubs Authorization Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>secondary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the Secondary Connection String for the Event Hubs Authorization Rule.
 {{% /md %}}</dd>
 
     <dt class="property-"

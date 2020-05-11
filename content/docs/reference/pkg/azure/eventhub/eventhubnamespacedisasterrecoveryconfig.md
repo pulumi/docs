@@ -12,9 +12,67 @@ meta_desc: "Explore the EventhubNamespaceDisasterRecoveryConfig resource of the 
 
 Manages an Disaster Recovery Config for an Event Hub Namespace.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+primary = azure.eventhub.EventHubNamespace("primary",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard")
+secondary = azure.eventhub.EventHubNamespace("secondary",
+    location="West US",
+    resource_group_name=example_resource_group.name,
+    sku="Standard")
+example_eventhub_namespace_disaster_recovery_config = azure.eventhub.EventhubNamespaceDisasterRecoveryConfig("exampleEventhubNamespaceDisasterRecoveryConfig",
+    resource_group_name=example_resource_group.name,
+    namespace_name=primary.name,
+    partner_namespace_id=secondary.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const primary = new azure.eventhub.EventHubNamespace("primary", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+});
+const secondary = new azure.eventhub.EventHubNamespace("secondary", {
+    location: "West US",
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+});
+const exampleEventhubNamespaceDisasterRecoveryConfig = new azure.eventhub.EventhubNamespaceDisasterRecoveryConfig("exampleEventhubNamespaceDisasterRecoveryConfig", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: primary.name,
+    partnerNamespaceId: secondary.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventhubNamespaceDisasterRecoveryConfig Resource {#create}

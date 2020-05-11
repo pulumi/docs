@@ -12,9 +12,46 @@ meta_desc: "Explore the GetAppServicePlan function of the appservice module, inc
 
 Use this data source to access information about an existing App Service Plan (formerly known as a `Server Farm`).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.appservice.get_app_service_plan(name="search-app-service-plan",
+    resource_group_name="search-service")
+pulumi.export("appServicePlanId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.appservice.getAppServicePlan({
+    name: "search-app-service-plan",
+    resourceGroupName: "search-service",
+});
+export const appServicePlanId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAppServicePlan {#using}

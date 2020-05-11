@@ -12,9 +12,46 @@ meta_desc: "Explore the GetNamespace function of the servicebus module, includin
 
 Use this data source to access information about an existing ServiceBus Namespace.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.servicebus.get_namespace(name="examplenamespace",
+    resource_group_name="example-resources")
+pulumi.export("location", example.location)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.servicebus.getNamespace({
+    name: "examplenamespace",
+    resourceGroupName: "example-resources",
+});
+export const location = example.then(example => example.location);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetNamespace {#using}

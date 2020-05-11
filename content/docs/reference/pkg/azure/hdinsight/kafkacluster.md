@@ -12,9 +12,135 @@ meta_desc: "Explore the KafkaCluster resource of the hdinsight module, including
 
 Manages a HDInsight Kafka Cluster.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_container = azure.storage.Container("exampleContainer",
+    resource_group_name=example_resource_group.name,
+    storage_account_name=example_account.name,
+    container_access_type="private")
+example_kafka_cluster = azure.hdinsight.KafkaCluster("exampleKafkaCluster",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    cluster_version="4.0",
+    tier="Standard",
+    component_version={
+        "kafka": "2.1",
+    },
+    gateway={
+        "enabled": True,
+        "username": "acctestusrgw",
+        "password": "Password123!",
+    },
+    storage_account=[{
+        "storageContainerId": example_container.id,
+        "storageAccountKey": example_account.primary_access_key,
+        "isDefault": True,
+    }],
+    roles={
+        "head_node": {
+            "vmSize": "Standard_D3_V2",
+            "username": "acctestusrvm",
+            "password": "AccTestvdSC4daf986!",
+        },
+        "worker_node": {
+            "vmSize": "Standard_D3_V2",
+            "username": "acctestusrvm",
+            "password": "AccTestvdSC4daf986!",
+            "numberOfDisksPerNode": 3,
+            "targetInstanceCount": 3,
+        },
+        "zookeeper_node": {
+            "vmSize": "Standard_D3_V2",
+            "username": "acctestusrvm",
+            "password": "AccTestvdSC4daf986!",
+        },
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleContainer = new azure.storage.Container("exampleContainer", {
+    resourceGroupName: exampleResourceGroup.name,
+    storageAccountName: exampleAccount.name,
+    containerAccessType: "private",
+});
+const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("exampleKafkaCluster", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    clusterVersion: "4.0",
+    tier: "Standard",
+    component_version: {
+        kafka: "2.1",
+    },
+    gateway: {
+        enabled: true,
+        username: "acctestusrgw",
+        password: "Password123!",
+    },
+    storage_account: [{
+        storageContainerId: exampleContainer.id,
+        storageAccountKey: exampleAccount.primaryAccessKey,
+        isDefault: true,
+    }],
+    roles: {
+        head_node: {
+            vmSize: "Standard_D3_V2",
+            username: "acctestusrvm",
+            password: "AccTestvdSC4daf986!",
+        },
+        worker_node: {
+            vmSize: "Standard_D3_V2",
+            username: "acctestusrvm",
+            password: "AccTestvdSC4daf986!",
+            numberOfDisksPerNode: 3,
+            targetInstanceCount: 3,
+        },
+        zookeeper_node: {
+            vmSize: "Standard_D3_V2",
+            username: "acctestusrvm",
+            password: "AccTestvdSC4daf986!",
+        },
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a KafkaCluster Resource {#create}

@@ -12,6 +12,27 @@ meta_desc: "Explore the GetAccount function of the netapp module, including exam
 
 Uses this data source to access information about an existing NetApp Account.
 
+## NetApp Account Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.netapp.getAccount({
+    resourceGroupName: "acctestRG",
+    name: "acctestnetappaccount",
+});
+export const netappAccountId = example.then(example => example.id);
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.netapp.get_account(resource_group_name="acctestRG",
+    name="acctestnetappaccount")
+pulumi.export("netappAccountId", example.id)
+```
+
 
 
 ## Using GetAccount {#using}

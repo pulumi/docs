@@ -12,9 +12,173 @@ meta_desc: "Explore the NetworkConnectionMonitor resource of the network module,
 
 Configures a Network Connection Monitor to monitor communication between a Virtual Machine and an endpoint using a Network Watcher.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_network_watcher = azure.network.NetworkWatcher("exampleNetworkWatcher",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configuration=[{
+        "name": "testconfiguration1",
+        "subnetId": example_subnet.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+example_virtual_machine = azure.compute.VirtualMachine("exampleVirtualMachine",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    network_interface_ids=[example_network_interface.id],
+    vm_size="Standard_F2",
+    storage_image_reference={
+        "publisher": "Canonical",
+        "offer": "UbuntuServer",
+        "sku": "16.04-LTS",
+        "version": "latest",
+    },
+    storage_os_disk={
+        "name": "osdisk",
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "managedDiskType": "Standard_LRS",
+    },
+    os_profile={
+        "computerName": "cmtest-vm",
+        "adminUsername": "testadmin",
+        "adminPassword": "Password1234!",
+    },
+    os_profile_linux_config={
+        "disablePasswordAuthentication": False,
+    })
+example_extension = azure.compute.Extension("exampleExtension",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    virtual_machine_name=example_virtual_machine.name,
+    publisher="Microsoft.Azure.NetworkWatcher",
+    type="NetworkWatcherAgentLinux",
+    type_handler_version="1.4",
+    auto_upgrade_minor_version=True)
+example_network_connection_monitor = azure.network.NetworkConnectionMonitor("exampleNetworkConnectionMonitor",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    network_watcher_name=example_network_watcher.name,
+    source={
+        "virtualMachineId": example_virtual_machine.id,
+    },
+    destination={
+        "address": "exmaple.com",
+        "port": 80,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleNetworkWatcher = new azure.network.NetworkWatcher("exampleNetworkWatcher", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ip_configuration: [{
+        name: "testconfiguration1",
+        subnetId: exampleSubnet.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const exampleVirtualMachine = new azure.compute.VirtualMachine("exampleVirtualMachine", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    networkInterfaceIds: [exampleNetworkInterface.id],
+    vmSize: "Standard_F2",
+    storage_image_reference: {
+        publisher: "Canonical",
+        offer: "UbuntuServer",
+        sku: "16.04-LTS",
+        version: "latest",
+    },
+    storage_os_disk: {
+        name: "osdisk",
+        caching: "ReadWrite",
+        createOption: "FromImage",
+        managedDiskType: "Standard_LRS",
+    },
+    os_profile: {
+        computerName: "cmtest-vm",
+        adminUsername: "testadmin",
+        adminPassword: "Password1234!",
+    },
+    os_profile_linux_config: {
+        disablePasswordAuthentication: false,
+    },
+});
+const exampleExtension = new azure.compute.Extension("exampleExtension", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    virtualMachineName: exampleVirtualMachine.name,
+    publisher: "Microsoft.Azure.NetworkWatcher",
+    type: "NetworkWatcherAgentLinux",
+    typeHandlerVersion: "1.4",
+    autoUpgradeMinorVersion: true,
+});
+const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonitor("exampleNetworkConnectionMonitor", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    networkWatcherName: exampleNetworkWatcher.name,
+    source: {
+        virtualMachineId: exampleVirtualMachine.id,
+    },
+    destination: {
+        address: "exmaple.com",
+        port: 80,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkConnectionMonitor Resource {#create}

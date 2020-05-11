@@ -12,9 +12,46 @@ meta_desc: "Explore the GetAccount function of the automation module, including 
 
 Use this data source to access information about an existing Automation Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.automation.get_account(name="example-account",
+    resource_group_name="example-resources")
+pulumi.export("automationAccountId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.automation.getAccount({
+    name: "example-account",
+    resourceGroupName: "example-resources",
+});
+export const automationAccountId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAccount {#using}

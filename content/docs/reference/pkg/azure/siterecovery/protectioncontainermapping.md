@@ -12,9 +12,113 @@ meta_desc: "Explore the ProtectionContainerMapping resource of the siterecovery 
 
 Manages a Azure recovery vault protection container mapping. A protection container mapping decides how to translate the protection container when a VM is migrated from one region to another.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+primary_resource_group = azure.core.ResourceGroup("primaryResourceGroup", location="West US")
+secondary_resource_group = azure.core.ResourceGroup("secondaryResourceGroup", location="East US")
+vault = azure.recoveryservices.Vault("vault",
+    location=secondary_resource_group.location,
+    resource_group_name=secondary_resource_group.name,
+    sku="Standard")
+primary_fabric = azure.siterecovery.Fabric("primaryFabric",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    location=primary_resource_group.location)
+secondary_fabric = azure.siterecovery.Fabric("secondaryFabric",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    location=secondary_resource_group.location)
+primary_protection_container = azure.siterecovery.ProtectionContainer("primaryProtectionContainer",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    recovery_fabric_name=primary_fabric.name)
+secondary_protection_container = azure.siterecovery.ProtectionContainer("secondaryProtectionContainer",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    recovery_fabric_name=secondary_fabric.name)
+policy = azure.siterecovery.ReplicationPolicy("policy",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    recovery_point_retention_in_minutes=24 * 60,
+    application_consistent_snapshot_frequency_in_minutes=4 * 60)
+container_mapping = azure.siterecovery.ProtectionContainerMapping("container-mapping",
+    resource_group_name=secondary_resource_group.name,
+    recovery_vault_name=vault.name,
+    recovery_fabric_name=primary_fabric.name,
+    recovery_source_protection_container_name=primary_protection_container.name,
+    recovery_target_protection_container_id=secondary_protection_container.id,
+    recovery_replication_policy_id=policy.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const primaryResourceGroup = new azure.core.ResourceGroup("primaryResourceGroup", {location: "West US"});
+const secondaryResourceGroup = new azure.core.ResourceGroup("secondaryResourceGroup", {location: "East US"});
+const vault = new azure.recoveryservices.Vault("vault", {
+    location: secondaryResourceGroup.location,
+    resourceGroupName: secondaryResourceGroup.name,
+    sku: "Standard",
+});
+const primaryFabric = new azure.siterecovery.Fabric("primaryFabric", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    location: primaryResourceGroup.location,
+});
+const secondaryFabric = new azure.siterecovery.Fabric("secondaryFabric", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    location: secondaryResourceGroup.location,
+});
+const primaryProtectionContainer = new azure.siterecovery.ProtectionContainer("primaryProtectionContainer", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    recoveryFabricName: primaryFabric.name,
+});
+const secondaryProtectionContainer = new azure.siterecovery.ProtectionContainer("secondaryProtectionContainer", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    recoveryFabricName: secondaryFabric.name,
+});
+const policy = new azure.siterecovery.ReplicationPolicy("policy", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    recoveryPointRetentionInMinutes: 24 * 60,
+    applicationConsistentSnapshotFrequencyInMinutes: 4 * 60,
+});
+const container-mapping = new azure.siterecovery.ProtectionContainerMapping("container-mapping", {
+    resourceGroupName: secondaryResourceGroup.name,
+    recoveryVaultName: vault.name,
+    recoveryFabricName: primaryFabric.name,
+    recoverySourceProtectionContainerName: primaryProtectionContainer.name,
+    recoveryTargetProtectionContainerId: secondaryProtectionContainer.id,
+    recoveryReplicationPolicyId: policy.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProtectionContainerMapping Resource {#create}

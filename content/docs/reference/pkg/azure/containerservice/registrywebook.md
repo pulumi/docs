@@ -12,11 +12,76 @@ meta_desc: "Explore the RegistryWebook resource of the containerservice module, 
 
 Manages an Azure Container Registry Webhook.
 
-{{% examples %}}
-{{% /examples %}}
+
 
 Deprecated: azure.containerservice.RegistryWebook has been deprecated in favour of azure.containerservice.RegistryWebhook
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="West US")
+acr = azure.containerservice.Registry("acr",
+    resource_group_name=rg.name,
+    location=rg.location,
+    sku="Standard",
+    admin_enabled=False)
+webhook = azure.containerservice.RegistryWebhook("webhook",
+    resource_group_name=rg.name,
+    registry_name=acr.name,
+    location=rg.location,
+    service_uri="https://mywebhookreceiver.example/mytag",
+    status="enabled",
+    scope="mytag:*",
+    actions=["push"],
+    custom_headers={
+        "Content-Type": "application/json",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "West US"});
+const acr = new azure.containerservice.Registry("acr", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    sku: "Standard",
+    adminEnabled: false,
+});
+const webhook = new azure.containerservice.RegistryWebhook("webhook", {
+    resourceGroupName: rg.name,
+    registryName: acr.name,
+    location: rg.location,
+    serviceUri: "https://mywebhookreceiver.example/mytag",
+    status: "enabled",
+    scope: "mytag:*",
+    actions: ["push"],
+    customHeaders: {
+        "Content-Type": "application/json",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.containerservice.RegistryWebook has been deprecated in favour of azure.containerservice.RegistryWebhook{{% /md %}}</p>
 
 

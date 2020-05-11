@@ -12,9 +12,91 @@ meta_desc: "Explore the FirewallRule resource of the redis module, including exa
 
 Manages a Firewall Rule associated with a Redis Cache.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+server = random.RandomId("server",
+    keepers={
+        "azi_id": 1,
+    },
+    byte_length=8)
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_cache = azure.redis.Cache("exampleCache",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    capacity=1,
+    family="P",
+    sku_name="Premium",
+    enable_non_ssl_port=False,
+    redis_configuration={
+        "maxclients": 256,
+        "maxmemoryReserved": 2,
+        "maxmemoryDelta": 2,
+        "maxmemoryPolicy": "allkeys-lru",
+    })
+example_firewall_rule = azure.redis.FirewallRule("exampleFirewallRule",
+    redis_cache_name=example_cache.name,
+    resource_group_name=example_resource_group.name,
+    start_ip="1.2.3.4",
+    end_ip="2.3.4.5")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const server = new random.RandomId("server", {
+    keepers: {
+        azi_id: 1,
+    },
+    byteLength: 8,
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleCache = new azure.redis.Cache("exampleCache", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    capacity: 1,
+    family: "P",
+    skuName: "Premium",
+    enableNonSslPort: false,
+    redis_configuration: {
+        maxclients: 256,
+        maxmemoryReserved: 2,
+        maxmemoryDelta: 2,
+        maxmemoryPolicy: "allkeys-lru",
+    },
+});
+const exampleFirewallRule = new azure.redis.FirewallRule("exampleFirewallRule", {
+    redisCacheName: exampleCache.name,
+    resourceGroupName: exampleResourceGroup.name,
+    startIp: "1.2.3.4",
+    endIp: "2.3.4.5",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallRule Resource {#create}

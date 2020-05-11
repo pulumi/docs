@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+barracuda = azure.marketplace.Agreement("barracuda",
+    offer="waf",
+    plan="hourly",
+    publisher="barracudanetworks")
+```
 {{% /example %}}
 
 {{% example typescript %}}

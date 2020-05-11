@@ -12,9 +12,103 @@ meta_desc: "Explore the VirtualNetworkSwiftConnection resource of the appservice
 
 Manages an App Service Virtual Network Association (this is for the [Regional VNet Integration](https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet#regional-vnet-integration) which is still in preview).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+test_resource_group = azure.core.ResourceGroup("testResourceGroup", location="uksouth")
+test_virtual_network = azure.network.VirtualNetwork("testVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=test_resource_group.location,
+    resource_group_name=test_resource_group.name)
+test1 = azure.network.Subnet("test1",
+    resource_group_name=test_resource_group.name,
+    virtual_network_name=test_virtual_network.name,
+    address_prefix="10.0.1.0/24",
+    delegation=[{
+        "name": "acctestdelegation",
+        "service_delegation": {
+            "name": "Microsoft.Web/serverFarms",
+            "actions": ["Microsoft.Network/virtualNetworks/subnets/action"],
+        },
+    }])
+test_plan = azure.appservice.Plan("testPlan",
+    location=test_resource_group.location,
+    resource_group_name=test_resource_group.name,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+test_app_service = azure.appservice.AppService("testAppService",
+    location=test_resource_group.location,
+    resource_group_name=test_resource_group.name,
+    app_service_plan_id=test_plan.id)
+test_virtual_network_swift_connection = azure.appservice.VirtualNetworkSwiftConnection("testVirtualNetworkSwiftConnection",
+    app_service_id=test_app_service.id,
+    subnet_id=test1.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const testResourceGroup = new azure.core.ResourceGroup("testResourceGroup", {location: "uksouth"});
+const testVirtualNetwork = new azure.network.VirtualNetwork("testVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: testResourceGroup.location,
+    resourceGroupName: testResourceGroup.name,
+});
+const test1 = new azure.network.Subnet("test1", {
+    resourceGroupName: testResourceGroup.name,
+    virtualNetworkName: testVirtualNetwork.name,
+    addressPrefix: "10.0.1.0/24",
+    delegation: [{
+        name: "acctestdelegation",
+        service_delegation: {
+            name: "Microsoft.Web/serverFarms",
+            actions: ["Microsoft.Network/virtualNetworks/subnets/action"],
+        },
+    }],
+});
+const testPlan = new azure.appservice.Plan("testPlan", {
+    location: testResourceGroup.location,
+    resourceGroupName: testResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+const testAppService = new azure.appservice.AppService("testAppService", {
+    location: testResourceGroup.location,
+    resourceGroupName: testResourceGroup.name,
+    appServicePlanId: testPlan.id,
+});
+const testVirtualNetworkSwiftConnection = new azure.appservice.VirtualNetworkSwiftConnection("testVirtualNetworkSwiftConnection", {
+    appServiceId: testAppService.id,
+    subnetId: test1.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkSwiftConnection Resource {#create}

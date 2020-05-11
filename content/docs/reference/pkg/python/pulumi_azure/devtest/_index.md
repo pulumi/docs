@@ -123,6 +123,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.devtest.Lab">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">Lab</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Lab" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Dev Test Lab.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_lab</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">devtest</span><span class="o">.</span><span class="n">Lab</span><span class="p">(</span><span class="s2">&quot;exampleLab&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Sydney&quot;</span><span class="p">:</span> <span class="s2">&quot;Australia&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -524,6 +536,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.Policy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evaluator_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fact_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lab_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_set_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Policy within a Dev Test Policy Set.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_lab</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">devtest</span><span class="o">.</span><span class="n">Lab</span><span class="p">(</span><span class="s2">&quot;exampleLab&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Sydney&quot;</span><span class="p">:</span> <span class="s2">&quot;Australia&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">devtest</span><span class="o">.</span><span class="n">Policy</span><span class="p">(</span><span class="s2">&quot;examplePolicy&quot;</span><span class="p">,</span>
+    <span class="n">policy_set_name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+    <span class="n">lab_name</span><span class="o">=</span><span class="n">example_lab</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">fact_data</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">threshold</span><span class="o">=</span><span class="s2">&quot;999&quot;</span><span class="p">,</span>
+    <span class="n">evaluator_type</span><span class="o">=</span><span class="s2">&quot;MaxValuePolicy&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Acceptance&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -662,6 +696,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.Schedule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">Schedule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">daily_recurrence</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hourly_recurrence</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lab_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weekly_recurrence</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Schedule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages automated startup and shutdown schedules for Azure Dev Test Lab.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">sample_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;sampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">sample_lab</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">devtest</span><span class="o">.</span><span class="n">Lab</span><span class="p">(</span><span class="s2">&quot;sampleLab&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">azurerm_resource_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;location&quot;</span><span class="p">],</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">azurerm_resource_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+<span class="n">sample_schedule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">devtest</span><span class="o">.</span><span class="n">Schedule</span><span class="p">(</span><span class="s2">&quot;sampleSchedule&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">azurerm_resource_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;location&quot;</span><span class="p">],</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">azurerm_resource_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">lab_name</span><span class="o">=</span><span class="n">azurerm_dev_test_lab</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="n">weekly_recurrence</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;1100&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;weekDays&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Monday&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">time_zone_id</span><span class="o">=</span><span class="s2">&quot;Pacific Standard Time&quot;</span><span class="p">,</span>
+    <span class="n">task_type</span><span class="o">=</span><span class="s2">&quot;LabVmsStartupTask&quot;</span><span class="p">,</span>
+    <span class="n">notification_settings</span><span class="o">=</span><span class="p">{},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -830,6 +890,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.VirtualNetwork">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">VirtualNetwork</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lab_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.VirtualNetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Virtual Network within a DevTest Lab.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_lab</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">devtest</span><span class="o">.</span><span class="n">Lab</span><span class="p">(</span><span class="s2">&quot;exampleLab&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Sydney&quot;</span><span class="p">:</span> <span class="s2">&quot;Australia&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">devtest</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;exampleVirtualNetwork&quot;</span><span class="p">,</span>
+    <span class="n">lab_name</span><span class="o">=</span><span class="n">example_lab</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">subnet</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;usePublicIpAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;useInVirtualMachineCreation&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1213,6 +1292,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.get_lab">
 <code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">get_lab</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.get_lab" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Dev Test Lab.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">devtest</span><span class="o">.</span><span class="n">get_lab</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-lab&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;uniqueIdentifier&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">unique_identifier</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1227,6 +1314,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.get_virtual_network">
 <code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">get_virtual_network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lab_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.get_virtual_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Dev Test Lab Virtual Network.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">devtest</span><span class="o">.</span><span class="n">get_virtual_network</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-network&quot;</span><span class="p">,</span>
+    <span class="n">lab_name</span><span class="o">=</span><span class="s2">&quot;examplelab&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resource&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;labSubnetName&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">allowed_subnets</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;lab_subnet_name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

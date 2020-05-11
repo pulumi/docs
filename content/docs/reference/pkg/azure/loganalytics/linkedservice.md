@@ -12,9 +12,79 @@ meta_desc: "Explore the LinkedService resource of the loganalytics module, inclu
 
 Links a Log Analytics (formally Operational Insights) Workspace to another resource. The (currently) only linkable service is an Azure Automation Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_account = azure.automation.Account("exampleAccount",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku=[{
+        "name": "Basic",
+    }],
+    tags={
+        "environment": "development",
+    })
+example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="PerGB2018",
+    retention_in_days=30)
+example_linked_service = azure.loganalytics.LinkedService("exampleLinkedService",
+    resource_group_name=example_resource_group.name,
+    workspace_name=example_analytics_workspace.name,
+    resource_id=example_account.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleAccount = new azure.automation.Account("exampleAccount", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: [{
+        name: "Basic",
+    }],
+    tags: {
+        environment: "development",
+    },
+});
+const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "PerGB2018",
+    retentionInDays: 30,
+});
+const exampleLinkedService = new azure.loganalytics.LinkedService("exampleLinkedService", {
+    resourceGroupName: exampleResourceGroup.name,
+    workspaceName: exampleAnalyticsWorkspace.name,
+    resourceId: exampleAccount.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LinkedService Resource {#create}

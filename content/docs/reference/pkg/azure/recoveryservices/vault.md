@@ -28,7 +28,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="West US")
+vault = azure.recoveryservices.Vault("vault",
+    location=rg.location,
+    resource_group_name=rg.name,
+    sku="Standard",
+    soft_delete_enabled=True)
+```
 {{% /example %}}
 
 {{% example typescript %}}

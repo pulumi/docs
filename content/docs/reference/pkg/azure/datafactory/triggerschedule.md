@@ -12,9 +12,67 @@ meta_desc: "Explore the TriggerSchedule resource of the datafactory module, incl
 
 Manages a Trigger Schedule inside a Azure Data Factory.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_factory = azure.datafactory.Factory("exampleFactory",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+test_pipeline = azure.datafactory.Pipeline("testPipeline",
+    resource_group_name=azurerm_resource_group["test"]["name"],
+    data_factory_name=azurerm_data_factory["test"]["name"])
+test_trigger_schedule = azure.datafactory.TriggerSchedule("testTriggerSchedule",
+    data_factory_name=azurerm_data_factory["test"]["name"],
+    resource_group_name=azurerm_resource_group["test"]["name"],
+    pipeline_name=test_pipeline.name,
+    interval=5,
+    frequency="Day")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const testPipeline = new azure.datafactory.Pipeline("testPipeline", {
+    resourceGroupName: azurerm_resource_group.test.name,
+    dataFactoryName: azurerm_data_factory.test.name,
+});
+const testTriggerSchedule = new azure.datafactory.TriggerSchedule("testTriggerSchedule", {
+    dataFactoryName: azurerm_data_factory.test.name,
+    resourceGroupName: azurerm_resource_group.test.name,
+    pipelineName: testPipeline.name,
+    interval: 5,
+    frequency: "Day",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TriggerSchedule Resource {#create}

@@ -12,9 +12,46 @@ meta_desc: "Explore the GetNamespace function of the eventhub module, including 
 
 Use this data source to access information about an existing EventHub Namespace.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.eventhub.get_namespace(name="search-eventhubns",
+    resource_group_name="search-service")
+pulumi.export("eventhubNamespaceId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.eventhub.getNamespace({
+    name: "search-eventhubns",
+    resourceGroupName: "search-service",
+});
+export const eventhubNamespaceId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetNamespace {#using}
@@ -195,6 +232,16 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
+        <span>Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the primary connection string for the authorization
+rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Default<wbr>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -209,6 +256,16 @@ rule `RootManageSharedAccessKey`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The secondary connection string for the
+authorization rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}</dd>
 
@@ -327,6 +384,16 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
+        <span>Default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the primary connection string for the authorization
+rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Default<wbr>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -341,6 +408,16 @@ rule `RootManageSharedAccessKey`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The secondary connection string for the
+authorization rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}</dd>
 
@@ -459,6 +536,16 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
+        <span>default<wbr>Primary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the primary connection string for the authorization
+rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>default<wbr>Primary<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -473,6 +560,16 @@ rule `RootManageSharedAccessKey`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The secondary connection string for the
+authorization rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>default<wbr>Secondary<wbr>Connection<wbr>String<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}</dd>
 
@@ -591,6 +688,16 @@ rule `RootManageSharedAccessKey`.
 
     <dt class="property-"
             title="">
+        <span>default_<wbr>primary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the primary connection string for the authorization
+rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>default_<wbr>primary_<wbr>key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -605,6 +712,16 @@ rule `RootManageSharedAccessKey`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The secondary connection string for the
+authorization rule `RootManageSharedAccessKey`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>default_<wbr>secondary_<wbr>connection_<wbr>string_<wbr>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alias of the secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}</dd>
 

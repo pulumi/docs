@@ -12,9 +12,89 @@ meta_desc: "Explore the NetworkInterfaceSecurityGroupAssociation resource of the
 
 Manages the association between a Network Interface and a Network Security Group.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.2.0/24")
+example_network_security_group = azure.network.NetworkSecurityGroup("exampleNetworkSecurityGroup",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    ip_configuration=[{
+        "name": "testconfiguration1",
+        "subnetId": example_subnet.id,
+        "privateIpAddressAllocation": "Dynamic",
+    }])
+example_network_interface_security_group_association = azure.network.NetworkInterfaceSecurityGroupAssociation("exampleNetworkInterfaceSecurityGroupAssociation",
+    network_interface_id=example_network_interface.id,
+    network_security_group_id=example_network_security_group.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.2.0/24",
+});
+const exampleNetworkSecurityGroup = new azure.network.NetworkSecurityGroup("exampleNetworkSecurityGroup", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleNetworkInterface = new azure.network.NetworkInterface("exampleNetworkInterface", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    ip_configuration: [{
+        name: "testconfiguration1",
+        subnetId: exampleSubnet.id,
+        privateIpAddressAllocation: "Dynamic",
+    }],
+});
+const exampleNetworkInterfaceSecurityGroupAssociation = new azure.network.NetworkInterfaceSecurityGroupAssociation("exampleNetworkInterfaceSecurityGroupAssociation", {
+    networkInterfaceId: exampleNetworkInterface.id,
+    networkSecurityGroupId: exampleNetworkSecurityGroup.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkInterfaceSecurityGroupAssociation Resource {#create}

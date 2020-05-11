@@ -12,9 +12,48 @@ meta_desc: "Explore the GetElasticPool function of the mssql module, including e
 
 Use this data source to access information about an existing SQL elastic pool.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.mssql.get_elastic_pool(name="mssqlelasticpoolname",
+    resource_group_name="example-resources",
+    server_name="example-sql-server")
+pulumi.export("elasticpoolId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.mssql.getElasticPool({
+    name: "mssqlelasticpoolname",
+    resourceGroupName: "example-resources",
+    serverName: "example-sql-server",
+});
+export const elasticpoolId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetElasticPool {#using}

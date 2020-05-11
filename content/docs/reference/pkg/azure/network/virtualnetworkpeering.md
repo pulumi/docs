@@ -13,12 +13,79 @@ meta_desc: "Explore the VirtualNetworkPeering resource of the network module, in
 Manages a virtual network peering which allows resources to access other
 resources in the linked virtual network.
 
-{{% examples %}}
-{{% /examples %}}
+
 ## Note
 
 Virtual Network peerings cannot be created, updated or deleted concurrently.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.core.ResourceGroup("example", location="West US")
+example_1_virtual_network = azure.network.VirtualNetwork("example-1VirtualNetwork",
+    resource_group_name=example.name,
+    address_spaces=["10.0.1.0/24"],
+    location="West US")
+example_2_virtual_network = azure.network.VirtualNetwork("example-2VirtualNetwork",
+    resource_group_name=example.name,
+    address_spaces=["10.0.2.0/24"],
+    location="West US")
+example_1_virtual_network_peering = azure.network.VirtualNetworkPeering("example-1VirtualNetworkPeering",
+    resource_group_name=example.name,
+    virtual_network_name=example_1_virtual_network.name,
+    remote_virtual_network_id=example_2_virtual_network.id)
+example_2_virtual_network_peering = azure.network.VirtualNetworkPeering("example-2VirtualNetworkPeering",
+    resource_group_name=example.name,
+    virtual_network_name=example_2_virtual_network.name,
+    remote_virtual_network_id=example_1_virtual_network.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.core.ResourceGroup("example", {location: "West US"});
+const example-1VirtualNetwork = new azure.network.VirtualNetwork("example-1VirtualNetwork", {
+    resourceGroupName: example.name,
+    addressSpaces: ["10.0.1.0/24"],
+    location: "West US",
+});
+const example-2VirtualNetwork = new azure.network.VirtualNetwork("example-2VirtualNetwork", {
+    resourceGroupName: example.name,
+    addressSpaces: ["10.0.2.0/24"],
+    location: "West US",
+});
+const example-1VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("example-1VirtualNetworkPeering", {
+    resourceGroupName: example.name,
+    virtualNetworkName: example-1VirtualNetwork.name,
+    remoteVirtualNetworkId: example-2VirtualNetwork.id,
+});
+const example-2VirtualNetworkPeering = new azure.network.VirtualNetworkPeering("example-2VirtualNetworkPeering", {
+    resourceGroupName: example.name,
+    virtualNetworkName: example-2VirtualNetwork.name,
+    remoteVirtualNetworkId: example-1VirtualNetwork.id,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkPeering Resource {#create}

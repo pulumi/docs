@@ -12,9 +12,44 @@ meta_desc: "Explore the GetFunctionApp function of the appservice module, includ
 
 Use this data source to access information about a Function App.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.appservice.get_function_app(name="test-azure-functions",
+    resource_group_name=azurerm_resource_group["example"]["name"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.appservice.getFunctionApp({
+    name: "test-azure-functions",
+    resourceGroupName: azurerm_resource_group.example.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetFunctionApp {#using}

@@ -14,9 +14,46 @@ Use this data source to access information about an existing Private Link Servic
 
 > **NOTE** Private Link is currently in Public Preview.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.privatelink.get_service(name="myPrivateLinkService",
+    resource_group_name="PrivateLinkServiceRG")
+pulumi.export("privateLinkServiceId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.privatelink.getService({
+    name: "myPrivateLinkService",
+    resourceGroupName: "PrivateLinkServiceRG",
+});
+export const privateLinkServiceId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetService {#using}

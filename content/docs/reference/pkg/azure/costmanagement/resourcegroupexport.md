@@ -12,9 +12,80 @@ meta_desc: "Explore the ResourceGroupExport resource of the costmanagement modul
 
 Manages an Azure Cost Management Export for a Resource Group.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_resource_group_export = azure.costmanagement.ResourceGroupExport("exampleResourceGroupExport",
+    resource_group_id=example_resource_group.id,
+    recurrence_type="Monthly",
+    recurrence_period_start="2020-08-18T00:00:00Z",
+    recurrence_period_end="2020-09-18T00:00:00Z",
+    delivery_info={
+        "storageAccountId": example_account.id,
+        "containerName": "examplecontainer",
+        "rootFolderPath": "/root/updated",
+    },
+    query={
+        "type": "Usage",
+        "timeFrame": "WeekToDate",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleResourceGroupExport = new azure.costmanagement.ResourceGroupExport("exampleResourceGroupExport", {
+    resourceGroupId: exampleResourceGroup.id,
+    recurrenceType: "Monthly",
+    recurrencePeriodStart: "2020-08-18T00:00:00Z",
+    recurrencePeriodEnd: "2020-09-18T00:00:00Z",
+    delivery_info: {
+        storageAccountId: exampleAccount.id,
+        containerName: "examplecontainer",
+        rootFolderPath: "/root/updated",
+    },
+    query: {
+        type: "Usage",
+        timeFrame: "WeekToDate",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ResourceGroupExport Resource {#create}

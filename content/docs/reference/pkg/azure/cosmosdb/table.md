@@ -12,9 +12,53 @@ meta_desc: "Explore the Table resource of the cosmosdb module, including example
 
 Manages a Table within a Cosmos DB Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_account = azure.cosmosdb.get_account(name="tfex-cosmosdb-account",
+    resource_group_name="tfex-cosmosdb-account-rg")
+example_table = azure.cosmosdb.Table("exampleTable",
+    resource_group_name=example_account.resource_group_name,
+    account_name=example_account.name,
+    throughput=400)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleAccount = azure.cosmosdb.getAccount({
+    name: "tfex-cosmosdb-account",
+    resourceGroupName: "tfex-cosmosdb-account-rg",
+});
+const exampleTable = new azure.cosmosdb.Table("exampleTable", {
+    resourceGroupName: exampleAccount.then(exampleAccount => exampleAccount.resourceGroupName),
+    accountName: exampleAccount.then(exampleAccount => exampleAccount.name),
+    throughput: 400,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Table Resource {#create}

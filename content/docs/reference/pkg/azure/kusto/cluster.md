@@ -12,9 +12,61 @@ meta_desc: "Explore the Cluster resource of the kusto module, including examples
 
 Manages a Kusto (also known as Azure Data Explorer) Cluster
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="East US")
+example = azure.kusto.Cluster("example",
+    location=rg.location,
+    resource_group_name=rg.name,
+    sku={
+        "name": "Standard_D13_v2",
+        "capacity": 2,
+    },
+    tags={
+        "Environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "East US"});
+const example = new azure.kusto.Cluster("example", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    sku: {
+        name: "Standard_D13_v2",
+        capacity: 2,
+    },
+    tags: {
+        Environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

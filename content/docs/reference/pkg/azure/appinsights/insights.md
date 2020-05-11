@@ -12,9 +12,53 @@ meta_desc: "Explore the Insights resource of the appinsights module, including e
 
 Manages an Application Insights component.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_insights = azure.appinsights.Insights("exampleInsights",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    application_type="web")
+pulumi.export("instrumentationKey", example_insights.instrumentation_key)
+pulumi.export("appId", example_insights.app_id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleInsights = new azure.appinsights.Insights("exampleInsights", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    applicationType: "web",
+});
+export const instrumentationKey = exampleInsights.instrumentationKey;
+export const appId = exampleInsights.appId;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Insights Resource {#create}

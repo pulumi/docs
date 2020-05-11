@@ -25,6 +25,16 @@ const example = new azure.mariadb.FirewallRule("example", {
     startIpAddress: "40.112.8.12",
 });
 ```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.mariadb.FirewallRule("example",
+    end_ip_address="40.112.8.12",
+    resource_group_name="test-rg",
+    server_name="test-server",
+    start_ip_address="40.112.8.12")
+```
 
 ## Example Usage (IP Range)
 
@@ -38,6 +48,16 @@ const example = new azure.mariadb.FirewallRule("example", {
     serverName: "test-server",
     startIpAddress: "40.112.0.0",
 });
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.mariadb.FirewallRule("example",
+    end_ip_address="40.112.255.255",
+    resource_group_name="test-rg",
+    server_name="test-server",
+    start_ip_address="40.112.0.0")
 ```
 
 

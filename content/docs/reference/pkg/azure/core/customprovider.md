@@ -12,9 +12,55 @@ meta_desc: "Explore the CustomProvider resource of the core module, including ex
 
 Manages an Azure Custom Provider.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_custom_provider = azure.core.CustomProvider("exampleCustomProvider",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    resource_type=[{
+        "name": "dEf1",
+        "endpoint": "https://testendpoint.com/",
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleCustomProvider = new azure.core.CustomProvider("exampleCustomProvider", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    resource_type: [{
+        name: "dEf1",
+        endpoint: "https://testendpoint.com/",
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CustomProvider Resource {#create}

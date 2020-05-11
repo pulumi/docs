@@ -12,9 +12,46 @@ meta_desc: "Explore the GetDpsSharedAccessPolicy function of the iot module, inc
 
 Use this data source to access information about an existing IotHub Device Provisioning Service Shared Access Policy
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.iot.get_dps_shared_access_policy(name="example",
+    resource_group_name=azurerm_resource_group["example"]["name"],
+    iothub_dps_name=azurerm_iothub_dps["example"]["name"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.iot.getDpsSharedAccessPolicy({
+    name: "example",
+    resourceGroupName: azurerm_resource_group.example.name,
+    iothubDpsName: azurerm_iothub_dps.example.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetDpsSharedAccessPolicy {#using}

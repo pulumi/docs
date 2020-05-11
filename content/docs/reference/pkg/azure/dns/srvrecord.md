@@ -12,9 +12,69 @@ meta_desc: "Explore the SrvRecord resource of the dns module, including examples
 
 Enables you to manage DNS SRV Records within Azure DNS.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_zone = azure.dns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+example_srv_record = azure.dns.SrvRecord("exampleSrvRecord",
+    zone_name=example_zone.name,
+    resource_group_name=example_resource_group.name,
+    ttl=300,
+    record=[{
+        "priority": 1,
+        "weight": 5,
+        "port": 8080,
+        "target": "target1.contoso.com",
+    }],
+    tags={
+        "Environment": "Production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleZone = new azure.dns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const exampleSrvRecord = new azure.dns.SrvRecord("exampleSrvRecord", {
+    zoneName: exampleZone.name,
+    resourceGroupName: exampleResourceGroup.name,
+    ttl: 300,
+    record: [{
+        priority: 1,
+        weight: 5,
+        port: 8080,
+        target: "target1.contoso.com",
+    }],
+    tags: {
+        Environment: "Production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SrvRecord Resource {#create}

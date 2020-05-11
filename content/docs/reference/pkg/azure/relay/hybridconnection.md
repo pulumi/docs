@@ -12,9 +12,66 @@ meta_desc: "Explore the HybridConnection resource of the relay module, including
 
 Manages an Azure Relay Hybrid Connection.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_namespace = azure.relay.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="Standard",
+    tags={
+        "source": "managed",
+    })
+example_hybrid_connection = azure.relay.HybridConnection("exampleHybridConnection",
+    resource_group_name=example_resource_group.name,
+    relay_namespace_name=example_namespace.name,
+    requires_client_authorization=False,
+    user_metadata="testmetadata")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleNamespace = new azure.relay.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "Standard",
+    tags: {
+        source: "managed",
+    },
+});
+const exampleHybridConnection = new azure.relay.HybridConnection("exampleHybridConnection", {
+    resourceGroupName: exampleResourceGroup.name,
+    relayNamespaceName: exampleNamespace.name,
+    requiresClientAuthorization: false,
+    userMetadata: "testmetadata",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HybridConnection Resource {#create}

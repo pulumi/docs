@@ -17,6 +17,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.appinsights.AnalyticsItem">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">AnalyticsItem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_insights_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">function_alias</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.AnalyticsItem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application Insights Analytics Item component.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_insights</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appinsights</span><span class="o">.</span><span class="n">Insights</span><span class="p">(</span><span class="s2">&quot;exampleInsights&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">application_type</span><span class="o">=</span><span class="s2">&quot;web&quot;</span><span class="p">)</span>
+<span class="n">example_analytics_item</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appinsights</span><span class="o">.</span><span class="n">AnalyticsItem</span><span class="p">(</span><span class="s2">&quot;exampleAnalyticsItem&quot;</span><span class="p">,</span>
+    <span class="n">application_insights_id</span><span class="o">=</span><span class="n">example_insights</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;requests //simple example query&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;shared&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;query&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -152,6 +167,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appinsights.ApiKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">ApiKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_insights_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.ApiKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application Insights API key.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_insights</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appinsights</span><span class="o">.</span><span class="n">Insights</span><span class="p">(</span><span class="s2">&quot;exampleInsights&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">application_type</span><span class="o">=</span><span class="s2">&quot;web&quot;</span><span class="p">)</span>
+<span class="n">read_telemetry</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appinsights</span><span class="o">.</span><span class="n">ApiKey</span><span class="p">(</span><span class="s2">&quot;readTelemetry&quot;</span><span class="p">,</span>
+    <span class="n">application_insights_id</span><span class="o">=</span><span class="n">example_insights</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">read_permissions</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;aggregate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;api&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;draft&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;extendqueries&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;search&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="n">write_annotations</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appinsights</span><span class="o">.</span><span class="n">ApiKey</span><span class="p">(</span><span class="s2">&quot;writeAnnotations&quot;</span><span class="p">,</span>
+    <span class="n">application_insights_id</span><span class="o">=</span><span class="n">example_insights</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">write_permissions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;annotations&quot;</span><span class="p">])</span>
+<span class="n">authenticate_sdk_control_channel_api_key</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appinsights</span><span class="o">.</span><span class="n">ApiKey</span><span class="p">(</span><span class="s2">&quot;authenticateSdkControlChannelApiKey&quot;</span><span class="p">,</span>
+    <span class="n">application_insights_id</span><span class="o">=</span><span class="n">example_insights</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">read_permissions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;agentconfig&quot;</span><span class="p">])</span>
+<span class="n">full_permissions</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appinsights</span><span class="o">.</span><span class="n">ApiKey</span><span class="p">(</span><span class="s2">&quot;fullPermissions&quot;</span><span class="p">,</span>
+    <span class="n">application_insights_id</span><span class="o">=</span><span class="n">example_insights</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">read_permissions</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;agentconfig&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;aggregate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;api&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;draft&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;extendqueries&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;search&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">write_permissions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;annotations&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;readTelemetryApiKey&quot;</span><span class="p">,</span> <span class="n">read_telemetry</span><span class="o">.</span><span class="n">api_key</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;writeAnnotationsApiKey&quot;</span><span class="p">,</span> <span class="n">write_annotations</span><span class="o">.</span><span class="n">api_key</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;authenticateSdkControlChannel&quot;</span><span class="p">,</span> <span class="n">authenticate_sdk_control_channel_api_key</span><span class="o">.</span><span class="n">api_key</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;fullPermissionsApiKey&quot;</span><span class="p">,</span> <span class="n">full_permissions</span><span class="o">.</span><span class="n">api_key</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -313,6 +368,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appinsights.Insights">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">Insights</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">daily_data_cap_in_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">daily_data_cap_notifications_disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_ip_masking</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sampling_percentage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.Insights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application Insights component.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_insights</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appinsights</span><span class="o">.</span><span class="n">Insights</span><span class="p">(</span><span class="s2">&quot;exampleInsights&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">application_type</span><span class="o">=</span><span class="s2">&quot;web&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;instrumentationKey&quot;</span><span class="p">,</span> <span class="n">example_insights</span><span class="o">.</span><span class="n">instrumentation_key</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;appId&quot;</span><span class="p">,</span> <span class="n">example_insights</span><span class="o">.</span><span class="n">app_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -644,6 +711,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appinsights.get_insights">
 <code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">get_insights</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.get_insights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Application Insights component.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">appinsights</span><span class="o">.</span><span class="n">get_insights</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;networking&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;applicationInsightsInstrumentationKey&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">instrumentation_key</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

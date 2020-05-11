@@ -47,6 +47,19 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.core.CustomProvider">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">CustomProvider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.CustomProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Custom Provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">)</span>
+<span class="n">example_custom_provider</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">CustomProvider</span><span class="p">(</span><span class="s2">&quot;exampleCustomProvider&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">resource_type</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;dEf1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;endpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://testendpoint.com/&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -385,6 +398,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.core.ResourceGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">ResourceGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.ResourceGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Resource Group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -480,6 +499,75 @@ a format of their choosing before sending those properties to the Pulumi engine.
 This means that when deleting the <code class="docutils literal notranslate"><span class="pre">core.TemplateDeployment</span></code> resource, this provider will only remove the reference to the deployment, whilst leaving any resources created by that ARM Template Deployment.
 One workaround for this is to use a unique Resource Group for each ARM Template Deployment, which means deleting the Resource Group would contain any resources created within it - however this isn’t ideal. <a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete">More information</a>.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_template_deployment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">TemplateDeployment</span><span class="p">(</span><span class="s2">&quot;exampleTemplateDeployment&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">template_body</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;$schema&quot;: &quot;https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#&quot;,</span>
+<span class="s2">  &quot;contentVersion&quot;: &quot;1.0.0.0&quot;,</span>
+<span class="s2">  &quot;parameters&quot;: {</span>
+<span class="s2">    &quot;storageAccountType&quot;: {</span>
+<span class="s2">      &quot;type&quot;: &quot;string&quot;,</span>
+<span class="s2">      &quot;defaultValue&quot;: &quot;Standard_LRS&quot;,</span>
+<span class="s2">      &quot;allowedValues&quot;: [</span>
+<span class="s2">        &quot;Standard_LRS&quot;,</span>
+<span class="s2">        &quot;Standard_GRS&quot;,</span>
+<span class="s2">        &quot;Standard_ZRS&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;metadata&quot;: {</span>
+<span class="s2">        &quot;description&quot;: &quot;Storage Account type&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  },</span>
+<span class="s2">  &quot;variables&quot;: {</span>
+<span class="s2">    &quot;location&quot;: &quot;[resourceGroup().location]&quot;,</span>
+<span class="s2">    &quot;storageAccountName&quot;: &quot;[concat(uniquestring(resourceGroup().id), &#39;storage&#39;)]&quot;,</span>
+<span class="s2">    &quot;publicIPAddressName&quot;: &quot;[concat(&#39;myPublicIp&#39;, uniquestring(resourceGroup().id))]&quot;,</span>
+<span class="s2">    &quot;publicIPAddressType&quot;: &quot;Dynamic&quot;,</span>
+<span class="s2">    &quot;apiVersion&quot;: &quot;2015-06-15&quot;,</span>
+<span class="s2">    &quot;dnsLabelPrefix&quot;: &quot;example-acctest&quot;</span>
+<span class="s2">  },</span>
+<span class="s2">  &quot;resources&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;type&quot;: &quot;Microsoft.Storage/storageAccounts&quot;,</span>
+<span class="s2">      &quot;name&quot;: &quot;[variables(&#39;storageAccountName&#39;)]&quot;,</span>
+<span class="s2">      &quot;apiVersion&quot;: &quot;[variables(&#39;apiVersion&#39;)]&quot;,</span>
+<span class="s2">      &quot;location&quot;: &quot;[variables(&#39;location&#39;)]&quot;,</span>
+<span class="s2">      &quot;properties&quot;: {</span>
+<span class="s2">        &quot;accountType&quot;: &quot;[parameters(&#39;storageAccountType&#39;)]&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">    },</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;type&quot;: &quot;Microsoft.Network/publicIPAddresses&quot;,</span>
+<span class="s2">      &quot;apiVersion&quot;: &quot;[variables(&#39;apiVersion&#39;)]&quot;,</span>
+<span class="s2">      &quot;name&quot;: &quot;[variables(&#39;publicIPAddressName&#39;)]&quot;,</span>
+<span class="s2">      &quot;location&quot;: &quot;[variables(&#39;location&#39;)]&quot;,</span>
+<span class="s2">      &quot;properties&quot;: {</span>
+<span class="s2">        &quot;publicIPAllocationMethod&quot;: &quot;[variables(&#39;publicIPAddressType&#39;)]&quot;,</span>
+<span class="s2">        &quot;dnsSettings&quot;: {</span>
+<span class="s2">          &quot;domainNameLabel&quot;: &quot;[variables(&#39;dnsLabelPrefix&#39;)]&quot;</span>
+<span class="s2">        }</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  ],</span>
+<span class="s2">  &quot;outputs&quot;: {</span>
+<span class="s2">    &quot;storageAccountName&quot;: {</span>
+<span class="s2">      &quot;type&quot;: &quot;string&quot;,</span>
+<span class="s2">      &quot;value&quot;: &quot;[variables(&#39;storageAccountName&#39;)]&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;storageAccountType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_GRS&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">deployment_mode</span><span class="o">=</span><span class="s2">&quot;Incremental&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;storageAccountName&quot;</span><span class="p">,</span> <span class="n">example_template_deployment</span><span class="o">.</span><span class="n">outputs</span><span class="p">[</span><span class="s2">&quot;storageAccountName&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p>This provider does not know about the individual resources created by Azure using a deployment template and therefore cannot delete these resources during a destroy. Destroying a template deployment removes the associated deployment operations, but will not delete the Azure resources created by the deployment. In order to delete these resources, the containing resource group must also be destroyed. <a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete">More information</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -614,12 +702,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.core.get_client_config">
 <code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">get_client_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_client_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the configuration of the AzureRM provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;accountId&quot;</span><span class="p">,</span> <span class="n">current</span><span class="o">.</span><span class="n">client_id</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_azure.core.get_resource_group">
 <code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">get_resource_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Resource Group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_resource_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;existing&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The Name of this Resource Group.</p>
@@ -647,6 +749,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.core.get_subscription">
 <code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">get_subscription</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">subscription_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Subscription.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_subscription</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;currentSubscriptionDisplayName&quot;</span><span class="p">,</span> <span class="n">current</span><span class="o">.</span><span class="n">display_name</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>subscription_id</strong> (<em>str</em>) – Specifies the ID of the subscription. If this argument is omitted, the subscription ID of the current Azure Resource Manager provider is used.</p>
@@ -658,6 +767,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.core.get_subscriptions">
 <code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">get_subscriptions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">display_name_contains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_subscriptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about all the Subscriptions currently available.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">available</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_subscriptions</span><span class="p">()</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;availableSubscriptions&quot;</span><span class="p">,</span> <span class="n">available</span><span class="o">.</span><span class="n">subscriptions</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstAvailableSubscriptionDisplayName&quot;</span><span class="p">,</span> <span class="n">available</span><span class="o">.</span><span class="n">subscriptions</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;display_name&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -672,7 +789,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.core.get_user_assigned_identity">
 <code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">get_user_assigned_identity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_user_assigned_identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing User Assigned Identity.</p>
-<p>Deprecated: azure.getUserAssignedIdentity has been deprecated in favour of azure.getUserAssignedIdentity</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">authorization</span><span class="o">.</span><span class="n">get_user_assigned_identity</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;name_of_user_assigned_identity&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;name_of_resource_group&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;uaiClientId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">client_id</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;uaiPrincipalId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">principal_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Deprecated: azure.core.getUserAssignedIdentity has been deprecated in favour of azure.authorization.getUserAssignedIdentity</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

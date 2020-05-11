@@ -12,9 +12,75 @@ meta_desc: "Explore the FunctionJavaScriptUDF resource of the streamanalytics mo
 
 Manages a JavaScript UDF Function within Stream Analytics Streaming Job.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.get_resource_group(name="example-resources")
+example_job = azure.streamanalytics.get_job(name="example-job",
+    resource_group_name=azurerm_resource_group["example"]["name"])
+example_function_java_script_udf = azure.streamanalytics.FunctionJavaScriptUDF("exampleFunctionJavaScriptUDF",
+    stream_analytics_job_name=example_job.name,
+    resource_group_name=example_job.resource_group_name,
+    script="""function getRandomNumber(in) {
+  return in;
+}
+""",
+    input=[{
+        "type": "bigint",
+    }],
+    output={
+        "type": "bigint",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = azure.core.getResourceGroup({
+    name: "example-resources",
+});
+const exampleJob = azure.streamanalytics.getJob({
+    name: "example-job",
+    resourceGroupName: azurerm_resource_group.example.name,
+});
+const exampleFunctionJavaScriptUDF = new azure.streamanalytics.FunctionJavaScriptUDF("exampleFunctionJavaScriptUDF", {
+    streamAnalyticsJobName: exampleJob.then(exampleJob => exampleJob.name),
+    resourceGroupName: exampleJob.then(exampleJob => exampleJob.resourceGroupName),
+    script: `function getRandomNumber(in) {
+  return in;
+}
+`,
+    input: [{
+        type: "bigint",
+    }],
+    output: {
+        type: "bigint",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FunctionJavaScriptUDF Resource {#create}

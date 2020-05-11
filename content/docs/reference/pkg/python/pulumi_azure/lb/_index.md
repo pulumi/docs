@@ -30,6 +30,26 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Static&quot;</span><span class="p">)</span>
+<span class="n">example_load_balancer</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;exampleLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_backend_address_pool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">BackendAddressPool</span><span class="p">(</span><span class="s2">&quot;exampleBackendAddressPool&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">example_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -212,6 +232,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.lb.LoadBalancer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer Resource.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Static&quot;</span><span class="p">)</span>
+<span class="n">example_load_balancer</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;exampleLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -388,6 +425,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> This resource cannot be used with with virtual machines, instead use the <code class="docutils literal notranslate"><span class="pre">lb.NatRule</span></code> resource.</p>
 <p><strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Static&quot;</span><span class="p">)</span>
+<span class="n">example_load_balancer</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;exampleLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_nat_pool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">NatPool</span><span class="p">(</span><span class="s2">&quot;exampleNatPool&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">example_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;Tcp&quot;</span><span class="p">,</span>
+    <span class="n">frontend_port_start</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">frontend_port_end</span><span class="o">=</span><span class="mi">81</span><span class="p">,</span>
+    <span class="n">backend_port</span><span class="o">=</span><span class="mi">8080</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration_name</span><span class="o">=</span><span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -522,6 +584,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> This resource cannot be used with with virtual machine scale sets, instead use the <code class="docutils literal notranslate"><span class="pre">lb.NatPool</span></code> resource.</p>
 <p><strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Static&quot;</span><span class="p">)</span>
+<span class="n">example_load_balancer</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;exampleLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_nat_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">NatRule</span><span class="p">(</span><span class="s2">&quot;exampleNatRule&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">example_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;Tcp&quot;</span><span class="p">,</span>
+    <span class="n">frontend_port</span><span class="o">=</span><span class="mi">3389</span><span class="p">,</span>
+    <span class="n">backend_port</span><span class="o">=</span><span class="mi">3389</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration_name</span><span class="o">=</span><span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -671,6 +757,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration and a Backend Address Pool Attached.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Static&quot;</span><span class="p">)</span>
+<span class="n">example_load_balancer</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;exampleLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_backend_address_pool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">BackendAddressPool</span><span class="p">(</span><span class="s2">&quot;exampleBackendAddressPool&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">example_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">example_outbound_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">OutboundRule</span><span class="p">(</span><span class="s2">&quot;exampleOutboundRule&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">example_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;Tcp&quot;</span><span class="p">,</span>
+    <span class="n">backend_address_pool_id</span><span class="o">=</span><span class="n">example_backend_address_pool</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -826,6 +940,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Static&quot;</span><span class="p">)</span>
+<span class="n">example_load_balancer</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;exampleLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_probe</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Probe</span><span class="p">(</span><span class="s2">&quot;exampleProbe&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">example_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -959,6 +1094,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Static&quot;</span><span class="p">)</span>
+<span class="n">example_load_balancer</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;exampleLoadBalancer&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}])</span>
+<span class="n">example_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="s2">&quot;exampleRule&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">example_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;Tcp&quot;</span><span class="p">,</span>
+    <span class="n">frontend_port</span><span class="o">=</span><span class="mi">3389</span><span class="p">,</span>
+    <span class="n">backend_port</span><span class="o">=</span><span class="mi">3389</span><span class="p">,</span>
+    <span class="n">frontend_ip_configuration_name</span><span class="o">=</span><span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1137,6 +1296,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.lb.get_backend_address_pool">
 <code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">get_backend_address_pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.get_backend_address_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Load Balancer’s Backend Address Pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_lb</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">get_lb</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-lb&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">example_backend_address_pool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">get_backend_address_pool</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;first&quot;</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">example_lb</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;backendAddressPoolId&quot;</span><span class="p">,</span> <span class="n">example_backend_address_pool</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;backendIpConfigurationIds&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">__item</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;lb.BackendAddressPool&quot;</span><span class="p">][</span><span class="s2">&quot;beap&quot;</span><span class="p">][</span><span class="s2">&quot;backend_ip_configurations&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1151,6 +1321,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.lb.get_lb">
 <code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">get_lb</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.get_lb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Load Balancer</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">get_lb</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-lb&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;loadbalancerId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

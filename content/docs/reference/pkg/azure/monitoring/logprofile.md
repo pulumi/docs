@@ -14,9 +14,95 @@ Manages a [Log Profile](https://docs.microsoft.com/en-us/azure/monitoring-and-di
 
 > **NOTE:** It's only possible to configure one Log Profile per Subscription. If you are trying to create more than one Log Profile, an error with `StatusCode=409` will occur.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="eastus")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="GRS")
+example_event_hub_namespace = azure.eventhub.EventHubNamespace("exampleEventHubNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    capacity=2)
+example_log_profile = azure.monitoring.LogProfile("exampleLogProfile",
+    categories=[
+        "Action",
+        "Delete",
+        "Write",
+    ],
+    locations=[
+        "westus",
+        "global",
+    ],
+    servicebus_rule_id=example_event_hub_namespace.id.apply(lambda id: f"{id}/authorizationrules/RootManageSharedAccessKey"),
+    storage_account_id=example_account.id,
+    retention_policy={
+        "enabled": True,
+        "days": 7,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "eastus"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "GRS",
+});
+const exampleEventHubNamespace = new azure.eventhub.EventHubNamespace("exampleEventHubNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+    capacity: 2,
+});
+const exampleLogProfile = new azure.monitoring.LogProfile("exampleLogProfile", {
+    categories: [
+        "Action",
+        "Delete",
+        "Write",
+    ],
+    locations: [
+        "westus",
+        "global",
+    ],
+    servicebusRuleId: pulumi.interpolate`${exampleEventHubNamespace.id}/authorizationrules/RootManageSharedAccessKey`,
+    storageAccountId: exampleAccount.id,
+    retention_policy: {
+        enabled: true,
+        days: 7,
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LogProfile Resource {#create}

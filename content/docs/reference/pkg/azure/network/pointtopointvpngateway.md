@@ -12,9 +12,51 @@ meta_desc: "Explore the PointToPointVpnGateway resource of the network module, i
 
 Manages a Point-to-Site VPN Gateway.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.PointToPointVpnGateway("example",
+    location=azurerm_resource_group["example"]["location"],
+    resource_group_name=azurerm_resource_group["example"]["resource_group_name"],
+    virtual_hub_id=azurerm_virtual_hub["example"]["id"],
+    vpn_server_configuration_id=azurerm_vpn_server_configuration["example"]["id"],
+    scale_unit=1)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = new azure.network.PointToPointVpnGateway("example", {
+    location: azurerm_resource_group.example.location,
+    resourceGroupName: azurerm_resource_group.example.resource_group_name,
+    virtualHubId: azurerm_virtual_hub.example.id,
+    vpnServerConfigurationId: azurerm_vpn_server_configuration.example.id,
+    scaleUnit: 1,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PointToPointVpnGateway Resource {#create}

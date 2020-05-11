@@ -12,9 +12,69 @@ meta_desc: "Explore the Application resource of the batch module, including exam
 
 Manages Azure Batch Application instance.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_batch_account_account = azure.batch.Account("exampleBatch/accountAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    pool_allocation_mode="BatchService",
+    storage_account_id=example_account.id)
+example_application = azure.batch.Application("exampleApplication",
+    resource_group_name=example_resource_group.name,
+    account_name=example_batch / account_account["name"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleBatch/accountAccount = new azure.batch.Account("exampleBatch/accountAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    poolAllocationMode: "BatchService",
+    storageAccountId: exampleAccount.id,
+});
+const exampleApplication = new azure.batch.Application("exampleApplication", {
+    resourceGroupName: exampleResourceGroup.name,
+    accountName: exampleBatch / accountAccount.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Application Resource {#create}

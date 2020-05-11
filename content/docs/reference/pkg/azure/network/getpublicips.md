@@ -28,7 +28,13 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.get_public_i_ps(attached=False,
+    resource_group_name="pip-test")
+```
 {{% /example %}}
 
 {{% example typescript %}}

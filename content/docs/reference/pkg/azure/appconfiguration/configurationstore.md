@@ -12,9 +12,47 @@ meta_desc: "Explore the ConfigurationStore resource of the appconfiguration modu
 
 Manages an Azure App Configuration.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="West Europe")
+appconf = azure.appconfiguration.ConfigurationStore("appconf",
+    resource_group_name=rg.name,
+    location=rg.location)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "West Europe"});
+const appconf = new azure.appconfiguration.ConfigurationStore("appconf", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ConfigurationStore Resource {#create}

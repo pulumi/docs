@@ -12,6 +12,27 @@ meta_desc: "Explore the GetCache function of the redis module, including example
 
 Use this data source to access information about an existing Redis Cache
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.redis.getCache({
+    name: "myrediscache",
+    resourceGroupName: "redis-cache",
+});
+export const primaryAccessKey = example.then(example => example.primaryAccessKey);
+export const hostname = example.then(example => example.hostname);
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.redis.get_cache(name="myrediscache",
+    resource_group_name="redis-cache")
+pulumi.export("primaryAccessKey", example.primary_access_key)
+pulumi.export("hostname", example.hostname)
+```
+
 
 
 ## Using GetCache {#using}

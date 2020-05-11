@@ -14,9 +14,133 @@ Manages a Private Link Service.
 
 > **NOTE** Private Link is now in [GA](https://docs.microsoft.com/en-gb/azure/private-link/).
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    address_spaces=["10.5.0.0/16"])
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.5.1.0/24",
+    enforce_private_link_service_network_policies=True)
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    sku="Standard",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Static")
+example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
+    sku="Standard",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    frontend_ip_configuration=[{
+        "name": example_public_ip.name,
+        "publicIpAddressId": example_public_ip.id,
+    }])
+example_link_service = azure.privatedns.LinkService("exampleLinkService",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    auto_approval_subscription_ids=["00000000-0000-0000-0000-000000000000"],
+    visibility_subscription_ids=["00000000-0000-0000-0000-000000000000"],
+    load_balancer_frontend_ip_configuration_ids=[example_load_balancer.frontend_ip_configurations[0].id],
+    nat_ip_configuration=[
+        {
+            "name": "primary",
+            "privateIpAddress": "10.5.1.17",
+            "privateIpAddressVersion": "IPv4",
+            "subnetId": example_subnet.id,
+            "primary": True,
+        },
+        {
+            "name": "secondary",
+            "privateIpAddress": "10.5.1.18",
+            "privateIpAddressVersion": "IPv4",
+            "subnetId": example_subnet.id,
+            "primary": False,
+        },
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    addressSpaces: ["10.5.0.0/16"],
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.5.1.0/24",
+    enforcePrivateLinkServiceNetworkPolicies: true,
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    sku: "Standard",
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Static",
+});
+const exampleLoadBalancer = new azure.lb.LoadBalancer("exampleLoadBalancer", {
+    sku: "Standard",
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    frontend_ip_configuration: [{
+        name: examplePublicIp.name,
+        publicIpAddressId: examplePublicIp.id,
+    }],
+});
+const exampleLinkService = new azure.privatedns.LinkService("exampleLinkService", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    autoApprovalSubscriptionIds: ["00000000-0000-0000-0000-000000000000"],
+    visibilitySubscriptionIds: ["00000000-0000-0000-0000-000000000000"],
+    loadBalancerFrontendIpConfigurationIds: [exampleLoadBalancer.frontendIpConfigurations.apply(frontendIpConfigurations => frontendIpConfigurations[0].id)],
+    nat_ip_configuration: [
+        {
+            name: "primary",
+            privateIpAddress: "10.5.1.17",
+            privateIpAddressVersion: "IPv4",
+            subnetId: exampleSubnet.id,
+            primary: true,
+        },
+        {
+            name: "secondary",
+            privateIpAddress: "10.5.1.18",
+            privateIpAddressVersion: "IPv4",
+            subnetId: exampleSubnet.id,
+            primary: false,
+        },
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LinkService Resource {#create}

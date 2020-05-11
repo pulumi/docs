@@ -12,9 +12,105 @@ meta_desc: "Explore the MetricAlert resource of the monitoring module, including
 
 Manages a Metric Alert within Azure Monitor.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+main_resource_group = azure.core.ResourceGroup("mainResourceGroup", location="West US")
+to_monitor = azure.storage.Account("toMonitor",
+    resource_group_name=main_resource_group.name,
+    location=main_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+main_action_group = azure.monitoring.ActionGroup("mainActionGroup",
+    resource_group_name=main_resource_group.name,
+    short_name="exampleact",
+    webhook_receiver=[{
+        "name": "callmyapi",
+        "serviceUri": "http://example.com/alert",
+    }])
+example = azure.monitoring.MetricAlert("example",
+    resource_group_name=main_resource_group.name,
+    scopes=[to_monitor.id],
+    description="Action will be triggered when Transactions count is greater than 50.",
+    criteria=[{
+        "metricNamespace": "Microsoft.Storage/storageAccounts",
+        "metricName": "Transactions",
+        "aggregation": "Total",
+        "operator": "GreaterThan",
+        "threshold": 50,
+        "dimension": [{
+            "name": "ApiName",
+            "operator": "Include",
+            "values": ["*"],
+        }],
+    }],
+    action=[{
+        "actionGroupId": main_action_group.id,
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const mainResourceGroup = new azure.core.ResourceGroup("mainResourceGroup", {location: "West US"});
+const toMonitor = new azure.storage.Account("toMonitor", {
+    resourceGroupName: mainResourceGroup.name,
+    location: mainResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const mainActionGroup = new azure.monitoring.ActionGroup("mainActionGroup", {
+    resourceGroupName: mainResourceGroup.name,
+    shortName: "exampleact",
+    webhook_receiver: [{
+        name: "callmyapi",
+        serviceUri: "http://example.com/alert",
+    }],
+});
+const example = new azure.monitoring.MetricAlert("example", {
+    resourceGroupName: mainResourceGroup.name,
+    scopes: [toMonitor.id],
+    description: "Action will be triggered when Transactions count is greater than 50.",
+    criteria: [{
+        metricNamespace: "Microsoft.Storage/storageAccounts",
+        metricName: "Transactions",
+        aggregation: "Total",
+        operator: "GreaterThan",
+        threshold: 50,
+        dimension: [{
+            name: "ApiName",
+            operator: "Include",
+            values: ["*"],
+        }],
+    }],
+    action: [{
+        actionGroupId: mainActionGroup.id,
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MetricAlert Resource {#create}

@@ -12,9 +12,119 @@ meta_desc: "Explore the CacheBlobTarget resource of the hpc module, including ex
 
 Manages a Blob Target within a HPC Cache.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_azuread as azuread
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.0.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.0.1.0/24")
+example_cache = azure.hpc.Cache("exampleCache",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    cache_size_in_gb=3072,
+    subnet_id=example_subnet.id,
+    sku_name="Standard_2G")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_container = azure.storage.Container("exampleContainer", storage_account_name=example_account.name)
+example_service_principal = azuread.get_service_principal(display_name="HPC Cache Resource Provider")
+example_storage_account_contrib = azure.authorization.Assignment("exampleStorageAccountContrib",
+    scope=example_account.id,
+    role_definition_name="Storage Account Contributor",
+    principal_id=example_service_principal.object_id)
+example_storage_blob_data_contrib = azure.authorization.Assignment("exampleStorageBlobDataContrib",
+    scope=example_account.id,
+    role_definition_name="Storage Blob Data Contributor",
+    principal_id=example_service_principal.object_id)
+example_cache_blob_target = azure.hpc.CacheBlobTarget("exampleCacheBlobTarget",
+    resource_group_name=example_resource_group.name,
+    cache_name=example_cache.name,
+    storage_container_id=example_container.resource_manager_id,
+    namespace_path="/blob_storage")
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as azuread from "@pulumi/azuread";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.0.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.0.1.0/24",
+});
+const exampleCache = new azure.hpc.Cache("exampleCache", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    cacheSizeInGb: 3072,
+    subnetId: exampleSubnet.id,
+    skuName: "Standard_2G",
+});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleContainer = new azure.storage.Container("exampleContainer", {storageAccountName: exampleAccount.name});
+const exampleServicePrincipal = azuread.getServicePrincipal({
+    displayName: "HPC Cache Resource Provider",
+});
+const exampleStorageAccountContrib = new azure.authorization.Assignment("exampleStorageAccountContrib", {
+    scope: exampleAccount.id,
+    roleDefinitionName: "Storage Account Contributor",
+    principalId: exampleServicePrincipal.then(exampleServicePrincipal => exampleServicePrincipal.objectId),
+});
+const exampleStorageBlobDataContrib = new azure.authorization.Assignment("exampleStorageBlobDataContrib", {
+    scope: exampleAccount.id,
+    roleDefinitionName: "Storage Blob Data Contributor",
+    principalId: exampleServicePrincipal.then(exampleServicePrincipal => exampleServicePrincipal.objectId),
+});
+const exampleCacheBlobTarget = new azure.hpc.CacheBlobTarget("exampleCacheBlobTarget", {
+    resourceGroupName: exampleResourceGroup.name,
+    cacheName: exampleCache.name,
+    storageContainerId: exampleContainer.resourceManagerId,
+    namespacePath: "/blob_storage",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CacheBlobTarget Resource {#create}

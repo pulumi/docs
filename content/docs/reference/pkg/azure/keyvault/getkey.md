@@ -12,9 +12,46 @@ meta_desc: "Explore the GetKey function of the keyvault module, including exampl
 
 Use this data source to access information about an existing Key Vault Key.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.keyvault.get_key(name="secret-sauce",
+    key_vault_id=data["azure.keyvault.KeyVault"]["existing"]["id"])
+pulumi.export("keyType", example.key_type)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.keyvault.getKey({
+    name: "secret-sauce",
+    keyVaultId: data.azurerm_key_vault.existing.id,
+});
+export const keyType = example.then(example => example.keyType);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetKey {#using}

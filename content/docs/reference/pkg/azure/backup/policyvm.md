@@ -28,7 +28,53 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_vault = azure.recoveryservices.Vault("exampleVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard")
+example_policy_vm = azure.backup.PolicyVM("examplePolicyVM",
+    backup={
+        "frequency": "Daily",
+        "time": "23:00",
+    },
+    recovery_vault_name=example_vault.name,
+    resource_group_name=example_resource_group.name,
+    retention_daily={
+        "count": 10,
+    },
+    retention_monthly={
+        "count": 7,
+        "weekdays": [
+            "Sunday",
+            "Wednesday",
+        ],
+        "weeks": [
+            "First",
+            "Last",
+        ],
+    },
+    retention_weekly={
+        "count": 42,
+        "weekdays": [
+            "Sunday",
+            "Wednesday",
+            "Friday",
+            "Saturday",
+        ],
+    },
+    retention_yearly={
+        "count": 77,
+        "months": ["January"],
+        "weekdays": ["Sunday"],
+        "weeks": ["Last"],
+    },
+    timezone="UTC")
+```
 {{% /example %}}
 
 {{% example typescript %}}

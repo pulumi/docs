@@ -12,11 +12,60 @@ meta_desc: "Explore the ManagementGroup resource of the managementgroups module,
 
 Manages a Management Group.
 
-{{% examples %}}
-{{% /examples %}}
+
 
 Deprecated: azure.managementgroups.ManagementGroup has been deprecated in favour of azure.management.Group
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_subscription()
+example_parent = azure.management.Group("exampleParent",
+    display_name="ParentGroup",
+    subscription_ids=[current.subscription_id])
+example_child = azure.management.Group("exampleChild",
+    display_name="ChildGroup",
+    parent_management_group_id=example_parent.id,
+    subscription_ids=[current.subscription_id])
+# other subscription IDs can go here
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getSubscription({});
+const exampleParent = new azure.management.Group("exampleParent", {
+    displayName: "ParentGroup",
+    subscriptionIds: [current.then(current => current.subscriptionId)],
+});
+const exampleChild = new azure.management.Group("exampleChild", {
+    displayName: "ChildGroup",
+    parentManagementGroupId: exampleParent.id,
+    subscriptionIds: [current.then(current => current.subscriptionId)],
+});
+// other subscription IDs can go here
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.managementgroups.ManagementGroup has been deprecated in favour of azure.management.Group{{% /md %}}</p>
 
 

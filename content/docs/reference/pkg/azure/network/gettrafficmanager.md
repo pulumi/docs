@@ -12,6 +12,25 @@ meta_desc: "Explore the GetTrafficManager function of the network module, includ
 
 Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.
 
+## Example Usage (World)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.network.getTrafficManager({
+    name: "World",
+});
+export const locationCode = example.then(example => example.id);
+```
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.get_traffic_manager(name="World")
+pulumi.export("locationCode", example.id)
+```
+
 
 
 ## Using GetTrafficManager {#using}

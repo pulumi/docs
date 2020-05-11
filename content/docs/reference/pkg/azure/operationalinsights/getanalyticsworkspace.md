@@ -12,9 +12,46 @@ meta_desc: "Explore the GetAnalyticsWorkspace function of the operationalinsight
 
 Use this data source to access information about an existing Log Analytics (formally Operational Insights) Workspace.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.operationalinsights.get_analytics_workspace(name="acctest-01",
+    resource_group_name="acctest")
+pulumi.export("logAnalyticsWorkspaceId", example.workspace_id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.operationalinsights.getAnalyticsWorkspace({
+    name: "acctest-01",
+    resourceGroupName: "acctest",
+});
+export const logAnalyticsWorkspaceId = example.then(example => example.workspaceId);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAnalyticsWorkspace {#using}

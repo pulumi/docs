@@ -12,9 +12,48 @@ meta_desc: "Explore the GetExpressRouteCircuit function of the network module, i
 
 Use this data source to access information about an existing ExpressRoute circuit.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.get_express_route_circuit(resource_group_name=azurerm_resource_group["example"]["name"],
+    name=azurerm_express_route_circuit["example"]["name"])
+pulumi.export("expressRouteCircuitId", example.id)
+pulumi.export("serviceKey", example.service_key)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.network.getExpressRouteCircuit({
+    resourceGroupName: azurerm_resource_group.example.name,
+    name: azurerm_express_route_circuit.example.name,
+});
+export const expressRouteCircuitId = example.then(example => example.id);
+export const serviceKey = example.then(example => example.serviceKey);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetExpressRouteCircuit {#using}

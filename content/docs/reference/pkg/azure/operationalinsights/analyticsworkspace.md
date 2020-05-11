@@ -12,9 +12,51 @@ meta_desc: "Explore the AnalyticsWorkspace resource of the operationalinsights m
 
 Manages a Log Analytics (formally Operational Insights) Workspace.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="East US")
+example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="PerGB2018",
+    retention_in_days=30)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "East US"});
+const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "PerGB2018",
+    retentionInDays: 30,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AnalyticsWorkspace Resource {#create}

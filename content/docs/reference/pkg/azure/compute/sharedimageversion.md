@@ -12,9 +12,75 @@ meta_desc: "Explore the SharedImageVersion resource of the compute module, inclu
 
 Manages a Version of a Shared Image within a Shared Image Gallery.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+existing_image = azure.compute.get_image(name="search-api",
+    resource_group_name="packerimages")
+existing_shared_image = azure.compute.get_shared_image(name="existing-image",
+    gallery_name="existing_gallery",
+    resource_group_name="existing-resources")
+example = azure.compute.SharedImageVersion("example",
+    gallery_name=existing_shared_image.gallery_name,
+    image_name=existing_shared_image.name,
+    resource_group_name=existing_shared_image.resource_group_name,
+    location=existing_shared_image.location,
+    managed_image_id=existing_image.id,
+    target_region=[{
+        "name": existing_shared_image.location,
+        "regionalReplicaCount": "5",
+        "storageAccountType": "Standard_LRS",
+    }])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const existingImage = azure.compute.getImage({
+    name: "search-api",
+    resourceGroupName: "packerimages",
+});
+const existingSharedImage = azure.compute.getSharedImage({
+    name: "existing-image",
+    galleryName: "existing_gallery",
+    resourceGroupName: "existing-resources",
+});
+const example = new azure.compute.SharedImageVersion("example", {
+    galleryName: existingSharedImage.then(existingSharedImage => existingSharedImage.galleryName),
+    imageName: existingSharedImage.then(existingSharedImage => existingSharedImage.name),
+    resourceGroupName: existingSharedImage.then(existingSharedImage => existingSharedImage.resourceGroupName),
+    location: existingSharedImage.then(existingSharedImage => existingSharedImage.location),
+    managedImageId: existingImage.then(existingImage => existingImage.id),
+    target_region: [{
+        name: existingSharedImage.then(existingSharedImage => existingSharedImage.location),
+        regionalReplicaCount: "5",
+        storageAccountType: "Standard_LRS",
+    }],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SharedImageVersion Resource {#create}

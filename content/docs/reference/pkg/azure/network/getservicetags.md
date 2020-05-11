@@ -12,9 +12,48 @@ meta_desc: "Explore the GetServiceTags function of the network module, including
 
 Use this data source to access information about Service Tags.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.network.get_service_tags(location="West Europe",
+    service="AzureKeyVault",
+    location_filter="northeurope")
+pulumi.export("addressPrefixes", data["azurerm_service_tags"]["example"]["address_prefixes"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.network.getServiceTags({
+    location: "West Europe",
+    service: "AzureKeyVault",
+    locationFilter: "northeurope",
+});
+export const addressPrefixes = data.azurerm_service_tags.example.address_prefixes;
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetServiceTags {#using}

@@ -94,6 +94,57 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.hdinsight.HBaseCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">HBaseCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">component_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_gen2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_min_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HBaseCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight HBase Cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_h_base_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">HBaseCluster</span><span class="p">(</span><span class="s2">&quot;exampleHBaseCluster&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">cluster_version</span><span class="o">=</span><span class="s2">&quot;3.6&quot;</span><span class="p">,</span>
+    <span class="n">tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">component_version</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;hbase&quot;</span><span class="p">:</span> <span class="s2">&quot;1.1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">gateway</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrgw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password123!&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -429,8 +480,59 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_azure.hdinsight.HadoopCluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">HadoopCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">component_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_gen2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_min_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HadoopCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">HadoopCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">component_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metastores</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_gen2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_min_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HadoopCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Hadoop Cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_hadoop_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">HadoopCluster</span><span class="p">(</span><span class="s2">&quot;exampleHadoopCluster&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">cluster_version</span><span class="o">=</span><span class="s2">&quot;3.6&quot;</span><span class="p">,</span>
+    <span class="n">tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">component_version</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;hadoop&quot;</span><span class="p">:</span> <span class="s2">&quot;2.7&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">gateway</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrgw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;PAssword123!&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D4_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -440,6 +542,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>component_version</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">component_version</span></code> block as defined below.</p></li>
 <li><p><strong>gateway</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">gateway</span></code> block as defined below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Azure Region which this HDInsight Hadoop Cluster should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>metastores</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">metastores</span></code> block as defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Resource Group in which this HDInsight Hadoop Cluster should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">roles</span></code> block as defined below.</p></li>
@@ -459,6 +562,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the Ambari portal enabled? Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password used for the Ambari Portal. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username used for the Ambari Portal. Changing this forces a new resource to be created.</p></li>
+</ul>
+<p>The <strong>metastores</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ambari</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">ambari</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Hive metastore’s existing SQL database.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Ambari metastore’s existing SQL server admin password.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Ambari metastore’s existing SQL server admin username.  Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hive</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">hive</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Hive metastore’s existing SQL database.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Hive metastore’s existing SQL server admin password.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Hive metastore’s existing SQL server admin username.  Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oozie</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">oozie</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Oozie metastore’s existing SQL database.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Oozie metastore’s existing SQL server admin password.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Oozie metastore’s existing SQL server admin username.  Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
 </ul>
 <p>The <strong>roles</strong> object supports the following:</p>
 <ul class="simple">
@@ -556,6 +686,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.HadoopCluster.location">
 <code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hdinsight.HadoopCluster.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Azure Region which this HDInsight Hadoop Cluster should exist. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.hdinsight.HadoopCluster.metastores">
+<code class="sig-name descname">metastores</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hdinsight.HadoopCluster.metastores" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">metastores</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ambari</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - An <code class="docutils literal notranslate"><span class="pre">ambari</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The external Hive metastore’s existing SQL database.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The external Ambari metastore’s existing SQL server admin password.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The external Ambari metastore’s existing SQL server admin username.  Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hive</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">hive</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The external Hive metastore’s existing SQL database.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The external Hive metastore’s existing SQL server admin password.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The external Hive metastore’s existing SQL server admin username.  Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oozie</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - An <code class="docutils literal notranslate"><span class="pre">oozie</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The external Oozie metastore’s existing SQL database.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The external Oozie metastore’s existing SQL server admin password.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The external Oozie metastore’s existing SQL server admin username.  Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -665,7 +827,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_azure.hdinsight.HadoopCluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">component_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">https_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_gen2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_min_version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HadoopCluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">component_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">https_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metastores</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_gen2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_min_version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HadoopCluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HadoopCluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -679,6 +841,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>gateway</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">gateway</span></code> block as defined below.</p></li>
 <li><p><strong>https_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HTTPS Connectivity Endpoint for this HDInsight Hadoop Cluster.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Azure Region which this HDInsight Hadoop Cluster should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>metastores</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">metastores</span></code> block as defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name for this HDInsight Hadoop Cluster. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Resource Group in which this HDInsight Hadoop Cluster should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">roles</span></code> block as defined below.</p></li>
@@ -699,6 +862,33 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the Ambari portal enabled? Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password used for the Ambari Portal. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username used for the Ambari Portal. Changing this forces a new resource to be created.</p></li>
+</ul>
+<p>The <strong>metastores</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ambari</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">ambari</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Hive metastore’s existing SQL database.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Ambari metastore’s existing SQL server admin password.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Ambari metastore’s existing SQL server admin username.  Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hive</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">hive</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Hive metastore’s existing SQL database.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Hive metastore’s existing SQL server admin password.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Hive metastore’s existing SQL server admin username.  Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oozie</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">oozie</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Oozie metastore’s existing SQL database.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Oozie metastore’s existing SQL server admin password.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external Oozie metastore’s existing SQL server admin username.  Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
 </ul>
 <p>The <strong>roles</strong> object supports the following:</p>
 <ul class="simple">
@@ -804,6 +994,56 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.InteractiveQueryCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">InteractiveQueryCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">component_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_gen2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_min_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.InteractiveQueryCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Interactive Query Cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_interactive_query_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">InteractiveQueryCluster</span><span class="p">(</span><span class="s2">&quot;exampleInteractiveQueryCluster&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">cluster_version</span><span class="o">=</span><span class="s2">&quot;3.6&quot;</span><span class="p">,</span>
+    <span class="n">tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">component_version</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;interactiveHive&quot;</span><span class="p">:</span> <span class="s2">&quot;2.1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">gateway</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrgw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password!&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D13_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D14_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A4_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1141,6 +1381,58 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.KafkaCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">KafkaCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">component_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_gen2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_min_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.KafkaCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Kafka Cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_kafka_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">KafkaCluster</span><span class="p">(</span><span class="s2">&quot;exampleKafkaCluster&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">cluster_version</span><span class="o">=</span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span>
+    <span class="n">tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">component_version</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;kafka&quot;</span><span class="p">:</span> <span class="s2">&quot;2.1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">gateway</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrgw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password123!&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;numberOfDisksPerNode&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1481,6 +1773,60 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.MLServicesCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">MLServicesCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rstudio</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_min_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.MLServicesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight ML Services Cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_ml_services_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">MLServicesCluster</span><span class="p">(</span><span class="s2">&quot;exampleMLServicesCluster&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">cluster_version</span><span class="o">=</span><span class="s2">&quot;3.6&quot;</span><span class="p">,</span>
+    <span class="n">tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">rstudio</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">gateway</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrgw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password123!&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D4_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;edge_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1816,6 +2162,60 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.RServerCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">RServerCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rstudio</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_min_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.RServerCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight RServer Cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_r_server_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">RServerCluster</span><span class="p">(</span><span class="s2">&quot;exampleRServerCluster&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">cluster_version</span><span class="o">=</span><span class="s2">&quot;3.6&quot;</span><span class="p">,</span>
+    <span class="n">tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">rstudio</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">gateway</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrgw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password123!&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D4_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;edge_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_v2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2151,6 +2551,57 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.SparkCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">SparkCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">component_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_gen2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_min_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.SparkCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Spark Cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_spark_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">SparkCluster</span><span class="p">(</span><span class="s2">&quot;exampleSparkCluster&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">cluster_version</span><span class="o">=</span><span class="s2">&quot;3.6&quot;</span><span class="p">,</span>
+    <span class="n">tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">component_version</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;spark&quot;</span><span class="p">:</span> <span class="s2">&quot;2.3&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">gateway</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrgw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password123!&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Medium&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2488,6 +2939,57 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.StormCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">StormCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">component_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tls_min_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.StormCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Storm Cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_storm_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">StormCluster</span><span class="p">(</span><span class="s2">&quot;exampleStormCluster&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">cluster_version</span><span class="o">=</span><span class="s2">&quot;3.6&quot;</span><span class="p">,</span>
+    <span class="n">tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">component_version</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;storm&quot;</span><span class="p">:</span> <span class="s2">&quot;1.1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">gateway</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrgw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password123!&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">storage_account</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;storageContainerId&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">roles</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;head_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;worker_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D3_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;targetInstanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;zookeeper_node&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_A4_V2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;acctestusrvm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;AccTestvdSC4daf986!&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2797,6 +3299,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.get_cluster">
 <code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing HDInsight Cluster.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">hdinsight</span><span class="o">.</span><span class="n">get_cluster</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;httpsEndpoint&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">https_endpoint</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

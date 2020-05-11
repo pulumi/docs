@@ -12,9 +12,46 @@ meta_desc: "Explore the GetProfile function of the cdn module, including example
 
 Use this data source to access information about an existing CDN Profile.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.cdn.get_profile(name="myfirstcdnprofile",
+    resource_group_name="example-resources")
+pulumi.export("cdnProfileId", example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.cdn.getProfile({
+    name: "myfirstcdnprofile",
+    resourceGroupName: "example-resources",
+});
+export const cdnProfileId = example.then(example => example.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetProfile {#using}

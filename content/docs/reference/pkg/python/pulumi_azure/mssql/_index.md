@@ -20,13 +20,47 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="py class">
 <dt id="pulumi_azure.mssql.AwaitableGetElasticPoolResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">AwaitableGetElasticPoolResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_db_max_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_db_min_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.AwaitableGetElasticPoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">AwaitableGetElasticPoolResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_db_max_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_db_min_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.AwaitableGetElasticPoolResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_azure.mssql.Database">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_pause_delay_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">collation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_source_database_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elastic_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_replica_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_scale</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restore_point_in_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sample_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threat_detection_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.Database" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_pause_delay_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">collation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_source_database_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elastic_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_auditing_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_replica_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_scale</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restore_point_in_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sample_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threat_detection_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a MS SQL Database.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_sql_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;exampleSqlServer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">server_id</span><span class="o">=</span><span class="n">azurerm_sql_server</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">collation</span><span class="o">=</span><span class="s2">&quot;SQL_Latin1_General_CP1_CI_AS&quot;</span><span class="p">,</span>
+    <span class="n">license_type</span><span class="o">=</span><span class="s2">&quot;LicenseIncluded&quot;</span><span class="p">,</span>
+    <span class="n">max_size_gb</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">read_scale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;BC_Gen5_2&quot;</span><span class="p">,</span>
+    <span class="n">zone_redundant</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">extended_auditing_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;storageEndpoint&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountAccessKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountAccessKeyIsSecondary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;retentionInDays&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -37,6 +71,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>create_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The create mode of the database. Possible values are <code class="docutils literal notranslate"><span class="pre">Copy</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>, <code class="docutils literal notranslate"><span class="pre">OnlineSecondary</span></code>, <code class="docutils literal notranslate"><span class="pre">PointInTimeRestore</span></code>, <code class="docutils literal notranslate"><span class="pre">Restore</span></code>, <code class="docutils literal notranslate"><span class="pre">RestoreExternalBackup</span></code>, <code class="docutils literal notranslate"><span class="pre">RestoreExternalBackupSecondary</span></code>, <code class="docutils literal notranslate"><span class="pre">RestoreLongTermRetentionBackup</span></code> and <code class="docutils literal notranslate"><span class="pre">Secondary</span></code>.</p></li>
 <li><p><strong>creation_source_database_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the source database to be referred to create the new database. This should only be used for databases with <code class="docutils literal notranslate"><span class="pre">create_mode</span></code> values that use another database as reference. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>elastic_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the elastic pool containing this database. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>extended_auditing_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">extended_auditing_policy</span></code> block as defined below.</p></li>
 <li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the license type applied to this database. Possible values are <code class="docutils literal notranslate"><span class="pre">LicenseIncluded</span></code> and <code class="docutils literal notranslate"><span class="pre">BasePrice</span></code>.</p></li>
 <li><p><strong>max_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The max size of the database in gigabytes.</p></li>
 <li><p><strong>min_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimal capacity that database will always have allocated, if not paused. This property is only settable for General Purpose Serverless databases.</p></li>
@@ -53,6 +88,13 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>extended_auditing_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_in_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days to retain logs for in the storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the access key to use for the auditing storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountAccessKeyIsSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether <code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> value is the storage’s secondary key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the blob storage endpoint (e.g. <a class="reference external" href="https://MyAccount.blob.core.windows.net">https://MyAccount.blob.core.windows.net</a>).</p></li>
+</ul>
 <p>The <strong>threat_detection_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled_alerts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a list of alerts which should be disabled. Possible values include <code class="docutils literal notranslate"><span class="pre">Access_Anomaly</span></code>, <code class="docutils literal notranslate"><span class="pre">Sql_Injection</span></code> and <code class="docutils literal notranslate"><span class="pre">Sql_Injection_Vulnerability</span></code>.</p></li>
@@ -92,6 +134,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.mssql.Database.elastic_pool_id">
 <code class="sig-name descname">elastic_pool_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Database.elastic_pool_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the ID of the elastic pool containing this database. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.Database.extended_auditing_policy">
+<code class="sig-name descname">extended_auditing_policy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Database.extended_auditing_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">extended_auditing_policy</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_in_days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days to retain logs for in the storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the access key to use for the auditing storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountAccessKeyIsSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether <code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> value is the storage’s secondary key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the blob storage endpoint (e.g. <a class="reference external" href="https://MyAccount.blob.core.windows.net">https://MyAccount.blob.core.windows.net</a>).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -184,7 +238,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="py method">
 <dt id="pulumi_azure.mssql.Database.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_pause_delay_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">collation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_source_database_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elastic_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_replica_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_scale</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restore_point_in_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sample_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threat_detection_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.Database.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_pause_delay_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">collation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_source_database_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elastic_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_auditing_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_replica_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_scale</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restore_point_in_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sample_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threat_detection_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.Database.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Database resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -198,6 +252,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>create_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The create mode of the database. Possible values are <code class="docutils literal notranslate"><span class="pre">Copy</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>, <code class="docutils literal notranslate"><span class="pre">OnlineSecondary</span></code>, <code class="docutils literal notranslate"><span class="pre">PointInTimeRestore</span></code>, <code class="docutils literal notranslate"><span class="pre">Restore</span></code>, <code class="docutils literal notranslate"><span class="pre">RestoreExternalBackup</span></code>, <code class="docutils literal notranslate"><span class="pre">RestoreExternalBackupSecondary</span></code>, <code class="docutils literal notranslate"><span class="pre">RestoreLongTermRetentionBackup</span></code> and <code class="docutils literal notranslate"><span class="pre">Secondary</span></code>.</p></li>
 <li><p><strong>creation_source_database_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the source database to be referred to create the new database. This should only be used for databases with <code class="docutils literal notranslate"><span class="pre">create_mode</span></code> values that use another database as reference. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>elastic_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the elastic pool containing this database. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>extended_auditing_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">extended_auditing_policy</span></code> block as defined below.</p></li>
 <li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the license type applied to this database. Possible values are <code class="docutils literal notranslate"><span class="pre">LicenseIncluded</span></code> and <code class="docutils literal notranslate"><span class="pre">BasePrice</span></code>.</p></li>
 <li><p><strong>max_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The max size of the database in gigabytes.</p></li>
 <li><p><strong>min_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimal capacity that database will always have allocated, if not paused. This property is only settable for General Purpose Serverless databases.</p></li>
@@ -214,6 +269,13 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>extended_auditing_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_in_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days to retain logs for in the storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the access key to use for the auditing storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountAccessKeyIsSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether <code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> value is the storage’s secondary key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the blob storage endpoint (e.g. <a class="reference external" href="https://MyAccount.blob.core.windows.net">https://MyAccount.blob.core.windows.net</a>).</p></li>
+</ul>
 <p>The <strong>threat_detection_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">disabled_alerts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a list of alerts which should be disabled. Possible values include <code class="docutils literal notranslate"><span class="pre">Access_Anomaly</span></code>, <code class="docutils literal notranslate"><span class="pre">Sql_Injection</span></code> and <code class="docutils literal notranslate"><span class="pre">Sql_Injection_Vulnerability</span></code>.</p></li>
@@ -272,6 +334,60 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE</strong> Database Vulnerability Assessment is currently only available for MS SQL databases.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_sql_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;exampleSqlServer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;GRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_server_security_alert_policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">ServerSecurityAlertPolicy</span><span class="p">(</span><span class="s2">&quot;exampleServerSecurityAlertPolicy&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_sql_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">state</span><span class="o">=</span><span class="s2">&quot;Enabled&quot;</span><span class="p">)</span>
+<span class="n">example_database</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;exampleDatabase&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_sql_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">edition</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+<span class="n">example_server_vulnerability_assessment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">ServerVulnerabilityAssessment</span><span class="p">(</span><span class="s2">&quot;exampleServerVulnerabilityAssessment&quot;</span><span class="p">,</span>
+    <span class="n">server_security_alert_policy_id</span><span class="o">=</span><span class="n">example_server_security_alert_policy</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">storage_container_path</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span> <span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">primary_blob_endpoint</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">primary_blob_endpoint</span><span class="si">}{</span><span class="n">name</span><span class="si">}</span><span class="s2">/&quot;</span><span class="p">),</span>
+    <span class="n">storage_account_access_key</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">)</span>
+<span class="n">example_database_vulnerability_assessment_rule_baseline</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">DatabaseVulnerabilityAssessmentRuleBaseline</span><span class="p">(</span><span class="s2">&quot;exampleDatabaseVulnerabilityAssessmentRuleBaseline&quot;</span><span class="p">,</span>
+    <span class="n">server_vulnerability_assessment_id</span><span class="o">=</span><span class="n">example_server_vulnerability_assessment</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">database_name</span><span class="o">=</span><span class="n">example_database</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">rule_id</span><span class="o">=</span><span class="s2">&quot;VA2065&quot;</span><span class="p">,</span>
+    <span class="n">baseline_name</span><span class="o">=</span><span class="s2">&quot;master&quot;</span><span class="p">,</span>
+    <span class="n">baseline_result</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;allowedip1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;123.123.123.123&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;123.123.123.123&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;allowedip2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;255.255.255.255&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;255.255.255.255&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -387,13 +503,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_azure.mssql.ElasticPool">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">ElasticPool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_database_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.ElasticPool" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows you to manage an Azure SQL Elastic Pool via the <code class="docutils literal notranslate"><span class="pre">2017-10-01-preview</span></code> API which allows for <code class="docutils literal notranslate"><span class="pre">vCore</span></code> and <code class="docutils literal notranslate"><span class="pre">DTU</span></code> based configurations.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">ElasticPool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_database_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.ElasticPool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows you to manage an Azure SQL Elastic Pool via the <code class="docutils literal notranslate"><span class="pre">v3.0</span></code> API which allows for <code class="docutils literal notranslate"><span class="pre">vCore</span></code> and <code class="docutils literal notranslate"><span class="pre">DTU</span></code> based configurations.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;westeurope&quot;</span><span class="p">)</span>
+<span class="n">example_sql_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;exampleSqlServer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">)</span>
+<span class="n">example_elastic_pool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">ElasticPool</span><span class="p">(</span><span class="s2">&quot;exampleElasticPool&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_sql_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">license_type</span><span class="o">=</span><span class="s2">&quot;LicenseIncluded&quot;</span><span class="p">,</span>
+    <span class="n">max_size_gb</span><span class="o">=</span><span class="mi">756</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GP_Gen5&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tier&quot;</span><span class="p">:</span> <span class="s2">&quot;GeneralPurpose&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;Gen5&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">per_database_settings</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;minCapacity&quot;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span>
+        <span class="s2">&quot;maxCapacity&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the license type applied to this database. Possible values are <code class="docutils literal notranslate"><span class="pre">LicenseIncluded</span></code> and <code class="docutils literal notranslate"><span class="pre">BasePrice</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>max_size_bytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The max data size of the elastic pool in bytes. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_size_gb</span></code>.</p></li>
 <li><p><strong>max_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The max data size of the elastic pool in gigabytes. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_size_bytes</span></code>.</p></li>
@@ -419,6 +564,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either <code class="docutils literal notranslate"><span class="pre">vCore</span></code> based <code class="docutils literal notranslate"><span class="pre">tier</span></code> + <code class="docutils literal notranslate"><span class="pre">family</span></code> pattern (e.g. GP_Gen4, BC_Gen5) or the <code class="docutils literal notranslate"><span class="pre">DTU</span></code> based <code class="docutils literal notranslate"><span class="pre">BasicPool</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardPool</span></code>, or <code class="docutils literal notranslate"><span class="pre">PremiumPool</span></code> pattern.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tier of the particular SKU. Possible values are <code class="docutils literal notranslate"><span class="pre">GeneralPurpose</span></code>, <code class="docutils literal notranslate"><span class="pre">BusinessCritical</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, or <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. For more information see the documentation for your Elasticpool configuration: <a class="reference external" href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools">vCore-based</a> or <a class="reference external" href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools">DTU-based</a>.</p></li>
 </ul>
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.ElasticPool.license_type">
+<code class="sig-name descname">license_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.ElasticPool.license_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the license type applied to this database. Possible values are <code class="docutils literal notranslate"><span class="pre">LicenseIncluded</span></code> and <code class="docutils literal notranslate"><span class="pre">BasePrice</span></code>.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_azure.mssql.ElasticPool.location">
 <code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.ElasticPool.location" title="Permalink to this definition">¶</a></dt>
@@ -491,7 +642,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_azure.mssql.ElasticPool.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_database_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.ElasticPool.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_database_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.ElasticPool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ElasticPool resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -500,6 +651,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the license type applied to this database. Possible values are <code class="docutils literal notranslate"><span class="pre">LicenseIncluded</span></code> and <code class="docutils literal notranslate"><span class="pre">BasePrice</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>max_size_bytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The max data size of the elastic pool in bytes. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_size_gb</span></code>.</p></li>
 <li><p><strong>max_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The max data size of the elastic pool in gigabytes. Conflicts with <code class="docutils literal notranslate"><span class="pre">max_size_bytes</span></code>.</p></li>
@@ -633,12 +785,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_azure.mssql.GetElasticPoolResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">GetElasticPoolResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_db_max_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_db_min_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.GetElasticPoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">GetElasticPoolResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_db_max_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">per_db_min_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.GetElasticPoolResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getElasticPool.</p>
 <dl class="py attribute">
 <dt id="pulumi_azure.mssql.GetElasticPoolResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.GetElasticPoolResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.GetElasticPoolResult.license_type">
+<code class="sig-name descname">license_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.GetElasticPoolResult.license_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The license type to apply for this database.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -686,12 +844,261 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_azure.mssql.Server">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">administrator_login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">administrator_login_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_auditing_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_network_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.Server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Microsoft SQL Azure Database Server.</p>
+<blockquote>
+<div><p><strong>Note:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="s2">&quot;exampleServer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;missadministrator&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;thisIsKat11&quot;</span><span class="p">,</span>
+    <span class="n">extended_auditing_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;storageEndpoint&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountAccessKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountAccessKeyIsSecondary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;retentionInDays&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>administrator_login</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The administrator login name for the new server. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>administrator_login_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password associated with the <code class="docutils literal notranslate"><span class="pre">administrator_login</span></code> user. Needs to comply with Azure’s <a class="reference external" href="https://msdn.microsoft.com/library/ms161959.aspx">Password Policy</a></p></li>
+<li><p><strong>connection_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection policy the server will use. Possible values are <code class="docutils literal notranslate"><span class="pre">Default</span></code>, <code class="docutils literal notranslate"><span class="pre">Proxy</span></code>, and <code class="docutils literal notranslate"><span class="pre">Redirect</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</p></li>
+<li><p><strong>extended_auditing_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">extended_auditing_policy</span></code> block as defined below.</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Microsoft SQL Server. This needs to be globally unique within Azure.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Microsoft SQL Server.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>extended_auditing_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_in_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - (Optional) Specifies the number of days to retain logs for in the storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Required)  Specifies the access key to use for the auditing storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountAccessKeyIsSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - (Optional) Specifies whether <code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> value is the storage’s secondary key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Required) Specifies the blob storage endpoint (e.g. <a class="reference external" href="https://MyAccount.blob.core.windows.net">https://MyAccount.blob.core.windows.net</a>).</p></li>
+</ul>
+<p>The <strong>identity</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type of the Microsoft SQL Server. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.Server.administrator_login">
+<code class="sig-name descname">administrator_login</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Server.administrator_login" title="Permalink to this definition">¶</a></dt>
+<dd><p>The administrator login name for the new server. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.Server.administrator_login_password">
+<code class="sig-name descname">administrator_login_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Server.administrator_login_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>The password associated with the <code class="docutils literal notranslate"><span class="pre">administrator_login</span></code> user. Needs to comply with Azure’s <a class="reference external" href="https://msdn.microsoft.com/library/ms161959.aspx">Password Policy</a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.Server.connection_policy">
+<code class="sig-name descname">connection_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Server.connection_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The connection policy the server will use. Possible values are <code class="docutils literal notranslate"><span class="pre">Default</span></code>, <code class="docutils literal notranslate"><span class="pre">Proxy</span></code>, and <code class="docutils literal notranslate"><span class="pre">Redirect</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.Server.extended_auditing_policy">
+<code class="sig-name descname">extended_auditing_policy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Server.extended_auditing_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">extended_auditing_policy</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_in_days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - (Optional) Specifies the number of days to retain logs for in the storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Required)  Specifies the access key to use for the auditing storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountAccessKeyIsSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - (Optional) Specifies whether <code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> value is the storage’s secondary key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Required) Specifies the blob storage endpoint (e.g. <a class="reference external" href="https://MyAccount.blob.core.windows.net">https://MyAccount.blob.core.windows.net</a>).</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.Server.fully_qualified_domain_name">
+<code class="sig-name descname">fully_qualified_domain_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Server.fully_qualified_domain_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fully qualified domain name of the Azure SQL Server (e.g. myServerName.database.windows.net)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.Server.identity">
+<code class="sig-name descname">identity</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Server.identity" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Principal ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the identity type of the Microsoft SQL Server. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.Server.location">
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Server.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.Server.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Server.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Microsoft SQL Server. This needs to be globally unique within Azure.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.Server.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Server.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Microsoft SQL Server.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.Server.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Server.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.mssql.Server.version">
+<code class="sig-name descname">version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mssql.Server.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.mssql.Server.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">administrator_login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">administrator_login_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_auditing_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fully_qualified_domain_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_network_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.Server.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Server resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>administrator_login</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The administrator login name for the new server. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>administrator_login_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The password associated with the <code class="docutils literal notranslate"><span class="pre">administrator_login</span></code> user. Needs to comply with Azure’s <a class="reference external" href="https://msdn.microsoft.com/library/ms161959.aspx">Password Policy</a></p>
+</p></li>
+<li><p><strong>connection_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection policy the server will use. Possible values are <code class="docutils literal notranslate"><span class="pre">Default</span></code>, <code class="docutils literal notranslate"><span class="pre">Proxy</span></code>, and <code class="docutils literal notranslate"><span class="pre">Redirect</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</p></li>
+<li><p><strong>extended_auditing_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">extended_auditing_policy</span></code> block as defined below.</p></li>
+<li><p><strong>fully_qualified_domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified domain name of the Azure SQL Server (e.g. myServerName.database.windows.net)</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Microsoft SQL Server. This needs to be globally unique within Azure.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Microsoft SQL Server.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>extended_auditing_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_in_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - (Optional) Specifies the number of days to retain logs for in the storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Required)  Specifies the access key to use for the auditing storage account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountAccessKeyIsSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - (Optional) Specifies whether <code class="docutils literal notranslate"><span class="pre">storage_account_access_key</span></code> value is the storage’s secondary key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Required) Specifies the blob storage endpoint (e.g. <a class="reference external" href="https://MyAccount.blob.core.windows.net">https://MyAccount.blob.core.windows.net</a>).</p></li>
+</ul>
+<p>The <strong>identity</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type of the Microsoft SQL Server. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.mssql.Server.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.Server.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.mssql.Server.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.Server.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_azure.mssql.ServerSecurityAlertPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">ServerSecurityAlertPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled_alerts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_account_admins</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_access_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.ServerSecurityAlertPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Security Alert Policy for a MSSQL Server.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> Security Alert Policy is currently only available for MS SQL databases.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_sql_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;exampleSqlServer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;GRS&quot;</span><span class="p">)</span>
+<span class="n">example_server_security_alert_policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">ServerSecurityAlertPolicy</span><span class="p">(</span><span class="s2">&quot;exampleServerSecurityAlertPolicy&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_sql_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">state</span><span class="o">=</span><span class="s2">&quot;Enabled&quot;</span><span class="p">,</span>
+    <span class="n">storage_endpoint</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
+    <span class="n">storage_account_access_key</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+    <span class="n">disabled_alerts</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;Sql_Injection&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Data_Exfiltration&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">retention_days</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -833,6 +1240,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE</strong> Vulnerability Assessment is currently only available for MS SQL databases.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_sql_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;exampleSqlServer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;GRS&quot;</span><span class="p">)</span>
+<span class="n">example_container</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;exampleContainer&quot;</span><span class="p">,</span>
+    <span class="n">storage_account_name</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">container_access_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">example_server_security_alert_policy</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">ServerSecurityAlertPolicy</span><span class="p">(</span><span class="s2">&quot;exampleServerSecurityAlertPolicy&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_sql_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">state</span><span class="o">=</span><span class="s2">&quot;Enabled&quot;</span><span class="p">)</span>
+<span class="n">example_server_vulnerability_assessment</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">ServerVulnerabilityAssessment</span><span class="p">(</span><span class="s2">&quot;exampleServerVulnerabilityAssessment&quot;</span><span class="p">,</span>
+    <span class="n">server_security_alert_policy_id</span><span class="o">=</span><span class="n">example_server_security_alert_policy</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">storage_container_path</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">Output</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span> <span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">primary_blob_endpoint</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">primary_blob_endpoint</span><span class="si">}{</span><span class="n">name</span><span class="si">}</span><span class="s2">/&quot;</span><span class="p">),</span>
+    <span class="n">storage_account_access_key</span><span class="o">=</span><span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+    <span class="n">recurring_scans</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;emailSubscriptionAdmins&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;emails&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;email@example1.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;email@example2.com&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -956,6 +1399,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.mssql.VirtualMachine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">VirtualMachine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_patching</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_vault_credential</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">r_services_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql_connectivity_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql_connectivity_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql_connectivity_update_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql_connectivity_update_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sql_license_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.VirtualMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Microsoft SQL Virtual Machine</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">get_virtual_machine</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-vm&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">example_mssql_virtual_machine_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleMssql/virtualMachineVirtualMachine&quot;</span><span class="p">,</span>
+    <span class="n">virtual_machine_id</span><span class="o">=</span><span class="n">example_virtual_machine</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">sql_license_type</span><span class="o">=</span><span class="s2">&quot;PAYG&quot;</span><span class="p">,</span>
+    <span class="n">r_services_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">sql_connectivity_port</span><span class="o">=</span><span class="mi">1433</span><span class="p">,</span>
+    <span class="n">sql_connectivity_type</span><span class="o">=</span><span class="s2">&quot;PRIVATE&quot;</span><span class="p">,</span>
+    <span class="n">sql_connectivity_update_password</span><span class="o">=</span><span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
+    <span class="n">sql_connectivity_update_username</span><span class="o">=</span><span class="s2">&quot;sqllogin&quot;</span><span class="p">,</span>
+    <span class="n">auto_patching</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;dayOfWeek&quot;</span><span class="p">:</span> <span class="s2">&quot;Sunday&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maintenanceWindowDurationInMinutes&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;maintenanceWindowStartingHour&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1139,6 +1602,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.mssql.get_database">
 <code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">get_database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.get_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing SQL database.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">get_database</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example-mssql-db&quot;</span><span class="p">,</span>
+    <span class="n">server_id</span><span class="o">=</span><span class="s2">&quot;example-mssql-server-id&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;databaseId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1153,6 +1624,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.mssql.get_elastic_pool">
 <code class="sig-prename descclassname">pulumi_azure.mssql.</code><code class="sig-name descname">get_elastic_pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mssql.get_elastic_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing SQL elastic pool.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mssql</span><span class="o">.</span><span class="n">get_elastic_pool</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;mssqlelasticpoolname&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="s2">&quot;example-sql-server&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;elasticpoolId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

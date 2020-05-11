@@ -12,9 +12,55 @@ meta_desc: "Explore the Namespace resource of the relay module, including exampl
 
 Manages an Azure Relay Namespace.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_namespace = azure.relay.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku_name="Standard",
+    tags={
+        "source": "example",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleNamespace = new azure.relay.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "Standard",
+    tags: {
+        source: "example",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Namespace Resource {#create}

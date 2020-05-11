@@ -12,9 +12,83 @@ meta_desc: "Explore the AnalyticsSolution resource of the operationalinsights mo
 
 Manages a Log Analytics (formally Operational Insights) Solution.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westeurope")
+workspace = random.RandomId("workspace",
+    keepers={
+        "group_name": example_resource_group.name,
+    },
+    byte_length=8)
+example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="PerGB2018")
+example_analytics_solution = azure.operationalinsights.AnalyticsSolution("exampleAnalyticsSolution",
+    solution_name="ContainerInsights",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    workspace_resource_id=example_analytics_workspace.id,
+    workspace_name=example_analytics_workspace.name,
+    plan={
+        "publisher": "Microsoft",
+        "product": "OMSGallery/ContainerInsights",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westeurope"});
+const workspace = new random.RandomId("workspace", {
+    keepers: {
+        group_name: exampleResourceGroup.name,
+    },
+    byteLength: 8,
+});
+const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace("exampleAnalyticsWorkspace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "PerGB2018",
+});
+const exampleAnalyticsSolution = new azure.operationalinsights.AnalyticsSolution("exampleAnalyticsSolution", {
+    solutionName: "ContainerInsights",
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    workspaceResourceId: exampleAnalyticsWorkspace.id,
+    workspaceName: exampleAnalyticsWorkspace.name,
+    plan: {
+        publisher: "Microsoft",
+        product: "OMSGallery/ContainerInsights",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AnalyticsSolution Resource {#create}

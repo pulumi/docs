@@ -12,11 +12,81 @@ meta_desc: "Explore the QueueAuthorizationRule resource of the eventhub module, 
 
 Manages an Authorization Rule for a ServiceBus Queue.
 
-{{% examples %}}
-{{% /examples %}}
+
 
 Deprecated: azure.eventhub.QueueAuthorizationRule has been deprecated in favour of azure.servicebus.QueueAuthorizationRule
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_namespace = azure.servicebus.Namespace("exampleNamespace",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku="Standard",
+    tags={
+        "source": "example",
+    })
+example_queue = azure.servicebus.Queue("exampleQueue",
+    resource_group_name=example_resource_group.name,
+    namespace_name=example_namespace.name,
+    enable_partitioning=True)
+example_queue_authorization_rule = azure.servicebus.QueueAuthorizationRule("exampleQueueAuthorizationRule",
+    namespace_name=example_namespace.name,
+    queue_name=example_queue.name,
+    resource_group_name=example_resource_group.name,
+    listen=True,
+    send=True,
+    manage=False)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "Standard",
+    tags: {
+        source: "example",
+    },
+});
+const exampleQueue = new azure.servicebus.Queue("exampleQueue", {
+    resourceGroupName: exampleResourceGroup.name,
+    namespaceName: exampleNamespace.name,
+    enablePartitioning: true,
+});
+const exampleQueueAuthorizationRule = new azure.servicebus.QueueAuthorizationRule("exampleQueueAuthorizationRule", {
+    namespaceName: exampleNamespace.name,
+    queueName: exampleQueue.name,
+    resourceGroupName: exampleResourceGroup.name,
+    listen: true,
+    send: true,
+    manage: false,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.QueueAuthorizationRule has been deprecated in favour of azure.servicebus.QueueAuthorizationRule{{% /md %}}</p>
 
 

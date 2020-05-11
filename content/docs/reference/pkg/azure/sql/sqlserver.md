@@ -12,9 +12,82 @@ meta_desc: "Explore the SqlServer resource of the sql module, including examples
 
 Manages a Microsoft SQL Azure Database Server.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_sql_server = azure.sql.SqlServer("exampleSqlServer",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    version="12.0",
+    administrator_login="mradministrator",
+    administrator_login_password="thisIsDog11",
+    extended_auditing_policy={
+        "storageEndpoint": example_account.primary_blob_endpoint,
+        "storageAccountAccessKey": example_account.primary_access_key,
+        "storageAccountAccessKeyIsSecondary": True,
+        "retentionInDays": 6,
+    },
+    tags={
+        "environment": "production",
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleAccount = new azure.storage.Account("exampleAccount", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    accountTier: "Standard",
+    accountReplicationType: "LRS",
+});
+const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    version: "12.0",
+    administratorLogin: "mradministrator",
+    administratorLoginPassword: "thisIsDog11",
+    extended_auditing_policy: {
+        storageEndpoint: exampleAccount.primaryBlobEndpoint,
+        storageAccountAccessKey: exampleAccount.primaryAccessKey,
+        storageAccountAccessKeyIsSecondary: true,
+        retentionInDays: 6,
+    },
+    tags: {
+        environment: "production",
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlServer Resource {#create}

@@ -12,9 +12,66 @@ meta_desc: "Explore the MongoCollection resource of the cosmosdb module, includi
 
 Manages a Mongo Collection within a Cosmos DB Account.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_account = azure.cosmosdb.get_account(name="tfex-cosmosdb-account",
+    resource_group_name="tfex-cosmosdb-account-rg")
+example_mongo_database = azure.cosmosdb.MongoDatabase("exampleMongoDatabase",
+    resource_group_name=example_account.resource_group_name,
+    account_name=example_account.name)
+example_mongo_collection = azure.cosmosdb.MongoCollection("exampleMongoCollection",
+    resource_group_name=example_account.resource_group_name,
+    account_name=example_account.name,
+    database_name=example_mongo_database.name,
+    default_ttl_seconds="777",
+    shard_key="uniqueKey",
+    throughput=400)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleAccount = azure.cosmosdb.getAccount({
+    name: "tfex-cosmosdb-account",
+    resourceGroupName: "tfex-cosmosdb-account-rg",
+});
+const exampleMongoDatabase = new azure.cosmosdb.MongoDatabase("exampleMongoDatabase", {
+    resourceGroupName: exampleAccount.then(exampleAccount => exampleAccount.resourceGroupName),
+    accountName: exampleAccount.then(exampleAccount => exampleAccount.name),
+});
+const exampleMongoCollection = new azure.cosmosdb.MongoCollection("exampleMongoCollection", {
+    resourceGroupName: exampleAccount.then(exampleAccount => exampleAccount.resourceGroupName),
+    accountName: exampleAccount.then(exampleAccount => exampleAccount.name),
+    databaseName: exampleMongoDatabase.name,
+    defaultTtlSeconds: "777",
+    shardKey: "uniqueKey",
+    throughput: 400,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MongoCollection Resource {#create}

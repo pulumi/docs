@@ -12,9 +12,86 @@ meta_desc: "Explore the CustomHostnameBinding resource of the appservice module,
 
 Manages a Hostname Binding within an App Service.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+import pulumi_random as random
+
+server = random.RandomId("server",
+    keepers={
+        "azi_id": 1,
+    },
+    byte_length=8)
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_plan = azure.appservice.Plan("examplePlan",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    sku={
+        "tier": "Standard",
+        "size": "S1",
+    })
+example_app_service = azure.appservice.AppService("exampleAppService",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    app_service_plan_id=example_plan.id)
+example_custom_hostname_binding = azure.appservice.CustomHostnameBinding("exampleCustomHostnameBinding",
+    hostname="www.mywebsite.com",
+    app_service_name=example_app_service.name,
+    resource_group_name=example_resource_group.name)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+import * as random from "@pulumi/random";
+
+const server = new random.RandomId("server", {
+    keepers: {
+        azi_id: 1,
+    },
+    byteLength: 8,
+});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const examplePlan = new azure.appservice.Plan("examplePlan", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        tier: "Standard",
+        size: "S1",
+    },
+});
+const exampleAppService = new azure.appservice.AppService("exampleAppService", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    appServicePlanId: examplePlan.id,
+});
+const exampleCustomHostnameBinding = new azure.appservice.CustomHostnameBinding("exampleCustomHostnameBinding", {
+    hostname: "www.mywebsite.com",
+    appServiceName: exampleAppService.name,
+    resourceGroupName: exampleResourceGroup.name,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CustomHostnameBinding Resource {#create}

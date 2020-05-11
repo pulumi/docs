@@ -254,6 +254,39 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.containerservice.Group">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">containers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diagnostics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_name_label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_registry_credentials</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_profile_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restart_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages as an Azure Container Group instance.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;exampleGroup&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ip_address_type</span><span class="o">=</span><span class="s2">&quot;public&quot;</span><span class="p">,</span>
+    <span class="n">dns_name_label</span><span class="o">=</span><span class="s2">&quot;aci-label&quot;</span><span class="p">,</span>
+    <span class="n">os_type</span><span class="o">=</span><span class="s2">&quot;Linux&quot;</span><span class="p">,</span>
+    <span class="n">container</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;hello-world&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;microsoft/aci-helloworld:latest&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cpu&quot;</span><span class="p">:</span> <span class="s2">&quot;0.5&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;memory&quot;</span><span class="p">:</span> <span class="s2">&quot;1.5&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+                <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;TCP&quot;</span><span class="p">,</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;sidecar&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;microsoft/aci-tutorial-sidecar&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cpu&quot;</span><span class="p">:</span> <span class="s2">&quot;0.5&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;memory&quot;</span><span class="p">:</span> <span class="s2">&quot;1.5&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;testing&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -701,6 +734,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.containerservice.KubernetesCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">KubernetesCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">addon_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_server_authorized_ip_ranges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_node_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_pod_security_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linux_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_resource_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_cluster_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_based_access_control</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_principal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">windows_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Service)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_kubernetes_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">KubernetesCluster</span><span class="p">(</span><span class="s2">&quot;exampleKubernetesCluster&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">dns_prefix</span><span class="o">=</span><span class="s2">&quot;exampleaks1&quot;</span><span class="p">,</span>
+    <span class="n">default_node_pool</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D2_v2&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">identity</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;SystemAssigned&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;clientCertificate&quot;</span><span class="p">,</span> <span class="n">example_kubernetes_cluster</span><span class="o">.</span><span class="n">kube_configs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;clientCertificate&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;kubeConfig&quot;</span><span class="p">,</span> <span class="n">example_kubernetes_cluster</span><span class="o">.</span><span class="n">kube_config_raw</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1317,6 +1373,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Multiple Node Pools are only supported when the Kubernetes Cluster is using Virtual Machine Scale Sets.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_kubernetes_cluster</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">KubernetesCluster</span><span class="p">(</span><span class="s2">&quot;exampleKubernetesCluster&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">dns_prefix</span><span class="o">=</span><span class="s2">&quot;exampleaks1&quot;</span><span class="p">,</span>
+    <span class="n">default_node_pool</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;nodeCount&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;vmSize&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_D2_v2&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">service_principal</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;clientSecret&quot;</span><span class="p">:</span> <span class="s2">&quot;00000000000000000000000000000000&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_kubernetes_cluster_node_pool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">KubernetesClusterNodePool</span><span class="p">(</span><span class="s2">&quot;exampleKubernetesClusterNodePool&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_cluster_id</span><span class="o">=</span><span class="n">example_kubernetes_cluster</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">vm_size</span><span class="o">=</span><span class="s2">&quot;Standard_DS2_v2&quot;</span><span class="p">,</span>
+    <span class="n">node_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1512,6 +1594,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.containerservice.Registry">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">georeplication_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_rule_set</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Container Registry.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">rg</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;rg&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">acr</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">Registry</span><span class="p">(</span><span class="s2">&quot;acr&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span>
+    <span class="n">admin_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">georeplication_locations</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;East US&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;West Europe&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1718,6 +1815,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.containerservice.RegistryWebhook">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">RegistryWebhook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Container Registry Webhook.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">rg</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;rg&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">acr</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">Registry</span><span class="p">(</span><span class="s2">&quot;acr&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">admin_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">webhook</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">RegistryWebhook</span><span class="p">(</span><span class="s2">&quot;webhook&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">registry_name</span><span class="o">=</span><span class="n">acr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">service_uri</span><span class="o">=</span><span class="s2">&quot;https://mywebhookreceiver.example/mytag&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;enabled&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;mytag:*&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;push&quot;</span><span class="p">],</span>
+    <span class="n">custom_headers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1856,7 +1975,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.containerservice.RegistryWebook">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">RegistryWebook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Container Registry Webhook.</p>
-<p>Deprecated: azure.RegistryWebook has been deprecated in favour of azure.RegistryWebhook</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">rg</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;rg&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">acr</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">Registry</span><span class="p">(</span><span class="s2">&quot;acr&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">admin_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">webhook</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">RegistryWebhook</span><span class="p">(</span><span class="s2">&quot;webhook&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">registry_name</span><span class="o">=</span><span class="n">acr</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">rg</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">service_uri</span><span class="o">=</span><span class="s2">&quot;https://mywebhookreceiver.example/mytag&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;enabled&quot;</span><span class="p">,</span>
+    <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;mytag:*&quot;</span><span class="p">,</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;push&quot;</span><span class="p">],</span>
+    <span class="n">custom_headers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<p>Deprecated: azure.containerservice.RegistryWebook has been deprecated in favour of azure.containerservice.RegistryWebhook</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1995,6 +2136,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.containerservice.get_kubernetes_cluster">
 <code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">get_kubernetes_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_cluster_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.get_kubernetes_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Managed Kubernetes Cluster (AKS).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">get_kubernetes_cluster</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;myakscluster&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;my-example-resource-group&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2010,6 +2158,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.containerservice.get_kubernetes_service_versions">
 <code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">get_kubernetes_service_versions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">include_preview</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.get_kubernetes_service_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve the version of Kubernetes supported by Azure Kubernetes Service.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">get_kubernetes_service_versions</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;versions&quot;</span><span class="p">,</span> <span class="n">current</span><span class="o">.</span><span class="n">versions</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;latestVersion&quot;</span><span class="p">,</span> <span class="n">current</span><span class="o">.</span><span class="n">latest_version</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2025,6 +2181,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.containerservice.get_registry">
 <code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">get_registry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.get_registry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Container Registry.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">containerservice</span><span class="o">.</span><span class="n">get_registry</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;testacr&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;loginServer&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">login_server</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -14,52 +14,9 @@ Manages a Email integration for a Bot Channel
 
 > **Note** A bot can only have a single Email Channel associated with it.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const current = pulumi.output(azure.core.getClientConfig({ async: true }));
-const exampleResourceGroup = new azure.core.ResourceGroup("example", {
-    location: "northeurope",
-});
-const exampleChannelsRegistration = new azure.bot.ChannelsRegistration("example", {
-    location: "global",
-    microsoftAppId: current.clientId,
-    resourceGroupName: exampleResourceGroup.name,
-    sku: "F0",
-});
-const exampleBotChannelEmail = new azure.BotChannelEmail("example", {
-    botName: exampleChannelsRegistration.name,
-    clientId: "exampleId",
-    clientSecret: "exampleSecret",
-    location: exampleChannelsRegistration.location,
-    resourceGroupName: exampleResourceGroup.name,
-    verificationToken: "exampleVerificationToken",
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a ChannelEmail Resource {#create}

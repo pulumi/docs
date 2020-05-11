@@ -12,9 +12,60 @@ meta_desc: "Explore the Fabric resource of the siterecovery module, including ex
 
 Manages a Azure Site Recovery Replication Fabric within a Recovery Services vault. Only Azure fabrics are supported at this time. Replication Fabrics serve as a container within an Azure region for other Site Recovery resources such as protection containers, protected items, network mappings.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+primary = azure.core.ResourceGroup("primary", location="West US")
+secondary = azure.core.ResourceGroup("secondary", location="East US")
+vault = azure.recoveryservices.Vault("vault",
+    location=secondary.location,
+    resource_group_name=secondary.name,
+    sku="Standard")
+fabric = azure.siterecovery.Fabric("fabric",
+    resource_group_name=secondary.name,
+    recovery_vault_name=vault.name,
+    location=primary.location)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const primary = new azure.core.ResourceGroup("primary", {location: "West US"});
+const secondary = new azure.core.ResourceGroup("secondary", {location: "East US"});
+const vault = new azure.recoveryservices.Vault("vault", {
+    location: secondary.location,
+    resourceGroupName: secondary.name,
+    sku: "Standard",
+});
+const fabric = new azure.siterecovery.Fabric("fabric", {
+    resourceGroupName: secondary.name,
+    recoveryVaultName: vault.name,
+    location: primary.location,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Fabric Resource {#create}

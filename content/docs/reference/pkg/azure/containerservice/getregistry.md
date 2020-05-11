@@ -12,9 +12,46 @@ meta_desc: "Explore the GetRegistry function of the containerservice module, inc
 
 Use this data source to access information about an existing Container Registry.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.containerservice.get_registry(name="testacr",
+    resource_group_name="test")
+pulumi.export("loginServer", example.login_server)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.containerservice.getRegistry({
+    name: "testacr",
+    resourceGroupName: "test",
+});
+export const loginServer = example.then(example => example.loginServer);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetRegistry {#using}

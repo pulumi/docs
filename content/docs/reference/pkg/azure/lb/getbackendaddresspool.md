@@ -12,9 +12,54 @@ meta_desc: "Explore the GetBackendAddressPool function of the lb module, includi
 
 Use this data source to access information about an existing Load Balancer's Backend Address Pool.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_lb = azure.lb.get_lb(name="example-lb",
+    resource_group_name="example-resources")
+example_backend_address_pool = azure.lb.get_backend_address_pool(name="first",
+    loadbalancer_id=example_lb.id)
+pulumi.export("backendAddressPoolId", example_backend_address_pool.id)
+pulumi.export("backendIpConfigurationIds", [__item["id"] for __item in data["azure.lb.BackendAddressPool"]["beap"]["backend_ip_configurations"]])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleLB = azure.lb.getLB({
+    name: "example-lb",
+    resourceGroupName: "example-resources",
+});
+const exampleBackendAddressPool = exampleLB.then(exampleLB => azure.lb.getBackendAddressPool({
+    name: "first",
+    loadbalancerId: exampleLB.id,
+}));
+export const backendAddressPoolId = exampleBackendAddressPool.then(exampleBackendAddressPool => exampleBackendAddressPool.id);
+export const backendIpConfigurationIds = data.azurerm_lb_backend_address_pool.beap.backend_ip_configurations.map(__item => __item.id);
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetBackendAddressPool {#using}

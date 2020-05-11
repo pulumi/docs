@@ -30,7 +30,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_channels_registration = azure.bot.ChannelsRegistration("exampleChannelsRegistration",
+    location="global",
+    microsoft_app_id=current.client_id,
+    resource_group_name=example_resource_group.name,
+    sku="F0")
+example_channel_slack = azure.bot.ChannelSlack("exampleChannelSlack",
+    bot_name=example_channels_registration.name,
+    client_id="exampleId",
+    client_secret="exampleSecret",
+    location=example_channels_registration.location,
+    resource_group_name=example_resource_group.name,
+    verification_token="exampleVerificationToken")
+```
 {{% /example %}}
 
 {{% example typescript %}}

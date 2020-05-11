@@ -17,6 +17,25 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.sql.ActiveDirectoryAdministrator">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">ActiveDirectoryAdministrator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ActiveDirectoryAdministrator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to set a user or group as the AD administrator for an Azure SQL server</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">get_client_config</span><span class="p">()</span>
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_sql_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;exampleSqlServer&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">)</span>
+<span class="n">example_active_directory_administrator</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">ActiveDirectoryAdministrator</span><span class="p">(</span><span class="s2">&quot;exampleActiveDirectoryAdministrator&quot;</span><span class="p">,</span>
+    <span class="n">login</span><span class="o">=</span><span class="s2">&quot;sqladmin&quot;</span><span class="p">,</span>
+    <span class="n">object_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_sql_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">tenant_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -133,6 +152,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.Database">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">collation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">edition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elastic_pool_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_auditing_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_scale</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">requested_service_objective_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">requested_service_objective_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restore_point_in_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_database_deletion_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_database_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threat_detection_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_redundant</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to manage an Azure SQL Database</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_sql_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;exampleSqlServer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_database</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;exampleDatabase&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_sql_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">extended_auditing_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;storageEndpoint&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountAccessKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountAccessKeyIsSecondary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;retentionInDays&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -466,6 +518,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> -  This version of the <code class="docutils literal notranslate"><span class="pre">Elasticpool</span></code> resource is being <strong>deprecated</strong> and should no longer be used. Please use the mssql.ElasticPool version instead.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_sql_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;exampleSqlServer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">)</span>
+<span class="n">example_elastic_pool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">ElasticPool</span><span class="p">(</span><span class="s2">&quot;exampleElasticPool&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_sql_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">edition</span><span class="o">=</span><span class="s2">&quot;Basic&quot;</span><span class="p">,</span>
+    <span class="n">dtu</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="n">db_dtu_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">db_dtu_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -625,6 +698,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.FailoverGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">FailoverGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">databases</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partner_servers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_write_endpoint_failover_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">readonly_endpoint_failover_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.FailoverGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a failover group of databases on a collection of Azure SQL servers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;uksouth&quot;</span><span class="p">)</span>
+<span class="n">primary</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;sqladmin&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;pa$$w0rd&quot;</span><span class="p">)</span>
+<span class="n">secondary</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;secondary&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;northeurope&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;sqladmin&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;pa$$w0rd&quot;</span><span class="p">)</span>
+<span class="n">db1</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;db1&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">example_failover_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">FailoverGroup</span><span class="p">(</span><span class="s2">&quot;exampleFailoverGroup&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">resource_group_name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">primary</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">databases</span><span class="o">=</span><span class="p">[</span><span class="n">db1</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">partner_servers</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">secondary</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">read_write_endpoint_failover_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;Automatic&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;graceMinutes&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -811,6 +917,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.FirewallRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">FirewallRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.FirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to manage an Azure SQL Firewall Rule</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_sql_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;exampleSqlServer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">)</span>
+<span class="n">example_firewall_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">FirewallRule</span><span class="p">(</span><span class="s2">&quot;exampleFirewallRule&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">example_sql_server</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">start_ip_address</span><span class="o">=</span><span class="s2">&quot;10.0.17.62&quot;</span><span class="p">,</span>
+    <span class="n">end_ip_address</span><span class="o">=</span><span class="s2">&quot;10.0.17.62&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1045,7 +1168,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_azure.sql.SqlServer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">SqlServer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">administrator_login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">administrator_login_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_auditing_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.SqlServer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a SQL Azure Database Server.</p>
+<dd><p>Manages a Microsoft SQL Azure Database Server.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_account</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;exampleAccount&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">account_tier</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+    <span class="n">account_replication_type</span><span class="o">=</span><span class="s2">&quot;LRS&quot;</span><span class="p">)</span>
+<span class="n">example_sql_server</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;exampleSqlServer&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;mradministrator&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;thisIsDog11&quot;</span><span class="p">,</span>
+    <span class="n">extended_auditing_policy</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;storageEndpoint&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountAccessKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storageAccountAccessKeyIsSecondary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;retentionInDays&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1057,8 +1206,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>extended_auditing_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">extended_auditing_policy</span></code> block as defined below.</p></li>
 <li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SQL Server. This needs to be globally unique within Azure.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the SQL Server.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Microsoft SQL Server. This needs to be globally unique within Azure.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Microsoft SQL Server.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).</p></li>
 </ul>
@@ -1075,7 +1224,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type of the SQL Server. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type of the Microsoft SQL Server. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_azure.sql.SqlServer.administrator_login">
@@ -1120,7 +1269,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Principal ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the identity type of the SQL Server. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the identity type of the Microsoft SQL Server. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1133,13 +1282,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_azure.sql.SqlServer.name">
 <code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.SqlServer.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the SQL Server. This needs to be globally unique within Azure.</p>
+<dd><p>The name of the Microsoft SQL Server. This needs to be globally unique within Azure.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_azure.sql.SqlServer.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.SqlServer.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the resource group in which to create the SQL Server.</p>
+<dd><p>The name of the resource group in which to create the Microsoft SQL Server.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1173,8 +1322,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>fully_qualified_domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified domain name of the Azure SQL Server (e.g. myServerName.database.windows.net)</p></li>
 <li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SQL Server. This needs to be globally unique within Azure.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the SQL Server.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Microsoft SQL Server. This needs to be globally unique within Azure.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Microsoft SQL Server.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).</p></li>
 </ul>
@@ -1191,7 +1340,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type of the SQL Server. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type of the Microsoft SQL Server. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1237,6 +1386,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.VirtualNetworkRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">VirtualNetworkRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_missing_vnet_service_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.VirtualNetworkRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to add, update, or remove an Azure SQL server to a subnet of a virtual network.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">vnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;vnet&quot;</span><span class="p">,</span>
+    <span class="n">address_spaces</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.7.29.0/29&quot;</span><span class="p">],</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">subnet</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;subnet&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">vnet</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.7.29.0/29&quot;</span><span class="p">,</span>
+    <span class="n">service_endpoints</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Microsoft.Sql&quot;</span><span class="p">])</span>
+<span class="n">sqlserver</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">SqlServer</span><span class="p">(</span><span class="s2">&quot;sqlserver&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;12.0&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;4dm1n157r470r&quot;</span><span class="p">,</span>
+    <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;4-v3ry-53cr37-p455w0rd&quot;</span><span class="p">)</span>
+<span class="n">sqlvnetrule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">VirtualNetworkRule</span><span class="p">(</span><span class="s2">&quot;sqlvnetrule&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="n">sqlserver</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">subnet</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1343,6 +1517,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.get_database">
 <code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">get_database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.get_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing SQL Azure Database.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">get_database</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;example_db&quot;</span><span class="p">,</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="s2">&quot;example_db_server&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;sqlDatabaseId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1359,6 +1542,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.get_server">
 <code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">get_server</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.get_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing SQL Azure Database Server.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">get_server</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;examplesqlservername&quot;</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="s2">&quot;example-resources&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;sqlServerId&quot;</span><span class="p">,</span> <span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
