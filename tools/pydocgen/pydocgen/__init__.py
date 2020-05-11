@@ -106,7 +106,8 @@ def read_input(input_file: str, package_override: str = "") -> Input:
         providers = []
         if package_override != "":
             provider = [obj for obj in input_dict.get("providers") if obj["package_name"] == package_override]
-            providers.append(Provider(**provider[0]))
+            if len(provider) > 0:
+                providers.append(Provider(**provider[0]))
         else:
             for provider in input_dict.get("providers") or []:
                 providers.append(Provider(**provider))
