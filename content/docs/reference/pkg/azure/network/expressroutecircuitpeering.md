@@ -15,7 +15,7 @@ Manages an ExpressRoute Circuit Peering.
 
 
 ## Create a ExpressRouteCircuitPeering Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -735,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ExpressRouteCircuitPeering Resource {#look-up}
 
 Get an existing ExpressRouteCircuitPeering resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#ExpressRouteCircuitPeeringState">ExpressRouteCircuitPeeringState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#ExpressRouteCircuitPeering">ExpressRouteCircuitPeering</a></span></code></pre></div>
@@ -1336,6 +1336,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1350,6 +1353,24 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customer<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The CustomerASN of the peering
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Routing<wbr>Registry<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RoutingRegistryName of the configuration
 {{% /md %}}</dd>
 
 </dl>
@@ -1368,6 +1389,24 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
     <dd>{{% md %}}A list of Advertised Public Prefixes
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customer<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The CustomerASN of the peering
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Routing<wbr>Registry<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RoutingRegistryName of the configuration
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1384,6 +1423,24 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
     <dd>{{% md %}}A list of Advertised Public Prefixes
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>customer<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The CustomerASN of the peering
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>routing<wbr>Registry<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RoutingRegistryName of the configuration
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1398,6 +1455,24 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>customer<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The CustomerASN of the peering
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>routing<wbr>Registry<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The RoutingRegistryName of the configuration
 {{% /md %}}</dd>
 
 </dl>

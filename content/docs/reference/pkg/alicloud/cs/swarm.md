@@ -16,12 +16,26 @@ This resource will help you to manager a Swarm Cluster.
 
 > **NOTE:** Swarm cluster only supports VPC network and you can specify a VPC network by filed `vswitch_id`.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic Usage
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -38,12 +52,12 @@ const myCluster = new alicloud.cs.Swarm("my_cluster", {
 });
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Swarm Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -322,7 +336,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -340,7 +355,6 @@ Valid value:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -458,7 +472,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -476,7 +491,6 @@ Valid value:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -594,7 +608,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -612,7 +627,6 @@ Valid value:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -730,7 +744,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -748,7 +763,6 @@ Valid value:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1023,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Swarm Resource {#look-up}
 
 Get an existing Swarm resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#SwarmState">SwarmState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#Swarm">Swarm</a></span></code></pre></div>
@@ -1234,7 +1248,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1270,7 +1285,6 @@ Valid value:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1415,7 +1429,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1451,7 +1466,6 @@ Valid value:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1596,7 +1610,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1632,7 +1647,6 @@ Valid value:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1777,7 +1791,8 @@ Valid value:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1813,7 +1828,6 @@ Valid value:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to release EIP after creating swarm cluster successfully. Default to false.
-* `need_slb`- (ForceNew) Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1883,6 +1897,9 @@ Valid value:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#SwarmNodeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CS.Outputs.SwarmNode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

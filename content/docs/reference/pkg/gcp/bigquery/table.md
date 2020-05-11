@@ -1,7 +1,8 @@
 
 ---
 title: "Table"
-block_external_search_index: true
+title_tag: "Resource Table | Module bigquery | Package GCP"
+meta_desc: "Explore the Table resource of the bigquery module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a table resource in a dataset for Google BigQuery. For more information see"
 ---
 
 
@@ -20,7 +21,7 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
 
 
 ## Create a Table Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -28,7 +29,7 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Table</span><span class="p">(resource_name, opts=None, </span>clusterings=None<span class="p">, </span>dataset_id=None<span class="p">, </span>description=None<span class="p">, </span>encryption_configuration=None<span class="p">, </span>expiration_time=None<span class="p">, </span>external_data_configuration=None<span class="p">, </span>friendly_name=None<span class="p">, </span>labels=None<span class="p">, </span>project=None<span class="p">, </span>range_partitioning=None<span class="p">, </span>schema=None<span class="p">, </span>table_id=None<span class="p">, </span>time_partitioning=None<span class="p">, </span>view=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Table</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>clusterings=None<span class="p">, </span>dataset_id=None<span class="p">, </span>description=None<span class="p">, </span>encryption_configuration=None<span class="p">, </span>expiration_time=None<span class="p">, </span>external_data_configuration=None<span class="p">, </span>friendly_name=None<span class="p">, </span>labels=None<span class="p">, </span>project=None<span class="p">, </span>range_partitioning=None<span class="p">, </span>schema=None<span class="p">, </span>table_id=None<span class="p">, </span>time_partitioning=None<span class="p">, </span>view=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1240,7 +1241,7 @@ one partition per day based on data loading time.
 ## Look up an Existing Table Resource {#look-up}
 
 Get an existing Table resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#TableState">TableState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Table">Table</a></span></code></pre></div>
@@ -2341,6 +2342,9 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableEncryptionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableEncryptionConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableEncryptionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableEncryptionConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2435,6 +2439,9 @@ encrypt/decrypt permissions on this key - you may want to see the
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableExternalDataConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2831,6 +2838,9 @@ BigQuery can ignore when reading data.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationCsvOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationCsvOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableExternalDataConfigurationCsvOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3138,6 +3148,9 @@ that BigQuery will skip when reading the data. At least one of `range` or
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationGoogleSheetsOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableExternalDataConfigurationGoogleSheetsOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationGoogleSheetsOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableExternalDataConfigurationGoogleSheetsOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3265,6 +3278,9 @@ that BigQuery will skip when reading the data. At least one of `range` or
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableRangePartitioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableRangePartitioningOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableRangePartitioningArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableRangePartitioning.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3387,6 +3403,9 @@ Structure is documented below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableRangePartitioningRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableRangePartitioningRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableRangePartitioningRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableRangePartitioningRange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3538,6 +3557,9 @@ Structure is documented below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableTimePartitioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableTimePartitioningOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableTimePartitioningArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableTimePartitioning.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3746,6 +3768,9 @@ specified.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableViewArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#TableViewOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.TableViewArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.TableView.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3867,8 +3892,7 @@ The default value is true. If set to false, the view will use BigQuery's standar
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

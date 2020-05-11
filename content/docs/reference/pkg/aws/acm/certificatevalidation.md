@@ -20,12 +20,26 @@ deploy the required validation records and wait for validation to complete.
 > **WARNING:** This resource implements a part of the validation workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
 
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### DNS Validation with Route 53
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,7 +57,7 @@ const certValidation = new aws.route53.Record("cert_validation", {
     records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
     ttl: 60,
     type: certCertificate.domainValidationOptions[0].resourceRecordType,
-    zoneId: zone.id,
+    zoneId: zone.zoneId!,
 });
 const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
     certificateArn: certCertificate.arn,
@@ -54,11 +68,22 @@ const frontEnd = new aws.lb.Listener("front_end", {
     certificateArn: certCertificateValidation.certificateArn,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Alternative Domains DNS Validation with Route 53
 
+### Alternative Domains DNS Validation with Route 53
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -84,21 +109,21 @@ const certValidation = new aws.route53.Record("cert_validation", {
     records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
     ttl: 60,
     type: certCertificate.domainValidationOptions[0].resourceRecordType,
-    zoneId: zone.id,
+    zoneId: zone.zoneId!,
 });
 const certValidationAlt1 = new aws.route53.Record("cert_validation_alt1", {
     name: certCertificate.domainValidationOptions[1].resourceRecordName,
     records: [certCertificate.domainValidationOptions[1].resourceRecordValue],
     ttl: 60,
     type: certCertificate.domainValidationOptions[1].resourceRecordType,
-    zoneId: zone.id,
+    zoneId: zone.zoneId!,
 });
 const certValidationAlt2 = new aws.route53.Record("cert_validation_alt2", {
     name: certCertificate.domainValidationOptions[2].resourceRecordName,
     records: [certCertificate.domainValidationOptions[2].resourceRecordValue],
     ttl: 60,
     type: certCertificate.domainValidationOptions[2].resourceRecordType,
-    zoneId: zoneAlt.id,
+    zoneId: zoneAlt.zoneId!,
 });
 const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
     certificateArn: certCertificate.arn,
@@ -113,13 +138,22 @@ const frontEnd = new aws.lb.Listener("front_end", {
     certificateArn: certCertificateValidation.certificateArn,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
+
 ### Email Validation
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-In this situation, the resource is simply a waiter for manual email approval of ACM certificates.
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -132,14 +166,13 @@ const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
     certificateArn: certCertificate.arn,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a CertificateValidation Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -147,7 +180,7 @@ const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">CertificateValidation</span><span class="p">(resource_name, opts=None, </span>certificate_arn=None<span class="p">, </span>validation_record_fqdns=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">CertificateValidation</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_arn=None<span class="p">, </span>validation_record_fqdns=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -495,7 +528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing CertificateValidation Resource {#look-up}
 
 Get an existing CertificateValidation resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#CertificateValidationState">CertificateValidationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#CertificateValidation">CertificateValidation</a></span></code></pre></div>

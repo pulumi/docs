@@ -14,6 +14,7 @@ Explore the resources and functions of the adb module in the AliCloud package.
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
     <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -31,6 +32,6 @@ Explore the resources and functions of the adb module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.3.3</dd>
 </dl>
 

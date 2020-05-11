@@ -16,15 +16,26 @@ Provides a CloudTrail resource.
 
 > *NOTE:* For an organization trail, this resource must be in the master account of the organization.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-Enable CloudTrail to capture all compatible management events in region.
-For capturing events from services like IAM, `include_global_service_events` must be enabled.
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -68,15 +79,22 @@ const foobar = new aws.cloudtrail.Trail("foobar", {
     s3KeyPrefix: "prefix",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
+
 ### Data Event Logging
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-CloudTrail can log [Data Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html) for certain services such as S3 bucket objects and Lambda function invocations. Additional information about data event configuration can be found in the [CloudTrail API DataResource documentation](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DataResource.html).
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-#### Logging All Lambda Function Invocations
+{{% example python %}}
+Coming soon!
+{{% /example %}}
 
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -92,55 +110,13 @@ const example = new aws.cloudtrail.Trail("example", {
     }],
 });
 ```
-
-#### Logging All S3 Bucket Object Events
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.cloudtrail.Trail("example", {
-    eventSelectors: [{
-        dataResources: [{
-            type: "AWS::S3::Object",
-            values: ["arn:aws:s3:::"],
-        }],
-        includeManagementEvents: true,
-        readWriteType: "All",
-    }],
-});
-```
-
-#### Logging Individual S3 Bucket Events
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const important_bucket = pulumi.output(aws.s3.getBucket({
-    bucket: "important-bucket",
-}, { async: true }));
-const example = new aws.cloudtrail.Trail("example", {
-    eventSelectors: [{
-        dataResources: [{
-            type: "AWS::S3::Object",
-            // Make sure to append a trailing '/' to your ARN if you want
-            // to monitor all objects in a bucket.
-            values: [pulumi.interpolate`${important_bucket.arn}/`],
-        }],
-        includeManagementEvents: true,
-        readWriteType: "All",
-    }],
-});
-```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Trail Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -148,7 +124,7 @@ const example = new aws.cloudtrail.Trail("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Trail</span><span class="p">(resource_name, opts=None, </span>cloud_watch_logs_group_arn=None<span class="p">, </span>cloud_watch_logs_role_arn=None<span class="p">, </span>enable_log_file_validation=None<span class="p">, </span>enable_logging=None<span class="p">, </span>event_selectors=None<span class="p">, </span>include_global_service_events=None<span class="p">, </span>is_multi_region_trail=None<span class="p">, </span>is_organization_trail=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>name=None<span class="p">, </span>s3_bucket_name=None<span class="p">, </span>s3_key_prefix=None<span class="p">, </span>sns_topic_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Trail</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloud_watch_logs_group_arn=None<span class="p">, </span>cloud_watch_logs_role_arn=None<span class="p">, </span>enable_log_file_validation=None<span class="p">, </span>enable_logging=None<span class="p">, </span>event_selectors=None<span class="p">, </span>include_global_service_events=None<span class="p">, </span>is_multi_region_trail=None<span class="p">, </span>is_organization_trail=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>name=None<span class="p">, </span>s3_bucket_name=None<span class="p">, </span>s3_key_prefix=None<span class="p">, </span>sns_topic_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -451,7 +427,7 @@ defined for notification of log file delivery.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the trail
+    <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
 
 </dl>
@@ -592,7 +568,7 @@ defined for notification of log file delivery.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the trail
+    <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
 
 </dl>
@@ -733,7 +709,7 @@ defined for notification of log file delivery.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the trail
+    <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
 
 </dl>
@@ -874,7 +850,7 @@ defined for notification of log file delivery.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the trail
+    <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
 
 </dl>
@@ -1032,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Trail Resource {#look-up}
 
 Get an existing Trail resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudtrail/#TrailState">TrailState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudtrail/#Trail">Trail</a></span></code></pre></div>
@@ -1302,7 +1278,7 @@ defined for notification of log file delivery.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the trail
+    <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
 
 </dl>
@@ -1461,7 +1437,7 @@ defined for notification of log file delivery.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the trail
+    <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
 
 </dl>
@@ -1620,7 +1596,7 @@ defined for notification of log file delivery.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the trail
+    <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
 
 </dl>
@@ -1779,7 +1755,7 @@ defined for notification of log file delivery.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the trail
+    <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
 
 </dl>
@@ -1804,6 +1780,9 @@ defined for notification of log file delivery.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudtrail?tab=doc#TrailEventSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudtrail?tab=doc#TrailEventSelectorOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Inputs.TrailEventSelectorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Outputs.TrailEventSelector.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1955,6 +1934,9 @@ defined for notification of log file delivery.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudtrail?tab=doc#TrailEventSelectorDataResourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudtrail?tab=doc#TrailEventSelectorDataResourceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Inputs.TrailEventSelectorDataResourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Outputs.TrailEventSelectorDataResource.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

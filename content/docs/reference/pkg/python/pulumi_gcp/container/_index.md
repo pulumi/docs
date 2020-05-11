@@ -13,29 +13,29 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_gcp.container"></span><dl class="class">
+<span class="target" id="module-pulumi_gcp.container"></span><dl class="py class">
 <dt id="pulumi_gcp.container.AwaitableGetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">additional_zones=None</em>, <em class="sig-param">addons_configs=None</em>, <em class="sig-param">authenticator_groups_configs=None</em>, <em class="sig-param">cluster_autoscalings=None</em>, <em class="sig-param">cluster_ipv4_cidr=None</em>, <em class="sig-param">database_encryptions=None</em>, <em class="sig-param">default_max_pods_per_node=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_binary_authorization=None</em>, <em class="sig-param">enable_intranode_visibility=None</em>, <em class="sig-param">enable_kubernetes_alpha=None</em>, <em class="sig-param">enable_legacy_abac=None</em>, <em class="sig-param">enable_shielded_nodes=None</em>, <em class="sig-param">enable_tpu=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">ip_allocation_policies=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging_service=None</em>, <em class="sig-param">maintenance_policies=None</em>, <em class="sig-param">master_authorized_networks_configs=None</em>, <em class="sig-param">master_auths=None</em>, <em class="sig-param">master_version=None</em>, <em class="sig-param">min_master_version=None</em>, <em class="sig-param">monitoring_service=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">network_policies=None</em>, <em class="sig-param">node_configs=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">node_version=None</em>, <em class="sig-param">operation=None</em>, <em class="sig-param">pod_security_policy_configs=None</em>, <em class="sig-param">private_cluster_configs=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">release_channels=None</em>, <em class="sig-param">remove_default_node_pool=None</em>, <em class="sig-param">resource_labels=None</em>, <em class="sig-param">resource_usage_export_configs=None</em>, <em class="sig-param">services_ipv4_cidr=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">tpu_ipv4_cidr_block=None</em>, <em class="sig-param">vertical_pod_autoscalings=None</em>, <em class="sig-param">workload_identity_configs=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">additional_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">addons_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authenticator_groups_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_autoscalings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_ipv4_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_encryptions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_max_pods_per_node</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_binary_authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_intranode_visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_kubernetes_alpha</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_legacy_abac</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_shielded_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_tpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_group_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_allocation_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logging_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_authorized_networks_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_auths</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pod_security_policy_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_cluster_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">release_channels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_default_node_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_usage_export_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services_ipv4_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnetwork</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tpu_ipv4_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vertical_pod_autoscalings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workload_identity_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.container.AwaitableGetEngineVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">default_cluster_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">latest_master_version=None</em>, <em class="sig-param">latest_node_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">valid_master_versions=None</em>, <em class="sig-param">valid_node_versions=None</em>, <em class="sig-param">version_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">default_cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_node_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_master_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_node_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.container.AwaitableGetRegistryImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetRegistryImageResult</code><span class="sig-paren">(</span><em class="sig-param">digest=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetRegistryImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetRegistryImageResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">digest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetRegistryImageResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.container.AwaitableGetRegistryRepositoryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetRegistryRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">repository_url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetRegistryRepositoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">AwaitableGetRegistryRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository_url</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.AwaitableGetRegistryRepositoryResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.container.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">addons_config=None</em>, <em class="sig-param">authenticator_groups_config=None</em>, <em class="sig-param">cluster_autoscaling=None</em>, <em class="sig-param">cluster_ipv4_cidr=None</em>, <em class="sig-param">database_encryption=None</em>, <em class="sig-param">default_max_pods_per_node=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_binary_authorization=None</em>, <em class="sig-param">enable_intranode_visibility=None</em>, <em class="sig-param">enable_kubernetes_alpha=None</em>, <em class="sig-param">enable_legacy_abac=None</em>, <em class="sig-param">enable_shielded_nodes=None</em>, <em class="sig-param">enable_tpu=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">ip_allocation_policy=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging_service=None</em>, <em class="sig-param">maintenance_policy=None</em>, <em class="sig-param">master_auth=None</em>, <em class="sig-param">master_authorized_networks_config=None</em>, <em class="sig-param">min_master_version=None</em>, <em class="sig-param">monitoring_service=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">network_policy=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">node_version=None</em>, <em class="sig-param">pod_security_policy_config=None</em>, <em class="sig-param">private_cluster_config=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">release_channel=None</em>, <em class="sig-param">remove_default_node_pool=None</em>, <em class="sig-param">resource_labels=None</em>, <em class="sig-param">resource_usage_export_config=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">vertical_pod_autoscaling=None</em>, <em class="sig-param">workload_identity_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">addons_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authenticator_groups_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_autoscaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_ipv4_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_encryption</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_max_pods_per_node</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_binary_authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_intranode_visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_kubernetes_alpha</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_legacy_abac</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_shielded_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_tpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_allocation_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logging_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_auth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_authorized_networks_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pod_security_policy_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_cluster_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">release_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_default_node_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_usage_export_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnetwork</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vertical_pod_autoscaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workload_identity_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Google Kubernetes Engine (GKE) cluster. For more information see
 <a class="reference external" href="https://cloud.google.com/container-engine/docs/clusters">the official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters">the API reference</a>.</p>
@@ -645,9 +645,9 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">identityNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Currently, the only supported identity namespace is the project’s default.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.addons_config">
-<code class="sig-name descname">addons_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.addons_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">addons_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.addons_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration for addons supported by GKE.
 Structure is documented below.</p>
 <ul class="simple">
@@ -708,9 +708,9 @@ cluster. It is disabled by default. Set <code class="docutils literal notranslat
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.authenticator_groups_config">
-<code class="sig-name descname">authenticator_groups_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.authenticator_groups_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">authenticator_groups_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.authenticator_groups_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite">Google Groups for GKE</a> feature.
 Structure is documented below.</p>
@@ -719,9 +719,9 @@ Structure is documented below.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.cluster_autoscaling">
-<code class="sig-name descname">cluster_autoscaling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.cluster_autoscaling" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cluster_autoscaling</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.cluster_autoscaling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster’s workload. See the
@@ -763,18 +763,18 @@ for a list of types.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.cluster_ipv4_cidr">
-<code class="sig-name descname">cluster_ipv4_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.cluster_ipv4_cidr" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cluster_ipv4_cidr</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.cluster_ipv4_cidr" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP address range of the Kubernetes pods
 in this cluster in CIDR notation (e.g. <code class="docutils literal notranslate"><span class="pre">10.96.0.0/14</span></code>). Leave blank to have one
 automatically chosen or specify a <code class="docutils literal notranslate"><span class="pre">/14</span></code> block in <code class="docutils literal notranslate"><span class="pre">10.0.0.0/8</span></code>. This field will
 only work for routes-based clusters, where <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> is not defined.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.database_encryption">
-<code class="sig-name descname">database_encryption</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.database_encryption" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">database_encryption</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.database_encryption" title="Permalink to this definition">¶</a></dt>
 <dd><p>.
 Structure is documented below.</p>
 <ul class="simple">
@@ -783,73 +783,73 @@ Structure is documented below.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.default_max_pods_per_node">
-<code class="sig-name descname">default_max_pods_per_node</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.default_max_pods_per_node" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">default_max_pods_per_node</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.default_max_pods_per_node" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default maximum number of pods
 per node in this cluster. This doesn’t work on “routes-based” clusters, clusters
 that don’t have IP Aliasing enabled. See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">official documentation</a>
 for more information.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Description of the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.enable_binary_authorization">
-<code class="sig-name descname">enable_binary_authorization</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_binary_authorization" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_binary_authorization</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_binary_authorization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.enable_intranode_visibility">
-<code class="sig-name descname">enable_intranode_visibility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_intranode_visibility" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_intranode_visibility</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_intranode_visibility" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.enable_kubernetes_alpha">
-<code class="sig-name descname">enable_kubernetes_alpha</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_kubernetes_alpha" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_kubernetes_alpha</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_kubernetes_alpha" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.enable_legacy_abac">
-<code class="sig-name descname">enable_legacy_abac</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_legacy_abac" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_legacy_abac</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_legacy_abac" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the ABAC authorizer is enabled for this cluster.
 When enabled, identities in the system, including service accounts, nodes, and controllers,
 will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
 Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.enable_shielded_nodes">
-<code class="sig-name descname">enable_shielded_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_shielded_nodes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_shielded_nodes</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_shielded_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable Shielded Nodes features on all nodes in this cluster.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.enable_tpu">
-<code class="sig-name descname">enable_tpu</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_tpu" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_tpu</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_tpu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to enable Cloud TPU resources in this cluster.
 See the <a class="reference external" href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">official documentation</a>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.endpoint">
-<code class="sig-name descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">endpoint</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP address of this cluster’s Kubernetes master.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.initial_node_count">
-<code class="sig-name descname">initial_node_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.initial_node_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initial_node_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.initial_node_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of nodes to create in this
 cluster’s default node pool. In regional or multi-zonal clusters, this is the
 number of nodes per zone. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If you’re using
@@ -858,16 +858,16 @@ set this to a value of at least <code class="docutils literal notranslate"><span
 <code class="docutils literal notranslate"><span class="pre">remove_default_node_pool</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.instance_group_urls">
-<code class="sig-name descname">instance_group_urls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.instance_group_urls" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">instance_group_urls</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.instance_group_urls" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of instance group URLs which have been assigned
 to the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.ip_allocation_policy">
-<code class="sig-name descname">ip_allocation_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.ip_allocation_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ip_allocation_policy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.ip_allocation_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration of cluster IP allocation for
 VPC-native clusters. Adding this block enables <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases">IP aliasing</a>,
 making the cluster VPC-native instead of routes-based. Structure is documented
@@ -893,15 +893,15 @@ GKE-managed one.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.label_fingerprint">
-<code class="sig-name descname">label_fingerprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.label_fingerprint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">label_fingerprint</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.label_fingerprint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The fingerprint of the set of labels for this cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The location (region or zone) in which the cluster
 master will be created, as well as the default node location. If you specify a
 zone (such as <code class="docutils literal notranslate"><span class="pre">us-central1-a</span></code>), the cluster will be a zonal cluster with a
@@ -910,17 +910,17 @@ cluster will be a regional cluster with multiple masters spread across zones in
 the region, and with default node locations in those zones as well</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.logging_service">
-<code class="sig-name descname">logging_service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.logging_service" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">logging_service</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.logging_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The logging service that the cluster should
 write logs to. Available options include <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com</span></code>(Legacy Stackdriver),
 <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code>(Stackdriver Kubernetes Engine Logging), and <code class="docutils literal notranslate"><span class="pre">none</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">logging.googleapis.com/kubernetes</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.maintenance_policy">
-<code class="sig-name descname">maintenance_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.maintenance_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">maintenance_policy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.maintenance_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maintenance policy to use for the cluster. Structure is
 documented below.</p>
 <ul class="simple">
@@ -943,9 +943,9 @@ recurring maintenance operations.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.master_auth">
-<code class="sig-name descname">master_auth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.master_auth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">master_auth</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.master_auth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The authentication information for accessing the
 Kubernetes master. Some values in this block are only returned by the API if
 your service account has permission to get credentials for your GKE cluster. If
@@ -968,9 +968,9 @@ the Kubernetes master endpoint. If not present basic auth will be disabled.</p><
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.master_authorized_networks_config">
-<code class="sig-name descname">master_authorized_networks_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.master_authorized_networks_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">master_authorized_networks_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.master_authorized_networks_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The desired configuration options
 for master authorized networks. Omit the nested <code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> attribute to disallow
 external access (except the cluster node IPs, which GKE automatically whitelists).</p>
@@ -986,17 +986,17 @@ Must be specified in CIDR notation.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.master_version">
-<code class="sig-name descname">master_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.master_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">master_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.master_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current version of the master in the cluster. This may
 be different than the <code class="docutils literal notranslate"><span class="pre">min_master_version</span></code> set in the config if the master
 has been updated by GKE.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.min_master_version">
-<code class="sig-name descname">min_master_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.min_master_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">min_master_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.min_master_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The minimum version of the master. GKE
 will auto-update the master to new versions, so this does not guarantee the
 current master version–use the read-only <code class="docutils literal notranslate"><span class="pre">master_version</span></code> field to obtain that.
@@ -1009,9 +1009,9 @@ provider-compatible way. If you intend to specify versions manually,
 describe the various acceptable formats for this field.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.monitoring_service">
-<code class="sig-name descname">monitoring_service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.monitoring_service" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">monitoring_service</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.monitoring_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The monitoring service that the cluster
 should write metrics to.
 Automatically send metrics from pods in the cluster to the Google Cloud Monitoring API.
@@ -1021,24 +1021,24 @@ Available options include
 Defaults to <code class="docutils literal notranslate"><span class="pre">monitoring.googleapis.com/kubernetes</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the cluster, unique within the project and
 location.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.network">
-<code class="sig-name descname">network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.network" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.network" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name or self_link of the Google Compute Engine
 network to which the cluster is connected. For Shared VPC, set this to the self link of the
 shared network.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.network_policy">
-<code class="sig-name descname">network_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.network_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_policy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.network_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration options for the
 <a class="reference external" href="https://kubernetes.io/docs/concepts/services-networking/networkpolicies/">NetworkPolicy</a>
 feature. Structure is documented below.</p>
@@ -1049,9 +1049,9 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.node_config">
-<code class="sig-name descname">node_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.node_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">node_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.node_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
 <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> or a <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> block; this configuration
@@ -1146,18 +1146,18 @@ Accepted values are:</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.node_locations">
-<code class="sig-name descname">node_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.node_locations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">node_locations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.node_locations" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of zones in which the cluster’s nodes
 are located. Nodes must be in the region of their regional cluster or in the
 same region as their cluster’s zone for zonal clusters. If this is specified for
 a zonal cluster, omit the cluster’s zone.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.node_pools">
-<code class="sig-name descname">node_pools</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.node_pools" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">node_pools</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.node_pools" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of node pools associated with this cluster.
 See container.NodePool for schema.
 <strong>Warning:</strong> node pools defined inside a cluster can’t be changed (or added/removed) after
@@ -1297,9 +1297,9 @@ a zonal cluster, omit the cluster’s zone.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.node_version">
-<code class="sig-name descname">node_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.node_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">node_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.node_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Kubernetes version on the nodes. Must either be unset
 or set to the same value as <code class="docutils literal notranslate"><span class="pre">min_master_version</span></code> on create. Defaults to the default
 version set by GKE which is not necessarily the latest version. This only affects
@@ -1310,9 +1310,9 @@ when fuzzy versions are used. See the <code class="docutils literal notranslate"
 To update nodes in other node pools, use the <code class="docutils literal notranslate"><span class="pre">version</span></code> attribute on the node pool.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.pod_security_policy_config">
-<code class="sig-name descname">pod_security_policy_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.pod_security_policy_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">pod_security_policy_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.pod_security_policy_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
 Structure is documented below.</p>
@@ -1322,9 +1322,9 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.private_cluster_config">
-<code class="sig-name descname">private_cluster_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.private_cluster_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">private_cluster_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.private_cluster_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration for <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters">private clusters</a>,
 clusters with private nodes. Structure is documented below.</p>
 <ul class="simple">
@@ -1349,16 +1349,16 @@ for more details. This field only applies to private clusters, when
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.release_channel">
-<code class="sig-name descname">release_channel</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.release_channel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">release_channel</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.release_channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration options for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels">Release channel</a>
 feature, which provide more control over automatic upgrades of your GKE clusters. Structure is documented below.</p>
@@ -1375,24 +1375,24 @@ Accepted values are:</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.remove_default_node_pool">
-<code class="sig-name descname">remove_default_node_pool</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.remove_default_node_pool" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">remove_default_node_pool</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.remove_default_node_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, deletes the default node
 pool upon cluster creation. If you’re using <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code>
 resources with no default node pool, this should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, alongside
 setting <code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> to at least <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.resource_labels">
-<code class="sig-name descname">resource_labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.resource_labels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_labels</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.resource_labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>The GCE resource labels (a map of key/value pairs) to be applied to the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.resource_usage_export_config">
-<code class="sig-name descname">resource_usage_export_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.resource_usage_export_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_usage_export_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.resource_usage_export_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering">ResourceUsageExportConfig</a> feature.
 Structure is documented below.</p>
@@ -1412,33 +1412,33 @@ billing export. Defaults to <code class="docutils literal notranslate"><span cla
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.services_ipv4_cidr">
-<code class="sig-name descname">services_ipv4_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.services_ipv4_cidr" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">services_ipv4_cidr</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.services_ipv4_cidr" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP address range of the Kubernetes services in this
 cluster, in <a class="reference external" href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a>
 notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.3.4/29</span></code>). Service addresses are typically put in the last
 <code class="docutils literal notranslate"><span class="pre">/16</span></code> from the container CIDR.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.subnetwork">
-<code class="sig-name descname">subnetwork</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.subnetwork" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subnetwork</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.subnetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name or self_link of the Google Compute Engine
 subnetwork in which the cluster’s instances are launched.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.tpu_ipv4_cidr_block">
-<code class="sig-name descname">tpu_ipv4_cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.tpu_ipv4_cidr_block" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tpu_ipv4_cidr_block</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.tpu_ipv4_cidr_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Optional) The IP address range of the Cloud TPUs in this cluster, in
 <a class="reference external" href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a>
 notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.3.4/29</span></code>).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.vertical_pod_autoscaling">
-<code class="sig-name descname">vertical_pod_autoscaling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.vertical_pod_autoscaling" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vertical_pod_autoscaling</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.vertical_pod_autoscaling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.</p>
 <ul class="simple">
@@ -1447,9 +1447,9 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Cluster.workload_identity_config">
-<code class="sig-name descname">workload_identity_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.workload_identity_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">workload_identity_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.workload_identity_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Workload Identity allows Kubernetes service accounts to act as a user-managed
 <a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.
 Structure is documented below.</p>
@@ -1458,9 +1458,9 @@ Structure is documented below.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.container.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">addons_config=None</em>, <em class="sig-param">authenticator_groups_config=None</em>, <em class="sig-param">cluster_autoscaling=None</em>, <em class="sig-param">cluster_ipv4_cidr=None</em>, <em class="sig-param">database_encryption=None</em>, <em class="sig-param">default_max_pods_per_node=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_binary_authorization=None</em>, <em class="sig-param">enable_intranode_visibility=None</em>, <em class="sig-param">enable_kubernetes_alpha=None</em>, <em class="sig-param">enable_legacy_abac=None</em>, <em class="sig-param">enable_shielded_nodes=None</em>, <em class="sig-param">enable_tpu=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">ip_allocation_policy=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging_service=None</em>, <em class="sig-param">maintenance_policy=None</em>, <em class="sig-param">master_auth=None</em>, <em class="sig-param">master_authorized_networks_config=None</em>, <em class="sig-param">master_version=None</em>, <em class="sig-param">min_master_version=None</em>, <em class="sig-param">monitoring_service=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">network_policy=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">node_version=None</em>, <em class="sig-param">operation=None</em>, <em class="sig-param">pod_security_policy_config=None</em>, <em class="sig-param">private_cluster_config=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">release_channel=None</em>, <em class="sig-param">remove_default_node_pool=None</em>, <em class="sig-param">resource_labels=None</em>, <em class="sig-param">resource_usage_export_config=None</em>, <em class="sig-param">services_ipv4_cidr=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">tpu_ipv4_cidr_block=None</em>, <em class="sig-param">vertical_pod_autoscaling=None</em>, <em class="sig-param">workload_identity_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">addons_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authenticator_groups_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_autoscaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_ipv4_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_encryption</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_max_pods_per_node</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_binary_authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_intranode_visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_kubernetes_alpha</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_legacy_abac</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_shielded_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_tpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_group_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_allocation_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logging_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_auth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_authorized_networks_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pod_security_policy_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_cluster_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">release_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_default_node_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_usage_export_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services_ipv4_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnetwork</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tpu_ipv4_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vertical_pod_autoscaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workload_identity_config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2094,9 +2094,9 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.container.Cluster.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -2112,9 +2112,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.container.Cluster.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -2132,53 +2132,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.container.GetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">additional_zones=None</em>, <em class="sig-param">addons_configs=None</em>, <em class="sig-param">authenticator_groups_configs=None</em>, <em class="sig-param">cluster_autoscalings=None</em>, <em class="sig-param">cluster_ipv4_cidr=None</em>, <em class="sig-param">database_encryptions=None</em>, <em class="sig-param">default_max_pods_per_node=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_binary_authorization=None</em>, <em class="sig-param">enable_intranode_visibility=None</em>, <em class="sig-param">enable_kubernetes_alpha=None</em>, <em class="sig-param">enable_legacy_abac=None</em>, <em class="sig-param">enable_shielded_nodes=None</em>, <em class="sig-param">enable_tpu=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">ip_allocation_policies=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">logging_service=None</em>, <em class="sig-param">maintenance_policies=None</em>, <em class="sig-param">master_authorized_networks_configs=None</em>, <em class="sig-param">master_auths=None</em>, <em class="sig-param">master_version=None</em>, <em class="sig-param">min_master_version=None</em>, <em class="sig-param">monitoring_service=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">network_policies=None</em>, <em class="sig-param">node_configs=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">node_version=None</em>, <em class="sig-param">operation=None</em>, <em class="sig-param">pod_security_policy_configs=None</em>, <em class="sig-param">private_cluster_configs=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">release_channels=None</em>, <em class="sig-param">remove_default_node_pool=None</em>, <em class="sig-param">resource_labels=None</em>, <em class="sig-param">resource_usage_export_configs=None</em>, <em class="sig-param">services_ipv4_cidr=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">tpu_ipv4_cidr_block=None</em>, <em class="sig-param">vertical_pod_autoscalings=None</em>, <em class="sig-param">workload_identity_configs=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">additional_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">addons_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authenticator_groups_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_autoscalings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_ipv4_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_encryptions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_max_pods_per_node</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_binary_authorization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_intranode_visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_kubernetes_alpha</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_legacy_abac</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_shielded_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_tpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_group_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_allocation_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label_fingerprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logging_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_authorized_networks_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_auths</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring_service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pod_security_policy_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_cluster_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">release_channels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_default_node_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_usage_export_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services_ipv4_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnetwork</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tpu_ipv4_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vertical_pod_autoscalings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workload_identity_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.GetClusterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">default_cluster_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">latest_master_version=None</em>, <em class="sig-param">latest_node_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">valid_master_versions=None</em>, <em class="sig-param">valid_node_versions=None</em>, <em class="sig-param">version_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetEngineVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">default_cluster_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_master_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_node_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_master_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_node_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEngineVersions.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult.default_cluster_version">
 <code class="sig-name descname">default_cluster_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult.default_cluster_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Version of Kubernetes the service deploys by default.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult.latest_master_version">
 <code class="sig-name descname">latest_master_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult.latest_master_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The latest version available in the given zone for use with master instances.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult.latest_node_version">
 <code class="sig-name descname">latest_node_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult.latest_node_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The latest version available in the given zone for use with node instances.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult.valid_master_versions">
 <code class="sig-name descname">valid_master_versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult.valid_master_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of versions available in the given zone for use with master instances.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.GetEngineVersionsResult.valid_node_versions">
 <code class="sig-name descname">valid_node_versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetEngineVersionsResult.valid_node_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of versions available in the given zone for use with node instances.</p>
@@ -2186,33 +2186,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.container.GetRegistryImageResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetRegistryImageResult</code><span class="sig-paren">(</span><em class="sig-param">digest=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetRegistryImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetRegistryImageResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">digest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetRegistryImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRegistryImage.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.GetRegistryImageResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetRegistryImageResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.container.GetRegistryRepositoryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetRegistryRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">repository_url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetRegistryRepositoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">GetRegistryRepositoryResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository_url</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetRegistryRepositoryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRegistryRepository.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.GetRegistryRepositoryResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.GetRegistryRepositoryResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.container.NodePool">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">NodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">max_pods_per_node=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">upgrade_settings=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">NodePool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_pods_per_node</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">upgrade_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
 the cluster control plane. For more information see <a class="reference external" href="https://cloud.google.com/container-engine/docs/node-pools">the official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools">the API reference</a>.</p>
@@ -2327,9 +2327,9 @@ Can be set to 0 or greater.</p></li>
 an upgrade. Increasing <code class="docutils literal notranslate"><span class="pre">max_unavailable</span></code> raises the number of nodes that can be upgraded in
 parallel. Can be set to 0 or greater.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.autoscaling">
-<code class="sig-name descname">autoscaling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.autoscaling" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">autoscaling</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.autoscaling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.</p>
 <ul class="simple">
@@ -2339,35 +2339,35 @@ the size of the node pool to the current cluster usage. Structure is documented 
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.cluster">
-<code class="sig-name descname">cluster</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cluster</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>The cluster to create the node pool for. Cluster must be present in <code class="docutils literal notranslate"><span class="pre">location</span></code> provided for zonal clusters.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.initial_node_count">
-<code class="sig-name descname">initial_node_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.initial_node_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initial_node_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.initial_node_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing
 this will force recreation of the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.instance_group_urls">
-<code class="sig-name descname">instance_group_urls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.instance_group_urls" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">instance_group_urls</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.instance_group_urls" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource URLs of the managed instance groups associated with this node pool.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The location (region or zone) of the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.management">
-<code class="sig-name descname">management</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.management" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">management</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.management" title="Permalink to this definition">¶</a></dt>
 <dd><p>Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.</p>
 <ul class="simple">
@@ -2376,9 +2376,9 @@ auto-upgrade is configured. Structure is documented below.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.max_pods_per_node">
-<code class="sig-name descname">max_pods_per_node</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.max_pods_per_node" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_pods_per_node</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.max_pods_per_node" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are “route-based” - that is, node
 pools belonging to clusters that do not have IP Aliasing enabled.
@@ -2386,23 +2386,23 @@ See the <a class="reference external" href="https://cloud.google.com/kubernetes-
 for more information.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the node pool. If left blank, the provider will
 auto-generate a unique name.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.name_prefix">
-<code class="sig-name descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.name_prefix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name_prefix</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.node_config">
-<code class="sig-name descname">node_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.node_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">node_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.node_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The node configuration of the pool. See
 container.Cluster for schema.</p>
 <ul class="simple">
@@ -2451,32 +2451,32 @@ container.Cluster for schema.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.node_count">
-<code class="sig-name descname">node_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.node_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">node_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.node_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside <code class="docutils literal notranslate"><span class="pre">autoscaling</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.node_locations">
-<code class="sig-name descname">node_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.node_locations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">node_locations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.node_locations" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of zones in which the node pool’s nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
 cluster’s zone for zonal clusters. If unspecified, the cluster-level
 <code class="docutils literal notranslate"><span class="pre">node_locations</span></code> will be used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.upgrade_settings">
-<code class="sig-name descname">upgrade_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.upgrade_settings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">upgrade_settings</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.upgrade_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of <code class="docutils literal notranslate"><span class="pre">max_surge</span></code> and <code class="docutils literal notranslate"><span class="pre">max_unavailable</span></code>.
 The maximum number of nodes upgraded simultaneously is limited to 20.</p>
@@ -2490,9 +2490,9 @@ parallel. Can be set to 0 or greater.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.NodePool.version">
-<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Kubernetes version for the nodes in this pool. Note that if this field
 and <code class="docutils literal notranslate"><span class="pre">auto_upgrade</span></code> are both specified, they will fight each other for what the node version should
 be, so setting both is highly discouraged. While a fuzzy version can be specified, it’s
@@ -2501,9 +2501,9 @@ when fuzzy versions are used. See the <code class="docutils literal notranslate"
 <code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a provider-compatible way.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.container.NodePool.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">max_pods_per_node=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">upgrade_settings=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_group_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_pods_per_node</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">upgrade_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NodePool resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2621,9 +2621,9 @@ parallel. Can be set to 0 or greater.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.container.NodePool.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -2639,9 +2639,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.container.NodePool.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -2659,9 +2659,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.container.Registry">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Registry" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Registry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ensures that the Google Cloud Storage bucket that backs Google Container Registry exists. Creating this resource will create the backing bucket if it does not exist, or do nothing if the bucket already exists. Destroying this resource does <em>NOT</em> destroy the backing bucket. For more information see <a class="reference external" href="https://cloud.google.com/container-registry/docs/overview">the official documentation</a></p>
 <p>This resource can be used to ensure that the GCS bucket exists prior to assigning permissions. For more information see the <a class="reference external" href="https://cloud.google.com/container-registry/docs/access-control">access control page</a> for GCR.</p>
 <dl class="field-list simple">
@@ -2675,27 +2675,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Registry.bucket_self_link">
-<code class="sig-name descname">bucket_self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Registry.bucket_self_link" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bucket_self_link</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Registry.bucket_self_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URI of the created resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Registry.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Registry.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Registry.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The location of the registry. One of <code class="docutils literal notranslate"><span class="pre">ASIA</span></code>, <code class="docutils literal notranslate"><span class="pre">EU</span></code>, <code class="docutils literal notranslate"><span class="pre">US</span></code> or not specified. See <a class="reference external" href="https://cloud.google.com/container-registry/docs/pushing-and-pulling#pushing_an_image_to_a_registry">the official documentation</a> for more information on registry locations.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.container.Registry.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Registry.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Registry.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.container.Registry.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket_self_link=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Registry.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Registry.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Registry resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2713,9 +2713,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.container.Registry.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Registry.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Registry.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -2731,9 +2731,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.container.Registry.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Registry.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Registry.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -2751,9 +2751,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.container.get_cluster">
-<code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get info about a GKE cluster from its name and location.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2773,9 +2773,9 @@ favour of <code class="docutils literal notranslate"><span class="pre">location<
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.container.get_engine_versions">
-<code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_engine_versions</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_engine_versions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_engine_versions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_engine_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Kubernetes Engine versions in a zone or region for a given project.</p>
 <blockquote>
 <div><p>If you are using the <code class="docutils literal notranslate"><span class="pre">container.getEngineVersions</span></code> datasource with a
@@ -2804,16 +2804,16 @@ for full details on how version strings are formatted.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.container.get_registry_image">
-<code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_registry_image</code><span class="sig-paren">(</span><em class="sig-param">digest=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_registry_image" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_registry_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">digest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_registry_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.</p>
 <p>The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.container.get_registry_repository">
-<code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_registry_repository</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_registry_repository" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">get_registry_repository</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_registry_repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.</p>
 <p>The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.</p>
 </dd></dl>

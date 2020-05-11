@@ -1,7 +1,8 @@
 
 ---
 title: "Route"
-block_external_search_index: true
+title_tag: "Resource Route | Module compute | Package GCP"
+meta_desc: "Explore the Route resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Route resource."
 ---
 
 
@@ -42,7 +43,7 @@ To get more information about Route, see:
 
 
 ## Create a Route Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -50,7 +51,7 @@ To get more information about Route, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>dest_range=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>next_hop_gateway=None<span class="p">, </span>next_hop_ilb=None<span class="p">, </span>next_hop_instance=None<span class="p">, </span>next_hop_instance_zone=None<span class="p">, </span>next_hop_ip=None<span class="p">, </span>next_hop_vpn_tunnel=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>dest_range=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>next_hop_gateway=None<span class="p">, </span>next_hop_ilb=None<span class="p">, </span>next_hop_instance=None<span class="p">, </span>next_hop_instance_zone=None<span class="p">, </span>next_hop_ip=None<span class="p">, </span>next_hop_vpn_tunnel=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -228,7 +229,8 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The destination range of outgoing packets that this route applies to. Only IPv4 is supported.
+    <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -246,7 +248,8 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property
+when you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -255,10 +258,13 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -267,11 +273,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to a gateway that should handle matching packets. Currently, you can only specify the internet gateway, using a full
-or partial valid URL: *
-'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway' *
-'projects/project/global/gateways/default-internet-gateway' * 'global/gateways/default-internet-gateway' * The string
-'default-internet-gateway'.
+    <dd>{{% md %}}URL to a gateway that should handle matching packets.
+Currently, you can only specify the internet gateway, using a full or
+partial valid URL:
+* `https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway`
+* `projects/project/global/gateways/default-internet-gateway`
+* `global/gateways/default-internet-gateway`
+* The string `default-internet-gateway`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -280,11 +288,11 @@ or partial valid URL: *
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You can only
-specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
+    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
+You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
-regions/region/forwardingRules/forwardingRule Note that this can only be used when the destinationRange is a public
-(non-RFC 1918) IP CIDR range.
+regions/region/forwardingRules/forwardingRule
+Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -293,10 +301,12 @@ regions/region/forwardingRules/forwardingRule Note that this can only be used wh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: *
-'https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance' *
-'projects/project/zones/zone/instances/instance' * 'zones/zone/instances/instance' * Just the instance name, with the
-zone in 'next_hop_instance_zone'.
+    <dd>{{% md %}}URL to an instance that should handle matching packets.
+You can specify this as a full or partial URL. For example:
+* `https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance`
+* `projects/project/zones/zone/instances/instance`
+* `zones/zone/instances/instance`
+* Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -335,8 +345,10 @@ a URL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal
-prefix length. In the case of two routes with equal prefix length, the one with the lowest-numbered priority value wins.
+    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
+where there is more than one matching route of equal prefix length.
+In the case of two routes with equal prefix length, the one with the
+lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
 
@@ -372,7 +384,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The destination range of outgoing packets that this route applies to. Only IPv4 is supported.
+    <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -390,7 +403,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property
+when you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -399,10 +413,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -411,11 +428,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to a gateway that should handle matching packets. Currently, you can only specify the internet gateway, using a full
-or partial valid URL: *
-'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway' *
-'projects/project/global/gateways/default-internet-gateway' * 'global/gateways/default-internet-gateway' * The string
-'default-internet-gateway'.
+    <dd>{{% md %}}URL to a gateway that should handle matching packets.
+Currently, you can only specify the internet gateway, using a full or
+partial valid URL:
+* `https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway`
+* `projects/project/global/gateways/default-internet-gateway`
+* `global/gateways/default-internet-gateway`
+* The string `default-internet-gateway`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -424,11 +443,11 @@ or partial valid URL: *
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You can only
-specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
+    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
+You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
-regions/region/forwardingRules/forwardingRule Note that this can only be used when the destinationRange is a public
-(non-RFC 1918) IP CIDR range.
+regions/region/forwardingRules/forwardingRule
+Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -437,10 +456,12 @@ regions/region/forwardingRules/forwardingRule Note that this can only be used wh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: *
-'https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance' *
-'projects/project/zones/zone/instances/instance' * 'zones/zone/instances/instance' * Just the instance name, with the
-zone in 'next_hop_instance_zone'.
+    <dd>{{% md %}}URL to an instance that should handle matching packets.
+You can specify this as a full or partial URL. For example:
+* `https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance`
+* `projects/project/zones/zone/instances/instance`
+* `zones/zone/instances/instance`
+* Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -479,8 +500,10 @@ a URL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal
-prefix length. In the case of two routes with equal prefix length, the one with the lowest-numbered priority value wins.
+    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
+where there is more than one matching route of equal prefix length.
+In the case of two routes with equal prefix length, the one with the
+lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
 
@@ -516,7 +539,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The destination range of outgoing packets that this route applies to. Only IPv4 is supported.
+    <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -534,7 +558,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property
+when you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -543,10 +568,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -555,11 +583,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to a gateway that should handle matching packets. Currently, you can only specify the internet gateway, using a full
-or partial valid URL: *
-'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway' *
-'projects/project/global/gateways/default-internet-gateway' * 'global/gateways/default-internet-gateway' * The string
-'default-internet-gateway'.
+    <dd>{{% md %}}URL to a gateway that should handle matching packets.
+Currently, you can only specify the internet gateway, using a full or
+partial valid URL:
+* `https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway`
+* `projects/project/global/gateways/default-internet-gateway`
+* `global/gateways/default-internet-gateway`
+* The string `default-internet-gateway`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -568,11 +598,11 @@ or partial valid URL: *
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You can only
-specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
+    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
+You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
-regions/region/forwardingRules/forwardingRule Note that this can only be used when the destinationRange is a public
-(non-RFC 1918) IP CIDR range.
+regions/region/forwardingRules/forwardingRule
+Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -581,10 +611,12 @@ regions/region/forwardingRules/forwardingRule Note that this can only be used wh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: *
-'https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance' *
-'projects/project/zones/zone/instances/instance' * 'zones/zone/instances/instance' * Just the instance name, with the
-zone in 'next_hop_instance_zone'.
+    <dd>{{% md %}}URL to an instance that should handle matching packets.
+You can specify this as a full or partial URL. For example:
+* `https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance`
+* `projects/project/zones/zone/instances/instance`
+* `zones/zone/instances/instance`
+* Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -623,8 +655,10 @@ a URL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal
-prefix length. In the case of two routes with equal prefix length, the one with the lowest-numbered priority value wins.
+    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
+where there is more than one matching route of equal prefix length.
+In the case of two routes with equal prefix length, the one with the
+lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
 
@@ -660,7 +694,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The destination range of outgoing packets that this route applies to. Only IPv4 is supported.
+    <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -678,7 +713,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property
+when you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -687,10 +723,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -699,11 +738,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL to a gateway that should handle matching packets. Currently, you can only specify the internet gateway, using a full
-or partial valid URL: *
-'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway' *
-'projects/project/global/gateways/default-internet-gateway' * 'global/gateways/default-internet-gateway' * The string
-'default-internet-gateway'.
+    <dd>{{% md %}}URL to a gateway that should handle matching packets.
+Currently, you can only specify the internet gateway, using a full or
+partial valid URL:
+* `https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway`
+* `projects/project/global/gateways/default-internet-gateway`
+* `global/gateways/default-internet-gateway`
+* The string `default-internet-gateway`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -712,11 +753,11 @@ or partial valid URL: *
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You can only
-specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
+    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
+You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
-regions/region/forwardingRules/forwardingRule Note that this can only be used when the destinationRange is a public
-(non-RFC 1918) IP CIDR range.
+regions/region/forwardingRules/forwardingRule
+Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -725,10 +766,12 @@ regions/region/forwardingRules/forwardingRule Note that this can only be used wh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: *
-'https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance' *
-'projects/project/zones/zone/instances/instance' * 'zones/zone/instances/instance' * Just the instance name, with the
-zone in 'next_hop_instance_zone'.
+    <dd>{{% md %}}URL to an instance that should handle matching packets.
+You can specify this as a full or partial URL. For example:
+* `https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance`
+* `projects/project/zones/zone/instances/instance`
+* `zones/zone/instances/instance`
+* Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -767,8 +810,10 @@ a URL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal
-prefix length. In the case of two routes with equal prefix length, the one with the lowest-numbered priority value wins.
+    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
+where there is more than one matching route of equal prefix length.
+In the case of two routes with equal prefix length, the one with the
+lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
 
@@ -946,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Route Resource {#look-up}
 
 Get an existing Route resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Route">Route</a></span></code></pre></div>
@@ -1073,7 +1118,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property
+when you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1082,7 +1128,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The destination range of outgoing packets that this route applies to. Only IPv4 is supported.
+    <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1091,10 +1138,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1112,11 +1162,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to a gateway that should handle matching packets. Currently, you can only specify the internet gateway, using a full
-or partial valid URL: *
-'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway' *
-'projects/project/global/gateways/default-internet-gateway' * 'global/gateways/default-internet-gateway' * The string
-'default-internet-gateway'.
+    <dd>{{% md %}}URL to a gateway that should handle matching packets.
+Currently, you can only specify the internet gateway, using a full or
+partial valid URL:
+* `https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway`
+* `projects/project/global/gateways/default-internet-gateway`
+* `global/gateways/default-internet-gateway`
+* The string `default-internet-gateway`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1125,11 +1177,11 @@ or partial valid URL: *
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You can only
-specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
+    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
+You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
-regions/region/forwardingRules/forwardingRule Note that this can only be used when the destinationRange is a public
-(non-RFC 1918) IP CIDR range.
+regions/region/forwardingRules/forwardingRule
+Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1138,10 +1190,12 @@ regions/region/forwardingRules/forwardingRule Note that this can only be used wh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: *
-'https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance' *
-'projects/project/zones/zone/instances/instance' * 'zones/zone/instances/instance' * Just the instance name, with the
-zone in 'next_hop_instance_zone'.
+    <dd>{{% md %}}URL to an instance that should handle matching packets.
+You can specify this as a full or partial URL. For example:
+* `https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance`
+* `projects/project/zones/zone/instances/instance`
+* `zones/zone/instances/instance`
+* Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1189,8 +1243,10 @@ a URL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal
-prefix length. In the case of two routes with equal prefix length, the one with the lowest-numbered priority value wins.
+    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
+where there is more than one matching route of equal prefix length.
+In the case of two routes with equal prefix length, the one with the
+lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
 
@@ -1235,7 +1291,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property
+when you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1244,7 +1301,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The destination range of outgoing packets that this route applies to. Only IPv4 is supported.
+    <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1253,10 +1311,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1274,11 +1335,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to a gateway that should handle matching packets. Currently, you can only specify the internet gateway, using a full
-or partial valid URL: *
-'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway' *
-'projects/project/global/gateways/default-internet-gateway' * 'global/gateways/default-internet-gateway' * The string
-'default-internet-gateway'.
+    <dd>{{% md %}}URL to a gateway that should handle matching packets.
+Currently, you can only specify the internet gateway, using a full or
+partial valid URL:
+* `https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway`
+* `projects/project/global/gateways/default-internet-gateway`
+* `global/gateways/default-internet-gateway`
+* The string `default-internet-gateway`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1287,11 +1350,11 @@ or partial valid URL: *
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You can only
-specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
+    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
+You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
-regions/region/forwardingRules/forwardingRule Note that this can only be used when the destinationRange is a public
-(non-RFC 1918) IP CIDR range.
+regions/region/forwardingRules/forwardingRule
+Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1300,10 +1363,12 @@ regions/region/forwardingRules/forwardingRule Note that this can only be used wh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: *
-'https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance' *
-'projects/project/zones/zone/instances/instance' * 'zones/zone/instances/instance' * Just the instance name, with the
-zone in 'next_hop_instance_zone'.
+    <dd>{{% md %}}URL to an instance that should handle matching packets.
+You can specify this as a full or partial URL. For example:
+* `https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance`
+* `projects/project/zones/zone/instances/instance`
+* `zones/zone/instances/instance`
+* Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1351,8 +1416,10 @@ a URL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal
-prefix length. In the case of two routes with equal prefix length, the one with the lowest-numbered priority value wins.
+    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
+where there is more than one matching route of equal prefix length.
+In the case of two routes with equal prefix length, the one with the
+lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
 
@@ -1397,7 +1464,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property
+when you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1406,7 +1474,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The destination range of outgoing packets that this route applies to. Only IPv4 is supported.
+    <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1415,10 +1484,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1436,11 +1508,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to a gateway that should handle matching packets. Currently, you can only specify the internet gateway, using a full
-or partial valid URL: *
-'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway' *
-'projects/project/global/gateways/default-internet-gateway' * 'global/gateways/default-internet-gateway' * The string
-'default-internet-gateway'.
+    <dd>{{% md %}}URL to a gateway that should handle matching packets.
+Currently, you can only specify the internet gateway, using a full or
+partial valid URL:
+* `https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway`
+* `projects/project/global/gateways/default-internet-gateway`
+* `global/gateways/default-internet-gateway`
+* The string `default-internet-gateway`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1449,11 +1523,11 @@ or partial valid URL: *
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You can only
-specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
+    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
+You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
-regions/region/forwardingRules/forwardingRule Note that this can only be used when the destinationRange is a public
-(non-RFC 1918) IP CIDR range.
+regions/region/forwardingRules/forwardingRule
+Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1462,10 +1536,12 @@ regions/region/forwardingRules/forwardingRule Note that this can only be used wh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: *
-'https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance' *
-'projects/project/zones/zone/instances/instance' * 'zones/zone/instances/instance' * Just the instance name, with the
-zone in 'next_hop_instance_zone'.
+    <dd>{{% md %}}URL to an instance that should handle matching packets.
+You can specify this as a full or partial URL. For example:
+* `https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance`
+* `projects/project/zones/zone/instances/instance`
+* `zones/zone/instances/instance`
+* Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1513,8 +1589,10 @@ a URL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal
-prefix length. In the case of two routes with equal prefix length, the one with the lowest-numbered priority value wins.
+    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
+where there is more than one matching route of equal prefix length.
+In the case of two routes with equal prefix length, the one with the
+lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
 
@@ -1559,7 +1637,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property
+when you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1568,7 +1647,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The destination range of outgoing packets that this route applies to. Only IPv4 is supported.
+    <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
+Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1577,10 +1657,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1598,11 +1681,13 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL to a gateway that should handle matching packets. Currently, you can only specify the internet gateway, using a full
-or partial valid URL: *
-'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway' *
-'projects/project/global/gateways/default-internet-gateway' * 'global/gateways/default-internet-gateway' * The string
-'default-internet-gateway'.
+    <dd>{{% md %}}URL to a gateway that should handle matching packets.
+Currently, you can only specify the internet gateway, using a full or
+partial valid URL:
+* `https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway`
+* `projects/project/global/gateways/default-internet-gateway`
+* `global/gateways/default-internet-gateway`
+* The string `default-internet-gateway`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1611,11 +1696,11 @@ or partial valid URL: *
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You can only
-specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
+    <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
+You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
-regions/region/forwardingRules/forwardingRule Note that this can only be used when the destinationRange is a public
-(non-RFC 1918) IP CIDR range.
+regions/region/forwardingRules/forwardingRule
+Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1624,10 +1709,12 @@ regions/region/forwardingRules/forwardingRule Note that this can only be used wh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: *
-'https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance' *
-'projects/project/zones/zone/instances/instance' * 'zones/zone/instances/instance' * Just the instance name, with the
-zone in 'next_hop_instance_zone'.
+    <dd>{{% md %}}URL to an instance that should handle matching packets.
+You can specify this as a full or partial URL. For example:
+* `https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance`
+* `projects/project/zones/zone/instances/instance`
+* `zones/zone/instances/instance`
+* Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1675,8 +1762,10 @@ a URL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal
-prefix length. In the case of two routes with equal prefix length, the one with the lowest-numbered priority value wins.
+    <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
+where there is more than one matching route of equal prefix length.
+In the case of two routes with equal prefix length, the one with the
+lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
 
@@ -1727,8 +1816,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

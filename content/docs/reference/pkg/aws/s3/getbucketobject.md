@@ -15,13 +15,26 @@ _optionally_ (see below) content of an object stored inside S3 bucket.
 
 > **Note:** The content of an object (`body` field) is available only for objects which have a human-readable `Content-Type` (`text/*` and `application/json`). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example retrieves a text object (which must have a `Content-Type`
-value starting with `text/`) and uses it as the `user_data` for an EC2 instance:
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -36,41 +49,17 @@ const example = new aws.ec2.Instance("example", {
     userData: bootstrapScript.body,
 });
 ```
-
-The following, more-complex example retrieves only the metadata for a zip
-file stored in S3, which is then used to pass the most recent `version_id`
-to AWS Lambda for use as a function implementation. More information about
-Lambda functions is available in the documentation for
-[`aws.lambda.Function`](https://www.terraform.io/docs/providers/aws/r/lambda_function.html).
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const lambda = pulumi.output(aws.s3.getBucketObject({
-    bucket: "ourcorp-lambda-functions",
-    key: "hello-world.zip",
-}, { async: true }));
-const testLambda = new aws.lambda.Function("test_lambda", {
-    handler: "exports.test",
-    role: aws_iam_role_iam_for_lambda.arn, // (not shown)
-    s3Bucket: lambda.bucket,
-    s3Key: lambda.key,
-    s3ObjectVersion: lambda.versionId!,
-});
-```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetBucketObject {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
-{{% choosable language typescript %}}
+{{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBucketObject<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#GetBucketObjectArgs">GetBucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#GetBucketObjectResult">GetBucketObjectResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
@@ -81,7 +70,7 @@ const testLambda = new aws.lambda.Function("test_lambda", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBucketObject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#LookupBucketObjectArgs">LookupBucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#LookupBucketObjectResult">LookupBucketObjectResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBucketObject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#LookupBucketObjectArgs">LookupBucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#LookupBucketObjectResult">LookupBucketObjectResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -132,7 +121,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the object.
+    <dd>{{% md %}}A map of tags assigned to the object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -183,7 +172,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the object.
+    <dd>{{% md %}}A map of tags assigned to the object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -234,7 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the object.
+    <dd>{{% md %}}A map of tags assigned to the object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -285,7 +274,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the object.
+    <dd>{{% md %}}A map of tags assigned to the object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -421,7 +410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -510,7 +499,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the object.
+    <dd>{{% md %}}A map of tags assigned to the object.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -650,7 +639,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -739,7 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the object.
+    <dd>{{% md %}}A map of tags assigned to the object.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -879,7 +868,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -968,7 +957,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the object.
+    <dd>{{% md %}}A map of tags assigned to the object.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1108,7 +1097,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1197,7 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the object.
+    <dd>{{% md %}}A map of tags assigned to the object.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1234,4 +1223,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

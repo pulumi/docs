@@ -11,6 +11,7 @@ Explore the resources and functions of the ecs module in the AliCloud package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="autoprovisioninggroup" title="AutoProvisioningGroup"><span class="symbol resource"></span>AutoProvisioningGroup</a></li>
     <li><a href="copyimage" title="CopyImage"><span class="symbol resource"></span>CopyImage</a></li>
     <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
     <li><a href="diskattachment" title="DiskAttachment"><span class="symbol resource"></span>DiskAttachment</a></li>
@@ -56,6 +57,6 @@ Explore the resources and functions of the ecs module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.1.1</dd>
+	<dd>2.3.3</dd>
 </dl>
 

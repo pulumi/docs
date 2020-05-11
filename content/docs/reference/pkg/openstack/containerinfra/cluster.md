@@ -12,26 +12,7 @@ meta_desc: "Explore the Cluster resource of the containerinfra module, including
 
 Manages a V1 Magnum cluster resource within OpenStack.
 
-{{% examples %}}
-## Example Usage
 
-{{% example %}}
-### Create a Cluster
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as openstack from "@pulumi/openstack";
-
-const cluster1 = new openstack.containerinfra.Cluster("cluster_1", {
-    clusterTemplateId: "b9a45c5c-cd03-4958-82aa-b80bf93cb922",
-    keypair: "ssh_keypair",
-    masterCount: 3,
-    nodeCount: 5,
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Argument reference
 
 The following arguments are supported:
@@ -117,11 +98,49 @@ The following attributes are exported:
 * `master_addresses` - IP addresses of the master node of the cluster.
 * `node_addresses` - IP addresses of the node of the cluster.
 * `stack_id` - UUID of the Orchestration service stack.
+* `kubeconfig` - The Kubernetes cluster's credentials
+  * `raw_config` - The raw kubeconfig file
+  * `host` - The cluster's API server URL
+  * `cluster_ca_certificate` - The cluster's CA certificate
+  * `client_key` - The client's RSA key
+  * `client_certificate` - The client's certificate
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a Cluster
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const cluster1 = new openstack.containerinfra.Cluster("cluster_1", {
+    clusterTemplateId: "b9a45c5c-cd03-4958-82aa-b80bf93cb922",
+    keypair: "ssh_keypair",
+    masterCount: 3,
+    nodeCount: 5,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -129,7 +148,7 @@ The following attributes are exported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>cluster_template_id=None<span class="p">, </span>create_timeout=None<span class="p">, </span>discovery_url=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>keypair=None<span class="p">, </span>labels=None<span class="p">, </span>master_count=None<span class="p">, </span>master_flavor=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_template_id=None<span class="p">, </span>create_timeout=None<span class="p">, </span>discovery_url=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>keypair=None<span class="p">, </span>labels=None<span class="p">, </span>master_count=None<span class="p">, </span>master_flavor=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -830,9 +849,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>Kubeconfig</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterkubeconfig">Pulumi.<wbr>Open<wbr>Stack.<wbr>Container<wbr>Infra.<wbr>Outputs.<wbr>Cluster<wbr>Kubeconfig</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Master<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -840,7 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span>Node<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -925,9 +952,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>Kubeconfig</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterkubeconfig">Cluster<wbr>Kubeconfig</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Master<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -935,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span>Node<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1020,9 +1055,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>kubeconfig</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterkubeconfig">Cluster<wbr>Kubeconfig</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>master<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1030,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span>node<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1115,9 +1158,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span>kubeconfig</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterkubeconfig">Dict[Cluster<wbr>Kubeconfig]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>master_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1125,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span>node_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1173,14 +1224,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/containerinfra/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/containerinfra/#Cluster">Cluster</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_address=None<span class="p">, </span>cluster_template_id=None<span class="p">, </span>coe_version=None<span class="p">, </span>container_version=None<span class="p">, </span>create_timeout=None<span class="p">, </span>created_at=None<span class="p">, </span>discovery_url=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>keypair=None<span class="p">, </span>labels=None<span class="p">, </span>master_addresses=None<span class="p">, </span>master_count=None<span class="p">, </span>master_flavor=None<span class="p">, </span>name=None<span class="p">, </span>node_addresses=None<span class="p">, </span>node_count=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>stack_id=None<span class="p">, </span>updated_at=None<span class="p">, </span>user_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_address=None<span class="p">, </span>cluster_template_id=None<span class="p">, </span>coe_version=None<span class="p">, </span>container_version=None<span class="p">, </span>create_timeout=None<span class="p">, </span>created_at=None<span class="p">, </span>discovery_url=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>keypair=None<span class="p">, </span>kubeconfig=None<span class="p">, </span>labels=None<span class="p">, </span>master_addresses=None<span class="p">, </span>master_count=None<span class="p">, </span>master_flavor=None<span class="p">, </span>name=None<span class="p">, </span>node_addresses=None<span class="p">, </span>node_count=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>stack_id=None<span class="p">, </span>updated_at=None<span class="p">, </span>user_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1392,6 +1443,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Kubeconfig</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterkubeconfig">Pulumi.<wbr>Open<wbr>Stack.<wbr>Container<wbr>Infra.<wbr>Inputs.<wbr>Cluster<wbr>Kubeconfig<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
@@ -1402,7 +1461,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1434,7 +1493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1591,6 +1650,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Kubeconfig</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterkubeconfig">Cluster<wbr>Kubeconfig</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
@@ -1601,7 +1668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1633,7 +1700,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1790,6 +1857,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>kubeconfig</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterkubeconfig">Cluster<wbr>Kubeconfig</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
@@ -1800,7 +1875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1832,7 +1907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>node<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1989,6 +2064,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>kubeconfig</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterkubeconfig">Dict[Cluster<wbr>Kubeconfig]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
@@ -1999,7 +2082,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2031,7 +2114,7 @@ The following state arguments are supported:
             title="Optional">
         <span>node_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2087,6 +2170,218 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="clusterkubeconfig">Cluster<wbr>Kubeconfig</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ClusterKubeconfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/containerinfra?tab=doc#ClusterKubeconfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.ContainerInfra.Outputs.ClusterKubeconfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Ca<wbr>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Host</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Raw<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Ca<wbr>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Host</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Raw<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster<wbr>Ca<wbr>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>raw<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client_<wbr>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client_<wbr>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster_<wbr>ca_<wbr>certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>raw_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

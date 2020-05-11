@@ -12,10 +12,26 @@ meta_desc: "Explore the ResourceDataSync resource of the ssm module, including e
 
 Provides a SSM resource data sync.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -62,23 +78,13 @@ const foo = new aws.ssm.ResourceDataSync("foo", {
     },
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-## s3_destination
-
-`s3_destination` supports the following:
-
-* `bucket_name` - (Required) Name of S3 bucket where the aggregated data is stored.
-* `region` - (Required) Region with the bucket targeted by the Resource Data Sync.
-* `kms_key_arn` - (Optional) ARN of an encryption key for a destination in Amazon S3.
-* `prefix` - (Optional) Prefix for the bucket.
-* `sync_format` - (Optional) A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
-
 
 
 ## Create a ResourceDataSync Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -86,7 +92,7 @@ const foo = new aws.ssm.ResourceDataSync("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourceDataSync</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>s3_destination=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourceDataSync</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>s3_destination=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -434,7 +440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ResourceDataSync Resource {#look-up}
 
 Get an existing ResourceDataSync resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#ResourceDataSyncState">ResourceDataSyncState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#ResourceDataSync">ResourceDataSync</a></span></code></pre></div>
@@ -671,6 +677,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#ResourceDataSyncS3DestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#ResourceDataSyncS3DestinationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.ResourceDataSyncS3DestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.ResourceDataSyncS3Destination.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -684,7 +693,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of S3 bucket where the aggregated data is stored.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -692,7 +702,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Region with the bucket targeted by the Resource Data Sync.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -700,7 +711,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ARN of an encryption key for a destination in Amazon S3.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -708,7 +720,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prefix for the bucket.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -716,7 +729,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -731,7 +745,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of S3 bucket where the aggregated data is stored.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -739,7 +754,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Region with the bucket targeted by the Resource Data Sync.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -747,7 +763,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ARN of an encryption key for a destination in Amazon S3.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -755,7 +772,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prefix for the bucket.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -763,7 +781,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -778,7 +797,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of S3 bucket where the aggregated data is stored.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -786,7 +806,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Region with the bucket targeted by the Resource Data Sync.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -794,7 +815,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ARN of an encryption key for a destination in Amazon S3.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -802,7 +824,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prefix for the bucket.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -810,7 +833,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -825,7 +849,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of S3 bucket where the aggregated data is stored.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -833,7 +858,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Region with the bucket targeted by the Resource Data Sync.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -841,7 +867,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ARN of an encryption key for a destination in Amazon S3.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -849,7 +876,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Prefix for the bucket.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -857,7 +885,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

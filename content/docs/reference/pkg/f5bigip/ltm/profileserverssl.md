@@ -14,11 +14,26 @@ meta_desc: "Explore the ProfileServerSsl resource of the ltm module, including e
 
 
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
-    
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -31,14 +46,13 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
     partition: "Common",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a ProfileServerSsl Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -46,7 +60,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProfileServerSsl</span><span class="p">(resource_name, opts=None, </span>alert_timeout=None<span class="p">, </span>authenticate=None<span class="p">, </span>authenticate_depth=None<span class="p">, </span>ca_file=None<span class="p">, </span>cache_size=None<span class="p">, </span>cache_timeout=None<span class="p">, </span>cert=None<span class="p">, </span>chain=None<span class="p">, </span>ciphers=None<span class="p">, </span>defaults_from=None<span class="p">, </span>expire_cert_response_control=None<span class="p">, </span>full_path=None<span class="p">, </span>generation=None<span class="p">, </span>generic_alert=None<span class="p">, </span>handshake_timeout=None<span class="p">, </span>key=None<span class="p">, </span>mod_ssl_methods=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>partition=None<span class="p">, </span>passphrase=None<span class="p">, </span>peer_cert_mode=None<span class="p">, </span>proxy_ssl=None<span class="p">, </span>renegotiate_period=None<span class="p">, </span>renegotiate_size=None<span class="p">, </span>renegotiation=None<span class="p">, </span>retain_certificate=None<span class="p">, </span>secure_renegotiation=None<span class="p">, </span>server_name=None<span class="p">, </span>session_mirroring=None<span class="p">, </span>session_ticket=None<span class="p">, </span>sni_default=None<span class="p">, </span>sni_require=None<span class="p">, </span>ssl_forward_proxy=None<span class="p">, </span>ssl_forward_proxy_bypass=None<span class="p">, </span>ssl_sign_hash=None<span class="p">, </span>strict_resume=None<span class="p">, </span>tm_options=None<span class="p">, </span>unclean_shutdown=None<span class="p">, </span>untrusted_cert_response_control=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProfileServerSsl</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alert_timeout=None<span class="p">, </span>authenticate=None<span class="p">, </span>authenticate_depth=None<span class="p">, </span>ca_file=None<span class="p">, </span>cache_size=None<span class="p">, </span>cache_timeout=None<span class="p">, </span>cert=None<span class="p">, </span>chain=None<span class="p">, </span>ciphers=None<span class="p">, </span>defaults_from=None<span class="p">, </span>expire_cert_response_control=None<span class="p">, </span>full_path=None<span class="p">, </span>generation=None<span class="p">, </span>generic_alert=None<span class="p">, </span>handshake_timeout=None<span class="p">, </span>key=None<span class="p">, </span>mod_ssl_methods=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>partition=None<span class="p">, </span>passphrase=None<span class="p">, </span>peer_cert_mode=None<span class="p">, </span>proxy_ssl=None<span class="p">, </span>renegotiate_period=None<span class="p">, </span>renegotiate_size=None<span class="p">, </span>renegotiation=None<span class="p">, </span>retain_certificate=None<span class="p">, </span>secure_renegotiation=None<span class="p">, </span>server_name=None<span class="p">, </span>session_mirroring=None<span class="p">, </span>session_ticket=None<span class="p">, </span>sni_default=None<span class="p">, </span>sni_require=None<span class="p">, </span>ssl_forward_proxy=None<span class="p">, </span>ssl_forward_proxy_bypass=None<span class="p">, </span>ssl_sign_hash=None<span class="p">, </span>strict_resume=None<span class="p">, </span>tm_options=None<span class="p">, </span>unclean_shutdown=None<span class="p">, </span>untrusted_cert_response_control=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1774,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ProfileServerSsl Resource {#look-up}
 
 Get an existing ProfileServerSsl resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#ProfileServerSslState">ProfileServerSslState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#ProfileServerSsl">ProfileServerSsl</a></span></code></pre></div>

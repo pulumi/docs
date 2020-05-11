@@ -1,7 +1,8 @@
 
 ---
 title: "Note"
-block_external_search_index: true
+title_tag: "Resource Note | Module containeranalysis | Package GCP"
+meta_desc: "Explore the Note resource of the containeranalysis module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a detailed description of a Note."
 ---
 
 
@@ -37,7 +38,7 @@ const note = new gcp.containeranalysis.Note("note", {
 
 
 ## Create a Note Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -45,7 +46,7 @@ const note = new gcp.containeranalysis.Note("note", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Note</span><span class="p">(resource_name, opts=None, </span>attestation_authority=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Note</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attestation_authority=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -223,11 +224,15 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one
-AttestationAuthority for "QA" and one for "build". This Note is intended to act strictly as a grouping mechanism for the
-attached Occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the
-ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
-attached Attestation Occurrences, even if they don't all live in the same project.
+    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
+For example, an organization might have one AttestationAuthority for
+"QA" and one for "build". This Note is intended to act strictly as a
+grouping mechanism for the attached Occurrences (Attestations). This
+grouping mechanism also provides a security boundary, since IAM ACLs
+gate the ability for a principle to attach an Occurrence to a given
+Note. It also provides a single point of lookup to find all attached
+Attestation Occurrences, even if they don't all live in the same
+project.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -262,11 +267,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority</a></span>
     </dt>
-    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one
-AttestationAuthority for "QA" and one for "build". This Note is intended to act strictly as a grouping mechanism for the
-attached Occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the
-ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
-attached Attestation Occurrences, even if they don't all live in the same project.
+    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
+For example, an organization might have one AttestationAuthority for
+"QA" and one for "build". This Note is intended to act strictly as a
+grouping mechanism for the attached Occurrences (Attestations). This
+grouping mechanism also provides a security boundary, since IAM ACLs
+gate the ability for a principle to attach an Occurrence to a given
+Note. It also provides a single point of lookup to find all attached
+Attestation Occurrences, even if they don't all live in the same
+project.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -301,11 +310,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority</a></span>
     </dt>
-    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one
-AttestationAuthority for "QA" and one for "build". This Note is intended to act strictly as a grouping mechanism for the
-attached Occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the
-ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
-attached Attestation Occurrences, even if they don't all live in the same project.
+    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
+For example, an organization might have one AttestationAuthority for
+"QA" and one for "build". This Note is intended to act strictly as a
+grouping mechanism for the attached Occurrences (Attestations). This
+grouping mechanism also provides a security boundary, since IAM ACLs
+gate the ability for a principle to attach an Occurrence to a given
+Note. It also provides a single point of lookup to find all attached
+Attestation Occurrences, even if they don't all live in the same
+project.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -340,11 +353,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Dict[Note<wbr>Attestation<wbr>Authority]</a></span>
     </dt>
-    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one
-AttestationAuthority for "QA" and one for "build". This Note is intended to act strictly as a grouping mechanism for the
-attached Occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the
-ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
-attached Attestation Occurrences, even if they don't all live in the same project.
+    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
+For example, an organization might have one AttestationAuthority for
+"QA" and one for "build". This Note is intended to act strictly as a
+grouping mechanism for the attached Occurrences (Attestations). This
+grouping mechanism also provides a security boundary, since IAM ACLs
+gate the ability for a principle to attach an Occurrence to a given
+Note. It also provides a single point of lookup to find all attached
+Attestation Occurrences, even if they don't all live in the same
+project.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -449,7 +466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Note Resource {#look-up}
 
 Get an existing Note resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/containeranalysis/#NoteState">NoteState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/containeranalysis/#Note">Note</a></span></code></pre></div>
@@ -576,11 +593,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one
-AttestationAuthority for "QA" and one for "build". This Note is intended to act strictly as a grouping mechanism for the
-attached Occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the
-ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
-attached Attestation Occurrences, even if they don't all live in the same project.
+    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
+For example, an organization might have one AttestationAuthority for
+"QA" and one for "build". This Note is intended to act strictly as a
+grouping mechanism for the attached Occurrences (Attestations). This
+grouping mechanism also provides a security boundary, since IAM ACLs
+gate the ability for a principle to attach an Occurrence to a given
+Note. It also provides a single point of lookup to find all attached
+Attestation Occurrences, even if they don't all live in the same
+project.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -615,11 +636,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority</a></span>
     </dt>
-    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one
-AttestationAuthority for "QA" and one for "build". This Note is intended to act strictly as a grouping mechanism for the
-attached Occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the
-ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
-attached Attestation Occurrences, even if they don't all live in the same project.
+    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
+For example, an organization might have one AttestationAuthority for
+"QA" and one for "build". This Note is intended to act strictly as a
+grouping mechanism for the attached Occurrences (Attestations). This
+grouping mechanism also provides a security boundary, since IAM ACLs
+gate the ability for a principle to attach an Occurrence to a given
+Note. It also provides a single point of lookup to find all attached
+Attestation Occurrences, even if they don't all live in the same
+project.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -654,11 +679,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority</a></span>
     </dt>
-    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one
-AttestationAuthority for "QA" and one for "build". This Note is intended to act strictly as a grouping mechanism for the
-attached Occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the
-ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
-attached Attestation Occurrences, even if they don't all live in the same project.
+    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
+For example, an organization might have one AttestationAuthority for
+"QA" and one for "build". This Note is intended to act strictly as a
+grouping mechanism for the attached Occurrences (Attestations). This
+grouping mechanism also provides a security boundary, since IAM ACLs
+gate the ability for a principle to attach an Occurrence to a given
+Note. It also provides a single point of lookup to find all attached
+Attestation Occurrences, even if they don't all live in the same
+project.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -693,11 +722,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Dict[Note<wbr>Attestation<wbr>Authority]</a></span>
     </dt>
-    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one
-AttestationAuthority for "QA" and one for "build". This Note is intended to act strictly as a grouping mechanism for the
-attached Occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the
-ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
-attached Attestation Occurrences, even if they don't all live in the same project.
+    <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
+For example, an organization might have one AttestationAuthority for
+"QA" and one for "build". This Note is intended to act strictly as a
+grouping mechanism for the attached Occurrences (Attestations). This
+grouping mechanism also provides a security boundary, since IAM ACLs
+gate the ability for a principle to attach an Occurrence to a given
+Note. It also provides a single point of lookup to find all attached
+Attestation Occurrences, even if they don't all live in the same
+project.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -742,6 +775,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteAttestationAuthorityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteAttestationAuthorityOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Outputs.NoteAttestationAuthority.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -755,7 +791,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This submessage provides human-readable hints about the purpose of
+the AttestationAuthority. Because the name of a Note acts as its
+resource reference, it is important to disambiguate the canonical
+name of the Note (which might be a UUID for security purposes)
+from "readable" names more suitable for debug output. Note that
+these hints should NOT be used to look up AttestationAuthorities
+in security sensitive contexts, such as when looking up
+Attestations to verify.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -770,7 +814,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This submessage provides human-readable hints about the purpose of
+the AttestationAuthority. Because the name of a Note acts as its
+resource reference, it is important to disambiguate the canonical
+name of the Note (which might be a UUID for security purposes)
+from "readable" names more suitable for debug output. Note that
+these hints should NOT be used to look up AttestationAuthorities
+in security sensitive contexts, such as when looking up
+Attestations to verify.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -785,7 +837,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This submessage provides human-readable hints about the purpose of
+the AttestationAuthority. Because the name of a Note acts as its
+resource reference, it is important to disambiguate the canonical
+name of the Note (which might be a UUID for security purposes)
+from "readable" names more suitable for debug output. Note that
+these hints should NOT be used to look up AttestationAuthorities
+in security sensitive contexts, such as when looking up
+Attestations to verify.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -800,7 +860,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthorityhint">Dict[Note<wbr>Attestation<wbr>Authority<wbr>Hint]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This submessage provides human-readable hints about the purpose of
+the AttestationAuthority. Because the name of a Note acts as its
+resource reference, it is important to disambiguate the canonical
+name of the Note (which might be a UUID for security purposes)
+from "readable" names more suitable for debug output. Note that
+these hints should NOT be used to look up AttestationAuthorities
+in security sensitive contexts, such as when looking up
+Attestations to verify.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -817,6 +885,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteAttestationAuthorityHintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteAttestationAuthorityHintOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Outputs.NoteAttestationAuthorityHint.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -830,7 +901,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The human readable name of this Attestation Authority, for
+example "qa".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -845,7 +918,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The human readable name of this Attestation Authority, for
+example "qa".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -860,7 +935,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The human readable name of this Attestation Authority, for
+example "qa".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -875,7 +952,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The human readable name of this Attestation Authority, for
+example "qa".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -894,8 +973,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

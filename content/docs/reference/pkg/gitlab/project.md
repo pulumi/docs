@@ -14,7 +14,7 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
 
 
 ## Create a Project Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Project</span><span class="p">(resource_name, opts=None, </span>approvals_before_merge=None<span class="p">, </span>archived=None<span class="p">, </span>container_registry_enabled=None<span class="p">, </span>default_branch=None<span class="p">, </span>description=None<span class="p">, </span>initialize_with_readme=None<span class="p">, </span>issues_enabled=None<span class="p">, </span>lfs_enabled=None<span class="p">, </span>merge_method=None<span class="p">, </span>merge_requests_enabled=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>only_allow_merge_if_all_discussions_are_resolved=None<span class="p">, </span>only_allow_merge_if_pipeline_succeeds=None<span class="p">, </span>path=None<span class="p">, </span>pipelines_enabled=None<span class="p">, </span>request_access_enabled=None<span class="p">, </span>shared_runners_enabled=None<span class="p">, </span>shared_with_groups=None<span class="p">, </span>snippets_enabled=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_level=None<span class="p">, </span>wiki_enabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Project</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>approvals_before_merge=None<span class="p">, </span>archived=None<span class="p">, </span>container_registry_enabled=None<span class="p">, </span>default_branch=None<span class="p">, </span>description=None<span class="p">, </span>initialize_with_readme=None<span class="p">, </span>issues_enabled=None<span class="p">, </span>lfs_enabled=None<span class="p">, </span>merge_method=None<span class="p">, </span>merge_requests_enabled=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>only_allow_merge_if_all_discussions_are_resolved=None<span class="p">, </span>only_allow_merge_if_pipeline_succeeds=None<span class="p">, </span>path=None<span class="p">, </span>pipelines_enabled=None<span class="p">, </span>request_access_enabled=None<span class="p">, </span>shared_runners_enabled=None<span class="p">, </span>shared_with_groups=None<span class="p">, </span>snippets_enabled=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_level=None<span class="p">, </span>wiki_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1298,7 +1298,7 @@ repository via SSH.
 ## Look up an Existing Project Resource {#look-up}
 
 Get an existing Project resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#Project">Project</a></span></code></pre></div>
@@ -2462,6 +2462,9 @@ Repositories are created as private by default.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#ProjectSharedWithGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#ProjectSharedWithGroupOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.Inputs.ProjectSharedWithGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.Outputs.ProjectSharedWithGroup.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

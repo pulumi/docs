@@ -1,7 +1,8 @@
 
 ---
 title: "TimeBoard"
-block_external_search_index: true
+title_tag: "Resource TimeBoard | Package Datadog"
+meta_desc: "Explore the TimeBoard resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog timeboard resource. This can be used to create and manage Datadog timeboards."
 ---
 
 
@@ -18,8 +19,8 @@ Provides a Datadog timeboard resource. This can be used to create and manage Dat
 
 
 
-## Create a TimeBoard Resource
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+## Create a TimeBoard Resource {#create}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -27,7 +28,7 @@ Provides a Datadog timeboard resource. This can be used to create and manage Dat
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TimeBoard</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>graphs=None<span class="p">, </span>read_only=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TimeBoard</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>graphs=None<span class="p">, </span>read_only=None<span class="p">, </span>template_variables=None<span class="p">, </span>title=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -108,7 +109,7 @@ Provides a Datadog timeboard resource. This can be used to create and manage Dat
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -185,7 +186,13 @@ Provides a Datadog timeboard resource. This can be used to create and manage Dat
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## TimeBoard Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The TimeBoard resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -398,14 +405,82 @@ Provides a Datadog timeboard resource. This can be used to create and manage Dat
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the TimeBoard resource produces the following output properties:
 
 
 
 
-## Look up an Existing TimeBoard Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing TimeBoard Resource {#look-up}
 
 Get an existing TimeBoard resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/datadog/#TimeBoardState">TimeBoardState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/datadog/#TimeBoard">TimeBoard</a></span></code></pre></div>
@@ -737,13 +812,17 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Time<wbr>Board<wbr>Graph</h4>
+
+<h4 id="timeboardgraph">Time<wbr>Board<wbr>Graph</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraph">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraph">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraph.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1292,13 +1371,16 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Marker</h4>
+<h4 id="timeboardgraphmarker">Time<wbr>Board<wbr>Graph<wbr>Marker</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphMarker">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphMarker">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphMarkerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphMarkerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphMarkerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphMarker.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1431,13 +1513,16 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request</h4>
+<h4 id="timeboardgraphrequest">Time<wbr>Board<wbr>Graph<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequest">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequest.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1986,13 +2071,16 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query</h4>
+<h4 id="timeboardgraphrequestapmquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestApmQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequestApmQuery">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestApmQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestApmQueryOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestApmQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequestApmQuery.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2157,13 +2245,16 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
+<h4 id="timeboardgraphrequestapmquerycompute">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestApmQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequestApmQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestApmQueryComputeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestApmQueryComputeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestApmQueryComputeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequestApmQueryCompute.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2296,13 +2387,16 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="timeboardgraphrequestapmquerygroupby">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestApmQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequestApmQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestApmQueryGroupByArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestApmQueryGroupByOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestApmQueryGroupByArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequestApmQueryGroupBy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2435,7 +2529,7 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="timeboardgraphrequestapmquerygroupbysort">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestApmQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequestApmQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2443,6 +2537,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestApmQueryGroupBySortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestApmQueryGroupBySortOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestApmQueryGroupBySortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequestApmQueryGroupBySort.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2574,7 +2671,7 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
+<h4 id="timeboardgraphrequestapmquerysearch">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestApmQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequestApmQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2582,6 +2679,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestApmQuerySearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestApmQuerySearchOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestApmQuerySearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequestApmQuerySearch.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2649,7 +2749,7 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Conditional<wbr>Format</h4>
+<h4 id="timeboardgraphrequestconditionalformat">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Conditional<wbr>Format</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestConditionalFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequestConditionalFormat">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2657,6 +2757,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestConditionalFormatArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestConditionalFormatOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestConditionalFormatArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequestConditionalFormat.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2852,13 +2955,16 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query</h4>
+<h4 id="timeboardgraphrequestlogquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestLogQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequestLogQuery">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestLogQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestLogQueryOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestLogQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequestLogQuery.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3023,13 +3129,16 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
+<h4 id="timeboardgraphrequestlogquerycompute">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestLogQueryCompute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequestLogQueryCompute">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestLogQueryComputeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestLogQueryComputeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestLogQueryComputeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequestLogQueryCompute.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3162,13 +3271,16 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
+<h4 id="timeboardgraphrequestlogquerygroupby">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestLogQueryGroupBy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequestLogQueryGroupBy">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestLogQueryGroupByArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestLogQueryGroupByOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestLogQueryGroupByArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequestLogQueryGroupBy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3301,7 +3413,7 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
+<h4 id="timeboardgraphrequestlogquerygroupbysort">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestLogQueryGroupBySort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequestLogQueryGroupBySort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3309,6 +3421,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestLogQueryGroupBySortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestLogQueryGroupBySortOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestLogQueryGroupBySortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequestLogQueryGroupBySort.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3440,7 +3555,7 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
+<h4 id="timeboardgraphrequestlogquerysearch">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Log<wbr>Query<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestLogQuerySearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequestLogQuerySearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3448,6 +3563,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestLogQuerySearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestLogQuerySearchOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestLogQuerySearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequestLogQuerySearch.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3515,13 +3633,16 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Process<wbr>Query</h4>
+<h4 id="timeboardgraphrequestprocessquery">Time<wbr>Board<wbr>Graph<wbr>Request<wbr>Process<wbr>Query</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardGraphRequestProcessQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardGraphRequestProcessQuery">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestProcessQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardGraphRequestProcessQueryOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardGraphRequestProcessQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardGraphRequestProcessQuery.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3686,13 +3807,16 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Board<wbr>Template<wbr>Variable</h4>
+<h4 id="timeboardtemplatevariable">Time<wbr>Board<wbr>Template<wbr>Variable</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#TimeBoardTemplateVariable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#TimeBoardTemplateVariable">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardTemplateVariableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#TimeBoardTemplateVariableOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.TimeBoardTemplateVariableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.TimeBoardTemplateVariable.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3829,14 +3953,13 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-datadog">https://github.com/pulumi/pulumi-datadog</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
-	
 </dl>
 

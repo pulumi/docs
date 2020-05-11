@@ -14,13 +14,64 @@ Provides a resource for assigning an existing DigitalOcean Floating IP to a Drop
 makes it easy to provision floating IP addresses that are not tied to the lifecycle of your
 Droplet.
 
+
+
 {{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+foobar_floating_ip = digitalocean.FloatingIp("foobarFloatingIp", region="sgp1")
+foobar_droplet = digitalocean.Droplet("foobarDroplet",
+    size="s-1vcpu-1gb",
+    image="ubuntu-18-04-x64",
+    region="sgp1",
+    ipv6=True,
+    private_networking=True)
+foobar_floating_ip_assignment = digitalocean.FloatingIpAssignment("foobarFloatingIpAssignment",
+    ip_address=foobar_floating_ip.ip_address,
+    droplet_id=foobar_droplet.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const foobarFloatingIp = new digitalocean.FloatingIp("foobarFloatingIp", {region: "sgp1"});
+const foobarDroplet = new digitalocean.Droplet("foobarDroplet", {
+    size: "s-1vcpu-1gb",
+    image: "ubuntu-18-04-x64",
+    region: "sgp1",
+    ipv6: true,
+    privateNetworking: true,
+});
+const foobarFloatingIpAssignment = new digitalocean.FloatingIpAssignment("foobarFloatingIpAssignment", {
+    ipAddress: foobarFloatingIp.ipAddress,
+    dropletId: foobarDroplet.id,
+});
+```
+{{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a FloatingIpAssignment Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -28,7 +79,7 @@ Droplet.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FloatingIpAssignment</span><span class="p">(resource_name, opts=None, </span>droplet_id=None<span class="p">, </span>ip_address=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FloatingIpAssignment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>droplet_id=None<span class="p">, </span>ip_address=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -376,7 +427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing FloatingIpAssignment Resource {#look-up}
 
 Get an existing FloatingIpAssignment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#FloatingIpAssignmentState">FloatingIpAssignmentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#FloatingIpAssignment">FloatingIpAssignment</a></span></code></pre></div>

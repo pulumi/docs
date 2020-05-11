@@ -20,7 +20,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 
 
 ## Create a Cluster Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -225,18 +225,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -262,7 +250,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -270,7 +259,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High security cluster (true) or not. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -278,7 +268,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -303,7 +294,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Ssh key pair.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -311,7 +303,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Master ssh password.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -328,7 +321,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optional software list.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -336,7 +330,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This specify the related cluster id, if this cluster is a Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -344,7 +339,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Security Group ID for Cluster, you can also specify this key for each host group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -352,7 +348,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If this is set true, we can ssh into cluster. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -369,7 +366,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Use local metadb. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -377,7 +375,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -385,7 +384,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Global vswitch id, you can also specify it in host group.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -419,18 +419,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -456,7 +444,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -464,7 +453,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High security cluster (true) or not. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -472,7 +462,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -497,7 +488,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Ssh key pair.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -505,7 +497,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Master ssh password.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -522,7 +515,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optional software list.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -530,7 +524,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This specify the related cluster id, if this cluster is a Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -538,7 +533,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Security Group ID for Cluster, you can also specify this key for each host group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -546,7 +542,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If this is set true, we can ssh into cluster. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -563,7 +560,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Use local metadb. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -571,7 +569,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -579,7 +578,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Global vswitch id, you can also specify it in host group.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -613,18 +613,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -650,7 +638,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -658,7 +647,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High security cluster (true) or not. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -666,7 +656,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -691,7 +682,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Ssh key pair.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -699,7 +691,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Master ssh password.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -716,7 +709,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optional software list.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -724,7 +718,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This specify the related cluster id, if this cluster is a Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -732,7 +727,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Security Group ID for Cluster, you can also specify this key for each host group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -740,7 +736,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If this is set true, we can ssh into cluster. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -757,7 +754,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Use local metadb. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -765,7 +763,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -773,7 +772,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Global vswitch id, you can also specify it in host group.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -807,18 +807,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -844,7 +832,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -852,7 +841,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High security cluster (true) or not. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -860,7 +850,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -885,7 +876,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Ssh key pair.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -893,7 +885,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Master ssh password.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -910,7 +903,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optional software list.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -918,7 +912,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This specify the related cluster id, if this cluster is a Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -926,7 +921,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Security Group ID for Cluster, you can also specify this key for each host group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -934,7 +930,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If this is set true, we can ssh into cluster. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -951,7 +948,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Use local metadb. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -959,7 +957,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -967,7 +966,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Global vswitch id, you can also specify it in host group.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1052,7 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/emr/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/emr/#Cluster">Cluster</a></span></code></pre></div>
@@ -1205,7 +1205,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1213,7 +1214,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High security cluster (true) or not. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1230,7 +1232,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1255,7 +1258,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Ssh key pair.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1263,7 +1267,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Master ssh password.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1280,7 +1285,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optional software list.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1288,7 +1294,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This specify the related cluster id, if this cluster is a Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1296,7 +1303,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Security Group ID for Cluster, you can also specify this key for each host group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1304,7 +1312,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If this is set true, we can ssh into cluster. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1321,7 +1330,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Use local metadb. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1329,7 +1339,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1337,7 +1348,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Global vswitch id, you can also specify it in host group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1346,18 +1358,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd>
 
 </dl>
@@ -1399,7 +1399,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1407,7 +1408,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High security cluster (true) or not. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1424,7 +1426,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1449,7 +1452,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Ssh key pair.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1457,7 +1461,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Master ssh password.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1474,7 +1479,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optional software list.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1482,7 +1488,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This specify the related cluster id, if this cluster is a Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1490,7 +1497,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Security Group ID for Cluster, you can also specify this key for each host group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1498,7 +1506,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If this is set true, we can ssh into cluster. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1515,7 +1524,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Use local metadb. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1523,7 +1533,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1531,7 +1542,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Global vswitch id, you can also specify it in host group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1540,18 +1552,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd>
 
 </dl>
@@ -1593,7 +1593,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1601,7 +1602,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High security cluster (true) or not. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1618,7 +1620,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1643,7 +1646,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Ssh key pair.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1651,7 +1655,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Master ssh password.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1668,7 +1673,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optional software list.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1676,7 +1682,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This specify the related cluster id, if this cluster is a Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1684,7 +1691,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Security Group ID for Cluster, you can also specify this key for each host group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1692,7 +1700,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If this is set true, we can ssh into cluster. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1709,7 +1718,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Use local metadb. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1717,7 +1727,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1725,7 +1736,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Global vswitch id, you can also specify it in host group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1734,18 +1746,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd>
 
 </dl>
@@ -1787,7 +1787,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1795,7 +1796,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High security cluster (true) or not. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1812,7 +1814,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1837,7 +1840,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Ssh key pair.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1845,7 +1849,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Master ssh password.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1862,7 +1867,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optional software list.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1870,7 +1876,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This specify the related cluster id, if this cluster is a Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1878,7 +1885,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Security Group ID for Cluster, you can also specify this key for each host group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1886,7 +1894,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If this is set true, we can ssh into cluster. Default value is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1903,7 +1912,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Use local metadb. Default is false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1911,7 +1921,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1919,7 +1930,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Global vswitch id, you can also specify it in host group.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1928,18 +1940,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd>
 
 </dl>
@@ -1964,6 +1964,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr?tab=doc#ClusterBootstrapActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr?tab=doc#ClusterBootstrapActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Emr.Inputs.ClusterBootstrapActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Emr.Outputs.ClusterBootstrapAction.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2115,6 +2118,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr?tab=doc#ClusterHostGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr?tab=doc#ClusterHostGroupOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Emr.Inputs.ClusterHostGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Emr.Outputs.ClusterHostGroup.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

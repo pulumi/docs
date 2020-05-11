@@ -22,64 +22,59 @@ actual modification has not yet taken place. You can use the
 immediately. Using `apply_immediately` can result in a brief downtime as
 servers reboots.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Redis Cluster Mode Disabled
-
-To create a single shard primary with single read replica:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.elasticache.ReplicationGroup("example", {
-    automaticFailoverEnabled: true,
-    availabilityZones: [
-        "us-west-2a",
-        "us-west-2b",
-    ],
-    nodeType: "cache.m4.large",
-    numberCacheClusters: 2,
-    parameterGroupName: "default.redis3.2",
-    port: 6379,
-    replicationGroupDescription: "test description",
-});
-```
-
-You have two options for adjusting the number of replicas:
-
-* Adjusting `number_cache_clusters` directly. This will attempt to automatically add or remove replicas, but provides no granular control (e.g. preferred availability zone, cache cluster ID) for the added or removed replicas. This also currently expects cache cluster IDs in the form of `replication_group_id-00#`.
-* Otherwise for fine grained control of the underlying cache clusters, they can be added or removed with the [`aws.elasticache.Cluster` resource](https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html) and its `replication_group_id` attribute. In this situation, you will need to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to prevent perpetual differences with the `number_cache_cluster` attribute.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.elasticache.ReplicationGroup("example", {
-    automaticFailoverEnabled: true,
-    availabilityZones: [
-        "us-west-2a",
-        "us-west-2b",
-    ],
-    nodeType: "cache.m4.large",
-    numberCacheClusters: 2,
-    parameterGroupName: "default.redis3.2",
-    port: 6379,
-    replicationGroupDescription: "test description",
-}, { ignoreChanges: ["numberCacheClusters"] });
-const replica = new aws.elasticache.Cluster("replica", {
-    replicationGroupId: example.id,
-});
-```
-
+{{% example csharp %}}
+Coming soon!
 {{% /example %}}
-{{% example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.elasticache.ReplicationGroup("example", {
+    automaticFailoverEnabled: true,
+    availabilityZones: [
+        "us-west-2a",
+        "us-west-2b",
+    ],
+    nodeType: "cache.m4.large",
+    numberCacheClusters: 2,
+    parameterGroupName: "default.redis3.2",
+    port: 6379,
+    replicationGroupDescription: "test description",
+});
+```
+{{% /example %}}
+
 ### Redis Cluster Mode Enabled
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-To create two shards with a primary and a single read replica each:
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -96,20 +91,13 @@ const baz = new aws.elasticache.ReplicationGroup("baz", {
     replicationGroupDescription: "test description",
 });
 ```
-
-> **Note:** We currently do not support passing a `primary_cluster_id` in order to create the Replication Group.
-
-> **Note:** Automatic Failover is unavailable for Redis versions earlier than 2.8.6,
-and unavailable on T1 node types. For T2 node types, it is only available on Redis version 3.2.4 or later with cluster mode enabled. See the [High Availability Using Replication Groups](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Replication.html) guide
-for full details on using Replication Groups.
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a ReplicationGroup Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -117,7 +105,7 @@ for full details on using Replication Groups.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ReplicationGroup</span><span class="p">(resource_name, opts=None, </span>apply_immediately=None<span class="p">, </span>at_rest_encryption_enabled=None<span class="p">, </span>auth_token=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>automatic_failover_enabled=None<span class="p">, </span>availability_zones=None<span class="p">, </span>cluster_mode=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>maintenance_window=None<span class="p">, </span>node_type=None<span class="p">, </span>notification_topic_arn=None<span class="p">, </span>number_cache_clusters=None<span class="p">, </span>parameter_group_name=None<span class="p">, </span>port=None<span class="p">, </span>replication_group_description=None<span class="p">, </span>replication_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_group_names=None<span class="p">, </span>snapshot_arns=None<span class="p">, </span>snapshot_name=None<span class="p">, </span>snapshot_retention_limit=None<span class="p">, </span>snapshot_window=None<span class="p">, </span>subnet_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>transit_encryption_enabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ReplicationGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>at_rest_encryption_enabled=None<span class="p">, </span>auth_token=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>automatic_failover_enabled=None<span class="p">, </span>availability_zones=None<span class="p">, </span>cluster_mode=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>maintenance_window=None<span class="p">, </span>node_type=None<span class="p">, </span>notification_topic_arn=None<span class="p">, </span>number_cache_clusters=None<span class="p">, </span>parameter_group_name=None<span class="p">, </span>port=None<span class="p">, </span>replication_group_description=None<span class="p">, </span>replication_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_group_names=None<span class="p">, </span>snapshot_arns=None<span class="p">, </span>snapshot_name=None<span class="p">, </span>snapshot_retention_limit=None<span class="p">, </span>snapshot_window=None<span class="p">, </span>subnet_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>transit_encryption_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -531,7 +519,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -792,7 +780,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1053,7 +1041,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1314,7 +1302,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1517,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ReplicationGroup Resource {#look-up}
 
 Get an existing ReplicationGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#ReplicationGroupState">ReplicationGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#ReplicationGroup">ReplicationGroup</a></span></code></pre></div>
@@ -1907,7 +1895,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2195,7 +2183,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2483,7 +2471,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2771,7 +2759,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2805,6 +2793,9 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#ReplicationGroupClusterModeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#ReplicationGroupClusterModeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.Inputs.ReplicationGroupClusterModeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.Outputs.ReplicationGroupClusterMode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

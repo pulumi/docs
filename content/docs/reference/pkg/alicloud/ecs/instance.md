@@ -14,7 +14,7 @@ meta_desc: "Explore the Instance resource of the ecs module, including examples,
 
 
 ## Create a Instance Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -2006,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Instance Resource {#look-up}
 
 Get an existing Instance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#Instance">Instance</a></span></code></pre></div>
@@ -3879,6 +3879,9 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#InstanceDataDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#InstanceDataDiskOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.Inputs.InstanceDataDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.Outputs.InstanceDataDisk.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3922,7 +3925,6 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 - `cloud_essd`: The ESSD cloud disk.
 - `ephemeral_ssd`: The local SSD disk.
 Default to `cloud_efficiency`.
-* `encrypted` -(Optional, Bool, ForceNew) Encrypted the data in this disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3949,7 +3951,8 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4012,7 +4015,6 @@ Default to `cloud_efficiency`.
 - `cloud_essd`: The ESSD cloud disk.
 - `ephemeral_ssd`: The local SSD disk.
 Default to `cloud_efficiency`.
-* `encrypted` -(Optional, Bool, ForceNew) Encrypted the data in this disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4039,7 +4041,8 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4102,7 +4105,6 @@ Default to `cloud_efficiency`.
 - `cloud_essd`: The ESSD cloud disk.
 - `ephemeral_ssd`: The local SSD disk.
 Default to `cloud_efficiency`.
-* `encrypted` -(Optional, Bool, ForceNew) Encrypted the data in this disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4129,7 +4131,8 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4192,7 +4195,6 @@ Default to `cloud_efficiency`.
 - `cloud_essd`: The ESSD cloud disk.
 - `ephemeral_ssd`: The local SSD disk.
 Default to `cloud_efficiency`.
-* `encrypted` -(Optional, Bool, ForceNew) Encrypted the data in this disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4219,7 +4221,8 @@ Default to `cloud_efficiency`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool, ForceNew) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

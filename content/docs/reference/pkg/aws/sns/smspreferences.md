@@ -12,24 +12,39 @@ meta_desc: "Explore the SmsPreferences resource of the sns module, including exa
 
 Provides a way to set SNS SMS preferences.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const updateSmsPrefs = new aws.sns.SmsPreferences("update_sms_prefs", {});
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a SmsPreferences Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -37,7 +52,7 @@ const updateSmsPrefs = new aws.sns.SmsPreferences("update_sms_prefs", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SmsPreferences</span><span class="p">(resource_name, opts=None, </span>default_sender_id=None<span class="p">, </span>default_sms_type=None<span class="p">, </span>delivery_status_iam_role_arn=None<span class="p">, </span>delivery_status_success_sampling_rate=None<span class="p">, </span>monthly_spend_limit=None<span class="p">, </span>usage_report_s3_bucket=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SmsPreferences</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_sender_id=None<span class="p">, </span>default_sms_type=None<span class="p">, </span>delivery_status_iam_role_arn=None<span class="p">, </span>delivery_status_success_sampling_rate=None<span class="p">, </span>monthly_spend_limit=None<span class="p">, </span>usage_report_s3_bucket=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -529,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SmsPreferences Resource {#look-up}
 
 Get an existing SmsPreferences resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#SmsPreferencesState">SmsPreferencesState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#SmsPreferences">SmsPreferences</a></span></code></pre></div>

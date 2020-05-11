@@ -1,7 +1,8 @@
 
 ---
 title: "Cluster"
-block_external_search_index: true
+title_tag: "Resource Cluster | Module dataproc | Package GCP"
+meta_desc: "Explore the Cluster resource of the dataproc module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Cloud Dataproc cluster resource within GCP. For more information see"
 ---
 
 
@@ -114,7 +115,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
 
 
 ## Create a Cluster Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -122,7 +123,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>cluster_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -602,7 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#Cluster">Cluster</a></span></code></pre></div>
@@ -971,6 +972,9 @@ Defaults to `global`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1032,7 +1036,9 @@ You can specify multiple versions of these. Structure defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The settings for auto deletion cluster schedule.
+Structure defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1159,7 +1165,9 @@ You can specify multiple versions of these. Structure defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The settings for auto deletion cluster schedule.
+Structure defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1286,7 +1294,9 @@ You can specify multiple versions of these. Structure defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The settings for auto deletion cluster schedule.
+Structure defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1413,7 +1423,9 @@ You can specify multiple versions of these. Structure defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The settings for auto deletion cluster schedule.
+Structure defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1494,6 +1506,9 @@ in a cluster.. Structure defined below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigAutoscalingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigAutoscalingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigAutoscalingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigAutoscalingConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1572,6 +1587,9 @@ in a cluster.. Structure defined below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEncryptionConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEncryptionConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigEncryptionConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigEncryptionConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1655,6 +1673,9 @@ all instances in the cluster.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigGceClusterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigGceClusterConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigGceClusterConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2067,6 +2088,9 @@ which computing resources are available for use with other configs such as
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigInitializationActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigInitializationActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigInitializationActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigInitializationAction.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2080,7 +2104,9 @@ which computing resources are available for use with other configs such as
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The script to be executed during initialization of the cluster.
+The script must be a GCS file with a gs:// prefix.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2106,7 +2132,9 @@ computed value if not set (currently 300).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The script to be executed during initialization of the cluster.
+The script must be a GCS file with a gs:// prefix.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2132,7 +2160,9 @@ computed value if not set (currently 300).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The script to be executed during initialization of the cluster.
+The script must be a GCS file with a gs:// prefix.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2158,7 +2188,9 @@ computed value if not set (currently 300).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The script to be executed during initialization of the cluster.
+The script must be a GCS file with a gs:// prefix.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2185,6 +2217,9 @@ computed value if not set (currently 300).
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigLifecycleConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigLifecycleConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigLifecycleConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigLifecycleConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2345,6 +2380,9 @@ Example: "2014-10-02T15:01:23.045123456Z".
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigMasterConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2417,7 +2455,9 @@ for details about which CPU families are available (and defaulted) for each zone
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the number of preemptible nodes to create.
+Defaults to 0.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2491,7 +2531,9 @@ for details about which CPU families are available (and defaulted) for each zone
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the number of preemptible nodes to create.
+Defaults to 0.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2565,7 +2607,9 @@ for details about which CPU families are available (and defaulted) for each zone
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the number of preemptible nodes to create.
+Defaults to 0.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2639,7 +2683,9 @@ for details about which CPU families are available (and defaulted) for each zone
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the number of preemptible nodes to create.
+Defaults to 0.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2655,6 +2701,9 @@ for details about which CPU families are available (and defaulted) for each zone
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigAcceleratorOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigMasterConfigAccelerator.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2770,6 +2819,9 @@ for details about which CPU families are available (and defaulted) for each zone
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigDiskConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigDiskConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigMasterConfigDiskConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2942,6 +2994,9 @@ attached to each preemptible worker node. Defaults to 0.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigPreemptibleWorkerConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2972,7 +3027,9 @@ attached to each preemptible worker node. Defaults to 0.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the number of preemptible nodes to create.
+Defaults to 0.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3004,7 +3061,9 @@ attached to each preemptible worker node. Defaults to 0.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the number of preemptible nodes to create.
+Defaults to 0.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3036,7 +3095,9 @@ attached to each preemptible worker node. Defaults to 0.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the number of preemptible nodes to create.
+Defaults to 0.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3068,7 +3129,9 @@ attached to each preemptible worker node. Defaults to 0.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the number of preemptible nodes to create.
+Defaults to 0.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3084,6 +3147,9 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3256,6 +3322,9 @@ attached to each preemptible worker node. Defaults to 0.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigSecurityConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigSecurityConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3334,6 +3403,9 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigKerberosConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigKerberosConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigSecurityConfigKerberosConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigSecurityConfigKerberosConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3982,6 +4054,9 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSoftwareConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSoftwareConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigSoftwareConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigSoftwareConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4229,6 +4304,9 @@ a cluster. For a list of valid properties please see
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4301,7 +4379,9 @@ for details about which CPU families are available (and defaulted) for each zone
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the number of preemptible nodes to create.
+Defaults to 0.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4375,7 +4455,9 @@ for details about which CPU families are available (and defaulted) for each zone
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the number of preemptible nodes to create.
+Defaults to 0.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4449,7 +4531,9 @@ for details about which CPU families are available (and defaulted) for each zone
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the number of preemptible nodes to create.
+Defaults to 0.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4523,7 +4607,9 @@ for details about which CPU families are available (and defaulted) for each zone
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the number of preemptible nodes to create.
+Defaults to 0.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4539,6 +4625,9 @@ for details about which CPU families are available (and defaulted) for each zone
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigAcceleratorOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfigAccelerator.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4654,6 +4743,9 @@ for details about which CPU families are available (and defaulted) for each zone
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigDiskConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigDiskConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfigDiskConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4828,8 +4920,7 @@ attached to each preemptible worker node. Defaults to 0.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

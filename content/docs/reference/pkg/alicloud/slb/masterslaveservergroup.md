@@ -26,10 +26,36 @@ A master slave server group contains two ECS instances. The master slave server 
 
 > **NOTE:** Available in 1.54.0+
 
+
+## Block servers
+
+The servers mapping supports the following:
+
+* `server_ids` - (Required) A list backend server ID (ECS instance ID).
+* `port` - (Required) The port used by the backend server. Valid value range: [1-65535].
+* `weight` - (Optional) Weight of the backend server. Valid value range: [0-100]. Default to 100.
+* `type` - (Optional, Available in 1.51.0+) Type of the backend server. Valid value ecs, eni. Default to eni.
+* `server_type` - (Optional) The server type of the backend server. Valid value Master, Slave.
+* `is_backup` - (Removed from v1.63.0) Determine if the server is executing. Valid value 0, 1. 
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -38,19 +64,19 @@ const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccSlbMasterSlaveServerGroupVpc";
 const number = config.get("number") || "1";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-});
-const defaultInstanceTypes = alicloud.ecs.getInstanceTypes({
+}, { async: true }));
+const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     eniAmount: 2,
-});
-const image = alicloud.ecs.getImages({
+}, { async: true }));
+const image = pulumi.output(alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-});
+}, { async: true }));
 const mainNetwork = new alicloud.vpc.Network("main", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -130,24 +156,13 @@ const tcp = new alicloud.slb.Listener("tcp", {
     unhealthyThreshold: 8,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-## Block servers
-
-The servers mapping supports the following:
-
-* `server_ids` - (Required) A list backend server ID (ECS instance ID).
-* `port` - (Required) The port used by the backend server. Valid value range: [1-65535].
-* `weight` - (Optional) Weight of the backend server. Valid value range: [0-100]. Default to 100.
-* `type` - (Optional, Available in 1.51.0+) Type of the backend server. Valid value ecs, eni. Default to eni.
-* `server_type` - (Optional) The server type of the backend server. Valid value Master, Slave.
-* `is_backup` - (Removed from v1.63.0) Determine if the server is executing. Valid value 0, 1. 
-
 
 
 ## Create a MasterSlaveServerGroup Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -575,7 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing MasterSlaveServerGroup Resource {#look-up}
 
 Get an existing MasterSlaveServerGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#MasterSlaveServerGroupState">MasterSlaveServerGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#MasterSlaveServerGroup">MasterSlaveServerGroup</a></span></code></pre></div>
@@ -883,6 +898,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroupServerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroupServerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Slb.Inputs.MasterSlaveServerGroupServerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Slb.Outputs.MasterSlaveServerGroupServer.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

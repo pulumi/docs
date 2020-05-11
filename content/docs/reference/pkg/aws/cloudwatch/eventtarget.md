@@ -12,50 +12,7 @@ meta_desc: "Explore the EventTarget resource of the cloudwatch module, including
 
 Provides a CloudWatch Event Target resource.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const console = new aws.cloudwatch.EventRule("console", {
-    description: "Capture all EC2 scaling events",
-    eventPattern: `{
-  "source": [
-    "aws.autoscaling"
-  ],
-  "detail-type": [
-    "EC2 Instance Launch Successful",
-    "EC2 Instance Terminate Successful",
-    "EC2 Instance Launch Unsuccessful",
-    "EC2 Instance Terminate Unsuccessful"
-  ]
-}
-`,
-});
-const testStream = new aws.kinesis.Stream("test_stream", {
-    shardCount: 1,
-});
-const yada = new aws.cloudwatch.EventTarget("yada", {
-    arn: testStream.arn,
-    rule: console.name,
-    runCommandTargets: [
-        {
-            key: "tag:Name",
-            values: ["FooBar"],
-        },
-        {
-            key: "InstanceIds",
-            values: ["i-162058cd308bffec2"],
-        },
-    ],
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Example SSM Document Usage
 
 ```typescript
@@ -215,10 +172,68 @@ const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
 });
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const console = new aws.cloudwatch.EventRule("console", {
+    description: "Capture all EC2 scaling events",
+    eventPattern: `{
+  "source": [
+    "aws.autoscaling"
+  ],
+  "detail-type": [
+    "EC2 Instance Launch Successful",
+    "EC2 Instance Terminate Successful",
+    "EC2 Instance Launch Unsuccessful",
+    "EC2 Instance Terminate Unsuccessful"
+  ]
+}
+`,
+});
+const testStream = new aws.kinesis.Stream("test_stream", {
+    shardCount: 1,
+});
+const yada = new aws.cloudwatch.EventTarget("yada", {
+    arn: testStream.arn,
+    rule: console.name,
+    runCommandTargets: [
+        {
+            key: "tag:Name",
+            values: ["FooBar"],
+        },
+        {
+            key: "InstanceIds",
+            values: ["i-162058cd308bffec2"],
+        },
+    ],
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventTarget Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -226,7 +241,7 @@ const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EventTarget</span><span class="p">(resource_name, opts=None, </span>arn=None<span class="p">, </span>batch_target=None<span class="p">, </span>ecs_target=None<span class="p">, </span>input=None<span class="p">, </span>input_path=None<span class="p">, </span>input_transformer=None<span class="p">, </span>kinesis_target=None<span class="p">, </span>role_arn=None<span class="p">, </span>rule=None<span class="p">, </span>run_command_targets=None<span class="p">, </span>sqs_target=None<span class="p">, </span>target_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EventTarget</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>arn=None<span class="p">, </span>batch_target=None<span class="p">, </span>ecs_target=None<span class="p">, </span>input=None<span class="p">, </span>input_path=None<span class="p">, </span>input_transformer=None<span class="p">, </span>kinesis_target=None<span class="p">, </span>role_arn=None<span class="p">, </span>rule=None<span class="p">, </span>run_command_targets=None<span class="p">, </span>sqs_target=None<span class="p">, </span>target_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -938,7 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing EventTarget Resource {#look-up}
 
 Get an existing EventTarget resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventTargetState">EventTargetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventTarget">EventTarget</a></span></code></pre></div>
@@ -1539,6 +1554,9 @@ that is used for extracting part of the matched event when passing it to the tar
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetBatchTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetBatchTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetBatchTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetBatchTarget.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1725,6 +1743,9 @@ that is used for extracting part of the matched event when passing it to the tar
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetEcsTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetEcsTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1985,6 +2006,9 @@ that is used for extracting part of the matched event when passing it to the tar
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetNetworkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetNetworkConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetEcsTargetNetworkConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetEcsTargetNetworkConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2136,6 +2160,9 @@ that is used for extracting part of the matched event when passing it to the tar
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetInputTransformerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetInputTransformerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetInputTransformerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetInputTransformer.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2251,6 +2278,9 @@ that is used for extracting part of the matched event when passing it to the tar
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetKinesisTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetKinesisTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetKinesisTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetKinesisTarget.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2329,6 +2359,9 @@ that is used for extracting part of the matched event when passing it to the tar
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetRunCommandTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetRunCommandTargetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetRunCommandTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetRunCommandTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2444,6 +2477,9 @@ that is used for extracting part of the matched event when passing it to the tar
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetSqsTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetSqsTargetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetSqsTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetSqsTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

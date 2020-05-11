@@ -18,7 +18,7 @@ Manages a MS SQL Database.
 
 
 ## Create a Database Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +26,7 @@ Manages a MS SQL Database.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Database</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_pause_delay_in_minutes=None<span class="p">, </span>collation=None<span class="p">, </span>create_mode=None<span class="p">, </span>creation_source_database_id=None<span class="p">, </span>elastic_pool_id=None<span class="p">, </span>license_type=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>min_capacity=None<span class="p">, </span>name=None<span class="p">, </span>read_replica_count=None<span class="p">, </span>read_scale=None<span class="p">, </span>restore_point_in_time=None<span class="p">, </span>sample_name=None<span class="p">, </span>server_id=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>threat_detection_policy=None<span class="p">, </span>zone_redundant=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Database</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_pause_delay_in_minutes=None<span class="p">, </span>collation=None<span class="p">, </span>create_mode=None<span class="p">, </span>creation_source_database_id=None<span class="p">, </span>elastic_pool_id=None<span class="p">, </span>extended_auditing_policy=None<span class="p">, </span>license_type=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>min_capacity=None<span class="p">, </span>name=None<span class="p">, </span>read_replica_count=None<span class="p">, </span>read_scale=None<span class="p">, </span>restore_point_in_time=None<span class="p">, </span>sample_name=None<span class="p">, </span>server_id=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>threat_detection_policy=None<span class="p">, </span>zone_redundant=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -254,6 +254,15 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>Extended<wbr>Auditing<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>License<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -419,6 +428,15 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the elastic pool containing this database. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Extended<wbr>Auditing<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -592,6 +610,15 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>extended<wbr>Auditing<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>license<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -757,6 +784,15 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the elastic pool containing this database. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>extended_<wbr>auditing_<wbr>policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Dict[Database<wbr>Extended<wbr>Auditing<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -950,14 +986,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Database Resource {#look-up}
 
 Get an existing Database resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/mssql/#DatabaseState">DatabaseState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/mssql/#Database">Database</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_pause_delay_in_minutes=None<span class="p">, </span>collation=None<span class="p">, </span>create_mode=None<span class="p">, </span>creation_source_database_id=None<span class="p">, </span>elastic_pool_id=None<span class="p">, </span>license_type=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>min_capacity=None<span class="p">, </span>name=None<span class="p">, </span>read_replica_count=None<span class="p">, </span>read_scale=None<span class="p">, </span>restore_point_in_time=None<span class="p">, </span>sample_name=None<span class="p">, </span>server_id=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>threat_detection_policy=None<span class="p">, </span>zone_redundant=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_pause_delay_in_minutes=None<span class="p">, </span>collation=None<span class="p">, </span>create_mode=None<span class="p">, </span>creation_source_database_id=None<span class="p">, </span>elastic_pool_id=None<span class="p">, </span>extended_auditing_policy=None<span class="p">, </span>license_type=None<span class="p">, </span>max_size_gb=None<span class="p">, </span>min_capacity=None<span class="p">, </span>name=None<span class="p">, </span>read_replica_count=None<span class="p">, </span>read_scale=None<span class="p">, </span>restore_point_in_time=None<span class="p">, </span>sample_name=None<span class="p">, </span>server_id=None<span class="p">, </span>sku_name=None<span class="p">, </span>tags=None<span class="p">, </span>threat_detection_policy=None<span class="p">, </span>zone_redundant=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1114,6 +1150,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the elastic pool containing this database. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Extended<wbr>Auditing<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1287,6 +1332,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Extended<wbr>Auditing<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>License<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1452,6 +1506,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the elastic pool containing this database. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>extended<wbr>Auditing<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1625,6 +1688,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>extended_<wbr>auditing_<wbr>policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Dict[Database<wbr>Extended<wbr>Auditing<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>license_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1755,6 +1827,196 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+<h4 id="databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseExtendedAuditingPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatabaseExtendedAuditingPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#DatabaseExtendedAuditingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#DatabaseExtendedAuditingPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.DatabaseExtendedAuditingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.DatabaseExtendedAuditingPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Storage<wbr>Account<wbr>Access<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the access key to use for the auditing storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Storage<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retention<wbr>In<wbr>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days to retain logs for in the storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether `storage_account_access_key` value is the storage's secondary key.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Storage<wbr>Account<wbr>Access<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the access key to use for the auditing storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Storage<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retention<wbr>In<wbr>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days to retain logs for in the storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether `storage_account_access_key` value is the storage's secondary key.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>storage<wbr>Account<wbr>Access<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the access key to use for the auditing storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>storage<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retention<wbr>In<wbr>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days to retain logs for in the storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether `storage_account_access_key` value is the storage's secondary key.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>storage_<wbr>account_<wbr>access_<wbr>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the access key to use for the auditing storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>storage_<wbr>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retention_<wbr>in_<wbr>days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days to retain logs for in the storage account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether `storage_account_access_key` value is the storage's secondary key.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseThreatDetectionPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatabaseThreatDetectionPolicy">output</a> API doc for this type.
@@ -1762,6 +2024,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#DatabaseThreatDetectionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#DatabaseThreatDetectionPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.DatabaseThreatDetectionPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.DatabaseThreatDetectionPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

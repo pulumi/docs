@@ -39,7 +39,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 ## Create a IApp Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -47,7 +47,7 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IApp</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>devicegroup=None<span class="p">, </span>execute_action=None<span class="p">, </span>inherited_devicegroup=None<span class="p">, </span>inherited_traffic_group=None<span class="p">, </span>jsonfile=None<span class="p">, </span>lists=None<span class="p">, </span>metadatas=None<span class="p">, </span>name=None<span class="p">, </span>partition=None<span class="p">, </span>strict_updates=None<span class="p">, </span>tables=None<span class="p">, </span>template=None<span class="p">, </span>template_modified=None<span class="p">, </span>template_prerequisite_errors=None<span class="p">, </span>traffic_group=None<span class="p">, </span>variables=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IApp</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>devicegroup=None<span class="p">, </span>execute_action=None<span class="p">, </span>inherited_devicegroup=None<span class="p">, </span>inherited_traffic_group=None<span class="p">, </span>jsonfile=None<span class="p">, </span>lists=None<span class="p">, </span>metadatas=None<span class="p">, </span>name=None<span class="p">, </span>partition=None<span class="p">, </span>strict_updates=None<span class="p">, </span>tables=None<span class="p">, </span>template=None<span class="p">, </span>template_modified=None<span class="p">, </span>template_prerequisite_errors=None<span class="p">, </span>traffic_group=None<span class="p">, </span>variables=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -919,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing IApp Resource {#look-up}
 
 Get an existing IApp resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/sys/#IAppState">IAppState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/sys/#IApp">IApp</a></span></code></pre></div>
@@ -1680,6 +1680,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#IAppListArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#IAppListOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Sys.Inputs.IAppListArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Sys.Outputs.IAppList.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1787,6 +1790,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#IAppMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#IAppMetadataOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Sys.Inputs.IAppMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Sys.Outputs.IAppMetadata.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1893,6 +1899,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#IAppTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#IAppTableOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Sys.Inputs.IAppTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Sys.Outputs.IAppTable.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2069,6 +2078,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#IAppTableRowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#IAppTableRowOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Sys.Inputs.IAppTableRowArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Sys.Outputs.IAppTableRow.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2143,6 +2155,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#IAppVariableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#IAppVariableOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Sys.Inputs.IAppVariableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Sys.Outputs.IAppVariable.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -23,6 +23,6 @@ Explore the resources and functions of the cloud9 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.3.0</dd>
 </dl>
 

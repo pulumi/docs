@@ -13,16 +13,32 @@ meta_desc: "Explore the GroupMembership resource of the iam module, including ex
 > **WARNING:** Multiple aws.iam.GroupMembership resources with the same group name will produce inconsistent behavior!
 
 Provides a top level resource to manage IAM Group membership for IAM Users. For
-more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
-[IAM Users][2]
+more information on managing IAM Groups or IAM Users, see [IAM Groups](https://www.terraform.io/docs/providers/aws/r/iam_group.html) or
+[IAM Users](https://www.terraform.io/docs/providers/aws/r/iam_user.html)
 
 > **Note:** `aws.iam.GroupMembership` will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
 [`aws.iam.UserGroupMembership` resource][3].
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -38,14 +54,13 @@ const team = new aws.iam.GroupMembership("team", {
     ],
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a GroupMembership Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -53,7 +68,7 @@ const team = new aws.iam.GroupMembership("team", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GroupMembership</span><span class="p">(resource_name, opts=None, </span>group=None<span class="p">, </span>name=None<span class="p">, </span>users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GroupMembership</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>group=None<span class="p">, </span>name=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -437,7 +452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GroupMembership Resource {#look-up}
 
 Get an existing GroupMembership resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#GroupMembershipState">GroupMembershipState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#GroupMembership">GroupMembership</a></span></code></pre></div>

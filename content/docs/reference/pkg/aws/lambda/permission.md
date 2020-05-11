@@ -13,52 +13,7 @@ meta_desc: "Explore the Permission resource of the lambda module, including exam
 Creates a Lambda permission to allow external sources invoking the Lambda function
 (e.g. CloudWatch Event Rule, SNS or S3).
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const iamForLambda = new aws.iam.Role("iam_for_lambda", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "lambda.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
-});
-const testLambda = new aws.lambda.Function("test_lambda", {
-    code: new pulumi.asset.FileArchive("lambdatest.zip"),
-    handler: "exports.handler",
-    role: iamForLambda.arn,
-    runtime: "nodejs8.10",
-});
-const testAlias = new aws.lambda.Alias("test_alias", {
-    description: "a sample description",
-    functionName: testLambda.functionName,
-    functionVersion: "$LATEST",
-});
-const allowCloudwatch = new aws.lambda.Permission("allow_cloudwatch", {
-    action: "lambda:InvokeFunction",
-    function: testLambda.functionName,
-    principal: "events.amazonaws.com",
-    qualifier: testAlias.name,
-    sourceArn: "arn:aws:events:eu-west-1:111122223333:rule/RunDaily",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Usage with SNS
 
 ```typescript
@@ -118,10 +73,70 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
 });
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const iamForLambda = new aws.iam.Role("iam_for_lambda", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`,
+});
+const testLambda = new aws.lambda.Function("test_lambda", {
+    code: new pulumi.asset.FileArchive("lambdatest.zip"),
+    handler: "exports.handler",
+    role: iamForLambda.arn,
+    runtime: "nodejs8.10",
+});
+const testAlias = new aws.lambda.Alias("test_alias", {
+    description: "a sample description",
+    functionName: testLambda.functionName,
+    functionVersion: "$LATEST",
+});
+const allowCloudwatch = new aws.lambda.Permission("allow_cloudwatch", {
+    action: "lambda:InvokeFunction",
+    function: testLambda.functionName,
+    principal: "events.amazonaws.com",
+    qualifier: testAlias.name,
+    sourceArn: "arn:aws:events:eu-west-1:111122223333:rule/RunDaily",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Permission Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -129,7 +144,7 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Permission</span><span class="p">(resource_name, opts=None, </span>action=None<span class="p">, </span>event_source_token=None<span class="p">, </span>function=None<span class="p">, </span>principal=None<span class="p">, </span>qualifier=None<span class="p">, </span>source_account=None<span class="p">, </span>source_arn=None<span class="p">, </span>statement_id=None<span class="p">, </span>statement_id_prefix=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Permission</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action=None<span class="p">, </span>event_source_token=None<span class="p">, </span>function=None<span class="p">, </span>principal=None<span class="p">, </span>qualifier=None<span class="p">, </span>source_account=None<span class="p">, </span>source_arn=None<span class="p">, </span>statement_id=None<span class="p">, </span>statement_id_prefix=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -336,7 +351,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -433,7 +448,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -530,7 +545,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -627,7 +642,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -765,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Permission Resource {#look-up}
 
 Get an existing Permission resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#PermissionState">PermissionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission">Permission</a></span></code></pre></div>
@@ -901,7 +916,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -998,7 +1013,7 @@ API Gateway ARNs have a unique structure described
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1095,7 +1110,7 @@ API Gateway ARNs have a unique structure described
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1192,7 +1207,7 @@ API Gateway ARNs have a unique structure described
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 {{% /md %}}</dd>
 
     <dt class="property-optional"

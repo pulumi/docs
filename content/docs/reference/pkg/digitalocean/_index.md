@@ -52,6 +52,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
     <li><a href="getdroplet" title="GetDroplet"><span class="symbol function"></span>GetDroplet</a></li>
     <li><a href="getdropletsnapshot" title="GetDropletSnapshot"><span class="symbol function"></span>GetDropletSnapshot</a></li>
+    <li><a href="getdroplets" title="GetDroplets"><span class="symbol function"></span>GetDroplets</a></li>
     <li><a href="getfloatingip" title="GetFloatingIp"><span class="symbol function"></span>GetFloatingIp</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
     <li><a href="getimages" title="GetImages"><span class="symbol function"></span>GetImages</a></li>
@@ -64,6 +65,10 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="getregion" title="GetRegion"><span class="symbol function"></span>GetRegion</a></li>
     <li><a href="getregions" title="GetRegions"><span class="symbol function"></span>GetRegions</a></li>
     <li><a href="getsizes" title="GetSizes"><span class="symbol function"></span>GetSizes</a></li>
+    <li><a href="getspacesbucket" title="GetSpacesBucket"><span class="symbol function"></span>GetSpacesBucket</a></li>
+    <li><a href="getspacesbucketobject" title="GetSpacesBucketObject"><span class="symbol function"></span>GetSpacesBucketObject</a></li>
+    <li><a href="getspacesbucketobjects" title="GetSpacesBucketObjects"><span class="symbol function"></span>GetSpacesBucketObjects</a></li>
+    <li><a href="getspacesbuckets" title="GetSpacesBuckets"><span class="symbol function"></span>GetSpacesBuckets</a></li>
     <li><a href="getsshkey" title="GetSshKey"><span class="symbol function"></span>GetSshKey</a></li>
     <li><a href="gettag" title="GetTag"><span class="symbol function"></span>GetTag</a></li>
     <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
@@ -80,6 +85,6 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.4.0</dd>
 </dl>
 

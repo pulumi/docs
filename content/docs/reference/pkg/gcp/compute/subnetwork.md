@@ -1,7 +1,8 @@
 
 ---
 title: "Subnetwork"
-block_external_search_index: true
+title_tag: "Resource Subnetwork | Module compute | Package GCP"
+meta_desc: "Explore the Subnetwork resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A VPC network is a virtual version of the traditional physical networks"
 ---
 
 
@@ -43,7 +44,7 @@ To get more information about Subnetwork, see:
 
 
 ## Create a Subnetwork Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -51,7 +52,7 @@ To get more information about Subnetwork, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subnetwork</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>ip_cidr_range=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>private_ip_google_access=None<span class="p">, </span>project=None<span class="p">, </span>purpose=None<span class="p">, </span>region=None<span class="p">, </span>role=None<span class="p">, </span>secondary_ip_ranges=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subnetwork</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>ip_cidr_range=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>private_ip_google_access=None<span class="p">, </span>project=None<span class="p">, </span>purpose=None<span class="p">, </span>region=None<span class="p">, </span>role=None<span class="p">, </span>secondary_ip_ranges=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -229,9 +230,10 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork.
-For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and non-overlapping within a network. Only IPv4 is
-supported.
+    <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -240,7 +242,8 @@ supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The network this subnet belongs to. Only networks that are in the distributed mode can have subnetworks.
+    <dd>{{% md %}}The network this subnet belongs to.
+Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -249,8 +252,9 @@ supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource. This field can be set only
-at resource creation time.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource. This field can be set only at resource
+creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -259,8 +263,9 @@ at resource creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver.
-This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_LOAD_BALANCER'
+    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
+logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -269,10 +274,13 @@ This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially
+creating the resource. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -281,8 +289,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private
-Google Access.
+    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
+access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -301,9 +309,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose
-set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -321,9 +332,11 @@ If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_B
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be
-set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A
-BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining.
+    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -332,12 +345,10 @@ BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">List&lt;Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such
-VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary
-ranges. **Note**: This field uses [attr-as-block mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html)
-to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following
-syntax: 'example=[]' For more details about this behavior, see [this
-section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value).
+    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
+contained in this subnetwork. The primary IP of such VM must belong
+to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -353,9 +364,10 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork.
-For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and non-overlapping within a network. Only IPv4 is
-supported.
+    <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -364,7 +376,8 @@ supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The network this subnet belongs to. Only networks that are in the distributed mode can have subnetworks.
+    <dd>{{% md %}}The network this subnet belongs to.
+Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -373,8 +386,9 @@ supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource. This field can be set only
-at resource creation time.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource. This field can be set only at resource
+creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -383,8 +397,9 @@ at resource creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver.
-This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_LOAD_BALANCER'
+    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
+logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -393,10 +408,13 @@ This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially
+creating the resource. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -405,8 +423,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private
-Google Access.
+    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
+access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -425,9 +443,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose
-set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -445,9 +466,11 @@ If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_B
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be
-set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A
-BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining.
+    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -456,12 +479,10 @@ BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">[]Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such
-VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary
-ranges. **Note**: This field uses [attr-as-block mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html)
-to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following
-syntax: 'example=[]' For more details about this behavior, see [this
-section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value).
+    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
+contained in this subnetwork. The primary IP of such VM must belong
+to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -477,9 +498,10 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork.
-For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and non-overlapping within a network. Only IPv4 is
-supported.
+    <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -488,7 +510,8 @@ supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The network this subnet belongs to. Only networks that are in the distributed mode can have subnetworks.
+    <dd>{{% md %}}The network this subnet belongs to.
+Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -497,8 +520,9 @@ supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource. This field can be set only
-at resource creation time.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource. This field can be set only at resource
+creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -507,8 +531,9 @@ at resource creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver.
-This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_LOAD_BALANCER'
+    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
+logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -517,10 +542,13 @@ This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially
+creating the resource. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -529,8 +557,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private
-Google Access.
+    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
+access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -549,9 +577,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose
-set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -569,9 +600,11 @@ If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_B
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be
-set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A
-BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining.
+    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -580,12 +613,10 @@ BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such
-VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary
-ranges. **Note**: This field uses [attr-as-block mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html)
-to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following
-syntax: 'example=[]' For more details about this behavior, see [this
-section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value).
+    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
+contained in this subnetwork. The primary IP of such VM must belong
+to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -601,9 +632,10 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork.
-For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and non-overlapping within a network. Only IPv4 is
-supported.
+    <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -612,7 +644,8 @@ supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The network this subnet belongs to. Only networks that are in the distributed mode can have subnetworks.
+    <dd>{{% md %}}The network this subnet belongs to.
+Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -621,8 +654,9 @@ supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource. This field can be set only
-at resource creation time.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource. This field can be set only at resource
+creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -631,8 +665,9 @@ at resource creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Dict[Subnetwork<wbr>Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver.
-This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_LOAD_BALANCER'
+    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
+logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -641,10 +676,13 @@ This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially
+creating the resource. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -653,8 +691,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private
-Google Access.
+    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
+access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -673,9 +711,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose
-set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -693,9 +734,11 @@ If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_B
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be
-set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A
-BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining.
+    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -704,12 +747,10 @@ BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">List[Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range]</a></span>
     </dt>
-    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such
-VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary
-ranges. **Note**: This field uses [attr-as-block mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html)
-to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following
-syntax: 'example=[]' For more details about this behavior, see [this
-section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value).
+    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
+contained in this subnetwork. The primary IP of such VM must belong
+to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -939,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Subnetwork Resource {#look-up}
 
 Get an existing Subnetwork resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SubnetworkState">SubnetworkState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Subnetwork">Subnetwork</a></span></code></pre></div>
@@ -1075,8 +1116,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource. This field can be set only
-at resource creation time.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource. This field can be set only at resource
+creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1103,9 +1145,10 @@ at resource creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork.
-For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and non-overlapping within a network. Only IPv4 is
-supported.
+    <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1114,8 +1157,9 @@ supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver.
-This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_LOAD_BALANCER'
+    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
+logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1124,10 +1168,13 @@ This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially
+creating the resource. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1136,7 +1183,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The network this subnet belongs to. Only networks that are in the distributed mode can have subnetworks.
+    <dd>{{% md %}}The network this subnet belongs to.
+Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1145,8 +1193,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private
-Google Access.
+    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
+access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,9 +1213,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose
-set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1185,9 +1236,11 @@ If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_B
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be
-set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A
-BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining.
+    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1196,12 +1249,10 @@ BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">List&lt;Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such
-VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary
-ranges. **Note**: This field uses [attr-as-block mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html)
-to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following
-syntax: 'example=[]' For more details about this behavior, see [this
-section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value).
+    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
+contained in this subnetwork. The primary IP of such VM must belong
+to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1235,8 +1286,9 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource. This field can be set only
-at resource creation time.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource. This field can be set only at resource
+creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1263,9 +1315,10 @@ at resource creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork.
-For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and non-overlapping within a network. Only IPv4 is
-supported.
+    <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1274,8 +1327,9 @@ supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver.
-This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_LOAD_BALANCER'
+    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
+logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1284,10 +1338,13 @@ This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially
+creating the resource. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1296,7 +1353,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The network this subnet belongs to. Only networks that are in the distributed mode can have subnetworks.
+    <dd>{{% md %}}The network this subnet belongs to.
+Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1305,8 +1363,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private
-Google Access.
+    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
+access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1325,9 +1383,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose
-set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1345,9 +1406,11 @@ If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_B
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be
-set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A
-BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining.
+    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1356,12 +1419,10 @@ BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">[]Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such
-VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary
-ranges. **Note**: This field uses [attr-as-block mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html)
-to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following
-syntax: 'example=[]' For more details about this behavior, see [this
-section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value).
+    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
+contained in this subnetwork. The primary IP of such VM must belong
+to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1395,8 +1456,9 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource. This field can be set only
-at resource creation time.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource. This field can be set only at resource
+creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1423,9 +1485,10 @@ at resource creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork.
-For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and non-overlapping within a network. Only IPv4 is
-supported.
+    <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1434,8 +1497,9 @@ supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver.
-This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_LOAD_BALANCER'
+    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
+logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1444,10 +1508,13 @@ This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially
+creating the resource. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1456,7 +1523,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The network this subnet belongs to. Only networks that are in the distributed mode can have subnetworks.
+    <dd>{{% md %}}The network this subnet belongs to.
+Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1465,8 +1533,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private
-Google Access.
+    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
+access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1485,9 +1553,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose
-set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1505,9 +1576,11 @@ If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_B
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be
-set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A
-BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining.
+    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1516,12 +1589,10 @@ BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such
-VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary
-ranges. **Note**: This field uses [attr-as-block mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html)
-to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following
-syntax: 'example=[]' For more details about this behavior, see [this
-section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value).
+    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
+contained in this subnetwork. The primary IP of such VM must belong
+to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1555,8 +1626,9 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource. This field can be set only
-at resource creation time.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource. This field can be set only at resource
+creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1583,9 +1655,10 @@ at resource creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork.
-For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and non-overlapping within a network. Only IPv4 is
-supported.
+    <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1594,8 +1667,9 @@ supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Dict[Subnetwork<wbr>Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver.
-This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_LOAD_BALANCER'
+    <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
+logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1604,10 +1678,13 @@ This field cannot be set if the 'purpose' of this subnetwork is 'INTERNAL_HTTPS_
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially
+creating the resource. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters
+long and match the regular expression `a-z?` which
+means the first character must be a lowercase letter, and all
+following characters must be a dash, lowercase letter, or digit,
+except the last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1616,7 +1693,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The network this subnet belongs to. Only networks that are in the distributed mode can have subnetworks.
+    <dd>{{% md %}}The network this subnet belongs to.
+Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1625,8 +1703,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private
-Google Access.
+    <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
+access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1645,9 +1723,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose
-set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+    <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
+or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+reserved for Internal HTTP(S) Load Balancing. If unspecified, the
+purpose defaults to PRIVATE.
+If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1665,9 +1746,11 @@ If unspecified, the purpose defaults to PRIVATE. If set to INTERNAL_HTTPS_LOAD_B
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be
-set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A
-BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining.
+    <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
+purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+or BACKUP. An ACTIVE subnetwork is one that is currently being used
+for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+is ready to be promoted to ACTIVE or is currently draining.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1676,12 +1759,10 @@ BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">List[Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range]</a></span>
     </dt>
-    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such
-VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary
-ranges. **Note**: This field uses [attr-as-block mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html)
-to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following
-syntax: 'example=[]' For more details about this behavior, see [this
-section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value).
+    <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
+contained in this subnetwork. The primary IP of such VM must belong
+to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1716,6 +1797,9 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkLogConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.SubnetworkLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.SubnetworkLogConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1729,7 +1813,13 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
+Toggles the aggregation interval for collecting flow logs. Increasing the
+interval time will reduce the amount of generated flow logs for long
+lasting connections. Default is an interval of 5 seconds per connection.
+Possible values are INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN,
+INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1737,7 +1827,12 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
+The value of the field must be in [0, 1]. Set the sampling rate of VPC
+flow logs within the subnetwork where 1.0 means all collected logs are
+reported and 0.0 means no logs are reported. Default is 0.5 which means
+half of all collected logs are reported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1745,7 +1840,10 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
+Configures whether metadata fields should be added to the reported VPC
+flow logs. Default is `INCLUDE_ALL_METADATA`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1760,7 +1858,13 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
+Toggles the aggregation interval for collecting flow logs. Increasing the
+interval time will reduce the amount of generated flow logs for long
+lasting connections. Default is an interval of 5 seconds per connection.
+Possible values are INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN,
+INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1768,7 +1872,12 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
+The value of the field must be in [0, 1]. Set the sampling rate of VPC
+flow logs within the subnetwork where 1.0 means all collected logs are
+reported and 0.0 means no logs are reported. Default is 0.5 which means
+half of all collected logs are reported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1776,7 +1885,10 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
+Configures whether metadata fields should be added to the reported VPC
+flow logs. Default is `INCLUDE_ALL_METADATA`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1791,7 +1903,13 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
+Toggles the aggregation interval for collecting flow logs. Increasing the
+interval time will reduce the amount of generated flow logs for long
+lasting connections. Default is an interval of 5 seconds per connection.
+Possible values are INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN,
+INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1799,7 +1917,12 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
+The value of the field must be in [0, 1]. Set the sampling rate of VPC
+flow logs within the subnetwork where 1.0 means all collected logs are
+reported and 0.0 means no logs are reported. Default is 0.5 which means
+half of all collected logs are reported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1807,7 +1930,10 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
+Configures whether metadata fields should be added to the reported VPC
+flow logs. Default is `INCLUDE_ALL_METADATA`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1822,7 +1948,13 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
+Toggles the aggregation interval for collecting flow logs. Increasing the
+interval time will reduce the amount of generated flow logs for long
+lasting connections. Default is an interval of 5 seconds per connection.
+Possible values are INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN,
+INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1830,7 +1962,12 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
+The value of the field must be in [0, 1]. Set the sampling rate of VPC
+flow logs within the subnetwork where 1.0 means all collected logs are
+reported and 0.0 means no logs are reported. Default is 0.5 which means
+half of all collected logs are reported.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1838,7 +1975,10 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
+Configures whether metadata fields should be added to the reported VPC
+flow logs. Default is `INCLUDE_ALL_METADATA`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1855,6 +1995,9 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkSecondaryIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkSecondaryIpRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.SubnetworkSecondaryIpRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.SubnetworkSecondaryIpRange.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1868,7 +2011,11 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1876,7 +2023,11 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name associated with this subnetwork secondary range, used
+when adding an alias IP range to a VM instance. The name must
+be 1-63 characters long, and comply with RFC1035. The name
+must be unique within the subnetwork.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1891,7 +2042,11 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1899,7 +2054,11 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name associated with this subnetwork secondary range, used
+when adding an alias IP range to a VM instance. The name must
+be 1-63 characters long, and comply with RFC1035. The name
+must be unique within the subnetwork.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1914,7 +2073,11 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1922,7 +2085,11 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name associated with this subnetwork secondary range, used
+when adding an alias IP range to a VM instance. The name must
+be 1-63 characters long, and comply with RFC1035. The name
+must be unique within the subnetwork.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1937,7 +2104,11 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
+range. Provide this property when you create the subnetwork.
+Ranges must be unique and non-overlapping with all primary and
+secondary IP ranges within a network. Only IPv4 is supported.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1945,7 +2116,11 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name associated with this subnetwork secondary range, used
+when adding an alias IP range to a VM instance. The name must
+be 1-63 characters long, and comply with RFC1035. The name
+must be unique within the subnetwork.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1964,8 +2139,7 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

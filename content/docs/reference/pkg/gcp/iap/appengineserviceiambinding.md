@@ -1,7 +1,8 @@
 
 ---
 title: "AppEngineServiceIamBinding"
-block_external_search_index: true
+title_tag: "Resource AppEngineServiceIamBinding | Module iap | Package GCP"
+meta_desc: "Explore the AppEngineServiceIamBinding resource of the iap module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineService. Each of these resources serves a different use case:"
 ---
 
 
@@ -93,7 +94,7 @@ const member = new gcp.iap.AppEngineServiceIamMember("member", {
 
 
 ## Create a AppEngineServiceIamBinding Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -101,7 +102,7 @@ const member = new gcp.iap.AppEngineServiceIamMember("member", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AppEngineServiceIamBinding</span><span class="p">(resource_name, opts=None, </span>app_id=None<span class="p">, </span>condition=None<span class="p">, </span>members=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>service=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AppEngineServiceIamBinding</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_id=None<span class="p">, </span>condition=None<span class="p">, </span>members=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>service=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -641,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AppEngineServiceIamBinding Resource {#look-up}
 
 Get an existing AppEngineServiceIamBinding resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iap/#AppEngineServiceIamBindingState">AppEngineServiceIamBindingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iap/#AppEngineServiceIamBinding">AppEngineServiceIamBinding</a></span></code></pre></div>
@@ -1070,6 +1071,9 @@ If it is not provided, the project will be parsed from the identifier of the par
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap?tab=doc#AppEngineServiceIamBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap?tab=doc#AppEngineServiceIamBindingConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iap.Inputs.AppEngineServiceIamBindingConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iap.Outputs.AppEngineServiceIamBindingCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1223,8 +1227,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

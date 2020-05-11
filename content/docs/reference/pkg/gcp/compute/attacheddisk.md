@@ -1,7 +1,8 @@
 
 ---
 title: "AttachedDisk"
-block_external_search_index: true
+title_tag: "Resource AttachedDisk | Module compute | Package GCP"
+meta_desc: "Explore the AttachedDisk resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Persistent disks can be attached to a compute instance using the `attached_disk`"
 ---
 
 
@@ -30,7 +31,7 @@ To get more information about attaching disks, see:
 
 
 ## Create a AttachedDisk Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -38,7 +39,7 @@ To get more information about attaching disks, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AttachedDisk</span><span class="p">(resource_name, opts=None, </span>device_name=None<span class="p">, </span>disk=None<span class="p">, </span>instance=None<span class="p">, </span>mode=None<span class="p">, </span>project=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AttachedDisk</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>device_name=None<span class="p">, </span>disk=None<span class="p">, </span>instance=None<span class="p">, </span>mode=None<span class="p">, </span>project=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -216,7 +217,8 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -224,7 +226,11 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the compute instance that the disk will be attached to.
+If the `self_link` is provided then `zone` and `project` are extracted from the
+self link. If only the name is used then `zone` and `project` must be defined
+as properties on the resource or provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -232,7 +238,12 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a unique device name of your choice that is
+reflected into the /dev/disk/by-id/google-* tree of a Linux operating
+system running within the instance. This name can be used to
+reference the device for mounting, resizing, and so on, from within
+the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -240,7 +251,10 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
+READ_ONLY. If not specified, the default is to attach the disk in
+READ_WRITE mode.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -248,7 +262,9 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
+`self_link` the project defined in the link will take precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -256,7 +272,9 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
+`self_link` the zone defined in the link will take precedence.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -271,7 +289,8 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -279,7 +298,11 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the compute instance that the disk will be attached to.
+If the `self_link` is provided then `zone` and `project` are extracted from the
+self link. If only the name is used then `zone` and `project` must be defined
+as properties on the resource or provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -287,7 +310,12 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a unique device name of your choice that is
+reflected into the /dev/disk/by-id/google-* tree of a Linux operating
+system running within the instance. This name can be used to
+reference the device for mounting, resizing, and so on, from within
+the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -295,7 +323,10 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
+READ_ONLY. If not specified, the default is to attach the disk in
+READ_WRITE mode.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -303,7 +334,9 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
+`self_link` the project defined in the link will take precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -311,7 +344,9 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
+`self_link` the zone defined in the link will take precedence.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -326,7 +361,8 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -334,7 +370,11 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the compute instance that the disk will be attached to.
+If the `self_link` is provided then `zone` and `project` are extracted from the
+self link. If only the name is used then `zone` and `project` must be defined
+as properties on the resource or provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -342,7 +382,12 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a unique device name of your choice that is
+reflected into the /dev/disk/by-id/google-* tree of a Linux operating
+system running within the instance. This name can be used to
+reference the device for mounting, resizing, and so on, from within
+the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -350,7 +395,10 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
+READ_ONLY. If not specified, the default is to attach the disk in
+READ_WRITE mode.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -358,7 +406,9 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
+`self_link` the project defined in the link will take precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -366,7 +416,9 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
+`self_link` the zone defined in the link will take precedence.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -381,7 +433,8 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -389,7 +442,11 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the compute instance that the disk will be attached to.
+If the `self_link` is provided then `zone` and `project` are extracted from the
+self link. If only the name is used then `zone` and `project` must be defined
+as properties on the resource or provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -397,7 +454,12 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a unique device name of your choice that is
+reflected into the /dev/disk/by-id/google-* tree of a Linux operating
+system running within the instance. This name can be used to
+reference the device for mounting, resizing, and so on, from within
+the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -405,7 +467,10 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
+READ_ONLY. If not specified, the default is to attach the disk in
+READ_WRITE mode.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -413,7 +478,9 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
+`self_link` the project defined in the link will take precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -421,7 +488,9 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
+`self_link` the zone defined in the link will take precedence.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -506,7 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AttachedDisk Resource {#look-up}
 
 Get an existing AttachedDisk resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#AttachedDiskState">AttachedDiskState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#AttachedDisk">AttachedDisk</a></span></code></pre></div>
@@ -633,7 +702,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a unique device name of your choice that is
+reflected into the /dev/disk/by-id/google-* tree of a Linux operating
+system running within the instance. This name can be used to
+reference the device for mounting, resizing, and so on, from within
+the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -641,7 +715,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -649,7 +724,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the compute instance that the disk will be attached to.
+If the `self_link` is provided then `zone` and `project` are extracted from the
+self link. If only the name is used then `zone` and `project` must be defined
+as properties on the resource or provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -657,7 +736,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
+READ_ONLY. If not specified, the default is to attach the disk in
+READ_WRITE mode.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -665,7 +747,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
+`self_link` the project defined in the link will take precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -673,7 +757,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
+`self_link` the zone defined in the link will take precedence.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -688,7 +774,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a unique device name of your choice that is
+reflected into the /dev/disk/by-id/google-* tree of a Linux operating
+system running within the instance. This name can be used to
+reference the device for mounting, resizing, and so on, from within
+the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -696,7 +787,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -704,7 +796,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the compute instance that the disk will be attached to.
+If the `self_link` is provided then `zone` and `project` are extracted from the
+self link. If only the name is used then `zone` and `project` must be defined
+as properties on the resource or provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -712,7 +808,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
+READ_ONLY. If not specified, the default is to attach the disk in
+READ_WRITE mode.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -720,7 +819,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
+`self_link` the project defined in the link will take precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -728,7 +829,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
+`self_link` the zone defined in the link will take precedence.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -743,7 +846,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a unique device name of your choice that is
+reflected into the /dev/disk/by-id/google-* tree of a Linux operating
+system running within the instance. This name can be used to
+reference the device for mounting, resizing, and so on, from within
+the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -751,7 +859,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -759,7 +868,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the compute instance that the disk will be attached to.
+If the `self_link` is provided then `zone` and `project` are extracted from the
+self link. If only the name is used then `zone` and `project` must be defined
+as properties on the resource or provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -767,7 +880,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
+READ_ONLY. If not specified, the default is to attach the disk in
+READ_WRITE mode.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -775,7 +891,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
+`self_link` the project defined in the link will take precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -783,7 +901,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
+`self_link` the zone defined in the link will take precedence.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -798,7 +918,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a unique device name of your choice that is
+reflected into the /dev/disk/by-id/google-* tree of a Linux operating
+system running within the instance. This name can be used to
+reference the device for mounting, resizing, and so on, from within
+the instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -806,7 +931,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -814,7 +940,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}`name` or `self_link` of the compute instance that the disk will be attached to.
+If the `self_link` is provided then `zone` and `project` are extracted from the
+self link. If only the name is used then `zone` and `project` must be defined
+as properties on the resource or provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -822,7 +952,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
+READ_ONLY. If not specified, the default is to attach the disk in
+READ_WRITE mode.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -830,7 +963,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
+`self_link` the project defined in the link will take precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -838,7 +973,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
+`self_link` the zone defined in the link will take precedence.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -859,8 +996,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

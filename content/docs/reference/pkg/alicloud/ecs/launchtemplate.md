@@ -14,18 +14,34 @@ Provides an ECS Launch Template resource.
 
 For information about Launch Template and how to use it, see [Launch Template](https://www.alibabacloud.com/help/doc-detail/73916.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const images = alicloud.ecs.getImages({
+const images = pulumi.output(alicloud.ecs.getImages({
     owners: "system",
-});
-const instances = alicloud.ecs.getInstances();
+}, { async: true }));
+const instances = pulumi.output(alicloud.ecs.getInstances({ async: true }));
 const template = new alicloud.ecs.LaunchTemplate("template", {
     dataDisks: [
         {
@@ -76,14 +92,13 @@ const template = new alicloud.ecs.LaunchTemplate("template", {
     zoneId: "beijing-a",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a LaunchTemplate Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -462,7 +477,8 @@ The LaunchTemplate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -769,7 +785,8 @@ The LaunchTemplate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1076,7 +1093,8 @@ The LaunchTemplate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1383,7 +1401,8 @@ The LaunchTemplate resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1567,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LaunchTemplate Resource {#look-up}
 
 Get an existing LaunchTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#LaunchTemplateState">LaunchTemplateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#LaunchTemplate">LaunchTemplate</a></span></code></pre></div>
@@ -1887,7 +1906,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2194,7 +2214,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2501,7 +2522,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2808,7 +2830,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional) 	Sets the maximum hourly instance price. Supports up to three decimal places.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2932,6 +2955,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#LaunchTemplateDataDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#LaunchTemplateDataDiskOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.Inputs.LaunchTemplateDataDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.Outputs.LaunchTemplateDataDisk.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2977,7 +3003,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3056,7 +3083,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3135,7 +3163,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3214,7 +3243,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-(Optional, Bool) Encrypted the data in this disk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3262,6 +3292,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#LaunchTemplateNetworkInterfacesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#LaunchTemplateNetworkInterfacesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.Inputs.LaunchTemplateNetworkInterfacesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.Outputs.LaunchTemplateNetworkInterfaces.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

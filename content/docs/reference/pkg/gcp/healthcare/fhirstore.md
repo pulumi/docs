@@ -1,7 +1,8 @@
 
 ---
 title: "FhirStore"
-block_external_search_index: true
+title_tag: "Resource FhirStore | Module healthcare | Package GCP"
+meta_desc: "Explore the FhirStore resource of the healthcare module, including examples, input properties, output properties, lookup functions, and supporting types. A FhirStore is a datastore inside a Healthcare dataset that conforms to the FHIR (https://www.hl7.org/fhir/STU3/)"
 ---
 
 
@@ -14,14 +15,14 @@ standard for Healthcare information exchange
 
 To get more information about FhirStore, see:
 
-* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores)
+* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.fhirStores)
 * How-to Guides
     * [Creating a FHIR store](https://cloud.google.com/healthcare/docs/how-tos/fhir)
 
 
 
 ## Create a FhirStore Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -29,7 +30,7 @@ To get more information about FhirStore, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FhirStore</span><span class="p">(resource_name, opts=None, </span>dataset=None<span class="p">, </span>disable_referential_integrity=None<span class="p">, </span>disable_resource_versioning=None<span class="p">, </span>enable_history_import=None<span class="p">, </span>enable_update_create=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FhirStore</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset=None<span class="p">, </span>disable_referential_integrity=None<span class="p">, </span>disable_resource_versioning=None<span class="p">, </span>enable_history_import=None<span class="p">, </span>enable_update_create=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -217,11 +218,12 @@ The FhirStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
-default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
-in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
-Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
-broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+will skip referential integrity check. Consequently, operations that rely on references, such as
+Patient.get$everything, will not return all the results if broken references exist.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -230,11 +232,12 @@ broken references exist. ** Changing this property may recreate the FHIR store (
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
-store. If set to false, which is the default behavior, all write operations will cause historical versions to be
-recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
-to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
-versions. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+attempts to read the historical versions.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -243,11 +246,12 @@ versions. ** Changing this property may recreate the FHIR store (removing all da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
-FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
-clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
-this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
-Cloud Healthcare admin console without recreating the FHIR store **
+    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+will fail with an error.
+** Changing this property may recreate the FHIR store (removing all data) **
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -256,11 +260,12 @@ Cloud Healthcare admin console without recreating the FHIR store **
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
-create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
-attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
-care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
-FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
+    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+notifications.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -269,12 +274,14 @@ FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -283,7 +290,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}The resource name for the FhirStore.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -292,7 +300,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -327,11 +335,12 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
-default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
-in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
-Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
-broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+will skip referential integrity check. Consequently, operations that rely on references, such as
+Patient.get$everything, will not return all the results if broken references exist.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -340,11 +349,12 @@ broken references exist. ** Changing this property may recreate the FHIR store (
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
-store. If set to false, which is the default behavior, all write operations will cause historical versions to be
-recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
-to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
-versions. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+attempts to read the historical versions.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -353,11 +363,12 @@ versions. ** Changing this property may recreate the FHIR store (removing all da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
-FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
-clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
-this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
-Cloud Healthcare admin console without recreating the FHIR store **
+    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+will fail with an error.
+** Changing this property may recreate the FHIR store (removing all data) **
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -366,11 +377,12 @@ Cloud Healthcare admin console without recreating the FHIR store **
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
-create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
-attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
-care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
-FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
+    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+notifications.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -379,12 +391,14 @@ FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -393,7 +407,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}The resource name for the FhirStore.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -402,7 +417,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -437,11 +452,12 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
-default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
-in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
-Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
-broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+will skip referential integrity check. Consequently, operations that rely on references, such as
+Patient.get$everything, will not return all the results if broken references exist.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -450,11 +466,12 @@ broken references exist. ** Changing this property may recreate the FHIR store (
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
-store. If set to false, which is the default behavior, all write operations will cause historical versions to be
-recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
-to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
-versions. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+attempts to read the historical versions.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -463,11 +480,12 @@ versions. ** Changing this property may recreate the FHIR store (removing all da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
-FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
-clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
-this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
-Cloud Healthcare admin console without recreating the FHIR store **
+    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+will fail with an error.
+** Changing this property may recreate the FHIR store (removing all data) **
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -476,11 +494,12 @@ Cloud Healthcare admin console without recreating the FHIR store **
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
-create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
-attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
-care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
-FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
+    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+notifications.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -489,12 +508,14 @@ FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -503,7 +524,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}The resource name for the FhirStore.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,7 +534,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -547,11 +569,12 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
-default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
-in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
-Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
-broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+will skip referential integrity check. Consequently, operations that rely on references, such as
+Patient.get$everything, will not return all the results if broken references exist.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -560,11 +583,12 @@ broken references exist. ** Changing this property may recreate the FHIR store (
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
-store. If set to false, which is the default behavior, all write operations will cause historical versions to be
-recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
-to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
-versions. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+attempts to read the historical versions.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -573,11 +597,12 @@ versions. ** Changing this property may recreate the FHIR store (removing all da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
-FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
-clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
-this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
-Cloud Healthcare admin console without recreating the FHIR store **
+    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+will fail with an error.
+** Changing this property may recreate the FHIR store (removing all data) **
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -586,11 +611,12 @@ Cloud Healthcare admin console without recreating the FHIR store **
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
-create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
-attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
-care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
-FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
+    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+notifications.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -599,12 +625,14 @@ FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -613,7 +641,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}The resource name for the FhirStore.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -622,7 +651,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Dict[Fhir<wbr>Store<wbr>Notification<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -753,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing FhirStore Resource {#look-up}
 
 Get an existing FhirStore resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#FhirStoreState">FhirStoreState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#FhirStore">FhirStore</a></span></code></pre></div>
@@ -890,11 +919,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
-default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
-in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
-Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
-broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+will skip referential integrity check. Consequently, operations that rely on references, such as
+Patient.get$everything, will not return all the results if broken references exist.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -903,11 +933,12 @@ broken references exist. ** Changing this property may recreate the FHIR store (
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
-store. If set to false, which is the default behavior, all write operations will cause historical versions to be
-recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
-to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
-versions. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+attempts to read the historical versions.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -916,11 +947,12 @@ versions. ** Changing this property may recreate the FHIR store (removing all da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
-FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
-clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
-this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
-Cloud Healthcare admin console without recreating the FHIR store **
+    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+will fail with an error.
+** Changing this property may recreate the FHIR store (removing all data) **
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -929,11 +961,12 @@ Cloud Healthcare admin console without recreating the FHIR store **
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
-create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
-attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
-care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
-FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
+    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+notifications.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -942,12 +975,14 @@ FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -956,7 +991,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}The resource name for the FhirStore.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -965,7 +1001,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1009,11 +1045,12 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
-default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
-in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
-Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
-broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+will skip referential integrity check. Consequently, operations that rely on references, such as
+Patient.get$everything, will not return all the results if broken references exist.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1022,11 +1059,12 @@ broken references exist. ** Changing this property may recreate the FHIR store (
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
-store. If set to false, which is the default behavior, all write operations will cause historical versions to be
-recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
-to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
-versions. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+attempts to read the historical versions.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1035,11 +1073,12 @@ versions. ** Changing this property may recreate the FHIR store (removing all da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
-FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
-clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
-this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
-Cloud Healthcare admin console without recreating the FHIR store **
+    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+will fail with an error.
+** Changing this property may recreate the FHIR store (removing all data) **
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1048,11 +1087,12 @@ Cloud Healthcare admin console without recreating the FHIR store **
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
-create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
-attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
-care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
-FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
+    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+notifications.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1061,12 +1101,14 @@ FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1075,7 +1117,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}The resource name for the FhirStore.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1084,7 +1127,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1128,11 +1171,12 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
-default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
-in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
-Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
-broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+will skip referential integrity check. Consequently, operations that rely on references, such as
+Patient.get$everything, will not return all the results if broken references exist.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1141,11 +1185,12 @@ broken references exist. ** Changing this property may recreate the FHIR store (
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
-store. If set to false, which is the default behavior, all write operations will cause historical versions to be
-recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
-to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
-versions. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+attempts to read the historical versions.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1154,11 +1199,12 @@ versions. ** Changing this property may recreate the FHIR store (removing all da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
-FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
-clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
-this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
-Cloud Healthcare admin console without recreating the FHIR store **
+    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+will fail with an error.
+** Changing this property may recreate the FHIR store (removing all data) **
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1167,11 +1213,12 @@ Cloud Healthcare admin console without recreating the FHIR store **
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
-create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
-attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
-care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
-FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
+    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+notifications.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1180,12 +1227,14 @@ FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1194,7 +1243,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}The resource name for the FhirStore.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1203,7 +1253,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1247,11 +1297,12 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
-default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
-in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
-Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
-broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
+creation. The default value is false, meaning that the API will enforce referential integrity and fail the
+requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
+will skip referential integrity check. Consequently, operations that rely on references, such as
+Patient.get$everything, will not return all the results if broken references exist.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1260,11 +1311,12 @@ broken references exist. ** Changing this property may recreate the FHIR store (
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
-store. If set to false, which is the default behavior, all write operations will cause historical versions to be
-recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
-to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
-versions. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
+of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
+versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
+cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
+attempts to read the historical versions.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1273,11 +1325,12 @@ versions. ** Changing this property may recreate the FHIR store (removing all da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
-FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
-clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
-this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
-Cloud Healthcare admin console without recreating the FHIR store **
+    <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
+versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
+occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
+will fail with an error.
+** Changing this property may recreate the FHIR store (removing all data) **
+** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1286,11 +1339,12 @@ Cloud Healthcare admin console without recreating the FHIR store **
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
-create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
-attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
-care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
-FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
+    <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
+operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
+the Create operation and attempts to Update a non-existent resource will return errors. Please treat the audit
+logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
+identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
+notifications.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1299,12 +1353,14 @@ FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1313,7 +1369,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **
+    <dd>{{% md %}}The resource name for the FhirStore.
+** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1322,7 +1379,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Dict[Fhir<wbr>Store<wbr>Notification<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1366,6 +1423,9 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreNotificationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreNotificationConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.FhirStoreNotificationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.FhirStoreNotificationConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1379,7 +1439,13 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1394,7 +1460,13 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1409,7 +1481,13 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1424,7 +1502,13 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1443,8 +1527,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

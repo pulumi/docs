@@ -15,6 +15,7 @@ A Pulumi package for creating and managing github cloud resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="actionssecret" title="ActionsSecret"><span class="symbol resource"></span>ActionsSecret</a></li>
+    <li><a href="branch" title="Branch"><span class="symbol resource"></span>Branch</a></li>
     <li><a href="branchprotection" title="BranchProtection"><span class="symbol resource"></span>BranchProtection</a></li>
     <li><a href="issuelabel" title="IssueLabel"><span class="symbol resource"></span>IssueLabel</a></li>
     <li><a href="membership" title="Membership"><span class="symbol resource"></span>Membership</a></li>
@@ -40,6 +41,7 @@ A Pulumi package for creating and managing github cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getactionspublickey" title="GetActionsPublicKey"><span class="symbol function"></span>GetActionsPublicKey</a></li>
+    <li><a href="getbranch" title="GetBranch"><span class="symbol function"></span>GetBranch</a></li>
     <li><a href="getcollaborators" title="GetCollaborators"><span class="symbol function"></span>GetCollaborators</a></li>
     <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
     <li><a href="getmembership" title="GetMembership"><span class="symbol function"></span>GetMembership</a></li>
@@ -59,6 +61,6 @@ A Pulumi package for creating and managing github cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.2.0</dd>
 </dl>
 

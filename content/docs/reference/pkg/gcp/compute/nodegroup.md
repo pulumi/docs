@@ -1,7 +1,8 @@
 
 ---
 title: "NodeGroup"
-block_external_search_index: true
+title_tag: "Resource NodeGroup | Module compute | Package GCP"
+meta_desc: "Explore the NodeGroup resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a NodeGroup resource to manage a group of sole-tenant nodes."
 ---
 
 
@@ -26,7 +27,7 @@ the provider to delete and recreate the node group.
 
 
 ## Create a NodeGroup Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -34,7 +35,7 @@ the provider to delete and recreate the node group.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodeGroup</span><span class="p">(resource_name, opts=None, </span>autoscaling_policy=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>node_template=None<span class="p">, </span>project=None<span class="p">, </span>size=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodeGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscaling_policy=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>node_template=None<span class="p">, </span>project=None<span class="p">, </span>size=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -230,8 +231,9 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes
-of your node groups.
+    <dd>{{% md %}}-
+If you use sole-tenant nodes for your workloads, you can use the node
+group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -302,8 +304,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes
-of your node groups.
+    <dd>{{% md %}}-
+If you use sole-tenant nodes for your workloads, you can use the node
+group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -374,8 +377,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes
-of your node groups.
+    <dd>{{% md %}}-
+If you use sole-tenant nodes for your workloads, you can use the node
+group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -446,8 +450,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupautoscalingpolicy">Dict[Node<wbr>Group<wbr>Autoscaling<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes
-of your node groups.
+    <dd>{{% md %}}-
+If you use sole-tenant nodes for your workloads, you can use the node
+group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -642,7 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NodeGroup Resource {#look-up}
 
 Get an existing NodeGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NodeGroupState">NodeGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NodeGroup">NodeGroup</a></span></code></pre></div>
@@ -769,8 +774,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes
-of your node groups.
+    <dd>{{% md %}}-
+If you use sole-tenant nodes for your workloads, you can use the node
+group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -859,8 +865,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes
-of your node groups.
+    <dd>{{% md %}}-
+If you use sole-tenant nodes for your workloads, you can use the node
+group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -949,8 +956,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes
-of your node groups.
+    <dd>{{% md %}}-
+If you use sole-tenant nodes for your workloads, you can use the node
+group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1039,8 +1047,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupautoscalingpolicy">Dict[Node<wbr>Group<wbr>Autoscaling<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes
-of your node groups.
+    <dd>{{% md %}}-
+If you use sole-tenant nodes for your workloads, you can use the node
+group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1139,6 +1148,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeGroupAutoscalingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeGroupAutoscalingPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.NodeGroupAutoscalingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.NodeGroupAutoscalingPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1152,7 +1164,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum size of the node group. Set to a value less than or equal
+to 100 and greater than or equal to min-nodes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1160,7 +1174,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Minimum size of the node group. Must be less
+than or equal to max-nodes. The default value is 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1168,7 +1184,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The autoscaling mode. Set to one of the following:
+- OFF: Disables the autoscaler.
+- ON: Enables scaling in and scaling out.
+- ONLY_SCALE_OUT: Enables only scaling out.
+You must use this mode if your node groups are configured to
+restart their hosted VMs on minimal servers.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1183,7 +1205,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum size of the node group. Set to a value less than or equal
+to 100 and greater than or equal to min-nodes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1191,7 +1215,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Minimum size of the node group. Must be less
+than or equal to max-nodes. The default value is 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1199,7 +1225,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The autoscaling mode. Set to one of the following:
+- OFF: Disables the autoscaler.
+- ON: Enables scaling in and scaling out.
+- ONLY_SCALE_OUT: Enables only scaling out.
+You must use this mode if your node groups are configured to
+restart their hosted VMs on minimal servers.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1214,7 +1246,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum size of the node group. Set to a value less than or equal
+to 100 and greater than or equal to min-nodes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1222,7 +1256,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Minimum size of the node group. Must be less
+than or equal to max-nodes. The default value is 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1230,7 +1266,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The autoscaling mode. Set to one of the following:
+- OFF: Disables the autoscaler.
+- ON: Enables scaling in and scaling out.
+- ONLY_SCALE_OUT: Enables only scaling out.
+You must use this mode if your node groups are configured to
+restart their hosted VMs on minimal servers.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1245,7 +1287,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum size of the node group. Set to a value less than or equal
+to 100 and greater than or equal to min-nodes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1253,7 +1297,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Minimum size of the node group. Must be less
+than or equal to max-nodes. The default value is 0.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1261,7 +1307,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The autoscaling mode. Set to one of the following:
+- OFF: Disables the autoscaler.
+- ON: Enables scaling in and scaling out.
+- ONLY_SCALE_OUT: Enables only scaling out.
+You must use this mode if your node groups are configured to
+restart their hosted VMs on minimal servers.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1280,8 +1332,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

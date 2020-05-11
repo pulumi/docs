@@ -14,7 +14,7 @@ meta_desc: "Explore the AuthBackend resource of the jwt module, including exampl
 
 
 ## Create a AuthBackend Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the AuthBackend resource of the jwt module, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackend</span><span class="p">(resource_name, opts=None, </span>bound_issuer=None<span class="p">, </span>default_role=None<span class="p">, </span>description=None<span class="p">, </span>jwks_ca_pem=None<span class="p">, </span>jwks_url=None<span class="p">, </span>jwt_supported_algs=None<span class="p">, </span>jwt_validation_pubkeys=None<span class="p">, </span>oidc_client_id=None<span class="p">, </span>oidc_client_secret=None<span class="p">, </span>oidc_discovery_ca_pem=None<span class="p">, </span>oidc_discovery_url=None<span class="p">, </span>path=None<span class="p">, </span>tune=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackend</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bound_issuer=None<span class="p">, </span>default_role=None<span class="p">, </span>description=None<span class="p">, </span>jwks_ca_pem=None<span class="p">, </span>jwks_url=None<span class="p">, </span>jwt_supported_algs=None<span class="p">, </span>jwt_validation_pubkeys=None<span class="p">, </span>oidc_client_id=None<span class="p">, </span>oidc_client_secret=None<span class="p">, </span>oidc_discovery_ca_pem=None<span class="p">, </span>oidc_discovery_url=None<span class="p">, </span>path=None<span class="p">, </span>tune=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -834,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AuthBackend Resource {#look-up}
 
 Get an existing AuthBackend resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/jwt/#AuthBackendState">AuthBackendState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/jwt/#AuthBackend">AuthBackend</a></span></code></pre></div>
@@ -1534,6 +1534,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/jwt?tab=doc#AuthBackendTuneArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/jwt?tab=doc#AuthBackendTuneOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Jwt.Inputs.AuthBackendTuneArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Jwt.Outputs.AuthBackendTune.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

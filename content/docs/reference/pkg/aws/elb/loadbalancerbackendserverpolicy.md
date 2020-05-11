@@ -13,10 +13,26 @@ meta_desc: "Explore the LoadBalancerBackendServerPolicy resource of the elb modu
 Attaches a load balancer policy to an ELB backend server.
 
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -59,22 +75,13 @@ const wu_tang_backend_auth_policies_443 = new aws.elb.LoadBalancerBackendServerP
     policyNames: [wu_tang_root_ca_backend_auth_policy.policyName],
 });
 ```
-
-Where the file `pubkey` in the current directory contains only the _public key_ of the certificate.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-This example shows how to enable backend authentication for an ELB as well as customize the TLS settings.
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a LoadBalancerBackendServerPolicy Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -82,7 +89,7 @@ This example shows how to enable backend authentication for an ELB as well as cu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancerBackendServerPolicy</span><span class="p">(resource_name, opts=None, </span>instance_port=None<span class="p">, </span>load_balancer_name=None<span class="p">, </span>policy_names=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancerBackendServerPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_port=None<span class="p">, </span>load_balancer_name=None<span class="p">, </span>policy_names=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -466,7 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LoadBalancerBackendServerPolicy Resource {#look-up}
 
 Get an existing LoadBalancerBackendServerPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancerBackendServerPolicyState">LoadBalancerBackendServerPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancerBackendServerPolicy">LoadBalancerBackendServerPolicy</a></span></code></pre></div>

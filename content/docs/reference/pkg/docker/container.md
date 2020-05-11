@@ -12,10 +12,26 @@ meta_desc: "Explore the Container resource of the Docker package, including exam
 
 Manages the lifecycle of a Docker container.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
@@ -29,14 +45,13 @@ const ubuntuContainer = new docker.Container("ubuntu", {
     image: ubuntuRemoteImage.latest,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Container Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -44,7 +59,7 @@ const ubuntuContainer = new docker.Container("ubuntu", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Container</span><span class="p">(resource_name, opts=None, </span>attach=None<span class="p">, </span>capabilities=None<span class="p">, </span>command=None<span class="p">, </span>cpu_set=None<span class="p">, </span>cpu_shares=None<span class="p">, </span>destroy_grace_seconds=None<span class="p">, </span>devices=None<span class="p">, </span>dns=None<span class="p">, </span>dns_opts=None<span class="p">, </span>dns_searches=None<span class="p">, </span>domainname=None<span class="p">, </span>entrypoints=None<span class="p">, </span>envs=None<span class="p">, </span>group_adds=None<span class="p">, </span>healthcheck=None<span class="p">, </span>hostname=None<span class="p">, </span>hosts=None<span class="p">, </span>image=None<span class="p">, </span>ipc_mode=None<span class="p">, </span>labels=None<span class="p">, </span>links=None<span class="p">, </span>log_driver=None<span class="p">, </span>log_opts=None<span class="p">, </span>logs=None<span class="p">, </span>max_retry_count=None<span class="p">, </span>memory=None<span class="p">, </span>memory_swap=None<span class="p">, </span>mounts=None<span class="p">, </span>must_run=None<span class="p">, </span>name=None<span class="p">, </span>network_aliases=None<span class="p">, </span>network_mode=None<span class="p">, </span>networks=None<span class="p">, </span>networks_advanced=None<span class="p">, </span>pid_mode=None<span class="p">, </span>ports=None<span class="p">, </span>privileged=None<span class="p">, </span>publish_all_ports=None<span class="p">, </span>read_only=None<span class="p">, </span>restart=None<span class="p">, </span>rm=None<span class="p">, </span>shm_size=None<span class="p">, </span>start=None<span class="p">, </span>sysctls=None<span class="p">, </span>tmpfs=None<span class="p">, </span>ulimits=None<span class="p">, </span>uploads=None<span class="p">, </span>user=None<span class="p">, </span>userns_mode=None<span class="p">, </span>volumes=None<span class="p">, </span>working_dir=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Container</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attach=None<span class="p">, </span>capabilities=None<span class="p">, </span>command=None<span class="p">, </span>cpu_set=None<span class="p">, </span>cpu_shares=None<span class="p">, </span>destroy_grace_seconds=None<span class="p">, </span>devices=None<span class="p">, </span>dns=None<span class="p">, </span>dns_opts=None<span class="p">, </span>dns_searches=None<span class="p">, </span>domainname=None<span class="p">, </span>entrypoints=None<span class="p">, </span>envs=None<span class="p">, </span>group_adds=None<span class="p">, </span>healthcheck=None<span class="p">, </span>hostname=None<span class="p">, </span>hosts=None<span class="p">, </span>image=None<span class="p">, </span>ipc_mode=None<span class="p">, </span>labels=None<span class="p">, </span>links=None<span class="p">, </span>log_driver=None<span class="p">, </span>log_opts=None<span class="p">, </span>logs=None<span class="p">, </span>max_retry_count=None<span class="p">, </span>memory=None<span class="p">, </span>memory_swap=None<span class="p">, </span>mounts=None<span class="p">, </span>must_run=None<span class="p">, </span>name=None<span class="p">, </span>network_aliases=None<span class="p">, </span>network_mode=None<span class="p">, </span>networks=None<span class="p">, </span>networks_advanced=None<span class="p">, </span>pid_mode=None<span class="p">, </span>ports=None<span class="p">, </span>privileged=None<span class="p">, </span>publish_all_ports=None<span class="p">, </span>read_only=None<span class="p">, </span>restart=None<span class="p">, </span>rm=None<span class="p">, </span>shm_size=None<span class="p">, </span>start=None<span class="p">, </span>sysctls=None<span class="p">, </span>tmpfs=None<span class="p">, </span>ulimits=None<span class="p">, </span>uploads=None<span class="p">, </span>user=None<span class="p">, </span>userns_mode=None<span class="p">, </span>volumes=None<span class="p">, </span>working_dir=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -451,7 +466,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -688,7 +702,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -932,7 +947,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1169,7 +1183,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1413,7 +1428,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1650,7 +1664,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1894,7 +1909,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2131,7 +2145,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2480,7 +2495,7 @@ network. Key are the network names, values are the IP addresses.
 ## Look up an Existing Container Resource {#look-up}
 
 Get an existing Container resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#ContainerState">ContainerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#Container">Container</a></span></code></pre></div>
@@ -2892,7 +2907,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3139,7 +3153,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3439,7 +3454,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3686,7 +3700,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3986,7 +4001,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4233,7 +4247,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4533,7 +4548,6 @@ the logging driver.
     </dt>
     <dd>{{% md %}}The maximum amount of times to an attempt
 a restart when `restart` is set to "on-failure"
-* `working_dir`- (Optional, string) The working directory for commands to run in
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4780,7 +4794,8 @@ by name.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The working directory for commands to run in
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4804,6 +4819,9 @@ by name.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerCapabilitiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerCapabilitiesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerCapabilitiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerCapabilities.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4919,6 +4937,9 @@ by name.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerDeviceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerDevice.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5086,6 +5107,9 @@ Defaults to `rwm`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerHealthcheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerHealthcheckOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerHealthcheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerHealthcheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5314,6 +5338,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerHostArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerHostOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerHostArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerHost.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5429,6 +5456,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerLabel.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5443,7 +5473,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5452,7 +5481,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5468,7 +5498,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5477,7 +5506,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5493,7 +5523,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5502,7 +5531,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5518,7 +5548,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5527,7 +5556,8 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5543,6 +5573,9 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerMountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerMount.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5843,6 +5876,9 @@ Defaults to false.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountBindOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountBindOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerMountBindOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerMountBindOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5921,6 +5957,9 @@ Defaults to false.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountTmpfsOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountTmpfsOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerMountTmpfsOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerMountTmpfsOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6036,6 +6075,9 @@ Defaults to false.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountVolumeOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountVolumeOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerMountVolumeOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerMountVolumeOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6220,6 +6262,9 @@ Defaults to false.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountVolumeOptionsLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountVolumeOptionsLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerMountVolumeOptionsLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerMountVolumeOptionsLabel.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6234,7 +6279,6 @@ Defaults to false.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6243,7 +6287,8 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6259,7 +6304,6 @@ Defaults to false.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6268,7 +6312,8 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6284,7 +6329,6 @@ Defaults to false.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6293,7 +6337,8 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6309,7 +6354,6 @@ Defaults to false.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the label
-* `value` (Required, string) Value of the label
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6318,7 +6362,8 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of the label
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6334,6 +6379,9 @@ Defaults to false.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerNetworkDataOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerNetworkData.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6526,6 +6574,9 @@ NetworkSettings.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerNetworksAdvancedArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerNetworksAdvancedOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerNetworksAdvancedArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerNetworksAdvanced.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6712,6 +6763,9 @@ NetworkSettings.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerPortOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerPort.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6904,6 +6958,9 @@ defaults to `tcp`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerUlimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerUlimitOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerUlimitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerUlimit.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -7042,6 +7099,9 @@ defaults to `tcp`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerUploadArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerUploadOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerUploadArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerUpload.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7305,6 +7365,9 @@ Defaults to false.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerVolumeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerVolume.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

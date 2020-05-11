@@ -12,40 +12,7 @@ meta_desc: "Explore the ClusterTemplate resource of the containerinfra module, i
 
 Manages a V1 Magnum cluster template resource within OpenStack.
 
-{{% examples %}}
-## Example Usage
 
-{{% example %}}
-### Create a Cluster template
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as openstack from "@pulumi/openstack";
-
-const clustertemplate1 = new openstack.containerinfra.ClusterTemplate("clustertemplate_1", {
-    coe: "kubernetes",
-    dnsNameserver: "1.1.1.1",
-    dockerStorageDriver: "devicemapper",
-    dockerVolumeSize: 10,
-    flavor: "m1.small",
-    floatingIpEnabled: false,
-    image: "Fedora-Atomic-27",
-    labels: {
-        influx_grafana_dashboard_enabled: "true",
-        kube_dashboard_enabled: "true",
-        kube_tag: "1.11.1",
-        prometheus_monitoring: "true",
-    },
-    masterFlavor: "m1.medium",
-    masterLbEnabled: true,
-    networkDriver: "flannel",
-    serverType: "vm",
-    volumeDriver: "cinder",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Argument reference
 
 The following arguments are supported:
@@ -203,10 +170,56 @@ The following attributes are exported:
 * `tls_disabled` - See Argument Reference above.
 * `volume_driver` - See Argument Reference above.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a Cluster template
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const clustertemplate1 = new openstack.containerinfra.ClusterTemplate("clustertemplate_1", {
+    coe: "kubernetes",
+    dnsNameserver: "1.1.1.1",
+    dockerStorageDriver: "devicemapper",
+    dockerVolumeSize: 10,
+    flavor: "m1.small",
+    floatingIpEnabled: false,
+    image: "Fedora-Atomic-27",
+    labels: {
+        influx_grafana_dashboard_enabled: "true",
+        kube_dashboard_enabled: "true",
+        kube_tag: "1.11.1",
+        prometheus_monitoring: "true",
+    },
+    masterFlavor: "m1.medium",
+    masterLbEnabled: true,
+    networkDriver: "flannel",
+    serverType: "vm",
+    volumeDriver: "cinder",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ClusterTemplate Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -214,7 +227,7 @@ The following attributes are exported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClusterTemplate</span><span class="p">(resource_name, opts=None, </span>apiserver_port=None<span class="p">, </span>cluster_distro=None<span class="p">, </span>coe=None<span class="p">, </span>dns_nameserver=None<span class="p">, </span>docker_storage_driver=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>external_network_id=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>floating_ip_enabled=None<span class="p">, </span>http_proxy=None<span class="p">, </span>https_proxy=None<span class="p">, </span>image=None<span class="p">, </span>insecure_registry=None<span class="p">, </span>keypair_id=None<span class="p">, </span>labels=None<span class="p">, </span>master_flavor=None<span class="p">, </span>master_lb_enabled=None<span class="p">, </span>name=None<span class="p">, </span>network_driver=None<span class="p">, </span>no_proxy=None<span class="p">, </span>public=None<span class="p">, </span>region=None<span class="p">, </span>registry_enabled=None<span class="p">, </span>server_type=None<span class="p">, </span>tls_disabled=None<span class="p">, </span>volume_driver=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClusterTemplate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apiserver_port=None<span class="p">, </span>cluster_distro=None<span class="p">, </span>coe=None<span class="p">, </span>dns_nameserver=None<span class="p">, </span>docker_storage_driver=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>external_network_id=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>floating_ip_enabled=None<span class="p">, </span>http_proxy=None<span class="p">, </span>https_proxy=None<span class="p">, </span>image=None<span class="p">, </span>insecure_registry=None<span class="p">, </span>keypair_id=None<span class="p">, </span>labels=None<span class="p">, </span>master_flavor=None<span class="p">, </span>master_lb_enabled=None<span class="p">, </span>name=None<span class="p">, </span>network_driver=None<span class="p">, </span>no_proxy=None<span class="p">, </span>public=None<span class="p">, </span>region=None<span class="p">, </span>registry_enabled=None<span class="p">, </span>server_type=None<span class="p">, </span>tls_disabled=None<span class="p">, </span>volume_driver=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1514,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ClusterTemplate Resource {#look-up}
 
 Get an existing ClusterTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/containerinfra/#ClusterTemplateState">ClusterTemplateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/containerinfra/#ClusterTemplate">ClusterTemplate</a></span></code></pre></div>

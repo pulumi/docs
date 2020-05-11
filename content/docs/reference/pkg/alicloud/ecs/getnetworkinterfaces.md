@@ -14,10 +14,42 @@ Use this data source to get a list of elastic network interfaces according to th
 
 For information about elastic network interface and how to use it, see [Elastic Network Interface](https://www.alibabacloud.com/help/doc-detail/58496.html)
 
+
+##  Argument Reference
+
+The following arguments are supported:
+
+* `ids` - (Optional)  A list of ENI IDs.
+* `name_regex` - (Optional) A regex string to filter results by ENI name.
+* `vpc_id` - (Optional) The VPC ID linked to ENIs.
+* `vswitch_id` - (Optional) The VSwitch ID linked to ENIs.
+* `private_ip` - (Optional) The primary private IP address of the ENI.
+* `security_group_id` - (Optional) The security group ID linked to ENIs.
+* `name` - (Optional) The name of the ENIs.
+* `type` - (Optional) The type of ENIs, Only support for "Primary" or "Secondary".
+* `instance_id` - (Optional) The ECS instance ID that the ENI is attached to.
+* `tags` - (Optional) A map of tags assigned to ENIs.
+* `output_file` - (Optional) The name of output file that saves the filter results.
+* `resource_group_id` - (Optional, ForceNew, Available in 1.57.0+) The Id of resource group which the network interface belongs.
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -28,9 +60,9 @@ const name = config.get("name") || "networkInterfacesName";
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "192.168.0.0/24",
 });
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const vswitch = new alicloud.vpc.Switch("vswitch", {
     availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "192.168.0.0/24",
@@ -74,38 +106,21 @@ const defaultNetworkInterfaces = pulumi.all([attachment.networkInterfaceId, inst
     type: "Secondary",
     vpcId: vpcId,
     vswitchId: vswitchId,
-}));
+}, { async: true }));
 
 export const eni0Name = defaultNetworkInterfaces.interfaces[0].name;
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-##  Argument Reference
-
-The following arguments are supported:
-
-* `ids` - (Optional)  A list of ENI IDs.
-* `name_regex` - (Optional) A regex string to filter results by ENI name.
-* `vpc_id` - (Optional) The VPC ID linked to ENIs.
-* `vswitch_id` - (Optional) The VSwitch ID linked to ENIs.
-* `private_ip` - (Optional) The primary private IP address of the ENI.
-* `security_group_id` - (Optional) The security group ID linked to ENIs.
-* `name` - (Optional) The name of the ENIs.
-* `type` - (Optional) The type of ENIs, Only support for "Primary" or "Secondary".
-* `instance_id` - (Optional) The ECS instance ID that the ENI is attached to.
-* `tags` - (Optional) A map of tags assigned to ENIs.
-* `output_file` - (Optional) The name of output file that saves the filter results.
-* `resource_group_id` - (Optional, ForceNew, Available in 1.57.0+) The Id of resource group which the network interface belongs.
-
 
 
 ## Using GetNetworkInterfaces {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
-{{% choosable language typescript %}}
+{{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNetworkInterfaces<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#GetNetworkInterfacesArgs">GetNetworkInterfacesArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#GetNetworkInterfacesResult">GetNetworkInterfacesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
@@ -116,7 +131,7 @@ The following arguments are supported:
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNetworkInterfaces<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#LookupNetworkInterfacesArgs">LookupNetworkInterfacesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#LookupNetworkInterfacesResult">LookupNetworkInterfacesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkInterfaces<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#GetNetworkInterfacesArgs">GetNetworkInterfacesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#GetNetworkInterfacesResult">GetNetworkInterfacesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -558,7 +573,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -685,7 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -812,7 +827,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -939,7 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1073,6 +1088,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#GetNetworkInterfacesInterface">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.Outputs.GetNetworkInterfacesInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1686,4 +1704,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+</dl>
 

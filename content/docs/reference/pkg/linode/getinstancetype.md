@@ -12,23 +12,7 @@ meta_desc: "Explore the GetInstanceType function of the Linode package, includin
 
 Provides information about a Linode instance type
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-The following example shows how one might use this data source to access information about a Linode Instance type.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const defaultInstanceType = linode.getInstanceType({
-    id: "g6-standard-2",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Attributes
 
 The Linode Instance Type resource exports the following attributes:
@@ -49,14 +33,43 @@ The Linode Instance Type resource exports the following attributes:
 
 * `addons.0.backups.0.price.0.monthly` - The cost (in US dollars) per month to add Backups service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const defaultInstanceType = pulumi.output(linode.getInstanceType({
+    id: "g6-standard-2",
+}, { async: true }));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetInstanceType {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
-{{% choosable language typescript %}}
+{{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceType<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#GetInstanceTypeArgs">GetInstanceTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#GetInstanceTypeResult">GetInstanceTypeResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
@@ -67,7 +80,7 @@ The Linode Instance Type resource exports the following attributes:
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceType<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetInstanceTypeArgs">GetInstanceTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#LookupInstanceTypeResult">LookupInstanceTypeResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceType<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetInstanceTypeArgs">GetInstanceTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetInstanceTypeResult">GetInstanceTypeResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -557,6 +570,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetInstanceTypeAddons">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.GetInstanceTypeAddons.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -632,6 +648,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetInstanceTypeAddonsBackups">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.GetInstanceTypeAddonsBackups.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -706,6 +725,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetInstanceTypeAddonsBackupsPrice">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.GetInstanceTypeAddonsBackupsPrice.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -814,6 +836,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetInstanceTypePrice">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.GetInstanceTypePrice.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -914,4 +939,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-linode">https://github.com/pulumi/pulumi-linode</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
+</dl>
 

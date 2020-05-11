@@ -18,7 +18,7 @@ Manages a Network Watcher Flow Log.
 
 
 ## Create a NetworkWatcherFlowLog Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -204,7 +204,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should Network Flow Logging be Enabled?
+    <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -283,7 +283,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should Network Flow Logging be Enabled?
+    <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -362,7 +362,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Should Network Flow Logging be Enabled?
+    <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -441,7 +441,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should Network Flow Logging be Enabled?
+    <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -590,7 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NetworkWatcherFlowLog Resource {#look-up}
 
 Get an existing NetworkWatcherFlowLog resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#NetworkWatcherFlowLogState">NetworkWatcherFlowLogState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#NetworkWatcherFlowLog">NetworkWatcherFlowLog</a></span></code></pre></div>
@@ -717,7 +717,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should Network Flow Logging be Enabled?
+    <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -796,7 +796,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should Network Flow Logging be Enabled?
+    <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -875,7 +875,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Should Network Flow Logging be Enabled?
+    <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -954,7 +954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should Network Flow Logging be Enabled?
+    <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1043,6 +1043,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkWatcherFlowLogRetentionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkWatcherFlowLogRetentionPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.NetworkWatcherFlowLogRetentionPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.NetworkWatcherFlowLogRetentionPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1065,7 +1068,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag to enable/disable retention.
+    <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd>
 
 </dl>
@@ -1090,7 +1093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag to enable/disable retention.
+    <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd>
 
 </dl>
@@ -1115,7 +1118,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag to enable/disable retention.
+    <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd>
 
 </dl>
@@ -1140,7 +1143,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag to enable/disable retention.
+    <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd>
 
 </dl>
@@ -1157,6 +1160,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkWatcherFlowLogTrafficAnalyticsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkWatcherFlowLogTrafficAnalyticsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.NetworkWatcherFlowLogTrafficAnalyticsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.NetworkWatcherFlowLogTrafficAnalytics.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

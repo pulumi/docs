@@ -1,7 +1,8 @@
 
 ---
 title: "DatabaseInstance"
-block_external_search_index: true
+title_tag: "Resource DatabaseInstance | Module sql | Package GCP"
+meta_desc: "Explore the DatabaseInstance resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a new Google SQL Database Instance. For more information, see the [official documentation](https://cloud.google.com/sql/),"
 ---
 
 
@@ -39,12 +40,26 @@ default 'root'@'%' user with no password. This user will be deleted by the provi
 instance creation. You should use `gcp.sql.User` to define a custom user with
 a restricted host and strong password.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### SQL Second Generation Instance
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -59,14 +74,13 @@ const master = new gcp.sql.DatabaseInstance("master", {
     },
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a DatabaseInstance Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -74,7 +88,7 @@ const master = new gcp.sql.DatabaseInstance("master", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatabaseInstance</span><span class="p">(resource_name, opts=None, </span>database_version=None<span class="p">, </span>encryption_key_name=None<span class="p">, </span>master_instance_name=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>replica_configuration=None<span class="p">, </span>root_password=None<span class="p">, </span>settings=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatabaseInstance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>database_version=None<span class="p">, </span>encryption_key_name=None<span class="p">, </span>master_instance_name=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>replica_configuration=None<span class="p">, </span>root_password=None<span class="p">, </span>settings=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1054,7 +1068,7 @@ instance.
 ## Look up an Existing DatabaseInstance Resource {#look-up}
 
 Get an existing DatabaseInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#DatabaseInstanceState">DatabaseInstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#DatabaseInstance">DatabaseInstance</a></span></code></pre></div>
@@ -1923,6 +1937,9 @@ configuration is detailed below.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceIpAddressOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.DatabaseInstanceIpAddress.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2061,6 +2078,9 @@ configuration is detailed below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceReplicaConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceReplicaConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Inputs.DatabaseInstanceReplicaConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.DatabaseInstanceReplicaConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2537,6 +2557,9 @@ value is checked during the SSL handshake.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceServerCaCertOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.DatabaseInstanceServerCaCert.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2747,6 +2770,9 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3435,6 +3461,9 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsBackupConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsBackupConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Inputs.DatabaseInstanceSettingsBackupConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsBackupConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3630,6 +3659,9 @@ configuration starts.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsDatabaseFlagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsDatabaseFlagOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Inputs.DatabaseInstanceSettingsDatabaseFlagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsDatabaseFlag.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3752,6 +3784,9 @@ the whitelist to become active.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsIpConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsIpConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Inputs.DatabaseInstanceSettingsIpConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsIpConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3964,6 +3999,9 @@ for users connecting over IP.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Inputs.DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4127,6 +4165,9 @@ formatted date time string indicating when this whitelist expires.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsLocationPreferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsLocationPreferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Inputs.DatabaseInstanceSettingsLocationPreferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsLocationPreference.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4249,6 +4290,9 @@ in. Must be in the same region as this instance.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsMaintenanceWindowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#DatabaseInstanceSettingsMaintenanceWindowOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Inputs.DatabaseInstanceSettingsMaintenanceWindowArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsMaintenanceWindow.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4407,8 +4451,7 @@ in. Must be in the same region as this instance.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

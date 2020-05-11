@@ -13,45 +13,45 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-alicloud/issues">pulumi/pulumi-alicloud repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/issues">terraform-providers/terraform-provider-alicloud repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_alicloud.elasticsearch"></span><dl class="class">
+<span class="target" id="module-pulumi_alicloud.elasticsearch"></span><dl class="py class">
 <dt id="pulumi_alicloud.elasticsearch.AwaitableGetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">descriptions=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">AwaitableGetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">descriptions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.AwaitableGetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.elasticsearch.AwaitableGetZonesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">multi=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multi</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zones</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.elasticsearch.GetInstancesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">descriptions=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">GetInstancesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">descriptions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstances.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.GetInstancesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.elasticsearch.GetZonesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">GetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">multi=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.GetZonesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">GetZonesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multi</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zones</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.GetZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getZones.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.GetZonesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.GetZonesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.GetZonesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.GetZonesResult.ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of zone IDs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.GetZonesResult.zones">
 <code class="sig-name descname">zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.GetZonesResult.zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of availability zones. Each element contains the following attributes:</p>
@@ -59,9 +59,9 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.elasticsearch.Instance">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_node_amount=None</em>, <em class="sig-param">data_node_disk_size=None</em>, <em class="sig-param">data_node_disk_type=None</em>, <em class="sig-param">data_node_spec=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">kibana_whitelists=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">master_node_spec=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">private_whitelists=None</em>, <em class="sig-param">public_whitelists=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_count=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_node_amount</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_node_disk_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_node_disk_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_node_spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kibana_whitelists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_encrypted_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_encryption_context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_node_spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_whitelists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_whitelists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Elasticsearch instance resource. It contains data nodes, dedicated master node(optional) and etc. It can be associated with private IP whitelists and kibana IP whitelist.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Only one operation is supported in a request. So if <code class="docutils literal notranslate"><span class="pre">data_node_spec</span></code> and <code class="docutils literal notranslate"><span class="pre">data_node_disk_size</span></code> are both changed, system will respond error.</p>
@@ -113,15 +113,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.data_node_amount">
-<code class="sig-name descname">data_node_amount</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.data_node_amount" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">data_node_amount</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.data_node_amount" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Elasticsearch cluster’s data node quantity, between 2 and 50.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.data_node_disk_size">
-<code class="sig-name descname">data_node_disk_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.data_node_disk_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">data_node_disk_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.data_node_disk_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The single data node storage space.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cloud_ssd</span></code>: An SSD disk, supports a maximum of 2048 GiB (2 TB).</p></li>
@@ -129,105 +129,105 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.data_node_disk_type">
-<code class="sig-name descname">data_node_disk_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.data_node_disk_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">data_node_disk_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.data_node_disk_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The data node disk type. Supported values: cloud_ssd, cloud_efficiency.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.data_node_spec">
-<code class="sig-name descname">data_node_spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.data_node_spec" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">data_node_spec</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.data_node_spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The data node specifications of the Elasticsearch instance.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of instance. It a string of 0 to 30 characters.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.domain">
-<code class="sig-name descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.domain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">domain</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance connection domain (only VPC network access supported).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.instance_charge_type">
-<code class="sig-name descname">instance_charge_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.instance_charge_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">instance_charge_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.instance_charge_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Valid values are <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>, <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>, Default to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>. From version 1.69.0, the Elasticsearch cluster allows you to update your instance_charge_ype from <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code> to <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>, the following attributes are required: <code class="docutils literal notranslate"><span class="pre">period</span></code>. But, updating from <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code> to <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> is not supported.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.kibana_domain">
-<code class="sig-name descname">kibana_domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.kibana_domain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kibana_domain</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.kibana_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Kibana console domain (Internet access supported).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.kibana_port">
-<code class="sig-name descname">kibana_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.kibana_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kibana_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.kibana_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Kibana console port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.kibana_whitelists">
-<code class="sig-name descname">kibana_whitelists</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.kibana_whitelists" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kibana_whitelists</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.kibana_whitelists" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the Kibana’s IP whitelist in internet network.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.kms_encrypted_password">
-<code class="sig-name descname">kms_encrypted_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.kms_encrypted_password" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kms_encrypted_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.kms_encrypted_password" title="Permalink to this definition">¶</a></dt>
 <dd><p>An KMS encrypts password used to a instance. If the <code class="docutils literal notranslate"><span class="pre">password</span></code> is filled in, this field will be ignored, but you have to specify one of <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> fields.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.kms_encryption_context">
-<code class="sig-name descname">kms_encryption_context</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.kms_encryption_context" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kms_encryption_context</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.kms_encryption_context" title="Permalink to this definition">¶</a></dt>
 <dd><p>An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating instance with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.master_node_spec">
-<code class="sig-name descname">master_node_spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.master_node_spec" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">master_node_spec</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.master_node_spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The dedicated master node spec. If specified, dedicated master node will be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.password">
-<code class="sig-name descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.password" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.password" title="Permalink to this definition">¶</a></dt>
 <dd><p>The password of the instance. The password can be 8 to 30 characters in length and must contain three of the following conditions: uppercase letters, lowercase letters, numbers, and special characters (<code class="docutils literal notranslate"><span class="pre">!&#64;#$%^&amp;*()_+-=</span></code>).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.period">
-<code class="sig-name descname">period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.period" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">period</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.period" title="Permalink to this definition">¶</a></dt>
 <dd><p>The duration that you will buy Elasticsearch instance (in month). It is valid when instance_charge_type is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Valid values: [1~9], 12, 24, 36. Default to 1. From version 1.69.2, when to modify this value, the resource can renewal a <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> instance.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.port">
-<code class="sig-name descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance connection port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.private_whitelists">
-<code class="sig-name descname">private_whitelists</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.private_whitelists" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">private_whitelists</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.private_whitelists" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the instance’s IP whitelist in VPC network.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.status">
-<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Elasticsearch instance status. Includes <code class="docutils literal notranslate"><span class="pre">active</span></code>, <code class="docutils literal notranslate"><span class="pre">activating</span></code>, <code class="docutils literal notranslate"><span class="pre">inactive</span></code>. Some operations are denied when status is not <code class="docutils literal notranslate"><span class="pre">active</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 <ul class="simple">
 <li><p>key: It can be up to 128 characters in length. It cannot begin with “aliyun”, “acs:”. It cannot contain “<a class="reference external" href="http://">http://</a>” and “<a class="reference external" href="https://">https://</a>”. It cannot be a null string.</p></li>
@@ -235,27 +235,27 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.version">
-<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Elasticsearch version. Supported values: <code class="docutils literal notranslate"><span class="pre">5.5.3_with_X-Pack</span></code>, <code class="docutils literal notranslate"><span class="pre">6.3_with_X-Pack</span></code> and <code class="docutils literal notranslate"><span class="pre">6.7_with_X-Pack</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.vswitch_id">
-<code class="sig-name descname">vswitch_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.vswitch_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vswitch_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.vswitch_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of VSwitch.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.elasticsearch.Instance.zone_count">
-<code class="sig-name descname">zone_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.zone_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">zone_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.zone_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Multi-AZ supported for Elasticsearch, between 1 and 3. The <code class="docutils literal notranslate"><span class="pre">data_node_amount</span></code> value must be an integral multiple of the <code class="docutils literal notranslate"><span class="pre">zone_count</span></code> value.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.elasticsearch.Instance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_node_amount=None</em>, <em class="sig-param">data_node_disk_size=None</em>, <em class="sig-param">data_node_disk_type=None</em>, <em class="sig-param">data_node_spec=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">kibana_domain=None</em>, <em class="sig-param">kibana_port=None</em>, <em class="sig-param">kibana_whitelists=None</em>, <em class="sig-param">kms_encrypted_password=None</em>, <em class="sig-param">kms_encryption_context=None</em>, <em class="sig-param">master_node_spec=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">private_whitelists=None</em>, <em class="sig-param">public_whitelists=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_count=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_node_amount</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_node_disk_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_node_disk_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_node_spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kibana_domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kibana_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kibana_whitelists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_encrypted_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_encryption_context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_node_spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_whitelists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_whitelists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_count</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -313,9 +313,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.elasticsearch.Instance.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -331,9 +331,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.elasticsearch.Instance.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.Instance.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -351,15 +351,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_alicloud.elasticsearch.get_instances">
-<code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.get_instances" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.get_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_alicloud.elasticsearch.get_zones">
-<code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param">multi=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.get_zones" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.elasticsearch.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">multi</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.elasticsearch.get_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides availability zones for Elasticsearch that can be accessed by an Alibaba Cloud account within the region configured in the provider.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.73.0+.</p>

@@ -14,10 +14,26 @@ Provides an IAM user.
 
 > *NOTE:* If policies are attached to the user via the [`aws.iam.PolicyAttachment` resource](https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html) and you are modifying the user `name` or `path`, the `force_destroy` argument must be set to `true` and applied before attempting the operation otherwise you will encounter a `DeleteConflict` error. The [`aws.iam.UserPolicyAttachment` resource (recommended)](https://www.terraform.io/docs/providers/aws/r/iam_user_policy_attachment.html) does not have this requirement.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -48,14 +64,13 @@ const lbRo = new aws.iam.UserPolicy("lb_ro", {
     user: lbUser.name,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a User Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -63,7 +78,7 @@ const lbRo = new aws.iam.UserPolicy("lb_ro", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, opts=None, </span>force_destroy=None<span class="p">, </span>name=None<span class="p">, </span>path=None<span class="p">, </span>permissions_boundary=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>force_destroy=None<span class="p">, </span>name=None<span class="p">, </span>path=None<span class="p">, </span>permissions_boundary=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,8 +257,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.
+has non-provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
+a user with non-provider-managed access keys and login profile will fail to be destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -296,8 +311,8 @@ a user with non-this provider-managed access keys and login profile will fail to
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.
+has non-provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
+a user with non-provider-managed access keys and login profile will fail to be destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -350,8 +365,8 @@ a user with non-this provider-managed access keys and login profile will fail to
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.
+has non-provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
+a user with non-provider-managed access keys and login profile will fail to be destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -404,8 +419,8 @@ a user with non-this provider-managed access keys and login profile will fail to
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.
+has non-provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
+a user with non-provider-managed access keys and login profile will fail to be destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -599,7 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing User Resource {#look-up}
 
 Get an existing User resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#UserState">UserState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#User">User</a></span></code></pre></div>
@@ -736,8 +751,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.
+has non-provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
+a user with non-provider-managed access keys and login profile will fail to be destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -808,8 +823,8 @@ a user with non-this provider-managed access keys and login profile will fail to
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.
+has non-provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
+a user with non-provider-managed access keys and login profile will fail to be destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -880,8 +895,8 @@ a user with non-this provider-managed access keys and login profile will fail to
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.
+has non-provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
+a user with non-provider-managed access keys and login profile will fail to be destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -952,8 +967,8 @@ a user with non-this provider-managed access keys and login profile will fail to
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.
+has non-provider-managed IAM access keys, login profile or MFA devices. Without `force_destroy`
+a user with non-provider-managed access keys and login profile will fail to be destroyed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

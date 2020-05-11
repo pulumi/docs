@@ -14,7 +14,7 @@ meta_desc: "Explore the AuthBackend resource of the okta module, including examp
 
 
 ## Create a AuthBackend Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the AuthBackend resource of the okta module, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackend</span><span class="p">(resource_name, opts=None, </span>base_url=None<span class="p">, </span>bypass_okta_mfa=None<span class="p">, </span>description=None<span class="p">, </span>groups=None<span class="p">, </span>max_ttl=None<span class="p">, </span>organization=None<span class="p">, </span>path=None<span class="p">, </span>token=None<span class="p">, </span>ttl=None<span class="p">, </span>users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackend</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>base_url=None<span class="p">, </span>bypass_okta_mfa=None<span class="p">, </span>description=None<span class="p">, </span>groups=None<span class="p">, </span>max_ttl=None<span class="p">, </span>organization=None<span class="p">, </span>path=None<span class="p">, </span>token=None<span class="p">, </span>ttl=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -714,7 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AuthBackend Resource {#look-up}
 
 Get an existing AuthBackend resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/okta/#AuthBackendState">AuthBackendState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/okta/#AuthBackend">AuthBackend</a></span></code></pre></div>
@@ -1295,6 +1295,9 @@ See below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendGroupTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendGroupTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Okta.Inputs.AuthBackendGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Okta.Outputs.AuthBackendGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1409,6 +1412,9 @@ See below for more details.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendUserTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendUserTypeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Okta.Inputs.AuthBackendUserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Okta.Outputs.AuthBackendUser.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

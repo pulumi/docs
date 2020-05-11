@@ -14,35 +14,7 @@ Provides a Linode Image resource.  This can be used to create, modify, and delet
 
 For more information, see [Linode's documentation on Images](https://www.linode.com/docs/platform/disk-images/linode-images/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createImage).
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-The following example shows how one might use this resource to create an Image from a Linode Instance Disk and then deploy a new Linode Instance in another region using that Image.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const foo = new linode.Instance("foo", {
-    region: "us-central",
-    type: "g6-nanode-1",
-});
-const bar = new linode.Image("bar", {
-    description: "Image taken from foo",
-    diskId: foo.disks.apply(disks => disks[0].id),
-    label: "foo-sda-image",
-    linodeId: foo.id,
-});
-const barBased = new linode.Instance("bar_based", {
-    image: bar.id,
-    region: "eu-west",
-    type: foo.type,
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Attributes
 
 This resource exports the following attributes:
@@ -65,10 +37,51 @@ This resource exports the following attributes:
 
 * `vendor` - The upstream distribution vendor. Nil for private Images.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const foo = new linode.Instance("foo", {
+    region: "us-central",
+    type: "g6-nanode-1",
+});
+const bar = new linode.Image("bar", {
+    description: "Image taken from foo",
+    diskId: foo.disks.apply(disks => disks[0].id),
+    label: "foo-sda-image",
+    linodeId: foo.id,
+});
+const barBased = new linode.Instance("bar_based", {
+    image: bar.id,
+    region: "eu-west",
+    type: foo.type,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Image Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -76,7 +89,7 @@ This resource exports the following attributes:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Image</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>disk_id=None<span class="p">, </span>label=None<span class="p">, </span>linode_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Image</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>disk_id=None<span class="p">, </span>label=None<span class="p">, </span>linode_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -788,7 +801,7 @@ a deleted Linode.
 ## Look up an Existing Image Resource {#look-up}
 
 Get an existing Image resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#ImageState">ImageState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#Image">Image</a></span></code></pre></div>

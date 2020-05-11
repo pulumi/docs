@@ -1,7 +1,8 @@
 
 ---
 title: "NodeTemplate"
-block_external_search_index: true
+title_tag: "Resource NodeTemplate | Module compute | Package GCP"
+meta_desc: "Explore the NodeTemplate resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a NodeTemplate resource. Node templates specify properties"
 ---
 
 
@@ -23,7 +24,7 @@ To get more information about NodeTemplate, see:
 
 
 ## Create a NodeTemplate Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -31,7 +32,7 @@ To get more information about NodeTemplate, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodeTemplate</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>node_affinity_labels=None<span class="p">, </span>node_type=None<span class="p">, </span>node_type_flexibility=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>server_binding=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodeTemplate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>node_affinity_labels=None<span class="p">, </span>node_type=None<span class="p">, </span>node_type_flexibility=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>server_binding=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -227,7 +228,8 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
+    <dd>{{% md %}}Labels to use for node affinity, which will be used in
+instance scheduling.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -236,8 +238,8 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.
+    <dd>{{% md %}}Node type to use for nodes group that are created from this template.
+Only one of nodeTypeFlexibility and nodeType can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -246,8 +248,10 @@ be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
+    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
+use this node template will create nodes of a type that matches
+these properties. Only one of nodeTypeFlexibility and nodeType can
+be specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -266,7 +270,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where nodes using the node template will be created.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -275,8 +280,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -310,7 +315,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
+    <dd>{{% md %}}Labels to use for node affinity, which will be used in
+instance scheduling.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -319,8 +325,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.
+    <dd>{{% md %}}Node type to use for nodes group that are created from this template.
+Only one of nodeTypeFlexibility and nodeType can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -329,8 +335,10 @@ be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
     </dt>
-    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
+    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
+use this node template will create nodes of a type that matches
+these properties. Only one of nodeTypeFlexibility and nodeType can
+be specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -349,7 +357,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where nodes using the node template will be created.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -358,8 +367,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -393,7 +402,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
+    <dd>{{% md %}}Labels to use for node affinity, which will be used in
+instance scheduling.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -402,8 +412,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.
+    <dd>{{% md %}}Node type to use for nodes group that are created from this template.
+Only one of nodeTypeFlexibility and nodeType can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -412,8 +422,10 @@ be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
     </dt>
-    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
+    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
+use this node template will create nodes of a type that matches
+these properties. Only one of nodeTypeFlexibility and nodeType can
+be specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -432,7 +444,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where nodes using the node template will be created.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -441,8 +454,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -476,7 +489,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
+    <dd>{{% md %}}Labels to use for node affinity, which will be used in
+instance scheduling.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -485,8 +499,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.
+    <dd>{{% md %}}Node type to use for nodes group that are created from this template.
+Only one of nodeTypeFlexibility and nodeType can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -495,8 +509,10 @@ be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Dict[Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility]</a></span>
     </dt>
-    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
+    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
+use this node template will create nodes of a type that matches
+these properties. Only one of nodeTypeFlexibility and nodeType can
+be specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -515,7 +531,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where nodes using the node template will be created.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -524,8 +541,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Dict[Node<wbr>Template<wbr>Server<wbr>Binding]</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -683,7 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NodeTemplate Resource {#look-up}
 
 Get an existing NodeTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NodeTemplateState">NodeTemplateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NodeTemplate">NodeTemplate</a></span></code></pre></div>
@@ -837,7 +854,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
+    <dd>{{% md %}}Labels to use for node affinity, which will be used in
+instance scheduling.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -846,8 +864,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.
+    <dd>{{% md %}}Node type to use for nodes group that are created from this template.
+Only one of nodeTypeFlexibility and nodeType can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -856,8 +874,10 @@ be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
+    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
+use this node template will create nodes of a type that matches
+these properties. Only one of nodeTypeFlexibility and nodeType can
+be specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -876,7 +896,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where nodes using the node template will be created.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -894,8 +915,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -938,7 +959,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
+    <dd>{{% md %}}Labels to use for node affinity, which will be used in
+instance scheduling.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -947,8 +969,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.
+    <dd>{{% md %}}Node type to use for nodes group that are created from this template.
+Only one of nodeTypeFlexibility and nodeType can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -957,8 +979,10 @@ be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
     </dt>
-    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
+    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
+use this node template will create nodes of a type that matches
+these properties. Only one of nodeTypeFlexibility and nodeType can
+be specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -977,7 +1001,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where nodes using the node template will be created.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -995,8 +1020,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1039,7 +1064,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
+    <dd>{{% md %}}Labels to use for node affinity, which will be used in
+instance scheduling.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1048,8 +1074,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.
+    <dd>{{% md %}}Node type to use for nodes group that are created from this template.
+Only one of nodeTypeFlexibility and nodeType can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1058,8 +1084,10 @@ be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
     </dt>
-    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
+    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
+use this node template will create nodes of a type that matches
+these properties. Only one of nodeTypeFlexibility and nodeType can
+be specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1078,7 +1106,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where nodes using the node template will be created.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1096,8 +1125,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1140,7 +1169,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
+    <dd>{{% md %}}Labels to use for node affinity, which will be used in
+instance scheduling.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1149,8 +1179,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.
+    <dd>{{% md %}}Node type to use for nodes group that are created from this template.
+Only one of nodeTypeFlexibility and nodeType can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1159,8 +1189,10 @@ be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Dict[Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility]</a></span>
     </dt>
-    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
+    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
+use this node template will create nodes of a type that matches
+these properties. Only one of nodeTypeFlexibility and nodeType can
+be specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1179,7 +1211,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region where nodes using the node template will be created.
+If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1197,8 +1230,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodetemplateserverbinding">Dict[Node<wbr>Template<wbr>Server<wbr>Binding]</a></span>
     </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
+    <dd>{{% md %}}The server binding policy for nodes using this template. Determines
+where the nodes should restart following a maintenance event.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1224,6 +1257,9 @@ maintenance event.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateNodeTypeFlexibilityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateNodeTypeFlexibilityOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.NodeTemplateNodeTypeFlexibilityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.NodeTemplateNodeTypeFlexibility.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1237,7 +1273,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of virtual CPUs to use.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1245,7 +1282,9 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+Use local SSD
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1253,7 +1292,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Physical memory available to the node, defined in MB.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1268,7 +1308,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of virtual CPUs to use.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1276,7 +1317,9 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+Use local SSD
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1284,7 +1327,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Physical memory available to the node, defined in MB.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1299,7 +1343,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of virtual CPUs to use.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1307,7 +1352,9 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+Use local SSD
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1315,7 +1362,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Physical memory available to the node, defined in MB.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1330,7 +1378,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of virtual CPUs to use.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1338,7 +1387,9 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+Use local SSD
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1346,7 +1397,8 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Physical memory available to the node, defined in MB.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1363,6 +1415,9 @@ maintenance event.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateServerBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateServerBindingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.NodeTemplateServerBindingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.NodeTemplateServerBinding.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1376,7 +1431,18 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of server binding policy. If `RESTART_NODE_ON_ANY_SERVER`,
+nodes using this template will restart on any physical server
+following a maintenance event.
+If `RESTART_NODE_ON_MINIMAL_SERVER`, nodes using this template
+will restart on the same physical server following a maintenance
+event, instead of being live migrated to or restarted on a new
+physical server. This option may be useful if you are using
+software licenses tied to the underlying server characteristics
+such as physical sockets or cores, to avoid the need for
+additional licenses when maintenance occurs. However, VMs on such
+nodes will experience outages while maintenance is applied.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1391,7 +1457,18 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of server binding policy. If `RESTART_NODE_ON_ANY_SERVER`,
+nodes using this template will restart on any physical server
+following a maintenance event.
+If `RESTART_NODE_ON_MINIMAL_SERVER`, nodes using this template
+will restart on the same physical server following a maintenance
+event, instead of being live migrated to or restarted on a new
+physical server. This option may be useful if you are using
+software licenses tied to the underlying server characteristics
+such as physical sockets or cores, to avoid the need for
+additional licenses when maintenance occurs. However, VMs on such
+nodes will experience outages while maintenance is applied.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1406,7 +1483,18 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of server binding policy. If `RESTART_NODE_ON_ANY_SERVER`,
+nodes using this template will restart on any physical server
+following a maintenance event.
+If `RESTART_NODE_ON_MINIMAL_SERVER`, nodes using this template
+will restart on the same physical server following a maintenance
+event, instead of being live migrated to or restarted on a new
+physical server. This option may be useful if you are using
+software licenses tied to the underlying server characteristics
+such as physical sockets or cores, to avoid the need for
+additional licenses when maintenance occurs. However, VMs on such
+nodes will experience outages while maintenance is applied.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1421,7 +1509,18 @@ maintenance event.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of server binding policy. If `RESTART_NODE_ON_ANY_SERVER`,
+nodes using this template will restart on any physical server
+following a maintenance event.
+If `RESTART_NODE_ON_MINIMAL_SERVER`, nodes using this template
+will restart on the same physical server following a maintenance
+event, instead of being live migrated to or restarted on a new
+physical server. This option may be useful if you are using
+software licenses tied to the underlying server characteristics
+such as physical sockets or cores, to avoid the need for
+additional licenses when maintenance occurs. However, VMs on such
+nodes will experience outages while maintenance is applied.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1440,8 +1539,7 @@ maintenance event.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

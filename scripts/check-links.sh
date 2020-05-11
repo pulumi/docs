@@ -1,6 +1,7 @@
 #!/bin/bash
 set -o nounset -o errexit -o pipefail
 
+BUILD_TYPE=${1-schedule}
 HTTP_SERVER_PORT=8888
 
 check_links() {
@@ -33,6 +34,17 @@ check_links() {
         --exclude "https://www.packet.com/"
 }
 
+check_get_pulumi_links() {
+    # We only link to get.pulumi.com in /docs/get-started/install/ and /docs/get-started/install/versions
+    npx blc http://localhost:$HTTP_SERVER_PORT/docs/get-started/install/versions/ --follow \
+        --exclude-internal \
+        --exclude "https://www*"
+
+    npx blc http://localhost:$HTTP_SERVER_PORT/docs/get-started/install/ --follow \
+        --exclude-internal \
+        --exclude "https://www*"
+}
+
 retry() {
     local n=1
     local max=3
@@ -57,8 +69,16 @@ HTTP_SERVER_PID=$!
 
 # Run the link checker once the HTTP server is listening.
 while ! nc -z localhost $HTTP_SERVER_PORT; do sleep 0.1; done
+
 # Re-run the link checker up to three times, to handle the occasional transient failure.
-retry check_links
+if [ $BUILD_TYPE = "pull_request" ]
+then
+    echo "Checking only get.pulumi.com links"
+    retry check_get_pulumi_links
+else 
+    echo "Checking all links"
+    retry check_links
+fi
 
 # Kill the server process.
 kill $HTTP_SERVER_PID

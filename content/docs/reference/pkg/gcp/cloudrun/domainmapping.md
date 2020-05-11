@@ -1,7 +1,8 @@
 
 ---
 title: "DomainMapping"
-block_external_search_index: true
+title_tag: "Resource DomainMapping | Module cloudrun | Package GCP"
+meta_desc: "Explore the DomainMapping resource of the cloudrun module, including examples, input properties, output properties, lookup functions, and supporting types. Resource to hold the state and status of a user&#39;s domain mapping."
 ---
 
 
@@ -21,7 +22,7 @@ To get more information about DomainMapping, see:
 
 
 ## Create a DomainMapping Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -29,7 +30,7 @@ To get more information about DomainMapping, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DomainMapping</span><span class="p">(resource_name, opts=None, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>spec=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DomainMapping</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>spec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -216,7 +217,7 @@ The DomainMapping resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -225,7 +226,7 @@ The DomainMapping resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.
+    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -269,7 +270,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -278,7 +279,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.
+    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -322,7 +323,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -331,7 +332,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.
+    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -375,7 +376,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Dict[Domain<wbr>Mapping<wbr>Metadata]</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -384,7 +385,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Dict[Domain<wbr>Mapping<wbr>Spec]</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.
+    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -525,7 +526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DomainMapping Resource {#look-up}
 
 Get an existing DomainMapping resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMappingState">DomainMappingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMapping">DomainMapping</a></span></code></pre></div>
@@ -661,7 +662,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -689,7 +690,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.
+    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -723,7 +724,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -751,7 +752,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.
+    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -785,7 +786,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -813,7 +814,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.
+    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -847,7 +848,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Dict[Domain<wbr>Mapping<wbr>Metadata]</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -875,7 +876,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Dict[Domain<wbr>Mapping<wbr>Spec]</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.
+    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -910,6 +911,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingMetadataOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.DomainMappingMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingMetadata.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -923,7 +927,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
+project ID or project number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -931,7 +937,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Annotations is a key value map stored with a resource that
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -939,7 +948,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A sequence number representing a specific generation of the desired state.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -947,7 +958,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
+(scope and select) objects. May match selectors of replication controllers
+and routes.
+More info: http://kubernetes.io/docs/user-guide/labels
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -955,7 +970,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+An opaque value that represents the internal version of this object that
+can be used by clients to determine when objects have changed. May be used
+for optimistic concurrency, change detection, and the watch operation on a
+resource or set of resources. They may only be valid for a
+particular resource or set of resources.
+More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -963,7 +986,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+SelfLink is a URL representing this object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -971,7 +996,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+UID is a unique id generated by the server on successful creation of a resource and is not
+allowed to change on PUT operations.
+More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -986,7 +1015,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
+project ID or project number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -994,7 +1025,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Annotations is a key value map stored with a resource that
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1002,7 +1036,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A sequence number representing a specific generation of the desired state.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1010,7 +1046,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
+(scope and select) objects. May match selectors of replication controllers
+and routes.
+More info: http://kubernetes.io/docs/user-guide/labels
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1018,7 +1058,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+An opaque value that represents the internal version of this object that
+can be used by clients to determine when objects have changed. May be used
+for optimistic concurrency, change detection, and the watch operation on a
+resource or set of resources. They may only be valid for a
+particular resource or set of resources.
+More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1026,7 +1074,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+SelfLink is a URL representing this object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1034,7 +1084,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+UID is a unique id generated by the server on successful creation of a resource and is not
+allowed to change on PUT operations.
+More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1049,7 +1103,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
+project ID or project number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1057,7 +1113,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Annotations is a key value map stored with a resource that
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1065,7 +1124,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A sequence number representing a specific generation of the desired state.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1073,7 +1134,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
+(scope and select) objects. May match selectors of replication controllers
+and routes.
+More info: http://kubernetes.io/docs/user-guide/labels
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1081,7 +1146,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+An opaque value that represents the internal version of this object that
+can be used by clients to determine when objects have changed. May be used
+for optimistic concurrency, change detection, and the watch operation on a
+resource or set of resources. They may only be valid for a
+particular resource or set of resources.
+More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1089,7 +1162,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+SelfLink is a URL representing this object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1097,7 +1172,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+UID is a unique id generated by the server on successful creation of a resource and is not
+allowed to change on PUT operations.
+More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1112,7 +1191,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
+project ID or project number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1120,7 +1201,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Annotations is a key value map stored with a resource that
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1128,7 +1212,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A sequence number representing a specific generation of the desired state.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1136,7 +1222,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
+(scope and select) objects. May match selectors of replication controllers
+and routes.
+More info: http://kubernetes.io/docs/user-guide/labels
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1144,7 +1234,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+An opaque value that represents the internal version of this object that
+can be used by clients to determine when objects have changed. May be used
+for optimistic concurrency, change detection, and the watch operation on a
+resource or set of resources. They may only be valid for a
+particular resource or set of resources.
+More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1152,7 +1250,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+SelfLink is a URL representing this object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1160,7 +1260,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+UID is a unique id generated by the server on successful creation of a resource and is not
+allowed to change on PUT operations.
+More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1177,6 +1281,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.DomainMappingSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingSpec.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1190,7 +1297,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Cloud Run Service that this DomainMapping applies to.
+The route must exist.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1198,7 +1307,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1206,7 +1316,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set, the mapping will override any mapping set before this spec was set.
+It is recommended that the user leaves this empty to receive an error
+warning about a potential conflict and only set it once the respective UI
+has given such a warning.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1221,7 +1335,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Cloud Run Service that this DomainMapping applies to.
+The route must exist.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1229,7 +1345,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1237,7 +1354,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set, the mapping will override any mapping set before this spec was set.
+It is recommended that the user leaves this empty to receive an error
+warning about a potential conflict and only set it once the respective UI
+has given such a warning.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1252,7 +1373,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Cloud Run Service that this DomainMapping applies to.
+The route must exist.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1260,7 +1383,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1268,7 +1392,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set, the mapping will override any mapping set before this spec was set.
+It is recommended that the user leaves this empty to receive an error
+warning about a potential conflict and only set it once the respective UI
+has given such a warning.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1283,7 +1411,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Cloud Run Service that this DomainMapping applies to.
+The route must exist.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1291,7 +1421,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode of the certificate.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1299,7 +1430,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If set, the mapping will override any mapping set before this spec was set.
+It is recommended that the user leaves this empty to receive an error
+warning about a potential conflict and only set it once the respective UI
+has given such a warning.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1315,6 +1450,9 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingStatusOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingStatus.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1487,6 +1625,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingStatusConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingStatusCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1658,6 +1799,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingStatusResourceRecordOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingStatusResourceRecord.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1671,7 +1815,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name should be a verified domain
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1702,7 +1847,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name should be a verified domain
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1733,7 +1879,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name should be a verified domain
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1764,7 +1911,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name should be a verified domain
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1799,8 +1947,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

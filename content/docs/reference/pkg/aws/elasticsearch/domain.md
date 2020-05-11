@@ -12,12 +12,26 @@ meta_desc: "Explore the Domain resource of the elasticsearch module, including e
 
 Manages an AWS Elasticsearch Domain.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic Usage
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -35,13 +49,22 @@ const example = new aws.elasticsearch.Domain("example", {
     },
 });
 ```
-
 {{% /example %}}
-{{% example %}}
+
 ### Access Policy
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-> See also: [`aws.elasticsearch.DomainPolicy` resource](https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain_policy.html)
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -69,11 +92,22 @@ const example = new aws.elasticsearch.Domain("example", {
 `,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Log Publishing to CloudWatch Logs
 
+### Log Publishing to CloudWatch Logs
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -107,11 +141,22 @@ const exampleDomain = new aws.elasticsearch.Domain("example", {
     }],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### VPC based ES
 
+### VPC based ES
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -181,14 +226,13 @@ const esDomain = new aws.elasticsearch.Domain("es", {
     },
 }, { dependsOn: [esServiceLinkedRole] });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Domain Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -196,7 +240,7 @@ const esDomain = new aws.elasticsearch.Domain("es", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Domain</span><span class="p">(resource_name, opts=None, </span>access_policies=None<span class="p">, </span>advanced_options=None<span class="p">, </span>cluster_config=None<span class="p">, </span>cognito_options=None<span class="p">, </span>domain_endpoint_options=None<span class="p">, </span>domain_name=None<span class="p">, </span>ebs_options=None<span class="p">, </span>elasticsearch_version=None<span class="p">, </span>encrypt_at_rest=None<span class="p">, </span>log_publishing_options=None<span class="p">, </span>node_to_node_encryption=None<span class="p">, </span>snapshot_options=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_options=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Domain</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_policies=None<span class="p">, </span>advanced_options=None<span class="p">, </span>cluster_config=None<span class="p">, </span>cognito_options=None<span class="p">, </span>domain_endpoint_options=None<span class="p">, </span>domain_name=None<span class="p">, </span>ebs_options=None<span class="p">, </span>elasticsearch_version=None<span class="p">, </span>encrypt_at_rest=None<span class="p">, </span>log_publishing_options=None<span class="p">, </span>node_to_node_encryption=None<span class="p">, </span>snapshot_options=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_options=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -484,7 +528,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -619,7 +663,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -754,7 +798,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -889,7 +933,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1136,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Domain Resource {#look-up}
 
 Get an existing Domain resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticsearch/#DomainState">DomainState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticsearch/#Domain">Domain</a></span></code></pre></div>
@@ -1411,7 +1455,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1584,7 +1628,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1757,7 +1801,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1930,7 +1974,7 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1964,6 +2008,9 @@ domain on every apply.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainClusterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainClusterConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.DomainClusterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.DomainClusterConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2260,6 +2307,9 @@ domain on every apply.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainClusterConfigZoneAwarenessConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainClusterConfigZoneAwarenessConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.DomainClusterConfigZoneAwarenessConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.DomainClusterConfigZoneAwarenessConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2338,6 +2388,9 @@ domain on every apply.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainCognitoOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainCognitoOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.DomainCognitoOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.DomainCognitoOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2526,6 +2579,9 @@ domain on every apply.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainDomainEndpointOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainDomainEndpointOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.DomainDomainEndpointOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.DomainDomainEndpointOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2640,6 +2696,9 @@ domain on every apply.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainEbsOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainEbsOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.DomainEbsOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.DomainEbsOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2836,6 +2895,9 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainEncryptAtRestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainEncryptAtRestOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.DomainEncryptAtRestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.DomainEncryptAtRest.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2950,6 +3012,9 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainLogPublishingOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainLogPublishingOptionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.DomainLogPublishingOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.DomainLogPublishingOption.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3102,6 +3167,9 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainNodeToNodeEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainNodeToNodeEncryptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.DomainNodeToNodeEncryptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.DomainNodeToNodeEncryption.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3180,6 +3248,9 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainSnapshotOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainSnapshotOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.DomainSnapshotOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.DomainSnapshotOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3263,6 +3334,9 @@ snapshot of the indices in the domain.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainVpcOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#DomainVpcOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Inputs.DomainVpcOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.DomainVpcOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

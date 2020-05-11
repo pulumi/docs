@@ -1,7 +1,8 @@
 
 ---
 title: "HealthCheck"
-block_external_search_index: true
+title_tag: "Resource HealthCheck | Module compute | Package GCP"
+meta_desc: "Explore the HealthCheck resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Health Checks determine whether instances are responsive and able to do work."
 ---
 
 
@@ -220,7 +221,7 @@ const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
 
 
 ## Create a HealthCheck Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -228,7 +229,7 @@ const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HealthCheck</span><span class="p">(resource_name, opts=None, </span>check_interval_sec=None<span class="p">, </span>description=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>http2_health_check=None<span class="p">, </span>http_health_check=None<span class="p">, </span>https_health_check=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>ssl_health_check=None<span class="p">, </span>tcp_health_check=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HealthCheck</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>check_interval_sec=None<span class="p">, </span>description=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>http2_health_check=None<span class="p">, </span>http_health_check=None<span class="p">, </span>https_health_check=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>ssl_health_check=None<span class="p">, </span>tcp_health_check=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -406,7 +407,8 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -415,7 +417,8 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -424,7 +427,8 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -433,7 +437,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -442,7 +446,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -451,7 +455,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -460,7 +464,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -469,10 +473,13 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -491,7 +498,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -500,7 +507,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -509,8 +516,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -519,7 +527,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -535,7 +544,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -544,7 +554,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -553,7 +564,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -562,7 +574,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -571,7 +583,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -580,7 +592,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -589,7 +601,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -598,10 +610,13 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -620,7 +635,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -629,7 +644,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -638,8 +653,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -648,7 +664,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -664,7 +681,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -673,7 +691,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -682,7 +701,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -691,7 +711,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -700,7 +720,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -709,7 +729,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -718,7 +738,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -727,10 +747,13 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -749,7 +772,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -758,7 +781,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -767,8 +790,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -777,7 +801,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -793,7 +818,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -802,7 +828,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -811,7 +838,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -820,7 +848,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Dict[Health<wbr>Check<wbr>Http2Health<wbr>Check]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -829,7 +857,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Dict[Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -838,7 +866,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Dict[Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -847,7 +875,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Dict[Health<wbr>Check<wbr>Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -856,10 +884,13 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -878,7 +909,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Dict[Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -887,7 +918,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Dict[Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -896,8 +927,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -906,7 +938,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1100,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing HealthCheck Resource {#look-up}
 
 Get an existing HealthCheck resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#HealthCheckState">HealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#HealthCheck">HealthCheck</a></span></code></pre></div>
@@ -1227,7 +1260,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1245,7 +1279,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1254,7 +1289,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1263,7 +1299,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1272,7 +1308,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1281,7 +1317,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1290,7 +1326,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1299,10 +1335,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1330,7 +1369,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1339,7 +1378,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1348,8 +1387,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1367,7 +1407,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1383,7 +1424,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1401,7 +1443,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1410,7 +1453,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1419,7 +1463,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1428,7 +1472,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1437,7 +1481,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1446,7 +1490,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1455,10 +1499,13 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1486,7 +1533,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1495,7 +1542,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1504,8 +1551,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1523,7 +1571,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1539,7 +1588,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1557,7 +1607,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1566,7 +1617,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1575,7 +1627,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1584,7 +1636,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1593,7 +1645,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1602,7 +1654,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1611,10 +1663,13 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1642,7 +1697,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1651,7 +1706,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1660,8 +1715,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1679,7 +1735,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1695,7 +1752,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1713,7 +1771,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1722,7 +1781,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1731,7 +1791,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttp2healthcheck">Dict[Health<wbr>Check<wbr>Http2Health<wbr>Check]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1740,7 +1800,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttphealthcheck">Dict[Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1749,7 +1809,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Dict[Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1758,7 +1818,7 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Dict[Health<wbr>Check<wbr>Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1767,10 +1827,13 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1798,7 +1861,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecksslhealthcheck">Dict[Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1807,7 +1870,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecktcphealthcheck">Dict[Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1816,8 +1879,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1835,7 +1899,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1861,6 +1926,9 @@ have greater value than checkIntervalSec.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttp2HealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttp2HealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckHttp2HealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckHttp2HealthCheck.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1874,7 +1942,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1882,7 +1953,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1890,7 +1963,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1898,7 +1973,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1906,7 +1991,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1914,7 +2001,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request path of the HTTP2 health check request.
+The default value is /.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1922,7 +2011,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1937,7 +2029,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1945,7 +2040,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1953,7 +2050,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1961,7 +2060,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1969,7 +2078,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1977,7 +2088,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request path of the HTTP2 health check request.
+The default value is /.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1985,7 +2098,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2000,7 +2116,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2008,7 +2127,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2016,7 +2137,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2024,7 +2147,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2032,7 +2165,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2040,7 +2175,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request path of the HTTP2 health check request.
+The default value is /.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2048,7 +2185,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2063,7 +2203,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2071,7 +2214,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2079,7 +2224,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2087,7 +2242,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2095,7 +2252,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2103,7 +2262,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request path of the HTTP2 health check request.
+The default value is /.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2111,7 +2272,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2128,6 +2292,9 @@ have greater value than checkIntervalSec.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttpHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttpHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckHttpHealthCheck.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2141,7 +2308,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2149,7 +2319,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2157,7 +2329,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2165,7 +2339,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2173,7 +2357,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2181,7 +2367,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request path of the HTTP2 health check request.
+The default value is /.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2189,7 +2377,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2204,7 +2395,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2212,7 +2406,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2220,7 +2416,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2228,7 +2426,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2236,7 +2444,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2244,7 +2454,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request path of the HTTP2 health check request.
+The default value is /.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2252,7 +2464,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2267,7 +2482,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2275,7 +2493,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2283,7 +2503,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2291,7 +2513,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2299,7 +2531,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2307,7 +2541,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request path of the HTTP2 health check request.
+The default value is /.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2315,7 +2551,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2330,7 +2569,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2338,7 +2580,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2346,7 +2590,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2354,7 +2608,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2362,7 +2618,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2370,7 +2628,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request path of the HTTP2 health check request.
+The default value is /.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2378,7 +2638,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2395,6 +2658,9 @@ have greater value than checkIntervalSec.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttpsHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttpsHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckHttpsHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckHttpsHealthCheck.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2408,7 +2674,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2416,7 +2685,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2424,7 +2695,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2432,7 +2705,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2440,7 +2723,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2448,7 +2733,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request path of the HTTP2 health check request.
+The default value is /.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2456,7 +2743,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2471,7 +2761,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2479,7 +2772,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2487,7 +2782,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2495,7 +2792,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2503,7 +2810,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2511,7 +2820,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request path of the HTTP2 health check request.
+The default value is /.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2519,7 +2830,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2534,7 +2848,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2542,7 +2859,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2550,7 +2869,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2558,7 +2879,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2566,7 +2897,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2574,7 +2907,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request path of the HTTP2 health check request.
+The default value is /.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2582,7 +2917,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2597,7 +2935,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
+If left empty (default value), the public IP on behalf of which this health
+check is performed will be used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2605,7 +2946,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2613,7 +2956,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2621,7 +2974,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2629,7 +2984,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2637,7 +2994,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request path of the HTTP2 health check request.
+The default value is /.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2645,7 +3004,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2662,6 +3024,9 @@ have greater value than checkIntervalSec.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckLogConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckLogConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2675,7 +3040,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not to export logs. This is false by default,
+which means no health check logging will be done.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2690,7 +3057,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not to export logs. This is false by default,
+which means no health check logging will be done.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2705,7 +3074,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not to export logs. This is false by default,
+which means no health check logging will be done.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2720,7 +3091,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not to export logs. This is false by default,
+which means no health check logging will be done.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2737,6 +3110,9 @@ have greater value than checkIntervalSec.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckSslHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckSslHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckSslHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckSslHealthCheck.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2750,7 +3126,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2758,7 +3136,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2766,7 +3146,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2774,7 +3164,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2782,7 +3174,11 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The application data to send once the SSL connection has been
+established (default value is empty). If both request and response are
+empty, the connection establishment alone will indicate health. The request
+data can only be ASCII.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2790,7 +3186,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2805,7 +3204,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2813,7 +3214,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2821,7 +3224,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2829,7 +3242,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2837,7 +3252,11 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The application data to send once the SSL connection has been
+established (default value is empty). If both request and response are
+empty, the connection establishment alone will indicate health. The request
+data can only be ASCII.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2845,7 +3264,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2860,7 +3282,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2868,7 +3292,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2876,7 +3302,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2884,7 +3320,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2892,7 +3330,11 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The application data to send once the SSL connection has been
+established (default value is empty). If both request and response are
+empty, the connection establishment alone will indicate health. The request
+data can only be ASCII.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2900,7 +3342,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2915,7 +3360,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2923,7 +3370,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2931,7 +3388,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2939,7 +3398,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2947,7 +3408,11 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The application data to send once the SSL connection has been
+established (default value is empty). If both request and response are
+empty, the connection establishment alone will indicate health. The request
+data can only be ASCII.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2955,7 +3420,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2972,6 +3440,9 @@ have greater value than checkIntervalSec.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckTcpHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckTcpHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckTcpHealthCheck.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2985,7 +3456,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2993,7 +3466,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3001,7 +3476,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3009,7 +3494,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3017,7 +3504,11 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The application data to send once the SSL connection has been
+established (default value is empty). If both request and response are
+empty, the connection establishment alone will indicate health. The request
+data can only be ASCII.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3025,7 +3516,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3040,7 +3534,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3048,7 +3544,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3056,7 +3554,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3064,7 +3572,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3072,7 +3582,11 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The application data to send once the SSL connection has been
+established (default value is empty). If both request and response are
+empty, the connection establishment alone will indicate health. The request
+data can only be ASCII.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3080,7 +3594,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3095,7 +3612,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3103,7 +3622,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3111,7 +3632,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3119,7 +3650,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3127,7 +3660,11 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The application data to send once the SSL connection has been
+established (default value is empty). If both request and response are
+empty, the connection establishment alone will indicate health. The request
+data can only be ASCII.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3135,7 +3672,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3150,7 +3690,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The TCP port number for the HTTP2 health check request.
+The default value is 443.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3158,7 +3700,17 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
+following values:
+* `USE_FIXED_PORT`: The port number in `port` is used for health checking.
+* `USE_NAMED_PORT`: The `portName` is used for health checking.
+* `USE_SERVING_PORT`: For NetworkEndpointGroup, the port specified for each
+network endpoint is used for health checking. For other backends, the
+port or named port specified in the Backend Service is used for health
+checking.
+If not specified, HTTP2 health check follows behavior specified in `port` and
+`portName` fields.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3166,7 +3718,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
+port_name are defined, port takes precedence.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3174,7 +3728,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
+backend, either NONE or PROXY_V1. The default is NONE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3182,7 +3738,11 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The application data to send once the SSL connection has been
+established (default value is empty). If both request and response are
+empty, the connection establishment alone will indicate health. The request
+data can only be ASCII.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3190,7 +3750,10 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
+(the default value), any response will indicate health. The response data
+can only be ASCII.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3209,8 +3772,7 @@ have greater value than checkIntervalSec.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

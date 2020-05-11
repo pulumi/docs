@@ -21,12 +21,26 @@ The `aws.ec2.DefaultVpc` behaves differently from normal resources, in that
 this provider does not _create_ this resource, but instead "adopts" it
 into management.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic usage with tags:
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -37,14 +51,13 @@ const defaultDefaultVpc = new aws.ec2.DefaultVpc("default", {
     },
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a DefaultVpc Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -52,7 +65,7 @@ const defaultDefaultVpc = new aws.ec2.DefaultVpc("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DefaultVpc</span><span class="p">(resource_name, opts=None, </span>enable_classiclink=None<span class="p">, </span>enable_classiclink_dns_support=None<span class="p">, </span>enable_dns_hostnames=None<span class="p">, </span>enable_dns_support=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DefaultVpc</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enable_classiclink=None<span class="p">, </span>enable_classiclink_dns_support=None<span class="p">, </span>enable_dns_hostnames=None<span class="p">, </span>enable_dns_support=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -232,7 +245,7 @@ The DefaultVpc resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -267,7 +280,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -285,7 +298,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -320,7 +333,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -338,7 +351,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -373,7 +386,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -391,7 +404,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,7 +439,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -952,7 +965,7 @@ this VPC. Note that you can change a VPC's main route table by using an
 ## Look up an Existing DefaultVpc Resource {#look-up}
 
 Get an existing DefaultVpc resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultVpcState">DefaultVpcState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultVpc">DefaultVpc</a></span></code></pre></div>
@@ -1144,7 +1157,7 @@ block with a /56 prefix length for the VPC was assigned
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1226,7 +1239,7 @@ this VPC. Note that you can change a VPC's main route table by using an
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1307,7 +1320,7 @@ block with a /56 prefix length for the VPC was assigned
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1389,7 +1402,7 @@ this VPC. Note that you can change a VPC's main route table by using an
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1470,7 +1483,7 @@ block with a /56 prefix length for the VPC was assigned
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1552,7 +1565,7 @@ this VPC. Note that you can change a VPC's main route table by using an
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1633,7 +1646,7 @@ block with a /56 prefix length for the VPC was assigned
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1715,7 +1728,7 @@ this VPC. Note that you can change a VPC's main route table by using an
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>

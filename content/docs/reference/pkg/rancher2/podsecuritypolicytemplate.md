@@ -14,7 +14,7 @@ meta_desc: "Explore the PodSecurityPolicyTemplate resource of the Rancher 2 pack
 
 
 ## Create a PodSecurityPolicyTemplate Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the PodSecurityPolicyTemplate resource of the Rancher 2 pack
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PodSecurityPolicyTemplate</span><span class="p">(resource_name, opts=None, </span>allow_privilege_escalation=None<span class="p">, </span>allowed_capabilities=None<span class="p">, </span>allowed_csi_drivers=None<span class="p">, </span>allowed_flex_volumes=None<span class="p">, </span>allowed_host_paths=None<span class="p">, </span>allowed_proc_mount_types=None<span class="p">, </span>allowed_unsafe_sysctls=None<span class="p">, </span>annotations=None<span class="p">, </span>default_add_capabilities=None<span class="p">, </span>default_allow_privilege_escalation=None<span class="p">, </span>description=None<span class="p">, </span>forbidden_sysctls=None<span class="p">, </span>fs_group=None<span class="p">, </span>host_ipc=None<span class="p">, </span>host_network=None<span class="p">, </span>host_pid=None<span class="p">, </span>host_ports=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>privileged=None<span class="p">, </span>read_only_root_filesystem=None<span class="p">, </span>required_drop_capabilities=None<span class="p">, </span>run_as_group=None<span class="p">, </span>run_as_user=None<span class="p">, </span>runtime_class=None<span class="p">, </span>se_linux=None<span class="p">, </span>supplemental_group=None<span class="p">, </span>volumes=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PodSecurityPolicyTemplate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_privilege_escalation=None<span class="p">, </span>allowed_capabilities=None<span class="p">, </span>allowed_csi_drivers=None<span class="p">, </span>allowed_flex_volumes=None<span class="p">, </span>allowed_host_paths=None<span class="p">, </span>allowed_proc_mount_types=None<span class="p">, </span>allowed_unsafe_sysctls=None<span class="p">, </span>annotations=None<span class="p">, </span>default_add_capabilities=None<span class="p">, </span>default_allow_privilege_escalation=None<span class="p">, </span>description=None<span class="p">, </span>forbidden_sysctls=None<span class="p">, </span>fs_group=None<span class="p">, </span>host_ipc=None<span class="p">, </span>host_network=None<span class="p">, </span>host_pid=None<span class="p">, </span>host_ports=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>privileged=None<span class="p">, </span>read_only_root_filesystem=None<span class="p">, </span>required_drop_capabilities=None<span class="p">, </span>run_as_group=None<span class="p">, </span>run_as_user=None<span class="p">, </span>runtime_class=None<span class="p">, </span>se_linux=None<span class="p">, </span>supplemental_group=None<span class="p">, </span>volumes=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -200,8 +200,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -355,7 +354,6 @@ true.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -461,8 +459,7 @@ true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -616,7 +613,6 @@ true.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -722,8 +718,7 @@ true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -877,7 +872,6 @@ true.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -983,8 +977,7 @@ true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1138,7 +1131,6 @@ true.
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1314,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing PodSecurityPolicyTemplate Resource {#look-up}
 
 Get an existing PodSecurityPolicyTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#PodSecurityPolicyTemplateState">PodSecurityPolicyTemplateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#PodSecurityPolicyTemplate">PodSecurityPolicyTemplate</a></span></code></pre></div>
@@ -1441,8 +1433,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1596,7 +1587,6 @@ true.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1702,8 +1692,7 @@ true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1857,7 +1846,6 @@ true.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1963,8 +1951,7 @@ true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2118,7 +2105,6 @@ true.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2224,8 +2210,7 @@ true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to
-true.
+    <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2379,7 +2364,6 @@ true.
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
-* `allow_privilege_escalation` = (Optional)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2495,6 +2479,9 @@ true.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateAllowedCsiDriverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateAllowedCsiDriverOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateAllowedCsiDriverArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateAllowedCsiDriver.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2574,6 +2561,9 @@ true.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateAllowedFlexVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateAllowedFlexVolumeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateAllowedFlexVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateAllowedFlexVolume.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2648,6 +2638,9 @@ true.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateAllowedHostPathArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateAllowedHostPathOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateAllowedHostPathArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateAllowedHostPath.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2764,6 +2757,9 @@ true.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateFsGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateFsGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateFsGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateFsGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2878,6 +2874,9 @@ true.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateFsGroupRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateFsGroupRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateFsGroupRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateFsGroupRange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2994,6 +2993,9 @@ true.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateHostPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateHostPortOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateHostPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateHostPort.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3108,6 +3110,9 @@ true.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateRunAsGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateRunAsGroupOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateRunAsGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateRunAsGroup.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3224,6 +3229,9 @@ true.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateRunAsGroupRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateRunAsGroupRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateRunAsGroupRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateRunAsGroupRange.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3338,6 +3346,9 @@ true.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateRunAsUserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateRunAsUserOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateRunAsUserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateRunAsUser.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3454,6 +3465,9 @@ true.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateRunAsUserRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateRunAsUserRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateRunAsUserRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateRunAsUserRange.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3568,6 +3582,9 @@ true.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateRuntimeClassArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateRuntimeClassOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateRuntimeClassArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateRuntimeClass.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3684,6 +3701,9 @@ true.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateSeLinuxArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateSeLinuxOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateSeLinuxArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateSeLinux.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3798,6 +3818,9 @@ true.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateSeLinuxSeLinuxOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateSeLinuxSeLinuxOptionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateSeLinuxSeLinuxOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateSeLinuxSeLinuxOption.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3986,6 +4009,9 @@ true.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateSupplementalGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateSupplementalGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateSupplementalGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateSupplementalGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4100,6 +4126,9 @@ true.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateSupplementalGroupRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#PodSecurityPolicyTemplateSupplementalGroupRangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.PodSecurityPolicyTemplateSupplementalGroupRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.PodSecurityPolicyTemplateSupplementalGroupRange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -14,7 +14,7 @@ meta_desc: "Explore the Notifier resource of the Rancher 2 package, including ex
 
 
 ## Create a Notifier Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the Notifier resource of the Rancher 2 package, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Notifier</span><span class="p">(resource_name, opts=None, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>pagerduty_config=None<span class="p">, </span>send_resolved=None<span class="p">, </span>slack_config=None<span class="p">, </span>smtp_config=None<span class="p">, </span>webhook_config=None<span class="p">, </span>wechat_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Notifier</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>pagerduty_config=None<span class="p">, </span>send_resolved=None<span class="p">, </span>slack_config=None<span class="p">, </span>smtp_config=None<span class="p">, </span>webhook_config=None<span class="p">, </span>wechat_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -219,7 +219,6 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -255,7 +254,7 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -326,7 +325,6 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -362,7 +360,7 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -433,7 +431,6 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -469,7 +466,7 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -540,7 +537,6 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -576,7 +572,7 @@ The Notifier resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -698,7 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Notifier Resource {#look-up}
 
 Get an existing Notifier resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NotifierState">NotifierState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#Notifier">Notifier</a></span></code></pre></div>
@@ -844,7 +840,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -880,7 +875,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -951,7 +946,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -987,7 +981,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1058,7 +1052,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1094,7 +1087,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,7 +1158,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1201,7 +1193,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Notifier send resolved
+    <dd>{{% md %}}= (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1262,6 +1254,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierPagerdutyConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierPagerdutyConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NotifierPagerdutyConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NotifierPagerdutyConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1377,6 +1372,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierSlackConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierSlackConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NotifierSlackConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NotifierSlackConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1528,6 +1526,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierSmtpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierSmtpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NotifierSmtpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NotifierSmtpConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1824,6 +1825,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierWebhookConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierWebhookConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NotifierWebhookConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NotifierWebhookConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1938,6 +1942,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierWechatConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NotifierWechatConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NotifierWechatConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NotifierWechatConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

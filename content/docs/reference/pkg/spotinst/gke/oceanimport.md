@@ -12,10 +12,46 @@ meta_desc: "Explore the OceanImport resource of the gke module, including exampl
 
 Provides a Spotinst Ocean GKE import resource.
 
+
+## scheduled task
+
+* `scheduled_task` - (Optional) Set scheduling object.
+    * `shutdown_hours` - (Optional) Set shutdown hours for cluster object.
+        * `is_enabled` - (Optional)  Flag to enable / disable the shutdown hours.
+                                     Example: True
+        * `time_windows` - (Required) Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
+                                      Example: Fri:15:30-Wed:14:30
+    * `tasks` - (Optional) The scheduling tasks for the cluster.
+        * `is_enabled` - (Required)  Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+        * `cron_expression` - (Required) A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
+                                         Example: 0 1 * * *
+        * `task_type` - (Required) Valid values: "clusterRoll". Required for cluster.scheduling.tasks object.
+        * `batch_size_percentage` - (Optional)  Value in % to set size of batch in roll. Valid values are 0-100
+                                                Example: 20.
+                          
+             
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -44,41 +80,13 @@ const example = new spotinst.gke.OceanImport("example", {
     ],
 });
 ```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-
-
-export const controllerClusterId = spotinst_ocean_gke_import_ocean_gke_example.clusterControllerId;
-```
-
 {{% /example %}}
+
 {{% /examples %}}
-## scheduled task
-
-* `scheduled_task` - (Optional) Set scheduling object.
-    * `shutdown_hours` - (Optional) Set shutdown hours for cluster object.
-        * `is_enabled` - (Optional)  Flag to enable / disable the shutdown hours.
-                                     Example: True
-        * `time_windows` - (Required) Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
-                                      Example: Fri:15:30-Wed:14:30
-    * `tasks` - (Optional) The scheduling tasks for the cluster.
-        * `is_enabled` - (Required)  Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
-        * `cron_expression` - (Required) A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
-                                         Example: 0 1 * * *
-        * `task_type` - (Required) Valid values: "clusterRoll". Required for cluster.scheduling.tasks object.
-        * `batch_size_percentage` - (Optional)  Value in % to set size of batch in roll. Valid values are 0-100
-                                                Example: 20.
-                          
-             
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
 
 
 ## Create a OceanImport Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -86,7 +94,7 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanImport</span><span class="p">(resource_name, opts=None, </span>backend_services=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanImport</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend_services=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -674,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing OceanImport Resource {#look-up}
 
 Get an existing OceanImport resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gke/#OceanImportState">OceanImportState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gke/#OceanImport">OceanImport</a></span></code></pre></div>
@@ -1151,6 +1159,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportBackendServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportBackendServiceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportBackendServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportBackendService.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1334,6 +1345,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportBackendServiceNamedPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportBackendServiceNamedPortOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportBackendServiceNamedPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportBackendServiceNamedPort.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1445,6 +1459,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportScheduledTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportScheduledTaskOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportScheduledTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportScheduledTask.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1552,6 +1569,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportScheduledTaskShutdownHoursArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportScheduledTaskShutdownHoursOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportScheduledTaskShutdownHoursArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportScheduledTaskShutdownHours.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1658,6 +1678,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportScheduledTaskTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanImportScheduledTaskTaskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Inputs.OceanImportScheduledTaskTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.Outputs.OceanImportScheduledTaskTask.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

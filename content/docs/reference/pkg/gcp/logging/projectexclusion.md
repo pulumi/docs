@@ -1,7 +1,8 @@
 
 ---
 title: "ProjectExclusion"
-block_external_search_index: true
+title_tag: "Resource ProjectExclusion | Module logging | Package GCP"
+meta_desc: "Explore the ProjectExclusion resource of the logging module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a project-level logging exclusion. For more information see"
 ---
 
 
@@ -16,10 +17,26 @@ Manages a project-level logging exclusion. For more information see
 Note that you must have the "Logs Configuration Writer" IAM role (`roles/logging.configWriter`)
 granted to the credentials used with this provider.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -30,14 +47,13 @@ const my_exclusion = new gcp.logging.ProjectExclusion("my-exclusion", {
     filter: "resource.type = gce_instance AND severity <= DEBUG",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a ProjectExclusion Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -45,7 +61,7 @@ const my_exclusion = new gcp.logging.ProjectExclusion("my-exclusion", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProjectExclusion</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>filter=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProjectExclusion</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>filter=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -517,7 +533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ProjectExclusion Resource {#look-up}
 
 Get an existing ProjectExclusion resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#ProjectExclusionState">ProjectExclusionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#ProjectExclusion">ProjectExclusion</a></span></code></pre></div>
@@ -874,8 +890,7 @@ used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

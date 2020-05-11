@@ -11,24 +11,40 @@ meta_desc: "Explore the ClusterInstance resource of the rds module, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an RDS Cluster Instance Resource. A Cluster Instance Resource defines
-attributes that are specific to a single instance in a [RDS Cluster][3],
+attributes that are specific to a single instance in a [RDS Cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html),
 specifically running Amazon Aurora.
 
 Unlike other RDS resources that support replication, with Amazon Aurora you do
 not designate a primary and subsequent replicas. Instead, you simply add RDS
-Instances and Aurora manages the replication. You can use the [count][5]
+Instances and Aurora manages the replication. You can use the [count](https://www.terraform.io/docs/configuration/resources.html#count)
 meta-parameter to make multiple instances and join them all to the same RDS
 Cluster, or you may specify different Cluster Instance resources with various
 `instance_class` sizes.
 
-For more information on Amazon Aurora, see [Aurora on Amazon RDS][2] in the Amazon RDS User Guide.
+For more information on Amazon Aurora, see [Aurora on Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html) in the Amazon RDS User Guide.
 
 > **NOTE:** Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the [`protect` CustomResourceOption](https://www.pulumi.com/docs/intro/concepts/programming-model/#protect) to this resource configuration if you desire protection from accidental deletion.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -53,14 +69,13 @@ for (let i = 0; i < 2; i++) {
     }));
 }
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a ClusterInstance Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -68,7 +83,7 @@ for (let i = 0; i < 2; i++) {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClusterInstance</span><span class="p">(resource_name, opts=None, </span>apply_immediately=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>availability_zone=None<span class="p">, </span>ca_cert_identifier=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>copy_tags_to_snapshot=None<span class="p">, </span>db_parameter_group_name=None<span class="p">, </span>db_subnet_group_name=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>identifier=None<span class="p">, </span>identifier_prefix=None<span class="p">, </span>instance_class=None<span class="p">, </span>monitoring_interval=None<span class="p">, </span>monitoring_role_arn=None<span class="p">, </span>performance_insights_enabled=None<span class="p">, </span>performance_insights_kms_key_id=None<span class="p">, </span>preferred_backup_window=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>promotion_tier=None<span class="p">, </span>publicly_accessible=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClusterInstance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>availability_zone=None<span class="p">, </span>ca_cert_identifier=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>copy_tags_to_snapshot=None<span class="p">, </span>db_parameter_group_name=None<span class="p">, </span>db_subnet_group_name=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>identifier=None<span class="p">, </span>identifier_prefix=None<span class="p">, </span>instance_class=None<span class="p">, </span>monitoring_interval=None<span class="p">, </span>monitoring_role_arn=None<span class="p">, </span>performance_insights_enabled=None<span class="p">, </span>performance_insights_kms_key_id=None<span class="p">, </span>preferred_backup_window=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>promotion_tier=None<span class="p">, </span>publicly_accessible=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -256,7 +271,7 @@ The ClusterInstance resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
-and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.
+and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -436,7 +451,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
-Default `false`. See the documentation on [Creating DB Instances][6] for more
+Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
 {{% /md %}}</dd>
 
@@ -446,7 +461,7 @@ details on controlling this property.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -472,7 +487,7 @@ details on controlling this property.
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
-and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.
+and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -652,7 +667,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
-Default `false`. See the documentation on [Creating DB Instances][6] for more
+Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
 {{% /md %}}</dd>
 
@@ -662,7 +677,7 @@ details on controlling this property.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -688,7 +703,7 @@ details on controlling this property.
         <span class="property-type">string | Instance<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
-and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.
+and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -868,7 +883,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
-Default `false`. See the documentation on [Creating DB Instances][6] for more
+Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
 {{% /md %}}</dd>
 
@@ -878,7 +893,7 @@ details on controlling this property.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -904,7 +919,7 @@ details on controlling this property.
         <span class="property-type">string | str</span>
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
-and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.
+and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1084,7 +1099,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
-Default `false`. See the documentation on [Creating DB Instances][6] for more
+Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
 {{% /md %}}</dd>
 
@@ -1094,7 +1109,7 @@ details on controlling this property.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -1432,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ClusterInstance Resource {#look-up}
 
 Get an existing ClusterInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#ClusterInstanceState">ClusterInstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#ClusterInstance">ClusterInstance</a></span></code></pre></div>
@@ -1699,7 +1714,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
-and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.
+and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1794,7 +1809,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
-Default `false`. See the documentation on [Creating DB Instances][6] for more
+Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
 {{% /md %}}</dd>
 
@@ -1813,7 +1828,7 @@ details on controlling this property.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1978,7 +1993,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
-and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.
+and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2073,7 +2088,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
-Default `false`. See the documentation on [Creating DB Instances][6] for more
+Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
 {{% /md %}}</dd>
 
@@ -2092,7 +2107,7 @@ details on controlling this property.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2257,7 +2272,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string | Instance<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
-and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.
+and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2352,7 +2367,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
-Default `false`. See the documentation on [Creating DB Instances][6] for more
+Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
 {{% /md %}}</dd>
 
@@ -2371,7 +2386,7 @@ details on controlling this property.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2536,7 +2551,7 @@ in the Amazon RDS User Guide.
         <span class="property-type">string | str</span>
     </dt>
     <dd>{{% md %}}The instance class to use. For details on CPU
-and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.
+and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2631,7 +2646,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Bool to control if instance is publicly accessible.
-Default `false`. See the documentation on [Creating DB Instances][6] for more
+Default `false`. See the documentation on [Creating DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) for more
 details on controlling this property.
 {{% /md %}}</dd>
 
@@ -2650,7 +2665,7 @@ details on controlling this property.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

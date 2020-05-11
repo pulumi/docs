@@ -13,12 +13,31 @@ meta_desc: "Explore the SshKey resource of the Linode package, including example
 Provides a Linode SSH Key resource.  This can be used to create, modify, and delete Linodes SSH Keys.  Managed SSH Keys allow instances to be created with a list of Linode usernames, whose SSH keys will be automatically applied to the root account's `~/.ssh/authorized_keys` file.
 For more information, see the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/getSSHKeys).
 
+
+## Attributes
+
+This resource exports the following attributes:
+
+* `created` - The date this SSH Key was created.
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example shows how one might use this resource to configure a SSH Key for access to a Linode Instance.
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
@@ -37,19 +56,13 @@ const fooInstance = new linode.Instance("foo", {
     type: "g6-nanode-1",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-## Attributes
-
-This resource exports the following attributes:
-
-* `created` - The date this SSH Key was created.
-
 
 
 ## Create a SshKey Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -57,7 +70,7 @@ This resource exports the following attributes:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SshKey</span><span class="p">(resource_name, opts=None, </span>label=None<span class="p">, </span>ssh_key=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SshKey</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>label=None<span class="p">, </span>ssh_key=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -441,7 +454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SshKey Resource {#look-up}
 
 Get an existing SshKey resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#SshKeyState">SshKeyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#SshKey">SshKey</a></span></code></pre></div>

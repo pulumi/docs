@@ -1,7 +1,8 @@
 
 ---
 title: "Dataset"
-block_external_search_index: true
+title_tag: "Resource Dataset | Module healthcare | Package GCP"
+meta_desc: "Explore the Dataset resource of the healthcare module, including examples, input properties, output properties, lookup functions, and supporting types. A Healthcare `Dataset` is a toplevel logical grouping of `dicomStores`, `fhirStores` and `hl7V2Stores`."
 ---
 
 
@@ -13,14 +14,27 @@ A Healthcare `Dataset` is a toplevel logical grouping of `dicomStores`, `fhirSto
 
 To get more information about Dataset, see:
 
-* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets)
+* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets)
 * How-to Guides
     * [Creating a dataset](https://cloud.google.com/healthcare/docs/how-tos/datasets)
+
+## Example Usage - Healthcare Dataset Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultDataset = new gcp.healthcare.Dataset("default", {
+    location: "us-central1",
+    timeZone: "UTC",
+});
+```
 
 
 
 ## Create a Dataset Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -28,7 +42,7 @@ To get more information about Dataset, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dataset</span><span class="p">(resource_name, opts=None, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>time_zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dataset</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>time_zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -234,9 +248,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or
-empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
-timezone is specified.
+    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
+"America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+(e.g., HL7 messages) where no explicit timezone is specified.
 {{% /md %}}</dd>
 
 </dl>
@@ -280,9 +294,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or
-empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
-timezone is specified.
+    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
+"America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+(e.g., HL7 messages) where no explicit timezone is specified.
 {{% /md %}}</dd>
 
 </dl>
@@ -326,9 +340,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or
-empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
-timezone is specified.
+    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
+"America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+(e.g., HL7 messages) where no explicit timezone is specified.
 {{% /md %}}</dd>
 
 </dl>
@@ -372,9 +386,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or
-empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
-timezone is specified.
+    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
+"America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+(e.g., HL7 messages) where no explicit timezone is specified.
 {{% /md %}}</dd>
 
 </dl>
@@ -496,7 +510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Dataset Resource {#look-up}
 
 Get an existing Dataset resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#DatasetState">DatasetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#Dataset">Dataset</a></span></code></pre></div>
@@ -660,9 +674,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or
-empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
-timezone is specified.
+    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
+"America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+(e.g., HL7 messages) where no explicit timezone is specified.
 {{% /md %}}</dd>
 
 </dl>
@@ -715,9 +729,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or
-empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
-timezone is specified.
+    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
+"America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+(e.g., HL7 messages) where no explicit timezone is specified.
 {{% /md %}}</dd>
 
 </dl>
@@ -770,9 +784,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or
-empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
-timezone is specified.
+    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
+"America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+(e.g., HL7 messages) where no explicit timezone is specified.
 {{% /md %}}</dd>
 
 </dl>
@@ -825,9 +839,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or
-empty, which defaults to UTC. This is used for parsing times in resources (e.g., HL7 messages) where no explicit
-timezone is specified.
+    <dd>{{% md %}}The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
+"America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+(e.g., HL7 messages) where no explicit timezone is specified.
 {{% /md %}}</dd>
 
 </dl>
@@ -849,8 +863,7 @@ timezone is specified.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

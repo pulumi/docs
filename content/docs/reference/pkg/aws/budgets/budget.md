@@ -12,10 +12,26 @@ meta_desc: "Explore the Budget resource of the budgets module, including example
 
 Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -39,99 +55,13 @@ const ec2 = new aws.budgets.Budget("ec2", {
     timeUnit: "MONTHLY",
 });
 ```
-
-Create a budget for *$100*.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const cost = new aws.budgets.Budget("cost", {
-    // ...
-    budgetType: "COST",
-    limitAmount: "100",
-    limitUnit: "USD",
-});
-```
-
-Create a budget for s3 with a limit of *3 GB* of storage.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const s3 = new aws.budgets.Budget("s3", {
-    // ...
-    budgetType: "USAGE",
-    limitAmount: "3",
-    limitUnit: "GB",
-});
-```
-
-Create a Savings Plan Utilization Budget
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const savingsPlanUtilization = new aws.budgets.Budget("savings_plan_utilization", {
-    // ...
-    budgetType: "SAVINGS_PLANS_UTILIZATION",
-    costTypes: {
-        includeCredit: false,
-        includeDiscount: false,
-        includeOtherSubscription: false,
-        includeRecurring: false,
-        includeRefund: false,
-        includeSubscription: true,
-        includeSupport: false,
-        includeTax: false,
-        includeUpfront: false,
-        useBlended: false,
-    },
-    limitAmount: "100.0",
-    limitUnit: "PERCENTAGE",
-});
-```
-
-Create a RI Utilization Budget
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const riUtilization = new aws.budgets.Budget("ri_utilization", {
-    // ...
-    budgetType: "RI_UTILIZATION",
-    // RI Utilization plans require a service cost filter to be set
-    costFilters: {
-        Service: "Amazon Relational Database Service",
-    },
-    //Cost types must be defined for RI budgets because the settings conflict with the defaults
-    costTypes: {
-        includeCredit: false,
-        includeDiscount: false,
-        includeOtherSubscription: false,
-        includeRecurring: false,
-        includeRefund: false,
-        includeSubscription: true,
-        includeSupport: false,
-        includeTax: false,
-        includeUpfront: false,
-        useBlended: false,
-    },
-    limitAmount: "100.0", // RI utilization must be 100
-    limitUnit: "PERCENTAGE",
-});
-```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Budget Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -139,7 +69,7 @@ const riUtilization = new aws.budgets.Budget("ri_utilization", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Budget</span><span class="p">(resource_name, opts=None, </span>account_id=None<span class="p">, </span>budget_type=None<span class="p">, </span>cost_filters=None<span class="p">, </span>cost_types=None<span class="p">, </span>limit_amount=None<span class="p">, </span>limit_unit=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>notifications=None<span class="p">, </span>time_period_end=None<span class="p">, </span>time_period_start=None<span class="p">, </span>time_unit=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Budget</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>budget_type=None<span class="p">, </span>cost_filters=None<span class="p">, </span>cost_types=None<span class="p">, </span>limit_amount=None<span class="p">, </span>limit_unit=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>notifications=None<span class="p">, </span>time_period_end=None<span class="p">, </span>time_period_start=None<span class="p">, </span>time_unit=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -847,7 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Budget Resource {#look-up}
 
 Get an existing Budget resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#BudgetState">BudgetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/budgets/#Budget">Budget</a></span></code></pre></div>
@@ -1444,6 +1374,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/budgets?tab=doc#BudgetCostTypesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/budgets?tab=doc#BudgetCostTypesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Inputs.BudgetCostTypesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Outputs.BudgetCostTypes.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1882,6 +1815,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/budgets?tab=doc#BudgetNotificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/budgets?tab=doc#BudgetNotificationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Inputs.BudgetNotificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Budgets.Outputs.BudgetNotification.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

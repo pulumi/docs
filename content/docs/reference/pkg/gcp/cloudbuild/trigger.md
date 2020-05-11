@@ -1,7 +1,8 @@
 
 ---
 title: "Trigger"
-block_external_search_index: true
+title_tag: "Resource Trigger | Module cloudbuild | Package GCP"
+meta_desc: "Explore the Trigger resource of the cloudbuild module, including examples, input properties, output properties, lookup functions, and supporting types. Configuration for an automated build in response to source repository changes."
 ---
 
 
@@ -41,7 +42,7 @@ const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
 
 
 ## Create a Trigger Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -49,7 +50,7 @@ const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Trigger</span><span class="p">(resource_name, opts=None, </span>build=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>filename=None<span class="p">, </span>github=None<span class="p">, </span>ignored_files=None<span class="p">, </span>included_files=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>substitutions=None<span class="p">, </span>trigger_template=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Trigger</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>build=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>filename=None<span class="p">, </span>github=None<span class="p">, </span>ignored_files=None<span class="p">, </span>included_files=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>substitutions=None<span class="p">, </span>trigger_template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -227,7 +228,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -254,8 +255,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must
-be provided.
+    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -264,8 +264,8 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of
-'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -274,10 +274,13 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If ignoredFiles and changed files are both empty, then they are not used to determine whether or not
-to trigger a build. If ignoredFiles is not empty, then we ignore any files that match any of the ignored_file globs. If
-the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If ignoredFiles and changed files are both empty, then they are not
+used to determine whether or not to trigger a build.
+If ignoredFiles is not empty, then we ignore any files that match any
+of the ignored_file globs. If the change has no files that are outside
+of the ignoredFiles globs, then we do not trigger a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -286,11 +289,15 @@ the change has no files that are outside of the ignoredFiles globs, then we do n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty,
-then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
-ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a
-includedFiles glob. If not, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is empty, then as far as this filter is concerned, we
+should trigger the build.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is not empty, then we make sure that at least one of
+those files matches a includedFiles glob. If not, then we do not trigger
+a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -299,7 +306,9 @@ includedFiles glob. If not, then we do not trigger a build.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the trigger. Must be unique within the project.
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -327,9 +336,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
-interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.
-One of 'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Template describing the types of source changes to trigger a build.
+Branch and tag names in trigger templates are interpreted as regular
+expressions. Any branch or tag change that matches that regular
+expression will trigger a build.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -345,7 +356,7 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -372,8 +383,7 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must
-be provided.
+    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -382,8 +392,8 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of
-'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -392,10 +402,13 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If ignoredFiles and changed files are both empty, then they are not used to determine whether or not
-to trigger a build. If ignoredFiles is not empty, then we ignore any files that match any of the ignored_file globs. If
-the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If ignoredFiles and changed files are both empty, then they are not
+used to determine whether or not to trigger a build.
+If ignoredFiles is not empty, then we ignore any files that match any
+of the ignored_file globs. If the change has no files that are outside
+of the ignoredFiles globs, then we do not trigger a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -404,11 +417,15 @@ the change has no files that are outside of the ignoredFiles globs, then we do n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty,
-then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
-ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a
-includedFiles glob. If not, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is empty, then as far as this filter is concerned, we
+should trigger the build.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is not empty, then we make sure that at least one of
+those files matches a includedFiles glob. If not, then we do not trigger
+a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -417,7 +434,9 @@ includedFiles glob. If not, then we do not trigger a build.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the trigger. Must be unique within the project.
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -445,9 +464,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
-interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.
-One of 'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Template describing the types of source changes to trigger a build.
+Branch and tag names in trigger templates are interpreted as regular
+expressions. Any branch or tag change that matches that regular
+expression will trigger a build.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -463,7 +484,7 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -490,8 +511,7 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must
-be provided.
+    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -500,8 +520,8 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of
-'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -510,10 +530,13 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If ignoredFiles and changed files are both empty, then they are not used to determine whether or not
-to trigger a build. If ignoredFiles is not empty, then we ignore any files that match any of the ignored_file globs. If
-the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If ignoredFiles and changed files are both empty, then they are not
+used to determine whether or not to trigger a build.
+If ignoredFiles is not empty, then we ignore any files that match any
+of the ignored_file globs. If the change has no files that are outside
+of the ignoredFiles globs, then we do not trigger a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -522,11 +545,15 @@ the change has no files that are outside of the ignoredFiles globs, then we do n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty,
-then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
-ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a
-includedFiles glob. If not, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is empty, then as far as this filter is concerned, we
+should trigger the build.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is not empty, then we make sure that at least one of
+those files matches a includedFiles glob. If not, then we do not trigger
+a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -535,7 +562,9 @@ includedFiles glob. If not, then we do not trigger a build.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the trigger. Must be unique within the project.
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -563,9 +592,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
-interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.
-One of 'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Template describing the types of source changes to trigger a build.
+Branch and tag names in trigger templates are interpreted as regular
+expressions. Any branch or tag change that matches that regular
+expression will trigger a build.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -581,7 +612,7 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Dict[Trigger<wbr>Build]</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -608,8 +639,7 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must
-be provided.
+    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -618,8 +648,8 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithub">Dict[Trigger<wbr>Github]</a></span>
     </dt>
-    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of
-'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -628,10 +658,13 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If ignoredFiles and changed files are both empty, then they are not used to determine whether or not
-to trigger a build. If ignoredFiles is not empty, then we ignore any files that match any of the ignored_file globs. If
-the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If ignoredFiles and changed files are both empty, then they are not
+used to determine whether or not to trigger a build.
+If ignoredFiles is not empty, then we ignore any files that match any
+of the ignored_file globs. If the change has no files that are outside
+of the ignoredFiles globs, then we do not trigger a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -640,11 +673,15 @@ the change has no files that are outside of the ignoredFiles globs, then we do n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty,
-then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
-ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a
-includedFiles glob. If not, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is empty, then as far as this filter is concerned, we
+should trigger the build.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is not empty, then we make sure that at least one of
+those files matches a includedFiles glob. If not, then we do not trigger
+a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -653,7 +690,9 @@ includedFiles glob. If not, then we do not trigger a build.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the trigger. Must be unique within the project.
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -681,9 +720,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggertriggertemplate">Dict[Trigger<wbr>Trigger<wbr>Template]</a></span>
     </dt>
-    <dd>{{% md %}}Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
-interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.
-One of 'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Template describing the types of source changes to trigger a build.
+Branch and tag names in trigger templates are interpreted as regular
+expressions. Any branch or tag change that matches that regular
+expression will trigger a build.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -841,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Trigger Resource {#look-up}
 
 Get an existing Trigger resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudbuild/#TriggerState">TriggerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudbuild/#Trigger">Trigger</a></span></code></pre></div>
@@ -968,7 +1009,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1004,8 +1045,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must
-be provided.
+    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1014,8 +1054,8 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of
-'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1024,10 +1064,13 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If ignoredFiles and changed files are both empty, then they are not used to determine whether or not
-to trigger a build. If ignoredFiles is not empty, then we ignore any files that match any of the ignored_file globs. If
-the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If ignoredFiles and changed files are both empty, then they are not
+used to determine whether or not to trigger a build.
+If ignoredFiles is not empty, then we ignore any files that match any
+of the ignored_file globs. If the change has no files that are outside
+of the ignoredFiles globs, then we do not trigger a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1036,11 +1079,15 @@ the change has no files that are outside of the ignoredFiles globs, then we do n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty,
-then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
-ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a
-includedFiles glob. If not, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is empty, then as far as this filter is concerned, we
+should trigger the build.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is not empty, then we make sure that at least one of
+those files matches a includedFiles glob. If not, then we do not trigger
+a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1049,7 +1096,9 @@ includedFiles glob. If not, then we do not trigger a build.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the trigger. Must be unique within the project.
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1086,9 +1135,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
-interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.
-One of 'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Template describing the types of source changes to trigger a build.
+Branch and tag names in trigger templates are interpreted as regular
+expressions. Any branch or tag change that matches that regular
+expression will trigger a build.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1104,7 +1155,7 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1140,8 +1191,7 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must
-be provided.
+    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1150,8 +1200,8 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of
-'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1160,10 +1210,13 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If ignoredFiles and changed files are both empty, then they are not used to determine whether or not
-to trigger a build. If ignoredFiles is not empty, then we ignore any files that match any of the ignored_file globs. If
-the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If ignoredFiles and changed files are both empty, then they are not
+used to determine whether or not to trigger a build.
+If ignoredFiles is not empty, then we ignore any files that match any
+of the ignored_file globs. If the change has no files that are outside
+of the ignoredFiles globs, then we do not trigger a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1172,11 +1225,15 @@ the change has no files that are outside of the ignoredFiles globs, then we do n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty,
-then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
-ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a
-includedFiles glob. If not, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is empty, then as far as this filter is concerned, we
+should trigger the build.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is not empty, then we make sure that at least one of
+those files matches a includedFiles glob. If not, then we do not trigger
+a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1185,7 +1242,9 @@ includedFiles glob. If not, then we do not trigger a build.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the trigger. Must be unique within the project.
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1222,9 +1281,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
-interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.
-One of 'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Template describing the types of source changes to trigger a build.
+Branch and tag names in trigger templates are interpreted as regular
+expressions. Any branch or tag change that matches that regular
+expression will trigger a build.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1240,7 +1301,7 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1276,8 +1337,7 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must
-be provided.
+    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1286,8 +1346,8 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of
-'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1296,10 +1356,13 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If ignoredFiles and changed files are both empty, then they are not used to determine whether or not
-to trigger a build. If ignoredFiles is not empty, then we ignore any files that match any of the ignored_file globs. If
-the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If ignoredFiles and changed files are both empty, then they are not
+used to determine whether or not to trigger a build.
+If ignoredFiles is not empty, then we ignore any files that match any
+of the ignored_file globs. If the change has no files that are outside
+of the ignoredFiles globs, then we do not trigger a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1308,11 +1371,15 @@ the change has no files that are outside of the ignoredFiles globs, then we do n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty,
-then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
-ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a
-includedFiles glob. If not, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is empty, then as far as this filter is concerned, we
+should trigger the build.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is not empty, then we make sure that at least one of
+those files matches a includedFiles glob. If not, then we do not trigger
+a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1321,7 +1388,9 @@ includedFiles glob. If not, then we do not trigger a build.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the trigger. Must be unique within the project.
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1358,9 +1427,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
-interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.
-One of 'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Template describing the types of source changes to trigger a build.
+Branch and tag names in trigger templates are interpreted as regular
+expressions. Any branch or tag change that matches that regular
+expression will trigger a build.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1376,7 +1447,7 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Dict[Trigger<wbr>Build]</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1412,8 +1483,7 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must
-be provided.
+    <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1422,8 +1492,8 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithub">Dict[Trigger<wbr>Github]</a></span>
     </dt>
-    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of
-'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1432,10 +1502,13 @@ be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If ignoredFiles and changed files are both empty, then they are not used to determine whether or not
-to trigger a build. If ignoredFiles is not empty, then we ignore any files that match any of the ignored_file globs. If
-the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If ignoredFiles and changed files are both empty, then they are not
+used to determine whether or not to trigger a build.
+If ignoredFiles is not empty, then we ignore any files that match any
+of the ignored_file globs. If the change has no files that are outside
+of the ignoredFiles globs, then we do not trigger a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1444,11 +1517,15 @@ the change has no files that are outside of the ignoredFiles globs, then we do n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with
-support for '**'. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty,
-then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the
-ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a
-includedFiles glob. If not, then we do not trigger a build.
+    <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
+extended with support for `**`.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is empty, then as far as this filter is concerned, we
+should trigger the build.
+If any of the files altered in the commit pass the ignoredFiles filter
+and includedFiles is not empty, then we make sure that at least one of
+those files matches a includedFiles glob. If not, then we do not trigger
+a build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1457,7 +1534,9 @@ includedFiles glob. If not, then we do not trigger a build.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the trigger. Must be unique within the project.
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1494,9 +1573,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggertriggertemplate">Dict[Trigger<wbr>Trigger<wbr>Template]</a></span>
     </dt>
-    <dd>{{% md %}}Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are
-interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build.
-One of 'trigger_template' or 'github' must be provided.
+    <dd>{{% md %}}Template describing the types of source changes to trigger a build.
+Branch and tag names in trigger templates are interpreted as regular
+expressions. Any branch or tag change that matches that regular
+expression will trigger a build.
+One of `trigger_template` or `github` must be provided.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1522,6 +1603,9 @@ One of 'trigger_template' or 'github' must be provided.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuild.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1535,7 +1619,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstep">List&lt;Trigger<wbr>Build<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operations to be performed on the workspace.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1543,7 +1628,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
+The images are pushed using the builder service account's credentials.
+The digests of the pushed images will be stored in the Build resource's results field.
+If any of the images fail to be pushed, the build status is marked FAILURE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1551,7 +1640,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1559,7 +1649,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time limit for executing this build step. If not defined,
+the step has no
+time limit and will be allowed to continue to run until either it
+completes or the build itself times out.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1574,7 +1668,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstep">[]Trigger<wbr>Build<wbr>Step</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operations to be performed on the workspace.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1582,7 +1677,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
+The images are pushed using the builder service account's credentials.
+The digests of the pushed images will be stored in the Build resource's results field.
+If any of the images fail to be pushed, the build status is marked FAILURE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1590,7 +1689,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1598,7 +1698,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time limit for executing this build step. If not defined,
+the step has no
+time limit and will be allowed to continue to run until either it
+completes or the build itself times out.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1613,7 +1717,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstep">Trigger<wbr>Build<wbr>Step[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operations to be performed on the workspace.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1621,7 +1726,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
+The images are pushed using the builder service account's credentials.
+The digests of the pushed images will be stored in the Build resource's results field.
+If any of the images fail to be pushed, the build status is marked FAILURE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1629,7 +1738,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1637,7 +1747,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time limit for executing this build step. If not defined,
+the step has no
+time limit and will be allowed to continue to run until either it
+completes or the build itself times out.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1652,7 +1766,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstep">List[Trigger<wbr>Build<wbr>Step]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operations to be performed on the workspace.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1660,7 +1775,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
+The images are pushed using the builder service account's credentials.
+The digests of the pushed images will be stored in the Build resource's results field.
+If any of the images fail to be pushed, the build status is marked FAILURE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1668,7 +1787,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1676,7 +1796,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time limit for executing this build step. If not defined,
+the step has no
+time limit and will be allowed to continue to run until either it
+completes or the build itself times out.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1693,6 +1817,9 @@ One of 'trigger_template' or 'github' must be provided.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStep.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1706,7 +1833,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1714,7 +1844,12 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of arguments that will be presented to the step when it is started.
+If the image used to run the step's container has an entrypoint, the args
+are used as arguments to that entrypoint. If the image does not define an
+entrypoint, the first element in args is used as the entrypoint, and the
+remainder will be used as arguments.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1722,7 +1857,16 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a `volume` for that path is specified.
+If the build specifies a `RepoSource` with `dir` and a step with a
+`dir`,
+which specifies an absolute path, the `RepoSource` `dir` is ignored
+for the step's execution.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1730,7 +1874,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Entrypoint to be used instead of the build step image's
+default entrypoint.
+If unset, the image's default entrypoint is used
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1738,7 +1885,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of environment variable definitions to be used when
+running a step.
+The elements are of the form "KEY=VALUE" for the environment variable
+"KEY" being given the value "VALUE".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1746,7 +1897,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/triggers/{{trigger_id}}`
+    <dd>{{% md %}}Unique identifier for this build step, used in `wait_for` to
+reference this build step as a dependency.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1755,7 +1907,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of environment variables which are encrypted using
+a Cloud Key
+Management Service crypto key. These values must be specified in
+the build's `Secret`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1763,7 +1919,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time limit for executing this build step. If not defined,
+the step has no
+time limit and will be allowed to continue to run until either it
+completes or the build itself times out.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1771,7 +1931,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Output only. Stores timing information for executing this
+build step.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1779,7 +1941,13 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstepvolume">List&lt;Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of volumes to mount into the build step.
+Each volume is created as an empty volume prior to execution of the
+build step. Upon completion of the build, volumes and their contents
+are discarded.
+Using a named volume in only one step is not valid as it is
+indicative of a build request with an incorrect configuration.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1787,7 +1955,12 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID(s) of the step(s) that this build step depends on.
+This build step will not start until all the build steps in `wait_for`
+have completed successfully. If `wait_for` is empty, this build step
+will start when all previous build steps in the `Build.Steps` list
+have completed successfully.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1802,7 +1975,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1810,7 +1986,12 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of arguments that will be presented to the step when it is started.
+If the image used to run the step's container has an entrypoint, the args
+are used as arguments to that entrypoint. If the image does not define an
+entrypoint, the first element in args is used as the entrypoint, and the
+remainder will be used as arguments.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1818,7 +1999,16 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a `volume` for that path is specified.
+If the build specifies a `RepoSource` with `dir` and a step with a
+`dir`,
+which specifies an absolute path, the `RepoSource` `dir` is ignored
+for the step's execution.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1826,7 +2016,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Entrypoint to be used instead of the build step image's
+default entrypoint.
+If unset, the image's default entrypoint is used
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1834,7 +2027,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of environment variable definitions to be used when
+running a step.
+The elements are of the form "KEY=VALUE" for the environment variable
+"KEY" being given the value "VALUE".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1842,7 +2039,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/triggers/{{trigger_id}}`
+    <dd>{{% md %}}Unique identifier for this build step, used in `wait_for` to
+reference this build step as a dependency.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1851,7 +2049,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of environment variables which are encrypted using
+a Cloud Key
+Management Service crypto key. These values must be specified in
+the build's `Secret`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1859,7 +2061,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time limit for executing this build step. If not defined,
+the step has no
+time limit and will be allowed to continue to run until either it
+completes or the build itself times out.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1867,7 +2073,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Output only. Stores timing information for executing this
+build step.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1875,7 +2083,13 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstepvolume">[]Trigger<wbr>Build<wbr>Step<wbr>Volume</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of volumes to mount into the build step.
+Each volume is created as an empty volume prior to execution of the
+build step. Upon completion of the build, volumes and their contents
+are discarded.
+Using a named volume in only one step is not valid as it is
+indicative of a build request with an incorrect configuration.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1883,7 +2097,12 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID(s) of the step(s) that this build step depends on.
+This build step will not start until all the build steps in `wait_for`
+have completed successfully. If `wait_for` is empty, this build step
+will start when all previous build steps in the `Build.Steps` list
+have completed successfully.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1898,7 +2117,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1906,7 +2128,12 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of arguments that will be presented to the step when it is started.
+If the image used to run the step's container has an entrypoint, the args
+are used as arguments to that entrypoint. If the image does not define an
+entrypoint, the first element in args is used as the entrypoint, and the
+remainder will be used as arguments.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1914,7 +2141,16 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a `volume` for that path is specified.
+If the build specifies a `RepoSource` with `dir` and a step with a
+`dir`,
+which specifies an absolute path, the `RepoSource` `dir` is ignored
+for the step's execution.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1922,7 +2158,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Entrypoint to be used instead of the build step image's
+default entrypoint.
+If unset, the image's default entrypoint is used
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1930,7 +2169,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of environment variable definitions to be used when
+running a step.
+The elements are of the form "KEY=VALUE" for the environment variable
+"KEY" being given the value "VALUE".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1938,7 +2181,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/triggers/{{trigger_id}}`
+    <dd>{{% md %}}Unique identifier for this build step, used in `wait_for` to
+reference this build step as a dependency.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1947,7 +2191,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of environment variables which are encrypted using
+a Cloud Key
+Management Service crypto key. These values must be specified in
+the build's `Secret`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1955,7 +2203,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time limit for executing this build step. If not defined,
+the step has no
+time limit and will be allowed to continue to run until either it
+completes or the build itself times out.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1963,7 +2215,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Output only. Stores timing information for executing this
+build step.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1971,7 +2225,13 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstepvolume">Trigger<wbr>Build<wbr>Step<wbr>Volume[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of volumes to mount into the build step.
+Each volume is created as an empty volume prior to execution of the
+build step. Upon completion of the build, volumes and their contents
+are discarded.
+Using a named volume in only one step is not valid as it is
+indicative of a build request with an incorrect configuration.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1979,7 +2239,12 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID(s) of the step(s) that this build step depends on.
+This build step will not start until all the build steps in `wait_for`
+have completed successfully. If `wait_for` is empty, this build step
+will start when all previous build steps in the `Build.Steps` list
+have completed successfully.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1994,7 +2259,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2002,7 +2270,12 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of arguments that will be presented to the step when it is started.
+If the image used to run the step's container has an entrypoint, the args
+are used as arguments to that entrypoint. If the image does not define an
+entrypoint, the first element in args is used as the entrypoint, and the
+remainder will be used as arguments.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2010,7 +2283,16 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a `volume` for that path is specified.
+If the build specifies a `RepoSource` with `dir` and a step with a
+`dir`,
+which specifies an absolute path, the `RepoSource` `dir` is ignored
+for the step's execution.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2018,7 +2300,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Entrypoint to be used instead of the build step image's
+default entrypoint.
+If unset, the image's default entrypoint is used
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2026,7 +2311,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of environment variable definitions to be used when
+running a step.
+The elements are of the form "KEY=VALUE" for the environment variable
+"KEY" being given the value "VALUE".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2034,7 +2323,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/triggers/{{trigger_id}}`
+    <dd>{{% md %}}Unique identifier for this build step, used in `wait_for` to
+reference this build step as a dependency.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2043,7 +2333,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of environment variables which are encrypted using
+a Cloud Key
+Management Service crypto key. These values must be specified in
+the build's `Secret`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2051,7 +2345,11 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time limit for executing this build step. If not defined,
+the step has no
+time limit and will be allowed to continue to run until either it
+completes or the build itself times out.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2059,7 +2357,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Output only. Stores timing information for executing this
+build step.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2067,7 +2367,13 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstepvolume">List[Trigger<wbr>Build<wbr>Step<wbr>Volume]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of volumes to mount into the build step.
+Each volume is created as an empty volume prior to execution of the
+build step. Upon completion of the build, volumes and their contents
+are discarded.
+Using a named volume in only one step is not valid as it is
+indicative of a build request with an incorrect configuration.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2075,7 +2381,12 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID(s) of the step(s) that this build step depends on.
+This build step will not start until all the build steps in `wait_for`
+have completed successfully. If `wait_for` is empty, this build step
+will start when all previous build steps in the `Build.Steps` list
+have completed successfully.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2092,6 +2403,9 @@ One of 'trigger_template' or 'github' must be provided.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildStepVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildStepVolumeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildStepVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildStepVolume.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2105,7 +2419,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2113,7 +2430,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path at which to mount the volume.
+Paths must be absolute and cannot conflict with other volume paths on
+the same build step or with certain reserved volume paths.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2128,7 +2448,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2136,7 +2459,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path at which to mount the volume.
+Paths must be absolute and cannot conflict with other volume paths on
+the same build step or with certain reserved volume paths.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2151,7 +2477,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2159,7 +2488,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path at which to mount the volume.
+Paths must be absolute and cannot conflict with other volume paths on
+the same build step or with certain reserved volume paths.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2174,7 +2506,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2182,7 +2517,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Path at which to mount the volume.
+Paths must be absolute and cannot conflict with other volume paths on
+the same build step or with certain reserved volume paths.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2199,6 +2537,9 @@ One of 'trigger_template' or 'github' must be provided.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerGithubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerGithubOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerGithubArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerGithub.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2212,7 +2553,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2220,7 +2564,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Owner of the repository. For example: The owner for
+https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2228,7 +2574,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2236,7 +2583,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2251,7 +2599,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2259,7 +2610,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Owner of the repository. For example: The owner for
+https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2267,7 +2620,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2275,7 +2629,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2290,7 +2645,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2298,7 +2656,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Owner of the repository. For example: The owner for
+https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2306,7 +2666,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2314,7 +2675,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2329,7 +2691,10 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for
+Docker volumes. Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2337,7 +2702,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Owner of the repository. For example: The owner for
+https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2345,7 +2712,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpullrequest">Dict[Trigger<wbr>Github<wbr>Pull<wbr>Request]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2353,7 +2721,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpush">Dict[Trigger<wbr>Github<wbr>Push]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2370,6 +2739,9 @@ One of 'trigger_template' or 'github' must be provided.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerGithubPullRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerGithubPullRequestOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerGithubPullRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerGithubPullRequest.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2383,7 +2755,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2391,7 +2764,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2406,7 +2780,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2414,7 +2789,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2429,7 +2805,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2437,7 +2814,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2452,7 +2830,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2460,7 +2839,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2477,6 +2857,9 @@ One of 'trigger_template' or 'github' must be provided.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerGithubPushArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerGithubPushOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerGithubPushArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerGithubPush.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2490,7 +2873,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2498,7 +2882,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regex of tags to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2513,7 +2898,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2521,7 +2907,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regex of tags to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2536,7 +2923,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2544,7 +2932,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regex of tags to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2559,7 +2948,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2567,7 +2957,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Regex of tags to match.  Specify only one of branch or tag.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2584,6 +2975,9 @@ One of 'trigger_template' or 'github' must be provided.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerTriggerTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerTriggerTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerTriggerTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerTriggerTemplate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2597,7 +2991,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+This field is a regular expression.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2605,7 +3001,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Explicit commit SHA to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2613,7 +3010,16 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a `volume` for that path is specified.
+If the build specifies a `RepoSource` with `dir` and a step with a
+`dir`,
+which specifies an absolute path, the `RepoSource` `dir` is ignored
+for the step's execution.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2621,7 +3027,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository. If
+omitted, the project ID requesting the build is assumed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2629,7 +3037,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2637,7 +3046,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+This field is a regular expression.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2652,7 +3063,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+This field is a regular expression.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2660,7 +3073,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Explicit commit SHA to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2668,7 +3082,16 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a `volume` for that path is specified.
+If the build specifies a `RepoSource` with `dir` and a step with a
+`dir`,
+which specifies an absolute path, the `RepoSource` `dir` is ignored
+for the step's execution.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2676,7 +3099,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository. If
+omitted, the project ID requesting the build is assumed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2684,7 +3109,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2692,7 +3118,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+This field is a regular expression.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2707,7 +3135,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+This field is a regular expression.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2715,7 +3145,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Explicit commit SHA to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2723,7 +3154,16 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a `volume` for that path is specified.
+If the build specifies a `RepoSource` with `dir` and a step with a
+`dir`,
+which specifies an absolute path, the `RepoSource` `dir` is ignored
+for the step's execution.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2731,7 +3171,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository. If
+omitted, the project ID requesting the build is assumed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2739,7 +3181,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2747,7 +3190,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+This field is a regular expression.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2762,7 +3207,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+This field is a regular expression.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2770,7 +3217,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Explicit commit SHA to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2778,7 +3226,16 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a `volume` for that path is specified.
+If the build specifies a `RepoSource` with `dir` and a step with a
+`dir`,
+which specifies an absolute path, the `RepoSource` `dir` is ignored
+for the step's execution.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2786,7 +3243,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository. If
+omitted, the project ID requesting the build is assumed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2794,7 +3253,8 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2802,7 +3262,9 @@ One of 'trigger_template' or 'github' must be provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+This field is a regular expression.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2821,8 +3283,7 @@ One of 'trigger_template' or 'github' must be provided.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

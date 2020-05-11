@@ -14,7 +14,7 @@ meta_desc: "Explore the NodeBalancerConfig resource of the Linode package, inclu
 
 
 ## Create a NodeBalancerConfig Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the NodeBalancerConfig resource of the Linode package, inclu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodeBalancerConfig</span><span class="p">(resource_name, opts=None, </span>algorithm=None<span class="p">, </span>check=None<span class="p">, </span>check_attempts=None<span class="p">, </span>check_body=None<span class="p">, </span>check_interval=None<span class="p">, </span>check_passive=None<span class="p">, </span>check_path=None<span class="p">, </span>check_timeout=None<span class="p">, </span>cipher_suite=None<span class="p">, </span>nodebalancer_id=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>ssl_cert=None<span class="p">, </span>ssl_key=None<span class="p">, </span>stickiness=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodeBalancerConfig</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>algorithm=None<span class="p">, </span>check=None<span class="p">, </span>check_attempts=None<span class="p">, </span>check_body=None<span class="p">, </span>check_interval=None<span class="p">, </span>check_passive=None<span class="p">, </span>check_path=None<span class="p">, </span>check_timeout=None<span class="p">, </span>cipher_suite=None<span class="p">, </span>nodebalancer_id=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>ssl_cert=None<span class="p">, </span>ssl_key=None<span class="p">, </span>stickiness=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -946,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NodeBalancerConfig Resource {#look-up}
 
 Get an existing NodeBalancerConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#NodeBalancerConfigState">NodeBalancerConfigState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#NodeBalancerConfig">NodeBalancerConfig</a></span></code></pre></div>
@@ -1758,6 +1758,9 @@ the response body of a check request, the backend is considered to be down
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#NodeBalancerConfigNodeStatusOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Outputs.NodeBalancerConfigNodeStatus.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

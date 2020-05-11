@@ -11,10 +11,13 @@ meta_desc: "Explore the DefaultPrivileg resource of the PostgreSQL package, incl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+Deprecated: postgresql.DefaultPrivileg has been deprecated in favour of postgresql.DefaultPrivileges
+
+<p class="resource-deprecated">Deprecated: {{% md %}}postgresql.DefaultPrivileg has been deprecated in favour of postgresql.DefaultPrivileges{{% /md %}}</p>
 
 
 ## Create a DefaultPrivileg Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +25,7 @@ meta_desc: "Explore the DefaultPrivileg resource of the PostgreSQL package, incl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DefaultPrivileg</span><span class="p">(resource_name, opts=None, </span>database=None<span class="p">, </span>object_type=None<span class="p">, </span>owner=None<span class="p">, </span>privileges=None<span class="p">, </span>role=None<span class="p">, </span>schema=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DefaultPrivileg</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>database=None<span class="p">, </span>object_type=None<span class="p">, </span>owner=None<span class="p">, </span>privileges=None<span class="p">, </span>role=None<span class="p">, </span>schema=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -514,7 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DefaultPrivileg Resource {#look-up}
 
 Get an existing DefaultPrivileg resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#DefaultPrivilegState">DefaultPrivilegState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#DefaultPrivileg">DefaultPrivileg</a></span></code></pre></div>

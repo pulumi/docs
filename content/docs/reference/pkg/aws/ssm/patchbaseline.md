@@ -16,12 +16,26 @@ Provides an SSM Patch Baseline resource
 both marked as optional fields, but the Patch Baseline requires that at least one
 of them is specified.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic usage using `approved_patches` only
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -30,130 +44,13 @@ const production = new aws.ssm.PatchBaseline("production", {
     approvedPatches: ["KB123456"],
 });
 ```
-
-Advanced usage, specifying patch filters
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const production = new aws.ssm.PatchBaseline("production", {
-    approvalRules: [
-        {
-            approveAfterDays: 7,
-            complianceLevel: "HIGH",
-            patchFilters: [
-                {
-                    key: "PRODUCT",
-                    values: ["WindowsServer2016"],
-                },
-                {
-                    key: "CLASSIFICATION",
-                    values: [
-                        "CriticalUpdates",
-                        "SecurityUpdates",
-                        "Updates",
-                    ],
-                },
-                {
-                    key: "MSRC_SEVERITY",
-                    values: [
-                        "Critical",
-                        "Important",
-                        "Moderate",
-                    ],
-                },
-            ],
-        },
-        {
-            approveAfterDays: 7,
-            patchFilters: [{
-                key: "PRODUCT",
-                values: ["WindowsServer2012"],
-            }],
-        },
-    ],
-    approvedPatches: [
-        "KB123456",
-        "KB456789",
-    ],
-    description: "Patch Baseline Description",
-    globalFilters: [
-        {
-            key: "PRODUCT",
-            values: ["WindowsServer2008"],
-        },
-        {
-            key: "CLASSIFICATION",
-            values: ["ServicePacks"],
-        },
-        {
-            key: "MSRC_SEVERITY",
-            values: ["Low"],
-        },
-    ],
-    rejectedPatches: ["KB987654"],
-});
-```
-
-Advanced usage, specifying Microsoft application and Windows patch rules
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const windowsOsApps = new aws.ssm.PatchBaseline("windows_os_apps", {
-    approvalRules: [
-        {
-            approveAfterDays: 7,
-            patchFilters: [
-                {
-                    key: "CLASSIFICATION",
-                    values: [
-                        "CriticalUpdates",
-                        "SecurityUpdates",
-                    ],
-                },
-                {
-                    key: "MSRC_SEVERITY",
-                    values: [
-                        "Critical",
-                        "Important",
-                    ],
-                },
-            ],
-        },
-        {
-            approveAfterDays: 7,
-            patchFilters: [
-                {
-                    key: "PATCH_SET",
-                    values: ["APPLICATION"],
-                },
-                // Filter on Microsoft product if necessary 
-                {
-                    key: "PRODUCT",
-                    values: [
-                        "Office 2013",
-                        "Office 2016",
-                    ],
-                },
-            ],
-        },
-    ],
-    description: "Patch both Windows and Microsoft apps",
-    operatingSystem: "WINDOWS",
-});
-```
-
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a PatchBaseline Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -161,7 +58,7 @@ const windowsOsApps = new aws.ssm.PatchBaseline("windows_os_apps", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PatchBaseline</span><span class="p">(resource_name, opts=None, </span>approval_rules=None<span class="p">, </span>approved_patches=None<span class="p">, </span>approved_patches_compliance_level=None<span class="p">, </span>description=None<span class="p">, </span>global_filters=None<span class="p">, </span>name=None<span class="p">, </span>operating_system=None<span class="p">, </span>rejected_patches=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PatchBaseline</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>approval_rules=None<span class="p">, </span>approved_patches=None<span class="p">, </span>approved_patches_compliance_level=None<span class="p">, </span>description=None<span class="p">, </span>global_filters=None<span class="p">, </span>name=None<span class="p">, </span>operating_system=None<span class="p">, </span>rejected_patches=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -411,7 +308,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -499,7 +396,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -587,7 +484,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -675,7 +572,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -761,7 +658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing PatchBaseline Resource {#look-up}
 
 Get an existing PatchBaseline resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#PatchBaselineState">PatchBaselineState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#PatchBaseline">PatchBaseline</a></span></code></pre></div>
@@ -960,7 +857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1048,7 +945,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1136,7 +1033,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1224,7 +1121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1250,6 +1147,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#PatchBaselineApprovalRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#PatchBaselineApprovalRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.PatchBaselineApprovalRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.PatchBaselineApprovalRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1273,7 +1173,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">List&lt;Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-* `PATCH_SET` defaults to `OS` if unspecified
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1317,7 +1216,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-* `PATCH_SET` defaults to `OS` if unspecified
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1361,7 +1259,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-* `PATCH_SET` defaults to `OS` if unspecified
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1405,7 +1302,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">List[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-* `PATCH_SET` defaults to `OS` if unspecified
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1440,6 +1336,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#PatchBaselineApprovalRulePatchFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#PatchBaselineApprovalRulePatchFilterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.PatchBaselineApprovalRulePatchFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.PatchBaselineApprovalRulePatchFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1547,6 +1446,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#PatchBaselineGlobalFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#PatchBaselineGlobalFilterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.PatchBaselineGlobalFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.PatchBaselineGlobalFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

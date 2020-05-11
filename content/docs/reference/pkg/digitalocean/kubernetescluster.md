@@ -12,12 +12,38 @@ meta_desc: "Explore the KubernetesCluster resource of the Digital Ocean package,
 
 Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the [official documentation](https://www.digitalocean.com/docs/kubernetes/).
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic Example
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+foo = digitalocean.KubernetesCluster("foo",
+    node_pool={
+        "name": "worker-pool",
+        "nodeCount": 3,
+        "size": "s-2vcpu-2gb",
+    },
+    region="nyc1",
+    version="1.15.5-do.1")
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -33,14 +59,36 @@ const foo = new digitalocean.KubernetesCluster("foo", {
     version: "1.15.5-do.1",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
+
 ### Autoscaling Example
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-Node pools may also be configured to [autoscale](https://www.digitalocean.com/docs/kubernetes/how-to/autoscale/).
-For example:
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+foo = digitalocean.KubernetesCluster("foo",
+    node_pool={
+        "autoScale": True,
+        "maxNodes": 5,
+        "minNodes": 1,
+        "name": "autoscale-worker-pool",
+        "size": "s-2vcpu-2gb",
+    },
+    region="nyc1",
+    version="1.15.5-do.1")
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -57,16 +105,13 @@ const foo = new digitalocean.KubernetesCluster("foo", {
     version: "1.15.5-do.1",
 });
 ```
-
-Note that, while individual node pools may scale to 0, a cluster must always include at least one node.
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a KubernetesCluster Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -74,7 +119,7 @@ Note that, while individual node pools may scale to 0, a cluster must always inc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KubernetesCluster</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>node_pool=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KubernetesCluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>node_pool=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vpc_uuid=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -914,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing KubernetesCluster Resource {#look-up}
 
 Get an existing KubernetesCluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#KubernetesClusterState">KubernetesClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#KubernetesCluster">KubernetesCluster</a></span></code></pre></div>
@@ -1643,6 +1688,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterKubeConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.KubernetesClusterKubeConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1909,6 +1957,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterNodePoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterNodePoolOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.KubernetesClusterNodePoolArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.KubernetesClusterNodePool.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2316,6 +2367,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterNodePoolNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterNodePoolNodeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.KubernetesClusterNodePoolNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.KubernetesClusterNodePoolNode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -14,7 +14,7 @@ meta_desc: "Explore the RoleTempalte resource of the Rancher 2 package, includin
 
 
 ## Create a RoleTempalte Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the RoleTempalte resource of the Rancher 2 package, includin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RoleTempalte</span><span class="p">(resource_name, opts=None, </span>administrative=None<span class="p">, </span>annotations=None<span class="p">, </span>context=None<span class="p">, </span>default_role=None<span class="p">, </span>description=None<span class="p">, </span>external=None<span class="p">, </span>hidden=None<span class="p">, </span>labels=None<span class="p">, </span>locked=None<span class="p">, </span>name=None<span class="p">, </span>role_template_ids=None<span class="p">, </span>rules=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RoleTempalte</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>administrative=None<span class="p">, </span>annotations=None<span class="p">, </span>context=None<span class="p">, </span>default_role=None<span class="p">, </span>description=None<span class="p">, </span>external=None<span class="p">, </span>hidden=None<span class="p">, </span>labels=None<span class="p">, </span>locked=None<span class="p">, </span>name=None<span class="p">, </span>role_template_ids=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -766,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing RoleTempalte Resource {#look-up}
 
 Get an existing RoleTempalte resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#RoleTempalteState">RoleTempalteState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#RoleTempalte">RoleTempalte</a></span></code></pre></div>
@@ -1398,6 +1398,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#RoleTempalteRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#RoleTempalteRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.RoleTempalteRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.RoleTempalteRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

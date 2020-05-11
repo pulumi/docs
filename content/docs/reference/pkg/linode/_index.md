@@ -18,6 +18,7 @@ A Pulumi package for creating and managing linode cloud resources.
     <li><a href="domainrecord" title="DomainRecord"><span class="symbol resource"></span>DomainRecord</a></li>
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="lkecluster" title="LkeCluster"><span class="symbol resource"></span>LkeCluster</a></li>
     <li><a href="nodebalancer" title="NodeBalancer"><span class="symbol resource"></span>NodeBalancer</a></li>
     <li><a href="nodebalancerconfig" title="NodeBalancerConfig"><span class="symbol resource"></span>NodeBalancerConfig</a></li>
     <li><a href="nodebalancernode" title="NodeBalancerNode"><span class="symbol resource"></span>NodeBalancerNode</a></li>
@@ -57,6 +58,6 @@ A Pulumi package for creating and managing linode cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.3.0</dd>
 </dl>
 

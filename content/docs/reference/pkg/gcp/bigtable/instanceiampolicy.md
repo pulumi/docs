@@ -1,7 +1,8 @@
 
 ---
 title: "InstanceIamPolicy"
-block_external_search_index: true
+title_tag: "Resource InstanceIamPolicy | Module bigtable | Package GCP"
+meta_desc: "Explore the InstanceIamPolicy resource of the bigtable module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage IAM policies on bigtable instances. Each of these resources serves a different use case:"
 ---
 
 
@@ -48,7 +49,7 @@ const editor = new gcp.bigtable.InstanceIamMember("editor", {
 
 
 ## Create a InstanceIamPolicy Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -56,7 +57,7 @@ const editor = new gcp.bigtable.InstanceIamMember("editor", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceIamPolicy</span><span class="p">(resource_name, opts=None, </span>instance=None<span class="p">, </span>policy_data=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceIamPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance=None<span class="p">, </span>policy_data=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -480,7 +481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing InstanceIamPolicy Resource {#look-up}
 
 Get an existing InstanceIamPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigtable/#InstanceIamPolicyState">InstanceIamPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigtable/#InstanceIamPolicy">InstanceIamPolicy</a></span></code></pre></div>
@@ -789,8 +790,7 @@ is not provided, a default will be supplied.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

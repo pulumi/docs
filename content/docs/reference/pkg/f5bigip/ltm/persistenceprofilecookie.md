@@ -50,7 +50,7 @@ If this is configured specify `ignore_changes` under the `lifecycle` block to ig
 
 
 ## Create a PersistenceProfileCookie Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -58,7 +58,7 @@ If this is configured specify `ignore_changes` under the `lifecycle` block to ig
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PersistenceProfileCookie</span><span class="p">(resource_name, opts=None, </span>always_send=None<span class="p">, </span>app_service=None<span class="p">, </span>cookie_encryption=None<span class="p">, </span>cookie_encryption_passphrase=None<span class="p">, </span>cookie_name=None<span class="p">, </span>defaults_from=None<span class="p">, </span>expiration=None<span class="p">, </span>hash_length=None<span class="p">, </span>hash_offset=None<span class="p">, </span>httponly=None<span class="p">, </span>match_across_pools=None<span class="p">, </span>match_across_services=None<span class="p">, </span>match_across_virtuals=None<span class="p">, </span>mirror=None<span class="p">, </span>name=None<span class="p">, </span>override_conn_limit=None<span class="p">, </span>timeout=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PersistenceProfileCookie</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>always_send=None<span class="p">, </span>app_service=None<span class="p">, </span>cookie_encryption=None<span class="p">, </span>cookie_encryption_passphrase=None<span class="p">, </span>cookie_name=None<span class="p">, </span>defaults_from=None<span class="p">, </span>expiration=None<span class="p">, </span>hash_length=None<span class="p">, </span>hash_offset=None<span class="p">, </span>httponly=None<span class="p">, </span>match_across_pools=None<span class="p">, </span>match_across_services=None<span class="p">, </span>match_across_virtuals=None<span class="p">, </span>mirror=None<span class="p">, </span>name=None<span class="p">, </span>override_conn_limit=None<span class="p">, </span>timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -946,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing PersistenceProfileCookie Resource {#look-up}
 
 Get an existing PersistenceProfileCookie resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#PersistenceProfileCookieState">PersistenceProfileCookieState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#PersistenceProfileCookie">PersistenceProfileCookie</a></span></code></pre></div>

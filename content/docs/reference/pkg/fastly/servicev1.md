@@ -18,158 +18,50 @@ The Service resource requires a domain name that is correctly set up to direct
 traffic to the Fastly service. See Fastly's guide on [Adding CNAME Records][fastly-cname]
 on their documentation site for guidance.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic usage:
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as fastly from "@pulumi/fastly";
-
-const demo = new fastly.Servicev1("demo", {
-    backends: [{
-        address: "127.0.0.1",
-        name: "localhost",
-        port: 80,
-    }],
-    domains: [{
-        comment: "demo",
-        name: "demo.notexample.com",
-    }],
-    forceDestroy: true,
-});
-```
-
-Basic usage with an Amazon S3 Website and that removes the `x-amz-request-id` header:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as fastly from "@pulumi/fastly";
-
-const website = new aws.s3.Bucket("website", {
-    acl: "public-read",
-    website: {
-        errorDocument: "error.html",
-        indexDocument: "index.html",
-    },
-});
-const demo = new fastly.Servicev1("demo", {
-    backends: [{
-        address: "demo.notexample.com.s3-website-us-west-2.amazonaws.com",
-        name: "AWS S3 hosting",
-        port: 80,
-    }],
-    defaultHost: pulumi.interpolate`${website.name}.s3-website-us-west-2.amazonaws.com`,
-    domains: [{
-        comment: "demo",
-        name: "demo.notexample.com",
-    }],
-    forceDestroy: true,
-    gzips: [{
-        contentTypes: [
-            "text/html",
-            "text/css",
-        ],
-        extensions: [
-            "css",
-            "js",
-        ],
-        name: "file extensions and content types",
-    }],
-    headers: [{
-        action: "delete",
-        destination: "http.x-amz-request-id",
-        name: "remove x-amz-request-id",
-        type: "cache",
-    }],
-});
-```
-
-Basic usage with [custom
-VCL](https://docs.fastly.com/guides/vcl/uploading-custom-vcl) (must be
-enabled on your Fastly account):
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as fastly from "@pulumi/fastly";
-import * as fs from "fs";
-
-const demo = new fastly.Servicev1("demo", {
-    backends: [{
-        address: "127.0.0.1",
-        name: "localhost",
-        port: 80,
-    }],
-    domains: [{
-        comment: "demo",
-        name: "demo.notexample.com",
-    }],
-    forceDestroy: true,
-    vcls: [
-        {
-            content: fs.readFileSync(`./my_custom_main.vcl`, "utf-8"),
-            main: true,
-            name: "my_custom_main_vcl",
-        },
-        {
-            content: fs.readFileSync(`./my_custom_library.vcl`, "utf-8"),
-            name: "my_custom_library_vcl",
-        },
-    ],
-});
-```
-
-Basic usage with [custom Director](https://docs.fastly.com/api/config#director):
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as fastly from "@pulumi/fastly";
-
-const demo = new fastly.Servicev1("demo", {
-    backends: [
-        {
-            address: "127.0.0.1",
-            name: "origin1",
-            port: 80,
-        },
-        {
-            address: "127.0.0.2",
-            name: "origin2",
-            port: 80,
-        },
-    ],
-    directors: [{
-        backends: [
-            "origin1",
-            "origin2",
-        ],
-        name: "mydirector",
-        quorum: 0,
-        type: 3,
-    }],
-    domains: [{
-        comment: "demo",
-        name: "demo.notexample.com",
-    }],
-    forceDestroy: true,
-});
-```
-
-> **Note:** For an AWS S3 Bucket, the Backend address is
-`<domain>.s3-website-<region>.amazonaws.com`. The `default_host` attribute
-should be set to `<bucket_name>.s3-website-<region>.amazonaws.com`. See the
-Fastly documentation on [Amazon S3][fastly-s3].
-
+{{% example csharp %}}
+Coming soon!
 {{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fastly from "@pulumi/fastly";
+
+const demo = new fastly.Servicev1("demo", {
+    backends: [{
+        address: "127.0.0.1",
+        name: "localhost",
+        port: 80,
+    }],
+    domains: [{
+        comment: "demo",
+        name: "demo.notexample.com",
+    }],
+    forceDestroy: true,
+});
+```
+{{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Servicev1 Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -177,7 +69,7 @@ Fastly documentation on [Amazon S3][fastly-s3].
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Servicev1</span><span class="p">(resource_name, opts=None, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>logentries=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Servicev1</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -534,6 +426,16 @@ below.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Httpsloggings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1httpslogging">List&lt;Servicev1Httpslogging<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Logentries</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1logentry">List&lt;Servicev1Logentry<wbr>Args&gt;</a></span>
@@ -836,6 +738,16 @@ below.
         <span class="property-type"><a href="#servicev1healthcheck">[]Servicev1Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Httpsloggings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1httpslogging">[]Servicev1Httpslogging</a></span>
+    </dt>
+    <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
+Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1146,6 +1058,16 @@ below.
 
     <dt class="property-optional"
             title="Optional">
+        <span>httpsloggings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1httpslogging">Servicev1Httpslogging[]</a></span>
+    </dt>
+    <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>logentries</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1logentry">Servicev1Logentry[]</a></span>
@@ -1452,6 +1374,16 @@ below.
 
     <dt class="property-optional"
             title="Optional">
+        <span>httpsloggings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1httpslogging">List[Servicev1Httpslogging]</a></span>
+    </dt>
+    <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>logentries</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1logentry">List[Servicev1Logentry]</a></span>
@@ -1717,14 +1649,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Servicev1 Resource {#look-up}
 
 Get an existing Servicev1 resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/fastly/#Servicev1State">Servicev1State</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/fastly/#Servicev1">Servicev1</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>active_version=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>cloned_version=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>logentries=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acls=None<span class="p">, </span>activate=None<span class="p">, </span>active_version=None<span class="p">, </span>backends=None<span class="p">, </span>bigqueryloggings=None<span class="p">, </span>blobstorageloggings=None<span class="p">, </span>cache_settings=None<span class="p">, </span>cloned_version=None<span class="p">, </span>comment=None<span class="p">, </span>conditions=None<span class="p">, </span>default_host=None<span class="p">, </span>default_ttl=None<span class="p">, </span>dictionaries=None<span class="p">, </span>directors=None<span class="p">, </span>domains=None<span class="p">, </span>dynamicsnippets=None<span class="p">, </span>force_destroy=None<span class="p">, </span>gcsloggings=None<span class="p">, </span>gzips=None<span class="p">, </span>headers=None<span class="p">, </span>healthchecks=None<span class="p">, </span>httpsloggings=None<span class="p">, </span>logentries=None<span class="p">, </span>name=None<span class="p">, </span>papertrails=None<span class="p">, </span>request_settings=None<span class="p">, </span>response_objects=None<span class="p">, </span>s3loggings=None<span class="p">, </span>snippets=None<span class="p">, </span>splunks=None<span class="p">, </span>sumologics=None<span class="p">, </span>syslogs=None<span class="p">, </span>vcls=None<span class="p">, </span>version_comment=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2040,6 +1972,16 @@ below.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Httpsloggings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1httpslogging">List&lt;Servicev1Httpslogging<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Logentries</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1logentry">List&lt;Servicev1Logentry<wbr>Args&gt;</a></span>
@@ -2359,6 +2301,16 @@ below.
         <span class="property-type"><a href="#servicev1healthcheck">[]Servicev1Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Httpsloggings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1httpslogging">[]Servicev1Httpslogging</a></span>
+    </dt>
+    <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
+Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2686,6 +2638,16 @@ below.
 
     <dt class="property-optional"
             title="Optional">
+        <span>httpsloggings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1httpslogging">Servicev1Httpslogging[]</a></span>
+    </dt>
+    <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>logentries</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1logentry">Servicev1Logentry[]</a></span>
@@ -3009,6 +2971,16 @@ below.
 
     <dt class="property-optional"
             title="Optional">
+        <span>httpsloggings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1httpslogging">List[Servicev1Httpslogging]</a></span>
+    </dt>
+    <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>logentries</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicev1logentry">List[Servicev1Logentry]</a></span>
@@ -3146,6 +3118,9 @@ accounts (see the [Fastly documentation](https://docs.fastly.com/guides/vcl/uplo
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1AclArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1AclOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1AclArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Acl.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3260,6 +3235,9 @@ accounts (see the [Fastly documentation](https://docs.fastly.com/guides/vcl/uplo
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1BackendArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1BackendOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1BackendArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Backend.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4220,6 +4198,9 @@ Default `200`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1BigqueryloggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1BigqueryloggingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1BigqueryloggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Bigquerylogging.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4278,7 +4259,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4287,7 +4268,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4375,7 +4356,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4384,7 +4365,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4472,7 +4453,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4481,7 +4462,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4569,7 +4550,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4578,7 +4559,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4623,6 +4604,9 @@ Default `200`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1BlobstorageloggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1BlobstorageloggingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1BlobstorageloggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Blobstoragelogging.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4672,7 +4656,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4699,7 +4683,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4726,7 +4710,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4805,7 +4789,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4832,7 +4816,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4859,7 +4843,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4938,7 +4922,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4965,7 +4949,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4992,7 +4976,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5071,7 +5055,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5098,7 +5082,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5125,7 +5109,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5169,6 +5153,9 @@ Default `200`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1CacheSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1CacheSettingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1CacheSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1CacheSetting.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5401,6 +5388,9 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1ConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1ConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1ConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Condition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5588,6 +5578,9 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DictionaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DictionaryOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1DictionaryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Dictionary.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5734,6 +5727,9 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DirectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DirectorOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1DirectorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Director.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6066,6 +6062,9 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DomainArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DomainOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1DomainArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Domain.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6180,6 +6179,9 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DynamicsnippetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1DynamicsnippetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1DynamicsnippetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Dynamicsnippet.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6368,6 +6370,9 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1GcsloggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1GcsloggingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1GcsloggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Gcslogging.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6408,7 +6413,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6426,7 +6431,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6453,7 +6458,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6523,7 +6528,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6541,7 +6546,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6568,7 +6573,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6638,7 +6643,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6656,7 +6661,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6683,7 +6688,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6753,7 +6758,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6771,7 +6776,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6798,7 +6803,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6842,6 +6847,9 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1GzipArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1GzipOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1GzipArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Gzip.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7041,6 +7049,9 @@ gzip. Example: `["css", "js"]`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1HeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1HeaderOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1HeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Header.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7529,6 +7540,9 @@ content. (Does not apply to the `delete` action.)
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1HealthcheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1HealthcheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1HealthcheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Healthcheck.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -7605,7 +7619,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Which HTTP method to use. Default `HEAD`.
+    <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7711,7 +7725,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Which HTTP method to use. Default `HEAD`.
+    <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7817,7 +7831,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Which HTTP method to use. Default `HEAD`.
+    <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7923,7 +7937,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Which HTTP method to use. Default `HEAD`.
+    <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7960,6 +7974,700 @@ content. (Does not apply to the `delete` action.)
 
 
 
+<h4 id="servicev1httpslogging">Servicev1Httpslogging</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Httpslogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Httpslogging">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1HttpsloggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1HttpsloggingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1HttpsloggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Httpslogging.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL that log data will be sent to. Must use the https protocol.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Content<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The MIME type of the content.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Format<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Header<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Custom header sent with the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Header<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value of the custom header sent with the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Json<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Message<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Placement</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Request<wbr>Max<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of bytes sent in one request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Request<wbr>Max<wbr>Entries</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of logs sent in one request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Response<wbr>Condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls<wbr>Ca<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls<wbr>Client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls<wbr>Client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls<wbr>Hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Used during the TLS handshake to validate the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL that log data will be sent to. Must use the https protocol.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Content<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The MIME type of the content.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Format<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Header<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Custom header sent with the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Header<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value of the custom header sent with the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Json<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Message<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Placement</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Request<wbr>Max<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of bytes sent in one request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Request<wbr>Max<wbr>Entries</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of logs sent in one request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Response<wbr>Condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls<wbr>Ca<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls<wbr>Client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls<wbr>Client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls<wbr>Hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Used during the TLS handshake to validate the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}URL that log data will be sent to. Must use the https protocol.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>content<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The MIME type of the content.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>format<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>header<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Custom header sent with the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>header<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value of the custom header sent with the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>json<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>message<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>placement</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>request<wbr>Max<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of bytes sent in one request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>request<wbr>Max<wbr>Entries</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of logs sent in one request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>response<wbr>Condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls<wbr>Ca<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls<wbr>Client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls<wbr>Client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls<wbr>Hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Used during the TLS handshake to validate the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}URL that log data will be sent to. Must use the https protocol.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>content<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The MIME type of the content.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>format<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. The logging call gets placed by default in `vcl_log` if `format_version` is set to `2` and in `vcl_deliver` if `format_version` is set to `1`. Default `2`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>header<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Custom header sent with the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>header<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Value of the custom header sent with the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>json<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>message<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>placement</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>request<wbr>Max<wbr>Bytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of bytes sent in one request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>request<wbr>Max<wbr>Entries</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of logs sent in one request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>response<wbr>Condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls<wbr>Ca<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls<wbr>Client<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls<wbr>Client<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls<wbr>Hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Used during the TLS handshake to validate the certificate.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="servicev1logentry">Servicev1Logentry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Logentry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Logentry">output</a> API doc for this type.
@@ -7967,6 +8675,9 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LogentryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LogentryOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LogentryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Logentry.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7999,7 +8710,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8017,7 +8728,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8078,7 +8789,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8096,7 +8807,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8157,7 +8868,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8175,7 +8886,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8236,7 +8947,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8254,7 +8965,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8299,6 +9010,9 @@ content. (Does not apply to the `delete` action.)
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1PapertrailArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1PapertrailOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1PapertrailArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Papertrail.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -8339,7 +9053,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8348,7 +9062,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8400,7 +9114,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8409,7 +9123,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8461,7 +9175,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8470,7 +9184,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8522,7 +9236,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8531,7 +9245,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8557,6 +9271,9 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1RequestSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1RequestSettingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1RequestSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1RequestSetting.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -9065,6 +9782,9 @@ viewing origin fetch durations.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1ResponseObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1ResponseObjectOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1ResponseObjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1ResponseObject.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -9364,6 +10084,9 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1S3loggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1S3loggingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1S3loggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1S3logging.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -9405,7 +10128,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9432,7 +10155,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9459,7 +10182,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9570,7 +10293,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9597,7 +10320,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9624,7 +10347,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9735,7 +10458,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9762,7 +10485,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9789,7 +10512,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9900,7 +10623,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9927,7 +10650,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9954,7 +10677,7 @@ then specify the corresponding bucket endpoint. Example: `s3-us-west-2.amazonaws
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10038,6 +10761,9 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SnippetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SnippetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1SnippetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Snippet.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -10226,6 +10952,9 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SplunkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SplunkOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1SplunkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Splunk.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -10257,7 +10986,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Splunk URL to stream logs to.
+    <dd>{{% md %}}URL that log data will be sent to. Must use the https protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10266,7 +10995,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10284,7 +11013,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10294,6 +11023,24 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls<wbr>Ca<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls<wbr>Hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Used during the TLS handshake to validate the certificate.
 {{% /md %}}</dd>
 
 </dl>
@@ -10327,7 +11074,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Splunk URL to stream logs to.
+    <dd>{{% md %}}URL that log data will be sent to. Must use the https protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10336,7 +11083,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10354,7 +11101,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10364,6 +11111,24 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls<wbr>Ca<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tls<wbr>Hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Used during the TLS handshake to validate the certificate.
 {{% /md %}}</dd>
 
 </dl>
@@ -10397,7 +11162,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Splunk URL to stream logs to.
+    <dd>{{% md %}}URL that log data will be sent to. Must use the https protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10406,7 +11171,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10424,7 +11189,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10434,6 +11199,24 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls<wbr>Ca<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls<wbr>Hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Used during the TLS handshake to validate the certificate.
 {{% /md %}}</dd>
 
 </dl>
@@ -10467,7 +11250,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Splunk URL to stream logs to.
+    <dd>{{% md %}}URL that log data will be sent to. Must use the https protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10476,7 +11259,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10494,7 +11277,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10504,6 +11287,24 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the `condition` to apply. If empty, always execute.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls<wbr>Ca<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tls<wbr>Hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Used during the TLS handshake to validate the certificate.
 {{% /md %}}</dd>
 
 </dl>
@@ -10521,6 +11322,9 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SumologicArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SumologicOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1SumologicArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Sumologic.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -10543,7 +11347,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Splunk URL to stream logs to.
+    <dd>{{% md %}}URL that log data will be sent to. Must use the https protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10552,7 +11356,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10570,7 +11374,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10579,7 +11383,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10613,7 +11417,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Splunk URL to stream logs to.
+    <dd>{{% md %}}URL that log data will be sent to. Must use the https protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10622,7 +11426,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10640,7 +11444,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10649,7 +11453,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10683,7 +11487,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Splunk URL to stream logs to.
+    <dd>{{% md %}}URL that log data will be sent to. Must use the https protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10692,7 +11496,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10710,7 +11514,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10719,7 +11523,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10753,7 +11557,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Splunk URL to stream logs to.
+    <dd>{{% md %}}URL that log data will be sent to. Must use the https protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10762,7 +11566,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10780,7 +11584,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10789,7 +11593,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10815,6 +11619,9 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SyslogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1SyslogOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1SyslogArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Syslog.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -10847,7 +11654,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10865,7 +11672,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10874,7 +11681,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10901,7 +11708,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format. You can provide this certificate via an environment variable, `FASTLY_SYSLOG_CA_CERT`
+    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10910,7 +11717,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format. You can provide this certificate via an environment variable, `FASTLY_SYSLOG_CLIENT_CERT`
+    <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10919,7 +11726,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format. You can provide this key via an environment variable, `FASTLY_SYSLOG_CLIENT_KEY`
+    <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10980,7 +11787,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10998,7 +11805,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11007,7 +11814,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11034,7 +11841,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format. You can provide this certificate via an environment variable, `FASTLY_SYSLOG_CA_CERT`
+    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11043,7 +11850,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format. You can provide this certificate via an environment variable, `FASTLY_SYSLOG_CLIENT_CERT`
+    <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11052,7 +11859,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format. You can provide this key via an environment variable, `FASTLY_SYSLOG_CLIENT_KEY`
+    <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11113,7 +11920,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11131,7 +11938,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11140,7 +11947,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11167,7 +11974,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format. You can provide this certificate via an environment variable, `FASTLY_SYSLOG_CA_CERT`
+    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11176,7 +11983,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format. You can provide this certificate via an environment variable, `FASTLY_SYSLOG_CLIENT_CERT`
+    <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11185,7 +11992,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format. You can provide this key via an environment variable, `FASTLY_SYSLOG_CLIENT_KEY`
+    <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11246,7 +12053,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting. Default `%h %l %u %t \"%r\" %>s %b`.
+    <dd>{{% md %}}Apache-style string or VCL variables to use for log formatting.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11264,7 +12071,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How the message should be formatted. Can be either `classic`, `loggly`, `logplex` or `blank`.  Default `classic`.
+    <dd>{{% md %}}How the message should be formatted; one of: `classic`, `loggly`, `logplex` or `blank`.  Default `blank`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11273,7 +12080,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Where in the generated VCL the logging call should be placed, overriding any `format_version` default. Can be either `none` or `waf_debug`.
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11300,7 +12107,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format. You can provide this certificate via an environment variable, `FASTLY_SYSLOG_CA_CERT`
+    <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11309,7 +12116,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format. You can provide this certificate via an environment variable, `FASTLY_SYSLOG_CLIENT_CERT`
+    <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11318,7 +12125,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format. You can provide this key via an environment variable, `FASTLY_SYSLOG_CLIENT_KEY`
+    <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11362,6 +12169,9 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1VclArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1VclOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1VclArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1Vcl.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

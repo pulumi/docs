@@ -1,7 +1,8 @@
 
 ---
 title: "Reservation"
-block_external_search_index: true
+title_tag: "Resource Reservation | Module bigquery | Package GCP"
+meta_desc: "Explore the Reservation resource of the bigquery module, including examples, input properties, output properties, lookup functions, and supporting types. A reservation is a mechanism used to guarantee BigQuery slots to users."
 ---
 
 
@@ -20,7 +21,7 @@ To get more information about Reservation, see:
 
 
 ## Create a Reservation Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -28,7 +29,7 @@ To get more information about Reservation, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Reservation</span><span class="p">(resource_name, opts=None, </span>ignore_idle_slots=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>slot_capacity=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Reservation</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ignore_idle_slots=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>slot_capacity=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -206,8 +207,8 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit
-of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -216,8 +217,9 @@ of parallelism. Queries using this reservation might use more slots during runti
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within the same admin project. If
-true, a query using this reservation will execute with the slot capacity specified above at most.
+    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
+the same admin project. If true, a query using this reservation will execute with the slot
+capacity specified above at most.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -226,8 +228,8 @@ true, a query using this reservation will execute with the slot capacity specifi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -262,8 +264,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit
-of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -272,8 +274,9 @@ of parallelism. Queries using this reservation might use more slots during runti
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within the same admin project. If
-true, a query using this reservation will execute with the slot capacity specified above at most.
+    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
+the same admin project. If true, a query using this reservation will execute with the slot
+capacity specified above at most.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -282,8 +285,8 @@ true, a query using this reservation will execute with the slot capacity specifi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -318,8 +321,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit
-of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -328,8 +331,9 @@ of parallelism. Queries using this reservation might use more slots during runti
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within the same admin project. If
-true, a query using this reservation will execute with the slot capacity specified above at most.
+    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
+the same admin project. If true, a query using this reservation will execute with the slot
+capacity specified above at most.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -338,8 +342,8 @@ true, a query using this reservation will execute with the slot capacity specifi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -374,8 +378,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit
-of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -384,8 +388,9 @@ of parallelism. Queries using this reservation might use more slots during runti
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within the same admin project. If
-true, a query using this reservation will execute with the slot capacity specified above at most.
+    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
+the same admin project. If true, a query using this reservation will execute with the slot
+capacity specified above at most.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -394,8 +399,8 @@ true, a query using this reservation will execute with the slot capacity specifi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -500,7 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Reservation Resource {#look-up}
 
 Get an existing Reservation resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#ReservationState">ReservationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Reservation">Reservation</a></span></code></pre></div>
@@ -627,8 +632,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within the same admin project. If
-true, a query using this reservation will execute with the slot capacity specified above at most.
+    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
+the same admin project. If true, a query using this reservation will execute with the slot
+capacity specified above at most.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -637,8 +643,8 @@ true, a query using this reservation will execute with the slot capacity specifi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -666,8 +672,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit
-of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -683,8 +689,9 @@ of parallelism. Queries using this reservation might use more slots during runti
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within the same admin project. If
-true, a query using this reservation will execute with the slot capacity specified above at most.
+    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
+the same admin project. If true, a query using this reservation will execute with the slot
+capacity specified above at most.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -693,8 +700,8 @@ true, a query using this reservation will execute with the slot capacity specifi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -722,8 +729,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit
-of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -739,8 +746,9 @@ of parallelism. Queries using this reservation might use more slots during runti
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within the same admin project. If
-true, a query using this reservation will execute with the slot capacity specified above at most.
+    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
+the same admin project. If true, a query using this reservation will execute with the slot
+capacity specified above at most.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -749,8 +757,8 @@ true, a query using this reservation will execute with the slot capacity specifi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -778,8 +786,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit
-of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -795,8 +803,9 @@ of parallelism. Queries using this reservation might use more slots during runti
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within the same admin project. If
-true, a query using this reservation will execute with the slot capacity specified above at most.
+    <dd>{{% md %}}If false, any query using this reservation will use idle slots from other reservations within
+the same admin project. If true, a query using this reservation will execute with the slot
+capacity specified above at most.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -805,8 +814,8 @@ true, a query using this reservation will execute with the slot capacity specifi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -834,8 +843,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit
-of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+    <dd>{{% md %}}Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
+unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -857,8 +866,7 @@ of parallelism. Queries using this reservation might use more slots during runti
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

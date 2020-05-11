@@ -28,7 +28,7 @@ git_sha: "6e41506897a3d7bf3985beb8ecdc596638047699"
 
 <h2 id="metrics" data-link-title="metrics">namespace <strong>metrics</strong></h2>
 <h3 class="pdoc-module-header" id="accountTakeOverRisk" data-link-title="accountTakeOverRisk">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cognito/metrics.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cognito/metrics.ts#L66">
         function <strong>accountTakeOverRisk</strong>
     </a>
 </h3>
@@ -40,14 +40,14 @@ git_sha: "6e41506897a3d7bf3985beb8ecdc596638047699"
 Requests where Amazon Cognito detected account take-over risk.
 
 <h3 class="pdoc-module-header" id="CognitoMetricChange" data-link-title="CognitoMetricChange">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cognito/metrics.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cognito/metrics.ts#L24">
         interface <strong>CognitoMetricChange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CognitoMetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="CognitoMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L461">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L461">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -57,7 +57,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="CognitoMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L430">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L430">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</code></pre>
@@ -67,7 +67,7 @@ will be made.  However, if the property is there by set to [undefined] then the 
 cleared.
 
 <h4 class="pdoc-member-header" id="CognitoMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -77,7 +77,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="CognitoMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L470">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L470">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -89,7 +89,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="CognitoMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L436">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L436">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -99,7 +99,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default (300s).
 
 <h4 class="pdoc-member-header" id="CognitoMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -109,7 +109,7 @@ property, then no change will be made.  However, if the property is there by set
 [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="CognitoMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L454">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L454">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
@@ -119,7 +119,7 @@ be made.  However, if the property is there by set to [undefined] then the value
 to the default.
 
 <h4 class="pdoc-member-header" id="CognitoMetricChange-userPool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cognito/metrics.ts#L28">property <b>userPool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cognito/metrics.ts#L28">property <b>userPool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userPool?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPool'>aws.cognito.UserPool</a>;</code></pre>
@@ -127,7 +127,7 @@ to the default.
 Optional [UserPool] this metric should be filtered down to.
 
 <h4 class="pdoc-member-header" id="CognitoMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L478">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L478">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -138,7 +138,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="CognitoMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L485">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L485">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</code></pre>
@@ -148,14 +148,14 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="CognitoMetricName" data-link-title="CognitoMetricName">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cognito/metrics.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cognito/metrics.ts#L21">
         type <strong>CognitoMetricName</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> CognitoMetricName = <span class='s2'>"CompromisedCredentialsRisk"</span> | <span class='s2'>"AccountTakeOverRisk"</span> | <span class='s2'>"OverrideBlock"</span> | <span class='s2'>"Risk"</span> | <span class='s2'>"NoRisk"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="compromisedCredentialsRisk" data-link-title="compromisedCredentialsRisk">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cognito/metrics.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cognito/metrics.ts#L59">
         function <strong>compromisedCredentialsRisk</strong>
     </a>
 </h3>
@@ -167,7 +167,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 Requests where Amazon Cognito detected compromised credentials.
 
 <h3 class="pdoc-module-header" id="metric" data-link-title="metric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cognito/metrics.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cognito/metrics.ts#L43">
         function <strong>metric</strong>
     </a>
 </h3>
@@ -188,7 +188,7 @@ CloudWatch. The advanced security metrics are grouped together by risk level and
 level.
 
 <h3 class="pdoc-module-header" id="noRisk" data-link-title="noRisk">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cognito/metrics.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cognito/metrics.ts#L87">
         function <strong>noRisk</strong>
     </a>
 </h3>
@@ -200,7 +200,7 @@ level.
 Requests where Amazon Cognito did not identify any risk.
 
 <h3 class="pdoc-module-header" id="overrideBlock" data-link-title="overrideBlock">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cognito/metrics.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cognito/metrics.ts#L73">
         function <strong>overrideBlock</strong>
     </a>
 </h3>
@@ -212,7 +212,7 @@ Requests where Amazon Cognito did not identify any risk.
 Requests that Amazon Cognito blocked because of the configuration provided by the developer.
 
 <h3 class="pdoc-module-header" id="risk" data-link-title="risk">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cognito/metrics.ts#L80">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cognito/metrics.ts#L80">
         function <strong>risk</strong>
     </a>
 </h3>

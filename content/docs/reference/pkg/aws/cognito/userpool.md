@@ -12,26 +12,39 @@ meta_desc: "Explore the UserPool resource of the cognito module, including examp
 
 Provides a Cognito User Pool resource.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic configuration
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const pool = new aws.cognito.UserPool("pool", {});
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a UserPool Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -39,7 +52,7 @@ const pool = new aws.cognito.UserPool("pool", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">UserPool</span><span class="p">(resource_name, opts=None, </span>admin_create_user_config=None<span class="p">, </span>alias_attributes=None<span class="p">, </span>auto_verified_attributes=None<span class="p">, </span>device_configuration=None<span class="p">, </span>email_configuration=None<span class="p">, </span>email_verification_message=None<span class="p">, </span>email_verification_subject=None<span class="p">, </span>lambda_config=None<span class="p">, </span>mfa_configuration=None<span class="p">, </span>name=None<span class="p">, </span>password_policy=None<span class="p">, </span>schemas=None<span class="p">, </span>sms_authentication_message=None<span class="p">, </span>sms_configuration=None<span class="p">, </span>sms_verification_message=None<span class="p">, </span>software_token_mfa_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>user_pool_add_ons=None<span class="p">, </span>username_attributes=None<span class="p">, </span>username_configuration=None<span class="p">, </span>verification_message_template=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">UserPool</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_create_user_config=None<span class="p">, </span>alias_attributes=None<span class="p">, </span>auto_verified_attributes=None<span class="p">, </span>device_configuration=None<span class="p">, </span>email_configuration=None<span class="p">, </span>email_verification_message=None<span class="p">, </span>email_verification_subject=None<span class="p">, </span>lambda_config=None<span class="p">, </span>mfa_configuration=None<span class="p">, </span>name=None<span class="p">, </span>password_policy=None<span class="p">, </span>schemas=None<span class="p">, </span>sms_authentication_message=None<span class="p">, </span>sms_configuration=None<span class="p">, </span>sms_verification_message=None<span class="p">, </span>software_token_mfa_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>user_pool_add_ons=None<span class="p">, </span>username_attributes=None<span class="p">, </span>username_configuration=None<span class="p">, </span>verification_message_template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -361,7 +374,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the User Pool.
+    <dd>{{% md %}}A map of tags to assign to the User Pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -557,7 +570,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the User Pool.
+    <dd>{{% md %}}A map of tags to assign to the User Pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -753,7 +766,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the User Pool.
+    <dd>{{% md %}}A map of tags to assign to the User Pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -949,7 +962,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the User Pool.
+    <dd>{{% md %}}A map of tags to assign to the User Pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1215,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing UserPool Resource {#look-up}
 
 Get an existing UserPool resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPoolState">UserPoolState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPool">UserPool</a></span></code></pre></div>
@@ -1522,7 +1535,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the User Pool.
+    <dd>{{% md %}}A map of tags to assign to the User Pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1754,7 +1767,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the User Pool.
+    <dd>{{% md %}}A map of tags to assign to the User Pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1986,7 +1999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the User Pool.
+    <dd>{{% md %}}A map of tags to assign to the User Pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2218,7 +2231,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the User Pool.
+    <dd>{{% md %}}A map of tags to assign to the User Pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2279,6 +2292,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolAdminCreateUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolAdminCreateUserConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolAdminCreateUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolAdminCreateUserConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2431,6 +2447,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolAdminCreateUserConfigInviteMessageTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolAdminCreateUserConfigInviteMessageTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolAdminCreateUserConfigInviteMessageTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolAdminCreateUserConfigInviteMessageTemplate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2582,6 +2601,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolDeviceConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolDeviceConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolDeviceConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolDeviceConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2697,6 +2719,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolEmailConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolEmailConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolEmailConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolEmailConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2719,7 +2744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Sender’s email address or sender’s name with their email address (e.g. "john@smith.com" or "John Smith <john@smith.com>")
+    <dd>{{% md %}}Sender’s email address or sender’s name with their email address (e.g. `john@smith.com` or `John Smith <john@smith.com>`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2762,7 +2787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Sender’s email address or sender’s name with their email address (e.g. "john@smith.com" or "John Smith <john@smith.com>")
+    <dd>{{% md %}}Sender’s email address or sender’s name with their email address (e.g. `john@smith.com` or `John Smith <john@smith.com>`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2805,7 +2830,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Sender’s email address or sender’s name with their email address (e.g. "john@smith.com" or "John Smith <john@smith.com>")
+    <dd>{{% md %}}Sender’s email address or sender’s name with their email address (e.g. `john@smith.com` or `John Smith <john@smith.com>`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2848,7 +2873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Sender’s email address or sender’s name with their email address (e.g. "john@smith.com" or "John Smith <john@smith.com>")
+    <dd>{{% md %}}Sender’s email address or sender’s name with their email address (e.g. `john@smith.com` or `John Smith <john@smith.com>`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2883,6 +2908,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolLambdaConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolLambdaConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolLambdaConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolLambdaConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3287,6 +3315,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolPasswordPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolPasswordPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolPasswordPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolPasswordPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3545,6 +3576,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSchemaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSchemaOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolSchemaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolSchema.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3841,6 +3875,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSchemaNumberAttributeConstraintsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSchemaNumberAttributeConstraintsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolSchemaNumberAttributeConstraintsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolSchemaNumberAttributeConstraints.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3955,6 +3992,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSchemaStringAttributeConstraintsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSchemaStringAttributeConstraintsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolSchemaStringAttributeConstraintsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolSchemaStringAttributeConstraints.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4071,6 +4111,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSmsConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSmsConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolSmsConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolSmsConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4186,6 +4229,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSoftwareTokenMfaConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSoftwareTokenMfaConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolSoftwareTokenMfaConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolSoftwareTokenMfaConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4264,6 +4310,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolUserPoolAddOnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolUserPoolAddOnsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolUserPoolAddOnsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolUserPoolAddOns.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4344,6 +4393,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolUsernameConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolUsernameConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolUsernameConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolUsernameConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4422,6 +4474,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolVerificationMessageTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolVerificationMessageTemplateOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolVerificationMessageTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolVerificationMessageTemplate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

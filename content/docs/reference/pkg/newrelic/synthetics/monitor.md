@@ -12,32 +12,7 @@ meta_desc: "Explore the Monitor resource of the synthetics module, including exa
 
 Use this resource to create, update, and delete a synthetics monitor in New Relic.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-##### Type: `SIMPLE`
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as newrelic from "@pulumi/newrelic";
-
-const foo = new newrelic.synthetics.Monitor("foo", {
-    frequency: 5,
-    locations: [
-        "AWS_US_EAST_1",
-        "AWS_US_EAST_2",
-    ],
-    status: "ENABLED",
-    type: "SIMPLE",
-    uri: "https://example.com", // Required for type "SIMPLE" and "BROWSER"
-    validationString: "add example validation check here", // Optional for type "SIMPLE" and "BROWSER"
-    verifySsl: true, // Optional for type "SIMPLE" and "BROWSER"
-});
-```
-See additional examples.
-
-{{% /example %}}
-{{% /examples %}}
 ## Additional Examples
 
 Type: `BROWSER`
@@ -87,10 +62,48 @@ const foo = new newrelic.synthetics.Monitor("foo", {
 });
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Type: `SIMPLE`
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.synthetics.Monitor("foo", {
+    frequency: 5,
+    locations: [
+        "AWS_US_EAST_1",
+        "AWS_US_EAST_2",
+    ],
+    status: "ENABLED",
+    type: "SIMPLE",
+    uri: "https://example.com", // Required for type "SIMPLE" and "BROWSER"
+    validationString: "add example validation check here", // Optional for type "SIMPLE" and "BROWSER"
+    verifySsl: true, // Optional for type "SIMPLE" and "BROWSER"
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Monitor Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -98,7 +111,7 @@ const foo = new newrelic.synthetics.Monitor("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Monitor</span><span class="p">(resource_name, opts=None, </span>bypass_head_request=None<span class="p">, </span>frequency=None<span class="p">, </span>locations=None<span class="p">, </span>name=None<span class="p">, </span>sla_threshold=None<span class="p">, </span>status=None<span class="p">, </span>treat_redirect_as_failure=None<span class="p">, </span>type=None<span class="p">, </span>uri=None<span class="p">, </span>validation_string=None<span class="p">, </span>verify_ssl=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Monitor</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bypass_head_request=None<span class="p">, </span>frequency=None<span class="p">, </span>locations=None<span class="p">, </span>name=None<span class="p">, </span>sla_threshold=None<span class="p">, </span>status=None<span class="p">, </span>treat_redirect_as_failure=None<span class="p">, </span>type=None<span class="p">, </span>uri=None<span class="p">, </span>validation_string=None<span class="p">, </span>verify_ssl=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -770,7 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Monitor Resource {#look-up}
 
 Get an existing Monitor resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/synthetics/#MonitorState">MonitorState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/synthetics/#Monitor">Monitor</a></span></code></pre></div>

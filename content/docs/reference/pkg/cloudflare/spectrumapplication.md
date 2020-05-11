@@ -18,7 +18,7 @@ Provides a Cloudflare Spectrum Application. You can extend the power of Cloudfla
 
 
 ## Create a SpectrumApplication Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +26,7 @@ Provides a Cloudflare Spectrum Application. You can extend the power of Cloudfla
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SpectrumApplication</span><span class="p">(resource_name, opts=None, </span>argo_smart_routing=None<span class="p">, </span>dns=None<span class="p">, </span>edge_ip_connectivity=None<span class="p">, </span>edge_ips=None<span class="p">, </span>ip_firewall=None<span class="p">, </span>origin_directs=None<span class="p">, </span>origin_dns=None<span class="p">, </span>origin_port=None<span class="p">, </span>protocol=None<span class="p">, </span>proxy_protocol=None<span class="p">, </span>tls=None<span class="p">, </span>traffic_type=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SpectrumApplication</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>argo_smart_routing=None<span class="p">, </span>dns=None<span class="p">, </span>edge_ip_connectivity=None<span class="p">, </span>edge_ips=None<span class="p">, </span>ip_firewall=None<span class="p">, </span>origin_directs=None<span class="p">, </span>origin_dns=None<span class="p">, </span>origin_port=None<span class="p">, </span>protocol=None<span class="p">, </span>proxy_protocol=None<span class="p">, </span>tls=None<span class="p">, </span>traffic_type=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -770,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SpectrumApplication Resource {#look-up}
 
 Get an existing SpectrumApplication resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#SpectrumApplicationState">SpectrumApplicationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#SpectrumApplication">SpectrumApplication</a></span></code></pre></div>
@@ -1403,6 +1403,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#SpectrumApplicationDnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#SpectrumApplicationDnsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Inputs.SpectrumApplicationDnsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Outputs.SpectrumApplicationDns.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1517,6 +1520,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#SpectrumApplicationOriginDnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#SpectrumApplicationOriginDnsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Inputs.SpectrumApplicationOriginDnsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Outputs.SpectrumApplicationOriginDns.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

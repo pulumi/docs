@@ -14,7 +14,7 @@ meta_desc: "Explore the LocallySignedCert resource of the TLS package, including
 
 
 ## Create a LocallySignedCert Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the LocallySignedCert resource of the TLS package, including
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LocallySignedCert</span><span class="p">(resource_name, opts=None, </span>allowed_uses=None<span class="p">, </span>ca_cert_pem=None<span class="p">, </span>ca_key_algorithm=None<span class="p">, </span>ca_private_key_pem=None<span class="p">, </span>cert_request_pem=None<span class="p">, </span>early_renewal_hours=None<span class="p">, </span>is_ca_certificate=None<span class="p">, </span>set_subject_key_id=None<span class="p">, </span>validity_period_hours=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LocallySignedCert</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_uses=None<span class="p">, </span>ca_cert_pem=None<span class="p">, </span>ca_key_algorithm=None<span class="p">, </span>ca_private_key_pem=None<span class="p">, </span>cert_request_pem=None<span class="p">, </span>early_renewal_hours=None<span class="p">, </span>is_ca_certificate=None<span class="p">, </span>set_subject_key_id=None<span class="p">, </span>validity_period_hours=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -806,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LocallySignedCert Resource {#look-up}
 
 Get an existing LocallySignedCert resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/tls/#LocallySignedCertState">LocallySignedCertState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/tls/#LocallySignedCert">LocallySignedCert</a></span></code></pre></div>

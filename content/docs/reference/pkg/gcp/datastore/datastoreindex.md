@@ -1,7 +1,8 @@
 
 ---
 title: "DataStoreIndex"
-block_external_search_index: true
+title_tag: "Resource DataStoreIndex | Module datastore | Package GCP"
+meta_desc: "Explore the DataStoreIndex resource of the datastore module, including examples, input properties, output properties, lookup functions, and supporting types. Describes a composite index for Cloud Datastore."
 ---
 
 
@@ -43,7 +44,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
 
 
 ## Create a DataStoreIndex Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -51,7 +52,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DataStoreIndex</span><span class="p">(resource_name, opts=None, </span>ancestor=None<span class="p">, </span>kind=None<span class="p">, </span>project=None<span class="p">, </span>properties=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DataStoreIndex</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ancestor=None<span class="p">, </span>kind=None<span class="p">, </span>project=None<span class="p">, </span>properties=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -238,7 +239,8 @@ The DataStoreIndex resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index. Either 'ALL_ANCESTORS' or 'NONE', the default is 'NONE'.
+    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
+the default is `NONE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -257,7 +259,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datastoreindexproperty">List&lt;Data<wbr>Store<wbr>Index<wbr>Property<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of properties to index on.
+    <dd>{{% md %}}An ordered list of properties to index on.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -282,7 +284,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index. Either 'ALL_ANCESTORS' or 'NONE', the default is 'NONE'.
+    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
+the default is `NONE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -301,7 +304,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datastoreindexproperty">[]Data<wbr>Store<wbr>Index<wbr>Property</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of properties to index on.
+    <dd>{{% md %}}An ordered list of properties to index on.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -326,7 +329,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index. Either 'ALL_ANCESTORS' or 'NONE', the default is 'NONE'.
+    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
+the default is `NONE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -345,7 +349,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datastoreindexproperty">Data<wbr>Store<wbr>Index<wbr>Property[]</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of properties to index on.
+    <dd>{{% md %}}An ordered list of properties to index on.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -370,7 +374,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index. Either 'ALL_ANCESTORS' or 'NONE', the default is 'NONE'.
+    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
+the default is `NONE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -389,7 +394,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datastoreindexproperty">List[Data<wbr>Store<wbr>Index<wbr>Property]</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of properties to index on.
+    <dd>{{% md %}}An ordered list of properties to index on.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -511,7 +516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DataStoreIndex Resource {#look-up}
 
 Get an existing DataStoreIndex resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datastore/#DataStoreIndexState">DataStoreIndexState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datastore/#DataStoreIndex">DataStoreIndex</a></span></code></pre></div>
@@ -638,7 +643,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index. Either 'ALL_ANCESTORS' or 'NONE', the default is 'NONE'.
+    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
+the default is `NONE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -675,7 +681,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datastoreindexproperty">List&lt;Data<wbr>Store<wbr>Index<wbr>Property<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of properties to index on.
+    <dd>{{% md %}}An ordered list of properties to index on.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -691,7 +697,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index. Either 'ALL_ANCESTORS' or 'NONE', the default is 'NONE'.
+    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
+the default is `NONE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -728,7 +735,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datastoreindexproperty">[]Data<wbr>Store<wbr>Index<wbr>Property</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of properties to index on.
+    <dd>{{% md %}}An ordered list of properties to index on.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -744,7 +751,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index. Either 'ALL_ANCESTORS' or 'NONE', the default is 'NONE'.
+    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
+the default is `NONE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -781,7 +789,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datastoreindexproperty">Data<wbr>Store<wbr>Index<wbr>Property[]</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of properties to index on.
+    <dd>{{% md %}}An ordered list of properties to index on.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -797,7 +805,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Policy for including ancestors in the index. Either 'ALL_ANCESTORS' or 'NONE', the default is 'NONE'.
+    <dd>{{% md %}}Policy for including ancestors in the index.  Either `ALL_ANCESTORS` or `NONE`,
+the default is `NONE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -834,7 +843,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datastoreindexproperty">List[Data<wbr>Store<wbr>Index<wbr>Property]</a></span>
     </dt>
-    <dd>{{% md %}}An ordered list of properties to index on.
+    <dd>{{% md %}}An ordered list of properties to index on.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -860,6 +869,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datastore?tab=doc#DataStoreIndexPropertyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datastore?tab=doc#DataStoreIndexPropertyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Datastore.Inputs.DataStoreIndexPropertyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Datastore.Outputs.DataStoreIndexProperty.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -873,7 +885,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The direction the index should optimize for sorting. Possible values are ASCENDING and DESCENDING.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -881,7 +894,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The property name to index.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -896,7 +910,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The direction the index should optimize for sorting. Possible values are ASCENDING and DESCENDING.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -904,7 +919,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The property name to index.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -919,7 +935,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The direction the index should optimize for sorting. Possible values are ASCENDING and DESCENDING.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -927,7 +944,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The property name to index.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -942,7 +960,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The direction the index should optimize for sorting. Possible values are ASCENDING and DESCENDING.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -950,7 +969,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The property name to index.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -969,8 +989,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

@@ -21,7 +21,7 @@ Resources should be named with their "full path". The full path is the combinati
 
 
 ## Create a Pool Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -29,7 +29,7 @@ Resources should be named with their "full path". The full path is the combinati
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Pool</span><span class="p">(resource_name, opts=None, </span>allow_nat=None<span class="p">, </span>allow_snat=None<span class="p">, </span>description=None<span class="p">, </span>load_balancing_mode=None<span class="p">, </span>monitors=None<span class="p">, </span>name=None<span class="p">, </span>reselect_tries=None<span class="p">, </span>service_down_action=None<span class="p">, </span>slow_ramp_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Pool</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_nat=None<span class="p">, </span>allow_snat=None<span class="p">, </span>description=None<span class="p">, </span>load_balancing_mode=None<span class="p">, </span>monitors=None<span class="p">, </span>name=None<span class="p">, </span>reselect_tries=None<span class="p">, </span>service_down_action=None<span class="p">, </span>slow_ramp_time=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -629,7 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Pool Resource {#look-up}
 
 Get an existing Pool resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#PoolState">PoolState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#Pool">Pool</a></span></code></pre></div>

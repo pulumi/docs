@@ -18,7 +18,7 @@ Manages AWS Managed Streaming for Kafka cluster
 
 
 ## Create a Cluster Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +26,7 @@ Manages AWS Managed Streaming for Kafka cluster
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>broker_node_group_info=None<span class="p">, </span>client_authentication=None<span class="p">, </span>cluster_name=None<span class="p">, </span>configuration_info=None<span class="p">, </span>encryption_info=None<span class="p">, </span>enhanced_monitoring=None<span class="p">, </span>kafka_version=None<span class="p">, </span>logging_info=None<span class="p">, </span>number_of_broker_nodes=None<span class="p">, </span>open_monitoring=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>broker_node_group_info=None<span class="p">, </span>client_authentication=None<span class="p">, </span>cluster_name=None<span class="p">, </span>configuration_info=None<span class="p">, </span>encryption_info=None<span class="p">, </span>enhanced_monitoring=None<span class="p">, </span>kafka_version=None<span class="p">, </span>logging_info=None<span class="p">, </span>number_of_broker_nodes=None<span class="p">, </span>open_monitoring=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -294,7 +294,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
 </dl>
@@ -400,7 +400,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
 </dl>
@@ -506,7 +506,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
 </dl>
@@ -612,7 +612,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
 </dl>
@@ -882,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/msk/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/msk/#Cluster">Cluster</a></span></code></pre></div>
@@ -1136,7 +1136,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1288,7 +1288,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1440,7 +1440,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1592,7 +1592,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1626,6 +1626,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterBrokerNodeGroupInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterBrokerNodeGroupInfoOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterBrokerNodeGroupInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterBrokerNodeGroupInfo.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1850,6 +1853,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterClientAuthenticationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterClientAuthenticationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterClientAuthenticationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterClientAuthentication.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1929,6 +1935,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterClientAuthenticationTlsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterClientAuthenticationTlsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterClientAuthenticationTlsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterClientAuthenticationTls.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2007,6 +2016,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterConfigurationInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterConfigurationInfoOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterConfigurationInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterConfigurationInfo.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2123,6 +2135,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterEncryptionInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterEncryptionInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterEncryptionInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterEncryptionInfo.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2237,6 +2252,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterEncryptionInfoEncryptionInTransitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterEncryptionInfoEncryptionInTransitOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterEncryptionInfoEncryptionInTransitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterEncryptionInfoEncryptionInTransit.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2353,6 +2371,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterLoggingInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterLoggingInfo.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2431,6 +2452,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterLoggingInfoBrokerLogsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterLoggingInfoBrokerLogs.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2571,6 +2595,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsCloudwatchLogsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterLoggingInfoBrokerLogsCloudwatchLogs.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2686,6 +2713,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsFirehoseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsFirehoseOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterLoggingInfoBrokerLogsFirehoseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterLoggingInfoBrokerLogsFirehose.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2800,6 +2830,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsS3Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsS3Output">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterLoggingInfoBrokerLogsS3Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterLoggingInfoBrokerLogsS3.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2952,6 +2985,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterOpenMonitoringArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterOpenMonitoring.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3030,6 +3066,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringPrometheusArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringPrometheusOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterOpenMonitoringPrometheusArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterOpenMonitoringPrometheus.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3146,6 +3185,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringPrometheusJmxExporterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringPrometheusJmxExporterOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterOpenMonitoringPrometheusJmxExporterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterOpenMonitoringPrometheusJmxExporter.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3224,6 +3266,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringPrometheusNodeExporterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringPrometheusNodeExporterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterOpenMonitoringPrometheusNodeExporterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterOpenMonitoringPrometheusNodeExporter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

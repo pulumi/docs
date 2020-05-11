@@ -14,10 +14,26 @@ Creates an Application User Schema property.
 
 This resource allows you to create and configure a custom user schema property and associate it with an application.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -32,14 +48,13 @@ const example = new okta.app.UserSchema("example", {
     type: "string",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a UserSchema Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -47,7 +62,7 @@ const example = new okta.app.UserSchema("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">UserSchema</span><span class="p">(resource_name, opts=None, </span>app_id=None<span class="p">, </span>array_enums=None<span class="p">, </span>array_one_ofs=None<span class="p">, </span>array_type=None<span class="p">, </span>description=None<span class="p">, </span>enums=None<span class="p">, </span>external_name=None<span class="p">, </span>index=None<span class="p">, </span>master=None<span class="p">, </span>max_length=None<span class="p">, </span>min_length=None<span class="p">, </span>one_ofs=None<span class="p">, </span>permissions=None<span class="p">, </span>required=None<span class="p">, </span>scope=None<span class="p">, </span>title=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">UserSchema</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_id=None<span class="p">, </span>array_enums=None<span class="p">, </span>array_one_ofs=None<span class="p">, </span>array_type=None<span class="p">, </span>description=None<span class="p">, </span>enums=None<span class="p">, </span>external_name=None<span class="p">, </span>index=None<span class="p">, </span>master=None<span class="p">, </span>max_length=None<span class="p">, </span>min_length=None<span class="p">, </span>one_ofs=None<span class="p">, </span>permissions=None<span class="p">, </span>required=None<span class="p">, </span>scope=None<span class="p">, </span>title=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -935,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing UserSchema Resource {#look-up}
 
 Get an existing UserSchema resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#UserSchemaState">UserSchemaState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#UserSchema">UserSchema</a></span></code></pre></div>
@@ -1712,6 +1727,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#UserSchemaArrayOneOfArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#UserSchemaArrayOneOfOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.Inputs.UserSchemaArrayOneOfArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.Outputs.UserSchemaArrayOneOf.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1826,6 +1844,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#UserSchemaOneOfArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#UserSchemaOneOfOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.Inputs.UserSchemaOneOfArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.Outputs.UserSchemaOneOf.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

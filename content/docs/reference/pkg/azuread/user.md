@@ -14,10 +14,26 @@ Manages a User within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Directory.ReadWrite.All` within the `Windows Azure Active Directory` API.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
@@ -29,14 +45,13 @@ const example = new azuread.User("example", {
     userPrincipalName: "jdo@hashicorp.com",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a User Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -44,7 +59,7 @@ const example = new azuread.User("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, opts=None, </span>account_enabled=None<span class="p">, </span>display_name=None<span class="p">, </span>force_password_change=None<span class="p">, </span>immutable_id=None<span class="p">, </span>mail_nickname=None<span class="p">, </span>password=None<span class="p">, </span>usage_location=None<span class="p">, </span>user_principal_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_enabled=None<span class="p">, </span>display_name=None<span class="p">, </span>force_password_change=None<span class="p">, </span>immutable_id=None<span class="p">, </span>mail_nickname=None<span class="p">, </span>password=None<span class="p">, </span>usage_location=None<span class="p">, </span>user_principal_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -250,7 +265,6 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the account should be enabled, otherwise `false`. Defaults to `true`.
-* `mail_nickname`- (Optional) The mail alias for the user. Defaults to the user name part of the User Principal Name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -277,7 +291,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -329,7 +344,6 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the account should be enabled, otherwise `false`. Defaults to `true`.
-* `mail_nickname`- (Optional) The mail alias for the user. Defaults to the user name part of the User Principal Name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -356,7 +370,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -408,7 +423,6 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}`true` if the account should be enabled, otherwise `false`. Defaults to `true`.
-* `mail_nickname`- (Optional) The mail alias for the user. Defaults to the user name part of the User Principal Name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -435,7 +449,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -487,7 +502,6 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the account should be enabled, otherwise `false`. Defaults to `true`.
-* `mail_nickname`- (Optional) The mail alias for the user. Defaults to the user name part of the User Principal Name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -514,7 +528,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -752,7 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing User Resource {#look-up}
 
 Get an existing User resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#UserState">UserState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#User">User</a></span></code></pre></div>
@@ -880,7 +895,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the account should be enabled, otherwise `false`. Defaults to `true`.
-* `mail_nickname`- (Optional) The mail alias for the user. Defaults to the user name part of the User Principal Name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -925,7 +939,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -995,7 +1010,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the account should be enabled, otherwise `false`. Defaults to `true`.
-* `mail_nickname`- (Optional) The mail alias for the user. Defaults to the user name part of the User Principal Name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1040,7 +1054,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1110,7 +1125,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}`true` if the account should be enabled, otherwise `false`. Defaults to `true`.
-* `mail_nickname`- (Optional) The mail alias for the user. Defaults to the user name part of the User Principal Name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1155,7 +1169,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1225,7 +1240,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the account should be enabled, otherwise `false`. Defaults to `true`.
-* `mail_nickname`- (Optional) The mail alias for the user. Defaults to the user name part of the User Principal Name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1270,7 +1284,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mail alias for the user. Defaults to the user name part of the User Principal Name.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -14,10 +14,26 @@ Creates an OIDC Identity Provider.
 
 This resource allows you to create and configure an OIDC Identity Provider.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -40,14 +56,13 @@ const example = new okta.idp.Oidc("example", {
     usernameTemplate: "idpuser.email",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Oidc Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -55,7 +70,7 @@ const example = new okta.idp.Oidc("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Oidc</span><span class="p">(resource_name, opts=None, </span>account_link_action=None<span class="p">, </span>account_link_group_includes=None<span class="p">, </span>acs_binding=None<span class="p">, </span>acs_type=None<span class="p">, </span>authorization_binding=None<span class="p">, </span>authorization_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>deprovisioned_action=None<span class="p">, </span>groups_action=None<span class="p">, </span>groups_assignments=None<span class="p">, </span>groups_attribute=None<span class="p">, </span>groups_filters=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>issuer_url=None<span class="p">, </span>jwks_binding=None<span class="p">, </span>jwks_url=None<span class="p">, </span>max_clock_skew=None<span class="p">, </span>name=None<span class="p">, </span>profile_master=None<span class="p">, </span>protocol_type=None<span class="p">, </span>provisioning_action=None<span class="p">, </span>request_signature_algorithm=None<span class="p">, </span>request_signature_scope=None<span class="p">, </span>response_signature_algorithm=None<span class="p">, </span>response_signature_scope=None<span class="p">, </span>scopes=None<span class="p">, </span>status=None<span class="p">, </span>subject_match_attribute=None<span class="p">, </span>subject_match_type=None<span class="p">, </span>suspended_action=None<span class="p">, </span>token_binding=None<span class="p">, </span>token_url=None<span class="p">, </span>user_info_binding=None<span class="p">, </span>user_info_url=None<span class="p">, </span>username_template=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Oidc</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_link_action=None<span class="p">, </span>account_link_group_includes=None<span class="p">, </span>acs_binding=None<span class="p">, </span>acs_type=None<span class="p">, </span>authorization_binding=None<span class="p">, </span>authorization_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>deprovisioned_action=None<span class="p">, </span>groups_action=None<span class="p">, </span>groups_assignments=None<span class="p">, </span>groups_attribute=None<span class="p">, </span>groups_filters=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>issuer_url=None<span class="p">, </span>jwks_binding=None<span class="p">, </span>jwks_url=None<span class="p">, </span>max_clock_skew=None<span class="p">, </span>name=None<span class="p">, </span>profile_master=None<span class="p">, </span>protocol_type=None<span class="p">, </span>provisioning_action=None<span class="p">, </span>request_signature_algorithm=None<span class="p">, </span>request_signature_scope=None<span class="p">, </span>response_signature_algorithm=None<span class="p">, </span>response_signature_scope=None<span class="p">, </span>scopes=None<span class="p">, </span>status=None<span class="p">, </span>subject_match_attribute=None<span class="p">, </span>subject_match_type=None<span class="p">, </span>suspended_action=None<span class="p">, </span>token_binding=None<span class="p">, </span>token_url=None<span class="p">, </span>user_info_binding=None<span class="p">, </span>user_info_url=None<span class="p">, </span>username_template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1659,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Oidc Resource {#look-up}
 
 Get an existing Oidc resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/idp/#OidcState">OidcState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/idp/#Oidc">Oidc</a></span></code></pre></div>

@@ -1,7 +1,8 @@
 
 ---
 title: "AlertPolicy"
-block_external_search_index: true
+title_tag: "Resource AlertPolicy | Module monitoring | Package GCP"
+meta_desc: "Explore the AlertPolicy resource of the monitoring module, including examples, input properties, output properties, lookup functions, and supporting types. A description of the conditions under which some aspect of your system is"
 ---
 
 
@@ -51,7 +52,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
 
 
 ## Create a AlertPolicy Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -59,7 +60,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AlertPolicy</span><span class="p">(resource_name, opts=None, </span>combiner=None<span class="p">, </span>conditions=None<span class="p">, </span>display_name=None<span class="p">, </span>documentation=None<span class="p">, </span>enabled=None<span class="p">, </span>notification_channels=None<span class="p">, </span>project=None<span class="p">, </span>user_labels=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AlertPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>combiner=None<span class="p">, </span>conditions=None<span class="p">, </span>display_name=None<span class="p">, </span>documentation=None<span class="p">, </span>enabled=None<span class="p">, </span>notification_channels=None<span class="p">, </span>project=None<span class="p">, </span>user_labels=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -237,7 +238,8 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
+    <dd>{{% md %}}How to combine the results of multiple conditions to
+determine if an incident should be opened.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -246,8 +248,10 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
-combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
+    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
+AND or OR according to the combiner field. If the combined conditions
+evaluate to true, then an incident is created. A policy can have from
+one to six conditions.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -256,9 +260,11 @@ combined conditions evaluate to true, then an incident is created. A policy can 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the
+condition in dashboards, notifications, and
+incidents. To avoid confusion, don't use the same
+display name for multiple conditions in the same
+policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -267,9 +273,10 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
+notifications, and incidents. To avoid confusion, don't use the same
+display name for multiple policies in the same project. The name is
+limited to 512 Unicode characters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -287,10 +294,13 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
-new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
-the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
-in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
+    <dd>{{% md %}}Identifies the notification channels to which notifications should be
+sent when incidents are opened or closed or when new violations occur
+on an already opened incident. Each element of this array corresponds
+to the name field in each of the NotificationChannel objects that are
+returned from the notificationChannels.list method. The syntax of the
+entries in this field is
+`projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -309,9 +319,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
-entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
+    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
+objects.The field can contain up to 64 entries. Each key and value is limited
+to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+can contain only lowercase letters, numerals, underscores, and dashes. Keys
+must begin with a letter.
 {{% /md %}}</dd>
 
 </dl>
@@ -327,7 +339,8 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
+    <dd>{{% md %}}How to combine the results of multiple conditions to
+determine if an incident should be opened.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -336,8 +349,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">[]Alert<wbr>Policy<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
-combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
+    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
+AND or OR according to the combiner field. If the combined conditions
+evaluate to true, then an incident is created. A policy can have from
+one to six conditions.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -346,9 +361,11 @@ combined conditions evaluate to true, then an incident is created. A policy can 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the
+condition in dashboards, notifications, and
+incidents. To avoid confusion, don't use the same
+display name for multiple conditions in the same
+policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -357,9 +374,10 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
+notifications, and incidents. To avoid confusion, don't use the same
+display name for multiple policies in the same project. The name is
+limited to 512 Unicode characters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -377,10 +395,13 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
-new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
-the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
-in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
+    <dd>{{% md %}}Identifies the notification channels to which notifications should be
+sent when incidents are opened or closed or when new violations occur
+on an already opened incident. Each element of this array corresponds
+to the name field in each of the NotificationChannel objects that are
+returned from the notificationChannels.list method. The syntax of the
+entries in this field is
+`projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -399,9 +420,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
-entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
+    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
+objects.The field can contain up to 64 entries. Each key and value is limited
+to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+can contain only lowercase letters, numerals, underscores, and dashes. Keys
+must begin with a letter.
 {{% /md %}}</dd>
 
 </dl>
@@ -417,7 +440,8 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
+    <dd>{{% md %}}How to combine the results of multiple conditions to
+determine if an incident should be opened.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -426,8 +450,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">Alert<wbr>Policy<wbr>Condition[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
-combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
+    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
+AND or OR according to the combiner field. If the combined conditions
+evaluate to true, then an incident is created. A policy can have from
+one to six conditions.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -436,9 +462,11 @@ combined conditions evaluate to true, then an incident is created. A policy can 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the
+condition in dashboards, notifications, and
+incidents. To avoid confusion, don't use the same
+display name for multiple conditions in the same
+policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -447,9 +475,10 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
+notifications, and incidents. To avoid confusion, don't use the same
+display name for multiple policies in the same project. The name is
+limited to 512 Unicode characters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -467,10 +496,13 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
-new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
-the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
-in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
+    <dd>{{% md %}}Identifies the notification channels to which notifications should be
+sent when incidents are opened or closed or when new violations occur
+on an already opened incident. Each element of this array corresponds
+to the name field in each of the NotificationChannel objects that are
+returned from the notificationChannels.list method. The syntax of the
+entries in this field is
+`projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -489,9 +521,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
-entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
+    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
+objects.The field can contain up to 64 entries. Each key and value is limited
+to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+can contain only lowercase letters, numerals, underscores, and dashes. Keys
+must begin with a letter.
 {{% /md %}}</dd>
 
 </dl>
@@ -507,7 +541,8 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
+    <dd>{{% md %}}How to combine the results of multiple conditions to
+determine if an incident should be opened.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -516,8 +551,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">List[Alert<wbr>Policy<wbr>Condition]</a></span>
     </dt>
-    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
-combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
+    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
+AND or OR according to the combiner field. If the combined conditions
+evaluate to true, then an incident is created. A policy can have from
+one to six conditions.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -526,9 +563,11 @@ combined conditions evaluate to true, then an incident is created. A policy can 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the
+condition in dashboards, notifications, and
+incidents. To avoid confusion, don't use the same
+display name for multiple conditions in the same
+policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -537,9 +576,10 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Dict[Alert<wbr>Policy<wbr>Documentation]</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
+notifications, and incidents. To avoid confusion, don't use the same
+display name for multiple policies in the same project. The name is
+limited to 512 Unicode characters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -557,10 +597,13 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
-new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
-the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
-in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
+    <dd>{{% md %}}Identifies the notification channels to which notifications should be
+sent when incidents are opened or closed or when new violations occur
+on an already opened incident. Each element of this array corresponds
+to the name field in each of the NotificationChannel objects that are
+returned from the notificationChannels.list method. The syntax of the
+entries in this field is
+`projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -579,9 +622,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
-entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
+    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
+objects.The field can contain up to 64 entries. Each key and value is limited
+to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+can contain only lowercase letters, numerals, underscores, and dashes. Keys
+must begin with a letter.
 {{% /md %}}</dd>
 
 </dl>
@@ -626,7 +671,13 @@ ignored.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+    <dd>{{% md %}}-
+The unique resource name for this condition.
+Its syntax is:
+projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+[CONDITION_ID] is assigned by Stackdriver Monitoring when
+the condition is created as part of a new or updated alerting
+policy.
 {{% /md %}}</dd>
 
 </dl>
@@ -660,7 +711,13 @@ ignored.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+    <dd>{{% md %}}-
+The unique resource name for this condition.
+Its syntax is:
+projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+[CONDITION_ID] is assigned by Stackdriver Monitoring when
+the condition is created as part of a new or updated alerting
+policy.
 {{% /md %}}</dd>
 
 </dl>
@@ -694,7 +751,13 @@ ignored.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+    <dd>{{% md %}}-
+The unique resource name for this condition.
+Its syntax is:
+projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+[CONDITION_ID] is assigned by Stackdriver Monitoring when
+the condition is created as part of a new or updated alerting
+policy.
 {{% /md %}}</dd>
 
 </dl>
@@ -728,7 +791,13 @@ ignored.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+    <dd>{{% md %}}-
+The unique resource name for this condition.
+Its syntax is:
+projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+[CONDITION_ID] is assigned by Stackdriver Monitoring when
+the condition is created as part of a new or updated alerting
+policy.
 {{% /md %}}</dd>
 
 </dl>
@@ -743,7 +812,7 @@ ignored.
 ## Look up an Existing AlertPolicy Resource {#look-up}
 
 Get an existing AlertPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicyState">AlertPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicy">AlertPolicy</a></span></code></pre></div>
@@ -870,7 +939,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
+    <dd>{{% md %}}How to combine the results of multiple conditions to
+determine if an incident should be opened.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -879,8 +949,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
-combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
+    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
+AND or OR according to the combiner field. If the combined conditions
+evaluate to true, then an incident is created. A policy can have from
+one to six conditions.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -899,9 +971,11 @@ ignored.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the
+condition in dashboards, notifications, and
+incidents. To avoid confusion, don't use the same
+display name for multiple conditions in the same
+policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -910,9 +984,10 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
+notifications, and incidents. To avoid confusion, don't use the same
+display name for multiple policies in the same project. The name is
+limited to 512 Unicode characters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -930,7 +1005,13 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+    <dd>{{% md %}}-
+The unique resource name for this condition.
+Its syntax is:
+projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+[CONDITION_ID] is assigned by Stackdriver Monitoring when
+the condition is created as part of a new or updated alerting
+policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -939,10 +1020,13 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
-new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
-the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
-in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
+    <dd>{{% md %}}Identifies the notification channels to which notifications should be
+sent when incidents are opened or closed or when new violations occur
+on an already opened incident. Each element of this array corresponds
+to the name field in each of the NotificationChannel objects that are
+returned from the notificationChannels.list method. The syntax of the
+entries in this field is
+`projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -961,9 +1045,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
-entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
+    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
+objects.The field can contain up to 64 entries. Each key and value is limited
+to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+can contain only lowercase letters, numerals, underscores, and dashes. Keys
+must begin with a letter.
 {{% /md %}}</dd>
 
 </dl>
@@ -979,7 +1065,8 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
+    <dd>{{% md %}}How to combine the results of multiple conditions to
+determine if an incident should be opened.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -988,8 +1075,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">[]Alert<wbr>Policy<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
-combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
+    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
+AND or OR according to the combiner field. If the combined conditions
+evaluate to true, then an incident is created. A policy can have from
+one to six conditions.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1008,9 +1097,11 @@ ignored.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the
+condition in dashboards, notifications, and
+incidents. To avoid confusion, don't use the same
+display name for multiple conditions in the same
+policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1019,9 +1110,10 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
+notifications, and incidents. To avoid confusion, don't use the same
+display name for multiple policies in the same project. The name is
+limited to 512 Unicode characters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1039,7 +1131,13 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+    <dd>{{% md %}}-
+The unique resource name for this condition.
+Its syntax is:
+projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+[CONDITION_ID] is assigned by Stackdriver Monitoring when
+the condition is created as part of a new or updated alerting
+policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1048,10 +1146,13 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
-new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
-the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
-in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
+    <dd>{{% md %}}Identifies the notification channels to which notifications should be
+sent when incidents are opened or closed or when new violations occur
+on an already opened incident. Each element of this array corresponds
+to the name field in each of the NotificationChannel objects that are
+returned from the notificationChannels.list method. The syntax of the
+entries in this field is
+`projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1070,9 +1171,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
-entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
+    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
+objects.The field can contain up to 64 entries. Each key and value is limited
+to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+can contain only lowercase letters, numerals, underscores, and dashes. Keys
+must begin with a letter.
 {{% /md %}}</dd>
 
 </dl>
@@ -1088,7 +1191,8 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
+    <dd>{{% md %}}How to combine the results of multiple conditions to
+determine if an incident should be opened.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1097,8 +1201,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">Alert<wbr>Policy<wbr>Condition[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
-combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
+    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
+AND or OR according to the combiner field. If the combined conditions
+evaluate to true, then an incident is created. A policy can have from
+one to six conditions.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1117,9 +1223,11 @@ ignored.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the
+condition in dashboards, notifications, and
+incidents. To avoid confusion, don't use the same
+display name for multiple conditions in the same
+policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1128,9 +1236,10 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
+notifications, and incidents. To avoid confusion, don't use the same
+display name for multiple policies in the same project. The name is
+limited to 512 Unicode characters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1148,7 +1257,13 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+    <dd>{{% md %}}-
+The unique resource name for this condition.
+Its syntax is:
+projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+[CONDITION_ID] is assigned by Stackdriver Monitoring when
+the condition is created as part of a new or updated alerting
+policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1157,10 +1272,13 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
-new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
-the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
-in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
+    <dd>{{% md %}}Identifies the notification channels to which notifications should be
+sent when incidents are opened or closed or when new violations occur
+on an already opened incident. Each element of this array corresponds
+to the name field in each of the NotificationChannel objects that are
+returned from the notificationChannels.list method. The syntax of the
+entries in this field is
+`projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1179,9 +1297,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
-entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
+    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
+objects.The field can contain up to 64 entries. Each key and value is limited
+to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+can contain only lowercase letters, numerals, underscores, and dashes. Keys
+must begin with a letter.
 {{% /md %}}</dd>
 
 </dl>
@@ -1197,7 +1317,8 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
+    <dd>{{% md %}}How to combine the results of multiple conditions to
+determine if an incident should be opened.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1206,8 +1327,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">List[Alert<wbr>Policy<wbr>Condition]</a></span>
     </dt>
-    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
-combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
+    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
+AND or OR according to the combiner field. If the combined conditions
+evaluate to true, then an incident is created. A policy can have from
+one to six conditions.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1226,9 +1349,11 @@ ignored.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the
+condition in dashboards, notifications, and
+incidents. To avoid confusion, don't use the same
+display name for multiple conditions in the same
+policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1237,9 +1362,10 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Dict[Alert<wbr>Policy<wbr>Documentation]</a></span>
     </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
+    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
+notifications, and incidents. To avoid confusion, don't use the same
+display name for multiple policies in the same project. The name is
+limited to 512 Unicode characters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1257,7 +1383,13 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+    <dd>{{% md %}}-
+The unique resource name for this condition.
+Its syntax is:
+projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+[CONDITION_ID] is assigned by Stackdriver Monitoring when
+the condition is created as part of a new or updated alerting
+policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1266,10 +1398,13 @@ characters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
-new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
-the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
-in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
+    <dd>{{% md %}}Identifies the notification channels to which notifications should be
+sent when incidents are opened or closed or when new violations occur
+on an already opened incident. Each element of this array corresponds
+to the name field in each of the NotificationChannel objects that are
+returned from the notificationChannels.list method. The syntax of the
+entries in this field is
+`projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1288,9 +1423,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
-entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
+    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
+objects.The field can contain up to 64 entries. Each key and value is limited
+to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+can contain only lowercase letters, numerals, underscores, and dashes. Keys
+must begin with a letter.
 {{% /md %}}</dd>
 
 </dl>
@@ -1316,6 +1453,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1329,7 +1469,12 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A short name or phrase used to identify the
+condition in dashboards, notifications, and
+incidents. To avoid confusion, don't use the same
+display name for multiple conditions in the same
+policy.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1337,7 +1482,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A condition that checks that a time series
+continues to receive new data points.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1345,7 +1492,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A condition that compares a time series against a
+threshold.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1353,7 +1502,14 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The unique resource name for this condition.
+Its syntax is:
+projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+[CONDITION_ID] is assigned by Stackdriver Monitoring when
+the condition is created as part of a new or updated alerting
+policy.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1368,7 +1524,12 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A short name or phrase used to identify the
+condition in dashboards, notifications, and
+incidents. To avoid confusion, don't use the same
+display name for multiple conditions in the same
+policy.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1376,7 +1537,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A condition that checks that a time series
+continues to receive new data points.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1384,7 +1547,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A condition that compares a time series against a
+threshold.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1392,7 +1557,14 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The unique resource name for this condition.
+Its syntax is:
+projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+[CONDITION_ID] is assigned by Stackdriver Monitoring when
+the condition is created as part of a new or updated alerting
+policy.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1407,7 +1579,12 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A short name or phrase used to identify the
+condition in dashboards, notifications, and
+incidents. To avoid confusion, don't use the same
+display name for multiple conditions in the same
+policy.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1415,7 +1592,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A condition that checks that a time series
+continues to receive new data points.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1423,7 +1602,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A condition that compares a time series against a
+threshold.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1431,7 +1612,14 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The unique resource name for this condition.
+Its syntax is:
+projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+[CONDITION_ID] is assigned by Stackdriver Monitoring when
+the condition is created as part of a new or updated alerting
+policy.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1446,7 +1634,12 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A short name or phrase used to identify the
+condition in dashboards, notifications, and
+incidents. To avoid confusion, don't use the same
+display name for multiple conditions in the same
+policy.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1454,7 +1647,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Dict[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A condition that checks that a time series
+continues to receive new data points.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1462,7 +1657,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Dict[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A condition that compares a time series against a
+threshold.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1470,7 +1667,14 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The unique resource name for this condition.
+Its syntax is:
+projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+[CONDITION_ID] is assigned by Stackdriver Monitoring when
+the condition is created as part of a new or updated alerting
+policy.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1487,6 +1691,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionAbsentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionAbsent.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1500,7 +1707,22 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1508,7 +1730,20 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the alignment of data points in
+individual time series as well as how to
+combine the retrieved time series together
+(such as when aggregating multiple streams
+on each resource to a single stream for each
+resource or when aggregating streams across
+all members of a group of resources).
+Multiple aggregations are applied in the
+order specified.This field is similar to the
+one in the MetricService.ListTimeSeries
+request. It is advisable to use the
+ListTimeSeries method when debugging this
+field.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1516,7 +1751,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter that identifies which time series
+should be compared with the threshold.The
+filter is similar to the one that is
+specified in the
+MetricService.ListTimeSeries request (that
+call is useful to verify the time series
+that will be retrieved / processed) and must
+specify the metric type and optionally may
+contain restrictions on resource type,
+resource labels, and metric labels. This
+field may not exceed 2048 Unicode characters
+in length.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1524,7 +1771,15 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number/percent of time series for which
+the comparison must hold in order for the
+condition to trigger. If unspecified, then
+the condition will trigger if the comparison
+is true for any of the time series that have
+been identified by filter and aggregations,
+or by the ratio, if denominator_filter and
+denominator_aggregations are specified.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1539,7 +1794,22 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1547,7 +1817,20 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">[]Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the alignment of data points in
+individual time series as well as how to
+combine the retrieved time series together
+(such as when aggregating multiple streams
+on each resource to a single stream for each
+resource or when aggregating streams across
+all members of a group of resources).
+Multiple aggregations are applied in the
+order specified.This field is similar to the
+one in the MetricService.ListTimeSeries
+request. It is advisable to use the
+ListTimeSeries method when debugging this
+field.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1555,7 +1838,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter that identifies which time series
+should be compared with the threshold.The
+filter is similar to the one that is
+specified in the
+MetricService.ListTimeSeries request (that
+call is useful to verify the time series
+that will be retrieved / processed) and must
+specify the metric type and optionally may
+contain restrictions on resource type,
+resource labels, and metric labels. This
+field may not exceed 2048 Unicode characters
+in length.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1563,7 +1858,15 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number/percent of time series for which
+the comparison must hold in order for the
+condition to trigger. If unspecified, then
+the condition will trigger if the comparison
+is true for any of the time series that have
+been identified by filter and aggregations,
+or by the ratio, if denominator_filter and
+denominator_aggregations are specified.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1578,7 +1881,22 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1586,7 +1904,20 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the alignment of data points in
+individual time series as well as how to
+combine the retrieved time series together
+(such as when aggregating multiple streams
+on each resource to a single stream for each
+resource or when aggregating streams across
+all members of a group of resources).
+Multiple aggregations are applied in the
+order specified.This field is similar to the
+one in the MetricService.ListTimeSeries
+request. It is advisable to use the
+ListTimeSeries method when debugging this
+field.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1594,7 +1925,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter that identifies which time series
+should be compared with the threshold.The
+filter is similar to the one that is
+specified in the
+MetricService.ListTimeSeries request (that
+call is useful to verify the time series
+that will be retrieved / processed) and must
+specify the metric type and optionally may
+contain restrictions on resource type,
+resource labels, and metric labels. This
+field may not exceed 2048 Unicode characters
+in length.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1602,7 +1945,15 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number/percent of time series for which
+the comparison must hold in order for the
+condition to trigger. If unspecified, then
+the condition will trigger if the comparison
+is true for any of the time series that have
+been identified by filter and aggregations,
+or by the ratio, if denominator_filter and
+denominator_aggregations are specified.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1617,7 +1968,22 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1625,7 +1991,20 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the alignment of data points in
+individual time series as well as how to
+combine the retrieved time series together
+(such as when aggregating multiple streams
+on each resource to a single stream for each
+resource or when aggregating streams across
+all members of a group of resources).
+Multiple aggregations are applied in the
+order specified.This field is similar to the
+one in the MetricService.ListTimeSeries
+request. It is advisable to use the
+ListTimeSeries method when debugging this
+field.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1633,7 +2012,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter that identifies which time series
+should be compared with the threshold.The
+filter is similar to the one that is
+specified in the
+MetricService.ListTimeSeries request (that
+call is useful to verify the time series
+that will be retrieved / processed) and must
+specify the metric type and optionally may
+contain restrictions on resource type,
+resource labels, and metric labels. This
+field may not exceed 2048 Unicode characters
+in length.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1641,7 +2032,15 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Dict[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number/percent of time series for which
+the comparison must hold in order for the
+condition to trigger. If unspecified, then
+the condition will trigger if the comparison
+is true for any of the time series that have
+been identified by filter and aggregations,
+or by the ratio, if denominator_filter and
+denominator_aggregations are specified.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1658,6 +2057,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentAggregationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionAbsentAggregationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionAbsentAggregation.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1671,7 +2073,21 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1679,7 +2095,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1687,7 +2120,32 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1695,7 +2153,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1710,7 +2185,21 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1718,7 +2207,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1726,7 +2232,32 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1734,7 +2265,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1749,7 +2297,21 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1757,7 +2319,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1765,7 +2344,32 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1773,7 +2377,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1788,7 +2409,21 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1796,7 +2431,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1804,7 +2456,32 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1812,7 +2489,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1829,6 +2523,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionAbsentTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionAbsentTrigger.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1842,7 +2539,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The absolute number of time series
+that must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1850,7 +2550,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of time series that
+must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1865,7 +2568,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The absolute number of time series
+that must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1873,7 +2579,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of time series that
+must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1888,7 +2597,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The absolute number of time series
+that must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1896,7 +2608,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of time series that
+must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1911,7 +2626,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The absolute number of time series
+that must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1919,7 +2637,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of time series that
+must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1936,6 +2657,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionThreshold.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1949,7 +2673,15 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The comparison to apply between the time
+series (indicated by filter and aggregation)
+and the threshold (indicated by
+threshold_value). The comparison is applied
+on each time series, with the time series on
+the left-hand side and the threshold on the
+right-hand side. Only COMPARISON_LT and
+COMPARISON_GT are supported currently.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1957,7 +2689,22 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1965,7 +2712,20 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the alignment of data points in
+individual time series as well as how to
+combine the retrieved time series together
+(such as when aggregating multiple streams
+on each resource to a single stream for each
+resource or when aggregating streams across
+all members of a group of resources).
+Multiple aggregations are applied in the
+order specified.This field is similar to the
+one in the MetricService.ListTimeSeries
+request. It is advisable to use the
+ListTimeSeries method when debugging this
+field.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1973,7 +2733,23 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the alignment of data points in
+individual time series selected by
+denominatorFilter as well as how to combine
+the retrieved time series together (such as
+when aggregating multiple streams on each
+resource to a single stream for each
+resource or when aggregating streams across
+all members of a group of resources).When
+computing ratios, the aggregations and
+denominator_aggregations fields must use the
+same alignment period and produce time
+series that have the same periodicity and
+labels.This field is similar to the one in
+the MetricService.ListTimeSeries request. It
+is advisable to use the ListTimeSeries
+method when debugging this field.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1981,7 +2757,22 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter that identifies a time series that
+should be used as the denominator of a ratio
+that will be compared with the threshold. If
+a denominator_filter is specified, the time
+series specified by the filter field will be
+used as the numerator.The filter is similar
+to the one that is specified in the
+MetricService.ListTimeSeries request (that
+call is useful to verify the time series
+that will be retrieved / processed) and must
+specify the metric type and optionally may
+contain restrictions on resource type,
+resource labels, and metric labels. This
+field may not exceed 2048 Unicode characters
+in length.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1989,7 +2780,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter that identifies which time series
+should be compared with the threshold.The
+filter is similar to the one that is
+specified in the
+MetricService.ListTimeSeries request (that
+call is useful to verify the time series
+that will be retrieved / processed) and must
+specify the metric type and optionally may
+contain restrictions on resource type,
+resource labels, and metric labels. This
+field may not exceed 2048 Unicode characters
+in length.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1997,7 +2800,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A value against which to compare the time
+series.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2005,7 +2810,15 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number/percent of time series for which
+the comparison must hold in order for the
+condition to trigger. If unspecified, then
+the condition will trigger if the comparison
+is true for any of the time series that have
+been identified by filter and aggregations,
+or by the ratio, if denominator_filter and
+denominator_aggregations are specified.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2020,7 +2833,15 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The comparison to apply between the time
+series (indicated by filter and aggregation)
+and the threshold (indicated by
+threshold_value). The comparison is applied
+on each time series, with the time series on
+the left-hand side and the threshold on the
+right-hand side. Only COMPARISON_LT and
+COMPARISON_GT are supported currently.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2028,7 +2849,22 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2036,7 +2872,20 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">[]Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the alignment of data points in
+individual time series as well as how to
+combine the retrieved time series together
+(such as when aggregating multiple streams
+on each resource to a single stream for each
+resource or when aggregating streams across
+all members of a group of resources).
+Multiple aggregations are applied in the
+order specified.This field is similar to the
+one in the MetricService.ListTimeSeries
+request. It is advisable to use the
+ListTimeSeries method when debugging this
+field.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2044,7 +2893,23 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">[]Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the alignment of data points in
+individual time series selected by
+denominatorFilter as well as how to combine
+the retrieved time series together (such as
+when aggregating multiple streams on each
+resource to a single stream for each
+resource or when aggregating streams across
+all members of a group of resources).When
+computing ratios, the aggregations and
+denominator_aggregations fields must use the
+same alignment period and produce time
+series that have the same periodicity and
+labels.This field is similar to the one in
+the MetricService.ListTimeSeries request. It
+is advisable to use the ListTimeSeries
+method when debugging this field.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2052,7 +2917,22 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter that identifies a time series that
+should be used as the denominator of a ratio
+that will be compared with the threshold. If
+a denominator_filter is specified, the time
+series specified by the filter field will be
+used as the numerator.The filter is similar
+to the one that is specified in the
+MetricService.ListTimeSeries request (that
+call is useful to verify the time series
+that will be retrieved / processed) and must
+specify the metric type and optionally may
+contain restrictions on resource type,
+resource labels, and metric labels. This
+field may not exceed 2048 Unicode characters
+in length.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2060,7 +2940,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter that identifies which time series
+should be compared with the threshold.The
+filter is similar to the one that is
+specified in the
+MetricService.ListTimeSeries request (that
+call is useful to verify the time series
+that will be retrieved / processed) and must
+specify the metric type and optionally may
+contain restrictions on resource type,
+resource labels, and metric labels. This
+field may not exceed 2048 Unicode characters
+in length.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2068,7 +2960,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A value against which to compare the time
+series.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2076,7 +2970,15 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number/percent of time series for which
+the comparison must hold in order for the
+condition to trigger. If unspecified, then
+the condition will trigger if the comparison
+is true for any of the time series that have
+been identified by filter and aggregations,
+or by the ratio, if denominator_filter and
+denominator_aggregations are specified.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2091,7 +2993,15 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The comparison to apply between the time
+series (indicated by filter and aggregation)
+and the threshold (indicated by
+threshold_value). The comparison is applied
+on each time series, with the time series on
+the left-hand side and the threshold on the
+right-hand side. Only COMPARISON_LT and
+COMPARISON_GT are supported currently.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2099,7 +3009,22 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2107,7 +3032,20 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the alignment of data points in
+individual time series as well as how to
+combine the retrieved time series together
+(such as when aggregating multiple streams
+on each resource to a single stream for each
+resource or when aggregating streams across
+all members of a group of resources).
+Multiple aggregations are applied in the
+order specified.This field is similar to the
+one in the MetricService.ListTimeSeries
+request. It is advisable to use the
+ListTimeSeries method when debugging this
+field.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2115,7 +3053,23 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the alignment of data points in
+individual time series selected by
+denominatorFilter as well as how to combine
+the retrieved time series together (such as
+when aggregating multiple streams on each
+resource to a single stream for each
+resource or when aggregating streams across
+all members of a group of resources).When
+computing ratios, the aggregations and
+denominator_aggregations fields must use the
+same alignment period and produce time
+series that have the same periodicity and
+labels.This field is similar to the one in
+the MetricService.ListTimeSeries request. It
+is advisable to use the ListTimeSeries
+method when debugging this field.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2123,7 +3077,22 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter that identifies a time series that
+should be used as the denominator of a ratio
+that will be compared with the threshold. If
+a denominator_filter is specified, the time
+series specified by the filter field will be
+used as the numerator.The filter is similar
+to the one that is specified in the
+MetricService.ListTimeSeries request (that
+call is useful to verify the time series
+that will be retrieved / processed) and must
+specify the metric type and optionally may
+contain restrictions on resource type,
+resource labels, and metric labels. This
+field may not exceed 2048 Unicode characters
+in length.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2131,7 +3100,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter that identifies which time series
+should be compared with the threshold.The
+filter is similar to the one that is
+specified in the
+MetricService.ListTimeSeries request (that
+call is useful to verify the time series
+that will be retrieved / processed) and must
+specify the metric type and optionally may
+contain restrictions on resource type,
+resource labels, and metric labels. This
+field may not exceed 2048 Unicode characters
+in length.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2139,7 +3120,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A value against which to compare the time
+series.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2147,7 +3130,15 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number/percent of time series for which
+the comparison must hold in order for the
+condition to trigger. If unspecified, then
+the condition will trigger if the comparison
+is true for any of the time series that have
+been identified by filter and aggregations,
+or by the ratio, if denominator_filter and
+denominator_aggregations are specified.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2162,7 +3153,15 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The comparison to apply between the time
+series (indicated by filter and aggregation)
+and the threshold (indicated by
+threshold_value). The comparison is applied
+on each time series, with the time series on
+the left-hand side and the threshold on the
+right-hand side. Only COMPARISON_LT and
+COMPARISON_GT are supported currently.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2170,7 +3169,22 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time that a time series must
+violate the threshold to be considered
+failing. Currently, only values that are a
+multiple of a minute--e.g., 0, 60, 120, or
+300 seconds--are supported. If an invalid
+value is given, an error will be returned.
+When choosing a duration, it is useful to
+keep in mind the frequency of the underlying
+time series data (which may also be affected
+by any alignments specified in the
+aggregations field); a good duration is long
+enough so that a single outlier does not
+generate spurious alerts, but short enough
+that unhealthy states are detected and
+alerted on quickly.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2178,7 +3192,20 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the alignment of data points in
+individual time series as well as how to
+combine the retrieved time series together
+(such as when aggregating multiple streams
+on each resource to a single stream for each
+resource or when aggregating streams across
+all members of a group of resources).
+Multiple aggregations are applied in the
+order specified.This field is similar to the
+one in the MetricService.ListTimeSeries
+request. It is advisable to use the
+ListTimeSeries method when debugging this
+field.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2186,7 +3213,23 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the alignment of data points in
+individual time series selected by
+denominatorFilter as well as how to combine
+the retrieved time series together (such as
+when aggregating multiple streams on each
+resource to a single stream for each
+resource or when aggregating streams across
+all members of a group of resources).When
+computing ratios, the aggregations and
+denominator_aggregations fields must use the
+same alignment period and produce time
+series that have the same periodicity and
+labels.This field is similar to the one in
+the MetricService.ListTimeSeries request. It
+is advisable to use the ListTimeSeries
+method when debugging this field.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2194,7 +3237,22 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter that identifies a time series that
+should be used as the denominator of a ratio
+that will be compared with the threshold. If
+a denominator_filter is specified, the time
+series specified by the filter field will be
+used as the numerator.The filter is similar
+to the one that is specified in the
+MetricService.ListTimeSeries request (that
+call is useful to verify the time series
+that will be retrieved / processed) and must
+specify the metric type and optionally may
+contain restrictions on resource type,
+resource labels, and metric labels. This
+field may not exceed 2048 Unicode characters
+in length.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2202,7 +3260,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter that identifies which time series
+should be compared with the threshold.The
+filter is similar to the one that is
+specified in the
+MetricService.ListTimeSeries request (that
+call is useful to verify the time series
+that will be retrieved / processed) and must
+specify the metric type and optionally may
+contain restrictions on resource type,
+resource labels, and metric labels. This
+field may not exceed 2048 Unicode characters
+in length.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2210,7 +3280,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A value against which to compare the time
+series.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2218,7 +3290,15 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Dict[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number/percent of time series for which
+the comparison must hold in order for the
+condition to trigger. If unspecified, then
+the condition will trigger if the comparison
+is true for any of the time series that have
+been identified by filter and aggregations,
+or by the ratio, if denominator_filter and
+denominator_aggregations are specified.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2235,6 +3315,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdAggregationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionThresholdAggregation.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2248,7 +3331,21 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2256,7 +3353,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2264,7 +3378,32 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2272,7 +3411,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2287,7 +3443,21 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2295,7 +3465,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2303,7 +3490,32 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2311,7 +3523,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2326,7 +3555,21 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2334,7 +3577,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2342,7 +3602,32 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2350,7 +3635,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2365,7 +3667,21 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2373,7 +3689,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2381,7 +3714,32 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2389,7 +3747,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2406,6 +3781,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdDenominatorAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdDenominatorAggregationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdDenominatorAggregationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionThresholdDenominatorAggregation.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2419,7 +3797,21 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2427,7 +3819,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2435,7 +3844,32 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2443,7 +3877,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2458,7 +3909,21 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2466,7 +3931,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2474,7 +3956,32 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2482,7 +3989,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2497,7 +4021,21 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2505,7 +4043,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2513,7 +4068,32 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2521,7 +4101,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2536,7 +4133,21 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The alignment period for per-time
+series alignment. If present,
+alignmentPeriod must be at least
+60 seconds. After per-time series
+alignment, each time series will
+contain data points only on the
+period boundaries. If
+perSeriesAligner is not specified
+or equals ALIGN_NONE, then this
+field is ignored. If
+perSeriesAligner is specified and
+does not equal ALIGN_NONE, then
+this field must be defined;
+otherwise an error is returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2544,7 +4155,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to combine
+time series. Not all reducer
+functions may be applied to all
+time series, depending on the
+metric type and the value type of
+the original time series.
+Reduction may change the metric
+type of value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2552,7 +4180,32 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The set of fields to preserve when
+crossSeriesReducer is specified.
+The groupByFields determine how
+the time series are partitioned
+into subsets prior to applying the
+aggregation function. Each subset
+contains time series that have the
+same value for each of the
+grouping fields. Each individual
+time series is a member of exactly
+one subset. The crossSeriesReducer
+is applied to each subset of time
+series. It is not possible to
+reduce across different resource
+types, so this field implicitly
+contains resource.type. Fields not
+specified in groupByFields are
+aggregated away. If groupByFields
+is not specified and all the time
+series have the same resource
+type, then the time series are
+aggregated into a single output
+time series. If crossSeriesReducer
+is not defined, this field is
+ignored.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2560,7 +4213,24 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The approach to be used to align
+individual time series. Not all
+alignment functions may be applied
+to all time series, depending on
+the metric type and value type of
+the original time series.
+Alignment may change the metric
+type or the value type of the time
+series.Time series data must be
+aligned in order to perform cross-
+time series reduction. If
+crossSeriesReducer is specified,
+then perSeriesAligner must be
+specified and not equal ALIGN_NONE
+and alignmentPeriod must be
+specified; otherwise, an error is
+returned.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2577,6 +4247,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionThresholdTrigger.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2590,7 +4263,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The absolute number of time series
+that must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2598,7 +4274,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of time series that
+must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2613,7 +4292,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The absolute number of time series
+that must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2621,7 +4303,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of time series that
+must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2636,7 +4321,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The absolute number of time series
+that must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2644,7 +4332,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of time series that
+must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2659,7 +4350,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The absolute number of time series
+that must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2667,7 +4361,10 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of time series that
+must fail the predicate for the
+condition to be triggered.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2683,6 +4380,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyCreationRecordOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyCreationRecord.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2791,6 +4491,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyDocumentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyDocumentationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyDocumentationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyDocumentation.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2804,7 +4507,11 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The text of the documentation, interpreted according to mimeType.
+The content may not exceed 8,192 Unicode characters and may not
+exceed more than 10,240 bytes when encoded in UTF-8 format,
+whichever is smaller.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2812,7 +4519,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The format of the content field. Presently, only the value
+"text/markdown" is supported.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2827,7 +4536,11 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The text of the documentation, interpreted according to mimeType.
+The content may not exceed 8,192 Unicode characters and may not
+exceed more than 10,240 bytes when encoded in UTF-8 format,
+whichever is smaller.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2835,7 +4548,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The format of the content field. Presently, only the value
+"text/markdown" is supported.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2850,7 +4565,11 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The text of the documentation, interpreted according to mimeType.
+The content may not exceed 8,192 Unicode characters and may not
+exceed more than 10,240 bytes when encoded in UTF-8 format,
+whichever is smaller.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2858,7 +4577,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The format of the content field. Presently, only the value
+"text/markdown" is supported.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2873,7 +4594,11 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The text of the documentation, interpreted according to mimeType.
+The content may not exceed 8,192 Unicode characters and may not
+exceed more than 10,240 bytes when encoded in UTF-8 format,
+whichever is smaller.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2881,7 +4606,9 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The format of the content field. Presently, only the value
+"text/markdown" is supported.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2900,8 +4627,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

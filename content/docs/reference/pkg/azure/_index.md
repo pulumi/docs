@@ -84,6 +84,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="role/" title="role"><span class="symbol module"></span>role</a></li>
     <li><a href="search/" title="search"><span class="symbol module"></span>search</a></li>
     <li><a href="securitycenter/" title="securitycenter"><span class="symbol module"></span>securitycenter</a></li>
+    <li><a href="sentinel/" title="sentinel"><span class="symbol module"></span>sentinel</a></li>
     <li><a href="servicebus/" title="servicebus"><span class="symbol module"></span>servicebus</a></li>
     <li><a href="servicefabric/" title="servicefabric"><span class="symbol module"></span>servicefabric</a></li>
     <li><a href="signalr/" title="signalr"><span class="symbol module"></span>signalr</a></li>
@@ -109,6 +110,6 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 

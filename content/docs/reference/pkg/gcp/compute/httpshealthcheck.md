@@ -1,7 +1,8 @@
 
 ---
 title: "HttpsHealthCheck"
-block_external_search_index: true
+title_tag: "Resource HttpsHealthCheck | Module compute | Package GCP"
+meta_desc: "Explore the HttpsHealthCheck resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. An HttpsHealthCheck resource. This resource defines a template for how"
 ---
 
 
@@ -43,7 +44,7 @@ const defaultHttpsHealthCheck = new gcp.compute.HttpsHealthCheck("default", {
 
 
 ## Create a HttpsHealthCheck Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -51,7 +52,7 @@ const defaultHttpsHealthCheck = new gcp.compute.HttpsHealthCheck("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HttpsHealthCheck</span><span class="p">(resource_name, opts=None, </span>check_interval_sec=None<span class="p">, </span>description=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>host=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>project=None<span class="p">, </span>request_path=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HttpsHealthCheck</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>check_interval_sec=None<span class="p">, </span>description=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>host=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>project=None<span class="p">, </span>request_path=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -229,7 +230,8 @@ The HttpsHealthCheck resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -238,7 +240,8 @@ The HttpsHealthCheck resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -247,7 +250,8 @@ The HttpsHealthCheck resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -256,8 +260,9 @@ The HttpsHealthCheck resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf
-of which this health check is performed will be used.
+    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If
+left empty (default value), the public IP on behalf of which this
+health check is performed will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -266,10 +271,13 @@ of which this health check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -278,7 +286,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTPS health check request. The default value is 80.
+    <dd>{{% md %}}The TCP port number for the HTTPS health check request.
+The default value is 80.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -297,7 +306,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The request path of the HTTPS health check request. The default value is /.
+    <dd>{{% md %}}The request path of the HTTPS health check request.
+The default value is /.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -306,8 +316,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -316,7 +327,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -332,7 +344,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -341,7 +354,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -350,7 +364,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,8 +374,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf
-of which this health check is performed will be used.
+    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If
+left empty (default value), the public IP on behalf of which this
+health check is performed will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -369,10 +385,13 @@ of which this health check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -381,7 +400,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTPS health check request. The default value is 80.
+    <dd>{{% md %}}The TCP port number for the HTTPS health check request.
+The default value is 80.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -400,7 +420,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The request path of the HTTPS health check request. The default value is /.
+    <dd>{{% md %}}The request path of the HTTPS health check request.
+The default value is /.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -409,8 +430,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -419,7 +441,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -435,7 +458,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -444,7 +468,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -453,7 +478,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -462,8 +488,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf
-of which this health check is performed will be used.
+    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If
+left empty (default value), the public IP on behalf of which this
+health check is performed will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -472,10 +499,13 @@ of which this health check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -484,7 +514,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTPS health check request. The default value is 80.
+    <dd>{{% md %}}The TCP port number for the HTTPS health check request.
+The default value is 80.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -503,7 +534,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The request path of the HTTPS health check request. The default value is /.
+    <dd>{{% md %}}The request path of the HTTPS health check request.
+The default value is /.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,8 +544,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -522,7 +555,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -538,7 +572,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -547,7 +582,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -556,7 +592,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -565,8 +602,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf
-of which this health check is performed will be used.
+    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If
+left empty (default value), the public IP on behalf of which this
+health check is performed will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -575,10 +613,13 @@ of which this health check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -587,7 +628,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTPS health check request. The default value is 80.
+    <dd>{{% md %}}The TCP port number for the HTTPS health check request.
+The default value is 80.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -606,7 +648,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The request path of the HTTPS health check request. The default value is /.
+    <dd>{{% md %}}The request path of the HTTPS health check request.
+The default value is /.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -615,8 +658,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -625,7 +669,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -783,7 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing HttpsHealthCheck Resource {#look-up}
 
 Get an existing HttpsHealthCheck resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#HttpsHealthCheckState">HttpsHealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#HttpsHealthCheck">HttpsHealthCheck</a></span></code></pre></div>
@@ -910,7 +955,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -928,7 +974,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -937,7 +984,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -946,8 +994,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf
-of which this health check is performed will be used.
+    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If
+left empty (default value), the public IP on behalf of which this
+health check is performed will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -956,10 +1005,13 @@ of which this health check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -968,7 +1020,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTPS health check request. The default value is 80.
+    <dd>{{% md %}}The TCP port number for the HTTPS health check request.
+The default value is 80.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -987,7 +1040,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The request path of the HTTPS health check request. The default value is /.
+    <dd>{{% md %}}The request path of the HTTPS health check request.
+The default value is /.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1005,8 +1059,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1015,7 +1070,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1031,7 +1087,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1049,7 +1106,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1058,7 +1116,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1067,8 +1126,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf
-of which this health check is performed will be used.
+    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If
+left empty (default value), the public IP on behalf of which this
+health check is performed will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1077,10 +1137,13 @@ of which this health check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1089,7 +1152,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTPS health check request. The default value is 80.
+    <dd>{{% md %}}The TCP port number for the HTTPS health check request.
+The default value is 80.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1108,7 +1172,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The request path of the HTTPS health check request. The default value is /.
+    <dd>{{% md %}}The request path of the HTTPS health check request.
+The default value is /.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1126,8 +1191,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1136,7 +1202,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1152,7 +1219,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1170,7 +1238,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1179,7 +1248,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1188,8 +1258,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf
-of which this health check is performed will be used.
+    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If
+left empty (default value), the public IP on behalf of which this
+health check is performed will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1198,10 +1269,13 @@ of which this health check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1210,7 +1284,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTPS health check request. The default value is 80.
+    <dd>{{% md %}}The TCP port number for the HTTPS health check request.
+The default value is 80.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1229,7 +1304,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The request path of the HTTPS health check request. The default value is /.
+    <dd>{{% md %}}The request path of the HTTPS health check request.
+The default value is /.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1247,8 +1323,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1257,7 +1334,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1273,7 +1351,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
+    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
+seconds.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1291,7 +1370,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
+    <dd>{{% md %}}An optional description of this resource. Provide this property when
+you create the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1300,7 +1380,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
+consecutive successes. The default value is 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1309,8 +1390,9 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf
-of which this health check is performed will be used.
+    <dd>{{% md %}}The value of the host header in the HTTPS health check request. If
+left empty (default value), the public IP on behalf of which this
+health check is performed will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1319,10 +1401,13 @@ of which this health check is performed will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035.  Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z?` which means
+the first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the
+last character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1331,7 +1416,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The TCP port number for the HTTPS health check request. The default value is 80.
+    <dd>{{% md %}}The TCP port number for the HTTPS health check request.
+The default value is 80.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1350,7 +1436,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The request path of the HTTPS health check request. The default value is /.
+    <dd>{{% md %}}The request path of the HTTPS health check request.
+The default value is /.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1368,8 +1455,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
+    <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
+The default value is 5 seconds.  It is invalid for timeoutSec to have
+greater value than checkIntervalSec.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1378,7 +1466,8 @@ have greater value than checkIntervalSec.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
+consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1400,8 +1489,7 @@ have greater value than checkIntervalSec.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

@@ -18,7 +18,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 ## Create a Provider Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, opts=None, </span>ca_material=None<span class="p">, </span>cert_material=None<span class="p">, </span>cert_path=None<span class="p">, </span>host=None<span class="p">, </span>key_material=None<span class="p">, </span>registry_auth=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ca_material=None<span class="p">, </span>cert_material=None<span class="p">, </span>cert_path=None<span class="p">, </span>host=None<span class="p">, </span>key_material=None<span class="p">, </span>registry_auth=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -525,6 +525,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ProviderRegistryAuthArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ProviderRegistryAuthArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 

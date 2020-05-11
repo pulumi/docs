@@ -1,7 +1,8 @@
 
 ---
 title: "GameServerCluster"
-block_external_search_index: true
+title_tag: "Resource GameServerCluster | Module gameservices | Package GCP"
+meta_desc: "Explore the GameServerCluster resource of the gameservices module, including examples, input properties, output properties, lookup functions, and supporting types. A game server cluster resource."
 ---
 
 
@@ -20,7 +21,7 @@ To get more information about GameServerCluster, see:
 
 
 ## Create a GameServerCluster Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -28,7 +29,7 @@ To get more information about GameServerCluster, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GameServerCluster</span><span class="p">(resource_name, opts=None, </span>cluster_id=None<span class="p">, </span>connection_info=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>realm_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GameServerCluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>connection_info=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>realm_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -215,7 +216,8 @@ The GameServerCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Game server cluster connection information. This information is used to manage game server clusters.
+    <dd>{{% md %}}Game server cluster connection information. This information is used to
+manage game server clusters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -242,7 +244,8 @@ The GameServerCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -286,7 +289,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Game server cluster connection information. This information is used to manage game server clusters.
+    <dd>{{% md %}}Game server cluster connection information. This information is used to
+manage game server clusters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -313,7 +317,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -357,7 +362,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Game server cluster connection information. This information is used to manage game server clusters.
+    <dd>{{% md %}}Game server cluster connection information. This information is used to
+manage game server clusters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -384,7 +390,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -428,7 +435,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Dict[Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info]</a></span>
     </dt>
-    <dd>{{% md %}}Game server cluster connection information. This information is used to manage game server clusters.
+    <dd>{{% md %}}Game server cluster connection information. This information is used to
+manage game server clusters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -455,7 +463,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -604,7 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GameServerCluster Resource {#look-up}
 
 Get an existing GameServerCluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerClusterState">GameServerClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerCluster">GameServerCluster</a></span></code></pre></div>
@@ -740,7 +749,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Game server cluster connection information. This information is used to manage game server clusters.
+    <dd>{{% md %}}Game server cluster connection information. This information is used to
+manage game server clusters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -758,7 +768,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -822,7 +833,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Game server cluster connection information. This information is used to manage game server clusters.
+    <dd>{{% md %}}Game server cluster connection information. This information is used to
+manage game server clusters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -840,7 +852,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -904,7 +917,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Game server cluster connection information. This information is used to manage game server clusters.
+    <dd>{{% md %}}Game server cluster connection information. This information is used to
+manage game server clusters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -922,7 +936,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -986,7 +1001,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Dict[Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info]</a></span>
     </dt>
-    <dd>{{% md %}}Game server cluster connection information. This information is used to manage game server clusters.
+    <dd>{{% md %}}Game server cluster connection information. This information is used to
+manage game server clusters.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1004,7 +1020,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server cluster. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1069,6 +1086,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerClusterConnectionInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerClusterConnectionInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerClusterConnectionInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GameServerClusterConnectionInfo.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1082,7 +1102,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1090,7 +1111,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Namespace designated on the game server cluster where the game server
+instances will be created. The namespace existence will be validated
+during creation.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1105,7 +1129,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1113,7 +1138,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Namespace designated on the game server cluster where the game server
+instances will be created. The namespace existence will be validated
+during creation.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1128,7 +1156,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1136,7 +1165,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Namespace designated on the game server cluster where the game server
+instances will be created. The namespace existence will be validated
+during creation.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1151,7 +1183,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Dict[Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1159,7 +1192,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Namespace designated on the game server cluster where the game server
+instances will be created. The namespace existence will be validated
+during creation.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1176,6 +1212,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerClusterConnectionInfoGkeClusterReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerClusterConnectionInfoGkeClusterReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerClusterConnectionInfoGkeClusterReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GameServerClusterConnectionInfoGkeClusterReference.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1189,7 +1228,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full or partial name of a GKE cluster, using one of the following
+forms:
+* `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
+* `locations/{location}/clusters/{cluster_id}`
+* `{cluster_id}`
+If project and location are not specified, the project and location of the
+GameServerCluster resource are used to generate the full name of the
+GKE cluster.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1204,7 +1251,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full or partial name of a GKE cluster, using one of the following
+forms:
+* `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
+* `locations/{location}/clusters/{cluster_id}`
+* `{cluster_id}`
+If project and location are not specified, the project and location of the
+GameServerCluster resource are used to generate the full name of the
+GKE cluster.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1219,7 +1274,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full or partial name of a GKE cluster, using one of the following
+forms:
+* `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
+* `locations/{location}/clusters/{cluster_id}`
+* `{cluster_id}`
+If project and location are not specified, the project and location of the
+GameServerCluster resource are used to generate the full name of the
+GKE cluster.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1234,7 +1297,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full or partial name of a GKE cluster, using one of the following
+forms:
+* `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
+* `locations/{location}/clusters/{cluster_id}`
+* `{cluster_id}`
+If project and location are not specified, the project and location of the
+GameServerCluster resource are used to generate the full name of the
+GKE cluster.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1253,8 +1324,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

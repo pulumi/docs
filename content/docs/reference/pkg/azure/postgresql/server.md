@@ -18,7 +18,7 @@ Manages a PostgreSQL Server.
 
 
 ## Create a Server Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -249,7 +249,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -293,7 +294,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`.
+    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -338,8 +339,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `Enabled` and `Disabled`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -347,7 +347,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -442,7 +443,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -486,7 +488,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`.
+    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -531,8 +533,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `Enabled` and `Disabled`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -540,7 +541,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -635,7 +637,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -679,7 +682,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`.
+    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -724,8 +727,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `Enabled` and `Disabled`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -733,7 +735,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -828,7 +831,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -872,7 +876,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`.
+    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -917,8 +921,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `Enabled` and `Disabled`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -926,7 +929,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1082,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Server Resource {#look-up}
 
 Get an existing Server resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/postgresql/#ServerState">ServerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/postgresql/#Server">Server</a></span></code></pre></div>
@@ -1227,7 +1231,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1280,7 +1285,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`.
+    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1343,8 +1348,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `Enabled` and `Disabled`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1352,7 +1356,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1429,7 +1434,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1482,7 +1488,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`.
+    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1545,8 +1551,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `Enabled` and `Disabled`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1554,7 +1559,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1631,7 +1637,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1684,7 +1691,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`.
+    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1747,8 +1754,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `Enabled` and `Disabled`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1756,7 +1762,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1833,7 +1840,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1886,7 +1894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`.
+    <dd>{{% md %}}Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1949,8 +1957,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `Enabled` and `Disabled`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean `ssl_enforcement_enabled` and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1958,7 +1965,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2026,6 +2034,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/postgresql?tab=doc#ServerStorageProfileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/postgresql?tab=doc#ServerStorageProfileOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.PostgreSql.Inputs.ServerStorageProfileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.PostgreSql.Outputs.ServerStorageProfile.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

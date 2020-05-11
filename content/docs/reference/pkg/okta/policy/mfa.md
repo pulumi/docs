@@ -14,10 +14,26 @@ Creates an MFA Policy.
 
 This resource allows you to create and configure an MFA Policy.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -31,14 +47,13 @@ const example = new okta.policy.Mfa("example", {
     status: "ACTIVE",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Mfa Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -46,7 +61,7 @@ const example = new okta.policy.Mfa("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Mfa</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>duo=None<span class="p">, </span>fido_u2f=None<span class="p">, </span>fido_webauthn=None<span class="p">, </span>google_otp=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>okta_call=None<span class="p">, </span>okta_otp=None<span class="p">, </span>okta_password=None<span class="p">, </span>okta_push=None<span class="p">, </span>okta_question=None<span class="p">, </span>okta_sms=None<span class="p">, </span>priority=None<span class="p">, </span>rsa_token=None<span class="p">, </span>status=None<span class="p">, </span>symantec_vip=None<span class="p">, </span>yubikey_token=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Mfa</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>duo=None<span class="p">, </span>fido_u2f=None<span class="p">, </span>fido_webauthn=None<span class="p">, </span>google_otp=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>okta_call=None<span class="p">, </span>okta_otp=None<span class="p">, </span>okta_password=None<span class="p">, </span>okta_push=None<span class="p">, </span>okta_question=None<span class="p">, </span>okta_sms=None<span class="p">, </span>priority=None<span class="p">, </span>rsa_token=None<span class="p">, </span>status=None<span class="p">, </span>symantec_vip=None<span class="p">, </span>yubikey_token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -970,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Mfa Resource {#look-up}
 
 Get an existing Mfa resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#MfaState">MfaState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#Mfa">Mfa</a></span></code></pre></div>
@@ -1783,6 +1798,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaDuoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaDuoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaDuoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaDuo.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1897,6 +1915,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaFidoU2fArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaFidoU2fOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaFidoU2fArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaFidoU2f.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2013,6 +2034,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaFidoWebauthnArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaFidoWebauthnOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaFidoWebauthnArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaFidoWebauthn.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2127,6 +2151,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaGoogleOtpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaGoogleOtpOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaGoogleOtpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaGoogleOtp.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2243,6 +2270,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaOktaCallArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaOktaCallOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaOktaCallArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaOktaCall.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2357,6 +2387,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaOktaOtpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaOktaOtpOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaOktaOtpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaOktaOtp.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2473,6 +2506,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaOktaPasswordArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaOktaPasswordOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaOktaPasswordArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaOktaPassword.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2587,6 +2623,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaOktaPushArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaOktaPushOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaOktaPushArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaOktaPush.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2703,6 +2742,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaOktaQuestionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaOktaQuestionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaOktaQuestionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaOktaQuestion.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2817,6 +2859,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaOktaSmsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaOktaSmsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaOktaSmsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaOktaSms.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2933,6 +2978,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaRsaTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaRsaTokenOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaRsaTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaRsaToken.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3048,6 +3096,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaSymantecVipArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaSymantecVipOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaSymantecVipArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaSymantecVip.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3162,6 +3213,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaYubikeyTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#MfaYubikeyTokenOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.MfaYubikeyTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.MfaYubikeyToken.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

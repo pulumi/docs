@@ -14,7 +14,7 @@ meta_desc: "Explore the PasswordPolicy resource of the deprecated module, includ
 
 
 ## Create a PasswordPolicy Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the PasswordPolicy resource of the deprecated module, includ
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PasswordPolicy</span><span class="p">(resource_name, opts=None, </span>auth_provider=None<span class="p">, </span>description=None<span class="p">, </span>email_recovery=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>password_auto_unlock_minutes=None<span class="p">, </span>password_dictionary_lookup=None<span class="p">, </span>password_exclude_first_name=None<span class="p">, </span>password_exclude_last_name=None<span class="p">, </span>password_exclude_username=None<span class="p">, </span>password_expire_warn_days=None<span class="p">, </span>password_history_count=None<span class="p">, </span>password_max_age_days=None<span class="p">, </span>password_max_lockout_attempts=None<span class="p">, </span>password_min_age_minutes=None<span class="p">, </span>password_min_length=None<span class="p">, </span>password_min_lowercase=None<span class="p">, </span>password_min_number=None<span class="p">, </span>password_min_symbol=None<span class="p">, </span>password_min_uppercase=None<span class="p">, </span>password_show_lockout_failures=None<span class="p">, </span>priority=None<span class="p">, </span>question_min_length=None<span class="p">, </span>question_recovery=None<span class="p">, </span>recovery_email_token=None<span class="p">, </span>skip_unlock=None<span class="p">, </span>sms_recovery=None<span class="p">, </span>status=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PasswordPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_provider=None<span class="p">, </span>description=None<span class="p">, </span>email_recovery=None<span class="p">, </span>groups_includeds=None<span class="p">, </span>name=None<span class="p">, </span>password_auto_unlock_minutes=None<span class="p">, </span>password_dictionary_lookup=None<span class="p">, </span>password_exclude_first_name=None<span class="p">, </span>password_exclude_last_name=None<span class="p">, </span>password_exclude_username=None<span class="p">, </span>password_expire_warn_days=None<span class="p">, </span>password_history_count=None<span class="p">, </span>password_max_age_days=None<span class="p">, </span>password_max_lockout_attempts=None<span class="p">, </span>password_min_age_minutes=None<span class="p">, </span>password_min_length=None<span class="p">, </span>password_min_lowercase=None<span class="p">, </span>password_min_number=None<span class="p">, </span>password_min_symbol=None<span class="p">, </span>password_min_uppercase=None<span class="p">, </span>password_show_lockout_failures=None<span class="p">, </span>priority=None<span class="p">, </span>question_min_length=None<span class="p">, </span>question_recovery=None<span class="p">, </span>recovery_email_token=None<span class="p">, </span>skip_unlock=None<span class="p">, </span>sms_recovery=None<span class="p">, </span>status=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1314,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing PasswordPolicy Resource {#look-up}
 
 Get an existing PasswordPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#PasswordPolicyState">PasswordPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#PasswordPolicy">PasswordPolicy</a></span></code></pre></div>

@@ -18,7 +18,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 ## Create a Provider Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, opts=None, </span>connect_timeout=None<span class="p">, </span>database=None<span class="p">, </span>database_username=None<span class="p">, </span>expected_version=None<span class="p">, </span>host=None<span class="p">, </span>max_connections=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>ssl_mode=None<span class="p">, </span>sslmode=None<span class="p">, </span>superuser=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connect_timeout=None<span class="p">, </span>database=None<span class="p">, </span>database_username=None<span class="p">, </span>expected_version=None<span class="p">, </span>host=None<span class="p">, </span>max_connections=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>ssl_mode=None<span class="p">, </span>sslmode=None<span class="p">, </span>superuser=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

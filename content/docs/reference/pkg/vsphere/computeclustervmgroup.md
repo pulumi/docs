@@ -32,37 +32,45 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The example below creates two virtual machines in a cluster using the
-[`vsphere..VirtualMachine`][tf-vsphere-vm-resource] resource, creating the
-virtual machine in the cluster looked up by the
-[`vsphere..ComputeCluster`][tf-vsphere-cluster-data-source] data source. It
-then creates a group from these two virtual machines.
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-[tf-vsphere-vm-resource]: /docs/providers/vsphere/r/virtual_machine.html
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = vsphere.getDatacenter({
+const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const datastore = vsphere.getDatastore({
+}, { async: true }));
+const datastore = dc.apply(dc => vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-});
-const cluster = vsphere.getComputeCluster({
+}, { async: true }));
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-});
-const network = vsphere.getNetwork({
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-});
+}, { async: true }));
 const vm: vsphere.VirtualMachine[] = [];
 for (let i = 0; i < 2; i++) {
     vm.push(new vsphere.VirtualMachine(`vm-${i}`, {
@@ -85,14 +93,13 @@ const clusterVmGroup = new vsphere.ComputeClusterVmGroup("cluster_vm_group", {
     virtualMachineIds: vm.map(v => v.id),
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a ComputeClusterVmGroup Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -500,7 +507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ComputeClusterVmGroup Resource {#look-up}
 
 Get an existing ComputeClusterVmGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterVmGroupState">ComputeClusterVmGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ComputeClusterVmGroup">ComputeClusterVmGroup</a></span></code></pre></div>

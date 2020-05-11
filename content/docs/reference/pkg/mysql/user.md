@@ -18,23 +18,7 @@ obscured by an unsalted hash in the state
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 Care is required when using this resource, to avoid disclosing the password.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as mysql from "@pulumi/mysql";
-
-const jdoe = new mysql.User("jdoe", {
-    host: "example.com",
-    plaintextPassword: "password",
-    user: "jdoe",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Example Usage with an Authentication Plugin
 
 ```typescript
@@ -48,10 +32,41 @@ const nologin = new mysql.User("nologin", {
 });
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mysql from "@pulumi/mysql";
+
+const jdoe = new mysql.User("jdoe", {
+    host: "example.com",
+    plaintextPassword: "password",
+    user: "jdoe",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a User Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -59,7 +74,7 @@ const nologin = new mysql.User("nologin", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, opts=None, </span>auth_plugin=None<span class="p">, </span>host=None<span class="p">, </span>password=None<span class="p">, </span>plaintext_password=None<span class="p">, </span>tls_option=None<span class="p">, </span>user=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_plugin=None<span class="p">, </span>host=None<span class="p">, </span>password=None<span class="p">, </span>plaintext_password=None<span class="p">, </span>tls_option=None<span class="p">, </span>user=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -551,7 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing User Resource {#look-up}
 
 Get an existing User resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mysql/#UserState">UserState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mysql/#User">User</a></span></code></pre></div>

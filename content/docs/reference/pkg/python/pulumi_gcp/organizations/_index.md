@@ -13,49 +13,49 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_gcp.organizations"></span><dl class="class">
+<span class="target" id="module-pulumi_gcp.organizations"></span><dl class="py class">
 <dt id="pulumi_gcp.organizations.AwaitableGetActiveFolderResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetActiveFolderResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetActiveFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetActiveFolderResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetActiveFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.AwaitableGetBillingAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetBillingAccountResult</code><span class="sig-paren">(</span><em class="sig-param">billing_account=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">open=None</em>, <em class="sig-param">project_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetBillingAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetBillingAccountResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">billing_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">open</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetBillingAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.AwaitableGetClientConfigResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param">access_token=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetClientConfigResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetClientConfigResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.AwaitableGetClientOpenIdUserInfoResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetClientOpenIdUserInfoResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetClientOpenIdUserInfoResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetClientOpenIdUserInfoResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetClientOpenIdUserInfoResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.AwaitableGetFolderResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetFolderResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">lookup_organization=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetFolderResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lifecycle_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lookup_organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.AwaitableGetIAMPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetIAMPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">audit_configs=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">policy_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetIAMPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetIAMPolicyResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">audit_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bindings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_data</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetIAMPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.AwaitableGetOrganizationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">directory_customer_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">organization=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetOrganizationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directory_customer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lifecycle_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetOrganizationResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.AwaitableGetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">auto_create_network=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">folder_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">skip_delete=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">auto_create_network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_delete</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.Folder">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">Folder</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Folder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">Folder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of a Google Cloud Platform folder. For more information see 
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/creating-managing-folders">the official documentation</a>
 and 
@@ -78,42 +78,42 @@ Must be of the form <code class="docutils literal notranslate"><span class="pre"
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Folder.create_time">
-<code class="sig-name descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.create_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.create_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timestamp when the Folder was created. Assigned by the server.
 A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds. Example: “2014-10-02T15:01:23.045123456Z”.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Folder.display_name">
-<code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.display_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">display_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.display_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The folder’s display name.
 A folder’s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Folder.lifecycle_state">
-<code class="sig-name descname">lifecycle_state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.lifecycle_state" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lifecycle_state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.lifecycle_state" title="Permalink to this definition">¶</a></dt>
 <dd><p>The lifecycle state of the folder such as <code class="docutils literal notranslate"><span class="pre">ACTIVE</span></code> or <code class="docutils literal notranslate"><span class="pre">DELETE_REQUESTED</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Folder.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource name of the Folder. Its format is folders/{folder_id}.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Folder.parent">
-<code class="sig-name descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.parent" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parent</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.parent" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource name of the parent Folder or Organization.
 Must be of the form <code class="docutils literal notranslate"><span class="pre">folders/{folder_id}</span></code> or <code class="docutils literal notranslate"><span class="pre">organizations/{org_id}</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.Folder.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Folder.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lifecycle_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Folder.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Folder resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -135,9 +135,9 @@ Must be of the form <code class="docutils literal notranslate"><span class="pre"
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.Folder.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Folder.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Folder.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -153,9 +153,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.Folder.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Folder.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Folder.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -173,17 +173,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.GetActiveFolderResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetActiveFolderResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetActiveFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetActiveFolderResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetActiveFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getActiveFolder.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetActiveFolderResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetActiveFolderResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetActiveFolderResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetActiveFolderResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource name of the Folder. This uniquely identifies the folder.</p>
@@ -191,23 +191,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.GetBillingAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetBillingAccountResult</code><span class="sig-paren">(</span><em class="sig-param">billing_account=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">open=None</em>, <em class="sig-param">project_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetBillingAccountResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">billing_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">open</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBillingAccount.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetBillingAccountResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetBillingAccountResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource name of the billing account in the form <code class="docutils literal notranslate"><span class="pre">billingAccounts/{billing_account_id}</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetBillingAccountResult.project_ids">
 <code class="sig-name descname">project_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult.project_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IDs of any projects associated with the billing account.</p>
@@ -215,35 +215,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.GetClientConfigResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param">access_token=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClientConfig.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetClientConfigResult.access_token">
 <code class="sig-name descname">access_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult.access_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>The OAuth2 access token used by the client to authenticate against the Google Cloud API.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetClientConfigResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetClientConfigResult.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project to apply any resources to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetClientConfigResult.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region to operate under.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetClientConfigResult.zone">
 <code class="sig-name descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult.zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>The zone to operate under.</p>
@@ -251,65 +251,65 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.GetClientOpenIdUserInfoResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetClientOpenIdUserInfoResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetClientOpenIdUserInfoResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetClientOpenIdUserInfoResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetClientOpenIdUserInfoResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClientOpenIdUserInfo.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetClientOpenIdUserInfoResult.email">
 <code class="sig-name descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientOpenIdUserInfoResult.email" title="Permalink to this definition">¶</a></dt>
 <dd><p>The email of the account used by the provider to authenticate with GCP.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetClientOpenIdUserInfoResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientOpenIdUserInfoResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.GetFolderResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetFolderResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">lookup_organization=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetFolderResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lifecycle_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lookup_organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFolder.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetFolderResult.create_time">
 <code class="sig-name descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult.create_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timestamp when the Organization was created. A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds. Example: “2014-10-02T15:01:23.045123456Z”.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetFolderResult.display_name">
 <code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult.display_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The folder’s display name.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetFolderResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetFolderResult.lifecycle_state">
 <code class="sig-name descname">lifecycle_state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult.lifecycle_state" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Folder’s current lifecycle state.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetFolderResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource name of the Folder in the form <code class="docutils literal notranslate"><span class="pre">folders/{folder_id}</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetFolderResult.organization">
 <code class="sig-name descname">organization</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult.organization" title="Permalink to this definition">¶</a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">lookup_organization</span></code> is enable, the resource name of the Organization that the folder belongs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetFolderResult.parent">
 <code class="sig-name descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult.parent" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource name of the parent Folder or Organization.</p>
@@ -317,17 +317,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.GetIAMPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetIAMPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">audit_configs=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">policy_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetIAMPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetIAMPolicyResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">audit_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bindings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_data</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetIAMPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getIAMPolicy.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetIAMPolicyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetIAMPolicyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetIAMPolicyResult.policy_data">
 <code class="sig-name descname">policy_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetIAMPolicyResult.policy_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>The above bindings serialized in a format suitable for
@@ -336,41 +336,41 @@ referencing from a resource that supports IAM.</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">create_time=None</em>, <em class="sig-param">directory_customer_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lifecycle_state=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">organization=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directory_customer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lifecycle_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getOrganization.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult.create_time">
 <code class="sig-name descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult.create_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timestamp when the Organization was created. A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds. Example: “2014-10-02T15:01:23.045123456Z”.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult.directory_customer_id">
 <code class="sig-name descname">directory_customer_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult.directory_customer_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Google for Work customer ID of the Organization.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult.lifecycle_state">
 <code class="sig-name descname">lifecycle_state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult.lifecycle_state" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Organization’s current lifecycle state.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource name of the Organization in the form <code class="docutils literal notranslate"><span class="pre">organizations/{organization_id}</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult.org_id">
 <code class="sig-name descname">org_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult.org_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Organization ID.</p>
@@ -378,21 +378,21 @@ referencing from a resource that supports IAM.</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.GetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">auto_create_network=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">folder_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">skip_delete=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">auto_create_network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_delete</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProject.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.GetProjectResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.IAMBinding">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IAMBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IAMBinding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows creation and management of a single binding within IAM policy for
 an existing Google Cloud Platform Organization.</p>
 <blockquote>
@@ -424,35 +424,35 @@ your existing members are preserved.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMBinding.etag">
-<code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.etag" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">etag</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.etag" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The etag of the organization’s IAM policy.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMBinding.members">
-<code class="sig-name descname">members</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.members" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">members</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.members" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of users that the role should apply to. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMBinding.org_id">
-<code class="sig-name descname">org_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.org_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">org_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.org_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The numeric ID of the organization in which you want to create a custom role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMBinding.role">
-<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.role" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.role" title="Permalink to this definition">¶</a></dt>
 <dd><p>The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">organizations.IAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IAMBinding.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IAMBinding resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -478,9 +478,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IAMBinding.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -496,9 +496,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IAMBinding.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -516,9 +516,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.IAMCustomRole">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IAMCustomRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">role_id=None</em>, <em class="sig-param">stage=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IAMCustomRole</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of a customized Cloud IAM organization role. For more information see
 <a class="reference external" href="https://cloud.google.com/iam/docs/understanding-custom-roles">the official documentation</a>
 and
@@ -549,59 +549,59 @@ List of possible stages is <a class="reference external" href="https://cloud.goo
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.deleted">
-<code class="sig-name descname">deleted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.deleted" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">deleted</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.deleted" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Optional) The current deleted state of the role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A human-readable description for the role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the role in the format <code class="docutils literal notranslate"><span class="pre">organizations/{{org_id}}/roles/{{role_id}}</span></code>. Like <code class="docutils literal notranslate"><span class="pre">id</span></code>, this field can be used as a reference in other resources such as IAM role bindings.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.org_id">
-<code class="sig-name descname">org_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.org_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">org_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.org_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The numeric ID of the organization in which you want to create a custom role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.permissions">
-<code class="sig-name descname">permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.permissions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">permissions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.permissions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.role_id">
-<code class="sig-name descname">role_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.role_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.role_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The role id to use for this role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.stage">
-<code class="sig-name descname">stage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.stage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stage</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.stage" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current launch stage of the role.
 Defaults to <code class="docutils literal notranslate"><span class="pre">GA</span></code>.
 List of possible stages is <a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage">here</a>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.title">
-<code class="sig-name descname">title</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.title" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">title</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.title" title="Permalink to this definition">¶</a></dt>
 <dd><p>A human-readable title for the role.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">deleted=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">role_id=None</em>, <em class="sig-param">stage=None</em>, <em class="sig-param">title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deleted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IAMCustomRole resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -626,9 +626,9 @@ List of possible stages is <a class="reference external" href="https://cloud.goo
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -644,9 +644,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -664,9 +664,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.IAMMember">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IAMMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IAMMember</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows creation and management of a single member for a single binding within
 the IAM policy for an existing Google Cloud Platform Organization.</p>
 <blockquote>
@@ -694,34 +694,34 @@ what your policy should be.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMMember.etag">
-<code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.etag" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">etag</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.etag" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The etag of the organization’s IAM policy.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMMember.member">
-<code class="sig-name descname">member</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.member" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">member</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.member" title="Permalink to this definition">¶</a></dt>
 <dd><p>The user that the role should apply to. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMMember.org_id">
-<code class="sig-name descname">org_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.org_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">org_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.org_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The numeric ID of the organization in which you want to create a custom role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMMember.role">
-<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.role" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.role" title="Permalink to this definition">¶</a></dt>
 <dd><p>The role that should be applied. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IAMMember.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IAMMember resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -746,9 +746,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IAMMember.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -764,9 +764,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IAMMember.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -784,9 +784,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.IAMPolicy">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IAMPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IAMPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of the entire IAM policy for an existing Google Cloud Platform Organization.</p>
 <dl class="simple">
 <dt>!&gt; <strong>Warning:</strong> New organizations have several default policies which will,</dt><dd><p>without extreme caution, be <strong>overwritten</strong> by use of this resource.
@@ -817,23 +817,23 @@ policy applied to the organization.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMPolicy.org_id">
-<code class="sig-name descname">org_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.org_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">org_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.org_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The numeric ID of the organization in which you want to create a custom role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IAMPolicy.policy_data">
-<code class="sig-name descname">policy_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.policy_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy_data</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.policy_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source that represents
 the IAM policy that will be applied to the organization. This policy overrides any existing
 policy applied to the organization.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IAMPolicy.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">policy_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_data</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IAMPolicy resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -851,9 +851,9 @@ policy applied to the organization.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IAMPolicy.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -869,9 +869,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IAMPolicy.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -889,9 +889,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.IamAuditConfig">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IamAuditConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audit_log_configs=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">IamAuditConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audit_log_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of audit logging config for a given service for a Google Cloud Platform Organization.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -917,9 +917,9 @@ Each entry can have one of the following values:</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Permission type for which logging is to be configured.  Must be one of <code class="docutils literal notranslate"><span class="pre">DATA_READ</span></code>, <code class="docutils literal notranslate"><span class="pre">DATA_WRITE</span></code>, or <code class="docutils literal notranslate"><span class="pre">ADMIN_READ</span></code>.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IamAuditConfig.audit_log_configs">
-<code class="sig-name descname">audit_log_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.audit_log_configs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">audit_log_configs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.audit_log_configs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Identities that do not cause logging for this type of permission.
@@ -935,21 +935,21 @@ Each entry can have one of the following values:</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IamAuditConfig.org_id">
-<code class="sig-name descname">org_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.org_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">org_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.org_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The numeric ID of the organization in which you want to manage the audit logging config.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.IamAuditConfig.service">
-<code class="sig-name descname">service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.service" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">service</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Service which will be enabled for audit logging.  The special value <code class="docutils literal notranslate"><span class="pre">allServices</span></code> covers all services.  Note that if there are google_organization_iam_audit_config resources covering both <code class="docutils literal notranslate"><span class="pre">allServices</span></code> and a specific service then the union of the two AuditConfigs is used for that service: the <code class="docutils literal notranslate"><span class="pre">log_types</span></code> specified in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are enabled, and the <code class="docutils literal notranslate"><span class="pre">exempted_members</span></code> in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are exempted.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IamAuditConfig.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audit_log_configs=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">service=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audit_log_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IamAuditConfig resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -979,9 +979,9 @@ Each entry can have one of the following values:</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IamAuditConfig.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -997,9 +997,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.IamAuditConfig.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IamAuditConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1017,9 +1017,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.Policy">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">boolean_policy=None</em>, <em class="sig-param">constraint=None</em>, <em class="sig-param">list_policy=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">restore_policy=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boolean_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">constraint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">list_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restore_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of Organization policies for a Google Organization. For more information see
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a> and
@@ -1044,7 +1044,7 @@ documentation</a> and
 </ul>
 <p>The <strong>list_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - or <code class="docutils literal notranslate"><span class="pre">deny</span></code> - (Optional) One or the other must be set.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The policy allows or denies all values.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The policy can define specific values that are allowed or denied.</p></li>
@@ -1064,33 +1064,33 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - May only be set to true. If set, then the default Policy is restored.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Policy.boolean_policy">
-<code class="sig-name descname">boolean_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.boolean_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">boolean_policy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.boolean_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A boolean policy is a constraint that is either enforced or not. Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enforced</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, then the Policy is enforced. If false, then any configuration is acceptable.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Policy.constraint">
-<code class="sig-name descname">constraint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.constraint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">constraint</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.constraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Constraint the Policy is configuring, for example, <code class="docutils literal notranslate"><span class="pre">serviceuser.services</span></code>. Check out the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints">complete list of available constraints</a>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Policy.etag">
-<code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.etag" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">etag</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.etag" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The etag of the organization policy. <code class="docutils literal notranslate"><span class="pre">etag</span></code> is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Policy.list_policy">
-<code class="sig-name descname">list_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.list_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_policy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.list_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - or <code class="docutils literal notranslate"><span class="pre">deny</span></code> - (Optional) One or the other must be set.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The policy allows or denies all values.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The policy can define specific values that are allowed or denied.</p></li>
@@ -1108,36 +1108,36 @@ are inherited, meaning the values set in this Policy are added to the values inh
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Policy.org_id">
-<code class="sig-name descname">org_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.org_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">org_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.org_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The numeric ID of the organization to set the policy for.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Policy.restore_policy">
-<code class="sig-name descname">restore_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.restore_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">restore_policy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.restore_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A restore policy is a constraint to restore the default policy. Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - May only be set to true. If set, then the default Policy is restored.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Policy.update_time">
-<code class="sig-name descname">update_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.update_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.update_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds, representing when the variable was last updated. Example: “2016-10-09T12:33:37.578138407Z”.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Policy.version">
-<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Version of the Policy. Default version is 0.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.Policy.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">boolean_policy=None</em>, <em class="sig-param">constraint=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">list_policy=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">restore_policy=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boolean_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">constraint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">list_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restore_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Policy resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1164,7 +1164,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>list_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - or <code class="docutils literal notranslate"><span class="pre">deny</span></code> - (Optional) One or the other must be set.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The policy allows or denies all values.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The policy can define specific values that are allowed or denied.</p></li>
@@ -1186,9 +1186,9 @@ are inherited, meaning the values set in this Policy are added to the values inh
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.Policy.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1204,9 +1204,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.Policy.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Policy.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1224,9 +1224,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.organizations.Project">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_create_network=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">folder_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">skip_delete=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_create_network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_delete</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows creation and management of a Google Cloud Platform project.</p>
 <p>Projects created with this resource must be associated with an Organization.
 See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/quickstarts">Organization documentation</a> for more details.</p>
@@ -1267,18 +1267,18 @@ without deleting the Project via the Google API.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Project.auto_create_network">
-<code class="sig-name descname">auto_create_network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.auto_create_network" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">auto_create_network</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.auto_create_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create the ‘default’ network automatically.  Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.
 If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set <code class="docutils literal notranslate"><span class="pre">auto_create_network</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, since the network will exist momentarily.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Project.billing_account">
-<code class="sig-name descname">billing_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.billing_account" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">billing_account</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.billing_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
 must have Billing Account Administrator privileges (<code class="docutils literal notranslate"><span class="pre">roles/billing.admin</span></code>) in
@@ -1286,9 +1286,9 @@ the organization. See <a class="reference external" href="https://cloud.google.c
 for more details.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Project.folder_id">
-<code class="sig-name descname">folder_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.folder_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">folder_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.folder_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The numeric ID of the folder this project should be
 created under. Only one of <code class="docutils literal notranslate"><span class="pre">org_id</span></code> or <code class="docutils literal notranslate"><span class="pre">folder_id</span></code> may be
 specified. If the <code class="docutils literal notranslate"><span class="pre">folder_id</span></code> is specified, then the project is
@@ -1296,27 +1296,27 @@ created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Project.labels">
-<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.labels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">labels</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of key/value label pairs to assign to the project.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Project.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The display name of the project.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Project.number">
-<code class="sig-name descname">number</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.number" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">number</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.number" title="Permalink to this definition">¶</a></dt>
 <dd><p>The numeric identifier of the project.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Project.org_id">
-<code class="sig-name descname">org_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.org_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">org_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.org_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
 <code class="docutils literal notranslate"><span class="pre">org_id</span></code> or <code class="docutils literal notranslate"><span class="pre">folder_id</span></code> may be specified. If the <code class="docutils literal notranslate"><span class="pre">org_id</span></code> is
@@ -1325,22 +1325,22 @@ this forces the project to be migrated to the newly specified
 organization.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Project.project_id">
-<code class="sig-name descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.project_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.project_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The project ID. Changing this forces a new project to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.organizations.Project.skip_delete">
-<code class="sig-name descname">skip_delete</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.skip_delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">skip_delete</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.skip_delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, the resource can be deleted
 without deleting the Project via the Google API.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.Project.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_create_network=None</em>, <em class="sig-param">billing_account=None</em>, <em class="sig-param">folder_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">skip_delete=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_create_network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_delete</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1381,9 +1381,9 @@ without deleting the Project via the Google API.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.Project.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1399,9 +1399,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.organizations.Project.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1419,9 +1419,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.organizations.get_active_folder">
-<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_active_folder</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_active_folder" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_active_folder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_active_folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an active folder within GCP by <code class="docutils literal notranslate"><span class="pre">display_name</span></code> and <code class="docutils literal notranslate"><span class="pre">parent</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1433,9 +1433,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.organizations.get_billing_account">
-<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_billing_account</code><span class="sig-paren">(</span><em class="sig-param">billing_account=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">open=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_billing_account" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_billing_account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">billing_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">open</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_billing_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google Billing Account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1448,15 +1448,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.organizations.get_client_config">
-<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_client_config</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_client_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_client_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_client_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the configuration of the Google Cloud provider.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.organizations.get_client_open_id_user_info">
-<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_client_open_id_user_info</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_client_open_id_user_info" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_client_open_id_user_info</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_client_open_id_user_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get OpenID userinfo about the credentials used with the Google provider,
 specifically the email.</p>
 <p>This datasource enables you to export the email of the account you’ve
@@ -1470,9 +1470,9 @@ receive an error otherwise.</p>
 </div></blockquote>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.organizations.get_folder">
-<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_folder</code><span class="sig-paren">(</span><em class="sig-param">folder=None</em>, <em class="sig-param">lookup_organization=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_folder" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_folder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lookup_organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google Cloud Folder.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1484,9 +1484,9 @@ receive an error otherwise.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.organizations.get_iam_policy">
-<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_iam_policy</code><span class="sig-paren">(</span><em class="sig-param">audit_configs=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_iam_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_iam_policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">audit_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bindings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_iam_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates an IAM policy document that may be referenced by and applied to
 other Google Cloud Platform resources, such as the <code class="docutils literal notranslate"><span class="pre">organizations.Project</span></code> resource.</p>
 <p><strong>Note:</strong> Several restrictions apply when setting IAM policies through this API.
@@ -1541,9 +1541,9 @@ Note that custom roles must be of the format <code class="docutils literal notra
 </ul>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.organizations.get_organization">
-<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_organization</code><span class="sig-paren">(</span><em class="sig-param">domain=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_organization" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_organization</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_organization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google Cloud Organization.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1555,9 +1555,9 @@ Note that custom roles must be of the format <code class="docutils literal notra
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.organizations.get_project">
-<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.organizations.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get project details.
 For more information see
 <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project">API</a></p>

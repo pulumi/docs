@@ -12,16 +12,26 @@ meta_desc: "Explore the Selection resource of the backup module, including examp
 
 Manages selection conditions for AWS Backup plan resources.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### IAM Role
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-> For more information about creating and managing IAM Roles for backups and restores, see the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/iam-service-roles.html).
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-The below example creates an IAM role with the default managed IAM Policy for allowing AWS Backup to create backups.
+{{% example python %}}
+Coming soon!
+{{% /example %}}
 
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,11 +59,22 @@ const exampleSelection = new aws.backup.Selection("example", {
     iamRoleArn: exampleRole.arn,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Selecting Backups By Tag
 
+### Selecting Backups By Tag
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -68,11 +89,22 @@ const example = new aws.backup.Selection("example", {
     }],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Selecting Backups By Resource
 
+### Selecting Backups By Resource
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -87,14 +119,13 @@ const example = new aws.backup.Selection("example", {
     ],
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Selection Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -102,7 +133,7 @@ const example = new aws.backup.Selection("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Selection</span><span class="p">(resource_name, opts=None, </span>iam_role_arn=None<span class="p">, </span>name=None<span class="p">, </span>plan_id=None<span class="p">, </span>resources=None<span class="p">, </span>selection_tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Selection</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>iam_role_arn=None<span class="p">, </span>name=None<span class="p">, </span>plan_id=None<span class="p">, </span>resources=None<span class="p">, </span>selection_tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -558,7 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Selection Resource {#look-up}
 
 Get an existing Selection resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#SelectionState">SelectionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#Selection">Selection</a></span></code></pre></div>
@@ -902,6 +933,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup?tab=doc#SelectionSelectionTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup?tab=doc#SelectionSelectionTagOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.Inputs.SelectionSelectionTagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.Outputs.SelectionSelectionTag.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

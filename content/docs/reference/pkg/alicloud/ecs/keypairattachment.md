@@ -14,12 +14,26 @@ Provides a key pair attachment resource to bind key pair for several ECS instanc
 
 > **NOTE:** After the key pair is attached with sone instances, there instances must be rebooted to make the key pair affect.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Basic Usage
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -27,20 +41,20 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "keyPairAttachmentName";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableDiskCategory: "cloud_ssd",
     availableResourceCreation: "VSwitch",
-});
-const type = alicloud.ecs.getInstanceTypes({
+}, { async: true }));
+const type = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     cpuCoreCount: 1,
     memorySize: 2,
-});
-const images = alicloud.ecs.getImages({
+}, { async: true }));
+const images = pulumi.output(alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-});
+}, { async: true }));
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "10.1.0.0/21",
 });
@@ -77,12 +91,12 @@ const attachment = new alicloud.ecs.KeyPairAttachment("attachment", {
 });
 ```
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a KeyPairAttachment Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -474,7 +488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing KeyPairAttachment Resource {#look-up}
 
 Get an existing KeyPairAttachment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#KeyPairAttachmentState">KeyPairAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#KeyPairAttachment">KeyPairAttachment</a></span></code></pre></div>

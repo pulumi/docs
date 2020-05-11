@@ -1,7 +1,8 @@
 
 ---
 title: "BucketAccessControl"
-block_external_search_index: true
+title_tag: "Resource BucketAccessControl | Module storage | Package GCP"
+meta_desc: "Explore the BucketAccessControl resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. Bucket ACLs can be managed authoritatively using the"
 ---
 
 
@@ -36,7 +37,7 @@ To get more information about BucketAccessControl, see:
 
 
 ## Create a BucketAccessControl Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -44,7 +45,7 @@ To get more information about BucketAccessControl, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BucketAccessControl</span><span class="p">(resource_name, opts=None, </span>bucket=None<span class="p">, </span>entity=None<span class="p">, </span>role=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BucketAccessControl</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket=None<span class="p">, </span>entity=None<span class="p">, </span>role=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -231,10 +232,21 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
-domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user liz@example.com would be
-user-liz@example.com. The group example@googlegroups.com would be group-example@googlegroups.com. To refer to all
-members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+user-userId
+user-email
+group-groupId
+group-email
+domain-domain
+project-team-projectId
+allUsers
+allAuthenticatedUsers
+Examples:
+The user liz@example.com would be user-liz@example.com.
+The group example@googlegroups.com would be
+group-example@googlegroups.com.
+To refer to all members of the Google Apps for Business domain
+example.com, the entity would be domain-example.com.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -268,10 +280,21 @@ members of the Google Apps for Business domain example.com, the entity would be 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
-domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user liz@example.com would be
-user-liz@example.com. The group example@googlegroups.com would be group-example@googlegroups.com. To refer to all
-members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+user-userId
+user-email
+group-groupId
+group-email
+domain-domain
+project-team-projectId
+allUsers
+allAuthenticatedUsers
+Examples:
+The user liz@example.com would be user-liz@example.com.
+The group example@googlegroups.com would be
+group-example@googlegroups.com.
+To refer to all members of the Google Apps for Business domain
+example.com, the entity would be domain-example.com.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -305,10 +328,21 @@ members of the Google Apps for Business domain example.com, the entity would be 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
-domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user liz@example.com would be
-user-liz@example.com. The group example@googlegroups.com would be group-example@googlegroups.com. To refer to all
-members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+user-userId
+user-email
+group-groupId
+group-email
+domain-domain
+project-team-projectId
+allUsers
+allAuthenticatedUsers
+Examples:
+The user liz@example.com would be user-liz@example.com.
+The group example@googlegroups.com would be
+group-example@googlegroups.com.
+To refer to all members of the Google Apps for Business domain
+example.com, the entity would be domain-example.com.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -342,10 +376,21 @@ members of the Google Apps for Business domain example.com, the entity would be 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
-domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user liz@example.com would be
-user-liz@example.com. The group example@googlegroups.com would be group-example@googlegroups.com. To refer to all
-members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+user-userId
+user-email
+group-groupId
+group-email
+domain-domain
+project-team-projectId
+allUsers
+allAuthenticatedUsers
+Examples:
+The user liz@example.com would be user-liz@example.com.
+The group example@googlegroups.com would be
+group-example@googlegroups.com.
+To refer to all members of the Google Apps for Business domain
+example.com, the entity would be domain-example.com.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,7 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing BucketAccessControl Resource {#look-up}
 
 Get an existing BucketAccessControl resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#BucketAccessControlState">BucketAccessControlState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#BucketAccessControl">BucketAccessControl</a></span></code></pre></div>
@@ -666,10 +711,21 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
-domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user liz@example.com would be
-user-liz@example.com. The group example@googlegroups.com would be group-example@googlegroups.com. To refer to all
-members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+user-userId
+user-email
+group-groupId
+group-email
+domain-domain
+project-team-projectId
+allUsers
+allAuthenticatedUsers
+Examples:
+The user liz@example.com would be user-liz@example.com.
+The group example@googlegroups.com would be
+group-example@googlegroups.com.
+To refer to all members of the Google Apps for Business domain
+example.com, the entity would be domain-example.com.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -721,10 +777,21 @@ members of the Google Apps for Business domain example.com, the entity would be 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
-domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user liz@example.com would be
-user-liz@example.com. The group example@googlegroups.com would be group-example@googlegroups.com. To refer to all
-members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+user-userId
+user-email
+group-groupId
+group-email
+domain-domain
+project-team-projectId
+allUsers
+allAuthenticatedUsers
+Examples:
+The user liz@example.com would be user-liz@example.com.
+The group example@googlegroups.com would be
+group-example@googlegroups.com.
+To refer to all members of the Google Apps for Business domain
+example.com, the entity would be domain-example.com.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -776,10 +843,21 @@ members of the Google Apps for Business domain example.com, the entity would be 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
-domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user liz@example.com would be
-user-liz@example.com. The group example@googlegroups.com would be group-example@googlegroups.com. To refer to all
-members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+user-userId
+user-email
+group-groupId
+group-email
+domain-domain
+project-team-projectId
+allUsers
+allAuthenticatedUsers
+Examples:
+The user liz@example.com would be user-liz@example.com.
+The group example@googlegroups.com would be
+group-example@googlegroups.com.
+To refer to all members of the Google Apps for Business domain
+example.com, the entity would be domain-example.com.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -831,10 +909,21 @@ members of the Google Apps for Business domain example.com, the entity would be 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: user-userId user-email group-groupId group-email
-domain-domain project-team-projectId allUsers allAuthenticatedUsers Examples: The user liz@example.com would be
-user-liz@example.com. The group example@googlegroups.com would be group-example@googlegroups.com. To refer to all
-members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+user-userId
+user-email
+group-groupId
+group-email
+domain-domain
+project-team-projectId
+allUsers
+allAuthenticatedUsers
+Examples:
+The user liz@example.com would be user-liz@example.com.
+The group example@googlegroups.com would be
+group-example@googlegroups.com.
+To refer to all members of the Google Apps for Business domain
+example.com, the entity would be domain-example.com.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -865,8 +954,7 @@ members of the Google Apps for Business domain example.com, the entity would be 
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

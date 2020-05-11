@@ -1,7 +1,8 @@
 
 ---
 title: "OrganizationPolicy"
-block_external_search_index: true
+title_tag: "Resource OrganizationPolicy | Module projects | Package GCP"
+meta_desc: "Explore the OrganizationPolicy resource of the projects module, including examples, input properties, output properties, lookup functions, and supporting types. Allows management of Organization policies for a Google Project. For more information see"
 ---
 
 
@@ -14,12 +15,26 @@ Allows management of Organization policies for a Google Project. For more inform
 documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview) and
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setOrgPolicy).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-To set policy with a [boolean constraint](https://cloud.google.com/resource-manager/docs/organization-policy/quickstart-boolean-constraints):
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -32,66 +47,13 @@ const serialPortPolicy = new gcp.projects.OrganizationPolicy("serial_port_policy
     project: "your-project-id",
 });
 ```
-
-
-To set a policy with a [list constraint](https://cloud.google.com/resource-manager/docs/organization-policy/quickstart-list-constraints):
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const servicesPolicy = new gcp.projects.OrganizationPolicy("services_policy", {
-    constraint: "serviceuser.services",
-    listPolicy: {
-        allow: {
-            all: true,
-        },
-    },
-    project: "your-project-id",
-});
-```
-
-
-Or to deny some services, use the following instead:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const servicesPolicy = new gcp.projects.OrganizationPolicy("services_policy", {
-    constraint: "serviceuser.services",
-    listPolicy: {
-        deny: {
-            values: ["cloudresourcemanager.googleapis.com"],
-        },
-        suggestedValue: "compute.googleapis.com",
-    },
-    project: "your-project-id",
-});
-```
-
-To restore the default project organization policy, use the following instead:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const servicesPolicy = new gcp.projects.OrganizationPolicy("services_policy", {
-    constraint: "serviceuser.services",
-    project: "your-project-id",
-    restorePolicy: {
-        default: true,
-    },
-});
-```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a OrganizationPolicy Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -99,7 +61,7 @@ const servicesPolicy = new gcp.projects.OrganizationPolicy("services_policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OrganizationPolicy</span><span class="p">(resource_name, opts=None, </span>boolean_policy=None<span class="p">, </span>constraint=None<span class="p">, </span>list_policy=None<span class="p">, </span>project=None<span class="p">, </span>restore_policy=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OrganizationPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>boolean_policy=None<span class="p">, </span>constraint=None<span class="p">, </span>list_policy=None<span class="p">, </span>project=None<span class="p">, </span>restore_policy=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -663,7 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing OrganizationPolicy Resource {#look-up}
 
 Get an existing OrganizationPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/projects/#OrganizationPolicyState">OrganizationPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/projects/#OrganizationPolicy">OrganizationPolicy</a></span></code></pre></div>
@@ -1116,6 +1078,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#OrganizationPolicyBooleanPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#OrganizationPolicyBooleanPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Inputs.OrganizationPolicyBooleanPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Outputs.OrganizationPolicyBooleanPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1195,6 +1160,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#OrganizationPolicyListPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#OrganizationPolicyListPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Inputs.OrganizationPolicyListPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Outputs.OrganizationPolicyListPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1208,7 +1176,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicyallow">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1250,7 +1219,8 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicyallow">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1292,7 +1262,8 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicyallow">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1334,7 +1305,8 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicyallow">Dict[Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1377,6 +1349,9 @@ are inherited, meaning the values set in this Policy are added to the values inh
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#OrganizationPolicyListPolicyAllowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#OrganizationPolicyListPolicyAllowOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Inputs.OrganizationPolicyListPolicyAllowArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Outputs.OrganizationPolicyListPolicyAllow.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1493,6 +1468,9 @@ are inherited, meaning the values set in this Policy are added to the values inh
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#OrganizationPolicyListPolicyDenyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#OrganizationPolicyListPolicyDenyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Inputs.OrganizationPolicyListPolicyDenyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Outputs.OrganizationPolicyListPolicyDeny.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1608,6 +1586,9 @@ are inherited, meaning the values set in this Policy are added to the values inh
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#OrganizationPolicyRestorePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#OrganizationPolicyRestorePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Inputs.OrganizationPolicyRestorePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Outputs.OrganizationPolicyRestorePolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1689,8 +1670,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

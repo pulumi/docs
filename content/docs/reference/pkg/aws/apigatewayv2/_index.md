@@ -12,6 +12,7 @@ Explore the resources and functions of the apigatewayv2 module in the AWS packag
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="api" title="Api"><span class="symbol resource"></span>Api</a></li>
+    <li><a href="apimapping" title="ApiMapping"><span class="symbol resource"></span>ApiMapping</a></li>
     <li><a href="authorizer" title="Authorizer"><span class="symbol resource"></span>Authorizer</a></li>
     <li><a href="deployment" title="Deployment"><span class="symbol resource"></span>Deployment</a></li>
     <li><a href="domainname" title="DomainName"><span class="symbol resource"></span>DomainName</a></li>
@@ -21,6 +22,7 @@ Explore the resources and functions of the apigatewayv2 module in the AWS packag
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
     <li><a href="routeresponse" title="RouteResponse"><span class="symbol resource"></span>RouteResponse</a></li>
     <li><a href="stage" title="Stage"><span class="symbol resource"></span>Stage</a></li>
+    <li><a href="vpclink" title="VpcLink"><span class="symbol resource"></span>VpcLink</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,6 +34,6 @@ Explore the resources and functions of the apigatewayv2 module in the AWS packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.3.0</dd>
 </dl>
 

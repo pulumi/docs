@@ -47,7 +47,7 @@ username = random.Pet("my-user-name")
 
 ```go
 import (
-  random "github.com/pulumi/pulumi-random/sdk/go/random"
+  random "github.com/pulumi/pulumi-random/sdk/v2/go/random"
 )
 
 username, _ := random.NewPet(ctx, "my-user-name", &random.PetArgs{})

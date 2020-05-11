@@ -1,7 +1,8 @@
 
 ---
 title: "Node"
-block_external_search_index: true
+title_tag: "Resource Node | Module tpu | Package GCP"
+meta_desc: "Explore the Node resource of the tpu module, including examples, input properties, output properties, lookup functions, and supporting types. A Cloud TPU instance."
 ---
 
 
@@ -21,7 +22,7 @@ To get more information about Node, see:
 
 
 ## Create a Node Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -29,7 +30,7 @@ To get more information about Node, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Node</span><span class="p">(resource_name, opts=None, </span>accelerator_type=None<span class="p">, </span>cidr_block=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>project=None<span class="p">, </span>scheduling_config=None<span class="p">, </span>tensorflow_version=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Node</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accelerator_type=None<span class="p">, </span>cidr_block=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>project=None<span class="p">, </span>scheduling_config=None<span class="p">, </span>tensorflow_version=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -216,11 +217,14 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
-that is using that CIDR block.
+    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user's provided network, or the provided network
+is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -274,8 +278,10 @@ that is using that CIDR block.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, "default" will be used.
+    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a
+preexisting Compute Engine network inside of the project on which
+this API has been activated. If none is provided, "default" will be
+used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -294,7 +300,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -319,11 +325,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
-that is using that CIDR block.
+    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user's provided network, or the provided network
+is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -377,8 +386,10 @@ that is using that CIDR block.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, "default" will be used.
+    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a
+preexisting Compute Engine network inside of the project on which
+this API has been activated. If none is provided, "default" will be
+used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -397,7 +408,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -422,11 +433,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
-that is using that CIDR block.
+    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user's provided network, or the provided network
+is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -480,8 +494,10 @@ that is using that CIDR block.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, "default" will be used.
+    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a
+preexisting Compute Engine network inside of the project on which
+this API has been activated. If none is provided, "default" will be
+used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -500,7 +516,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -525,11 +541,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
-that is using that CIDR block.
+    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user's provided network, or the provided network
+is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -583,8 +602,10 @@ that is using that CIDR block.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, "default" will be used.
+    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a
+preexisting Compute Engine network inside of the project on which
+this API has been activated. If none is provided, "default" will be
+used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -603,7 +624,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Dict[Node<wbr>Scheduling<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -769,7 +790,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 ## Look up an Existing Node Resource {#look-up}
 
 Get an existing Node resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/tpu/#NodeState">NodeState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/tpu/#Node">Node</a></span></code></pre></div>
@@ -905,11 +926,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
-that is using that CIDR block.
+    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user's provided network, or the provided network
+is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -945,8 +969,10 @@ that is using that CIDR block.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, "default" will be used.
+    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a
+preexisting Compute Engine network inside of the project on which
+this API has been activated. If none is provided, "default" will be
+used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -975,7 +1001,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1028,11 +1054,14 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
-that is using that CIDR block.
+    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user's provided network, or the provided network
+is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1068,8 +1097,10 @@ that is using that CIDR block.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, "default" will be used.
+    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a
+preexisting Compute Engine network inside of the project on which
+this API has been activated. If none is provided, "default" will be
+used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1098,7 +1129,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1151,11 +1182,14 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
-that is using that CIDR block.
+    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user's provided network, or the provided network
+is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1191,8 +1225,10 @@ that is using that CIDR block.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, "default" will be used.
+    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a
+preexisting Compute Engine network inside of the project on which
+this API has been activated. If none is provided, "default" will be
+used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1221,7 +1257,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1274,11 +1310,14 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
-that is using that CIDR block.
+    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP
+address. This CIDR block must be a /29 block; the Compute Engine
+networks API forbids a smaller block, and using a larger block would
+be wasteful (a node can only consume one IP address).
+Errors will occur if the CIDR block has already been used for a
+currently existing TPU node, the CIDR block conflicts with any
+subnetworks in the user's provided network, or the provided network
+is peered with another network that is using that CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1314,8 +1353,10 @@ that is using that CIDR block.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, "default" will be used.
+    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a
+preexisting Compute Engine network inside of the project on which
+this API has been activated. If none is provided, "default" will be
+used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1344,7 +1385,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeschedulingconfig">Dict[Node<wbr>Scheduling<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
+    <dd>{{% md %}}Sets the scheduling options for this TPU instance.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1397,6 +1438,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeNetworkEndpointOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.Outputs.NodeNetworkEndpoint.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1505,6 +1549,9 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeSchedulingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeSchedulingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.Inputs.NodeSchedulingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Tpu.Outputs.NodeSchedulingConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1518,7 +1565,8 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines whether the TPU instance is preemptible.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1533,7 +1581,8 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines whether the TPU instance is preemptible.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1548,7 +1597,8 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines whether the TPU instance is preemptible.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1563,7 +1613,8 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines whether the TPU instance is preemptible.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1582,8 +1633,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

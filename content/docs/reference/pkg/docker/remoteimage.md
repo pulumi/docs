@@ -16,10 +16,26 @@ This resource will *not* pull new layers of the image automatically unless used 
 conjunction with [`docker..getRegistryImage`](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 data source to update the `pull_triggers` field.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
@@ -29,11 +45,22 @@ const ubuntu = new docker.RemoteImage("ubuntu", {
     name: "ubuntu:precise",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Dynamic image
 
+### Dynamic image
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
@@ -46,14 +73,13 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
     pullTriggers: [ubuntuRegistryImage.sha256Digest],
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a RemoteImage Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -61,7 +87,7 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RemoteImage</span><span class="p">(resource_name, opts=None, </span>keep_locally=None<span class="p">, </span>name=None<span class="p">, </span>pull_trigger=None<span class="p">, </span>pull_triggers=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RemoteImage</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>keep_locally=None<span class="p">, </span>name=None<span class="p">, </span>pull_trigger=None<span class="p">, </span>pull_triggers=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -533,7 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing RemoteImage Resource {#look-up}
 
 Get an existing RemoteImage resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RemoteImageState">RemoteImageState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RemoteImage">RemoteImage</a></span></code></pre></div>

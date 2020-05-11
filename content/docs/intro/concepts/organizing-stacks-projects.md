@@ -266,6 +266,6 @@ Stacks have associated metadata in the form of name/value tags. You can assign c
 
 ## Examples
 
-See also the use of multiple projects and stacks in [Kubernetes the Prod Way]({{< relref "/docs/guides/crosswalk/kubernetes" >}}), which contains a tutorial, reference architecture, and collection of prod-first code
+See also the use of multiple projects and stacks in [Crosswalk for Kubernetes]({{< relref "/docs/guides/crosswalk/kubernetes" >}}), which contains a tutorial, reference architecture, and collection of prod-first code
 examples that demonstrate industry best-practices for **using Kubernetes** in contexts where an
 **organization of people** must ship **production applications.**

@@ -1,7 +1,8 @@
 
 ---
 title: "Deployment"
-block_external_search_index: true
+title_tag: "Resource Deployment | Module deploymentmanager | Package GCP"
+meta_desc: "Explore the Deployment resource of the deploymentmanager module, including examples, input properties, output properties, lookup functions, and supporting types. A collection of resources that are deployed and managed together using"
 ---
 
 
@@ -28,7 +29,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
 
 
 ## Create a Deployment Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -36,7 +37,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Deployment</span><span class="p">(resource_name, opts=None, </span>create_policy=None<span class="p">, </span>delete_policy=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>preview=None<span class="p">, </span>project=None<span class="p">, </span>target=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Deployment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>create_policy=None<span class="p">, </span>delete_policy=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>preview=None<span class="p">, </span>project=None<span class="p">, </span>target=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -214,7 +215,8 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define your deployment, including the deployment configuration and relevant templates.
+    <dd>{{% md %}}Parameters that define your deployment, including the deployment
+configuration and relevant templates.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -223,9 +225,11 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on create and update. Valid values are 'CREATE_OR_ACQUIRE'
-(default) or 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist, the deployment will fail. Note that
-updating this field does not actually affect the deployment, just how it is updated.
+    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
+create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
+`ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
+the deployment will fail. Note that updating this field does not
+actually affect the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -234,10 +238,12 @@ updating this field does not actually affect the deployment, just how it is upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete. Valid values are 'DELETE' (default) or 'ABANDON'. If
-'DELETE', resource is deleted after removal from Deployment Manager. If 'ABANDON', the resource is only removed from
-Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,
-just how it is updated.
+    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
+Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
+resource is deleted after removal from Deployment Manager. If
+`ABANDON`, the resource is only removed from Deployment Manager
+and is not actually deleted. Note that updating this field does not
+actually change the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -255,7 +261,7 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">List&lt;Deployment<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -264,7 +270,8 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the deployment
+    <dd>{{% md %}}The name of the template to import, as declared in the YAML
+configuration.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -273,10 +280,14 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources that are not actually instantiated. This allows you to
-preview a deployment. It can be updated to false to actually deploy with real resources. ~>**NOTE**: Deployment Manager
-does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
-deployments if either preview is updated to true or if other fields are updated while preview is true.
+    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
+that are not actually instantiated. This allows you to preview a
+deployment. It can be updated to false to actually deploy
+with real resources.
+~>**NOTE**: Deployment Manager does not allow update
+of a deployment in preview (unless updating to preview=false). Thus,
+the provider will force-recreate deployments if either preview is updated
+to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -302,7 +313,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define your deployment, including the deployment configuration and relevant templates.
+    <dd>{{% md %}}Parameters that define your deployment, including the deployment
+configuration and relevant templates.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -311,9 +323,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on create and update. Valid values are 'CREATE_OR_ACQUIRE'
-(default) or 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist, the deployment will fail. Note that
-updating this field does not actually affect the deployment, just how it is updated.
+    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
+create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
+`ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
+the deployment will fail. Note that updating this field does not
+actually affect the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -322,10 +336,12 @@ updating this field does not actually affect the deployment, just how it is upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete. Valid values are 'DELETE' (default) or 'ABANDON'. If
-'DELETE', resource is deleted after removal from Deployment Manager. If 'ABANDON', the resource is only removed from
-Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,
-just how it is updated.
+    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
+Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
+resource is deleted after removal from Deployment Manager. If
+`ABANDON`, the resource is only removed from Deployment Manager
+and is not actually deleted. Note that updating this field does not
+actually change the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -343,7 +359,7 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">[]Deployment<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -352,7 +368,8 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the deployment
+    <dd>{{% md %}}The name of the template to import, as declared in the YAML
+configuration.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,10 +378,14 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources that are not actually instantiated. This allows you to
-preview a deployment. It can be updated to false to actually deploy with real resources. ~>**NOTE**: Deployment Manager
-does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
-deployments if either preview is updated to true or if other fields are updated while preview is true.
+    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
+that are not actually instantiated. This allows you to preview a
+deployment. It can be updated to false to actually deploy
+with real resources.
+~>**NOTE**: Deployment Manager does not allow update
+of a deployment in preview (unless updating to preview=false). Thus,
+the provider will force-recreate deployments if either preview is updated
+to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -390,7 +411,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define your deployment, including the deployment configuration and relevant templates.
+    <dd>{{% md %}}Parameters that define your deployment, including the deployment
+configuration and relevant templates.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -399,9 +421,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on create and update. Valid values are 'CREATE_OR_ACQUIRE'
-(default) or 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist, the deployment will fail. Note that
-updating this field does not actually affect the deployment, just how it is updated.
+    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
+create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
+`ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
+the deployment will fail. Note that updating this field does not
+actually affect the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -410,10 +434,12 @@ updating this field does not actually affect the deployment, just how it is upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete. Valid values are 'DELETE' (default) or 'ABANDON'. If
-'DELETE', resource is deleted after removal from Deployment Manager. If 'ABANDON', the resource is only removed from
-Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,
-just how it is updated.
+    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
+Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
+resource is deleted after removal from Deployment Manager. If
+`ABANDON`, the resource is only removed from Deployment Manager
+and is not actually deleted. Note that updating this field does not
+actually change the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -431,7 +457,7 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">Deployment<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -440,7 +466,8 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the deployment
+    <dd>{{% md %}}The name of the template to import, as declared in the YAML
+configuration.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -449,10 +476,14 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources that are not actually instantiated. This allows you to
-preview a deployment. It can be updated to false to actually deploy with real resources. ~>**NOTE**: Deployment Manager
-does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
-deployments if either preview is updated to true or if other fields are updated while preview is true.
+    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
+that are not actually instantiated. This allows you to preview a
+deployment. It can be updated to false to actually deploy
+with real resources.
+~>**NOTE**: Deployment Manager does not allow update
+of a deployment in preview (unless updating to preview=false). Thus,
+the provider will force-recreate deployments if either preview is updated
+to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -478,7 +509,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Dict[Deployment<wbr>Target]</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define your deployment, including the deployment configuration and relevant templates.
+    <dd>{{% md %}}Parameters that define your deployment, including the deployment
+configuration and relevant templates.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -487,9 +519,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on create and update. Valid values are 'CREATE_OR_ACQUIRE'
-(default) or 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist, the deployment will fail. Note that
-updating this field does not actually affect the deployment, just how it is updated.
+    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
+create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
+`ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
+the deployment will fail. Note that updating this field does not
+actually affect the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -498,10 +532,12 @@ updating this field does not actually affect the deployment, just how it is upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete. Valid values are 'DELETE' (default) or 'ABANDON'. If
-'DELETE', resource is deleted after removal from Deployment Manager. If 'ABANDON', the resource is only removed from
-Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,
-just how it is updated.
+    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
+Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
+resource is deleted after removal from Deployment Manager. If
+`ABANDON`, the resource is only removed from Deployment Manager
+and is not actually deleted. Note that updating this field does not
+actually change the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -519,7 +555,7 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">List[Deployment<wbr>Label]</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -528,7 +564,8 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the deployment
+    <dd>{{% md %}}The name of the template to import, as declared in the YAML
+configuration.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -537,10 +574,14 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources that are not actually instantiated. This allows you to
-preview a deployment. It can be updated to false to actually deploy with real resources. ~>**NOTE**: Deployment Manager
-does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
-deployments if either preview is updated to true or if other fields are updated while preview is true.
+    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
+that are not actually instantiated. This allows you to preview a
+deployment. It can be updated to false to actually deploy
+with real resources.
+~>**NOTE**: Deployment Manager does not allow update
+of a deployment in preview (unless updating to preview=false). Thus,
+the provider will force-recreate deployments if either preview is updated
+to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -744,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Deployment Resource {#look-up}
 
 Get an existing Deployment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/deploymentmanager/#DeploymentState">DeploymentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/deploymentmanager/#Deployment">Deployment</a></span></code></pre></div>
@@ -871,9 +912,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on create and update. Valid values are 'CREATE_OR_ACQUIRE'
-(default) or 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist, the deployment will fail. Note that
-updating this field does not actually affect the deployment, just how it is updated.
+    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
+create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
+`ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
+the deployment will fail. Note that updating this field does not
+actually affect the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -882,10 +925,12 @@ updating this field does not actually affect the deployment, just how it is upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete. Valid values are 'DELETE' (default) or 'ABANDON'. If
-'DELETE', resource is deleted after removal from Deployment Manager. If 'ABANDON', the resource is only removed from
-Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,
-just how it is updated.
+    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
+Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
+resource is deleted after removal from Deployment Manager. If
+`ABANDON`, the resource is only removed from Deployment Manager
+and is not actually deleted. Note that updating this field does not
+actually change the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -912,7 +957,7 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">List&lt;Deployment<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -930,7 +975,8 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the deployment
+    <dd>{{% md %}}The name of the template to import, as declared in the YAML
+configuration.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -939,10 +985,14 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources that are not actually instantiated. This allows you to
-preview a deployment. It can be updated to false to actually deploy with real resources. ~>**NOTE**: Deployment Manager
-does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
-deployments if either preview is updated to true or if other fields are updated while preview is true.
+    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
+that are not actually instantiated. This allows you to preview a
+deployment. It can be updated to false to actually deploy
+with real resources.
+~>**NOTE**: Deployment Manager does not allow update
+of a deployment in preview (unless updating to preview=false). Thus,
+the provider will force-recreate deployments if either preview is updated
+to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -970,7 +1020,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define your deployment, including the deployment configuration and relevant templates.
+    <dd>{{% md %}}Parameters that define your deployment, including the deployment
+configuration and relevant templates.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -986,9 +1037,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on create and update. Valid values are 'CREATE_OR_ACQUIRE'
-(default) or 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist, the deployment will fail. Note that
-updating this field does not actually affect the deployment, just how it is updated.
+    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
+create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
+`ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
+the deployment will fail. Note that updating this field does not
+actually affect the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -997,10 +1050,12 @@ updating this field does not actually affect the deployment, just how it is upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete. Valid values are 'DELETE' (default) or 'ABANDON'. If
-'DELETE', resource is deleted after removal from Deployment Manager. If 'ABANDON', the resource is only removed from
-Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,
-just how it is updated.
+    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
+Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
+resource is deleted after removal from Deployment Manager. If
+`ABANDON`, the resource is only removed from Deployment Manager
+and is not actually deleted. Note that updating this field does not
+actually change the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1027,7 +1082,7 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">[]Deployment<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1045,7 +1100,8 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the deployment
+    <dd>{{% md %}}The name of the template to import, as declared in the YAML
+configuration.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1054,10 +1110,14 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources that are not actually instantiated. This allows you to
-preview a deployment. It can be updated to false to actually deploy with real resources. ~>**NOTE**: Deployment Manager
-does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
-deployments if either preview is updated to true or if other fields are updated while preview is true.
+    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
+that are not actually instantiated. This allows you to preview a
+deployment. It can be updated to false to actually deploy
+with real resources.
+~>**NOTE**: Deployment Manager does not allow update
+of a deployment in preview (unless updating to preview=false). Thus,
+the provider will force-recreate deployments if either preview is updated
+to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1085,7 +1145,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define your deployment, including the deployment configuration and relevant templates.
+    <dd>{{% md %}}Parameters that define your deployment, including the deployment
+configuration and relevant templates.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1101,9 +1162,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on create and update. Valid values are 'CREATE_OR_ACQUIRE'
-(default) or 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist, the deployment will fail. Note that
-updating this field does not actually affect the deployment, just how it is updated.
+    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
+create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
+`ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
+the deployment will fail. Note that updating this field does not
+actually affect the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1112,10 +1175,12 @@ updating this field does not actually affect the deployment, just how it is upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete. Valid values are 'DELETE' (default) or 'ABANDON'. If
-'DELETE', resource is deleted after removal from Deployment Manager. If 'ABANDON', the resource is only removed from
-Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,
-just how it is updated.
+    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
+Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
+resource is deleted after removal from Deployment Manager. If
+`ABANDON`, the resource is only removed from Deployment Manager
+and is not actually deleted. Note that updating this field does not
+actually change the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1142,7 +1207,7 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">Deployment<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1160,7 +1225,8 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the deployment
+    <dd>{{% md %}}The name of the template to import, as declared in the YAML
+configuration.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1169,10 +1235,14 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources that are not actually instantiated. This allows you to
-preview a deployment. It can be updated to false to actually deploy with real resources. ~>**NOTE**: Deployment Manager
-does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
-deployments if either preview is updated to true or if other fields are updated while preview is true.
+    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
+that are not actually instantiated. This allows you to preview a
+deployment. It can be updated to false to actually deploy
+with real resources.
+~>**NOTE**: Deployment Manager does not allow update
+of a deployment in preview (unless updating to preview=false). Thus,
+the provider will force-recreate deployments if either preview is updated
+to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1200,7 +1270,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define your deployment, including the deployment configuration and relevant templates.
+    <dd>{{% md %}}Parameters that define your deployment, including the deployment
+configuration and relevant templates.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1216,9 +1287,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on create and update. Valid values are 'CREATE_OR_ACQUIRE'
-(default) or 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist, the deployment will fail. Note that
-updating this field does not actually affect the deployment, just how it is updated.
+    <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
+create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
+`ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
+the deployment will fail. Note that updating this field does not
+actually affect the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1227,10 +1300,12 @@ updating this field does not actually affect the deployment, just how it is upda
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete. Valid values are 'DELETE' (default) or 'ABANDON'. If
-'DELETE', resource is deleted after removal from Deployment Manager. If 'ABANDON', the resource is only removed from
-Deployment Manager and is not actually deleted. Note that updating this field does not actually change the deployment,
-just how it is updated.
+    <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
+Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
+resource is deleted after removal from Deployment Manager. If
+`ABANDON`, the resource is only removed from Deployment Manager
+and is not actually deleted. Note that updating this field does not
+actually change the deployment, just how it is updated.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1257,7 +1332,7 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">List[Deployment<wbr>Label]</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1275,7 +1350,8 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the deployment
+    <dd>{{% md %}}The name of the template to import, as declared in the YAML
+configuration.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1284,10 +1360,14 @@ just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources that are not actually instantiated. This allows you to
-preview a deployment. It can be updated to false to actually deploy with real resources. ~>**NOTE**: Deployment Manager
-does not allow update of a deployment in preview (unless updating to preview=false). Thus, Terraform will force-recreate
-deployments if either preview is updated to true or if other fields are updated while preview is true.
+    <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
+that are not actually instantiated. This allows you to preview a
+deployment. It can be updated to false to actually deploy
+with real resources.
+~>**NOTE**: Deployment Manager does not allow update
+of a deployment in preview (unless updating to preview=false). Thus,
+the provider will force-recreate deployments if either preview is updated
+to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1315,7 +1395,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Dict[Deployment<wbr>Target]</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define your deployment, including the deployment configuration and relevant templates.
+    <dd>{{% md %}}Parameters that define your deployment, including the deployment
+configuration and relevant templates.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1341,6 +1422,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Inputs.DeploymentLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Outputs.DeploymentLabel.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1354,7 +1438,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Key for label.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1362,7 +1447,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of label.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1377,7 +1463,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Key for label.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1385,7 +1472,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of label.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1400,7 +1488,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Key for label.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1408,7 +1497,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of label.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1423,7 +1513,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Key for label.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1431,7 +1522,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value of label.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1448,6 +1540,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Inputs.DeploymentTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Outputs.DeploymentTarget.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1461,7 +1556,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The root configuration file to use for this deployment.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1469,7 +1565,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetimport">List&lt;Deployment<wbr>Target<wbr>Import<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies import files for this configuration. This can be
+used to import templates or other files. For example, you might
+import a text file in order to use the file in a template.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1484,7 +1583,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The root configuration file to use for this deployment.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1492,7 +1592,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetimport">[]Deployment<wbr>Target<wbr>Import</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies import files for this configuration. This can be
+used to import templates or other files. For example, you might
+import a text file in order to use the file in a template.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1507,7 +1610,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The root configuration file to use for this deployment.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1515,7 +1619,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetimport">Deployment<wbr>Target<wbr>Import[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies import files for this configuration. This can be
+used to import templates or other files. For example, you might
+import a text file in order to use the file in a template.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1530,7 +1637,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetconfig">Dict[Deployment<wbr>Target<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The root configuration file to use for this deployment.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1538,7 +1646,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetimport">List[Deployment<wbr>Target<wbr>Import]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies import files for this configuration. This can be
+used to import templates or other files. For example, you might
+import a text file in order to use the file in a template.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1555,6 +1666,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentTargetConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentTargetConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Inputs.DeploymentTargetConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Outputs.DeploymentTargetConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1568,7 +1682,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full contents of the template that you want to import.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1583,7 +1698,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full contents of the template that you want to import.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1598,7 +1714,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full contents of the template that you want to import.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1613,7 +1730,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full contents of the template that you want to import.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1630,6 +1748,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentTargetImportArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentTargetImportOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Inputs.DeploymentTargetImportArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Outputs.DeploymentTargetImport.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1643,7 +1764,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full contents of the template that you want to import.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1651,7 +1773,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the template to import, as declared in the YAML
+configuration.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1666,7 +1790,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full contents of the template that you want to import.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1674,7 +1799,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the template to import, as declared in the YAML
+configuration.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1689,7 +1816,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full contents of the template that you want to import.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1697,7 +1825,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the template to import, as declared in the YAML
+configuration.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1712,7 +1842,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full contents of the template that you want to import.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1720,7 +1851,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the template to import, as declared in the YAML
+configuration.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1739,8 +1872,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

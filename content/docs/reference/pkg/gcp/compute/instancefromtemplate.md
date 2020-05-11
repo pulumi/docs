@@ -1,7 +1,8 @@
 
 ---
 title: "InstanceFromTemplate"
-block_external_search_index: true
+title_tag: "Resource InstanceFromTemplate | Module compute | Package GCP"
+meta_desc: "Explore the InstanceFromTemplate resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a VM instance resource within GCE. For more information see"
 ---
 
 
@@ -25,7 +26,7 @@ This resource is specifically to create a compute instance from a given
 
 
 ## Create a InstanceFromTemplate Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -33,7 +34,7 @@ This resource is specifically to create a compute instance from a given
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceFromTemplate</span><span class="p">(resource_name, opts=None, </span>allow_stopping_for_update=None<span class="p">, </span>attached_disks=None<span class="p">, </span>boot_disk=None<span class="p">, </span>can_ip_forward=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>description=None<span class="p">, </span>desired_status=None<span class="p">, </span>enable_display=None<span class="p">, </span>guest_accelerators=None<span class="p">, </span>hostname=None<span class="p">, </span>labels=None<span class="p">, </span>machine_type=None<span class="p">, </span>metadata=None<span class="p">, </span>metadata_startup_script=None<span class="p">, </span>min_cpu_platform=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>project=None<span class="p">, </span>scheduling=None<span class="p">, </span>scratch_disks=None<span class="p">, </span>service_account=None<span class="p">, </span>shielded_instance_config=None<span class="p">, </span>source_instance_template=None<span class="p">, </span>tags=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceFromTemplate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_stopping_for_update=None<span class="p">, </span>attached_disks=None<span class="p">, </span>boot_disk=None<span class="p">, </span>can_ip_forward=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>description=None<span class="p">, </span>desired_status=None<span class="p">, </span>enable_display=None<span class="p">, </span>guest_accelerators=None<span class="p">, </span>hostname=None<span class="p">, </span>labels=None<span class="p">, </span>machine_type=None<span class="p">, </span>metadata=None<span class="p">, </span>metadata_startup_script=None<span class="p">, </span>min_cpu_platform=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>project=None<span class="p">, </span>resource_policies=None<span class="p">, </span>scheduling=None<span class="p">, </span>scratch_disks=None<span class="p">, </span>service_account=None<span class="p">, </span>shielded_instance_config=None<span class="p">, </span>source_instance_template=None<span class="p">, </span>tags=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -363,6 +364,14 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Resource<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Scheduling</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
@@ -569,6 +578,14 @@ Changing this forces a new resource to be created.
     <dt class="property-optional"
             title="Optional">
         <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Policies</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -789,6 +806,14 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span>resource<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>scheduling</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling</a></span>
@@ -995,6 +1020,14 @@ Changing this forces a new resource to be created.
     <dt class="property-optional"
             title="Optional">
         <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource_<wbr>policies</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1357,14 +1390,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing InstanceFromTemplate Resource {#look-up}
 
 Get an existing InstanceFromTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InstanceFromTemplateState">InstanceFromTemplateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InstanceFromTemplate">InstanceFromTemplate</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allow_stopping_for_update=None<span class="p">, </span>attached_disks=None<span class="p">, </span>boot_disk=None<span class="p">, </span>can_ip_forward=None<span class="p">, </span>cpu_platform=None<span class="p">, </span>current_status=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>description=None<span class="p">, </span>desired_status=None<span class="p">, </span>enable_display=None<span class="p">, </span>guest_accelerators=None<span class="p">, </span>hostname=None<span class="p">, </span>instance_id=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>labels=None<span class="p">, </span>machine_type=None<span class="p">, </span>metadata=None<span class="p">, </span>metadata_fingerprint=None<span class="p">, </span>metadata_startup_script=None<span class="p">, </span>min_cpu_platform=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>project=None<span class="p">, </span>scheduling=None<span class="p">, </span>scratch_disks=None<span class="p">, </span>self_link=None<span class="p">, </span>service_account=None<span class="p">, </span>shielded_instance_config=None<span class="p">, </span>source_instance_template=None<span class="p">, </span>tags=None<span class="p">, </span>tags_fingerprint=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allow_stopping_for_update=None<span class="p">, </span>attached_disks=None<span class="p">, </span>boot_disk=None<span class="p">, </span>can_ip_forward=None<span class="p">, </span>cpu_platform=None<span class="p">, </span>current_status=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>description=None<span class="p">, </span>desired_status=None<span class="p">, </span>enable_display=None<span class="p">, </span>guest_accelerators=None<span class="p">, </span>hostname=None<span class="p">, </span>instance_id=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>labels=None<span class="p">, </span>machine_type=None<span class="p">, </span>metadata=None<span class="p">, </span>metadata_fingerprint=None<span class="p">, </span>metadata_startup_script=None<span class="p">, </span>min_cpu_platform=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>project=None<span class="p">, </span>resource_policies=None<span class="p">, </span>scheduling=None<span class="p">, </span>scratch_disks=None<span class="p">, </span>self_link=None<span class="p">, </span>service_account=None<span class="p">, </span>shielded_instance_config=None<span class="p">, </span>source_instance_template=None<span class="p">, </span>tags=None<span class="p">, </span>tags_fingerprint=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1666,6 +1699,14 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Resource<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Scheduling</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
@@ -1928,6 +1969,14 @@ Changing this forces a new resource to be created.
     <dt class="property-optional"
             title="Optional">
         <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Policies</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2204,6 +2253,14 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span>resource<wbr>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>scheduling</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling</a></span>
@@ -2473,6 +2530,14 @@ Changing this forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span>resource_<wbr>policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>scheduling</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefromtemplatescheduling">Dict[Instance<wbr>From<wbr>Template<wbr>Scheduling]</a></span>
@@ -2569,6 +2634,9 @@ set, the provider zone is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateAttachedDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateAttachedDiskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceFromTemplateAttachedDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceFromTemplateAttachedDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2804,6 +2872,9 @@ set, the provider zone is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateBootDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateBootDiskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceFromTemplateBootDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceFromTemplateBootDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3104,6 +3175,9 @@ set, the provider zone is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateBootDiskInitializeParamsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateBootDiskInitializeParamsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceFromTemplateBootDiskInitializeParamsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceFromTemplateBootDiskInitializeParams.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3275,6 +3349,9 @@ set, the provider zone is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateGuestAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateGuestAcceleratorOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceFromTemplateGuestAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceFromTemplateGuestAccelerator.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3381,6 +3458,9 @@ set, the provider zone is used.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateNetworkInterfaceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceFromTemplateNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceFromTemplateNetworkInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3657,6 +3737,9 @@ Changing this forces a new resource to be created.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateNetworkInterfaceAccessConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateNetworkInterfaceAccessConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceFromTemplateNetworkInterfaceAccessConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceFromTemplateNetworkInterfaceAccessConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3796,6 +3879,9 @@ Changing this forces a new resource to be created.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateNetworkInterfaceAliasIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateNetworkInterfaceAliasIpRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceFromTemplateNetworkInterfaceAliasIpRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceFromTemplateNetworkInterfaceAliasIpRange.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3902,6 +3988,9 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateSchedulingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateSchedulingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceFromTemplateSchedulingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceFromTemplateScheduling.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4074,6 +4163,9 @@ Changing this forces a new resource to be created.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateSchedulingNodeAffinityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateSchedulingNodeAffinityOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceFromTemplateSchedulingNodeAffinityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceFromTemplateSchedulingNodeAffinity.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4213,6 +4305,9 @@ Changing this forces a new resource to be created.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateScratchDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateScratchDiskOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceFromTemplateScratchDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceFromTemplateScratchDisk.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4287,6 +4382,9 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateServiceAccountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateServiceAccountOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceFromTemplateServiceAccountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceFromTemplateServiceAccount.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4394,6 +4492,9 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateShieldedInstanceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InstanceFromTemplateShieldedInstanceConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.InstanceFromTemplateShieldedInstanceConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InstanceFromTemplateShieldedInstanceConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4536,8 +4637,7 @@ Changing this forces a new resource to be created.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

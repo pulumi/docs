@@ -12,10 +12,26 @@ meta_desc: "Explore the SecretBackendRole resource of the pkiSecret module, incl
 
 Creates a role on an PKI Secret Backend for Vault.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
@@ -29,14 +45,13 @@ const role = new vault.pkiSecret.SecretBackendRole("role", {
     backend: pki.path,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a SecretBackendRole Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -44,7 +59,7 @@ const role = new vault.pkiSecret.SecretBackendRole("role", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendRole</span><span class="p">(resource_name, opts=None, </span>allow_any_name=None<span class="p">, </span>allow_bare_domains=None<span class="p">, </span>allow_glob_domains=None<span class="p">, </span>allow_ip_sans=None<span class="p">, </span>allow_localhost=None<span class="p">, </span>allow_subdomains=None<span class="p">, </span>allowed_domains=None<span class="p">, </span>allowed_other_sans=None<span class="p">, </span>allowed_uri_sans=None<span class="p">, </span>backend=None<span class="p">, </span>basic_constraints_valid_for_non_ca=None<span class="p">, </span>client_flag=None<span class="p">, </span>code_signing_flag=None<span class="p">, </span>countries=None<span class="p">, </span>email_protection_flag=None<span class="p">, </span>enforce_hostnames=None<span class="p">, </span>ext_key_usages=None<span class="p">, </span>generate_lease=None<span class="p">, </span>key_bits=None<span class="p">, </span>key_type=None<span class="p">, </span>key_usages=None<span class="p">, </span>localities=None<span class="p">, </span>max_ttl=None<span class="p">, </span>name=None<span class="p">, </span>no_store=None<span class="p">, </span>not_before_duration=None<span class="p">, </span>organization_unit=None<span class="p">, </span>organizations=None<span class="p">, </span>policy_identifiers=None<span class="p">, </span>postal_codes=None<span class="p">, </span>provinces=None<span class="p">, </span>require_cn=None<span class="p">, </span>server_flag=None<span class="p">, </span>street_addresses=None<span class="p">, </span>ttl=None<span class="p">, </span>use_csr_common_name=None<span class="p">, </span>use_csr_sans=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendRole</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_any_name=None<span class="p">, </span>allow_bare_domains=None<span class="p">, </span>allow_glob_domains=None<span class="p">, </span>allow_ip_sans=None<span class="p">, </span>allow_localhost=None<span class="p">, </span>allow_subdomains=None<span class="p">, </span>allowed_domains=None<span class="p">, </span>allowed_other_sans=None<span class="p">, </span>allowed_uri_sans=None<span class="p">, </span>backend=None<span class="p">, </span>basic_constraints_valid_for_non_ca=None<span class="p">, </span>client_flag=None<span class="p">, </span>code_signing_flag=None<span class="p">, </span>countries=None<span class="p">, </span>email_protection_flag=None<span class="p">, </span>enforce_hostnames=None<span class="p">, </span>ext_key_usages=None<span class="p">, </span>generate_lease=None<span class="p">, </span>key_bits=None<span class="p">, </span>key_type=None<span class="p">, </span>key_usages=None<span class="p">, </span>localities=None<span class="p">, </span>max_ttl=None<span class="p">, </span>name=None<span class="p">, </span>no_store=None<span class="p">, </span>not_before_duration=None<span class="p">, </span>organization_unit=None<span class="p">, </span>organizations=None<span class="p">, </span>policy_identifiers=None<span class="p">, </span>postal_codes=None<span class="p">, </span>provinces=None<span class="p">, </span>require_cn=None<span class="p">, </span>server_flag=None<span class="p">, </span>street_addresses=None<span class="p">, </span>ttl=None<span class="p">, </span>use_csr_common_name=None<span class="p">, </span>use_csr_sans=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1652,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SecretBackendRole Resource {#look-up}
 
 Get an existing SecretBackendRole resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendRoleState">SecretBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendRole">SecretBackendRole</a></span></code></pre></div>

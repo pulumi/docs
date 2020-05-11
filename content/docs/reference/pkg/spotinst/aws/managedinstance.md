@@ -14,7 +14,7 @@ meta_desc: "Explore the ManagedInstance resource of the aws module, including ex
 
 
 ## Create a ManagedInstance Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the ManagedInstance resource of the aws module, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ManagedInstance</span><span class="p">(resource_name, opts=None, </span>auto_healing=None<span class="p">, </span>block_devices_mode=None<span class="p">, </span>cpu_credits=None<span class="p">, </span>description=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_ip=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>fall_back_to_od=None<span class="p">, </span>grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_types=None<span class="p">, </span>integration_route53=None<span class="p">, </span>key_pair=None<span class="p">, </span>life_cycle=None<span class="p">, </span>load_balancers=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>optimization_windows=None<span class="p">, </span>orientation=None<span class="p">, </span>persist_block_devices=None<span class="p">, </span>persist_private_ip=None<span class="p">, </span>persist_root_device=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>preferred_type=None<span class="p">, </span>private_ip=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>revert_to_spot=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>unhealthy_duration=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ManagedInstance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_healing=None<span class="p">, </span>block_devices_mode=None<span class="p">, </span>cpu_credits=None<span class="p">, </span>description=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_ip=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>fall_back_to_od=None<span class="p">, </span>grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_types=None<span class="p">, </span>integration_route53=None<span class="p">, </span>key_pair=None<span class="p">, </span>life_cycle=None<span class="p">, </span>load_balancers=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>optimization_windows=None<span class="p">, </span>orientation=None<span class="p">, </span>persist_block_devices=None<span class="p">, </span>persist_private_ip=None<span class="p">, </span>persist_root_device=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>preferred_type=None<span class="p">, </span>private_ip=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>revert_to_spot=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>unhealthy_duration=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1746,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ManagedInstance Resource {#look-up}
 
 Get an existing ManagedInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#ManagedInstanceState">ManagedInstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#ManagedInstance">ManagedInstance</a></span></code></pre></div>
@@ -3359,6 +3359,9 @@ Default: `"false"`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceIntegrationRoute53Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceIntegrationRoute53Output">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.ManagedInstanceIntegrationRoute53Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.ManagedInstanceIntegrationRoute53.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3433,6 +3436,9 @@ Default: `"false"`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceIntegrationRoute53DomainArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceIntegrationRoute53DomainOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.ManagedInstanceIntegrationRoute53DomainArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.ManagedInstanceIntegrationRoute53Domain.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3573,6 +3579,9 @@ Default: `"false"`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceIntegrationRoute53DomainRecordSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceIntegrationRoute53DomainRecordSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.ManagedInstanceIntegrationRoute53DomainRecordSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.ManagedInstanceIntegrationRoute53DomainRecordSet.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3683,6 +3692,9 @@ Default: `"false"`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceLoadBalancerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceLoadBalancerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.ManagedInstanceLoadBalancerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.ManagedInstanceLoadBalancer.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3955,6 +3967,9 @@ Default: `"false"`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceNetworkInterfaceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.ManagedInstanceNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.ManagedInstanceNetworkInterface.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4094,6 +4109,9 @@ Default: `"false"`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceRevertToSpotArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceRevertToSpotOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.ManagedInstanceRevertToSpotArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.ManagedInstanceRevertToSpot.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4176,6 +4194,9 @@ Default `"never"`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceScheduledTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceScheduledTaskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.ManagedInstanceScheduledTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.ManagedInstanceScheduledTask.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4379,6 +4400,9 @@ Default `"never"`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ManagedInstanceTagOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.ManagedInstanceTagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.ManagedInstanceTag.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -1,7 +1,8 @@
 
 ---
 title: "AccessLevel"
-block_external_search_index: true
+title_tag: "Resource AccessLevel | Module accesscontextmanager | Package GCP"
+meta_desc: "Explore the AccessLevel resource of the accesscontextmanager module, including examples, input properties, output properties, lookup functions, and supporting types. An AccessLevel is a label that can be applied to requests to GCP services,"
 ---
 
 
@@ -54,7 +55,7 @@ const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy",
 
 
 ## Create a AccessLevel Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -62,7 +63,7 @@ const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AccessLevel</span><span class="p">(resource_name, opts=None, </span>basic=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>title=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AccessLevel</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>title=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -240,7 +241,8 @@ The AccessLevel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -258,7 +260,7 @@ The AccessLevel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -276,8 +278,9 @@ The AccessLevel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin with a letter and only include alphanumeric and
-'_'. Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin
+with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 {{% /md %}}</dd>
 
 </dl>
@@ -293,7 +296,8 @@ The AccessLevel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -311,7 +315,7 @@ The AccessLevel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -329,8 +333,9 @@ The AccessLevel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin with a letter and only include alphanumeric and
-'_'. Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin
+with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 {{% /md %}}</dd>
 
 </dl>
@@ -346,7 +351,8 @@ The AccessLevel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -364,7 +370,7 @@ The AccessLevel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -382,8 +388,9 @@ The AccessLevel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin with a letter and only include alphanumeric and
-'_'. Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin
+with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 {{% /md %}}</dd>
 
 </dl>
@@ -399,7 +406,8 @@ The AccessLevel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -417,7 +425,7 @@ The AccessLevel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Dict[Access<wbr>Level<wbr>Basic]</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -435,8 +443,9 @@ The AccessLevel resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin with a letter and only include alphanumeric and
-'_'. Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin
+with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 {{% /md %}}</dd>
 
 </dl>
@@ -522,7 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AccessLevel Resource {#look-up}
 
 Get an existing AccessLevel resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/accesscontextmanager/#AccessLevelState">AccessLevelState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/accesscontextmanager/#AccessLevel">AccessLevel</a></span></code></pre></div>
@@ -649,7 +658,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -667,8 +676,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin with a letter and only include alphanumeric and
-'_'. Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin
+with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -677,7 +687,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -702,7 +713,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -720,8 +731,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin with a letter and only include alphanumeric and
-'_'. Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin
+with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -730,7 +742,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -755,7 +768,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -773,8 +786,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin with a letter and only include alphanumeric and
-'_'. Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin
+with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -783,7 +797,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -808,7 +823,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Dict[Access<wbr>Level<wbr>Basic]</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -826,8 +841,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin with a letter and only include alphanumeric and
-'_'. Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+    <dd>{{% md %}}Resource name for the Access Level. The short_name component must begin
+with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -836,7 +852,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this AccessLevel lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -871,6 +888,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.AccessLevelBasic.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -884,7 +904,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasiccondition">List&lt;Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -892,7 +913,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How the conditions list should be combined to determine if a request
+is granted this AccessLevel. If AND is used, each Condition in
+conditions must be satisfied for the AccessLevel to be applied. If
+OR is used, at least one Condition in conditions must be satisfied
+for the AccessLevel to be applied. Defaults to AND if unspecified.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -907,7 +933,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasiccondition">[]Access<wbr>Level<wbr>Basic<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -915,7 +942,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How the conditions list should be combined to determine if a request
+is granted this AccessLevel. If AND is used, each Condition in
+conditions must be satisfied for the AccessLevel to be applied. If
+OR is used, at least one Condition in conditions must be satisfied
+for the AccessLevel to be applied. Defaults to AND if unspecified.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -930,7 +962,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasiccondition">Access<wbr>Level<wbr>Basic<wbr>Condition[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -938,7 +971,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How the conditions list should be combined to determine if a request
+is granted this AccessLevel. If AND is used, each Condition in
+conditions must be satisfied for the AccessLevel to be applied. If
+OR is used, at least one Condition in conditions must be satisfied
+for the AccessLevel to be applied. Defaults to AND if unspecified.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -953,7 +991,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasiccondition">List[Access<wbr>Level<wbr>Basic<wbr>Condition]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -961,7 +1000,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How the conditions list should be combined to determine if a request
+is granted this AccessLevel. If AND is used, each Condition in
+conditions must be satisfied for the AccessLevel to be applied. If
+OR is used, at least one Condition in conditions must be satisfied
+for the AccessLevel to be applied. Defaults to AND if unspecified.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -978,6 +1022,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.AccessLevelBasicCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -991,7 +1038,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicy">Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
+the Condition to be true. If not specified, all devices are
+allowed.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -999,7 +1049,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of CIDR block IP subnetwork specification. May be IPv4
+or IPv6.
+Note that for a CIDR IP address block, the specified IP address
+portion must be properly truncated (i.e. all the host bits must
+be zero) or the input is considered malformed. For example,
+"192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly,
+for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
+is not. The originating IP of a request must be in one of the
+listed subnets in order for this Condition to be true.
+If empty, all IP addresses are allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1007,7 +1067,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An allowed list of members (users, service accounts).
+Using groups is not supported yet.
+The signed-in user originating the request must be a part of one
+of the provided members. If not specified, a request may come
+from any user (logged in/not logged in, not present in any
+groups, etc.).
+Formats: `user:{emailid}`, `serviceAccount:{emailid}`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1015,7 +1082,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes
+a NAND over its non-empty fields, each field must be false for
+the Condition overall to be satisfied. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1023,7 +1093,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request must originate from one of the provided
+countries/regions.
+Format: A valid ISO 3166-1 alpha-2 code.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1031,7 +1104,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of other access levels defined in the same Policy,
+referenced by resource name. Referencing an AccessLevel which
+does not exist is an error. All access levels listed must be
+granted for the Condition to be true.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1046,7 +1124,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicy">Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
+the Condition to be true. If not specified, all devices are
+allowed.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1054,7 +1135,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of CIDR block IP subnetwork specification. May be IPv4
+or IPv6.
+Note that for a CIDR IP address block, the specified IP address
+portion must be properly truncated (i.e. all the host bits must
+be zero) or the input is considered malformed. For example,
+"192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly,
+for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
+is not. The originating IP of a request must be in one of the
+listed subnets in order for this Condition to be true.
+If empty, all IP addresses are allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1062,7 +1153,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An allowed list of members (users, service accounts).
+Using groups is not supported yet.
+The signed-in user originating the request must be a part of one
+of the provided members. If not specified, a request may come
+from any user (logged in/not logged in, not present in any
+groups, etc.).
+Formats: `user:{emailid}`, `serviceAccount:{emailid}`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1070,7 +1168,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes
+a NAND over its non-empty fields, each field must be false for
+the Condition overall to be satisfied. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1078,7 +1179,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request must originate from one of the provided
+countries/regions.
+Format: A valid ISO 3166-1 alpha-2 code.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1086,7 +1190,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of other access levels defined in the same Policy,
+referenced by resource name. Referencing an AccessLevel which
+does not exist is an error. All access levels listed must be
+granted for the Condition to be true.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1101,7 +1210,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicy">Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
+the Condition to be true. If not specified, all devices are
+allowed.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1109,7 +1221,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of CIDR block IP subnetwork specification. May be IPv4
+or IPv6.
+Note that for a CIDR IP address block, the specified IP address
+portion must be properly truncated (i.e. all the host bits must
+be zero) or the input is considered malformed. For example,
+"192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly,
+for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
+is not. The originating IP of a request must be in one of the
+listed subnets in order for this Condition to be true.
+If empty, all IP addresses are allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1117,7 +1239,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An allowed list of members (users, service accounts).
+Using groups is not supported yet.
+The signed-in user originating the request must be a part of one
+of the provided members. If not specified, a request may come
+from any user (logged in/not logged in, not present in any
+groups, etc.).
+Formats: `user:{emailid}`, `serviceAccount:{emailid}`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1125,7 +1254,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes
+a NAND over its non-empty fields, each field must be false for
+the Condition overall to be satisfied. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1133,7 +1265,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request must originate from one of the provided
+countries/regions.
+Format: A valid ISO 3166-1 alpha-2 code.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1141,7 +1276,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of other access levels defined in the same Policy,
+referenced by resource name. Referencing an AccessLevel which
+does not exist is an error. All access levels listed must be
+granted for the Condition to be true.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1156,7 +1296,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicy">Dict[Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
+the Condition to be true. If not specified, all devices are
+allowed.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1164,7 +1307,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of CIDR block IP subnetwork specification. May be IPv4
+or IPv6.
+Note that for a CIDR IP address block, the specified IP address
+portion must be properly truncated (i.e. all the host bits must
+be zero) or the input is considered malformed. For example,
+"192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly,
+for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
+is not. The originating IP of a request must be in one of the
+listed subnets in order for this Condition to be true.
+If empty, all IP addresses are allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1172,7 +1325,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An allowed list of members (users, service accounts).
+Using groups is not supported yet.
+The signed-in user originating the request must be a part of one
+of the provided members. If not specified, a request may come
+from any user (logged in/not logged in, not present in any
+groups, etc.).
+Formats: `user:{emailid}`, `serviceAccount:{emailid}`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1180,7 +1340,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes
+a NAND over its non-empty fields, each field must be false for
+the Condition overall to be satisfied. Defaults to false.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1188,7 +1351,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The request must originate from one of the provided
+countries/regions.
+Format: A valid ISO 3166-1 alpha-2 code.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1196,7 +1362,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of other access levels defined in the same Policy,
+referenced by resource name. Referencing an AccessLevel which
+does not exist is an error. All access levels listed must be
+granted for the Condition to be true.
+Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1213,6 +1384,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicConditionDevicePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicConditionDevicePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.AccessLevelBasicConditionDevicePolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1226,7 +1400,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of allowed device management levels.
+An empty list allows all management levels.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1234,7 +1410,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of allowed encryptions statuses.
+An empty list allows all statuses.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1242,7 +1420,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicyosconstraint">List&lt;Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of allowed OS versions.
+An empty list allows all types and all versions.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1250,7 +1430,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the device needs to be approved by the customer admin.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1258,7 +1439,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the device needs to be corp owned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1266,7 +1448,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy
+to be true. Defaults to false.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1281,7 +1465,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of allowed device management levels.
+An empty list allows all management levels.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1289,7 +1475,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of allowed encryptions statuses.
+An empty list allows all statuses.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1297,7 +1485,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicyosconstraint">[]Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of allowed OS versions.
+An empty list allows all types and all versions.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1305,7 +1495,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the device needs to be approved by the customer admin.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1313,7 +1504,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the device needs to be corp owned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1321,7 +1513,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy
+to be true. Defaults to false.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1336,7 +1530,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of allowed device management levels.
+An empty list allows all management levels.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1344,7 +1540,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of allowed encryptions statuses.
+An empty list allows all statuses.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1352,7 +1550,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicyosconstraint">Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of allowed OS versions.
+An empty list allows all types and all versions.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1360,7 +1560,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the device needs to be approved by the customer admin.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1368,7 +1569,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the device needs to be corp owned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1376,7 +1578,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy
+to be true. Defaults to false.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1391,7 +1595,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of allowed device management levels.
+An empty list allows all management levels.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1399,7 +1605,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of allowed encryptions statuses.
+An empty list allows all statuses.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1407,7 +1615,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicyosconstraint">List[Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of allowed OS versions.
+An empty list allows all types and all versions.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1415,7 +1625,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the device needs to be approved by the customer admin.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1423,7 +1634,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the device needs to be corp owned.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1431,7 +1643,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy
+to be true. Defaults to false.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1448,6 +1662,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicConditionDevicePolicyOsConstraintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#AccessLevelBasicConditionDevicePolicyOsConstraintOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyOsConstraintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.AccessLevelBasicConditionDevicePolicyOsConstraint.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1461,7 +1678,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type of the device.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1469,7 +1687,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum allowed OS version. If not set, any version
+of this OS satisfies the constraint.
+Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1484,7 +1705,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type of the device.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1492,7 +1714,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum allowed OS version. If not set, any version
+of this OS satisfies the constraint.
+Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1507,7 +1732,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type of the device.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1515,7 +1741,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum allowed OS version. If not set, any version
+of this OS satisfies the constraint.
+Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1530,7 +1759,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operating system type of the device.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1538,7 +1768,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum allowed OS version. If not set, any version
+of this OS satisfies the constraint.
+Format: "major.minor.patch" such as "10.5.301", "9.2.1".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1557,8 +1790,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

@@ -13,99 +13,99 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-vsphere/issues">pulumi/pulumi-vsphere repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/issues">terraform-providers/terraform-provider-vsphere repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_vsphere"></span><dl class="class">
+<span class="target" id="module-pulumi_vsphere"></span><dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetComputeClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetComputeClusterResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetComputeClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetComputeClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_pool_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetComputeClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetContentLibraryItemResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetContentLibraryItemResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">library_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetContentLibraryItemResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetContentLibraryItemResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">library_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetContentLibraryItemResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetContentLibraryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetContentLibraryResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetContentLibraryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetContentLibraryResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetContentLibraryResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetCustomAttributeResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetCustomAttributeResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">managed_object_type=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetCustomAttributeResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetCustomAttributeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_object_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetCustomAttributeResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetDatacenterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDatacenterResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDatacenterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDatacenterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDatacenterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetDatastoreClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDatastoreClusterResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDatastoreClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDatastoreClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDatastoreClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetDatastoreResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDatastoreResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDatastoreResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDatastoreResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDatastoreResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetDistributedVirtualSwitchResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDistributedVirtualSwitchResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">uplinks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDistributedVirtualSwitchResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetDistributedVirtualSwitchResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uplinks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetDistributedVirtualSwitchResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetFolderResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetFolderResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetFolderResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetHostResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetHostResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetHostResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetHostResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_pool_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetHostResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetNetworkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">distributed_virtual_switch_uuid=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distributed_virtual_switch_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetResourcePoolResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetResourcePoolResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetResourcePoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetResourcePoolResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetResourcePoolResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetTagCategoryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetTagCategoryResult</code><span class="sig-paren">(</span><em class="sig-param">associable_types=None</em>, <em class="sig-param">cardinality=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetTagCategoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetTagCategoryResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">associable_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cardinality</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetTagCategoryResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetTagResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetTagResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetTagResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetTagResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetTagResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetVappContainerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetVappContainerResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetVappContainerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetVappContainerResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetVappContainerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetVirtualMachineResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetVirtualMachineResult</code><span class="sig-paren">(</span><em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">guest_ip_addresses=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_types=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_scan_count=None</em>, <em class="sig-param">scsi_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetVirtualMachineResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alternate_guest_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firmware</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_bus_sharing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_controller_scan_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.AwaitableGetVmfsDisksResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetVmfsDisksResult</code><span class="sig-paren">(</span><em class="sig-param">disks=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">rescan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetVmfsDisksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">AwaitableGetVmfsDisksResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rescan</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.AwaitableGetVmfsDisksResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.ComputeCluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">dpm_automation_level=None</em>, <em class="sig-param">dpm_enabled=None</em>, <em class="sig-param">dpm_threshold=None</em>, <em class="sig-param">drs_advanced_options=None</em>, <em class="sig-param">drs_automation_level=None</em>, <em class="sig-param">drs_enable_predictive_drs=None</em>, <em class="sig-param">drs_enable_vm_overrides=None</em>, <em class="sig-param">drs_enabled=None</em>, <em class="sig-param">drs_migration_threshold=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">force_evacuate_on_destroy=None</em>, <em class="sig-param">ha_admission_control_failover_host_system_ids=None</em>, <em class="sig-param">ha_admission_control_host_failure_tolerance=None</em>, <em class="sig-param">ha_admission_control_performance_tolerance=None</em>, <em class="sig-param">ha_admission_control_policy=None</em>, <em class="sig-param">ha_admission_control_resource_percentage_auto_compute=None</em>, <em class="sig-param">ha_admission_control_resource_percentage_cpu=None</em>, <em class="sig-param">ha_admission_control_resource_percentage_memory=None</em>, <em class="sig-param">ha_admission_control_slot_policy_explicit_cpu=None</em>, <em class="sig-param">ha_admission_control_slot_policy_explicit_memory=None</em>, <em class="sig-param">ha_admission_control_slot_policy_use_explicit_size=None</em>, <em class="sig-param">ha_advanced_options=None</em>, <em class="sig-param">ha_datastore_apd_recovery_action=None</em>, <em class="sig-param">ha_datastore_apd_response=None</em>, <em class="sig-param">ha_datastore_apd_response_delay=None</em>, <em class="sig-param">ha_datastore_pdl_response=None</em>, <em class="sig-param">ha_enabled=None</em>, <em class="sig-param">ha_heartbeat_datastore_ids=None</em>, <em class="sig-param">ha_heartbeat_datastore_policy=None</em>, <em class="sig-param">ha_host_isolation_response=None</em>, <em class="sig-param">ha_host_monitoring=None</em>, <em class="sig-param">ha_vm_component_protection=None</em>, <em class="sig-param">ha_vm_dependency_restart_condition=None</em>, <em class="sig-param">ha_vm_failure_interval=None</em>, <em class="sig-param">ha_vm_maximum_failure_window=None</em>, <em class="sig-param">ha_vm_maximum_resets=None</em>, <em class="sig-param">ha_vm_minimum_uptime=None</em>, <em class="sig-param">ha_vm_monitoring=None</em>, <em class="sig-param">ha_vm_restart_additional_delay=None</em>, <em class="sig-param">ha_vm_restart_priority=None</em>, <em class="sig-param">ha_vm_restart_timeout=None</em>, <em class="sig-param">host_cluster_exit_timeout=None</em>, <em class="sig-param">host_system_ids=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">proactive_ha_automation_level=None</em>, <em class="sig-param">proactive_ha_enabled=None</em>, <em class="sig-param">proactive_ha_moderate_remediation=None</em>, <em class="sig-param">proactive_ha_provider_ids=None</em>, <em class="sig-param">proactive_ha_severe_remediation=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dpm_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dpm_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dpm_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_advanced_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_enable_predictive_drs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_enable_vm_overrides</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_migration_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_evacuate_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_failover_host_system_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_host_failure_tolerance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_performance_tolerance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_resource_percentage_auto_compute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_resource_percentage_cpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_resource_percentage_memory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_slot_policy_explicit_cpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_slot_policy_explicit_memory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_slot_policy_use_explicit_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_advanced_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_apd_recovery_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_apd_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_apd_response_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_pdl_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_heartbeat_datastore_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_heartbeat_datastore_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_host_isolation_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_host_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_component_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_dependency_restart_condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_failure_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_maximum_failure_window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_maximum_resets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_minimum_uptime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_restart_additional_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_restart_priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_restart_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_cluster_exit_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proactive_ha_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proactive_ha_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proactive_ha_moderate_remediation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proactive_ha_provider_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proactive_ha_severe_remediation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ComputeCluster resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -292,108 +292,108 @@ set to <code class="docutils literal notranslate"><span class="pre">MaintenanceM
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.custom_attributes">
-<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.custom_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of custom attribute ids to attribute
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.datacenter_id">
-<code class="sig-name descname">datacenter_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.datacenter_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datacenter_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.datacenter_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object ID][docs-about-morefs] of
 the datacenter to create the cluster in. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.dpm_automation_level">
-<code class="sig-name descname">dpm_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.dpm_automation_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dpm_automation_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.dpm_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The automation level for host power
 operations in this cluster. Can be one of <code class="docutils literal notranslate"><span class="pre">manual</span></code> or <code class="docutils literal notranslate"><span class="pre">automated</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.dpm_enabled">
-<code class="sig-name descname">dpm_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.dpm_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dpm_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.dpm_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable DPM support for DRS in this cluster.
 Requires <code class="docutils literal notranslate"><span class="pre">drs_enabled</span></code> to be <code class="docutils literal notranslate"><span class="pre">true</span></code> in order to be effective.
 Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.dpm_threshold">
-<code class="sig-name descname">dpm_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.dpm_threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dpm_threshold</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.dpm_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>A value between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code> indicating the
 threshold of load within the cluster that influences host power operations.
 This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.drs_advanced_options">
-<code class="sig-name descname">drs_advanced_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.drs_advanced_options" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">drs_advanced_options</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.drs_advanced_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>A key/value map that specifies advanced
 options for DRS and DPM.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.drs_automation_level">
-<code class="sig-name descname">drs_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.drs_automation_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">drs_automation_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.drs_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default automation level for all
 virtual machines in this cluster. Can be one of <code class="docutils literal notranslate"><span class="pre">manual</span></code>,
 <code class="docutils literal notranslate"><span class="pre">partiallyAutomated</span></code>, or <code class="docutils literal notranslate"><span class="pre">fullyAutomated</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.drs_enable_predictive_drs">
-<code class="sig-name descname">drs_enable_predictive_drs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.drs_enable_predictive_drs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">drs_enable_predictive_drs</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.drs_enable_predictive_drs" title="Permalink to this definition">¶</a></dt>
 <dd><p>When <code class="docutils literal notranslate"><span class="pre">true</span></code>, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
 recommendations. <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.drs_enable_vm_overrides">
-<code class="sig-name descname">drs_enable_vm_overrides</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.drs_enable_vm_overrides" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">drs_enable_vm_overrides</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.drs_enable_vm_overrides" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.drs_enabled">
-<code class="sig-name descname">drs_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.drs_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">drs_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.drs_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable DRS for this cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.drs_migration_threshold">
-<code class="sig-name descname">drs_migration_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.drs_migration_threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">drs_migration_threshold</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.drs_migration_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>A value between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code> indicating
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.folder">
-<code class="sig-name descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.folder" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">folder</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the folder to locate the cluster in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.force_evacuate_on_destroy">
-<code class="sig-name descname">force_evacuate_on_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.force_evacuate_on_destroy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">force_evacuate_on_destroy</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.force_evacuate_on_destroy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Force removal of all hosts in the cluster during destroy and make them standalone hosts. Use of this flag mainly exists
 for testing and is not recommended in normal use.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_admission_control_failover_host_system_ids">
-<code class="sig-name descname">ha_admission_control_failover_host_system_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_failover_host_system_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_admission_control_failover_host_system_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_failover_host_system_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines the
 [managed object IDs][docs-about-morefs] of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
@@ -401,9 +401,9 @@ block access to the host, and DRS will ignore the host when making
 recommendations.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_admission_control_host_failure_tolerance">
-<code class="sig-name descname">ha_admission_control_host_failure_tolerance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_host_failure_tolerance" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_admission_control_host_failure_tolerance</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_host_failure_tolerance" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum number
 of failed hosts that admission control tolerates when making decisions on
 whether to permit virtual machine operations. The maximum is one less than
@@ -411,26 +411,26 @@ the number of hosts in the cluster. Default: <code class="docutils literal notra
 <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_admission_control_performance_tolerance">
-<code class="sig-name descname">ha_admission_control_performance_tolerance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_performance_tolerance" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_admission_control_performance_tolerance</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_performance_tolerance" title="Permalink to this definition">¶</a></dt>
 <dd><p>The percentage of
 resource reduction that a cluster of virtual machines can tolerate in case of
 a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code> (disabled).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_admission_control_policy">
-<code class="sig-name descname">ha_admission_control_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_admission_control_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of admission control
 policy to use with vSphere HA. Can be one of <code class="docutils literal notranslate"><span class="pre">resourcePercentage</span></code>,
 <code class="docutils literal notranslate"><span class="pre">slotPolicy</span></code>, <code class="docutils literal notranslate"><span class="pre">failoverHosts</span></code>, or <code class="docutils literal notranslate"><span class="pre">disabled</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">resourcePercentage</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_admission_control_resource_percentage_auto_compute">
-<code class="sig-name descname">ha_admission_control_resource_percentage_auto_compute</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_resource_percentage_auto_compute" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_admission_control_resource_percentage_auto_compute</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_resource_percentage_auto_compute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Automatically determine available resource percentages by subtracting the
 average number of host resources represented by the
 <code class="docutils literal notranslate"><span class="pre">ha_admission_control_host_failure_tolerance</span></code>
@@ -439,64 +439,64 @@ user-defined values. Default: <code class="docutils literal notranslate"><span c
 <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_admission_control_resource_percentage_cpu">
-<code class="sig-name descname">ha_admission_control_resource_percentage_cpu</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_resource_percentage_cpu" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_admission_control_resource_percentage_cpu</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_resource_percentage_cpu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_admission_control_resource_percentage_memory">
-<code class="sig-name descname">ha_admission_control_resource_percentage_memory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_resource_percentage_memory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_admission_control_resource_percentage_memory</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_resource_percentage_memory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the
 user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_admission_control_slot_policy_explicit_cpu">
-<code class="sig-name descname">ha_admission_control_slot_policy_explicit_cpu</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_slot_policy_explicit_cpu" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_admission_control_slot_policy_explicit_cpu</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_slot_policy_explicit_cpu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the
 user-defined CPU slot size, in MHz. Default: <code class="docutils literal notranslate"><span class="pre">32</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_admission_control_slot_policy_explicit_memory">
-<code class="sig-name descname">ha_admission_control_slot_policy_explicit_memory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_slot_policy_explicit_memory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_admission_control_slot_policy_explicit_memory</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_slot_policy_explicit_memory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the
 user-defined memory slot size, in MB. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_admission_control_slot_policy_use_explicit_size">
-<code class="sig-name descname">ha_admission_control_slot_policy_use_explicit_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_slot_policy_use_explicit_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_admission_control_slot_policy_use_explicit_size</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_admission_control_slot_policy_use_explicit_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls
 whether or not you wish to supply explicit values to CPU and memory slot
 sizes. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>, which tells vSphere to gather a automatic
 average based on all powered-on virtual machines currently in the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_advanced_options">
-<code class="sig-name descname">ha_advanced_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_advanced_options" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_advanced_options</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_advanced_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>A key/value map that specifies advanced
 options for vSphere HA.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_datastore_apd_recovery_action">
-<code class="sig-name descname">ha_datastore_apd_recovery_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_datastore_apd_recovery_action" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_datastore_apd_recovery_action</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_datastore_apd_recovery_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the action to take
 on virtual machines if an APD status on an affected datastore clears in the
 middle of an APD event. Can be one of <code class="docutils literal notranslate"><span class="pre">none</span></code> or <code class="docutils literal notranslate"><span class="pre">reset</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">none</span></code>.
 <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_datastore_apd_response">
-<code class="sig-name descname">ha_datastore_apd_response</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_datastore_apd_response" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_datastore_apd_response</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_datastore_apd_response" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the action to take on
 virtual machines when the cluster has detected loss to all paths to a
 relevant datastore. Can be one of <code class="docutils literal notranslate"><span class="pre">disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code>,
@@ -504,18 +504,18 @@ relevant datastore. Can be one of <code class="docutils literal notranslate"><sp
 <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_datastore_apd_response_delay">
-<code class="sig-name descname">ha_datastore_apd_response_delay</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_datastore_apd_response_delay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_datastore_apd_response_delay</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_datastore_apd_response_delay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
 <code class="docutils literal notranslate"><span class="pre">ha_datastore_apd_response</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code>
 minutes. <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_datastore_pdl_response">
-<code class="sig-name descname">ha_datastore_pdl_response</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_datastore_pdl_response" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_datastore_pdl_response</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_datastore_pdl_response" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the action to take on
 virtual machines when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of <code class="docutils literal notranslate"><span class="pre">disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code>, or
@@ -523,60 +523,60 @@ relevant datastore. Can be one of <code class="docutils literal notranslate"><sp
 <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_enabled">
-<code class="sig-name descname">ha_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable vSphere HA for this cluster. Default:
 <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_heartbeat_datastore_ids">
-<code class="sig-name descname">ha_heartbeat_datastore_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_heartbeat_datastore_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_heartbeat_datastore_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_heartbeat_datastore_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of managed object IDs for
 preferred datastores to use for HA heartbeating. This setting is only useful
 when <code class="docutils literal notranslate"><span class="pre">ha_heartbeat_datastore_policy</span></code> is set
 to either <code class="docutils literal notranslate"><span class="pre">userSelectedDs</span></code> or <code class="docutils literal notranslate"><span class="pre">allFeasibleDsWithUserPreference</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_heartbeat_datastore_policy">
-<code class="sig-name descname">ha_heartbeat_datastore_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_heartbeat_datastore_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_heartbeat_datastore_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_heartbeat_datastore_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The selection policy for HA
 heartbeat datastores. Can be one of <code class="docutils literal notranslate"><span class="pre">allFeasibleDs</span></code>, <code class="docutils literal notranslate"><span class="pre">userSelectedDs</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">allFeasibleDsWithUserPreference</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">allFeasibleDsWithUserPreference</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_host_isolation_response">
-<code class="sig-name descname">ha_host_isolation_response</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_host_isolation_response" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_host_isolation_response</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_host_isolation_response" title="Permalink to this definition">¶</a></dt>
 <dd><p>The action to take on virtual
 machines when a host has detected that it has been isolated from the rest of
 the cluster. Can be one of <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">powerOff</span></code>, or <code class="docutils literal notranslate"><span class="pre">shutdown</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">none</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_host_monitoring">
-<code class="sig-name descname">ha_host_monitoring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_host_monitoring" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_host_monitoring</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_host_monitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of <code class="docutils literal notranslate"><span class="pre">enabled</span></code>
 or <code class="docutils literal notranslate"><span class="pre">disabled</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">enabled</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_vm_component_protection">
-<code class="sig-name descname">ha_vm_component_protection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_component_protection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_component_protection</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_component_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls vSphere VM component
 protection for virtual machines in this cluster. Can be one of <code class="docutils literal notranslate"><span class="pre">enabled</span></code> or
 <code class="docutils literal notranslate"><span class="pre">disabled</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">enabled</span></code>.
 <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_vm_dependency_restart_condition">
-<code class="sig-name descname">ha_vm_dependency_restart_condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_dependency_restart_condition" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_dependency_restart_condition</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_dependency_restart_condition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The condition used to
 determine whether or not virtual machines in a certain restart priority class
 are online, allowing HA to move on to restarting virtual machines on the next
@@ -586,17 +586,17 @@ is considered ready immediately after a host is found to start it on.
 <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_vm_failure_interval">
-<code class="sig-name descname">ha_vm_failure_interval</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_failure_interval" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_failure_interval</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_failure_interval" title="Permalink to this definition">¶</a></dt>
 <dd><p>If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_vm_maximum_failure_window">
-<code class="sig-name descname">ha_vm_maximum_failure_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_maximum_failure_window" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_maximum_failure_window</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_maximum_failure_window" title="Permalink to this definition">¶</a></dt>
 <dd><p>The length of the reset window in
 which <code class="docutils literal notranslate"><span class="pre">ha_vm_maximum_resets</span></code> can operate. When this
 window expires, no more resets are attempted regardless of the setting
@@ -605,94 +605,94 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 <code class="docutils literal notranslate"><span class="pre">-1</span></code> (no window).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_vm_maximum_resets">
-<code class="sig-name descname">ha_vm_maximum_resets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_maximum_resets" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_maximum_resets</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_maximum_resets" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_vm_minimum_uptime">
-<code class="sig-name descname">ha_vm_minimum_uptime</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_minimum_uptime" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_minimum_uptime</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_minimum_uptime" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
 <code class="docutils literal notranslate"><span class="pre">120</span></code> (2 minutes).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_vm_monitoring">
-<code class="sig-name descname">ha_vm_monitoring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_monitoring" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_monitoring</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_monitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of <code class="docutils literal notranslate"><span class="pre">vmMonitoringDisabled</span></code>,
 <code class="docutils literal notranslate"><span class="pre">vmMonitoringOnly</span></code>, or <code class="docutils literal notranslate"><span class="pre">vmAndAppMonitoring</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">vmMonitoringDisabled</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_vm_restart_additional_delay">
-<code class="sig-name descname">ha_vm_restart_additional_delay</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_restart_additional_delay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_restart_additional_delay</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_restart_additional_delay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
 Default: <code class="docutils literal notranslate"><span class="pre">0</span></code> (no delay). <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_vm_restart_priority">
-<code class="sig-name descname">ha_vm_restart_priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_restart_priority" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_restart_priority</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_restart_priority" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
 of <code class="docutils literal notranslate"><span class="pre">lowest</span></code>, <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">medium</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">highest</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">medium</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.ha_vm_restart_timeout">
-<code class="sig-name descname">ha_vm_restart_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_restart_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_restart_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.ha_vm_restart_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum time, in seconds,
 that vSphere HA will wait for virtual machines in one priority to be ready
 before proceeding with the next priority. Default: <code class="docutils literal notranslate"><span class="pre">600</span></code> (10 minutes).
 <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.host_cluster_exit_timeout">
-<code class="sig-name descname">host_cluster_exit_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.host_cluster_exit_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host_cluster_exit_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.host_cluster_exit_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
 seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (1 hour).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.host_system_ids">
-<code class="sig-name descname">host_system_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.host_system_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host_system_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.host_system_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.proactive_ha_automation_level">
-<code class="sig-name descname">proactive_ha_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.proactive_ha_automation_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">proactive_ha_automation_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.proactive_ha_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines how the host
 quarantine, maintenance mode, or virtual machine migration recommendations
 made by proactive HA are to be handled. Can be one of <code class="docutils literal notranslate"><span class="pre">Automated</span></code> or
 <code class="docutils literal notranslate"><span class="pre">Manual</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">Manual</span></code>. <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.proactive_ha_enabled">
-<code class="sig-name descname">proactive_ha_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.proactive_ha_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">proactive_ha_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.proactive_ha_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables Proactive HA. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.
 <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.proactive_ha_moderate_remediation">
-<code class="sig-name descname">proactive_ha_moderate_remediation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.proactive_ha_moderate_remediation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">proactive_ha_moderate_remediation</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.proactive_ha_moderate_remediation" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configured remediation
 for moderately degraded hosts. Can be one of <code class="docutils literal notranslate"><span class="pre">MaintenanceMode</span></code> or
 <code class="docutils literal notranslate"><span class="pre">QuarantineMode</span></code>. Note that this cannot be set to <code class="docutils literal notranslate"><span class="pre">MaintenanceMode</span></code> when
@@ -701,17 +701,17 @@ to <code class="docutils literal notranslate"><span class="pre">QuarantineMode</
 <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.proactive_ha_provider_ids">
-<code class="sig-name descname">proactive_ha_provider_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.proactive_ha_provider_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">proactive_ha_provider_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.proactive_ha_provider_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of IDs for health update
 providers configured for this cluster.
 <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.proactive_ha_severe_remediation">
-<code class="sig-name descname">proactive_ha_severe_remediation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.proactive_ha_severe_remediation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">proactive_ha_severe_remediation</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.proactive_ha_severe_remediation" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configured remediation for
 severely degraded hosts. Can be one of <code class="docutils literal notranslate"><span class="pre">MaintenanceMode</span></code> or <code class="docutils literal notranslate"><span class="pre">QuarantineMode</span></code>.
 Note that this cannot be set to <code class="docutils literal notranslate"><span class="pre">QuarantineMode</span></code> when
@@ -720,22 +720,22 @@ set to <code class="docutils literal notranslate"><span class="pre">MaintenanceM
 <span class="raw-html-m2r"><sup>\*</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.resource_pool_id">
-<code class="sig-name descname">resource_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.resource_pool_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_pool_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.resource_pool_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The managed object ID of the cluster’s root resource pool.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeCluster.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeCluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">dpm_automation_level=None</em>, <em class="sig-param">dpm_enabled=None</em>, <em class="sig-param">dpm_threshold=None</em>, <em class="sig-param">drs_advanced_options=None</em>, <em class="sig-param">drs_automation_level=None</em>, <em class="sig-param">drs_enable_predictive_drs=None</em>, <em class="sig-param">drs_enable_vm_overrides=None</em>, <em class="sig-param">drs_enabled=None</em>, <em class="sig-param">drs_migration_threshold=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">force_evacuate_on_destroy=None</em>, <em class="sig-param">ha_admission_control_failover_host_system_ids=None</em>, <em class="sig-param">ha_admission_control_host_failure_tolerance=None</em>, <em class="sig-param">ha_admission_control_performance_tolerance=None</em>, <em class="sig-param">ha_admission_control_policy=None</em>, <em class="sig-param">ha_admission_control_resource_percentage_auto_compute=None</em>, <em class="sig-param">ha_admission_control_resource_percentage_cpu=None</em>, <em class="sig-param">ha_admission_control_resource_percentage_memory=None</em>, <em class="sig-param">ha_admission_control_slot_policy_explicit_cpu=None</em>, <em class="sig-param">ha_admission_control_slot_policy_explicit_memory=None</em>, <em class="sig-param">ha_admission_control_slot_policy_use_explicit_size=None</em>, <em class="sig-param">ha_advanced_options=None</em>, <em class="sig-param">ha_datastore_apd_recovery_action=None</em>, <em class="sig-param">ha_datastore_apd_response=None</em>, <em class="sig-param">ha_datastore_apd_response_delay=None</em>, <em class="sig-param">ha_datastore_pdl_response=None</em>, <em class="sig-param">ha_enabled=None</em>, <em class="sig-param">ha_heartbeat_datastore_ids=None</em>, <em class="sig-param">ha_heartbeat_datastore_policy=None</em>, <em class="sig-param">ha_host_isolation_response=None</em>, <em class="sig-param">ha_host_monitoring=None</em>, <em class="sig-param">ha_vm_component_protection=None</em>, <em class="sig-param">ha_vm_dependency_restart_condition=None</em>, <em class="sig-param">ha_vm_failure_interval=None</em>, <em class="sig-param">ha_vm_maximum_failure_window=None</em>, <em class="sig-param">ha_vm_maximum_resets=None</em>, <em class="sig-param">ha_vm_minimum_uptime=None</em>, <em class="sig-param">ha_vm_monitoring=None</em>, <em class="sig-param">ha_vm_restart_additional_delay=None</em>, <em class="sig-param">ha_vm_restart_priority=None</em>, <em class="sig-param">ha_vm_restart_timeout=None</em>, <em class="sig-param">host_cluster_exit_timeout=None</em>, <em class="sig-param">host_system_ids=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">proactive_ha_automation_level=None</em>, <em class="sig-param">proactive_ha_enabled=None</em>, <em class="sig-param">proactive_ha_moderate_remediation=None</em>, <em class="sig-param">proactive_ha_provider_ids=None</em>, <em class="sig-param">proactive_ha_severe_remediation=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dpm_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dpm_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dpm_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_advanced_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_enable_predictive_drs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_enable_vm_overrides</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_migration_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_evacuate_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_failover_host_system_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_host_failure_tolerance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_performance_tolerance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_resource_percentage_auto_compute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_resource_percentage_cpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_resource_percentage_memory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_slot_policy_explicit_cpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_slot_policy_explicit_memory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_admission_control_slot_policy_use_explicit_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_advanced_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_apd_recovery_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_apd_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_apd_response_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_pdl_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_heartbeat_datastore_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_heartbeat_datastore_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_host_isolation_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_host_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_component_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_dependency_restart_condition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_failure_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_maximum_failure_window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_maximum_resets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_minimum_uptime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_restart_additional_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_restart_priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_restart_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_cluster_exit_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proactive_ha_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proactive_ha_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proactive_ha_moderate_remediation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proactive_ha_provider_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proactive_ha_severe_remediation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeCluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -925,9 +925,9 @@ set to <code class="docutils literal notranslate"><span class="pre">MaintenanceM
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeCluster.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -943,9 +943,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeCluster.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -963,9 +963,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.ComputeClusterHostGroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeClusterHostGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">host_system_ids=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeClusterHostGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.ComputeClusterHostGroup</span></code> resource can be used to manage groups
 of hosts in a cluster, either created by the
 <cite>`</cite>.ComputeCluster`` &lt;/docs/providers/vsphere/r/compute_cluster.html&gt;`_ resource or looked up
@@ -994,31 +994,31 @@ cluster. Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterHostGroup.compute_cluster_id">
-<code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compute_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterHostGroup.host_system_ids">
-<code class="sig-name descname">host_system_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.host_system_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host_system_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.host_system_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterHostGroup.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the host group. This must be unique in the
 cluster. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterHostGroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">host_system_ids=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeClusterHostGroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1039,9 +1039,9 @@ cluster. Forces a new resource if changed.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterHostGroup.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1057,9 +1057,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterHostGroup.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1077,9 +1077,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeClusterVmAffinityRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">virtual_machine_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeClusterVmAffinityRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mandatory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.ComputeClusterVmAffinityRule</span></code> resource can be used to manage
 VM affinity rules in a cluster, either created by the
 <cite>`</cite>.ComputeCluster`` &lt;/docs/providers/vsphere/r/compute_cluster.html&gt;`_ resource or looked up
@@ -1118,43 +1118,43 @@ on the same host together.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule.compute_cluster_id">
-<code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compute_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable this rule in the cluster. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule.mandatory">
-<code class="sig-name descname">mandatory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.mandatory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mandatory</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.mandatory" title="Permalink to this definition">¶</a></dt>
 <dd><p>When this value is <code class="docutils literal notranslate"><span class="pre">true</span></code>, prevents any virtual
 machine operations that may violate this rule. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the rule. This must be unique in the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule.virtual_machine_ids">
-<code class="sig-name descname">virtual_machine_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.virtual_machine_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtual_machine_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.virtual_machine_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The UUIDs of the virtual machines to run
 on the same host together.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">virtual_machine_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mandatory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeClusterVmAffinityRule resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1177,9 +1177,9 @@ on the same host together.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1195,9 +1195,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1215,9 +1215,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeClusterVmAntiAffinityRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">virtual_machine_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeClusterVmAntiAffinityRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mandatory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.ComputeClusterVmAntiAffinityRule</span></code> resource can be used to
 manage VM anti-affinity rules in a cluster, either created by the
 <cite>`</cite>.ComputeCluster`` &lt;/docs/providers/vsphere/r/compute_cluster.html&gt;`_ resource or looked up
@@ -1257,43 +1257,43 @@ on hosts different from each other.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule.compute_cluster_id">
-<code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compute_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable this rule in the cluster. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule.mandatory">
-<code class="sig-name descname">mandatory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.mandatory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mandatory</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.mandatory" title="Permalink to this definition">¶</a></dt>
 <dd><p>When this value is <code class="docutils literal notranslate"><span class="pre">true</span></code>, prevents any virtual
 machine operations that may violate this rule. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the rule. This must be unique in the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule.virtual_machine_ids">
-<code class="sig-name descname">virtual_machine_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.virtual_machine_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtual_machine_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.virtual_machine_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The UUIDs of the virtual machines to run
 on hosts different from each other.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">virtual_machine_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mandatory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeClusterVmAntiAffinityRule resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1316,9 +1316,9 @@ on hosts different from each other.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1334,9 +1334,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1354,9 +1354,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeClusterVmDependencyRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">dependency_vm_group_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">vm_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeClusterVmDependencyRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dependency_vm_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mandatory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vm_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.ComputeClusterVmDependencyRule</span></code> resource can be used to manage
 VM dependency rules in a cluster, either created by the
 <cite>`</cite>.ComputeCluster`` &lt;/docs/providers/vsphere/r/compute_cluster.html&gt;`_ resource or looked up
@@ -1394,55 +1394,55 @@ the group specified by
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule.compute_cluster_id">
-<code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compute_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule.dependency_vm_group_name">
-<code class="sig-name descname">dependency_vm_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.dependency_vm_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dependency_vm_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.dependency_vm_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the VM group that this
 rule depends on. The VMs defined in the group specified by
 <code class="docutils literal notranslate"><span class="pre">vm_group_name</span></code> will not be started until the VMs in this
 group are started.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable this rule in the cluster. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule.mandatory">
-<code class="sig-name descname">mandatory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.mandatory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mandatory</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.mandatory" title="Permalink to this definition">¶</a></dt>
 <dd><p>When this value is <code class="docutils literal notranslate"><span class="pre">true</span></code>, prevents any virtual
 machine operations that may violate this rule. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the rule. This must be unique in the
 cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule.vm_group_name">
-<code class="sig-name descname">vm_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.vm_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vm_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.vm_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the VM group that is the subject of
 this rule. The VMs defined in this group will not be started until the VMs in
 the group specified by
 <code class="docutils literal notranslate"><span class="pre">dependency_vm_group_name</span></code> are started.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">dependency_vm_group_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">vm_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dependency_vm_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mandatory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vm_group_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeClusterVmDependencyRule resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1472,9 +1472,9 @@ the group specified by
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1490,9 +1490,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1510,9 +1510,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.ComputeClusterVmGroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeClusterVmGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">virtual_machine_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeClusterVmGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.ComputeClusterVmGroup</span></code> resource can be used to manage groups of
 virtual machines in a cluster, either created by the
 <cite>`</cite>.ComputeCluster`` &lt;/docs/providers/vsphere/r/compute_cluster.html&gt;`_ resource or looked up
@@ -1542,31 +1542,31 @@ group.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmGroup.compute_cluster_id">
-<code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compute_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmGroup.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the VM group. This must be unique in the
 cluster. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmGroup.virtual_machine_ids">
-<code class="sig-name descname">virtual_machine_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.virtual_machine_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtual_machine_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.virtual_machine_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The UUIDs of the virtual machines in this
 group.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmGroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">virtual_machine_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeClusterVmGroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1587,9 +1587,9 @@ group.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmGroup.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1605,9 +1605,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmGroup.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1625,9 +1625,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeClusterVmHostRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">affinity_host_group_name=None</em>, <em class="sig-param">anti_affinity_host_group_name=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">vm_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ComputeClusterVmHostRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">affinity_host_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">anti_affinity_host_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mandatory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vm_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.ComputeClusterVmHostRule</span></code> resource can be used to manage
 VM-to-host rules in a cluster, either created by the
 <cite>`</cite>.ComputeCluster`` &lt;/docs/providers/vsphere/r/compute_cluster.html&gt;`_ resource or looked up
@@ -1668,60 +1668,60 @@ with this rule.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.affinity_host_group_name">
-<code class="sig-name descname">affinity_host_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.affinity_host_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">affinity_host_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.affinity_host_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>When this field is used, the virtual
 machines defined in <code class="docutils literal notranslate"><span class="pre">vm_group_name</span></code> will be run on the
 hosts defined in this host group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.anti_affinity_host_group_name">
-<code class="sig-name descname">anti_affinity_host_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.anti_affinity_host_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">anti_affinity_host_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.anti_affinity_host_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>When this field is used, the
 virtual machines defined in <code class="docutils literal notranslate"><span class="pre">vm_group_name</span></code> will <em>not</em> be
 run on the hosts defined in this host group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.compute_cluster_id">
-<code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compute_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable this rule in the cluster. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.mandatory">
-<code class="sig-name descname">mandatory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.mandatory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mandatory</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.mandatory" title="Permalink to this definition">¶</a></dt>
 <dd><p>When this value is <code class="docutils literal notranslate"><span class="pre">true</span></code>, prevents any virtual
 machine operations that may violate this rule. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the rule. This must be unique in the
 cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.vm_group_name">
-<code class="sig-name descname">vm_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.vm_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vm_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.vm_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the virtual machine group to use
 with this rule.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">affinity_host_group_name=None</em>, <em class="sig-param">anti_affinity_host_group_name=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">vm_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">affinity_host_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">anti_affinity_host_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mandatory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vm_group_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeClusterVmHostRule resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1751,9 +1751,9 @@ with this rule.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1769,9 +1769,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1789,9 +1789,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.ContentLibrary">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ContentLibrary</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_backings=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ContentLibrary</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_backings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.ContentLibrary</span></code> resource can be used to manage Content Libraries.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
@@ -1809,28 +1809,28 @@ items.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ContentLibrary.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description of the Content Library.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ContentLibrary.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Content Library.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ContentLibrary.storage_backings">
-<code class="sig-name descname">storage_backings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.storage_backings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">storage_backings</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.storage_backings" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference ID][docs-about-morefs] on which to store Content Library
 items.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ContentLibrary.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_backings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_backings</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ContentLibrary resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1848,9 +1848,9 @@ items.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ContentLibrary.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1866,9 +1866,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ContentLibrary.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibrary.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1886,9 +1886,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.ContentLibraryItem">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ContentLibraryItem</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">file_urls=None</em>, <em class="sig-param">library_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ContentLibraryItem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">library_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.ContentLibraryItem</span></code> resource can be used to create items in a Content Library. Each item can contain 
 multiple files. Each <code class="docutils literal notranslate"><span class="pre">file_url</span></code> must be accessible from the vSphere environment as it will be downloaded from the
 specified location and stored on the Content Library’s storage backing.</p>
@@ -1907,39 +1907,39 @@ file(s) can then be set as the <code class="docutils literal notranslate"><span 
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ContentLibraryItem.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description for the item.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ContentLibraryItem.file_urls">
-<code class="sig-name descname">file_urls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.file_urls" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">file_urls</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.file_urls" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of files to download for the Content Library item.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ContentLibraryItem.library_id">
-<code class="sig-name descname">library_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.library_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">library_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.library_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Content Library the item should be created in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ContentLibraryItem.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the item to be created in the Content Library.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ContentLibraryItem.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of content library item.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ContentLibraryItem.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">file_urls=None</em>, <em class="sig-param">library_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_urls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">library_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ContentLibraryItem resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1958,9 +1958,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ContentLibraryItem.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1976,9 +1976,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ContentLibraryItem.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ContentLibraryItem.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1996,9 +1996,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.CustomAttribute">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">CustomAttribute</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">managed_object_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.CustomAttribute" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">CustomAttribute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_object_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.CustomAttribute" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.CustomAttribute</span></code> resource can be used to create and manage custom
 attributes, which allow users to associate user-specific meta-information with 
 vSphere managed objects. Custom attribute values must be strings and are stored 
@@ -2041,24 +2041,24 @@ resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.CustomAttribute.managed_object_type">
-<code class="sig-name descname">managed_object_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.managed_object_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">managed_object_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.managed_object_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The object type that this attribute may be
 applied to. If not set, the custom attribute may be applied to any object
 type. For a full list, click here. Forces a new
 resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.CustomAttribute.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the custom attribute.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.CustomAttribute.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">managed_object_type=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_object_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CustomAttribute resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2077,9 +2077,9 @@ resource if changed.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.CustomAttribute.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -2095,9 +2095,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.CustomAttribute.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -2115,9 +2115,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.Datacenter">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Datacenter</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Datacenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere datacenter resource. This can be used as the primary
 container of inventory objects such as hosts and virtual machines.</p>
 <dl class="field-list simple">
@@ -2138,45 +2138,45 @@ within the folder. Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Datacenter.custom_attributes">
-<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Datacenter.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Datacenter.custom_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of custom attribute ids to value 
 strings to set for datacenter resource. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Datacenter.folder">
-<code class="sig-name descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Datacenter.folder" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">folder</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Datacenter.folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>The folder where the datacenter should be created.
 Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Datacenter.moid">
-<code class="sig-name descname">moid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Datacenter.moid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">moid</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Datacenter.moid" title="Permalink to this definition">¶</a></dt>
 <dd><p>[Managed object ID][docs-about-morefs] of this datacenter.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Datacenter.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Datacenter.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Datacenter.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the datacenter. This name needs to be unique
 within the folder. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Datacenter.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Datacenter.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Datacenter.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Datacenter.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">moid=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">moid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Datacenter resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2201,9 +2201,9 @@ within the folder. Forces a new resource if changed.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Datacenter.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -2219,9 +2219,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Datacenter.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -2239,9 +2239,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.DatastoreCluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DatastoreCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sdrs_advanced_options=None</em>, <em class="sig-param">sdrs_automation_level=None</em>, <em class="sig-param">sdrs_default_intra_vm_affinity=None</em>, <em class="sig-param">sdrs_enabled=None</em>, <em class="sig-param">sdrs_free_space_threshold=None</em>, <em class="sig-param">sdrs_free_space_threshold_mode=None</em>, <em class="sig-param">sdrs_free_space_utilization_difference=None</em>, <em class="sig-param">sdrs_io_balance_automation_level=None</em>, <em class="sig-param">sdrs_io_latency_threshold=None</em>, <em class="sig-param">sdrs_io_load_balance_enabled=None</em>, <em class="sig-param">sdrs_io_load_imbalance_threshold=None</em>, <em class="sig-param">sdrs_io_reservable_iops_threshold=None</em>, <em class="sig-param">sdrs_io_reservable_percent_threshold=None</em>, <em class="sig-param">sdrs_io_reservable_threshold_mode=None</em>, <em class="sig-param">sdrs_load_balance_interval=None</em>, <em class="sig-param">sdrs_policy_enforcement_automation_level=None</em>, <em class="sig-param">sdrs_rule_enforcement_automation_level=None</em>, <em class="sig-param">sdrs_space_balance_automation_level=None</em>, <em class="sig-param">sdrs_space_utilization_threshold=None</em>, <em class="sig-param">sdrs_vm_evacuation_automation_level=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DatastoreCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_advanced_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_default_intra_vm_affinity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_free_space_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_free_space_threshold_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_free_space_utilization_difference</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_balance_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_latency_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_load_balance_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_load_imbalance_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_reservable_iops_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_reservable_percent_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_reservable_threshold_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_load_balance_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_policy_enforcement_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_rule_enforcement_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_space_balance_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_space_utilization_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_vm_evacuation_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.DatastoreCluster</span></code> resource can be used to create and manage
 datastore clusters. This can be used to create groups of datastores with a
 shared management interface, allowing for resource control and load balancing
@@ -2323,119 +2323,119 @@ automation settings when generating recommendations for datastore evacuation.</p
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.custom_attributes">
-<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.custom_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of custom attribute ids to attribute
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.datacenter_id">
-<code class="sig-name descname">datacenter_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.datacenter_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datacenter_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.datacenter_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object ID][docs-about-morefs] of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.folder">
-<code class="sig-name descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.folder" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">folder</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the folder to locate the datastore cluster in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the datastore cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_advanced_options">
-<code class="sig-name descname">sdrs_advanced_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_advanced_options" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_advanced_options</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_advanced_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Advanced configuration options for storage DRS.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_automation_level">
-<code class="sig-name descname">sdrs_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_automation_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_automation_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The global automation level for all
 virtual machines in this datastore cluster. Default: <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_default_intra_vm_affinity">
-<code class="sig-name descname">sdrs_default_intra_vm_affinity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_default_intra_vm_affinity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_default_intra_vm_affinity</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_default_intra_vm_affinity" title="Permalink to this definition">¶</a></dt>
 <dd><p>When <code class="docutils literal notranslate"><span class="pre">true</span></code>, all disks in a
 single virtual machine will be kept on the same datastore. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_enabled">
-<code class="sig-name descname">sdrs_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable Storage DRS for this datastore cluster.
 Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_free_space_threshold">
-<code class="sig-name descname">sdrs_free_space_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_free_space_threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_free_space_threshold</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_free_space_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>The free space threshold to use.
 When set to <code class="docutils literal notranslate"><span class="pre">utilization</span></code>, <code class="docutils literal notranslate"><span class="pre">drs_space_utilization_threshold</span></code> is used, and
 when set to <code class="docutils literal notranslate"><span class="pre">freeSpace</span></code>, <code class="docutils literal notranslate"><span class="pre">drs_free_space_threshold</span></code> is used. Default:
 <code class="docutils literal notranslate"><span class="pre">utilization</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_free_space_threshold_mode">
-<code class="sig-name descname">sdrs_free_space_threshold_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_free_space_threshold_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_free_space_threshold_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_free_space_threshold_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_free_space_utilization_difference">
-<code class="sig-name descname">sdrs_free_space_utilization_difference</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_free_space_utilization_difference" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_free_space_utilization_difference</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_free_space_utilization_difference" title="Permalink to this definition">¶</a></dt>
 <dd><p>The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code> percent.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_io_balance_automation_level">
-<code class="sig-name descname">sdrs_io_balance_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_balance_automation_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_io_balance_automation_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_balance_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides the default
 automation settings when correcting I/O load imbalances.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_io_latency_threshold">
-<code class="sig-name descname">sdrs_io_latency_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_latency_threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_io_latency_threshold</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_latency_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: <code class="docutils literal notranslate"><span class="pre">15</span></code> seconds.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_io_load_balance_enabled">
-<code class="sig-name descname">sdrs_io_load_balance_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_load_balance_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_io_load_balance_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_load_balance_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable I/O load balancing for
 this datastore cluster. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_io_load_imbalance_threshold">
-<code class="sig-name descname">sdrs_io_load_imbalance_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_load_imbalance_threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_io_load_imbalance_threshold</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_load_imbalance_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code> percent.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_io_reservable_iops_threshold">
-<code class="sig-name descname">sdrs_io_reservable_iops_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_reservable_iops_threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_io_reservable_iops_threshold</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_reservable_iops_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
 recommendations to move VMs off of a datastore. Note that this setting should
@@ -2444,75 +2444,75 @@ estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_io_reservable_percent_threshold">
-<code class="sig-name descname">sdrs_io_reservable_percent_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_reservable_percent_threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_io_reservable_percent_threshold</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_reservable_percent_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: <code class="docutils literal notranslate"><span class="pre">60</span></code> percent.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_io_reservable_threshold_mode">
-<code class="sig-name descname">sdrs_io_reservable_threshold_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_reservable_threshold_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_io_reservable_threshold_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_io_reservable_threshold_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The reservable IOPS
 threshold setting to use, <code class="docutils literal notranslate"><span class="pre">sdrs_io_reservable_percent_threshold</span></code> in the event
 of <code class="docutils literal notranslate"><span class="pre">automatic</span></code>, or <code class="docutils literal notranslate"><span class="pre">sdrs_io_reservable_iops_threshold</span></code> in the event of
 <code class="docutils literal notranslate"><span class="pre">manual</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">automatic</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_load_balance_interval">
-<code class="sig-name descname">sdrs_load_balance_interval</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_load_balance_interval" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_load_balance_interval</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_load_balance_interval" title="Permalink to this definition">¶</a></dt>
 <dd><p>The storage DRS poll interval, in
 minutes. Default: <code class="docutils literal notranslate"><span class="pre">480</span></code> minutes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_policy_enforcement_automation_level">
-<code class="sig-name descname">sdrs_policy_enforcement_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_policy_enforcement_automation_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_policy_enforcement_automation_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_policy_enforcement_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides the default
 automation settings when correcting storage and VM policy violations.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_rule_enforcement_automation_level">
-<code class="sig-name descname">sdrs_rule_enforcement_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_rule_enforcement_automation_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_rule_enforcement_automation_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_rule_enforcement_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides the default
 automation settings when correcting affinity rule violations.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_space_balance_automation_level">
-<code class="sig-name descname">sdrs_space_balance_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_space_balance_automation_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_space_balance_automation_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_space_balance_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides the default
 automation settings when correcting disk space imbalances.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_space_utilization_threshold">
-<code class="sig-name descname">sdrs_space_utilization_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_space_utilization_threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_space_utilization_threshold</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_space_utilization_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.sdrs_vm_evacuation_automation_level">
-<code class="sig-name descname">sdrs_vm_evacuation_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_vm_evacuation_automation_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_vm_evacuation_automation_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_vm_evacuation_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides the default
 automation settings when generating recommendations for datastore evacuation.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DatastoreCluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sdrs_advanced_options=None</em>, <em class="sig-param">sdrs_automation_level=None</em>, <em class="sig-param">sdrs_default_intra_vm_affinity=None</em>, <em class="sig-param">sdrs_enabled=None</em>, <em class="sig-param">sdrs_free_space_threshold=None</em>, <em class="sig-param">sdrs_free_space_threshold_mode=None</em>, <em class="sig-param">sdrs_free_space_utilization_difference=None</em>, <em class="sig-param">sdrs_io_balance_automation_level=None</em>, <em class="sig-param">sdrs_io_latency_threshold=None</em>, <em class="sig-param">sdrs_io_load_balance_enabled=None</em>, <em class="sig-param">sdrs_io_load_imbalance_threshold=None</em>, <em class="sig-param">sdrs_io_reservable_iops_threshold=None</em>, <em class="sig-param">sdrs_io_reservable_percent_threshold=None</em>, <em class="sig-param">sdrs_io_reservable_threshold_mode=None</em>, <em class="sig-param">sdrs_load_balance_interval=None</em>, <em class="sig-param">sdrs_policy_enforcement_automation_level=None</em>, <em class="sig-param">sdrs_rule_enforcement_automation_level=None</em>, <em class="sig-param">sdrs_space_balance_automation_level=None</em>, <em class="sig-param">sdrs_space_utilization_threshold=None</em>, <em class="sig-param">sdrs_vm_evacuation_automation_level=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_advanced_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_default_intra_vm_affinity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_free_space_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_free_space_threshold_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_free_space_utilization_difference</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_balance_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_latency_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_load_balance_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_load_imbalance_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_reservable_iops_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_reservable_percent_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_io_reservable_threshold_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_load_balance_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_policy_enforcement_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_rule_enforcement_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_space_balance_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_space_utilization_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_vm_evacuation_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DatastoreCluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2588,9 +2588,9 @@ automation settings when generating recommendations for datastore evacuation.</p
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DatastoreCluster.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -2606,9 +2606,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DatastoreCluster.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -2626,9 +2626,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DatastoreClusterVmAntiAffinityRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">virtual_machine_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DatastoreClusterVmAntiAffinityRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mandatory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.DatastoreClusterVmAntiAffinityRule</span></code> resource can be used to
 manage VM anti-affinity rules in a datastore cluster, either created by the
 <cite>`</cite>.DatastoreCluster`` &lt;/docs/providers/vsphere/r/datastore_cluster.html&gt;`_ resource or looked up
@@ -2661,43 +2661,43 @@ on different datastores from each other.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.datastore_cluster_id">
-<code class="sig-name descname">datastore_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datastore_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
 a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable this rule in the cluster. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.mandatory">
-<code class="sig-name descname">mandatory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.mandatory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mandatory</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.mandatory" title="Permalink to this definition">¶</a></dt>
 <dd><p>When this value is <code class="docutils literal notranslate"><span class="pre">true</span></code>, prevents any virtual
 machine operations that may violate this rule. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the rule. This must be unique in the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.virtual_machine_ids">
-<code class="sig-name descname">virtual_machine_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.virtual_machine_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtual_machine_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.virtual_machine_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The UUIDs of the virtual machines to run
 on different datastores from each other.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">virtual_machine_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mandatory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DatastoreClusterVmAntiAffinityRule resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2720,9 +2720,9 @@ on different datastores from each other.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -2738,9 +2738,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -2758,9 +2758,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.DistributedPortGroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DistributedPortGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_uplinks=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">auto_expand=None</em>, <em class="sig-param">block_all_ports=None</em>, <em class="sig-param">block_override_allowed=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">directpath_gen2_allowed=None</em>, <em class="sig-param">distributed_virtual_switch_uuid=None</em>, <em class="sig-param">egress_shaping_average_bandwidth=None</em>, <em class="sig-param">egress_shaping_burst_size=None</em>, <em class="sig-param">egress_shaping_enabled=None</em>, <em class="sig-param">egress_shaping_peak_bandwidth=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">ingress_shaping_average_bandwidth=None</em>, <em class="sig-param">ingress_shaping_burst_size=None</em>, <em class="sig-param">ingress_shaping_enabled=None</em>, <em class="sig-param">ingress_shaping_peak_bandwidth=None</em>, <em class="sig-param">lacp_enabled=None</em>, <em class="sig-param">lacp_mode=None</em>, <em class="sig-param">live_port_moving_allowed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">netflow_enabled=None</em>, <em class="sig-param">netflow_override_allowed=None</em>, <em class="sig-param">network_resource_pool_key=None</em>, <em class="sig-param">network_resource_pool_override_allowed=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">number_of_ports=None</em>, <em class="sig-param">port_config_reset_at_disconnect=None</em>, <em class="sig-param">port_name_format=None</em>, <em class="sig-param">port_private_secondary_vlan_id=None</em>, <em class="sig-param">security_policy_override_allowed=None</em>, <em class="sig-param">shaping_override_allowed=None</em>, <em class="sig-param">standby_uplinks=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">teaming_policy=None</em>, <em class="sig-param">traffic_filter_override_allowed=None</em>, <em class="sig-param">tx_uplink=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">uplink_teaming_override_allowed=None</em>, <em class="sig-param">vlan_id=None</em>, <em class="sig-param">vlan_override_allowed=None</em>, <em class="sig-param">vlan_ranges=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DistributedPortGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active_uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_forged_transmits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_mac_changes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_promiscuous</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_expand</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_all_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_beacon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directpath_gen2_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distributed_virtual_switch_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">live_port_moving_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_resource_pool_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_resource_pool_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_switches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_config_reset_at_disconnect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_name_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_private_secondary_vlan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_policy_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standby_uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teaming_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_filter_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tx_uplink</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uplink_teaming_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_ranges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.DistributedPortGroup</span></code> resource can be used to manage vSphere
 distributed virtual port groups. These port groups are connected to distributed
 virtual switches, which can be managed by the
@@ -2861,318 +2861,318 @@ on this port group to be overridden on an individual port.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.active_uplinks">
-<code class="sig-name descname">active_uplinks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.active_uplinks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">active_uplinks</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.active_uplinks" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.allow_forged_transmits">
-<code class="sig-name descname">allow_forged_transmits</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.allow_forged_transmits" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allow_forged_transmits</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.allow_forged_transmits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.allow_mac_changes">
-<code class="sig-name descname">allow_mac_changes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.allow_mac_changes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allow_mac_changes</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.allow_mac_changes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls whether or not the Media Access Control (MAC) address can be changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.allow_promiscuous">
-<code class="sig-name descname">allow_promiscuous</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.allow_promiscuous" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allow_promiscuous</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.allow_promiscuous" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.auto_expand">
-<code class="sig-name descname">auto_expand</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.auto_expand" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">auto_expand</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.auto_expand" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows the port group to create additional ports
 past the limit specified in <code class="docutils literal notranslate"><span class="pre">number_of_ports</span></code> if necessary. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.block_all_ports">
-<code class="sig-name descname">block_all_ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.block_all_ports" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">block_all_ports</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.block_all_ports" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates whether to block all ports by default.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.block_override_allowed">
-<code class="sig-name descname">block_override_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.block_override_allowed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">block_override_allowed</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.block_override_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow the [port shutdown
 policy][port-shutdown-policy] to be overridden on an individual port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.check_beacon">
-<code class="sig-name descname">check_beacon</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.check_beacon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_beacon</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.check_beacon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable beacon probing on the ports this policy applies to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.config_version">
-<code class="sig-name descname">config_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.config_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">config_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.config_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Version string of the configuration that this spec is trying to change.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.custom_attributes">
-<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.custom_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of custom attribute ids to attribute
 value string to set for port group. See [here][docs-setting-custom-attributes]
 for a reference on how to set values for custom attributes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>An optional description for the port group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.directpath_gen2_allowed">
-<code class="sig-name descname">directpath_gen2_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.directpath_gen2_allowed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">directpath_gen2_allowed</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.directpath_gen2_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow VMDirectPath Gen2 on the ports this policy applies to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.distributed_virtual_switch_uuid">
-<code class="sig-name descname">distributed_virtual_switch_uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.distributed_virtual_switch_uuid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">distributed_virtual_switch_uuid</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.distributed_virtual_switch_uuid" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the DVS to add the
 port group to. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.egress_shaping_average_bandwidth">
-<code class="sig-name descname">egress_shaping_average_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.egress_shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">egress_shaping_average_bandwidth</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.egress_shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The average egress bandwidth in bits per second if egress shaping is enabled on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.egress_shaping_burst_size">
-<code class="sig-name descname">egress_shaping_burst_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.egress_shaping_burst_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">egress_shaping_burst_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.egress_shaping_burst_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.egress_shaping_enabled">
-<code class="sig-name descname">egress_shaping_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.egress_shaping_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">egress_shaping_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.egress_shaping_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>True if the traffic shaper is enabled for egress traffic on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.egress_shaping_peak_bandwidth">
-<code class="sig-name descname">egress_shaping_peak_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.egress_shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">egress_shaping_peak_bandwidth</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.egress_shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.failback">
-<code class="sig-name descname">failback</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.failback" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">failback</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.failback" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.ingress_shaping_average_bandwidth">
-<code class="sig-name descname">ingress_shaping_average_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.ingress_shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ingress_shaping_average_bandwidth</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.ingress_shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.ingress_shaping_burst_size">
-<code class="sig-name descname">ingress_shaping_burst_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.ingress_shaping_burst_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ingress_shaping_burst_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.ingress_shaping_burst_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.ingress_shaping_enabled">
-<code class="sig-name descname">ingress_shaping_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.ingress_shaping_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ingress_shaping_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.ingress_shaping_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>True if the traffic shaper is enabled for ingress traffic on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.ingress_shaping_peak_bandwidth">
-<code class="sig-name descname">ingress_shaping_peak_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.ingress_shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ingress_shaping_peak_bandwidth</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.ingress_shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.key">
-<code class="sig-name descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The generated UUID of the portgroup.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.lacp_enabled">
-<code class="sig-name descname">lacp_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.lacp_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lacp_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.lacp_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether or not to enable LACP on all uplink ports.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.lacp_mode">
-<code class="sig-name descname">lacp_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.lacp_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lacp_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.lacp_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The uplink LACP mode to use. Can be one of active or passive.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.live_port_moving_allowed">
-<code class="sig-name descname">live_port_moving_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.live_port_moving_allowed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">live_port_moving_allowed</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.live_port_moving_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow a port in this port group to be
 moved to another port group while it is connected.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the port group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.netflow_enabled">
-<code class="sig-name descname">netflow_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.netflow_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">netflow_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.netflow_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates whether to enable netflow on all ports.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.netflow_override_allowed">
-<code class="sig-name descname">netflow_override_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.netflow_override_allowed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">netflow_override_allowed</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.netflow_override_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow the [Netflow
 policy][netflow-policy] on this port group to be overridden on an individual
 port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.network_resource_pool_key">
-<code class="sig-name descname">network_resource_pool_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.network_resource_pool_key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_resource_pool_key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.network_resource_pool_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The key of a network resource pool
 to associate with this port group. The default is <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which implies no
 association.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.network_resource_pool_override_allowed">
-<code class="sig-name descname">network_resource_pool_override_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.network_resource_pool_override_allowed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_resource_pool_override_allowed</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.network_resource_pool_override_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow the network
 resource pool set on this port group to be overridden on an individual port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.notify_switches">
-<code class="sig-name descname">notify_switches</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.notify_switches" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">notify_switches</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.notify_switches" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.number_of_ports">
-<code class="sig-name descname">number_of_ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.number_of_ports" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">number_of_ports</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.number_of_ports" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.port_config_reset_at_disconnect">
-<code class="sig-name descname">port_config_reset_at_disconnect</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.port_config_reset_at_disconnect" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">port_config_reset_at_disconnect</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.port_config_reset_at_disconnect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset a port’s settings to the
 settings defined on this port group policy when the port disconnects.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.port_name_format">
-<code class="sig-name descname">port_name_format</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.port_name_format" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">port_name_format</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.port_name_format" title="Permalink to this definition">¶</a></dt>
 <dd><p>An optional formatting policy for naming of
 the ports in this port group. See the <code class="docutils literal notranslate"><span class="pre">portNameFormat</span></code> attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.port_private_secondary_vlan_id">
-<code class="sig-name descname">port_private_secondary_vlan_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.port_private_secondary_vlan_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">port_private_secondary_vlan_id</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.port_private_secondary_vlan_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The secondary VLAN ID for this port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.security_policy_override_allowed">
-<code class="sig-name descname">security_policy_override_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.security_policy_override_allowed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">security_policy_override_allowed</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.security_policy_override_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow the [security policy
 settings][sec-policy-settings] defined in this port group policy to be
 overridden on an individual port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.shaping_override_allowed">
-<code class="sig-name descname">shaping_override_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.shaping_override_allowed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shaping_override_allowed</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.shaping_override_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow the [traffic shaping
 options][traffic-shaping-settings] on this port group policy to be overridden
 on an individual port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.standby_uplinks">
-<code class="sig-name descname">standby_uplinks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.standby_uplinks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">standby_uplinks</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.standby_uplinks" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of tag IDs to apply to this object.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.teaming_policy">
-<code class="sig-name descname">teaming_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.teaming_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">teaming_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.teaming_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.traffic_filter_override_allowed">
-<code class="sig-name descname">traffic_filter_override_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.traffic_filter_override_allowed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">traffic_filter_override_allowed</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.traffic_filter_override_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow any traffic filters on
 this port group to be overridden on an individual port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.tx_uplink">
-<code class="sig-name descname">tx_uplink</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.tx_uplink" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tx_uplink</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.tx_uplink" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The port group type. Can be one of <code class="docutils literal notranslate"><span class="pre">earlyBinding</span></code> (static
 binding) or <code class="docutils literal notranslate"><span class="pre">ephemeral</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">earlyBinding</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.uplink_teaming_override_allowed">
-<code class="sig-name descname">uplink_teaming_override_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.uplink_teaming_override_allowed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">uplink_teaming_override_allowed</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.uplink_teaming_override_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow the [uplink teaming
 options][uplink-teaming-settings] on this port group to be overridden on an
 individual port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.vlan_id">
-<code class="sig-name descname">vlan_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.vlan_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vlan_id</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.vlan_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.vlan_override_allowed">
-<code class="sig-name descname">vlan_override_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.vlan_override_allowed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vlan_override_allowed</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.vlan_override_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow the [VLAN settings][vlan-settings]
 on this port group to be overridden on an individual port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.vlan_ranges">
-<code class="sig-name descname">vlan_ranges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.vlan_ranges" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vlan_ranges</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.vlan_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -3180,9 +3180,9 @@ on this port group to be overridden on an individual port.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DistributedPortGroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_uplinks=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">auto_expand=None</em>, <em class="sig-param">block_all_ports=None</em>, <em class="sig-param">block_override_allowed=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">config_version=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">directpath_gen2_allowed=None</em>, <em class="sig-param">distributed_virtual_switch_uuid=None</em>, <em class="sig-param">egress_shaping_average_bandwidth=None</em>, <em class="sig-param">egress_shaping_burst_size=None</em>, <em class="sig-param">egress_shaping_enabled=None</em>, <em class="sig-param">egress_shaping_peak_bandwidth=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">ingress_shaping_average_bandwidth=None</em>, <em class="sig-param">ingress_shaping_burst_size=None</em>, <em class="sig-param">ingress_shaping_enabled=None</em>, <em class="sig-param">ingress_shaping_peak_bandwidth=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">lacp_enabled=None</em>, <em class="sig-param">lacp_mode=None</em>, <em class="sig-param">live_port_moving_allowed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">netflow_enabled=None</em>, <em class="sig-param">netflow_override_allowed=None</em>, <em class="sig-param">network_resource_pool_key=None</em>, <em class="sig-param">network_resource_pool_override_allowed=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">number_of_ports=None</em>, <em class="sig-param">port_config_reset_at_disconnect=None</em>, <em class="sig-param">port_name_format=None</em>, <em class="sig-param">port_private_secondary_vlan_id=None</em>, <em class="sig-param">security_policy_override_allowed=None</em>, <em class="sig-param">shaping_override_allowed=None</em>, <em class="sig-param">standby_uplinks=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">teaming_policy=None</em>, <em class="sig-param">traffic_filter_override_allowed=None</em>, <em class="sig-param">tx_uplink=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">uplink_teaming_override_allowed=None</em>, <em class="sig-param">vlan_id=None</em>, <em class="sig-param">vlan_override_allowed=None</em>, <em class="sig-param">vlan_ranges=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active_uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_forged_transmits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_mac_changes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_promiscuous</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_expand</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_all_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_beacon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directpath_gen2_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distributed_virtual_switch_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">live_port_moving_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_resource_pool_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_resource_pool_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_switches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_config_reset_at_disconnect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_name_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_private_secondary_vlan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_policy_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standby_uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teaming_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_filter_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tx_uplink</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uplink_teaming_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_override_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_ranges</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DistributedPortGroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3276,9 +3276,9 @@ on this port group to be overridden on an individual port.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DistributedPortGroup.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -3294,9 +3294,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DistributedPortGroup.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -3314,9 +3314,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DistributedVirtualSwitch</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_uplinks=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">block_all_ports=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">contact_detail=None</em>, <em class="sig-param">contact_name=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">directpath_gen2_allowed=None</em>, <em class="sig-param">egress_shaping_average_bandwidth=None</em>, <em class="sig-param">egress_shaping_burst_size=None</em>, <em class="sig-param">egress_shaping_enabled=None</em>, <em class="sig-param">egress_shaping_peak_bandwidth=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">faulttolerance_maximum_mbit=None</em>, <em class="sig-param">faulttolerance_reservation_mbit=None</em>, <em class="sig-param">faulttolerance_share_count=None</em>, <em class="sig-param">faulttolerance_share_level=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">hbr_maximum_mbit=None</em>, <em class="sig-param">hbr_reservation_mbit=None</em>, <em class="sig-param">hbr_share_count=None</em>, <em class="sig-param">hbr_share_level=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">ingress_shaping_average_bandwidth=None</em>, <em class="sig-param">ingress_shaping_burst_size=None</em>, <em class="sig-param">ingress_shaping_enabled=None</em>, <em class="sig-param">ingress_shaping_peak_bandwidth=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">iscsi_maximum_mbit=None</em>, <em class="sig-param">iscsi_reservation_mbit=None</em>, <em class="sig-param">iscsi_share_count=None</em>, <em class="sig-param">iscsi_share_level=None</em>, <em class="sig-param">lacp_api_version=None</em>, <em class="sig-param">lacp_enabled=None</em>, <em class="sig-param">lacp_mode=None</em>, <em class="sig-param">link_discovery_operation=None</em>, <em class="sig-param">link_discovery_protocol=None</em>, <em class="sig-param">management_maximum_mbit=None</em>, <em class="sig-param">management_reservation_mbit=None</em>, <em class="sig-param">management_share_count=None</em>, <em class="sig-param">management_share_level=None</em>, <em class="sig-param">max_mtu=None</em>, <em class="sig-param">multicast_filtering_mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">netflow_active_flow_timeout=None</em>, <em class="sig-param">netflow_collector_ip_address=None</em>, <em class="sig-param">netflow_collector_port=None</em>, <em class="sig-param">netflow_enabled=None</em>, <em class="sig-param">netflow_idle_flow_timeout=None</em>, <em class="sig-param">netflow_internal_flows_only=None</em>, <em class="sig-param">netflow_observation_domain_id=None</em>, <em class="sig-param">netflow_sampling_rate=None</em>, <em class="sig-param">network_resource_control_enabled=None</em>, <em class="sig-param">network_resource_control_version=None</em>, <em class="sig-param">nfs_maximum_mbit=None</em>, <em class="sig-param">nfs_reservation_mbit=None</em>, <em class="sig-param">nfs_share_count=None</em>, <em class="sig-param">nfs_share_level=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">port_private_secondary_vlan_id=None</em>, <em class="sig-param">standby_uplinks=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">teaming_policy=None</em>, <em class="sig-param">tx_uplink=None</em>, <em class="sig-param">uplinks=None</em>, <em class="sig-param">vdp_maximum_mbit=None</em>, <em class="sig-param">vdp_reservation_mbit=None</em>, <em class="sig-param">vdp_share_count=None</em>, <em class="sig-param">vdp_share_level=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">virtualmachine_maximum_mbit=None</em>, <em class="sig-param">virtualmachine_reservation_mbit=None</em>, <em class="sig-param">virtualmachine_share_count=None</em>, <em class="sig-param">virtualmachine_share_level=None</em>, <em class="sig-param">vlan_id=None</em>, <em class="sig-param">vlan_ranges=None</em>, <em class="sig-param">vmotion_maximum_mbit=None</em>, <em class="sig-param">vmotion_reservation_mbit=None</em>, <em class="sig-param">vmotion_share_count=None</em>, <em class="sig-param">vmotion_share_level=None</em>, <em class="sig-param">vsan_maximum_mbit=None</em>, <em class="sig-param">vsan_reservation_mbit=None</em>, <em class="sig-param">vsan_share_count=None</em>, <em class="sig-param">vsan_share_level=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DistributedVirtualSwitch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active_uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_forged_transmits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_mac_changes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_promiscuous</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_all_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_beacon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">contact_detail</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">contact_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directpath_gen2_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">faulttolerance_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">faulttolerance_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">faulttolerance_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">faulttolerance_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hbr_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hbr_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hbr_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hbr_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iscsi_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iscsi_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iscsi_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iscsi_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_api_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_discovery_operation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_discovery_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_mtu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multicast_filtering_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_active_flow_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_collector_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_collector_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_idle_flow_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_internal_flows_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_observation_domain_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_sampling_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_resource_control_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_resource_control_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_switches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_private_secondary_vlan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standby_uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teaming_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tx_uplink</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vdp_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vdp_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vdp_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vdp_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtualmachine_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtualmachine_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtualmachine_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtualmachine_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_ranges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmotion_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmotion_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmotion_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmotion_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsan_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsan_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsan_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsan_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.DistributedVirtualSwitch</span></code> resource can be used to manage VMware
 Distributed Virtual Switches.</p>
 <p>An essential component of a distributed, scalable VMware datacenter, the
@@ -3516,194 +3516,194 @@ DVS.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.active_uplinks">
-<code class="sig-name descname">active_uplinks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.active_uplinks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">active_uplinks</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.active_uplinks" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
 <code class="docutils literal notranslate"><span class="pre">uplinks</span></code> DVS argument. See
 here for more details.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.allow_forged_transmits">
-<code class="sig-name descname">allow_forged_transmits</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.allow_forged_transmits" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allow_forged_transmits</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.allow_forged_transmits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.allow_mac_changes">
-<code class="sig-name descname">allow_mac_changes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.allow_mac_changes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allow_mac_changes</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.allow_mac_changes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls whether or not the Media Access
 Control (MAC) address can be changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.allow_promiscuous">
-<code class="sig-name descname">allow_promiscuous</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.allow_promiscuous" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allow_promiscuous</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.allow_promiscuous" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.block_all_ports">
-<code class="sig-name descname">block_all_ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.block_all_ports" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">block_all_ports</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.block_all_ports" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
 virtual devices.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.check_beacon">
-<code class="sig-name descname">check_beacon</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.check_beacon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_beacon</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.check_beacon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables beacon probing as an additional measure
 to detect NIC failure.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.config_version">
-<code class="sig-name descname">config_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.config_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">config_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.config_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The version string of the configuration that this spec is trying to change.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.contact_detail">
-<code class="sig-name descname">contact_detail</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.contact_detail" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">contact_detail</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.contact_detail" title="Permalink to this definition">¶</a></dt>
 <dd><p>The detailed contact information for the person
 who is responsible for the DVS.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.contact_name">
-<code class="sig-name descname">contact_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.contact_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">contact_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.contact_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the person who is responsible for the
 DVS.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.custom_attributes">
-<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.custom_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of custom attribute ids to attribute
 value strings to set for virtual switch. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.datacenter_id">
-<code class="sig-name descname">datacenter_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.datacenter_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datacenter_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.datacenter_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A detailed description for the DVS.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.directpath_gen2_allowed">
-<code class="sig-name descname">directpath_gen2_allowed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.directpath_gen2_allowed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">directpath_gen2_allowed</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.directpath_gen2_allowed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.egress_shaping_average_bandwidth">
-<code class="sig-name descname">egress_shaping_average_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.egress_shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">egress_shaping_average_bandwidth</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.egress_shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.egress_shaping_burst_size">
-<code class="sig-name descname">egress_shaping_burst_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.egress_shaping_burst_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">egress_shaping_burst_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.egress_shaping_burst_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.egress_shaping_enabled">
-<code class="sig-name descname">egress_shaping_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.egress_shaping_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">egress_shaping_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.egress_shaping_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the traffic shaper is enabled
 on the port for egress traffic.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.egress_shaping_peak_bandwidth">
-<code class="sig-name descname">egress_shaping_peak_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.egress_shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">egress_shaping_peak_bandwidth</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.egress_shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.failback">
-<code class="sig-name descname">failback</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.failback" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">failback</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.failback" title="Permalink to this definition">¶</a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_maximum_mbit">
-<code class="sig-name descname">faulttolerance_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">faulttolerance_maximum_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_maximum_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_reservation_mbit">
-<code class="sig-name descname">faulttolerance_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">faulttolerance_reservation_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_reservation_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_share_count">
-<code class="sig-name descname">faulttolerance_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_share_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">faulttolerance_share_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_share_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of shares to allocate to the faultTolerance traffic class for a custom share level.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_share_level">
-<code class="sig-name descname">faulttolerance_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">faulttolerance_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.faulttolerance_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.folder">
-<code class="sig-name descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.folder" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">folder</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>The folder to create the DVS in. Forces a new resource
 if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.hbr_maximum_mbit">
-<code class="sig-name descname">hbr_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hbr_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">hbr_maximum_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hbr_maximum_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum allowed usage for the hbr traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.hbr_reservation_mbit">
-<code class="sig-name descname">hbr_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hbr_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">hbr_reservation_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hbr_reservation_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.hbr_share_count">
-<code class="sig-name descname">hbr_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hbr_share_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">hbr_share_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hbr_share_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of shares to allocate to the hbr traffic class for a custom share level.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.hbr_share_level">
-<code class="sig-name descname">hbr_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hbr_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">hbr_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hbr_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.hosts">
-<code class="sig-name descname">hosts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hosts" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">hosts</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hosts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use the <code class="docutils literal notranslate"><span class="pre">host</span></code> block to declare a host specification. The
 options are:</p>
 <ul class="simple">
@@ -3714,293 +3714,293 @@ DVS.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.ingress_shaping_average_bandwidth">
-<code class="sig-name descname">ingress_shaping_average_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.ingress_shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ingress_shaping_average_bandwidth</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.ingress_shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.ingress_shaping_burst_size">
-<code class="sig-name descname">ingress_shaping_burst_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.ingress_shaping_burst_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ingress_shaping_burst_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.ingress_shaping_burst_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.ingress_shaping_enabled">
-<code class="sig-name descname">ingress_shaping_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.ingress_shaping_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ingress_shaping_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.ingress_shaping_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the traffic shaper is
 enabled on the port for ingress traffic.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.ingress_shaping_peak_bandwidth">
-<code class="sig-name descname">ingress_shaping_peak_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.ingress_shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ingress_shaping_peak_bandwidth</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.ingress_shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.ipv4_address">
-<code class="sig-name descname">ipv4_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.ipv4_address" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ipv4_address</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.ipv4_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
 below.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.iscsi_maximum_mbit">
-<code class="sig-name descname">iscsi_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.iscsi_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iscsi_maximum_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.iscsi_maximum_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.iscsi_reservation_mbit">
-<code class="sig-name descname">iscsi_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.iscsi_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iscsi_reservation_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.iscsi_reservation_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.iscsi_share_count">
-<code class="sig-name descname">iscsi_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.iscsi_share_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iscsi_share_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.iscsi_share_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of shares to allocate to the iSCSI traffic class for a custom share level.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.iscsi_share_level">
-<code class="sig-name descname">iscsi_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.iscsi_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iscsi_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.iscsi_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.lacp_api_version">
-<code class="sig-name descname">lacp_api_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.lacp_api_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lacp_api_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.lacp_api_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are <code class="docutils literal notranslate"><span class="pre">singleLag</span></code> and
 <code class="docutils literal notranslate"><span class="pre">multipleLag</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.lacp_enabled">
-<code class="sig-name descname">lacp_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.lacp_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lacp_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.lacp_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables LACP for the ports that this policy
 applies to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.lacp_mode">
-<code class="sig-name descname">lacp_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.lacp_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lacp_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.lacp_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The LACP mode. Can be one of <code class="docutils literal notranslate"><span class="pre">active</span></code> or <code class="docutils literal notranslate"><span class="pre">passive</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.link_discovery_operation">
-<code class="sig-name descname">link_discovery_operation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.link_discovery_operation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">link_discovery_operation</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.link_discovery_operation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to <code class="docutils literal notranslate"><span class="pre">advertise</span></code> or <code class="docutils literal notranslate"><span class="pre">listen</span></code>
 for link discovery traffic.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.link_discovery_protocol">
-<code class="sig-name descname">link_discovery_protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.link_discovery_protocol" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">link_discovery_protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.link_discovery_protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The discovery protocol type. Valid
 types are <code class="docutils literal notranslate"><span class="pre">cdp</span></code> and <code class="docutils literal notranslate"><span class="pre">lldp</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.management_maximum_mbit">
-<code class="sig-name descname">management_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.management_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">management_maximum_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.management_maximum_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum allowed usage for the management traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.management_reservation_mbit">
-<code class="sig-name descname">management_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.management_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">management_reservation_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.management_reservation_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.management_share_count">
-<code class="sig-name descname">management_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.management_share_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">management_share_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.management_share_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of shares to allocate to the management traffic class for a custom share level.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.management_share_level">
-<code class="sig-name descname">management_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.management_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">management_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.management_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The allocation level for the management traffic class. Can be one of high, low, normal, or custom.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.max_mtu">
-<code class="sig-name descname">max_mtu</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.max_mtu" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_mtu</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.max_mtu" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum transmission unit (MTU) for the virtual
 switch.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.multicast_filtering_mode">
-<code class="sig-name descname">multicast_filtering_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.multicast_filtering_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">multicast_filtering_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.multicast_filtering_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The multicast filtering mode to use
 with the switch. Can be one of <code class="docutils literal notranslate"><span class="pre">legacyFiltering</span></code> or <code class="docutils literal notranslate"><span class="pre">snooping</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the distributed virtual switch.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.netflow_active_flow_timeout">
-<code class="sig-name descname">netflow_active_flow_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_active_flow_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">netflow_active_flow_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_active_flow_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
 <code class="docutils literal notranslate"><span class="pre">60</span></code> to <code class="docutils literal notranslate"><span class="pre">3600</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">60</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.netflow_collector_ip_address">
-<code class="sig-name descname">netflow_collector_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_collector_ip_address" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">netflow_collector_ip_address</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_collector_ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.netflow_collector_port">
-<code class="sig-name descname">netflow_collector_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_collector_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">netflow_collector_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_collector_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Port for the Netflow collector. This
 must be set before Netflow can be enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.netflow_enabled">
-<code class="sig-name descname">netflow_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">netflow_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables Netflow on all ports that this policy
 applies to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.netflow_idle_flow_timeout">
-<code class="sig-name descname">netflow_idle_flow_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_idle_flow_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">netflow_idle_flow_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_idle_flow_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is <code class="docutils literal notranslate"><span class="pre">10</span></code>
 to <code class="docutils literal notranslate"><span class="pre">600</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">15</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.netflow_internal_flows_only">
-<code class="sig-name descname">netflow_internal_flows_only</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_internal_flows_only" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">netflow_internal_flows_only</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_internal_flows_only" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to limit analysis to
 traffic that has both source and destination served by the same host.
 Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.netflow_observation_domain_id">
-<code class="sig-name descname">netflow_observation_domain_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_observation_domain_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">netflow_observation_domain_id</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_observation_domain_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The observation domain ID for
 the Netflow collector.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.netflow_sampling_rate">
-<code class="sig-name descname">netflow_sampling_rate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_sampling_rate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">netflow_sampling_rate</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.netflow_sampling_rate" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ratio of total number of packets to
 the number of packets analyzed. The default is <code class="docutils literal notranslate"><span class="pre">0</span></code>, which indicates that the
 switch should analyze all packets. The maximum value is <code class="docutils literal notranslate"><span class="pre">1000</span></code>, which
 indicates an analysis rate of 0.001%.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.network_resource_control_enabled">
-<code class="sig-name descname">network_resource_control_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.network_resource_control_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_resource_control_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.network_resource_control_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable
 network I/O control. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.network_resource_control_version">
-<code class="sig-name descname">network_resource_control_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.network_resource_control_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_resource_control_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.network_resource_control_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The version of network I/O
 control to use. Can be one of <code class="docutils literal notranslate"><span class="pre">version2</span></code> or <code class="docutils literal notranslate"><span class="pre">version3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">version2</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.nfs_maximum_mbit">
-<code class="sig-name descname">nfs_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.nfs_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">nfs_maximum_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.nfs_maximum_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum allowed usage for the nfs traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.nfs_reservation_mbit">
-<code class="sig-name descname">nfs_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.nfs_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">nfs_reservation_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.nfs_reservation_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.nfs_share_count">
-<code class="sig-name descname">nfs_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.nfs_share_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">nfs_share_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.nfs_share_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of shares to allocate to the nfs traffic class for a custom share level.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.nfs_share_level">
-<code class="sig-name descname">nfs_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.nfs_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">nfs_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.nfs_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.notify_switches">
-<code class="sig-name descname">notify_switches</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.notify_switches" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">notify_switches</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.notify_switches" title="Permalink to this definition">¶</a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.port_private_secondary_vlan_id">
-<code class="sig-name descname">port_private_secondary_vlan_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.port_private_secondary_vlan_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">port_private_secondary_vlan_id</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.port_private_secondary_vlan_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Used to define a secondary VLAN
 ID when using private VLANs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.standby_uplinks">
-<code class="sig-name descname">standby_uplinks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.standby_uplinks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">standby_uplinks</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.standby_uplinks" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
 <code class="docutils literal notranslate"><span class="pre">uplinks</span></code> DVS argument. See
 here for more details.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.teaming_policy">
-<code class="sig-name descname">teaming_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.teaming_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">teaming_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.teaming_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The uplink teaming policy. Can be one of
 <code class="docutils literal notranslate"><span class="pre">loadbalance_ip</span></code>, <code class="docutils literal notranslate"><span class="pre">loadbalance_srcmac</span></code>, <code class="docutils literal notranslate"><span class="pre">loadbalance_srcid</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">failover_explicit</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.tx_uplink">
-<code class="sig-name descname">tx_uplink</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.tx_uplink" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tx_uplink</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.tx_uplink" title="Permalink to this definition">¶</a></dt>
 <dd><p>Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.uplinks">
-<code class="sig-name descname">uplinks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.uplinks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">uplinks</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.uplinks" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
 controls the number of uplinks that exist on the DVS, in addition to the
@@ -4008,33 +4008,33 @@ names.  See here for an example on how to
 use this option.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vdp_maximum_mbit">
-<code class="sig-name descname">vdp_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vdp_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vdp_maximum_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vdp_maximum_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum allowed usage for the vdp traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vdp_reservation_mbit">
-<code class="sig-name descname">vdp_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vdp_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vdp_reservation_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vdp_reservation_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vdp_share_count">
-<code class="sig-name descname">vdp_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vdp_share_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vdp_share_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vdp_share_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of shares to allocate to the vdp traffic class for a custom share level.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vdp_share_level">
-<code class="sig-name descname">vdp_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vdp_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vdp_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vdp_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.version">
-<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.version" title="Permalink to this definition">¶</a></dt>
 <dd><ul class="simple">
 <li><p>The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -4043,39 +4043,39 @@ downgraded.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_maximum_mbit">
-<code class="sig-name descname">virtualmachine_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtualmachine_maximum_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_maximum_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_reservation_mbit">
-<code class="sig-name descname">virtualmachine_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtualmachine_reservation_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_reservation_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_share_count">
-<code class="sig-name descname">virtualmachine_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_share_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtualmachine_share_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_share_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of shares to allocate to the virtualMachine traffic class for a custom share level.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_share_level">
-<code class="sig-name descname">virtualmachine_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtualmachine_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.virtualmachine_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vlan_id">
-<code class="sig-name descname">vlan_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vlan_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vlan_id</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vlan_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VLAN ID for single VLAN mode. 0 denotes no VLAN.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vlan_ranges">
-<code class="sig-name descname">vlan_ranges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vlan_ranges" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vlan_ranges</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vlan_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Used to denote VLAN trunking. Use the <code class="docutils literal notranslate"><span class="pre">min_vlan</span></code>
 and <code class="docutils literal notranslate"><span class="pre">max_vlan</span></code> sub-arguments to define the tagged VLAN range. Multiple
 <code class="docutils literal notranslate"><span class="pre">vlan_range</span></code> definitions are allowed, but they must not overlap. Example
@@ -4086,57 +4086,57 @@ below:</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vmotion_maximum_mbit">
-<code class="sig-name descname">vmotion_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vmotion_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vmotion_maximum_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vmotion_maximum_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum allowed usage for the vmotion traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vmotion_reservation_mbit">
-<code class="sig-name descname">vmotion_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vmotion_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vmotion_reservation_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vmotion_reservation_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vmotion_share_count">
-<code class="sig-name descname">vmotion_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vmotion_share_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vmotion_share_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vmotion_share_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of shares to allocate to the vmotion traffic class for a custom share level.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vmotion_share_level">
-<code class="sig-name descname">vmotion_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vmotion_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vmotion_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vmotion_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vsan_maximum_mbit">
-<code class="sig-name descname">vsan_maximum_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vsan_maximum_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vsan_maximum_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vsan_maximum_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum allowed usage for the vsan traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vsan_reservation_mbit">
-<code class="sig-name descname">vsan_reservation_mbit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vsan_reservation_mbit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vsan_reservation_mbit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vsan_reservation_mbit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vsan_share_count">
-<code class="sig-name descname">vsan_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vsan_share_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vsan_share_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vsan_share_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of shares to allocate to the vsan traffic class for a custom share level.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.vsan_share_level">
-<code class="sig-name descname">vsan_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vsan_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vsan_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.vsan_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_uplinks=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">block_all_ports=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">config_version=None</em>, <em class="sig-param">contact_detail=None</em>, <em class="sig-param">contact_name=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">directpath_gen2_allowed=None</em>, <em class="sig-param">egress_shaping_average_bandwidth=None</em>, <em class="sig-param">egress_shaping_burst_size=None</em>, <em class="sig-param">egress_shaping_enabled=None</em>, <em class="sig-param">egress_shaping_peak_bandwidth=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">faulttolerance_maximum_mbit=None</em>, <em class="sig-param">faulttolerance_reservation_mbit=None</em>, <em class="sig-param">faulttolerance_share_count=None</em>, <em class="sig-param">faulttolerance_share_level=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">hbr_maximum_mbit=None</em>, <em class="sig-param">hbr_reservation_mbit=None</em>, <em class="sig-param">hbr_share_count=None</em>, <em class="sig-param">hbr_share_level=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">ingress_shaping_average_bandwidth=None</em>, <em class="sig-param">ingress_shaping_burst_size=None</em>, <em class="sig-param">ingress_shaping_enabled=None</em>, <em class="sig-param">ingress_shaping_peak_bandwidth=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">iscsi_maximum_mbit=None</em>, <em class="sig-param">iscsi_reservation_mbit=None</em>, <em class="sig-param">iscsi_share_count=None</em>, <em class="sig-param">iscsi_share_level=None</em>, <em class="sig-param">lacp_api_version=None</em>, <em class="sig-param">lacp_enabled=None</em>, <em class="sig-param">lacp_mode=None</em>, <em class="sig-param">link_discovery_operation=None</em>, <em class="sig-param">link_discovery_protocol=None</em>, <em class="sig-param">management_maximum_mbit=None</em>, <em class="sig-param">management_reservation_mbit=None</em>, <em class="sig-param">management_share_count=None</em>, <em class="sig-param">management_share_level=None</em>, <em class="sig-param">max_mtu=None</em>, <em class="sig-param">multicast_filtering_mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">netflow_active_flow_timeout=None</em>, <em class="sig-param">netflow_collector_ip_address=None</em>, <em class="sig-param">netflow_collector_port=None</em>, <em class="sig-param">netflow_enabled=None</em>, <em class="sig-param">netflow_idle_flow_timeout=None</em>, <em class="sig-param">netflow_internal_flows_only=None</em>, <em class="sig-param">netflow_observation_domain_id=None</em>, <em class="sig-param">netflow_sampling_rate=None</em>, <em class="sig-param">network_resource_control_enabled=None</em>, <em class="sig-param">network_resource_control_version=None</em>, <em class="sig-param">nfs_maximum_mbit=None</em>, <em class="sig-param">nfs_reservation_mbit=None</em>, <em class="sig-param">nfs_share_count=None</em>, <em class="sig-param">nfs_share_level=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">port_private_secondary_vlan_id=None</em>, <em class="sig-param">standby_uplinks=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">teaming_policy=None</em>, <em class="sig-param">tx_uplink=None</em>, <em class="sig-param">uplinks=None</em>, <em class="sig-param">vdp_maximum_mbit=None</em>, <em class="sig-param">vdp_reservation_mbit=None</em>, <em class="sig-param">vdp_share_count=None</em>, <em class="sig-param">vdp_share_level=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">virtualmachine_maximum_mbit=None</em>, <em class="sig-param">virtualmachine_reservation_mbit=None</em>, <em class="sig-param">virtualmachine_share_count=None</em>, <em class="sig-param">virtualmachine_share_level=None</em>, <em class="sig-param">vlan_id=None</em>, <em class="sig-param">vlan_ranges=None</em>, <em class="sig-param">vmotion_maximum_mbit=None</em>, <em class="sig-param">vmotion_reservation_mbit=None</em>, <em class="sig-param">vmotion_share_count=None</em>, <em class="sig-param">vmotion_share_level=None</em>, <em class="sig-param">vsan_maximum_mbit=None</em>, <em class="sig-param">vsan_reservation_mbit=None</em>, <em class="sig-param">vsan_share_count=None</em>, <em class="sig-param">vsan_share_level=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active_uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_forged_transmits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_mac_changes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_promiscuous</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_all_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_beacon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">contact_detail</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">contact_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">directpath_gen2_allowed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">egress_shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">faulttolerance_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">faulttolerance_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">faulttolerance_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">faulttolerance_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hbr_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hbr_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hbr_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hbr_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingress_shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iscsi_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iscsi_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iscsi_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iscsi_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_api_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lacp_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_discovery_operation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_discovery_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_mtu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multicast_filtering_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_active_flow_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_collector_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_collector_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_idle_flow_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_internal_flows_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_observation_domain_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netflow_sampling_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_resource_control_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_resource_control_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nfs_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_switches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_private_secondary_vlan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standby_uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teaming_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tx_uplink</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uplinks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vdp_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vdp_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vdp_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vdp_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtualmachine_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtualmachine_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtualmachine_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtualmachine_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_ranges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmotion_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmotion_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmotion_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmotion_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsan_maximum_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsan_reservation_mbit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsan_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsan_share_level</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DistributedVirtualSwitch resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4326,9 +4326,9 @@ DVS.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -4344,9 +4344,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -4364,9 +4364,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.DpmHostOverride">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DpmHostOverride</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">dpm_automation_level=None</em>, <em class="sig-param">dpm_enabled=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DpmHostOverride</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dpm_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dpm_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.DpmHostOverride</span></code> resource can be used to add a DPM override to a
 cluster for a particular host. This allows you to control the power management
 settings for individual hosts in the cluster while leaving any unspecified ones
@@ -4395,38 +4395,38 @@ operations on this host. Can be one of <code class="docutils literal notranslate
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DpmHostOverride.compute_cluster_id">
-<code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compute_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DpmHostOverride.dpm_automation_level">
-<code class="sig-name descname">dpm_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.dpm_automation_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dpm_automation_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.dpm_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The automation level for host power
 operations on this host. Can be one of <code class="docutils literal notranslate"><span class="pre">manual</span></code> or <code class="docutils literal notranslate"><span class="pre">automated</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DpmHostOverride.dpm_enabled">
-<code class="sig-name descname">dpm_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.dpm_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dpm_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.dpm_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable DPM support for this host. Default:
 <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DpmHostOverride.host_system_id">
-<code class="sig-name descname">host_system_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.host_system_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host_system_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.host_system_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The managed object ID of the host.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DpmHostOverride.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">dpm_automation_level=None</em>, <em class="sig-param">dpm_enabled=None</em>, <em class="sig-param">host_system_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dpm_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dpm_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DpmHostOverride resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4449,9 +4449,9 @@ operations on this host. Can be one of <code class="docutils literal notranslate
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DpmHostOverride.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -4467,9 +4467,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DpmHostOverride.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -4487,9 +4487,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.DrsVmOverride">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DrsVmOverride</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">drs_automation_level=None</em>, <em class="sig-param">drs_enabled=None</em>, <em class="sig-param">virtual_machine_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">DrsVmOverride</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.DrsVmOverride</span></code> resource can be used to add a DRS override to a
 cluster for a specific virtual machine. With this resource, one can enable or
 disable DRS and control the automation level for a single virtual machine
@@ -4519,39 +4519,39 @@ the override for.  Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DrsVmOverride.compute_cluster_id">
-<code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compute_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DrsVmOverride.drs_automation_level">
-<code class="sig-name descname">drs_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.drs_automation_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">drs_automation_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.drs_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides the automation level for this virtual
 machine in the cluster. Can be one of <code class="docutils literal notranslate"><span class="pre">manual</span></code>, <code class="docutils literal notranslate"><span class="pre">partiallyAutomated</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">fullyAutomated</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DrsVmOverride.drs_enabled">
-<code class="sig-name descname">drs_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.drs_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">drs_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.drs_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides the default DRS setting for this virtual
 machine. Can be either <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.DrsVmOverride.virtual_machine_id">
-<code class="sig-name descname">virtual_machine_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.virtual_machine_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtual_machine_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.virtual_machine_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DrsVmOverride.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">drs_automation_level=None</em>, <em class="sig-param">drs_enabled=None</em>, <em class="sig-param">virtual_machine_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DrsVmOverride resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4575,9 +4575,9 @@ the override for.  Forces a new resource if changed.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DrsVmOverride.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -4593,9 +4593,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.DrsVmOverride.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -4613,9 +4613,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.File">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">File</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_directories=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">datastore=None</em>, <em class="sig-param">destination_file=None</em>, <em class="sig-param">source_datacenter=None</em>, <em class="sig-param">source_datastore=None</em>, <em class="sig-param">source_file=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">File</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_directories</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_datastore</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a File resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -4639,51 +4639,51 @@ be copied from. Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.File.create_directories">
-<code class="sig-name descname">create_directories</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.create_directories" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_directories</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.create_directories" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create directories in <code class="docutils literal notranslate"><span class="pre">destination_file</span></code>
 path parameter if any missing for copy operation.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.File.datacenter">
-<code class="sig-name descname">datacenter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.datacenter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datacenter</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of a datacenter in which the file will be
 uploaded to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.File.datastore">
-<code class="sig-name descname">datastore</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.datastore" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datastore</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.datastore" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the datastore in which to upload the
 file to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.File.destination_file">
-<code class="sig-name descname">destination_file</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.destination_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">destination_file</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.destination_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path to where the file should be uploaded
 or copied to on vSphere.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.File.source_datacenter">
-<code class="sig-name descname">source_datacenter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.source_datacenter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">source_datacenter</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.source_datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of a datacenter in which the file
 will be copied from. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.File.source_datastore">
-<code class="sig-name descname">source_datastore</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.source_datastore" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">source_datastore</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.source_datastore" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the datastore in which file will
 be copied from. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.File.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_directories=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">datastore=None</em>, <em class="sig-param">destination_file=None</em>, <em class="sig-param">source_datacenter=None</em>, <em class="sig-param">source_datastore=None</em>, <em class="sig-param">source_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_directories</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_datastore</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing File resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4709,9 +4709,9 @@ be copied from. Forces a new resource if changed.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.File.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -4727,9 +4727,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.File.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -4747,9 +4747,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.Folder">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Folder</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Folder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Folder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Folder</span></code> resource can be used to manage vSphere inventory folders.
 The resource supports creating folders of the 5 major types - datacenter
 folders, host and cluster folders, virtual machine folders, datastore folders,
@@ -4779,47 +4779,47 @@ resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Folder.custom_attributes">
-<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.custom_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of custom attribute ids to attribute 
 value strings to set for folder. See [here][docs-setting-custom-attributes]
 for a reference on how to set values for custom attributes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Folder.datacenter_id">
-<code class="sig-name descname">datacenter_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.datacenter_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datacenter_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.datacenter_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the datacenter the folder will be created in.
 Required for all folder types except for datacenter folders. Forces a new
 resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Folder.path">
-<code class="sig-name descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">path</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path of the folder and any parents, relative to the datacenter and folder type being defined.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Folder.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Folder.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of folder to create. Allowed options are
 <code class="docutils literal notranslate"><span class="pre">datacenter</span></code> for datacenter folders, <code class="docutils literal notranslate"><span class="pre">host</span></code> for host and cluster folders,
 <code class="docutils literal notranslate"><span class="pre">vm</span></code> for virtual machine folders, <code class="docutils literal notranslate"><span class="pre">datastore</span></code> for datastore folders, and
 <code class="docutils literal notranslate"><span class="pre">network</span></code> for network folders. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Folder.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Folder.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Folder.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Folder resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4846,9 +4846,9 @@ resource if changed.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Folder.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Folder.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Folder.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -4864,9 +4864,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Folder.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Folder.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Folder.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -4884,125 +4884,125 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetComputeClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetComputeClusterResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetComputeClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetComputeClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_pool_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetComputeClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getComputeCluster.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetComputeClusterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetComputeClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetContentLibraryItemResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetContentLibraryItemResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">library_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetContentLibraryItemResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetContentLibraryItemResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">library_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetContentLibraryItemResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getContentLibraryItem.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetContentLibraryItemResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetContentLibraryItemResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetContentLibraryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetContentLibraryResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetContentLibraryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetContentLibraryResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetContentLibraryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getContentLibrary.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetContentLibraryResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetContentLibraryResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetCustomAttributeResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetCustomAttributeResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">managed_object_type=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetCustomAttributeResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetCustomAttributeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_object_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetCustomAttributeResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCustomAttribute.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetCustomAttributeResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetCustomAttributeResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetDatacenterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDatacenterResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatacenterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDatacenterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatacenterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatacenter.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetDatacenterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetDatacenterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetDatastoreClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDatastoreClusterResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatastoreClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDatastoreClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatastoreClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatastoreCluster.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetDatastoreClusterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetDatastoreClusterResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetDatastoreResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDatastoreResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatastoreResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDatastoreResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatastoreResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatastore.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetDatastoreResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetDatastoreResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetDistributedVirtualSwitchResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDistributedVirtualSwitchResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">uplinks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDistributedVirtualSwitchResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetDistributedVirtualSwitchResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uplinks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDistributedVirtualSwitchResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDistributedVirtualSwitch.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetDistributedVirtualSwitchResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetDistributedVirtualSwitchResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetFolderResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetFolderResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetFolderResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFolder.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetFolderResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetFolderResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetHostResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetHostResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetHostResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetHostResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_pool_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetHostResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getHost.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetHostResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetHostResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetHostResult.resource_pool_id">
 <code class="sig-name descname">resource_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetHostResult.resource_pool_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object ID][docs-about-morefs] of the host’s
@@ -5011,90 +5011,90 @@ root resource pool.</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetNetworkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">distributed_virtual_switch_uuid=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetNetworkResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distributed_virtual_switch_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetwork.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetNetworkResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetNetworkResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPolicy.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetPolicyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetPolicyResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetResourcePoolResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetResourcePoolResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetResourcePoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetResourcePoolResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetResourcePoolResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getResourcePool.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetResourcePoolResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetResourcePoolResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetTagCategoryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetTagCategoryResult</code><span class="sig-paren">(</span><em class="sig-param">associable_types=None</em>, <em class="sig-param">cardinality=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetTagCategoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetTagCategoryResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">associable_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cardinality</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetTagCategoryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTagCategory.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetTagCategoryResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetTagCategoryResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetTagResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetTagResult</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetTagResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetTagResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetTagResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTag.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetTagResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetTagResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetVappContainerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetVappContainerResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVappContainerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetVappContainerResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVappContainerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVappContainer.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetVappContainerResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVappContainerResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetVirtualMachineResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetVirtualMachineResult</code><span class="sig-paren">(</span><em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">guest_ip_addresses=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_types=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_scan_count=None</em>, <em class="sig-param">scsi_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetVirtualMachineResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alternate_guest_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firmware</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_bus_sharing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_controller_scan_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVirtualMachine.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetVirtualMachineResult.alternate_guest_name">
 <code class="sig-name descname">alternate_guest_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult.alternate_guest_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The alternate guest name of the virtual machine when
 guest_id is a non-specific operating system, like <code class="docutils literal notranslate"><span class="pre">otherGuest</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetVirtualMachineResult.disks">
 <code class="sig-name descname">disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult.disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Information about each of the disks on this virtual machine or
@@ -5107,31 +5107,31 @@ Only the first number of controllers defined by <code class="docutils literal no
 are scanned for disks. The sub-attributes are:</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetVirtualMachineResult.firmware">
 <code class="sig-name descname">firmware</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult.firmware" title="Permalink to this definition">¶</a></dt>
 <dd><p>The firmware type for this virtual machine. Can be <code class="docutils literal notranslate"><span class="pre">bios</span></code> or <code class="docutils literal notranslate"><span class="pre">efi</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetVirtualMachineResult.guest_id">
 <code class="sig-name descname">guest_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult.guest_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The guest ID of the virtual machine or template.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetVirtualMachineResult.guest_ip_addresses">
 <code class="sig-name descname">guest_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult.guest_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of IP addresses as reported by VMWare tools.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetVirtualMachineResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetVirtualMachineResult.network_interface_types">
 <code class="sig-name descname">network_interface_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult.network_interface_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>The network interface types for each network
@@ -5139,7 +5139,7 @@ interface found on the virtual machine, in device bus order. Will be one of
 <code class="docutils literal notranslate"><span class="pre">e1000</span></code>, <code class="docutils literal notranslate"><span class="pre">e1000e</span></code>, <code class="docutils literal notranslate"><span class="pre">pcnet32</span></code>, <code class="docutils literal notranslate"><span class="pre">sriov</span></code>, <code class="docutils literal notranslate"><span class="pre">vmxnet2</span></code>, or <code class="docutils literal notranslate"><span class="pre">vmxnet3</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetVirtualMachineResult.scsi_bus_sharing">
 <code class="sig-name descname">scsi_bus_sharing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult.scsi_bus_sharing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mode for sharing the SCSI bus. The modes are
@@ -5147,7 +5147,7 @@ physicalSharing, virtualSharing, and noSharing. Only the first number of
 controllers defined by <code class="docutils literal notranslate"><span class="pre">scsi_controller_scan_count</span></code> are scanned.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetVirtualMachineResult.scsi_type">
 <code class="sig-name descname">scsi_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult.scsi_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The common type of all SCSI controllers on this virtual machine.
@@ -5159,28 +5159,28 @@ defined by <code class="docutils literal notranslate"><span class="pre">scsi_con
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.GetVmfsDisksResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetVmfsDisksResult</code><span class="sig-paren">(</span><em class="sig-param">disks=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">rescan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVmfsDisksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">GetVmfsDisksResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rescan</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVmfsDisksResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVmfsDisks.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetVmfsDisksResult.disks">
 <code class="sig-name descname">disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVmfsDisksResult.disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>A lexicographically sorted list of devices discovered by the
 operation, matching the supplied <code class="docutils literal notranslate"><span class="pre">filter</span></code>, if provided.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.GetVmfsDisksResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetVmfsDisksResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.HaVmOverride">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">HaVmOverride</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">ha_datastore_apd_recovery_action=None</em>, <em class="sig-param">ha_datastore_apd_response=None</em>, <em class="sig-param">ha_datastore_apd_response_delay=None</em>, <em class="sig-param">ha_datastore_pdl_response=None</em>, <em class="sig-param">ha_host_isolation_response=None</em>, <em class="sig-param">ha_vm_failure_interval=None</em>, <em class="sig-param">ha_vm_maximum_failure_window=None</em>, <em class="sig-param">ha_vm_maximum_resets=None</em>, <em class="sig-param">ha_vm_minimum_uptime=None</em>, <em class="sig-param">ha_vm_monitoring=None</em>, <em class="sig-param">ha_vm_monitoring_use_cluster_defaults=None</em>, <em class="sig-param">ha_vm_restart_priority=None</em>, <em class="sig-param">ha_vm_restart_timeout=None</em>, <em class="sig-param">virtual_machine_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HaVmOverride" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">HaVmOverride</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_apd_recovery_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_apd_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_apd_response_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_pdl_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_host_isolation_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_failure_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_maximum_failure_window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_maximum_resets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_minimum_uptime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_monitoring_use_cluster_defaults</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_restart_priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_restart_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HaVmOverride" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.HaVmOverride</span></code> resource can be used to add an override for
 vSphere HA settings on a cluster for a specific virtual machine. With this
 resource, one can control specific HA settings so that they are different than
@@ -5258,17 +5258,17 @@ the override for.  Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.compute_cluster_id">
-<code class="sig-name descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compute_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_datastore_apd_recovery_action">
-<code class="sig-name descname">ha_datastore_apd_recovery_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_datastore_apd_recovery_action" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_datastore_apd_recovery_action</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_datastore_apd_recovery_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the action to take
 on this virtual machine if an APD status on an affected datastore clears in
 the middle of an APD event. Can be one of <code class="docutils literal notranslate"><span class="pre">useClusterDefault</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code> or
@@ -5276,9 +5276,9 @@ the middle of an APD event. Can be one of <code class="docutils literal notransl
 <span class="raw-html-m2r"><sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_datastore_apd_response">
-<code class="sig-name descname">ha_datastore_apd_response</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_datastore_apd_response" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_datastore_apd_response</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_datastore_apd_response" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the action to take on this
 virtual machine when the cluster has detected loss to all paths to a relevant
 datastore. Can be one of <code class="docutils literal notranslate"><span class="pre">clusterDefault</span></code>, <code class="docutils literal notranslate"><span class="pre">disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code>,
@@ -5286,9 +5286,9 @@ datastore. Can be one of <code class="docutils literal notranslate"><span class=
 <span class="raw-html-m2r"><sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_datastore_apd_response_delay">
-<code class="sig-name descname">ha_datastore_apd_response_delay</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_datastore_apd_response_delay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_datastore_apd_response_delay</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_datastore_apd_response_delay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
 <code class="docutils literal notranslate"><span class="pre">ha_datastore_apd_response</span></code>. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> to use
@@ -5296,9 +5296,9 @@ the cluster default. Default: <code class="docutils literal notranslate"><span c
 <span class="raw-html-m2r"><sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_datastore_pdl_response">
-<code class="sig-name descname">ha_datastore_pdl_response</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_datastore_pdl_response" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_datastore_pdl_response</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_datastore_pdl_response" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the action to take on this
 virtual machine when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of <code class="docutils literal notranslate"><span class="pre">clusterDefault</span></code>, <code class="docutils literal notranslate"><span class="pre">disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code>, or
@@ -5306,26 +5306,26 @@ relevant datastore. Can be one of <code class="docutils literal notranslate"><sp
 <span class="raw-html-m2r"><sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_host_isolation_response">
-<code class="sig-name descname">ha_host_isolation_response</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_host_isolation_response" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_host_isolation_response</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_host_isolation_response" title="Permalink to this definition">¶</a></dt>
 <dd><p>The action to take on this virtual
 machine when a host has detected that it has been isolated from the rest of
 the cluster. Can be one of <code class="docutils literal notranslate"><span class="pre">clusterIsolationResponse</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">powerOff</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">shutdown</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">clusterIsolationResponse</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_vm_failure_interval">
-<code class="sig-name descname">ha_vm_failure_interval</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_failure_interval" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_failure_interval</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_failure_interval" title="Permalink to this definition">¶</a></dt>
 <dd><p>If a heartbeat from this virtual
 machine is not received within this configured interval, the virtual machine
 is marked as failed. The value is in seconds. Default: <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_vm_maximum_failure_window">
-<code class="sig-name descname">ha_vm_maximum_failure_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_maximum_failure_window" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_maximum_failure_window</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_maximum_failure_window" title="Permalink to this definition">¶</a></dt>
 <dd><p>The length of the reset window in
 which <code class="docutils literal notranslate"><span class="pre">ha_vm_maximum_resets</span></code> can operate. When this
 window expires, no more resets are attempted regardless of the setting
@@ -5334,67 +5334,67 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 <code class="docutils literal notranslate"><span class="pre">-1</span></code> (no window).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_vm_maximum_resets">
-<code class="sig-name descname">ha_vm_maximum_resets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_maximum_resets" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_maximum_resets</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_maximum_resets" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum number of resets that HA will
 perform to this virtual machine when responding to a failure event. Default:
 <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_vm_minimum_uptime">
-<code class="sig-name descname">ha_vm_minimum_uptime</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_minimum_uptime" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_minimum_uptime</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_minimum_uptime" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time, in seconds, that HA waits after
 powering on this virtual machine before monitoring for heartbeats. Default:
 <code class="docutils literal notranslate"><span class="pre">120</span></code> (2 minutes).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_vm_monitoring">
-<code class="sig-name descname">ha_vm_monitoring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_monitoring" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_monitoring</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_monitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of <code class="docutils literal notranslate"><span class="pre">vmMonitoringDisabled</span></code>,
 <code class="docutils literal notranslate"><span class="pre">vmMonitoringOnly</span></code>, or <code class="docutils literal notranslate"><span class="pre">vmAndAppMonitoring</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">vmMonitoringDisabled</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_vm_monitoring_use_cluster_defaults">
-<code class="sig-name descname">ha_vm_monitoring_use_cluster_defaults</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_monitoring_use_cluster_defaults" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_monitoring_use_cluster_defaults</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_monitoring_use_cluster_defaults" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines whether or
 not the cluster’s default settings or the VM override settings specified in
 this resource are used for virtual machine monitoring. The default is <code class="docutils literal notranslate"><span class="pre">true</span></code>
 (use cluster defaults) - set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to have overrides take effect.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_vm_restart_priority">
-<code class="sig-name descname">ha_vm_restart_priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_restart_priority" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_restart_priority</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_restart_priority" title="Permalink to this definition">¶</a></dt>
 <dd><p>The restart priority for the virtual
 machine when vSphere detects a host failure. Can be one of
 <code class="docutils literal notranslate"><span class="pre">clusterRestartPriority</span></code>, <code class="docutils literal notranslate"><span class="pre">lowest</span></code>, <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">medium</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">highest</span></code>.
 Default: <code class="docutils literal notranslate"><span class="pre">clusterRestartPriority</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.ha_vm_restart_timeout">
-<code class="sig-name descname">ha_vm_restart_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_restart_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ha_vm_restart_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.ha_vm_restart_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> to
 specify the cluster default.  Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code>.
 <span class="raw-html-m2r"><sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup></span></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HaVmOverride.virtual_machine_id">
-<code class="sig-name descname">virtual_machine_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.virtual_machine_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtual_machine_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.virtual_machine_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.HaVmOverride.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">ha_datastore_apd_recovery_action=None</em>, <em class="sig-param">ha_datastore_apd_response=None</em>, <em class="sig-param">ha_datastore_apd_response_delay=None</em>, <em class="sig-param">ha_datastore_pdl_response=None</em>, <em class="sig-param">ha_host_isolation_response=None</em>, <em class="sig-param">ha_vm_failure_interval=None</em>, <em class="sig-param">ha_vm_maximum_failure_window=None</em>, <em class="sig-param">ha_vm_maximum_resets=None</em>, <em class="sig-param">ha_vm_minimum_uptime=None</em>, <em class="sig-param">ha_vm_monitoring=None</em>, <em class="sig-param">ha_vm_monitoring_use_cluster_defaults=None</em>, <em class="sig-param">ha_vm_restart_priority=None</em>, <em class="sig-param">ha_vm_restart_timeout=None</em>, <em class="sig-param">virtual_machine_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_apd_recovery_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_apd_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_apd_response_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_datastore_pdl_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_host_isolation_response</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_failure_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_maximum_failure_window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_maximum_resets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_minimum_uptime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_monitoring_use_cluster_defaults</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_restart_priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ha_vm_restart_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HaVmOverride resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5467,9 +5467,9 @@ the override for.  Forces a new resource if changed.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.HaVmOverride.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -5485,9 +5485,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.HaVmOverride.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -5505,9 +5505,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.Host">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Host</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">connected=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">force=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">license=None</em>, <em class="sig-param">lockdown=None</em>, <em class="sig-param">maintenance=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">thumbprint=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Host</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connected</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lockdown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere host resource. This represents an ESXi host that
 can be used either as part of a Compute Cluster or Standalone.</p>
 <dl class="field-list simple">
@@ -5539,85 +5539,85 @@ to the host.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Host.cluster">
-<code class="sig-name descname">cluster</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cluster</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Compute Cluster this host should
 be added to. This should not be set if <code class="docutils literal notranslate"><span class="pre">datacenter</span></code> is set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Host.connected">
-<code class="sig-name descname">connected</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.connected" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">connected</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.connected" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to false then the host will be disconected.
 Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Host.datacenter">
-<code class="sig-name descname">datacenter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.datacenter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datacenter</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the datacenter this host should
 be added to. This should not be set if <code class="docutils literal notranslate"><span class="pre">cluster</span></code> is set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Host.force">
-<code class="sig-name descname">force</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.force" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">force</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.force" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Host.hostname">
-<code class="sig-name descname">hostname</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.hostname" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">hostname</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.hostname" title="Permalink to this definition">¶</a></dt>
 <dd><p>FQDN or IP address of the host to be added.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Host.license">
-<code class="sig-name descname">license</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.license" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">license</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.license" title="Permalink to this definition">¶</a></dt>
 <dd><p>The license key that will be applied to the host.
 The license key is expected to be present in vSphere.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Host.lockdown">
-<code class="sig-name descname">lockdown</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.lockdown" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lockdown</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.lockdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the lockdown state of the host. Valid options are
 <code class="docutils literal notranslate"><span class="pre">disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, and <code class="docutils literal notranslate"><span class="pre">strict</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">disabled</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Host.maintenance">
-<code class="sig-name descname">maintenance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.maintenance" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">maintenance</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.maintenance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the management state of the host. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Host.password">
-<code class="sig-name descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.password" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.password" title="Permalink to this definition">¶</a></dt>
 <dd><p>Password that will be used by vSphere to authenticate
 to the host.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Host.thumbprint">
-<code class="sig-name descname">thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.thumbprint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">thumbprint</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.thumbprint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Host’s certificate SHA-1 thumbprint. If not set the the
 CA that signed the host’s certificate should be trusted. If the CA is not trusted
 and no thumbprint is set then the operation will fail.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Host.username">
-<code class="sig-name descname">username</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.username" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.username" title="Permalink to this definition">¶</a></dt>
 <dd><p>Username that will be used by vSphere to authenticate
 to the host.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Host.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">connected=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">force=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">license=None</em>, <em class="sig-param">lockdown=None</em>, <em class="sig-param">maintenance=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">thumbprint=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connected</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lockdown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbprint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Host resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5652,9 +5652,9 @@ to the host.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Host.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -5670,9 +5670,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Host.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -5690,9 +5690,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.HostPortGroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">HostPortGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_nics=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">shaping_average_bandwidth=None</em>, <em class="sig-param">shaping_burst_size=None</em>, <em class="sig-param">shaping_enabled=None</em>, <em class="sig-param">shaping_peak_bandwidth=None</em>, <em class="sig-param">standby_nics=None</em>, <em class="sig-param">teaming_policy=None</em>, <em class="sig-param">virtual_switch_name=None</em>, <em class="sig-param">vlan_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostPortGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">HostPortGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active_nics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_forged_transmits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_mac_changes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_promiscuous</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_beacon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_switches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standby_nics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teaming_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_switch_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostPortGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.HostPortGroup</span></code> resource can be used to manage vSphere standard
 port groups on an ESXi host. These port groups are connected to standard
 virtual switches, which can be managed by the
@@ -5732,81 +5732,81 @@ tagging. Default: <code class="docutils literal notranslate"><span class="pre">0
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.active_nics">
-<code class="sig-name descname">active_nics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.active_nics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">active_nics</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.active_nics" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of active network adapters used for load balancing.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.allow_forged_transmits">
-<code class="sig-name descname">allow_forged_transmits</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.allow_forged_transmits" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allow_forged_transmits</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.allow_forged_transmits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.allow_mac_changes">
-<code class="sig-name descname">allow_mac_changes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.allow_mac_changes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allow_mac_changes</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.allow_mac_changes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls whether or not the Media Access Control (MAC) address can be changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.allow_promiscuous">
-<code class="sig-name descname">allow_promiscuous</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.allow_promiscuous" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allow_promiscuous</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.allow_promiscuous" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.check_beacon">
-<code class="sig-name descname">check_beacon</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.check_beacon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_beacon</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.check_beacon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
 only.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.computed_policy">
-<code class="sig-name descname">computed_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.computed_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">computed_policy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.computed_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map with a full set of the [policy
 options][host-vswitch-policy-options] computed from defaults and overrides,
 explaining the effective policy for this port group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.failback">
-<code class="sig-name descname">failback</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.failback" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">failback</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.failback" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.host_system_id">
-<code class="sig-name descname">host_system_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.host_system_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host_system_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.host_system_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.key">
-<code class="sig-name descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The key for this port group as returned from the vSphere API.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the port group.  Forces a new resource if
 changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.notify_switches">
-<code class="sig-name descname">notify_switches</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.notify_switches" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">notify_switches</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.notify_switches" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.ports">
-<code class="sig-name descname">ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.ports" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ports</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.ports" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of ports that currently exist and are used on this port group.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The key for this port group as returned from the vSphere API.</p></li>
@@ -5815,62 +5815,62 @@ changed.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.shaping_average_bandwidth">
-<code class="sig-name descname">shaping_average_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shaping_average_bandwidth</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The average bandwidth in bits per second if traffic shaping is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.shaping_burst_size">
-<code class="sig-name descname">shaping_burst_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.shaping_burst_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shaping_burst_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.shaping_burst_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum burst size allowed in bytes if traffic shaping is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.shaping_enabled">
-<code class="sig-name descname">shaping_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.shaping_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shaping_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.shaping_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable traffic shaping on this virtual switch or port group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.shaping_peak_bandwidth">
-<code class="sig-name descname">shaping_peak_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shaping_peak_bandwidth</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The peak bandwidth during bursts in bits per second if traffic shaping is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.standby_nics">
-<code class="sig-name descname">standby_nics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.standby_nics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">standby_nics</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.standby_nics" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of standby network adapters used for failover.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.teaming_policy">
-<code class="sig-name descname">teaming_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.teaming_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">teaming_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.teaming_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
 failover_explicit.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.virtual_switch_name">
-<code class="sig-name descname">virtual_switch_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.virtual_switch_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtual_switch_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.virtual_switch_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostPortGroup.vlan_id">
-<code class="sig-name descname">vlan_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.vlan_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vlan_id</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.vlan_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VLAN ID/trunk mode for this port group.  An ID of
 <code class="docutils literal notranslate"><span class="pre">0</span></code> denotes no tagging, an ID of <code class="docutils literal notranslate"><span class="pre">1</span></code>-<code class="docutils literal notranslate"><span class="pre">4094</span></code> tags with the specific ID, and an
 ID of <code class="docutils literal notranslate"><span class="pre">4095</span></code> enables trunk mode, allowing the guest to manage its own
 tagging. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.HostPortGroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_nics=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">computed_policy=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">shaping_average_bandwidth=None</em>, <em class="sig-param">shaping_burst_size=None</em>, <em class="sig-param">shaping_enabled=None</em>, <em class="sig-param">shaping_peak_bandwidth=None</em>, <em class="sig-param">standby_nics=None</em>, <em class="sig-param">teaming_policy=None</em>, <em class="sig-param">virtual_switch_name=None</em>, <em class="sig-param">vlan_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active_nics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_forged_transmits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_mac_changes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_promiscuous</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_beacon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">computed_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_switches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standby_nics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teaming_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_switch_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vlan_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HostPortGroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5921,9 +5921,9 @@ tagging. Default: <code class="docutils literal notranslate"><span class="pre">0
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.HostPortGroup.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -5939,9 +5939,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.HostPortGroup.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -5959,9 +5959,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.HostVirtualSwitch">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">HostVirtualSwitch</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_nics=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">beacon_interval=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">link_discovery_operation=None</em>, <em class="sig-param">link_discovery_protocol=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_adapters=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">number_of_ports=None</em>, <em class="sig-param">shaping_average_bandwidth=None</em>, <em class="sig-param">shaping_burst_size=None</em>, <em class="sig-param">shaping_enabled=None</em>, <em class="sig-param">shaping_peak_bandwidth=None</em>, <em class="sig-param">standby_nics=None</em>, <em class="sig-param">teaming_policy=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">HostVirtualSwitch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active_nics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_forged_transmits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_mac_changes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_promiscuous</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">beacon_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_beacon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_discovery_operation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_discovery_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mtu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_adapters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_switches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standby_nics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teaming_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.HostVirtualSwitch</span></code> resource can be used to manage vSphere
 standard switches on an ESXi host. These switches can be used as a backing for
 standard port groups, which can be managed by the
@@ -6025,163 +6025,163 @@ of <code class="docutils literal notranslate"><span class="pre">loadbalance_ip</
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.active_nics">
-<code class="sig-name descname">active_nics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.active_nics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">active_nics</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.active_nics" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of active network adapters used for load
 balancing.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.allow_forged_transmits">
-<code class="sig-name descname">allow_forged_transmits</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.allow_forged_transmits" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allow_forged_transmits</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.allow_forged_transmits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls whether or not the virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.allow_mac_changes">
-<code class="sig-name descname">allow_mac_changes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.allow_mac_changes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allow_mac_changes</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.allow_mac_changes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls whether or not the Media Access
 Control (MAC) address can be changed. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.allow_promiscuous">
-<code class="sig-name descname">allow_promiscuous</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.allow_promiscuous" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allow_promiscuous</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.allow_promiscuous" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port. Default:
 <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.beacon_interval">
-<code class="sig-name descname">beacon_interval</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.beacon_interval" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">beacon_interval</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.beacon_interval" title="Permalink to this definition">¶</a></dt>
 <dd><p>The interval, in seconds, that a NIC beacon
 packet is sent out. This can be used with <code class="docutils literal notranslate"><span class="pre">check_beacon</span></code> to
 offer link failure capability beyond link status only. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.check_beacon">
-<code class="sig-name descname">check_beacon</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.check_beacon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_beacon</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.check_beacon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable beacon probing - this requires that the
 <code class="docutils literal notranslate"><span class="pre">beacon_interval</span></code> option has been set in the bridge
 options. If this is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, only link status is used to check for
 failed NICs.  Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.failback">
-<code class="sig-name descname">failback</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.failback" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">failback</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.failback" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will re-activate
 failed interfaces higher in precedence when they come back up.  Default:
 <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.host_system_id">
-<code class="sig-name descname">host_system_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.host_system_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host_system_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.host_system_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object ID][docs-about-morefs] of
 the host to set the virtual switch up on. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.link_discovery_operation">
-<code class="sig-name descname">link_discovery_operation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.link_discovery_operation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">link_discovery_operation</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.link_discovery_operation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to <code class="docutils literal notranslate"><span class="pre">advertise</span></code> or <code class="docutils literal notranslate"><span class="pre">listen</span></code>
 for link discovery traffic. Default: <code class="docutils literal notranslate"><span class="pre">listen</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.link_discovery_protocol">
-<code class="sig-name descname">link_discovery_protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.link_discovery_protocol" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">link_discovery_protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.link_discovery_protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The discovery protocol type.  Valid
 types are <code class="docutils literal notranslate"><span class="pre">cpd</span></code> and <code class="docutils literal notranslate"><span class="pre">lldp</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">cdp</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.mtu">
-<code class="sig-name descname">mtu</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.mtu" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mtu</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.mtu" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum transmission unit (MTU) for the virtual
 switch. Default: <code class="docutils literal notranslate"><span class="pre">1500</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the virtual switch. Forces a new resource if
 changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.network_adapters">
-<code class="sig-name descname">network_adapters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.network_adapters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_adapters</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.network_adapters" title="Permalink to this definition">¶</a></dt>
 <dd><p>The network interfaces to bind to the bridge.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.notify_switches">
-<code class="sig-name descname">notify_switches</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.notify_switches" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">notify_switches</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.notify_switches" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will
 notify the broadcast network of a NIC failover, triggering cache updates.
 Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.number_of_ports">
-<code class="sig-name descname">number_of_ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.number_of_ports" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">number_of_ports</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.number_of_ports" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of ports to create with this
 virtual switch. Default: <code class="docutils literal notranslate"><span class="pre">128</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.shaping_average_bandwidth">
-<code class="sig-name descname">shaping_average_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shaping_average_bandwidth</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.shaping_average_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The average bandwidth in bits per
 second if traffic shaping is enabled. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.shaping_burst_size">
-<code class="sig-name descname">shaping_burst_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.shaping_burst_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shaping_burst_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.shaping_burst_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum burst size allowed in bytes if
 shaping is enabled. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.shaping_enabled">
-<code class="sig-name descname">shaping_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.shaping_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shaping_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.shaping_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable the traffic shaper for
 ports managed by this virtual switch. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.shaping_peak_bandwidth">
-<code class="sig-name descname">shaping_peak_bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shaping_peak_bandwidth</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.shaping_peak_bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The peak bandwidth during bursts in
 bits per second if traffic shaping is enabled. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.standby_nics">
-<code class="sig-name descname">standby_nics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.standby_nics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">standby_nics</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.standby_nics" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of standby network adapters used for
 failover.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.teaming_policy">
-<code class="sig-name descname">teaming_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.teaming_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">teaming_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.teaming_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The network adapter teaming policy. Can be one
 of <code class="docutils literal notranslate"><span class="pre">loadbalance_ip</span></code>, <code class="docutils literal notranslate"><span class="pre">loadbalance_srcmac</span></code>, <code class="docutils literal notranslate"><span class="pre">loadbalance_srcid</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">failover_explicit</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">loadbalance_srcid</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.HostVirtualSwitch.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_nics=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">beacon_interval=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">link_discovery_operation=None</em>, <em class="sig-param">link_discovery_protocol=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_adapters=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">number_of_ports=None</em>, <em class="sig-param">shaping_average_bandwidth=None</em>, <em class="sig-param">shaping_burst_size=None</em>, <em class="sig-param">shaping_enabled=None</em>, <em class="sig-param">shaping_peak_bandwidth=None</em>, <em class="sig-param">standby_nics=None</em>, <em class="sig-param">teaming_policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">active_nics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_forged_transmits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_mac_changes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_promiscuous</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">beacon_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_beacon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_discovery_operation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">link_discovery_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mtu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_adapters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_switches</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_average_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_burst_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shaping_peak_bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">standby_nics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teaming_policy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HostVirtualSwitch resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -6244,9 +6244,9 @@ of <code class="docutils literal notranslate"><span class="pre">loadbalance_ip</
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.HostVirtualSwitch.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -6262,9 +6262,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.HostVirtualSwitch.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -6282,9 +6282,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.License">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">License</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">license_key=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">License</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere license resource. This can be used to add and remove license keys.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -6296,45 +6296,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.License.edition_key">
-<code class="sig-name descname">edition_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.edition_key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">edition_key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.edition_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The product edition of the license key.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.License.labels">
-<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.labels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">labels</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of key/value pairs to be attached as labels (tags) to the license key.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.License.license_key">
-<code class="sig-name descname">license_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.license_key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">license_key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.license_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The license key to add.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.License.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The display name for the license.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.License.total">
-<code class="sig-name descname">total</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.total" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">total</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.total" title="Permalink to this definition">¶</a></dt>
 <dd><p>Total number of units (example: CPUs) contained in the license.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.License.used">
-<code class="sig-name descname">used</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.used" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">used</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.used" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of units (example: CPUs) assigned to this license.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.License.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">edition_key=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">license_key=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">total=None</em>, <em class="sig-param">used=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">edition_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">used</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing License resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -6354,9 +6354,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.License.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -6372,9 +6372,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.License.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -6392,9 +6392,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.NasDatastore">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">NasDatastore</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">host_system_ids=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">remote_hosts=None</em>, <em class="sig-param">remote_path=None</em>, <em class="sig-param">security_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.NasDatastore" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">NasDatastore</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remote_hosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remote_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.NasDatastore" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.NasDatastore</span></code> resource can be used to create and manage NAS
 datastores on an ESXi host or a set of hosts. The resource supports mounting
 NFS v3 and v4.1 shares to be used as datastores.</p>
@@ -6441,145 +6441,145 @@ changed.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.access_mode">
-<code class="sig-name descname">access_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.access_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">access_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.access_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Access mode for the mount point. Can be one of
 <code class="docutils literal notranslate"><span class="pre">readOnly</span></code> or <code class="docutils literal notranslate"><span class="pre">readWrite</span></code>. Note that <code class="docutils literal notranslate"><span class="pre">readWrite</span></code> does not necessarily mean
 that the datastore will be read-write depending on the permissions of the
 actual share. Default: <code class="docutils literal notranslate"><span class="pre">readWrite</span></code>. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.accessible">
-<code class="sig-name descname">accessible</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.accessible" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">accessible</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.accessible" title="Permalink to this definition">¶</a></dt>
 <dd><p>The connectivity status of the datastore. If this is <code class="docutils literal notranslate"><span class="pre">false</span></code>,
 some other computed attributes may be out of date.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.capacity">
-<code class="sig-name descname">capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.capacity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">capacity</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum capacity of the datastore, in megabytes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.custom_attributes">
-<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.custom_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of custom attribute ids to attribute 
 value strings to set on datasource resource. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.datastore_cluster_id">
-<code class="sig-name descname">datastore_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datastore_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object
 ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">folder</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.folder">
-<code class="sig-name descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.folder" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">folder</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path to the datastore folder to put the datastore in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.free_space">
-<code class="sig-name descname">free_space</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.free_space" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">free_space</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.free_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Available space of this datastore, in megabytes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.host_system_ids">
-<code class="sig-name descname">host_system_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.host_system_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host_system_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.host_system_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object IDs][docs-about-morefs] of
 the hosts to mount the datastore on.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.maintenance_mode">
-<code class="sig-name descname">maintenance_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.maintenance_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">maintenance_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.maintenance_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current maintenance mode state of the datastore.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.multiple_host_access">
-<code class="sig-name descname">multiple_host_access</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.multiple_host_access" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">multiple_host_access</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.multiple_host_access" title="Permalink to this definition">¶</a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, more than one host in the datacenter has
 been configured with access to the datastore.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the datastore. Forces a new resource if
 changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.protocol_endpoint">
-<code class="sig-name descname">protocol_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.protocol_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">protocol_endpoint</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.protocol_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that this NAS volume is a protocol endpoint.
 This field is only populated if the host supports virtual datastores.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.remote_hosts">
-<code class="sig-name descname">remote_hosts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.remote_hosts" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">remote_hosts</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.remote_hosts" title="Permalink to this definition">¶</a></dt>
 <dd><p>The hostnames or IP addresses of the remote
 server or servers. Only one element should be present for NFS v3 but multiple
 can be present for NFS v4.1. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.remote_path">
-<code class="sig-name descname">remote_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.remote_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">remote_path</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.remote_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The remote path of the mount point. Forces a new
 resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.security_type">
-<code class="sig-name descname">security_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.security_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">security_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.security_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The security type to use when using NFS v4.1.
 Can be one of <code class="docutils literal notranslate"><span class="pre">AUTH_SYS</span></code>, <code class="docutils literal notranslate"><span class="pre">SEC_KRB5</span></code>, or <code class="docutils literal notranslate"><span class="pre">SEC_KRB5I</span></code>. Forces a new resource
 if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of NAS volume. Can be one of <code class="docutils literal notranslate"><span class="pre">NFS</span></code> (to denote
 v3) or <code class="docutils literal notranslate"><span class="pre">NFS41</span></code> (to denote NFS v4.1). Default: <code class="docutils literal notranslate"><span class="pre">NFS</span></code>. Forces a new resource if
 changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.uncommitted_space">
-<code class="sig-name descname">uncommitted_space</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.uncommitted_space" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">uncommitted_space</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.uncommitted_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.NasDatastore.url">
-<code class="sig-name descname">url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">url</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique locator for the datastore.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.NasDatastore.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">accessible=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">free_space=None</em>, <em class="sig-param">host_system_ids=None</em>, <em class="sig-param">maintenance_mode=None</em>, <em class="sig-param">multiple_host_access=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol_endpoint=None</em>, <em class="sig-param">remote_hosts=None</em>, <em class="sig-param">remote_path=None</em>, <em class="sig-param">security_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">uncommitted_space=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.NasDatastore.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accessible</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">free_space</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multiple_host_access</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remote_hosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remote_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uncommitted_space</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.NasDatastore.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NasDatastore resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -6634,9 +6634,9 @@ potentially used by all virtual machines on this datastore.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.NasDatastore.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.NasDatastore.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.NasDatastore.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -6652,9 +6652,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.NasDatastore.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.NasDatastore.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.NasDatastore.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -6672,9 +6672,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.Provider">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_unverified_ssl=None</em>, <em class="sig-param">client_debug=None</em>, <em class="sig-param">client_debug_path=None</em>, <em class="sig-param">client_debug_path_run=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">persist_session=None</em>, <em class="sig-param">rest_session_path=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">vcenter_server=None</em>, <em class="sig-param">vim_keep_alive=None</em>, <em class="sig-param">vim_session_path=None</em>, <em class="sig-param">vsphere_server=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_unverified_ssl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_debug</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_debug_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_debug_path_run</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">persist_session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rest_session_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vcenter_server</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vim_keep_alive</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vim_session_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsphere_server</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the vsphere package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
@@ -6698,9 +6698,9 @@ construction to achieve fine-grained programmatic control over provider settings
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Provider.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -6716,9 +6716,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Provider.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -6736,9 +6736,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.ResourcePool">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ResourcePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cpu_expandable=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">memory_expandable=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">memory_shares=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent_resource_pool_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ResourcePool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">ResourcePool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_expandable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_reservation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_shares</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_expandable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_reservation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_shares</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_resource_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ResourcePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.ResourcePool</span></code> resource can be used to create and manage
 resource pools in standalone hosts or on compute clusters.</p>
 <p>For more information on vSphere resource pools, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html">this
@@ -6792,32 +6792,32 @@ resource pool or the move will fail.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.cpu_expandable">
-<code class="sig-name descname">cpu_expandable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.cpu_expandable" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_expandable</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.cpu_expandable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.cpu_limit">
-<code class="sig-name descname">cpu_limit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.cpu_limit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_limit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.cpu_limit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to <code class="docutils literal notranslate"><span class="pre">-1</span></code> for unlimited.
 Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.cpu_reservation">
-<code class="sig-name descname">cpu_reservation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.cpu_reservation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_reservation</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.cpu_reservation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.cpu_share_level">
-<code class="sig-name descname">cpu_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.cpu_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.cpu_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. When
@@ -6825,46 +6825,46 @@ values for shares. Can be one of <code class="docutils literal notranslate"><spa
 ignored.  Default: <code class="docutils literal notranslate"><span class="pre">normal</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.cpu_shares">
-<code class="sig-name descname">cpu_shares</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.cpu_shares" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_shares</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.cpu_shares" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">cpu_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.custom_attributes">
-<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.custom_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of custom attributes to set on this resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.memory_expandable">
-<code class="sig-name descname">memory_expandable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.memory_expandable" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_expandable</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.memory_expandable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.memory_limit">
-<code class="sig-name descname">memory_limit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.memory_limit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_limit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.memory_limit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to <code class="docutils literal notranslate"><span class="pre">-1</span></code> for unlimited.
 Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.memory_reservation">
-<code class="sig-name descname">memory_reservation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.memory_reservation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_reservation</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.memory_reservation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.memory_share_level">
-<code class="sig-name descname">memory_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.memory_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.memory_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. When
@@ -6872,23 +6872,23 @@ values for shares. Can be one of <code class="docutils literal notranslate"><spa
 ignored.  Default: <code class="docutils literal notranslate"><span class="pre">normal</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.memory_shares">
-<code class="sig-name descname">memory_shares</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.memory_shares" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_shares</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.memory_shares" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">memory_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource pool.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.parent_resource_pool_id">
-<code class="sig-name descname">parent_resource_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.parent_resource_pool_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parent_resource_pool_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.parent_resource_pool_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a resource pool
@@ -6896,16 +6896,16 @@ from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.ResourcePool.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ResourcePool.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cpu_expandable=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">memory_expandable=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">memory_shares=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent_resource_pool_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ResourcePool.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_expandable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_reservation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_shares</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_expandable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_reservation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_shares</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_resource_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ResourcePool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ResourcePool resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -6960,9 +6960,9 @@ resource pool or the move will fail.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ResourcePool.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ResourcePool.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ResourcePool.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -6978,9 +6978,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.ResourcePool.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ResourcePool.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ResourcePool.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -6998,9 +6998,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.StorageDrsVmOverride">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">StorageDrsVmOverride</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">sdrs_automation_level=None</em>, <em class="sig-param">sdrs_enabled=None</em>, <em class="sig-param">sdrs_intra_vm_affinity=None</em>, <em class="sig-param">virtual_machine_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">StorageDrsVmOverride</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_intra_vm_affinity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.StorageDrsVmOverride</span></code> resource can be used to add a Storage DRS
 override to a datastore cluster for a specific virtual machine. With this
 resource, one can enable or disable Storage DRS, and control the automation
@@ -7033,34 +7033,34 @@ the override for.  Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.StorageDrsVmOverride.datastore_cluster_id">
-<code class="sig-name descname">datastore_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datastore_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the datastore cluster to put the override in.
 Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.StorageDrsVmOverride.sdrs_automation_level">
-<code class="sig-name descname">sdrs_automation_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.sdrs_automation_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_automation_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.sdrs_automation_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of <code class="docutils literal notranslate"><span class="pre">automated</span></code> or <code class="docutils literal notranslate"><span class="pre">manual</span></code>. When
 not specified, the datastore cluster’s settings are used according to the
 [specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.StorageDrsVmOverride.sdrs_enabled">
-<code class="sig-name descname">sdrs_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.sdrs_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_enabled</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.sdrs_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.StorageDrsVmOverride.sdrs_intra_vm_affinity">
-<code class="sig-name descname">sdrs_intra_vm_affinity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.sdrs_intra_vm_affinity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sdrs_intra_vm_affinity</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.sdrs_intra_vm_affinity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides the intra-VM affinity setting
 for this virtual machine. When <code class="docutils literal notranslate"><span class="pre">true</span></code>, all disks for this virtual machine
 will be kept on the same datastore. When <code class="docutils literal notranslate"><span class="pre">false</span></code>, Storage DRS may locate
@@ -7068,16 +7068,16 @@ individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster’s settings are used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.StorageDrsVmOverride.virtual_machine_id">
-<code class="sig-name descname">virtual_machine_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.virtual_machine_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtual_machine_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.virtual_machine_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.StorageDrsVmOverride.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">sdrs_automation_level=None</em>, <em class="sig-param">sdrs_enabled=None</em>, <em class="sig-param">sdrs_intra_vm_affinity=None</em>, <em class="sig-param">virtual_machine_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_automation_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sdrs_intra_vm_affinity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing StorageDrsVmOverride resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -7108,9 +7108,9 @@ the override for.  Forces a new resource if changed.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.StorageDrsVmOverride.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -7126,9 +7126,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.StorageDrsVmOverride.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -7146,9 +7146,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.Tag">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Tag</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">category_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Tag" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Tag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">category_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Tag" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Tag</span></code> resource can be used to create and manage tags, which allow
 you to attach metadata to objects in the vSphere inventory to make these
 objects more sortable and searchable.</p>
@@ -7170,29 +7170,29 @@ within its category.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Tag.category_id">
-<code class="sig-name descname">category_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Tag.category_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">category_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Tag.category_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique identifier of the parent category in
 which this tag will be created. Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Tag.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Tag.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Tag.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description for the tag.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Tag.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Tag.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Tag.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The display name of the tag. The name must be unique
 within its category.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Tag.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">category_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Tag.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">category_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Tag.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Tag resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -7211,9 +7211,9 @@ within its category.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Tag.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Tag.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Tag.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -7229,9 +7229,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Tag.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Tag.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Tag.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -7249,9 +7249,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.TagCategory">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">TagCategory</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">associable_types=None</em>, <em class="sig-param">cardinality=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.TagCategory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">TagCategory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associable_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cardinality</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.TagCategory" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.TagCategory</span></code> resource can be used to create and manage tag
 categories, which determine how tags are grouped together and applied to
 specific objects.</p>
@@ -7279,38 +7279,38 @@ multiple tags in this category). Forces a new resource if changed.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.TagCategory.associable_types">
-<code class="sig-name descname">associable_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.TagCategory.associable_types" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">associable_types</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.TagCategory.associable_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list object types that this category is
 valid to be assigned to. For a full list, click
 here.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.TagCategory.cardinality">
-<code class="sig-name descname">cardinality</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.TagCategory.cardinality" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cardinality</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.TagCategory.cardinality" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of tags that can be assigned from this
 category to a single object at once. Can be one of <code class="docutils literal notranslate"><span class="pre">SINGLE</span></code> (object can only
 be assigned one tag in this category), to <code class="docutils literal notranslate"><span class="pre">MULTIPLE</span></code> (object can be assigned
 multiple tags in this category). Forces a new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.TagCategory.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.TagCategory.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.TagCategory.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description for the category.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.TagCategory.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.TagCategory.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.TagCategory.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the category.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.TagCategory.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">associable_types=None</em>, <em class="sig-param">cardinality=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.TagCategory.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associable_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cardinality</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.TagCategory.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TagCategory resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -7333,9 +7333,9 @@ multiple tags in this category). Forces a new resource if changed.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.TagCategory.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.TagCategory.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.TagCategory.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -7351,9 +7351,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.TagCategory.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.TagCategory.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.TagCategory.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -7371,9 +7371,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.VappContainer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VappContainer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cpu_expandable=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">memory_expandable=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">memory_shares=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent_folder_id=None</em>, <em class="sig-param">parent_resource_pool_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappContainer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VappContainer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_expandable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_reservation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_shares</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_expandable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_reservation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_shares</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_folder_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_resource_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappContainer" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.VappContainer</span></code> resource can be used to create and manage
 vApps.</p>
 <p>For more information on vSphere vApps, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html">this
@@ -7431,33 +7431,33 @@ resource pool or the move will fail.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.cpu_expandable">
-<code class="sig-name descname">cpu_expandable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.cpu_expandable" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_expandable</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.cpu_expandable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.cpu_limit">
-<code class="sig-name descname">cpu_limit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.cpu_limit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_limit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.cpu_limit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to <code class="docutils literal notranslate"><span class="pre">-1</span></code> for
 unlimited.
 Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.cpu_reservation">
-<code class="sig-name descname">cpu_reservation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.cpu_reservation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_reservation</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.cpu_reservation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.cpu_share_level">
-<code class="sig-name descname">cpu_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.cpu_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.cpu_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. When
@@ -7465,47 +7465,47 @@ values for shares. Can be one of <code class="docutils literal notranslate"><spa
 ignored.  Default: <code class="docutils literal notranslate"><span class="pre">normal</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.cpu_shares">
-<code class="sig-name descname">cpu_shares</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.cpu_shares" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_shares</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.cpu_shares" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">cpu_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.custom_attributes">
-<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.custom_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of custom attributes to set on this resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.memory_expandable">
-<code class="sig-name descname">memory_expandable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.memory_expandable" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_expandable</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.memory_expandable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.memory_limit">
-<code class="sig-name descname">memory_limit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.memory_limit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_limit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.memory_limit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to <code class="docutils literal notranslate"><span class="pre">-1</span></code> for
 unlimited.
 Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.memory_reservation">
-<code class="sig-name descname">memory_reservation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.memory_reservation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_reservation</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.memory_reservation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.memory_share_level">
-<code class="sig-name descname">memory_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.memory_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.memory_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. When
@@ -7513,30 +7513,30 @@ values for shares. Can be one of <code class="docutils literal notranslate"><spa
 ignored.  Default: <code class="docutils literal notranslate"><span class="pre">normal</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.memory_shares">
-<code class="sig-name descname">memory_shares</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.memory_shares" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_shares</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.memory_shares" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">memory_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the vApp container.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.parent_folder_id">
-<code class="sig-name descname">parent_folder_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.parent_folder_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parent_folder_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.parent_folder_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object ID][docs-about-morefs] of
 the vApp container’s parent folder.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.parent_resource_pool_id">
-<code class="sig-name descname">parent_resource_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.parent_resource_pool_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parent_resource_pool_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.parent_resource_pool_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a vApp container
@@ -7544,16 +7544,16 @@ from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappContainer.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VappContainer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cpu_expandable=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">memory_expandable=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">memory_shares=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent_folder_id=None</em>, <em class="sig-param">parent_resource_pool_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappContainer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_expandable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_reservation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_shares</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_expandable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_reservation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_shares</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_folder_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_resource_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappContainer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VappContainer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -7612,9 +7612,9 @@ resource pool or the move will fail.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VappContainer.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappContainer.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappContainer.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -7630,9 +7630,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VappContainer.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappContainer.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappContainer.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -7650,9 +7650,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.VappEntity">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VappEntity</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_id=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">start_action=None</em>, <em class="sig-param">start_delay=None</em>, <em class="sig-param">start_order=None</em>, <em class="sig-param">stop_action=None</em>, <em class="sig-param">stop_delay=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_id=None</em>, <em class="sig-param">wait_for_guest=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappEntity" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VappEntity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_order</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stop_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stop_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_guest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappEntity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.VappEntity</span></code> resource can be used to describe the behavior of an
 entity (virtual machine or sub-vApp container) in a vApp container.</p>
 <p>For more information on vSphere vApps, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html">this
@@ -7686,80 +7686,80 @@ property has no effect for vApps. Default: false</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappEntity.container_id">
-<code class="sig-name descname">container_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.container_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">container_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.container_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>[Managed object ID|docs-about-morefs] of the vApp
 container the entity is a member of.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappEntity.custom_attributes">
-<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.custom_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of custom attributes to set on this resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappEntity.start_action">
-<code class="sig-name descname">start_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.start_action" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start_action</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.start_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
 Default: powerOn</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappEntity.start_delay">
-<code class="sig-name descname">start_delay</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.start_delay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start_delay</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.start_delay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delay in seconds before continuing with the next
 entity in the order of entities to be started. Default: 120</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappEntity.start_order">
-<code class="sig-name descname">start_order</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.start_order" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start_order</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.start_order" title="Permalink to this definition">¶</a></dt>
 <dd><p>Order to start and stop target in vApp. Default: 1</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappEntity.stop_action">
-<code class="sig-name descname">stop_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.stop_action" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stop_action</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.stop_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines the stop action for the entity. Can be set
 to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
 does not participate in auto-stop. Default: powerOff</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappEntity.stop_delay">
-<code class="sig-name descname">stop_delay</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.stop_delay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stop_delay</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.stop_delay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delay in seconds before continuing with the next
 entity in the order sequence. This is only used if the stopAction is
 guestShutdown. Default: 120</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappEntity.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of tag IDs to apply to this object.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappEntity.target_id">
-<code class="sig-name descname">target_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.target_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">target_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.target_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>[Managed object ID|docs-about-morefs] of the entity
 to power on or power off. This can be a virtual machine or a vApp.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VappEntity.wait_for_guest">
-<code class="sig-name descname">wait_for_guest</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.wait_for_guest" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">wait_for_guest</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.wait_for_guest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines if the VM should be marked as being
 started when VMware Tools are ready instead of waiting for <code class="docutils literal notranslate"><span class="pre">start_delay</span></code>. This
 property has no effect for vApps. Default: false</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VappEntity.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_id=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">start_action=None</em>, <em class="sig-param">start_delay=None</em>, <em class="sig-param">start_order=None</em>, <em class="sig-param">stop_action=None</em>, <em class="sig-param">stop_delay=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_id=None</em>, <em class="sig-param">wait_for_guest=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappEntity.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_order</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stop_action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stop_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_guest</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappEntity.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VappEntity resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -7794,9 +7794,9 @@ property has no effect for vApps. Default: false</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VappEntity.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappEntity.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappEntity.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -7812,9 +7812,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VappEntity.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappEntity.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappEntity.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -7832,9 +7832,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.VirtualDisk">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VirtualDisk</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">adapter_type=None</em>, <em class="sig-param">create_directories=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">datastore=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vmdk_path=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualDisk" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VirtualDisk</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">adapter_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_directories</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmdk_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualDisk" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.VirtualDisk</span></code> resource can be used to create virtual disks outside
 of any given <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_
 resource. These disks can be attached to a virtual machine by creating a disk
@@ -7864,61 +7864,61 @@ be created.  This needs to end in <code class="docutils literal notranslate"><sp
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualDisk.adapter_type">
-<code class="sig-name descname">adapter_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.adapter_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">adapter_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.adapter_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The adapter type for this virtual disk. Can be
 one of <code class="docutils literal notranslate"><span class="pre">ide</span></code>, <code class="docutils literal notranslate"><span class="pre">lsiLogic</span></code>, or <code class="docutils literal notranslate"><span class="pre">busLogic</span></code>.  Default: <code class="docutils literal notranslate"><span class="pre">lsiLogic</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualDisk.create_directories">
-<code class="sig-name descname">create_directories</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.create_directories" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_directories</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.create_directories" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tells the resource to create any
 directories that are a part of the <code class="docutils literal notranslate"><span class="pre">vmdk_path</span></code> parameter if they are missing.
 Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualDisk.datacenter">
-<code class="sig-name descname">datacenter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.datacenter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datacenter</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the datacenter in which to create the
 disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualDisk.datastore">
-<code class="sig-name descname">datastore</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.datastore" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datastore</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.datastore" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the datastore in which to create the
 disk.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualDisk.size">
-<code class="sig-name descname">size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Size of the disk (in GB).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualDisk.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of disk to create. Can be one of
 <code class="docutils literal notranslate"><span class="pre">eagerZeroedThick</span></code>, <code class="docutils literal notranslate"><span class="pre">lazy</span></code>, or <code class="docutils literal notranslate"><span class="pre">thin</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">eagerZeroedThick</span></code>. For
 information on what each kind of disk provisioning policy means, click
 [here][docs-vmware-vm-disk-provisioning].</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualDisk.vmdk_path">
-<code class="sig-name descname">vmdk_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.vmdk_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vmdk_path</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.vmdk_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path, including filename, of the virtual disk to
 be created.  This needs to end in <code class="docutils literal notranslate"><span class="pre">.vmdk</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VirtualDisk.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">adapter_type=None</em>, <em class="sig-param">create_directories=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">datastore=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vmdk_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">adapter_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_directories</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmdk_path</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualDisk resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -7949,9 +7949,9 @@ be created.  This needs to end in <code class="docutils literal notranslate"><sp
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VirtualDisk.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -7967,9 +7967,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VirtualDisk.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -7987,9 +7987,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.VirtualMachine">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">annotation=None</em>, <em class="sig-param">boot_delay=None</em>, <em class="sig-param">boot_retry_delay=None</em>, <em class="sig-param">boot_retry_enabled=None</em>, <em class="sig-param">cdrom=None</em>, <em class="sig-param">clone=None</em>, <em class="sig-param">cpu_hot_add_enabled=None</em>, <em class="sig-param">cpu_hot_remove_enabled=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_performance_counters_enabled=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_count=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">datastore_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">efi_secure_boot_enabled=None</em>, <em class="sig-param">enable_disk_uuid=None</em>, <em class="sig-param">enable_logging=None</em>, <em class="sig-param">ept_rvi_mode=None</em>, <em class="sig-param">extra_config=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">force_power_off=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">hardware_version=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">hv_mode=None</em>, <em class="sig-param">ignored_guest_ips=None</em>, <em class="sig-param">latency_sensitivity=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_hot_add_enabled=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_count=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">migrate_wait_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nested_hv_enabled=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">num_cores_per_socket=None</em>, <em class="sig-param">num_cpus=None</em>, <em class="sig-param">poweron_timeout=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">run_tools_scripts_after_power_on=None</em>, <em class="sig-param">run_tools_scripts_after_resume=None</em>, <em class="sig-param">run_tools_scripts_before_guest_reboot=None</em>, <em class="sig-param">run_tools_scripts_before_guest_shutdown=None</em>, <em class="sig-param">run_tools_scripts_before_guest_standby=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_count=None</em>, <em class="sig-param">scsi_type=None</em>, <em class="sig-param">shutdown_wait_timeout=None</em>, <em class="sig-param">storage_policy_id=None</em>, <em class="sig-param">swap_placement_policy=None</em>, <em class="sig-param">sync_time_with_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vapp=None</em>, <em class="sig-param">wait_for_guest_ip_timeout=None</em>, <em class="sig-param">wait_for_guest_net_routable=None</em>, <em class="sig-param">wait_for_guest_net_timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VirtualMachine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alternate_guest_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_retry_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_retry_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cdrom</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_hot_add_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_hot_remove_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_performance_counters_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_reservation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">efi_secure_boot_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_disk_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_logging</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ept_rvi_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firmware</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_power_off</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hardware_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hv_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignored_guest_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latency_sensitivity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_hot_add_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_reservation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">migrate_wait_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nested_hv_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_cores_per_socket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_cpus</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ovf_deploy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">poweron_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_tools_scripts_after_power_on</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_tools_scripts_after_resume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_tools_scripts_before_guest_reboot</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_tools_scripts_before_guest_shutdown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_tools_scripts_before_guest_standby</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_bus_sharing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_controller_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shutdown_wait_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_policy_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">swap_placement_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sync_time_with_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vapp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_guest_ip_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_guest_net_routable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_guest_net_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a VirtualMachine resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -8035,6 +8035,8 @@ one of <code class="docutils literal notranslate"><span class="pre">high</span><
 value strings to set for virtual machine. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.</p></li>
+<li><p><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The datacenter id. Required only when deploying
+an ovf template.</p></li>
 <li><p><strong>datastore_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the datastore cluster ID to use. This setting
 applies to entire virtual machine and implies that you wish to use Storage
@@ -8119,6 +8121,9 @@ virtual machine. The number of vCPUs on the virtual machine will be
 supplied to <code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>num_cpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The total number of virtual processor cores to assign
 to this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>ovf_deploy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – When specified, the VM will be deployed from the
+provided ovf template. See creating a virtual machine from a
+ovf template for more details.</p></li>
 <li><p><strong>poweron_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in seconds, that we will be trying to power on a VM</p></li>
 <li><p><strong>resource_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the resource pool to put this virtual machine in.
@@ -8324,50 +8329,59 @@ from an OVF source.</p></li>
 a static MAC address and set accordingly. Setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> requires
 <code class="docutils literal notranslate"><span class="pre">mac_address</span></code> to be set. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
+<p>The <strong>ovf_deploy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">diskProvisioning</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipAllocationPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localOvfPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ovfNetworkMap</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remoteOvfUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <p>The <strong>vapp</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.alternate_guest_name">
-<code class="sig-name descname">alternate_guest_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.alternate_guest_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">alternate_guest_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.alternate_guest_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The guest name for the operating system
 when <code class="docutils literal notranslate"><span class="pre">guest_id</span></code> is <code class="docutils literal notranslate"><span class="pre">other</span></code> or <code class="docutils literal notranslate"><span class="pre">other-64</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.annotation">
-<code class="sig-name descname">annotation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.annotation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">annotation</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.annotation" title="Permalink to this definition">¶</a></dt>
 <dd><p>A user-provided description of the virtual machine.
 The default is no annotation.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.boot_delay">
-<code class="sig-name descname">boot_delay</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.boot_delay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">boot_delay</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.boot_delay" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.boot_retry_delay">
-<code class="sig-name descname">boot_retry_delay</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.boot_retry_delay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">boot_retry_delay</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.boot_retry_delay" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of milliseconds to wait before
 retrying the boot sequence. This only valid if <code class="docutils literal notranslate"><span class="pre">boot_retry_enabled</span></code> is true.
 Default: <code class="docutils literal notranslate"><span class="pre">10000</span></code> (10 seconds).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.boot_retry_enabled">
-<code class="sig-name descname">boot_retry_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.boot_retry_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">boot_retry_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.boot_retry_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to true, a virtual machine that
 fails to boot will try again after the delay defined in <code class="docutils literal notranslate"><span class="pre">boot_retry_delay</span></code>.
 Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.cdrom">
-<code class="sig-name descname">cdrom</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cdrom" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cdrom</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cdrom" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specification for a CDROM device on this virtual
 machine. See CDROM options below.</p>
 <ul class="simple">
@@ -8382,17 +8396,17 @@ ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre"
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.change_version">
-<code class="sig-name descname">change_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.change_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">change_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.change_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>A unique identifier for a given version of the last
 configuration applied, such the timestamp of the last update to the
 configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.clone">
-<code class="sig-name descname">clone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.clone" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clone</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.clone" title="Permalink to this definition">¶</a></dt>
 <dd><p>When specified, the VM will be created as a clone of a
 specified template. Optional customization options can be submitted as well.
 See creating a virtual machine from a
@@ -8453,68 +8467,75 @@ below.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.cpu_hot_add_enabled">
-<code class="sig-name descname">cpu_hot_add_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_hot_add_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_hot_add_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_hot_add_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow CPUs to be added to this virtual
 machine while it is running.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.cpu_hot_remove_enabled">
-<code class="sig-name descname">cpu_hot_remove_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_hot_remove_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_hot_remove_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_hot_remove_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow CPUs to be removed to this
 virtual machine while it is running.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.cpu_limit">
-<code class="sig-name descname">cpu_limit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_limit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_limit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_limit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
 limit.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.cpu_performance_counters_enabled">
-<code class="sig-name descname">cpu_performance_counters_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_performance_counters_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_performance_counters_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_performance_counters_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable CPU performance
 counters on this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.cpu_reservation">
-<code class="sig-name descname">cpu_reservation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_reservation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_reservation</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_reservation" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.cpu_share_count">
-<code class="sig-name descname">cpu_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_share_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_share_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_share_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of CPU shares allocated to the
 virtual machine when the <code class="docutils literal notranslate"><span class="pre">cpu_share_level</span></code> is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.cpu_share_level">
-<code class="sig-name descname">cpu_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cpu_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cpu_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The allocation level for CPU resources. Can be
 one of <code class="docutils literal notranslate"><span class="pre">high</span></code>, <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.custom_attributes">
-<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.custom_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of custom attribute ids to attribute
 value strings to set for virtual machine. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
+<dt id="pulumi_vsphere.VirtualMachine.datacenter_id">
+<code class="sig-name descname">datacenter_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.datacenter_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The datacenter id. Required only when deploying
+an ovf template.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.datastore_cluster_id">
-<code class="sig-name descname">datastore_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datastore_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the datastore cluster ID to use. This setting
 applies to entire virtual machine and implies that you wish to use Storage
@@ -8522,22 +8543,22 @@ DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.datastore_id">
-<code class="sig-name descname">datastore_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.datastore_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datastore_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.datastore_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.default_ip_address">
-<code class="sig-name descname">default_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.default_ip_address" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">default_ip_address</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.default_ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP address selected by Terraform to be used for the provisioner.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.disks">
-<code class="sig-name descname">disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.disks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">disks</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specification for a virtual disk device on this virtual
 machine. See disk options below.</p>
 <ul class="simple">
@@ -8593,76 +8614,76 @@ directly to the filesystem immediately instead of being buffered. Default:
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.efi_secure_boot_enabled">
-<code class="sig-name descname">efi_secure_boot_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.efi_secure_boot_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">efi_secure_boot_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.efi_secure_boot_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>When the <code class="docutils literal notranslate"><span class="pre">firmware</span></code> type is set to is
 <code class="docutils literal notranslate"><span class="pre">efi</span></code>, this enables EFI secure boot. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.enable_disk_uuid">
-<code class="sig-name descname">enable_disk_uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.enable_disk_uuid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_disk_uuid</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.enable_disk_uuid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.enable_logging">
-<code class="sig-name descname">enable_logging</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.enable_logging" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_logging</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.enable_logging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.ept_rvi_mode">
-<code class="sig-name descname">ept_rvi_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.ept_rvi_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ept_rvi_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.ept_rvi_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of <code class="docutils literal notranslate"><span class="pre">automatic</span></code>, <code class="docutils literal notranslate"><span class="pre">on</span></code>, or <code class="docutils literal notranslate"><span class="pre">off</span></code>.
 Default: <code class="docutils literal notranslate"><span class="pre">automatic</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.extra_config">
-<code class="sig-name descname">extra_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.extra_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">extra_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.extra_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extra configuration data for this virtual
 machine. Can be used to supply advanced parameters not normally in
 configuration, such as instance metadata.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.firmware">
-<code class="sig-name descname">firmware</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.firmware" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">firmware</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.firmware" title="Permalink to this definition">¶</a></dt>
 <dd><p>The firmware interface to use on the virtual machine.
 Can be one of <code class="docutils literal notranslate"><span class="pre">bios</span></code> or <code class="docutils literal notranslate"><span class="pre">EFI</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">bios</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.folder">
-<code class="sig-name descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.folder" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">folder</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.force_power_off">
-<code class="sig-name descname">force_power_off</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.force_power_off" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">force_power_off</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.force_power_off" title="Permalink to this definition">¶</a></dt>
 <dd><p>If a guest shutdown failed or timed out while
 updating or destroying (see
 <code class="docutils literal notranslate"><span class="pre">shutdown_wait_timeout</span></code>), force the power-off of
 the virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.guest_id">
-<code class="sig-name descname">guest_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.guest_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">guest_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.guest_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: <code class="docutils literal notranslate"><span class="pre">other-64</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.guest_ip_addresses">
-<code class="sig-name descname">guest_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.guest_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">guest_ip_addresses</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.guest_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current list of IP addresses on this machine,
 including the value of <code class="docutils literal notranslate"><span class="pre">default_ip_address</span></code>. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.</p>
@@ -8672,18 +8693,18 @@ virtual machine.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.hardware_version">
-<code class="sig-name descname">hardware_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.hardware_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">hardware_version</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.hardware_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
 machine hardware compatibility][virtual-machine-hardware-compatibility] for
 more details.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.host_system_id">
-<code class="sig-name descname">host_system_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.host_system_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host_system_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.host_system_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>An optional [managed object reference
 ID][docs-about-morefs] of a host to put this virtual machine on. See the
 section on virtual machine migration for
@@ -8692,35 +8713,35 @@ vSphere will select a host in the resource pool to place the virtual machine,
 according to any defaults or DRS policies in place.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.hv_mode">
-<code class="sig-name descname">hv_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.hv_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">hv_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.hv_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of <code class="docutils literal notranslate"><span class="pre">hvAuto</span></code>, <code class="docutils literal notranslate"><span class="pre">hvOn</span></code>, or <code class="docutils literal notranslate"><span class="pre">hvOff</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">hvAuto</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.ignored_guest_ips">
-<code class="sig-name descname">ignored_guest_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.ignored_guest_ips" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ignored_guest_ips</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.ignored_guest_ips" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
 Any IP addresses in this list will be ignored if they show up so that the
 waiter will continue to wait for a real IP address. Default: [].</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.imported">
-<code class="sig-name descname">imported</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.imported" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">imported</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.imported" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is flagged if the virtual machine has been imported, or the
 state has been migrated from a previous version of the resource. It
 influences the behavior of the first post-import apply operation. See the
 section on importing below.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.latency_sensitivity">
-<code class="sig-name descname">latency_sensitivity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.latency_sensitivity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">latency_sensitivity</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.latency_sensitivity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
 latency, such as VOIP, media player applications, or applications that
@@ -8728,82 +8749,82 @@ require frequent access to mouse or keyboard devices. Can be one of <code class=
 <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">medium</span></code>, or <code class="docutils literal notranslate"><span class="pre">high</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.memory">
-<code class="sig-name descname">memory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.memory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.memory" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of the virtual machine’s memory, in MB.
 Default: <code class="docutils literal notranslate"><span class="pre">1024</span></code> (1 GB).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.memory_hot_add_enabled">
-<code class="sig-name descname">memory_hot_add_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.memory_hot_add_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_hot_add_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.memory_hot_add_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allow memory to be added to this
 virtual machine while it is running.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.memory_limit">
-<code class="sig-name descname">memory_limit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.memory_limit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_limit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.memory_limit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
 is no limit.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.memory_reservation">
-<code class="sig-name descname">memory_reservation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.memory_reservation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_reservation</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.memory_reservation" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.memory_share_count">
-<code class="sig-name descname">memory_share_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.memory_share_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_share_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.memory_share_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of memory shares allocated to
 the virtual machine when the <code class="docutils literal notranslate"><span class="pre">memory_share_level</span></code> is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.memory_share_level">
-<code class="sig-name descname">memory_share_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.memory_share_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory_share_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.memory_share_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>The allocation level for memory resources.
 Can be one of <code class="docutils literal notranslate"><span class="pre">high</span></code>, <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.migrate_wait_timeout">
-<code class="sig-name descname">migrate_wait_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.migrate_wait_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">migrate_wait_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.migrate_wait_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
 minutes. Also see the section on virtual machine
 migration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.moid">
-<code class="sig-name descname">moid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.moid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">moid</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.moid" title="Permalink to this definition">¶</a></dt>
 <dd><p>The machine object ID from VMWare</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>An alias for both <code class="docutils literal notranslate"><span class="pre">label</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>, the latter when
 using <code class="docutils literal notranslate"><span class="pre">attach</span></code>. Required if not using <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.nested_hv_enabled">
-<code class="sig-name descname">nested_hv_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.nested_hv_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">nested_hv_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.nested_hv_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
 Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.network_interfaces">
-<code class="sig-name descname">network_interfaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.network_interfaces" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_interfaces</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.network_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specification for a virtual NIC on this
 virtual machine. See network interface options
 below.</p>
@@ -8835,148 +8856,164 @@ a static MAC address and set accordingly. Setting this to <code class="docutils 
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.num_cores_per_socket">
-<code class="sig-name descname">num_cores_per_socket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.num_cores_per_socket" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">num_cores_per_socket</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.num_cores_per_socket" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
 <code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> divided by <code class="docutils literal notranslate"><span class="pre">num_cores_per_socket</span></code>. If specified, the value
 supplied to <code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.num_cpus">
-<code class="sig-name descname">num_cpus</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.num_cpus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">num_cpus</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.num_cpus" title="Permalink to this definition">¶</a></dt>
 <dd><p>The total number of virtual processor cores to assign
 to this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
+<dt id="pulumi_vsphere.VirtualMachine.ovf_deploy">
+<code class="sig-name descname">ovf_deploy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.ovf_deploy" title="Permalink to this definition">¶</a></dt>
+<dd><p>When specified, the VM will be deployed from the
+provided ovf template. See creating a virtual machine from a
+ovf template for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">diskProvisioning</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipAllocationPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localOvfPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ovfNetworkMap</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remoteOvfUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.poweron_timeout">
-<code class="sig-name descname">poweron_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.poweron_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">poweron_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.poweron_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of time, in seconds, that we will be trying to power on a VM</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.reboot_required">
-<code class="sig-name descname">reboot_required</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.reboot_required" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reboot_required</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.reboot_required" title="Permalink to this definition">¶</a></dt>
 <dd><p>Value internal to Terraform used to determine if a configuration set change requires a reboot.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.resource_pool_id">
-<code class="sig-name descname">resource_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.resource_pool_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_pool_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.resource_pool_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
 ID][docs-about-morefs] of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.run_tools_scripts_after_power_on">
-<code class="sig-name descname">run_tools_scripts_after_power_on</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.run_tools_scripts_after_power_on" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">run_tools_scripts_after_power_on</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.run_tools_scripts_after_power_on" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.run_tools_scripts_after_resume">
-<code class="sig-name descname">run_tools_scripts_after_resume</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.run_tools_scripts_after_resume" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">run_tools_scripts_after_resume</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.run_tools_scripts_after_resume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable the execution of
 post-resume scripts when VMware tools is installed. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.run_tools_scripts_before_guest_reboot">
-<code class="sig-name descname">run_tools_scripts_before_guest_reboot</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.run_tools_scripts_before_guest_reboot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">run_tools_scripts_before_guest_reboot</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.run_tools_scripts_before_guest_reboot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.run_tools_scripts_before_guest_shutdown">
-<code class="sig-name descname">run_tools_scripts_before_guest_shutdown</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.run_tools_scripts_before_guest_shutdown" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">run_tools_scripts_before_guest_shutdown</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.run_tools_scripts_before_guest_shutdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.run_tools_scripts_before_guest_standby">
-<code class="sig-name descname">run_tools_scripts_before_guest_standby</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.run_tools_scripts_before_guest_standby" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">run_tools_scripts_before_guest_standby</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.run_tools_scripts_before_guest_standby" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.scsi_bus_sharing">
-<code class="sig-name descname">scsi_bus_sharing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.scsi_bus_sharing" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scsi_bus_sharing</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.scsi_bus_sharing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: <code class="docutils literal notranslate"><span class="pre">noSharing</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.scsi_controller_count">
-<code class="sig-name descname">scsi_controller_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.scsi_controller_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scsi_controller_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.scsi_controller_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of SCSI controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.scsi_type">
-<code class="sig-name descname">scsi_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.scsi_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scsi_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.scsi_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: <code class="docutils literal notranslate"><span class="pre">pvscsi</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.shutdown_wait_timeout">
-<code class="sig-name descname">shutdown_wait_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.shutdown_wait_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shutdown_wait_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.shutdown_wait_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
 machine. If <code class="docutils literal notranslate"><span class="pre">force_power_off</span></code> is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.storage_policy_id">
-<code class="sig-name descname">storage_policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.storage_policy_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">storage_policy_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.storage_policy_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The UUID of the storage policy to assign to this disk.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.swap_placement_policy">
-<code class="sig-name descname">swap_placement_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.swap_placement_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">swap_placement_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.swap_placement_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The swap file placement policy for this
 virtual machine. Can be one of <code class="docutils literal notranslate"><span class="pre">inherit</span></code>, <code class="docutils literal notranslate"><span class="pre">hostLocal</span></code>, or <code class="docutils literal notranslate"><span class="pre">vmDirectory</span></code>.
 Default: <code class="docutils literal notranslate"><span class="pre">inherit</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.sync_time_with_host">
-<code class="sig-name descname">sync_time_with_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.sync_time_with_host" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sync_time_with_host</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.sync_time_with_host" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.uuid">
-<code class="sig-name descname">uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.uuid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">uuid</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.uuid" title="Permalink to this definition">¶</a></dt>
 <dd><p>The UUID of the virtual disk’s VMDK file. This is used to track the
 virtual disk on the virtual machine.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.vapp">
-<code class="sig-name descname">vapp</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.vapp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vapp</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.vapp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optional vApp configuration. The only sub-key available
 is <code class="docutils literal notranslate"><span class="pre">properties</span></code>, which is a key/value map of properties for virtual machines
 imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
@@ -8987,31 +9024,31 @@ more details.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.vapp_transports">
-<code class="sig-name descname">vapp_transports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.vapp_transports" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vapp_transports</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.vapp_transports" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computed value which is only valid for cloned virtual
 machines. A list of vApp transport methods supported by the source virtual
 machine or template.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.vmware_tools_status">
-<code class="sig-name descname">vmware_tools_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.vmware_tools_status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vmware_tools_status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.vmware_tools_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.vmx_path">
-<code class="sig-name descname">vmx_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.vmx_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vmx_path</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.vmx_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path of the virtual machine’s configuration file in the VM’s
 datastore.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.wait_for_guest_ip_timeout">
-<code class="sig-name descname">wait_for_guest_ip_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.wait_for_guest_ip_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">wait_for_guest_ip_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.wait_for_guest_ip_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
 only be used if your version of VMware Tools does not allow the
@@ -9019,9 +9056,9 @@ only be used if your version of VMware Tools does not allow the
 used. A value less than 1 disables the waiter. Default: 0.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.wait_for_guest_net_routable">
-<code class="sig-name descname">wait_for_guest_net_routable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.wait_for_guest_net_routable" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">wait_for_guest_net_routable</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.wait_for_guest_net_routable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls whether or not the guest
 network waiter waits for a routable address. When <code class="docutils literal notranslate"><span class="pre">false</span></code>, the waiter does
 not wait for a default gateway, nor are IP addresses checked against any
@@ -9030,9 +9067,9 @@ ignored if the <code class="docutils literal notranslate"><span class="pre">wait
 waiter is used. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachine.wait_for_guest_net_timeout">
-<code class="sig-name descname">wait_for_guest_net_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.wait_for_guest_net_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">wait_for_guest_net_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.wait_for_guest_net_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of time, in minutes, to
 wait for an available IP address on this virtual machine’s NICs. Older
 versions of VMware Tools do not populate this property. In those cases, this
@@ -9041,9 +9078,9 @@ waiter can be disabled and the
 instead. A value less than 1 disables the waiter. Default: 5 minutes.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VirtualMachine.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">annotation=None</em>, <em class="sig-param">boot_delay=None</em>, <em class="sig-param">boot_retry_delay=None</em>, <em class="sig-param">boot_retry_enabled=None</em>, <em class="sig-param">cdrom=None</em>, <em class="sig-param">change_version=None</em>, <em class="sig-param">clone=None</em>, <em class="sig-param">cpu_hot_add_enabled=None</em>, <em class="sig-param">cpu_hot_remove_enabled=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_performance_counters_enabled=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_count=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">datastore_id=None</em>, <em class="sig-param">default_ip_address=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">efi_secure_boot_enabled=None</em>, <em class="sig-param">enable_disk_uuid=None</em>, <em class="sig-param">enable_logging=None</em>, <em class="sig-param">ept_rvi_mode=None</em>, <em class="sig-param">extra_config=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">force_power_off=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">guest_ip_addresses=None</em>, <em class="sig-param">hardware_version=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">hv_mode=None</em>, <em class="sig-param">ignored_guest_ips=None</em>, <em class="sig-param">imported=None</em>, <em class="sig-param">latency_sensitivity=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_hot_add_enabled=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_count=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">migrate_wait_timeout=None</em>, <em class="sig-param">moid=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nested_hv_enabled=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">num_cores_per_socket=None</em>, <em class="sig-param">num_cpus=None</em>, <em class="sig-param">poweron_timeout=None</em>, <em class="sig-param">reboot_required=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">run_tools_scripts_after_power_on=None</em>, <em class="sig-param">run_tools_scripts_after_resume=None</em>, <em class="sig-param">run_tools_scripts_before_guest_reboot=None</em>, <em class="sig-param">run_tools_scripts_before_guest_shutdown=None</em>, <em class="sig-param">run_tools_scripts_before_guest_standby=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_count=None</em>, <em class="sig-param">scsi_type=None</em>, <em class="sig-param">shutdown_wait_timeout=None</em>, <em class="sig-param">storage_policy_id=None</em>, <em class="sig-param">swap_placement_policy=None</em>, <em class="sig-param">sync_time_with_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uuid=None</em>, <em class="sig-param">vapp=None</em>, <em class="sig-param">vapp_transports=None</em>, <em class="sig-param">vmware_tools_status=None</em>, <em class="sig-param">vmx_path=None</em>, <em class="sig-param">wait_for_guest_ip_timeout=None</em>, <em class="sig-param">wait_for_guest_net_routable=None</em>, <em class="sig-param">wait_for_guest_net_timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alternate_guest_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_retry_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boot_retry_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cdrom</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">change_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_hot_add_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_hot_remove_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_performance_counters_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_reservation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">efi_secure_boot_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_disk_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_logging</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ept_rvi_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extra_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firmware</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_power_off</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guest_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hardware_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hv_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignored_guest_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">imported</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latency_sensitivity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_hot_add_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_reservation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_share_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory_share_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">migrate_wait_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">moid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nested_hv_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_cores_per_socket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_cpus</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ovf_deploy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">poweron_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reboot_required</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_tools_scripts_after_power_on</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_tools_scripts_after_resume</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_tools_scripts_before_guest_reboot</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_tools_scripts_before_guest_shutdown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_tools_scripts_before_guest_standby</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_bus_sharing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_controller_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shutdown_wait_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_policy_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">swap_placement_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sync_time_with_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vapp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vapp_transports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmware_tools_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmx_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_guest_ip_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_guest_net_routable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_guest_net_timeout</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualMachine resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -9092,6 +9129,8 @@ one of <code class="docutils literal notranslate"><span class="pre">high</span><
 value strings to set for virtual machine. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.</p></li>
+<li><p><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The datacenter id. Required only when deploying
+an ovf template.</p></li>
 <li><p><strong>datastore_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the datastore cluster ID to use. This setting
 applies to entire virtual machine and implies that you wish to use Storage
@@ -9195,6 +9234,9 @@ virtual machine. The number of vCPUs on the virtual machine will be
 supplied to <code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>num_cpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The total number of virtual processor cores to assign
 to this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>ovf_deploy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – When specified, the VM will be deployed from the
+provided ovf template. See creating a virtual machine from a
+ovf template for more details.</p></li>
 <li><p><strong>poweron_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in seconds, that we will be trying to power on a VM</p></li>
 <li><p><strong>reboot_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Value internal to Terraform used to determine if a configuration set change requires a reboot.</p></li>
 <li><p><strong>resource_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
@@ -9410,15 +9452,24 @@ from an OVF source.</p></li>
 a static MAC address and set accordingly. Setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> requires
 <code class="docutils literal notranslate"><span class="pre">mac_address</span></code> to be set. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
+<p>The <strong>ovf_deploy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">diskProvisioning</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipAllocationPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localOvfPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ovfNetworkMap</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remoteOvfUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <p>The <strong>vapp</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VirtualMachine.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -9434,9 +9485,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VirtualMachine.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -9454,9 +9505,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VirtualMachineSnapshot</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">consolidate=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">quiesce=None</em>, <em class="sig-param">remove_children=None</em>, <em class="sig-param">snapshot_name=None</em>, <em class="sig-param">virtual_machine_uuid=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VirtualMachineSnapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consolidate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">quiesce</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_children</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.VirtualMachineSnapshot</span></code> resource can be used to manage snapshots
 for a virtual machine.</p>
 <p>For more information on managing snapshots and how they work in VMware, see
@@ -9495,57 +9546,57 @@ is removed when this resource is destroyed.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.consolidate">
-<code class="sig-name descname">consolidate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.consolidate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">consolidate</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.consolidate" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the delta disks involved in this
 snapshot will be consolidated into the parent when this resource is
 destroyed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description for the snapshot.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.memory">
-<code class="sig-name descname">memory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.memory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memory</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.memory" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, a dump of the internal state of the
 virtual machine is included in the snapshot.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.quiesce">
-<code class="sig-name descname">quiesce</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.quiesce" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">quiesce</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.quiesce" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, and the virtual machine is powered
 on when the snapshot is taken, VMware Tools is used to quiesce the file
 system in the virtual machine.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.remove_children">
-<code class="sig-name descname">remove_children</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.remove_children" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">remove_children</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.remove_children" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the entire snapshot subtree
 is removed when this resource is destroyed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.snapshot_name">
-<code class="sig-name descname">snapshot_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.snapshot_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">snapshot_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.snapshot_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the snapshot.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.virtual_machine_uuid">
-<code class="sig-name descname">virtual_machine_uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.virtual_machine_uuid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">virtual_machine_uuid</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.virtual_machine_uuid" title="Permalink to this definition">¶</a></dt>
 <dd><p>The virtual machine UUID.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">consolidate=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">quiesce=None</em>, <em class="sig-param">remove_children=None</em>, <em class="sig-param">snapshot_name=None</em>, <em class="sig-param">virtual_machine_uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consolidate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">quiesce</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_children</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">virtual_machine_uuid</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualMachineSnapshot resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -9572,9 +9623,9 @@ is removed when this resource is destroyed.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -9590,9 +9641,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -9610,9 +9661,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.VmfsDatastore">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VmfsDatastore</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">VmfsDatastore</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a VmfsDatastore resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -9642,57 +9693,57 @@ changed.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.accessible">
-<code class="sig-name descname">accessible</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.accessible" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">accessible</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.accessible" title="Permalink to this definition">¶</a></dt>
 <dd><p>The connectivity status of the datastore. If this is <code class="docutils literal notranslate"><span class="pre">false</span></code>,
 some other computed attributes may be out of date.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.capacity">
-<code class="sig-name descname">capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.capacity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">capacity</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum capacity of the datastore, in megabytes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.custom_attributes">
-<code class="sig-name descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.custom_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.custom_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of custom attribute ids to attribute 
 value string to set on datastore resource. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.datastore_cluster_id">
-<code class="sig-name descname">datastore_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">datastore_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object
 ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">folder</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.disks">
-<code class="sig-name descname">disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.disks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">disks</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>The disks to use with the datastore.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.folder">
-<code class="sig-name descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.folder" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">folder</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path to the datastore folder to put the datastore in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.free_space">
-<code class="sig-name descname">free_space</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.free_space" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">free_space</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.free_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Available space of this datastore, in megabytes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.host_system_id">
-<code class="sig-name descname">host_system_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.host_system_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host_system_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.host_system_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object ID][docs-about-morefs] of
 the host to set the datastore up on. Note that this is not necessarily the
 only host that the datastore will be set up on - see
@@ -9700,49 +9751,49 @@ here for more info. Forces a
 new resource if changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.maintenance_mode">
-<code class="sig-name descname">maintenance_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.maintenance_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">maintenance_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.maintenance_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current maintenance mode state of the datastore.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.multiple_host_access">
-<code class="sig-name descname">multiple_host_access</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.multiple_host_access" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">multiple_host_access</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.multiple_host_access" title="Permalink to this definition">¶</a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, more than one host in the datacenter has
 been configured with access to the datastore.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the datastore. Forces a new resource if
 changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.uncommitted_space">
-<code class="sig-name descname">uncommitted_space</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.uncommitted_space" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">uncommitted_space</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.uncommitted_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.url">
-<code class="sig-name descname">url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">url</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique locator for the datastore.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VmfsDatastore.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessible=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">free_space=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">maintenance_mode=None</em>, <em class="sig-param">multiple_host_access=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uncommitted_space=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accessible</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datastore_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">free_space</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multiple_host_access</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uncommitted_space</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VmfsDatastore resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -9784,9 +9835,9 @@ potentially used by all virtual machines on this datastore.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VmfsDatastore.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -9802,9 +9853,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.VmfsDatastore.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -9822,9 +9873,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vsphere.Vnic">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Vnic</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">distributed_port_group=None</em>, <em class="sig-param">distributed_switch_port=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">ipv4=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">mac=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">netstack=None</em>, <em class="sig-param">portgroup=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Vnic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distributed_port_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distributed_switch_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mac</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mtu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netstack</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">portgroup</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere vnic resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -9857,27 +9908,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">dhcp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Use DHCP to configure the interface’s IPv4 stack.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gw</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address of the default gateway, if DHCP or autoconfig is not set.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Vnic.distributed_port_group">
-<code class="sig-name descname">distributed_port_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.distributed_port_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">distributed_port_group</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.distributed_port_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key of the distributed portgroup the nic will connect to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Vnic.distributed_switch_port">
-<code class="sig-name descname">distributed_switch_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.distributed_switch_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">distributed_switch_port</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.distributed_switch_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Vnic.host">
-<code class="sig-name descname">host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.host" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.host" title="Permalink to this definition">¶</a></dt>
 <dd><p>ESX host the interface belongs to</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Vnic.ipv4">
-<code class="sig-name descname">ipv4</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.ipv4" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ipv4</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.ipv4" title="Permalink to this definition">¶</a></dt>
 <dd><p>IPv4 settings. Either this or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code> needs to be set. See  ipv4 options below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dhcp</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Use DHCP to configure the interface’s IPv4 stack.</p></li>
@@ -9887,9 +9938,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Vnic.ipv6">
-<code class="sig-name descname">ipv6</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.ipv6" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ipv6</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.ipv6" title="Permalink to this definition">¶</a></dt>
 <dd><p>IPv6 settings. Either this or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code> needs to be set. See  ipv6 options below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of IPv6 addresses</p></li>
@@ -9899,33 +9950,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Vnic.mac">
-<code class="sig-name descname">mac</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.mac" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mac</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.mac" title="Permalink to this definition">¶</a></dt>
 <dd><p>MAC address of the interface.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Vnic.mtu">
-<code class="sig-name descname">mtu</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.mtu" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mtu</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.mtu" title="Permalink to this definition">¶</a></dt>
 <dd><p>MTU of the interface.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Vnic.netstack">
-<code class="sig-name descname">netstack</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.netstack" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">netstack</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.netstack" title="Permalink to this definition">¶</a></dt>
 <dd><p>TCP/IP stack setting for this interface. Possible values are ‘defaultTcpipStack’, ‘vmotion’, ‘vSphereProvisioning’. Changing this will force the creation of a new interface since it’s not possible to change the stack once it gets created. (Default: <code class="docutils literal notranslate"><span class="pre">defaultTcpipStack</span></code>)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vsphere.Vnic.portgroup">
-<code class="sig-name descname">portgroup</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.portgroup" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">portgroup</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Vnic.portgroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Portgroup to attach the nic to. Do not set if you set distributed_switch_port.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Vnic.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">distributed_port_group=None</em>, <em class="sig-param">distributed_switch_port=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">ipv4=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">mac=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">netstack=None</em>, <em class="sig-param">portgroup=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distributed_port_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distributed_switch_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mac</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mtu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">netstack</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">portgroup</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Vnic resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -9962,9 +10013,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Vnic.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -9980,9 +10031,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vsphere.Vnic.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -10000,9 +10051,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_compute_cluster">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_compute_cluster</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_compute_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_compute_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_compute_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -10018,9 +10069,9 @@ data source.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_content_library">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_content_library</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_content_library" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_content_library</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_content_library" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.ContentLibrary</span></code> data source can be used to discover the ID of a Content Library.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
@@ -10033,9 +10084,9 @@ connections.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_content_library_item">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_content_library_item</code><span class="sig-paren">(</span><em class="sig-param">library_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_content_library_item" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_content_library_item</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">library_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_content_library_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.ContentLibraryItem</span></code> data source can be used to discover the ID of a Content Library item.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
@@ -10051,9 +10102,9 @@ connections.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_custom_attribute">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_custom_attribute</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_custom_attribute" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_custom_attribute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_custom_attribute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -10062,9 +10113,9 @@ connections.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_datacenter">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_datacenter</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datacenter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_datacenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Datacenter</span></code> data source can be used to discover the ID of a
 vSphere datacenter. This can then be used with resources or data sources that
 require a datacenter, such as the <cite>`</cite>.Host`` &lt;/docs/providers/vsphere/d/host.html&gt;`_
@@ -10077,9 +10128,9 @@ Can be omitted if there is only one datacenter in your inventory.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_datastore">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_datastore</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datastore" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_datastore</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datastore" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.getDatastore</span></code> data source can be used to discover the ID of a
 datastore in vSphere. This is useful to fetch the ID of a datastore that you
 want to use to create virtual machines in using the
@@ -10098,9 +10149,9 @@ data source.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_datastore_cluster">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_datastore_cluster</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datastore_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_datastore_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datastore_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.DatastoreCluster</span></code> data source can be used to discover the ID of a
 datastore cluster in vSphere. This is useful to fetch the ID of a datastore
 cluster that you want to use to assign datastores to using the
@@ -10122,9 +10173,9 @@ For default datacenters, use the id attribute from an empty
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_distributed_virtual_switch">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_distributed_virtual_switch</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_distributed_virtual_switch" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_distributed_virtual_switch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_distributed_virtual_switch" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.DistributedVirtualSwitch</span></code> data source can be used to discover
 the ID and uplink data of a of a vSphere distributed virtual switch (DVS). This
 can then be used with resources or data sources that require a DVS, such as the
@@ -10149,17 +10200,17 @@ name or path.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_folder">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_folder</code><span class="sig-paren">(</span><em class="sig-param">path=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_folder" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_folder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Folder</span></code> data source can be used to get the general attributes of a
 vSphere inventory folder. Paths are absolute and include must include the
 datacenter.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_host">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_host</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_host" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_host</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_host" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Host</span></code> data source can be used to discover the ID of a vSphere
 host. This can then be used with resources or data sources that require a host
 managed object reference ID.</p>
@@ -10175,9 +10226,9 @@ omitted if there is only one host in your inventory.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_network">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_network</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">distributed_virtual_switch_uuid=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_network" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distributed_virtual_switch_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.getNetwork</span></code> data source can be used to discover the ID of a network
 in vSphere. This can be any network that can be used as the backing for a
 network interface for <code class="docutils literal notranslate"><span class="pre">.VirtualMachine</span></code> or any other vSphere resource
@@ -10201,9 +10252,9 @@ Distributed virtual switch ID.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_policy">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_policy</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.getPolicy</span></code> data source can be used to discover the UUID of a
 vSphere storage policy. This can then be used with resources or data sources that
 require a storage policy.</p>
@@ -10218,9 +10269,9 @@ requires vCenter 6.0 or higher.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_resource_pool">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_resource_pool</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_resource_pool" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_resource_pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_resource_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.ResourcePool</span></code> data source can be used to discover the ID of a
 resource pool in vSphere. This is useful to fetch the ID of a resource pool
 that you want to use to create virtual machines in using the
@@ -10240,9 +10291,9 @@ path. This is required when using vCenter.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_tag">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_tag</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_tag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -10254,9 +10305,9 @@ path. This is required when using vCenter.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_tag_category">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_tag_category</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag_category" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_tag_category</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag_category" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -10265,9 +10316,9 @@ path. This is required when using vCenter.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_vapp_container">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_vapp_container</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_vapp_container" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_vapp_container</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_vapp_container" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.VappContainer</span></code> data source can be used to discover the ID of a
 vApp container in vSphere. This is useful to fetch the ID of a vApp container
 that you want to use to create virtual machines in using the
@@ -10284,9 +10335,9 @@ path.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_virtual_machine">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_virtual_machine</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">scsi_controller_scan_count=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_virtual_machine" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_virtual_machine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datacenter_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scsi_controller_scan_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_virtual_machine" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.VirtualMachine</span></code> data source can be used to find the UUID of an
 existing virtual machine or template. Its most relevant purpose is for finding
 the UUID of a template to be used as the source for cloning into a new
@@ -10309,9 +10360,9 @@ scan for disk attributes and controller types on. Default: <code class="docutils
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_vsphere.get_vmfs_disks">
-<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_vmfs_disks</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">rescan=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_vmfs_disks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_vmfs_disks</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_system_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rescan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_vmfs_disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.getVmfsDisks</span></code> data source can be used to discover the storage
 devices available on an ESXi host. This data source can be combined with the
 <cite>`</cite>.VmfsDatastore`` &lt;/docs/providers/vsphere/r/vmfs_datastore.html&gt;`_ resource to create VMFS

@@ -13,12 +13,26 @@ meta_desc: "Explore the InterfaceAttach resource of the compute module, includin
 Attaches a Network Interface (a Port) to an Instance using the OpenStack
 Compute (Nova) v2 API.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic Attachment
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -34,11 +48,22 @@ const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
     networkId: openstack_networking_port_v2_network_1.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Attachment Specifying a Fixed IP
 
+### Attachment Specifying a Fixed IP
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -55,12 +80,22 @@ const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
     networkId: openstack_networking_port_v2_network_1.id,
 });
 ```
-
-
 {{% /example %}}
-{{% example %}}
-### Attachment Using an Existing Port
 
+### Attachment Using an Existing Port
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -80,11 +115,22 @@ const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
     portId: port1.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Attaching Multiple Interfaces
 
+### Attaching Multiple Interfaces
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -110,48 +156,13 @@ for (let i = 0; i < 2; i++) {
     }));
 }
 ```
-
-Note that the above example will not guarantee that the ports are attached in
-a deterministic manner. The ports will be attached in a seemingly random
-order.
-
-If you want to ensure that the ports are attached in a given order, create
-explicit dependencies between the ports, such as:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as openstack from "@pulumi/openstack";
-
-const network1 = new openstack.networking.Network("network_1", {
-    adminStateUp: true,
-});
-const ports: openstack.networking.Port[] = [];
-for (let i = 0; i < 2; i++) {
-    ports.push(new openstack.networking.Port(`ports-${i}`, {
-        adminStateUp: true,
-        networkId: network1.id,
-    }));
-}
-const instance1 = new openstack.compute.Instance("instance_1", {
-    securityGroups: ["default"],
-});
-const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
-    instanceId: instance1.id,
-    portId: pulumi.all(ports.map(v => v.id)).apply(id => id.map(v => v)[0]),
-});
-const ai2 = new openstack.compute.InterfaceAttach("ai_2", {
-    instanceId: instance1.id,
-    portId: pulumi.all(ports.map(v => v.id)).apply(id => id.map(v => v)[1]),
-});
-```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a InterfaceAttach Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -159,7 +170,7 @@ const ai2 = new openstack.compute.InterfaceAttach("ai_2", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InterfaceAttach</span><span class="p">(resource_name, opts=None, </span>fixed_ip=None<span class="p">, </span>instance_id=None<span class="p">, </span>network_id=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InterfaceAttach</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>fixed_ip=None<span class="p">, </span>instance_id=None<span class="p">, </span>network_id=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -635,7 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing InterfaceAttach Resource {#look-up}
 
 Get an existing InterfaceAttach resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#InterfaceAttachState">InterfaceAttachState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#InterfaceAttach">InterfaceAttach</a></span></code></pre></div>

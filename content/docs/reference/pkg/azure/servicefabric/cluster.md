@@ -18,7 +18,7 @@ Manages a Service Fabric Cluster.
 
 
 ## Create a Cluster Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1022,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicefabric/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/servicefabric/#Cluster">Cluster</a></span></code></pre></div>
@@ -1907,6 +1907,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterAzureActiveDirectoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterAzureActiveDirectoryOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterAzureActiveDirectoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterAzureActiveDirectory.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2057,6 +2060,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterCertificateOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterCertificate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2209,6 +2215,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterCertificateCommonNamesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterCertificateCommonNamesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterCertificateCommonNamesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterCertificateCommonNames.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2324,6 +2333,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterCertificateCommonNamesCommonNameArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterCertificateCommonNamesCommonNameOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterCertificateCommonNamesCommonNameArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterCertificateCommonNamesCommonName.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2438,6 +2450,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterClientCertificateCommonNameArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterClientCertificateCommonNameOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterClientCertificateCommonNameArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterClientCertificateCommonName.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2582,6 +2597,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterClientCertificateThumbprintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterClientCertificateThumbprintOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterClientCertificateThumbprintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterClientCertificateThumbprint.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2696,6 +2714,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterDiagnosticsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterDiagnosticsConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterDiagnosticsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterDiagnosticsConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2920,6 +2941,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterFabricSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterFabricSettingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterFabricSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterFabricSetting.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3034,6 +3058,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterNodeTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterNodeTypeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterNodeTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterNodeType.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3474,6 +3501,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterNodeTypeApplicationPortsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterNodeTypeApplicationPortsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterNodeTypeApplicationPortsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterNodeTypeApplicationPorts.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3589,6 +3619,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterNodeTypeEphemeralPortsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterNodeTypeEphemeralPortsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterNodeTypeEphemeralPortsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterNodeTypeEphemeralPorts.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3703,6 +3736,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterReverseProxyCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/servicefabric?tab=doc#ClusterReverseProxyCertificateOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Inputs.ClusterReverseProxyCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ServiceFabric.Outputs.ClusterReverseProxyCertificate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

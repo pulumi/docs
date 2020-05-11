@@ -15,10 +15,26 @@ detach volumes from AWS Instances.
 
 > **NOTE on EBS block devices:** If you use `ebs_block_device` on an `aws.ec2.Instance`, this provider will assume management over the full set of non-root EBS block devices for the instance, and treats additional block devices as drift. For this reason, `ebs_block_device` cannot be mixed with external `aws.ebs.Volume` + `aws_ebs_volume_attachment` resources for a given instance.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,14 +57,13 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebs_att", {
     volumeId: example.id,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a VolumeAttachment Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -56,7 +71,7 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebs_att", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeAttachment</span><span class="p">(resource_name, opts=None, </span>device_name=None<span class="p">, </span>force_detach=None<span class="p">, </span>instance_id=None<span class="p">, </span>skip_destroy=None<span class="p">, </span>volume_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VolumeAttachment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>device_name=None<span class="p">, </span>force_detach=None<span class="p">, </span>instance_id=None<span class="p">, </span>skip_destroy=None<span class="p">, </span>volume_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -235,7 +250,7 @@ The VolumeAttachment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
-example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
+example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -265,7 +280,7 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [
     <dd>{{% md %}}Set to `true` if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
+[Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -295,7 +310,7 @@ means attached.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
-example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
+example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -325,7 +340,7 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [
     <dd>{{% md %}}Set to `true` if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
+[Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -355,7 +370,7 @@ means attached.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
-example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
+example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -385,7 +400,7 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [
     <dd>{{% md %}}Set to `true` if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
+[Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -415,7 +430,7 @@ means attached.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
-example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
+example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -445,7 +460,7 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [
     <dd>{{% md %}}Set to `true` if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
+[Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -544,7 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing VolumeAttachment Resource {#look-up}
 
 Get an existing VolumeAttachment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VolumeAttachmentState">VolumeAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VolumeAttachment">VolumeAttachment</a></span></code></pre></div>
@@ -672,7 +687,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
-example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
+example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -684,7 +699,7 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [
     <dd>{{% md %}}Set to `true` if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
+[Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -732,7 +747,7 @@ means attached.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
-example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
+example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -744,7 +759,7 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [
     <dd>{{% md %}}Set to `true` if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
+[Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -792,7 +807,7 @@ means attached.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
-example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
+example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -804,7 +819,7 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [
     <dd>{{% md %}}Set to `true` if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
+[Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -852,7 +867,7 @@ means attached.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
-example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
+example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -864,7 +879,7 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [
     <dd>{{% md %}}Set to `true` if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
+[Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

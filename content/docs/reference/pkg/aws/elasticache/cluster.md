@@ -19,14 +19,28 @@ it is applied in the next maintenance window. Because of this, this provider may
 a difference in its planning phase because the actual modification has not yet taken
 place. You can use the `apply_immediately` flag to instruct the service to apply the
 change immediately. Using `apply_immediately` can result in a brief downtime as the server reboots.
-See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.
+See the AWS Docs on [Modifying an ElastiCache Cache Cluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Clusters.Modify.html) for more information.
+
+
 
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Memcached Cluster
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -39,11 +53,22 @@ const example = new aws.elasticache.Cluster("example", {
     port: 11211,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Redis Instance
 
+### Redis Instance
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -57,13 +82,22 @@ const example = new aws.elasticache.Cluster("example", {
     port: 6379,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
+
 ### Redis Cluster Mode Disabled Read Replica Instance
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-These inherit their settings from the replication group.
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -72,14 +106,13 @@ const replica = new aws.elasticache.Cluster("replica", {
     replicationGroupId: aws_elasticache_replication_group_example.id,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Cluster Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -87,7 +120,7 @@ const replica = new aws.elasticache.Cluster("replica", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>apply_immediately=None<span class="p">, </span>availability_zone=None<span class="p">, </span>az_mode=None<span class="p">, </span>cluster_id=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>maintenance_window=None<span class="p">, </span>node_type=None<span class="p">, </span>notification_topic_arn=None<span class="p">, </span>num_cache_nodes=None<span class="p">, </span>parameter_group_name=None<span class="p">, </span>port=None<span class="p">, </span>preferred_availability_zones=None<span class="p">, </span>replication_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_group_names=None<span class="p">, </span>snapshot_arns=None<span class="p">, </span>snapshot_name=None<span class="p">, </span>snapshot_retention_limit=None<span class="p">, </span>snapshot_window=None<span class="p">, </span>subnet_group_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>availability_zone=None<span class="p">, </span>az_mode=None<span class="p">, </span>cluster_id=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>maintenance_window=None<span class="p">, </span>node_type=None<span class="p">, </span>notification_topic_arn=None<span class="p">, </span>num_cache_nodes=None<span class="p">, </span>parameter_group_name=None<span class="p">, </span>port=None<span class="p">, </span>preferred_availability_zones=None<span class="p">, </span>replication_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_group_names=None<span class="p">, </span>snapshot_arns=None<span class="p">, </span>snapshot_name=None<span class="p">, </span>snapshot_retention_limit=None<span class="p">, </span>snapshot_window=None<span class="p">, </span>subnet_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -267,7 +300,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -481,7 +514,7 @@ for the cache cluster.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
 </dl>
@@ -499,7 +532,7 @@ for the cache cluster.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -713,7 +746,7 @@ for the cache cluster.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
 </dl>
@@ -731,7 +764,7 @@ for the cache cluster.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -945,7 +978,7 @@ for the cache cluster.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
 </dl>
@@ -963,7 +996,7 @@ for the cache cluster.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -1177,7 +1210,7 @@ for the cache cluster.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
 </dl>
@@ -1407,7 +1440,7 @@ Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
 ## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#Cluster">Cluster</a></span></code></pre></div>
@@ -1536,7 +1569,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -1786,7 +1819,7 @@ for the cache cluster.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
 </dl>
@@ -1804,7 +1837,7 @@ for the cache cluster.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -2054,7 +2087,7 @@ for the cache cluster.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
 </dl>
@@ -2072,7 +2105,7 @@ for the cache cluster.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -2322,7 +2355,7 @@ for the cache cluster.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
 </dl>
@@ -2340,7 +2373,7 @@ for the cache cluster.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -2590,7 +2623,7 @@ for the cache cluster.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource
+    <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd>
 
 </dl>
@@ -2615,6 +2648,9 @@ for the cache cluster.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#ClusterCacheNodeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.Outputs.ClusterCacheNode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

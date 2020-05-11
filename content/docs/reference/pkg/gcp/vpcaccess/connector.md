@@ -1,7 +1,8 @@
 
 ---
 title: "Connector"
-block_external_search_index: true
+title_tag: "Resource Connector | Module vpcaccess | Package GCP"
+meta_desc: "Explore the Connector resource of the vpcaccess module, including examples, input properties, output properties, lookup functions, and supporting types. Serverless VPC Access connector resource."
 ---
 
 
@@ -35,7 +36,7 @@ const connector = new gcp.vpcaccess.Connector("connector", {
 
 
 ## Create a Connector Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -43,7 +44,7 @@ const connector = new gcp.vpcaccess.Connector("connector", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Connector</span><span class="p">(resource_name, opts=None, </span>ip_cidr_range=None<span class="p">, </span>max_throughput=None<span class="p">, </span>min_throughput=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Connector</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ip_cidr_range=None<span class="p">, </span>max_throughput=None<span class="p">, </span>min_throughput=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -221,7 +222,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'.
+    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -248,7 +249,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -292,7 +293,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'.
+    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -319,7 +320,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -363,7 +364,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'.
+    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -390,7 +391,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -434,7 +435,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'.
+    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -461,7 +462,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -647,7 +648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Connector Resource {#look-up}
 
 Get an existing Connector resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/vpcaccess/#ConnectorState">ConnectorState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/vpcaccess/#Connector">Connector</a></span></code></pre></div>
@@ -774,7 +775,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'.
+    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -783,7 +784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -863,7 +864,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'.
+    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -872,7 +873,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -952,7 +953,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'.
+    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -961,7 +962,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1041,7 +1042,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'.
+    <dd>{{% md %}}The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1050,7 +1051,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 1000.
+    <dd>{{% md %}}Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 1000.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1136,8 +1137,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

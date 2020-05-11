@@ -1,7 +1,8 @@
 
 ---
 title: "Provider"
-block_external_search_index: true
+title_tag: "Resource Provider | Package GCP"
+meta_desc: "Explore the Provider resource of the GCP package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the google-beta package. By default, resources use package-wide configuration"
 ---
 
 
@@ -17,7 +18,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 ## Create a Provider Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -25,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, opts=None, </span>access_context_manager_custom_endpoint=None<span class="p">, </span>access_token=None<span class="p">, </span>app_engine_custom_endpoint=None<span class="p">, </span>batching=None<span class="p">, </span>big_query_custom_endpoint=None<span class="p">, </span>bigquery_data_transfer_custom_endpoint=None<span class="p">, </span>bigquery_reservation_custom_endpoint=None<span class="p">, </span>bigtable_custom_endpoint=None<span class="p">, </span>billing_custom_endpoint=None<span class="p">, </span>binary_authorization_custom_endpoint=None<span class="p">, </span>cloud_billing_custom_endpoint=None<span class="p">, </span>cloud_build_custom_endpoint=None<span class="p">, </span>cloud_functions_custom_endpoint=None<span class="p">, </span>cloud_iot_custom_endpoint=None<span class="p">, </span>cloud_run_custom_endpoint=None<span class="p">, </span>cloud_scheduler_custom_endpoint=None<span class="p">, </span>cloud_tasks_custom_endpoint=None<span class="p">, </span>composer_custom_endpoint=None<span class="p">, </span>compute_beta_custom_endpoint=None<span class="p">, </span>compute_custom_endpoint=None<span class="p">, </span>container_analysis_custom_endpoint=None<span class="p">, </span>container_beta_custom_endpoint=None<span class="p">, </span>container_custom_endpoint=None<span class="p">, </span>credentials=None<span class="p">, </span>data_fusion_custom_endpoint=None<span class="p">, </span>dataflow_custom_endpoint=None<span class="p">, </span>dataproc_beta_custom_endpoint=None<span class="p">, </span>dataproc_custom_endpoint=None<span class="p">, </span>datastore_custom_endpoint=None<span class="p">, </span>deployment_manager_custom_endpoint=None<span class="p">, </span>dialogflow_custom_endpoint=None<span class="p">, </span>dns_beta_custom_endpoint=None<span class="p">, </span>dns_custom_endpoint=None<span class="p">, </span>filestore_custom_endpoint=None<span class="p">, </span>firebase_custom_endpoint=None<span class="p">, </span>firestore_custom_endpoint=None<span class="p">, </span>game_services_custom_endpoint=None<span class="p">, </span>healthcare_custom_endpoint=None<span class="p">, </span>iam_credentials_custom_endpoint=None<span class="p">, </span>iam_custom_endpoint=None<span class="p">, </span>iap_custom_endpoint=None<span class="p">, </span>identity_platform_custom_endpoint=None<span class="p">, </span>kms_custom_endpoint=None<span class="p">, </span>logging_custom_endpoint=None<span class="p">, </span>ml_engine_custom_endpoint=None<span class="p">, </span>monitoring_custom_endpoint=None<span class="p">, </span>os_login_custom_endpoint=None<span class="p">, </span>project=None<span class="p">, </span>pubsub_custom_endpoint=None<span class="p">, </span>redis_custom_endpoint=None<span class="p">, </span>region=None<span class="p">, </span>request_timeout=None<span class="p">, </span>resource_manager_custom_endpoint=None<span class="p">, </span>resource_manager_v2beta1_custom_endpoint=None<span class="p">, </span>runtime_config_custom_endpoint=None<span class="p">, </span>runtimeconfig_custom_endpoint=None<span class="p">, </span>scopes=None<span class="p">, </span>secret_manager_custom_endpoint=None<span class="p">, </span>security_center_custom_endpoint=None<span class="p">, </span>security_scanner_custom_endpoint=None<span class="p">, </span>service_management_custom_endpoint=None<span class="p">, </span>service_networking_custom_endpoint=None<span class="p">, </span>service_usage_custom_endpoint=None<span class="p">, </span>source_repo_custom_endpoint=None<span class="p">, </span>spanner_custom_endpoint=None<span class="p">, </span>sql_custom_endpoint=None<span class="p">, </span>storage_custom_endpoint=None<span class="p">, </span>storage_transfer_custom_endpoint=None<span class="p">, </span>tpu_custom_endpoint=None<span class="p">, </span>user_project_override=None<span class="p">, </span>vpc_access_custom_endpoint=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_context_manager_custom_endpoint=None<span class="p">, </span>access_token=None<span class="p">, </span>app_engine_custom_endpoint=None<span class="p">, </span>batching=None<span class="p">, </span>big_query_custom_endpoint=None<span class="p">, </span>bigquery_data_transfer_custom_endpoint=None<span class="p">, </span>bigquery_reservation_custom_endpoint=None<span class="p">, </span>bigtable_custom_endpoint=None<span class="p">, </span>billing_custom_endpoint=None<span class="p">, </span>binary_authorization_custom_endpoint=None<span class="p">, </span>cloud_billing_custom_endpoint=None<span class="p">, </span>cloud_build_custom_endpoint=None<span class="p">, </span>cloud_functions_custom_endpoint=None<span class="p">, </span>cloud_iot_custom_endpoint=None<span class="p">, </span>cloud_run_custom_endpoint=None<span class="p">, </span>cloud_scheduler_custom_endpoint=None<span class="p">, </span>cloud_tasks_custom_endpoint=None<span class="p">, </span>composer_custom_endpoint=None<span class="p">, </span>compute_beta_custom_endpoint=None<span class="p">, </span>compute_custom_endpoint=None<span class="p">, </span>container_analysis_custom_endpoint=None<span class="p">, </span>container_beta_custom_endpoint=None<span class="p">, </span>container_custom_endpoint=None<span class="p">, </span>credentials=None<span class="p">, </span>data_fusion_custom_endpoint=None<span class="p">, </span>dataflow_custom_endpoint=None<span class="p">, </span>dataproc_beta_custom_endpoint=None<span class="p">, </span>dataproc_custom_endpoint=None<span class="p">, </span>datastore_custom_endpoint=None<span class="p">, </span>deployment_manager_custom_endpoint=None<span class="p">, </span>dialogflow_custom_endpoint=None<span class="p">, </span>dns_beta_custom_endpoint=None<span class="p">, </span>dns_custom_endpoint=None<span class="p">, </span>filestore_custom_endpoint=None<span class="p">, </span>firebase_custom_endpoint=None<span class="p">, </span>firestore_custom_endpoint=None<span class="p">, </span>game_services_custom_endpoint=None<span class="p">, </span>healthcare_custom_endpoint=None<span class="p">, </span>iam_credentials_custom_endpoint=None<span class="p">, </span>iam_custom_endpoint=None<span class="p">, </span>iap_custom_endpoint=None<span class="p">, </span>identity_platform_custom_endpoint=None<span class="p">, </span>kms_custom_endpoint=None<span class="p">, </span>logging_custom_endpoint=None<span class="p">, </span>ml_engine_custom_endpoint=None<span class="p">, </span>monitoring_custom_endpoint=None<span class="p">, </span>os_login_custom_endpoint=None<span class="p">, </span>project=None<span class="p">, </span>pubsub_custom_endpoint=None<span class="p">, </span>redis_custom_endpoint=None<span class="p">, </span>region=None<span class="p">, </span>request_timeout=None<span class="p">, </span>resource_manager_custom_endpoint=None<span class="p">, </span>resource_manager_v2beta1_custom_endpoint=None<span class="p">, </span>runtime_config_custom_endpoint=None<span class="p">, </span>runtimeconfig_custom_endpoint=None<span class="p">, </span>scopes=None<span class="p">, </span>secret_manager_custom_endpoint=None<span class="p">, </span>security_center_custom_endpoint=None<span class="p">, </span>security_scanner_custom_endpoint=None<span class="p">, </span>service_directory_custom_endpoint=None<span class="p">, </span>service_management_custom_endpoint=None<span class="p">, </span>service_networking_custom_endpoint=None<span class="p">, </span>service_usage_custom_endpoint=None<span class="p">, </span>source_repo_custom_endpoint=None<span class="p">, </span>spanner_custom_endpoint=None<span class="p">, </span>sql_custom_endpoint=None<span class="p">, </span>storage_custom_endpoint=None<span class="p">, </span>storage_transfer_custom_endpoint=None<span class="p">, </span>tpu_custom_endpoint=None<span class="p">, </span>user_project_override=None<span class="p">, </span>vpc_access_custom_endpoint=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -679,6 +680,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>Service<wbr>Directory<wbr>Custom<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Service<wbr>Management<wbr>Custom<wbr>Endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1255,6 +1264,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dt class="property-optional"
             title="Optional">
         <span>Security<wbr>Scanner<wbr>Custom<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Directory<wbr>Custom<wbr>Endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1845,6 +1862,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>service<wbr>Directory<wbr>Custom<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>service<wbr>Management<wbr>Custom<wbr>Endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -2428,6 +2453,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span>service_<wbr>directory_<wbr>custom_<wbr>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>service_<wbr>management_<wbr>custom_<wbr>endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2617,6 +2650,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/?tab=doc#ProviderBatchingArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Inputs.ProviderBatchingArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2726,8 +2762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

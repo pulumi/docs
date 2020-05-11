@@ -12,10 +12,56 @@ meta_desc: "Explore the Ocean resource of the aws module, including examples, in
 
 Provides a Spotinst Ocean AWS resource.
 
+
+## Update Policy
+
+* `update_policy` - (Optional)
+    * `should_roll` - (Required) Enables the roll.
+    * `roll_config` - (Required) While used, you can control whether the group should perform a deployment after an update to the configuration.
+        * `batch_size_percentage` - (Required) Sets the percentage of the instances to deploy in each batch.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+
+<a id="scheduled-task"></a>
+## scheduled task
+
+* `scheduled_task` - (Optional) Set scheduling object.
+    * `shutdown_hours` - (Optional) Set shutdown hours for cluster object.
+        * `is_enabled` - (Optional)  Flag to enable / disable the shutdown hours.
+                                     Example: True
+        * `time_windows` - (Required) Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
+                                      Example: Fri:15:30-Wed:14:30
+    * `tasks` - (Optional) The scheduling tasks for the cluster.
+        * `is_enabled` - (Required)  Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+        * `cron_expression` - (Required) A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
+                                         Example: 0 1 * * *
+        * `task_type` - (Required) Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
+                                   Example: clusterRoll
+             
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
@@ -76,44 +122,13 @@ const example = new spotinst.aws.Ocean("example", {
     ],
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-## Update Policy
-
-* `update_policy` - (Optional)
-    * `should_roll` - (Required) Enables the roll.
-    * `roll_config` - (Required) While used, you can control whether the group should perform a deployment after an update to the configuration.
-        * `batch_size_percentage` - (Required) Sets the percentage of the instances to deploy in each batch.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-<a id="scheduled-task"></a>
-## scheduled task
-
-* `scheduled_task` - (Optional) Set scheduling object.
-    * `shutdown_hours` - (Optional) Set shutdown hours for cluster object.
-        * `is_enabled` - (Optional)  Flag to enable / disable the shutdown hours.
-                                     Example: True
-        * `time_windows` - (Required) Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
-                                      Example: Fri:15:30-Wed:14:30
-    * `tasks` - (Optional) The scheduling tasks for the cluster.
-        * `is_enabled` - (Required)  Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
-        * `cron_expression` - (Required) A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
-                                         Example: 0 1 * * *
-        * `task_type` - (Required) Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
-                                   Example: clusterRoll
-             
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
 
 
 ## Create a Ocean Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -121,7 +136,7 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Ocean</span><span class="p">(resource_name, opts=None, </span>associate_public_ip_address=None<span class="p">, </span>autoscaler=None<span class="p">, </span>blacklists=None<span class="p">, </span>controller_id=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>grace_period=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>key_name=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Ocean</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>associate_public_ip_address=None<span class="p">, </span>autoscaler=None<span class="p">, </span>blacklists=None<span class="p">, </span>controller_id=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>grace_period=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>key_name=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>whitelists=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1393,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Ocean Resource {#look-up}
 
 Get an existing Ocean resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#OceanState">OceanState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#Ocean">Ocean</a></span></code></pre></div>
@@ -2554,6 +2569,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanAutoscalerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanAutoscalerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanAutoscalerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanAutoscaler.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2849,6 +2867,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanAutoscalerAutoscaleDownArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanAutoscalerAutoscaleDownOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanAutoscalerAutoscaleDownArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanAutoscalerAutoscaleDown.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2963,6 +2984,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanAutoscalerAutoscaleHeadroomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanAutoscalerAutoscaleHeadroomOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanAutoscalerAutoscaleHeadroomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanAutoscalerAutoscaleHeadroom.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3151,6 +3175,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanAutoscalerResourceLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanAutoscalerResourceLimitsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanAutoscalerResourceLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanAutoscalerResourceLimits.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3265,6 +3292,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLoadBalancerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLoadBalancerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanLoadBalancerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanLoadBalancer.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3417,6 +3447,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanScheduledTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanScheduledTaskOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanScheduledTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanScheduledTask.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3524,6 +3557,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanScheduledTaskShutdownHoursArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanScheduledTaskShutdownHoursOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanScheduledTaskShutdownHoursArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanScheduledTaskShutdownHours.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3630,6 +3666,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanScheduledTaskTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanScheduledTaskTaskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanScheduledTaskTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanScheduledTaskTask.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3770,6 +3809,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanTagOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanTagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanTag.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3885,6 +3927,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanUpdatePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanUpdatePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanUpdatePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanUpdatePolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3991,6 +4036,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanUpdatePolicyRollConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanUpdatePolicyRollConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Inputs.OceanUpdatePolicyRollConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.Outputs.OceanUpdatePolicyRollConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

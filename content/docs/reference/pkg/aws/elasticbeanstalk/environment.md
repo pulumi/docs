@@ -17,25 +17,7 @@ the infrastructure that runs those applications.
 Environments are often things such as `development`, `integration`, or
 `production`.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const tftest = new aws.elasticbeanstalk.Application("tftest", {
-    description: "tf-test-desc",
-});
-const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
-    application: tftest.name,
-    solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Option Settings
 
 Some options can be stack-specific, check [AWS Docs](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html)
@@ -75,10 +57,43 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 });
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const tftest = new aws.elasticbeanstalk.Application("tftest", {
+    description: "tf-test-desc",
+});
+const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
+    application: tftest.name,
+    solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Environment Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -86,7 +101,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Environment</span><span class="p">(resource_name, opts=None, </span>application=None<span class="p">, </span>cname_prefix=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>platform_arn=None<span class="p">, </span>poll_interval=None<span class="p">, </span>settings=None<span class="p">, </span>solution_stack_name=None<span class="p">, </span>tags=None<span class="p">, </span>template_name=None<span class="p">, </span>tier=None<span class="p">, </span>version=None<span class="p">, </span>wait_for_ready_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Environment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application=None<span class="p">, </span>cname_prefix=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>platform_arn=None<span class="p">, </span>poll_interval=None<span class="p">, </span>settings=None<span class="p">, </span>solution_stack_name=None<span class="p">, </span>tags=None<span class="p">, </span>template_name=None<span class="p">, </span>tier=None<span class="p">, </span>version=None<span class="p">, </span>wait_for_ready_timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -303,7 +318,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
+    <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
 {{% /md %}}</dd>
 
@@ -337,7 +352,7 @@ below in Option Settings
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]
+off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -443,7 +458,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
+    <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
 {{% /md %}}</dd>
 
@@ -477,7 +492,7 @@ below in Option Settings
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]
+off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -583,7 +598,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
+    <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
 {{% /md %}}</dd>
 
@@ -617,7 +632,7 @@ below in Option Settings
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]
+off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -723,7 +738,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
+    <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
 {{% /md %}}</dd>
 
@@ -757,7 +772,7 @@ below in Option Settings
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]
+off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1258,7 +1273,7 @@ the configuration.
 ## Look up an Existing Environment Resource {#look-up}
 
 Get an existing Environment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#EnvironmentState">EnvironmentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#Environment">Environment</a></span></code></pre></div>
@@ -1497,7 +1512,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
+    <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
 {{% /md %}}</dd>
 
@@ -1540,7 +1555,7 @@ below in Option Settings
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]
+off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1728,7 +1743,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
+    <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
 {{% /md %}}</dd>
 
@@ -1771,7 +1786,7 @@ below in Option Settings
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]
+off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1959,7 +1974,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
+    <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
 {{% /md %}}</dd>
 
@@ -2002,7 +2017,7 @@ below in Option Settings
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]
+off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2190,7 +2205,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
+    <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
 {{% /md %}}</dd>
 
@@ -2233,7 +2248,7 @@ below in Option Settings
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]
+off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2318,6 +2333,9 @@ out.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#EnvironmentAllSettingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.Outputs.EnvironmentAllSetting.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2497,6 +2515,9 @@ in the application URL
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#EnvironmentSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#EnvironmentSettingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.Inputs.EnvironmentSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.Outputs.EnvironmentSetting.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

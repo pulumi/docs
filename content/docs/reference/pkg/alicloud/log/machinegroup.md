@@ -14,7 +14,7 @@ meta_desc: "Explore the MachineGroup resource of the log module, including examp
 
 
 ## Create a MachineGroup Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -200,7 +200,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The machine identification.
+    <dd>{{% md %}}The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -219,7 +219,6 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The machine identification type, including IP and user-defined identity. Valid values are "ip" and "userdefined". Default to "ip".
-* `identify_list`- (Required) The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -253,7 +252,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The machine identification.
+    <dd>{{% md %}}The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -272,7 +271,6 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The machine identification type, including IP and user-defined identity. Valid values are "ip" and "userdefined". Default to "ip".
-* `identify_list`- (Required) The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -306,7 +304,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The machine identification.
+    <dd>{{% md %}}The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -325,7 +323,6 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The machine identification type, including IP and user-defined identity. Valid values are "ip" and "userdefined". Default to "ip".
-* `identify_list`- (Required) The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,7 +356,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The machine identification.
+    <dd>{{% md %}}The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -378,7 +375,6 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The machine identification type, including IP and user-defined identity. Valid values are "ip" and "userdefined". Default to "ip".
-* `identify_list`- (Required) The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -482,7 +478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing MachineGroup Resource {#look-up}
 
 Get an existing MachineGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/log/#MachineGroupState">MachineGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/log/#MachineGroup">MachineGroup</a></span></code></pre></div>
@@ -609,7 +605,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The machine identification.
+    <dd>{{% md %}}The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -619,7 +615,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The machine identification type, including IP and user-defined identity. Valid values are "ip" and "userdefined". Default to "ip".
-* `identify_list`- (Required) The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -662,7 +657,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The machine identification.
+    <dd>{{% md %}}The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -672,7 +667,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The machine identification type, including IP and user-defined identity. Valid values are "ip" and "userdefined". Default to "ip".
-* `identify_list`- (Required) The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -715,7 +709,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The machine identification.
+    <dd>{{% md %}}The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -725,7 +719,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The machine identification type, including IP and user-defined identity. Valid values are "ip" and "userdefined". Default to "ip".
-* `identify_list`- (Required) The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -768,7 +761,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The machine identification.
+    <dd>{{% md %}}The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -778,7 +771,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The machine identification type, including IP and user-defined identity. Valid values are "ip" and "userdefined". Default to "ip".
-* `identify_list`- (Required) The specific machine identification, which can be an IP address or user-defined identity.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

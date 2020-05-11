@@ -1,7 +1,8 @@
 
 ---
 title: "NetworkEndpoint"
-block_external_search_index: true
+title_tag: "Resource NetworkEndpoint | Module compute | Package GCP"
+meta_desc: "Explore the NetworkEndpoint resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A Network endpoint represents a IP address and port combination that is"
 ---
 
 
@@ -25,7 +26,7 @@ To get more information about NetworkEndpoint, see:
 
 
 ## Create a NetworkEndpoint Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -33,7 +34,7 @@ To get more information about NetworkEndpoint, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NetworkEndpoint</span><span class="p">(resource_name, opts=None, </span>instance=None<span class="p">, </span>ip_address=None<span class="p">, </span>network_endpoint_group=None<span class="p">, </span>port=None<span class="p">, </span>project=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NetworkEndpoint</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance=None<span class="p">, </span>ip_address=None<span class="p">, </span>network_endpoint_group=None<span class="p">, </span>port=None<span class="p">, </span>project=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -211,8 +212,9 @@ The NetworkEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
-GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
+    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to.
+This is required for network endpoints of type GCE_VM_IP_PORT.
+The instance must be in the same zone of network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -221,8 +223,9 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
-aliased IP range).
+    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong
+to a VM in GCE (either the primary IP or as part of an aliased IP
+range).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -275,8 +278,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
-GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
+    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to.
+This is required for network endpoints of type GCE_VM_IP_PORT.
+The instance must be in the same zone of network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -285,8 +289,9 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
-aliased IP range).
+    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong
+to a VM in GCE (either the primary IP or as part of an aliased IP
+range).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -339,8 +344,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
-GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
+    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to.
+This is required for network endpoints of type GCE_VM_IP_PORT.
+The instance must be in the same zone of network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -349,8 +355,9 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
-aliased IP range).
+    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong
+to a VM in GCE (either the primary IP or as part of an aliased IP
+range).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -403,8 +410,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
-GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
+    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to.
+This is required for network endpoints of type GCE_VM_IP_PORT.
+The instance must be in the same zone of network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -413,8 +421,9 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
-aliased IP range).
+    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong
+to a VM in GCE (either the primary IP or as part of an aliased IP
+range).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -537,7 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NetworkEndpoint Resource {#look-up}
 
 Get an existing NetworkEndpoint resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NetworkEndpointState">NetworkEndpointState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NetworkEndpoint">NetworkEndpoint</a></span></code></pre></div>
@@ -664,8 +673,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
-GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
+    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to.
+This is required for network endpoints of type GCE_VM_IP_PORT.
+The instance must be in the same zone of network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -674,8 +684,9 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
-aliased IP range).
+    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong
+to a VM in GCE (either the primary IP or as part of an aliased IP
+range).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -728,8 +739,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
-GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
+    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to.
+This is required for network endpoints of type GCE_VM_IP_PORT.
+The instance must be in the same zone of network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -738,8 +750,9 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
-aliased IP range).
+    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong
+to a VM in GCE (either the primary IP or as part of an aliased IP
+range).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -792,8 +805,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
-GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
+    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to.
+This is required for network endpoints of type GCE_VM_IP_PORT.
+The instance must be in the same zone of network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -802,8 +816,9 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
-aliased IP range).
+    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong
+to a VM in GCE (either the primary IP or as part of an aliased IP
+range).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -856,8 +871,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
-GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
+    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to.
+This is required for network endpoints of type GCE_VM_IP_PORT.
+The instance must be in the same zone of network endpoint group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -866,8 +882,9 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
-aliased IP range).
+    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong
+to a VM in GCE (either the primary IP or as part of an aliased IP
+range).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -926,8 +943,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

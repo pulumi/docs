@@ -1,7 +1,8 @@
 
 ---
 title: "InboundSamlConfig"
-block_external_search_index: true
+title_tag: "Resource InboundSamlConfig | Module identityplatform | Package GCP"
+meta_desc: "Explore the InboundSamlConfig resource of the identityplatform module, including examples, input properties, output properties, lookup functions, and supporting types. Inbound SAML configuration for a Identity Toolkit project."
 ---
 
 
@@ -18,7 +19,7 @@ the marketplace prior to using this resource.
 
 
 ## Create a InboundSamlConfig Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +27,7 @@ the marketplace prior to using this resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InboundSamlConfig</span><span class="p">(resource_name, opts=None, </span>display_name=None<span class="p">, </span>enabled=None<span class="p">, </span>idp_config=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>sp_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InboundSamlConfig</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>display_name=None<span class="p">, </span>enabled=None<span class="p">, </span>idp_config=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>sp_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -213,7 +214,7 @@ The InboundSamlConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -222,8 +223,8 @@ The InboundSamlConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.
+    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -241,9 +242,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.
+    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -278,7 +279,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -287,8 +288,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.
+    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -306,9 +307,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.
+    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -343,7 +344,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -352,8 +353,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.
+    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -371,9 +372,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.
+    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -408,7 +409,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Dict[Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -417,8 +418,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Dict[Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.
+    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -436,9 +437,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.
+    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -534,7 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing InboundSamlConfig Resource {#look-up}
 
 Get an existing InboundSamlConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/identityplatform/#InboundSamlConfigState">InboundSamlConfigState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/identityplatform/#InboundSamlConfig">InboundSamlConfig</a></span></code></pre></div>
@@ -679,7 +680,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -688,9 +689,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.
+    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -709,8 +710,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.
+    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -744,7 +745,7 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -753,9 +754,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.
+    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -774,8 +775,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.
+    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -809,7 +810,7 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -818,9 +819,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.
+    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -839,8 +840,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.
+    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -874,7 +875,7 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfig">Dict[Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
+    <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -883,9 +884,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters, hyphens,
-underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.
+    <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
+hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
+alphanumeric character, and have at least 2 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -904,8 +905,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigspconfig">Dict[Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.
+    <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
+and accept an authentication assertion issued by a SAML identity provider.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -931,6 +932,9 @@ authentication assertion issued by a SAML identity provider.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#InboundSamlConfigIdpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#InboundSamlConfigIdpConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Inputs.InboundSamlConfigIdpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Outputs.InboundSamlConfigIdpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -944,7 +948,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfigidpcertificate">List&lt;Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -952,7 +957,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unique identifier for all SAML entities
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -960,7 +966,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}URL to send Authentication request to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -968,7 +975,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates if outbounding SAMLRequest should be signed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -983,7 +991,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfigidpcertificate">[]Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -991,7 +1000,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unique identifier for all SAML entities
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -999,7 +1009,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}URL to send Authentication request to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1007,7 +1018,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates if outbounding SAMLRequest should be signed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1022,7 +1034,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfigidpcertificate">Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1030,7 +1043,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unique identifier for all SAML entities
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1038,7 +1052,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}URL to send Authentication request to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1046,7 +1061,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates if outbounding SAMLRequest should be signed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1061,7 +1077,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigidpconfigidpcertificate">List[Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1069,7 +1086,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unique identifier for all SAML entities
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1077,7 +1095,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}URL to send Authentication request to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1085,7 +1104,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates if outbounding SAMLRequest should be signed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1102,6 +1122,9 @@ authentication assertion issued by a SAML identity provider.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#InboundSamlConfigIdpConfigIdpCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#InboundSamlConfigIdpConfigIdpCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Inputs.InboundSamlConfigIdpConfigIdpCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Outputs.InboundSamlConfigIdpConfigIdpCertificate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1115,7 +1138,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The x509 certificate
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1130,7 +1155,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The x509 certificate
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1145,7 +1172,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The x509 certificate
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1160,7 +1189,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The x509 certificate
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1177,6 +1208,9 @@ authentication assertion issued by a SAML identity provider.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#InboundSamlConfigSpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#InboundSamlConfigSpConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Inputs.InboundSamlConfigSpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Outputs.InboundSamlConfigSpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1190,7 +1224,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Callback URI where responses from IDP are handled. Must start with `https://`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1198,7 +1233,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigspconfigspcertificate">List&lt;Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1206,7 +1243,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unique identifier for all SAML entities.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1221,7 +1259,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Callback URI where responses from IDP are handled. Must start with `https://`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1229,7 +1268,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigspconfigspcertificate">[]Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1237,7 +1278,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unique identifier for all SAML entities.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1252,7 +1294,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Callback URI where responses from IDP are handled. Must start with `https://`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1260,7 +1303,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigspconfigspcertificate">Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1268,7 +1313,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unique identifier for all SAML entities.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1283,7 +1329,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Callback URI where responses from IDP are handled. Must start with `https://`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1291,7 +1338,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundsamlconfigspconfigspcertificate">List[Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1299,7 +1348,8 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unique identifier for all SAML entities.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1316,6 +1366,9 @@ authentication assertion issued by a SAML identity provider.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#InboundSamlConfigSpConfigSpCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#InboundSamlConfigSpConfigSpCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Inputs.InboundSamlConfigSpConfigSpCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.Outputs.InboundSamlConfigSpConfigSpCertificate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1329,7 +1382,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The x509 certificate
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1344,7 +1399,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The x509 certificate
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1359,7 +1416,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The x509 certificate
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1374,7 +1433,9 @@ authentication assertion issued by a SAML identity provider.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The x509 certificate
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1393,8 +1454,7 @@ authentication assertion issued by a SAML identity provider.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

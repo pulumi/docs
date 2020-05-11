@@ -43,7 +43,7 @@ const route = new aws.ec2.Route("r", {
 
 
 ## Create a Route Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -51,7 +51,7 @@ const route = new aws.ec2.Route("r", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, opts=None, </span>destination_cidr_block=None<span class="p">, </span>destination_ipv6_cidr_block=None<span class="p">, </span>egress_only_gateway_id=None<span class="p">, </span>gateway_id=None<span class="p">, </span>instance_id=None<span class="p">, </span>nat_gateway_id=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>route_table_id=None<span class="p">, </span>transit_gateway_id=None<span class="p">, </span>vpc_peering_connection_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination_cidr_block=None<span class="p">, </span>destination_ipv6_cidr_block=None<span class="p">, </span>egress_only_gateway_id=None<span class="p">, </span>gateway_id=None<span class="p">, </span>instance_id=None<span class="p">, </span>nat_gateway_id=None<span class="p">, </span>network_interface_id=None<span class="p">, </span>route_table_id=None<span class="p">, </span>transit_gateway_id=None<span class="p">, </span>vpc_peering_connection_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -815,7 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Route Resource {#look-up}
 
 Get an existing Route resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Route">Route</a></span></code></pre></div>

@@ -1,7 +1,8 @@
 
 ---
 title: "MangedSslCertificate"
-block_external_search_index: true
+title_tag: "Resource MangedSslCertificate | Module compute | Package GCP"
+meta_desc: "Explore the MangedSslCertificate resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -10,10 +11,13 @@ block_external_search_index: true
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+Deprecated: gcp.MangedSslCertificate has been deprecated in favour of gcp.ManagedSslCertificate
+
+<p class="resource-deprecated">Deprecated: {{% md %}}gcp.MangedSslCertificate has been deprecated in favour of gcp.ManagedSslCertificate{{% /md %}}</p>
 
 
 ## Create a MangedSslCertificate Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -21,7 +25,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MangedSslCertificate</span><span class="p">(resource_name, opts=None, </span>certificate_id=None<span class="p">, </span>description=None<span class="p">, </span>managed=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MangedSslCertificate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_id=None<span class="p">, </span>description=None<span class="p">, </span>managed=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -669,7 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing MangedSslCertificate Resource {#look-up}
 
 Get an existing MangedSslCertificate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#MangedSslCertificateState">MangedSslCertificateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#MangedSslCertificate">MangedSslCertificate</a></span></code></pre></div>
@@ -1206,6 +1210,9 @@ namespace as the managed SSL certificates.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#MangedSslCertificateManagedArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#MangedSslCertificateManagedOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.MangedSslCertificateManagedArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.MangedSslCertificateManaged.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1283,8 +1290,7 @@ namespace as the managed SSL certificates.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

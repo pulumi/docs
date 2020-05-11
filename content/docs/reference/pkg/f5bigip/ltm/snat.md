@@ -15,11 +15,26 @@ meta_desc: "Explore the Snat resource of the ltm module, including examples, inp
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -42,14 +57,13 @@ const test_snat = new f5bigip.ltm.Snat("test-snat", {
     vlansdisabled: true,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Snat Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -57,7 +71,7 @@ const test_snat = new f5bigip.ltm.Snat("test-snat", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Snat</span><span class="p">(resource_name, opts=None, </span>autolasthop=None<span class="p">, </span>full_path=None<span class="p">, </span>mirror=None<span class="p">, </span>name=None<span class="p">, </span>origins=None<span class="p">, </span>partition=None<span class="p">, </span>snatpool=None<span class="p">, </span>sourceport=None<span class="p">, </span>translation=None<span class="p">, </span>vlans=None<span class="p">, </span>vlansdisabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Snat</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autolasthop=None<span class="p">, </span>full_path=None<span class="p">, </span>mirror=None<span class="p">, </span>name=None<span class="p">, </span>origins=None<span class="p">, </span>partition=None<span class="p">, </span>snatpool=None<span class="p">, </span>sourceport=None<span class="p">, </span>translation=None<span class="p">, </span>vlans=None<span class="p">, </span>vlansdisabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -253,7 +267,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,7 +373,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -465,7 +479,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -571,7 +585,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -729,7 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Snat Resource {#look-up}
 
 Get an existing Snat resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#SnatState">SnatState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#Snat">Snat</a></span></code></pre></div>
@@ -856,7 +870,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -962,7 +976,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1068,7 +1082,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1174,7 +1188,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1289,6 +1303,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#SnatOriginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#SnatOriginOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Ltm.Inputs.SnatOriginArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.F5bigip/Pulumi.F5BigIP.Ltm.Outputs.SnatOrigin.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

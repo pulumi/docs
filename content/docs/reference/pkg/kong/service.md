@@ -1,8 +1,8 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Package kong"
-meta_desc: "Explore the Service resource of the kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "Resource Service | Package Kong"
+meta_desc: "Explore the Service resource of the Kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -14,7 +14,7 @@ meta_desc: "Explore the Service resource of the kong package, including examples
 
 
 ## Create a Service Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the Service resource of the kong package, including examples
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Service</span><span class="p">(resource_name, opts=None, </span>connect_timeout=None<span class="p">, </span>host=None<span class="p">, </span>name=None<span class="p">, </span>path=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>read_timeout=None<span class="p">, </span>retries=None<span class="p">, </span>write_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Service</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connect_timeout=None<span class="p">, </span>host=None<span class="p">, </span>name=None<span class="p">, </span>path=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>read_timeout=None<span class="p">, </span>retries=None<span class="p">, </span>write_timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -586,7 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Service Resource {#look-up}
 
 Get an existing Service resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#Service">Service</a></span></code></pre></div>

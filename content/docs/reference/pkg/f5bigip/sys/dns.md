@@ -15,11 +15,26 @@ meta_desc: "Explore the Dns resource of the sys module, including examples, inpu
 
 
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -31,14 +46,13 @@ const dns1 = new f5bigip.sys.Dns("dns1", {
     searches: ["f5.com"],
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Dns Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -46,7 +60,7 @@ const dns1 = new f5bigip.sys.Dns("dns1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dns</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>name_servers=None<span class="p">, </span>number_of_dots=None<span class="p">, </span>searches=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dns</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name_servers=None<span class="p">, </span>number_of_dots=None<span class="p">, </span>searches=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -224,7 +238,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -267,7 +281,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -310,7 +324,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -353,7 +367,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -466,7 +480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Dns Resource {#look-up}
 
 Get an existing Dns resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/sys/#DnsState">DnsState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/sys/#Dns">Dns</a></span></code></pre></div>
@@ -593,7 +607,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -636,7 +650,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -679,7 +693,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -722,7 +736,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Dns Servers
+    <dd>{{% md %}}Provide description for your DNS server
 {{% /md %}}</dd>
 
     <dt class="property-optional"

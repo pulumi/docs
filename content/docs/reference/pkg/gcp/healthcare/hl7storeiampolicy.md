@@ -1,7 +1,8 @@
 
 ---
 title: "Hl7StoreIamPolicy"
-block_external_search_index: true
+title_tag: "Resource Hl7StoreIamPolicy | Module healthcare | Package GCP"
+meta_desc: "Explore the Hl7StoreIamPolicy resource of the healthcare module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for Healthcare HL7v2 store. Each of these resources serves a different use case:"
 ---
 
 
@@ -48,7 +49,7 @@ const hl7V2Store = new gcp.healthcare.Hl7StoreIamMember("hl7_v2_store", {
 
 
 ## Create a Hl7StoreIamPolicy Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -56,7 +57,7 @@ const hl7V2Store = new gcp.healthcare.Hl7StoreIamMember("hl7_v2_store", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Hl7StoreIamPolicy</span><span class="p">(resource_name, opts=None, </span>hl7_v2_store_id=None<span class="p">, </span>policy_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Hl7StoreIamPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>hl7_v2_store_id=None<span class="p">, </span>policy_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -456,7 +457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Hl7StoreIamPolicy Resource {#look-up}
 
 Get an existing Hl7StoreIamPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#Hl7StoreIamPolicyState">Hl7StoreIamPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#Hl7StoreIamPolicy">Hl7StoreIamPolicy</a></span></code></pre></div>
@@ -741,8 +742,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

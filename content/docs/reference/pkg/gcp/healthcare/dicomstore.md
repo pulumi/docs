@@ -1,7 +1,8 @@
 
 ---
 title: "DicomStore"
-block_external_search_index: true
+title_tag: "Resource DicomStore | Module healthcare | Package GCP"
+meta_desc: "Explore the DicomStore resource of the healthcare module, including examples, input properties, output properties, lookup functions, and supporting types. A DicomStore is a datastore inside a Healthcare dataset that conforms to the DICOM"
 ---
 
 
@@ -14,14 +15,14 @@ A DicomStore is a datastore inside a Healthcare dataset that conforms to the DIC
 
 To get more information about DicomStore, see:
 
-* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.dicomStores)
+* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.dicomStores)
 * How-to Guides
     * [Creating a DICOM store](https://cloud.google.com/healthcare/docs/how-tos/dicom)
 
 
 
 ## Create a DicomStore Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -29,7 +30,7 @@ To get more information about DicomStore, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DicomStore</span><span class="p">(resource_name, opts=None, </span>dataset=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DicomStore</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -217,12 +218,14 @@ The DicomStore resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -231,7 +234,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **
+    <dd>{{% md %}}The resource name for the DicomStore.
+** Changing this property may recreate the Dicom store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -240,7 +244,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorenotificationconfig">Dicom<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -266,12 +270,14 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -280,7 +286,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **
+    <dd>{{% md %}}The resource name for the DicomStore.
+** Changing this property may recreate the Dicom store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -289,7 +296,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorenotificationconfig">Dicom<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -315,12 +322,14 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -329,7 +338,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **
+    <dd>{{% md %}}The resource name for the DicomStore.
+** Changing this property may recreate the Dicom store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -338,7 +348,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorenotificationconfig">Dicom<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -364,12 +374,14 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -378,7 +390,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **
+    <dd>{{% md %}}The resource name for the DicomStore.
+** Changing this property may recreate the Dicom store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -387,7 +400,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorenotificationconfig">Dict[Dicom<wbr>Store<wbr>Notification<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -509,7 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DicomStore Resource {#look-up}
 
 Get an existing DicomStore resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#DicomStoreState">DicomStoreState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#DicomStore">DicomStore</a></span></code></pre></div>
@@ -646,12 +659,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -660,7 +675,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **
+    <dd>{{% md %}}The resource name for the DicomStore.
+** Changing this property may recreate the Dicom store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -669,7 +685,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorenotificationconfig">Dicom<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -704,12 +720,14 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -718,7 +736,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **
+    <dd>{{% md %}}The resource name for the DicomStore.
+** Changing this property may recreate the Dicom store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -727,7 +746,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorenotificationconfig">Dicom<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -762,12 +781,14 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -776,7 +797,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **
+    <dd>{{% md %}}The resource name for the DicomStore.
+** Changing this property may recreate the Dicom store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -785,7 +807,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorenotificationconfig">Dicom<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -820,12 +842,14 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
-UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
-"key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+    <dd>{{% md %}}User-supplied key-value pairs used to organize DICOM stores.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
+bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be associated with a given store.
+An object containing a list of "key": value pairs.
+Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -834,7 +858,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource name for the DicomStore. ** Changing this property may recreate the Dicom store (removing all data) **
+    <dd>{{% md %}}The resource name for the DicomStore.
+** Changing this property may recreate the Dicom store (removing all data) **
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -843,7 +868,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorenotificationconfig">Dict[Dicom<wbr>Store<wbr>Notification<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource
+    <dd>{{% md %}}A nested object resource  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -878,6 +903,9 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#DicomStoreNotificationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#DicomStoreNotificationConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.DicomStoreNotificationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.DicomStoreNotificationConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -891,7 +919,13 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -906,7 +940,13 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -921,7 +961,13 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -936,7 +982,13 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
+Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -955,8 +1007,7 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

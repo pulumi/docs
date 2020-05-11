@@ -12,12 +12,26 @@ meta_desc: "Explore the MaintenanceWindowTask resource of the ssm module, includ
 
 Provides an SSM Maintenance Window Task resource
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Automation Tasks
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -45,11 +59,22 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     windowId: aws_ssm_maintenance_window_example.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Lambda Tasks
 
+### Lambda Tasks
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -74,11 +99,22 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     windowId: aws_ssm_maintenance_window_example.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Run Command Tasks
 
+### Run Command Tasks
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -114,11 +150,22 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     windowId: aws_ssm_maintenance_window_example.id,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Step Function Tasks
 
+### Step Function Tasks
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -143,14 +190,13 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     windowId: aws_ssm_maintenance_window_example.id,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a MaintenanceWindowTask Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -158,7 +204,7 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MaintenanceWindowTask</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>logging_info=None<span class="p">, </span>max_concurrency=None<span class="p">, </span>max_errors=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>service_role_arn=None<span class="p">, </span>targets=None<span class="p">, </span>task_arn=None<span class="p">, </span>task_invocation_parameters=None<span class="p">, </span>task_parameters=None<span class="p">, </span>task_type=None<span class="p">, </span>window_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MaintenanceWindowTask</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>logging_info=None<span class="p">, </span>max_concurrency=None<span class="p">, </span>max_errors=None<span class="p">, </span>name=None<span class="p">, </span>priority=None<span class="p">, </span>service_role_arn=None<span class="p">, </span>targets=None<span class="p">, </span>task_arn=None<span class="p">, </span>task_invocation_parameters=None<span class="p">, </span>task_parameters=None<span class="p">, </span>task_type=None<span class="p">, </span>window_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -902,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing MaintenanceWindowTask Resource {#look-up}
 
 Get an existing MaintenanceWindowTask resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#MaintenanceWindowTaskState">MaintenanceWindowTaskState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#MaintenanceWindowTask">MaintenanceWindowTask</a></span></code></pre></div>
@@ -1535,6 +1581,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskLoggingInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskLoggingInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskLoggingInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskLoggingInfo.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1674,6 +1723,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTarget.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1780,6 +1832,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParameters.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1968,6 +2023,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParameters.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2083,6 +2141,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2197,6 +2258,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersLambdaParametersOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersLambdaParameters.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2348,6 +2412,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2716,6 +2783,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2867,6 +2937,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2982,6 +3055,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3096,6 +3172,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTaskTaskParameterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTaskTaskParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTaskTaskParameter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

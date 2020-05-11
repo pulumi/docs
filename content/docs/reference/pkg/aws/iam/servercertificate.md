@@ -24,80 +24,43 @@ Certificates][2] in AWS Documentation.
 > **Note:** All arguments including the private key will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-**Using certs on file:**
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as fs from "fs";
-
-const testCert = new aws.iam.ServerCertificate("test_cert", {
-    certificateBody: fs.readFileSync("self-ca-cert.pem", "utf-8"),
-    privateKey: fs.readFileSync("test-key.pem", "utf-8"),
-});
-```
-
-**Example with cert in-line:**
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const testCertAlt = new aws.iam.ServerCertificate("test_cert_alt", {
-    certificateBody: `-----BEGIN CERTIFICATE-----
-[......] # cert contents
------END CERTIFICATE-----
-`,
-    privateKey: `-----BEGIN RSA PRIVATE KEY-----
-[......] # cert contents
------END RSA PRIVATE KEY-----
-`,
-});
-```
-
-**Use in combination with an AWS ELB resource:**
-
-Some properties of an IAM Server Certificates cannot be updated while they are
-in use. In order for this provider to effectively manage a Certificate in this situation, it is
-recommended you utilize the `name_prefix` attribute and enable the
-`create_before_destroy` [lifecycle block][lifecycle]. This will allow this provider
-to create a new, updated `aws.iam.ServerCertificate` resource and replace it in
-dependant resources before attempting to destroy the old version.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as fs from "fs";
-
-const testCert = new aws.iam.ServerCertificate("test_cert", {
-    certificateBody: fs.readFileSync("self-ca-cert.pem", "utf-8"),
-    namePrefix: "example-cert",
-    privateKey: fs.readFileSync("test-key.pem", "utf-8"),
-});
-const ourapp = new aws.elb.LoadBalancer("ourapp", {
-    availabilityZones: ["us-west-2a"],
-    crossZoneLoadBalancing: true,
-    listeners: [{
-        instancePort: 8000,
-        instanceProtocol: "http",
-        lbPort: 443,
-        lbProtocol: "https",
-        sslCertificateId: testCert.arn,
-    }],
-});
-```
-
+{{% example csharp %}}
+Coming soon!
 {{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const testCert = new aws.iam.ServerCertificate("test_cert", {
+    certificateBody: fs.readFileSync("self-ca-cert.pem", "utf-8"),
+    privateKey: fs.readFileSync("test-key.pem", "utf-8"),
+});
+```
+{{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a ServerCertificate Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -105,7 +68,7 @@ const ourapp = new aws.elb.LoadBalancer("ourapp", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServerCertificate</span><span class="p">(resource_name, opts=None, </span>arn=None<span class="p">, </span>certificate_body=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>path=None<span class="p">, </span>private_key=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServerCertificate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>arn=None<span class="p">, </span>certificate_body=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>path=None<span class="p">, </span>private_key=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -345,7 +308,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
 </dl>
@@ -423,7 +386,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
 </dl>
@@ -501,7 +464,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
 </dl>
@@ -579,7 +542,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
 </dl>
@@ -665,7 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ServerCertificate Resource {#look-up}
 
 Get an existing ServerCertificate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#ServerCertificateState">ServerCertificateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#ServerCertificate">ServerCertificate</a></span></code></pre></div>
@@ -845,7 +808,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -923,7 +886,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1001,7 +964,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1079,7 +1042,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
 AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
-See [IAM Identifiers][1] for more details on IAM Paths.
+See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

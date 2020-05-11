@@ -13,15 +13,26 @@ meta_desc: "Explore the ImageAccess resource of the images module, including exa
 Manages members for the shared OpenStack Glance V2 Image within the source
 project, which owns the Image.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Unprivileged user
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-Create a shared image and propose a membership to the
-`bed6b6cbb86a4e2d8dc2735c2f1000e4` project ID.
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -40,14 +51,22 @@ const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
     memberId: "bed6b6cbb86a4e2d8dc2735c2f1000e4",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
+
 ### Privileged user
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-Create a shared image and set a membership to the
-`bed6b6cbb86a4e2d8dc2735c2f1000e4` project ID.
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -67,14 +86,13 @@ const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
     status: "accepted",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a ImageAccess Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -82,7 +100,7 @@ const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ImageAccess</span><span class="p">(resource_name, opts=None, </span>image_id=None<span class="p">, </span>member_id=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ImageAccess</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>image_id=None<span class="p">, </span>member_id=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -626,7 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ImageAccess Resource {#look-up}
 
 Get an existing ImageAccess resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/images/#ImageAccessState">ImageAccessState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/images/#ImageAccess">ImageAccess</a></span></code></pre></div>

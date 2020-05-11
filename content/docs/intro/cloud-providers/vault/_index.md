@@ -59,7 +59,7 @@ be = vault.AuthBackend("example",
 
 ```go
 import (
-  vault "github.com/pulumi/pulumi-vault/sdk/go/vault"
+  vault "github.com/pulumi/pulumi-vault/sdk/v2/go/vault"
 )
 
 be, _ := vault.NewAuthBackend(ctx, "example", &vault.AuthBackendArgs{

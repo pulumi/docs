@@ -13,27 +13,11 @@ meta_desc: "Explore the OriginAccessIdentity resource of the cloudfront module, 
 Creates an Amazon CloudFront origin access identity.
 
 For information about CloudFront distributions, see the
-[Amazon CloudFront Developer Guide][1]. For more information on generating
+[Amazon CloudFront Developer Guide](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html). For more information on generating
 origin access identities, see
 [Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content][2].
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-The following example below creates a CloudFront origin access identity.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_access_identity", {
-    comment: "Some comment",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Using With CloudFront
 
 Normally, when referencing an origin access identity in CloudFront, you need to
@@ -88,10 +72,39 @@ const example = new aws.s3.BucketPolicy("example", {
 [3]: https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html
 [4]: https://www.terraform.io/docs/providers/aws/r/s3_bucket.html
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_access_identity", {
+    comment: "Some comment",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OriginAccessIdentity Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -99,7 +112,7 @@ const example = new aws.s3.BucketPolicy("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OriginAccessIdentity</span><span class="p">(resource_name, opts=None, </span>comment=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OriginAccessIdentity</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>comment=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -619,7 +632,7 @@ permission to an object in Amazon S3.
 ## Look up an Existing OriginAccessIdentity Resource {#look-up}
 
 Get an existing OriginAccessIdentity resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#OriginAccessIdentityState">OriginAccessIdentityState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#OriginAccessIdentity">OriginAccessIdentity</a></span></code></pre></div>

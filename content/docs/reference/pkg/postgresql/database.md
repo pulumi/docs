@@ -33,7 +33,7 @@ const myDb = new postgresql.Database("my_db", {
 
 
 ## Create a Database Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -41,7 +41,7 @@ const myDb = new postgresql.Database("my_db", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Database</span><span class="p">(resource_name, opts=None, </span>allow_connections=None<span class="p">, </span>connection_limit=None<span class="p">, </span>encoding=None<span class="p">, </span>is_template=None<span class="p">, </span>lc_collate=None<span class="p">, </span>lc_ctype=None<span class="p">, </span>name=None<span class="p">, </span>owner=None<span class="p">, </span>tablespace_name=None<span class="p">, </span>template=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Database</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_connections=None<span class="p">, </span>connection_limit=None<span class="p">, </span>encoding=None<span class="p">, </span>is_template=None<span class="p">, </span>lc_collate=None<span class="p">, </span>lc_ctype=None<span class="p">, </span>name=None<span class="p">, </span>owner=None<span class="p">, </span>tablespace_name=None<span class="p">, </span>template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -729,7 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Database Resource {#look-up}
 
 Get an existing Database resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#DatabaseState">DatabaseState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#Database">Database</a></span></code></pre></div>

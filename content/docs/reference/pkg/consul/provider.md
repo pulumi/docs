@@ -18,7 +18,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 ## Create a Provider Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, opts=None, </span>address=None<span class="p">, </span>ca_file=None<span class="p">, </span>ca_path=None<span class="p">, </span>cert_file=None<span class="p">, </span>datacenter=None<span class="p">, </span>http_auth=None<span class="p">, </span>insecure_https=None<span class="p">, </span>key_file=None<span class="p">, </span>namespace=None<span class="p">, </span>scheme=None<span class="p">, </span>token=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>ca_file=None<span class="p">, </span>ca_path=None<span class="p">, </span>cert_file=None<span class="p">, </span>datacenter=None<span class="p">, </span>http_auth=None<span class="p">, </span>insecure_https=None<span class="p">, </span>key_file=None<span class="p">, </span>namespace=None<span class="p">, </span>scheme=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

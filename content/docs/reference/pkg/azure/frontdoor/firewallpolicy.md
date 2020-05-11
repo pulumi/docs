@@ -18,7 +18,7 @@ Manages an Azure Front Door Web Application Firewall Policy instance.
 
 
 ## Create a FirewallPolicy Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -734,7 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing FirewallPolicy Resource {#look-up}
 
 Get an existing FirewallPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/frontdoor/#FirewallPolicyState">FirewallPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/frontdoor/#FirewallPolicy">FirewallPolicy</a></span></code></pre></div>
@@ -1331,6 +1331,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyCustomRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyCustomRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FirewallPolicyCustomRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FirewallPolicyCustomRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1662,6 +1665,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyCustomRuleMatchConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyCustomRuleMatchConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FirewallPolicyCustomRuleMatchConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FirewallPolicyCustomRuleMatchCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1921,6 +1927,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyManagedRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyManagedRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FirewallPolicyManagedRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FirewallPolicyManagedRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2108,6 +2117,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyManagedRuleExclusionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyManagedRuleExclusionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FirewallPolicyManagedRuleExclusionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FirewallPolicyManagedRuleExclusion.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2258,6 +2270,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyManagedRuleOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyManagedRuleOverrideOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FirewallPolicyManagedRuleOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FirewallPolicyManagedRuleOverride.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2410,6 +2425,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyManagedRuleOverrideExclusionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyManagedRuleOverrideExclusionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FirewallPolicyManagedRuleOverrideExclusionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FirewallPolicyManagedRuleOverrideExclusion.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2560,6 +2578,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyManagedRuleOverrideRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyManagedRuleOverrideRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FirewallPolicyManagedRuleOverrideRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FirewallPolicyManagedRuleOverrideRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2747,6 +2768,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyManagedRuleOverrideRuleExclusionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/frontdoor?tab=doc#FirewallPolicyManagedRuleOverrideRuleExclusionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Inputs.FirewallPolicyManagedRuleOverrideRuleExclusionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.Outputs.FirewallPolicyManagedRuleOverrideRuleExclusion.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

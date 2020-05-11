@@ -16,10 +16,26 @@ of Consul to automatically manage Consul servers.
 It includes to automatically cleanup dead servers, monitor the status of the Raft
 cluster and stable server introduction.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
@@ -30,14 +46,13 @@ const config = new consul.AutopilotConfig("config", {
     maxTrailingLogs: 500,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a AutopilotConfig Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -45,7 +60,7 @@ const config = new consul.AutopilotConfig("config", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AutopilotConfig</span><span class="p">(resource_name, opts=None, </span>cleanup_dead_servers=None<span class="p">, </span>datacenter=None<span class="p">, </span>disable_upgrade_migration=None<span class="p">, </span>last_contact_threshold=None<span class="p">, </span>max_trailing_logs=None<span class="p">, </span>redundancy_zone_tag=None<span class="p">, </span>server_stabilization_time=None<span class="p">, </span>upgrade_version_tag=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AutopilotConfig</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cleanup_dead_servers=None<span class="p">, </span>datacenter=None<span class="p">, </span>disable_upgrade_migration=None<span class="p">, </span>last_contact_threshold=None<span class="p">, </span>max_trailing_logs=None<span class="p">, </span>redundancy_zone_tag=None<span class="p">, </span>server_stabilization_time=None<span class="p">, </span>upgrade_version_tag=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -649,7 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AutopilotConfig Resource {#look-up}
 
 Get an existing AutopilotConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#AutopilotConfigState">AutopilotConfigState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#AutopilotConfig">AutopilotConfig</a></span></code></pre></div>

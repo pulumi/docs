@@ -14,7 +14,7 @@ HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, wh
 
 
 ## Create a HorizontalPodAutoscaler Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -413,8 +413,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -428,8 +428,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -443,8 +443,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -458,8 +458,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -488,16 +488,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
@@ -511,16 +511,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
@@ -534,16 +534,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
@@ -557,16 +557,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Dict[Metric<wbr>Identifier]</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Dict[Metric<wbr>Target]</a></span>
@@ -595,16 +595,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
@@ -618,16 +618,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
@@ -641,16 +641,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
@@ -664,16 +664,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Dict[Metric<wbr>Value<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Dict[Metric<wbr>Identifier]</a></span>
@@ -702,24 +702,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Period<wbr>Seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}PeriodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min).{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type is used to specify the scaling policy.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
@@ -733,24 +733,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Period<wbr>Seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}PeriodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min).{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type is used to specify the scaling policy.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
@@ -764,24 +764,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>period<wbr>Seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}PeriodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min).{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type is used to specify the scaling policy.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
@@ -795,24 +795,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>period_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}PeriodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min).{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type is used to specify the scaling policy.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1099,6 +1099,22 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Last<wbr>Transition<wbr>Time</span>
@@ -1122,22 +1138,6 @@ No stabilization is used.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}reason is the reason for the condition's last transition.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1146,6 +1146,22 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Last<wbr>Transition<wbr>Time</span>
@@ -1170,28 +1186,28 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}reason is the reason for the condition's last transition.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1217,28 +1233,28 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}reason is the reason for the condition's last transition.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1264,22 +1280,6 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}reason is the reason for the condition's last transition.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1302,6 +1302,22 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Max<wbr>Replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Scale<wbr>Target<wbr>Ref</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Behavior</span>
@@ -1309,14 +1325,6 @@ No stabilization is used.{{% /md %}}</dd>
         <span class="property-type"><a href="#horizontalpodautoscalerbehavior">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}behavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively). If not set, the default HPAScalingRules for scale up and scale down are used.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1334,20 +1342,28 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Scale<wbr>Target<wbr>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Max<wbr>Replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Scale<wbr>Target<wbr>Ref</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1356,14 +1372,6 @@ No stabilization is used.{{% /md %}}</dd>
         <span class="property-type"><a href="#horizontalpodautoscalerbehavior">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}behavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively). If not set, the default HPAScalingRules for scale up and scale down are used.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1381,20 +1389,28 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Scale<wbr>Target<wbr>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>max<wbr>Replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>scale<wbr>Target<wbr>Ref</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1403,14 +1419,6 @@ No stabilization is used.{{% /md %}}</dd>
         <span class="property-type"><a href="#horizontalpodautoscalerbehavior">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}behavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively). If not set, the default HPAScalingRules for scale up and scale down are used.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1428,20 +1436,28 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>scale<wbr>Target<wbr>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>max_<wbr>replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>scale_<wbr>target_<wbr>ref</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Dict[Cross<wbr>Version<wbr>Object<wbr>Reference]</a></span>
+    </dt>
+    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1450,14 +1466,6 @@ No stabilization is used.{{% /md %}}</dd>
         <span class="property-type"><a href="#horizontalpodautoscalerbehavior">Dict[Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Behavior]</a></span>
     </dt>
     <dd>{{% md %}}behavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively). If not set, the default HPAScalingRules for scale up and scale down are used.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max_<wbr>replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1474,14 +1482,6 @@ No stabilization is used.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scale_<wbr>target_<wbr>ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Dict[Cross<wbr>Version<wbr>Object<wbr>Reference]</a></span>
-    </dt>
-    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1505,13 +1505,29 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Conditions</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalercondition">List&lt;Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Current<wbr>Replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Desired<wbr>Replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1520,22 +1536,6 @@ No stabilization is used.{{% /md %}}</dd>
         <span class="property-type"><a href="#metricstatus">List&lt;Metric<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Current<wbr>Replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1560,13 +1560,29 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Conditions</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalercondition">[]Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Current<wbr>Replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Desired<wbr>Replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1575,22 +1591,6 @@ No stabilization is used.{{% /md %}}</dd>
         <span class="property-type"><a href="#metricstatus">[]Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Current<wbr>Replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1615,13 +1615,29 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>conditions</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalercondition">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>current<wbr>Replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>desired<wbr>Replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1630,22 +1646,6 @@ No stabilization is used.{{% /md %}}</dd>
         <span class="property-type"><a href="#metricstatus">Metric<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>current<wbr>Replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>desired<wbr>Replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1670,13 +1670,29 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>conditions</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalercondition">List[Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>current_<wbr>replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>desired_<wbr>replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1685,22 +1701,6 @@ No stabilization is used.{{% /md %}}</dd>
         <span class="property-type"><a href="#metricstatus">List[Metric<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>current_<wbr>replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>desired_<wbr>replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1847,16 +1847,16 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}key is the label key that the selector applies to.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Operator</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1878,16 +1878,16 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}key is the label key that the selector applies to.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Operator</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1909,16 +1909,16 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}key is the label key that the selector applies to.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>operator</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1940,16 +1940,16 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}key is the label key that the selector applies to.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>operator</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1998,7 +1998,7 @@ No stabilization is used.{{% /md %}}</dd>
             title="Optional">
         <span>Fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -2045,7 +2045,7 @@ No stabilization is used.{{% /md %}}</dd>
             title="Optional">
         <span>Fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -2092,7 +2092,7 @@ No stabilization is used.{{% /md %}}</dd>
             title="Optional">
         <span>fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -2139,7 +2139,7 @@ No stabilization is used.{{% /md %}}</dd>
             title="Optional">
         <span>fields_<wbr>v1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -2189,8 +2189,8 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -2212,8 +2212,8 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -2235,8 +2235,8 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -2258,8 +2258,8 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2296,6 +2296,14 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}type is the type of metric source.  It should be one of "Object", "Pods" or "Resource", each mapping to a matching field in the object.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>External</span>
@@ -2328,20 +2336,20 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}type is the type of metric source.  It should be one of "Object", "Pods" or "Resource", each mapping to a matching field in the object.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}type is the type of metric source.  It should be one of "Object", "Pods" or "Resource", each mapping to a matching field in the object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2375,20 +2383,20 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}type is the type of metric source.  It should be one of "Object", "Pods" or "Resource", each mapping to a matching field in the object.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}type is the type of metric source.  It should be one of "Object", "Pods" or "Resource", each mapping to a matching field in the object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2422,20 +2430,20 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}type is the type of metric source.  It should be one of "Object", "Pods" or "Resource", each mapping to a matching field in the object.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}type is the type of metric source.  It should be one of "Object", "Pods" or "Resource", each mapping to a matching field in the object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2469,14 +2477,6 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}type is the type of metric source.  It should be one of "Object", "Pods" or "Resource", each mapping to a matching field in the object.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2498,6 +2498,14 @@ No stabilization is used.{{% /md %}}</dd>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each corresponds to a matching field in the object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2531,20 +2539,20 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each corresponds to a matching field in the object.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each corresponds to a matching field in the object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2578,20 +2586,20 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each corresponds to a matching field in the object.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each corresponds to a matching field in the object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2625,20 +2633,20 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each corresponds to a matching field in the object.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each corresponds to a matching field in the object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2672,14 +2680,6 @@ No stabilization is used.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each corresponds to a matching field in the object.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2702,6 +2702,14 @@ No stabilization is used.{{% /md %}}</dd>
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}type represents whether the metric type is Utilization, Value, or AverageValue{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Average<wbr>Utilization</span>
@@ -2720,14 +2728,6 @@ No stabilization is used.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}type represents whether the metric type is Utilization, Value, or AverageValue{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -2740,6 +2740,14 @@ No stabilization is used.{{% /md %}}</dd>
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}type represents whether the metric type is Utilization, Value, or AverageValue{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2759,14 +2767,6 @@ No stabilization is used.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}type represents whether the metric type is Utilization, Value, or AverageValue{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -2779,6 +2779,14 @@ No stabilization is used.{{% /md %}}</dd>
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}type represents whether the metric type is Utilization, Value, or AverageValue{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2798,14 +2806,6 @@ No stabilization is used.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}type represents whether the metric type is Utilization, Value, or AverageValue{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -2818,6 +2818,14 @@ No stabilization is used.{{% /md %}}</dd>
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}type represents whether the metric type is Utilization, Value, or AverageValue{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2834,14 +2842,6 @@ No stabilization is used.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}averageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}type represents whether the metric type is Utilization, Value, or AverageValue{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3631,24 +3631,24 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Described<wbr>Object</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
@@ -3662,24 +3662,24 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Described<wbr>Object</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
@@ -3693,24 +3693,24 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>described<wbr>Object</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
@@ -3724,24 +3724,24 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>described_<wbr>object</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Dict[Cross<wbr>Version<wbr>Object<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Dict[Metric<wbr>Identifier]</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Dict[Metric<wbr>Target]</a></span>
@@ -3770,24 +3770,24 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Described<wbr>Object</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
@@ -3801,24 +3801,24 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Described<wbr>Object</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
@@ -3832,24 +3832,24 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>described<wbr>Object</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
@@ -3863,24 +3863,24 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Dict[Metric<wbr>Value<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>described_<wbr>object</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Dict[Cross<wbr>Version<wbr>Object<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Dict[Metric<wbr>Identifier]</a></span>
@@ -3909,6 +3909,22 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Uid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
@@ -3924,22 +3940,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Uid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3948,6 +3948,22 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Uid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
@@ -3964,28 +3980,28 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Uid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>uid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4003,28 +4019,28 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>uid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>uid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4041,22 +4057,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>uid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4080,16 +4080,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
@@ -4103,16 +4103,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
@@ -4126,16 +4126,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
@@ -4149,16 +4149,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Dict[Metric<wbr>Identifier]</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Dict[Metric<wbr>Target]</a></span>
@@ -4187,16 +4187,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
@@ -4210,16 +4210,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
@@ -4233,16 +4233,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
@@ -4256,16 +4256,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Dict[Metric<wbr>Value<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricidentifier">Dict[Metric<wbr>Identifier]</a></span>
@@ -4294,16 +4294,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
@@ -4317,16 +4317,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
@@ -4340,16 +4340,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
@@ -4363,16 +4363,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>target</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metrictarget">Dict[Metric<wbr>Target]</a></span>
@@ -4401,16 +4401,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -4424,16 +4424,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -4447,16 +4447,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -4470,16 +4470,16 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>current</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricvaluestatus">Dict[Metric<wbr>Value<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

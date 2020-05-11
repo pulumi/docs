@@ -14,124 +14,7 @@ Provides an AutoScaling Group resource.
 
 > **Note:** You must specify either `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const test = new aws.ec2.PlacementGroup("test", {
-    strategy: "cluster",
-});
-const bar = new aws.autoscaling.Group("bar", {
-    desiredCapacity: 4,
-    forceDelete: true,
-    healthCheckGracePeriod: 300,
-    healthCheckType: "ELB",
-    initialLifecycleHooks: [{
-        defaultResult: "CONTINUE",
-        heartbeatTimeout: 2000,
-        lifecycleTransition: "autoscaling:EC2_INSTANCE_LAUNCHING",
-        name: "foobar",
-        notificationMetadata: `{
-  "foo": "bar"
-}
-`,
-        notificationTargetArn: "arn:aws:sqs:us-east-1:444455556666:queue1*",
-        roleArn: "arn:aws:iam::123456789012:role/S3Access",
-    }],
-    launchConfiguration: aws_launch_configuration_foobar.name,
-    maxSize: 5,
-    minSize: 2,
-    placementGroup: test.id,
-    tags: [
-        {
-            key: "foo",
-            propagateAtLaunch: true,
-            value: "bar",
-        },
-        {
-            key: "lorem",
-            propagateAtLaunch: false,
-            value: "ipsum",
-        },
-    ],
-    vpcZoneIdentifiers: [
-        aws_subnet_example1.id,
-        aws_subnet_example2.id,
-    ],
-}, { timeouts: {
-    delete: "15m",
-} });
-```
-
-{{% /example %}}
-{{% example %}}
-### With Latest Version Of Launch Template
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const foobar = new aws.ec2.LaunchTemplate("foobar", {
-    imageId: "ami-1a2b3c",
-    instanceType: "t2.micro",
-    namePrefix: "foobar",
-});
-const bar = new aws.autoscaling.Group("bar", {
-    availabilityZones: ["us-east-1a"],
-    desiredCapacity: 1,
-    launchTemplate: {
-        id: foobar.id,
-        version: "$Latest",
-    },
-    maxSize: 1,
-    minSize: 1,
-});
-```
-
-{{% /example %}}
-{{% example %}}
-### Mixed Instances Policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleLaunchTemplate = new aws.ec2.LaunchTemplate("example", {
-    imageId: aws_ami_example.id,
-    instanceType: "c5.large",
-    namePrefix: "example",
-});
-const exampleGroup = new aws.autoscaling.Group("example", {
-    availabilityZones: ["us-east-1a"],
-    desiredCapacity: 1,
-    maxSize: 1,
-    minSize: 1,
-    mixedInstancesPolicy: {
-        launchTemplate: {
-            launchTemplateSpecification: {
-                launchTemplateId: exampleLaunchTemplate.id,
-            },
-            overrides: [
-                {
-                    instanceType: "c4.large",
-                    weightedCapacity: "3",
-                },
-                {
-                    instanceType: "c3.large",
-                    weightedCapacity: "2",
-                },
-            ],
-        },
-    },
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Interpolated tags
 
 ```typescript
@@ -226,10 +109,164 @@ number of configuration problems. See the [AWS Docs on Load Balancer
 Troubleshooting](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-troubleshooting.html)
 for more information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = new aws.ec2.PlacementGroup("test", {
+    strategy: "cluster",
+});
+const bar = new aws.autoscaling.Group("bar", {
+    desiredCapacity: 4,
+    forceDelete: true,
+    healthCheckGracePeriod: 300,
+    healthCheckType: "ELB",
+    initialLifecycleHooks: [{
+        defaultResult: "CONTINUE",
+        heartbeatTimeout: 2000,
+        lifecycleTransition: "autoscaling:EC2_INSTANCE_LAUNCHING",
+        name: "foobar",
+        notificationMetadata: `{
+  "foo": "bar"
+}
+`,
+        notificationTargetArn: "arn:aws:sqs:us-east-1:444455556666:queue1*",
+        roleArn: "arn:aws:iam::123456789012:role/S3Access",
+    }],
+    launchConfiguration: aws_launch_configuration_foobar.name,
+    maxSize: 5,
+    minSize: 2,
+    placementGroup: test.id,
+    tags: [
+        {
+            key: "foo",
+            propagateAtLaunch: true,
+            value: "bar",
+        },
+        {
+            key: "lorem",
+            propagateAtLaunch: false,
+            value: "ipsum",
+        },
+    ],
+    vpcZoneIdentifiers: [
+        aws_subnet_example1.id,
+        aws_subnet_example2.id,
+    ],
+}, { timeouts: {
+    delete: "15m",
+} });
+```
+{{% /example %}}
+
+### With Latest Version Of Launch Template
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const foobar = new aws.ec2.LaunchTemplate("foobar", {
+    imageId: "ami-1a2b3c",
+    instanceType: "t2.micro",
+    namePrefix: "foobar",
+});
+const bar = new aws.autoscaling.Group("bar", {
+    availabilityZones: ["us-east-1a"],
+    desiredCapacity: 1,
+    launchTemplate: {
+        id: foobar.id,
+        version: "$Latest",
+    },
+    maxSize: 1,
+    minSize: 1,
+});
+```
+{{% /example %}}
+
+### Mixed Instances Policy
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleLaunchTemplate = new aws.ec2.LaunchTemplate("example", {
+    imageId: aws_ami_example.id,
+    instanceType: "c5.large",
+    namePrefix: "example",
+});
+const exampleGroup = new aws.autoscaling.Group("example", {
+    availabilityZones: ["us-east-1a"],
+    desiredCapacity: 1,
+    maxSize: 1,
+    minSize: 1,
+    mixedInstancesPolicy: {
+        launchTemplate: {
+            launchTemplateSpecification: {
+                launchTemplateId: exampleLaunchTemplate.id,
+            },
+            overrides: [
+                {
+                    instanceType: "c4.large",
+                    weightedCapacity: "3",
+                },
+                {
+                    instanceType: "c3.large",
+                    weightedCapacity: "2",
+                },
+            ],
+        },
+    },
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Group Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -237,7 +274,7 @@ for more information.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Group</span><span class="p">(resource_name, opts=None, </span>availability_zones=None<span class="p">, </span>default_cooldown=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>enabled_metrics=None<span class="p">, </span>force_delete=None<span class="p">, </span>health_check_grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>initial_lifecycle_hooks=None<span class="p">, </span>launch_configuration=None<span class="p">, </span>launch_template=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_instance_lifetime=None<span class="p">, </span>max_size=None<span class="p">, </span>metrics_granularity=None<span class="p">, </span>min_elb_capacity=None<span class="p">, </span>min_size=None<span class="p">, </span>mixed_instances_policy=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>placement_group=None<span class="p">, </span>protect_from_scale_in=None<span class="p">, </span>service_linked_role_arn=None<span class="p">, </span>suspended_processes=None<span class="p">, </span>tags=None<span class="p">, </span>tags_collection=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>termination_policies=None<span class="p">, </span>vpc_zone_identifiers=None<span class="p">, </span>wait_for_capacity_timeout=None<span class="p">, </span>wait_for_elb_capacity=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Group</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zones=None<span class="p">, </span>default_cooldown=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>enabled_metrics=None<span class="p">, </span>force_delete=None<span class="p">, </span>health_check_grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>initial_lifecycle_hooks=None<span class="p">, </span>launch_configuration=None<span class="p">, </span>launch_template=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_instance_lifetime=None<span class="p">, </span>max_size=None<span class="p">, </span>metrics_granularity=None<span class="p">, </span>min_elb_capacity=None<span class="p">, </span>min_size=None<span class="p">, </span>mixed_instances_policy=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>placement_group=None<span class="p">, </span>protect_from_scale_in=None<span class="p">, </span>service_linked_role_arn=None<span class="p">, </span>suspended_processes=None<span class="p">, </span>tags=None<span class="p">, </span>tags_collection=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>termination_policies=None<span class="p">, </span>vpc_zone_identifiers=None<span class="p">, </span>wait_for_capacity_timeout=None<span class="p">, </span>wait_for_elb_capacity=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -464,11 +501,6 @@ Capacity below.)
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -693,7 +725,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -770,11 +807,6 @@ Capacity below.)
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -999,7 +1031,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1076,11 +1113,6 @@ Capacity below.)
         <span class="property-type">Metric[]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1305,7 +1337,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1382,11 +1419,6 @@ Capacity below.)
         <span class="property-type">List[Metric]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1611,7 +1643,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1745,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Group Resource {#look-up}
 
 Get an existing Group resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#Group">Group</a></span></code></pre></div>
@@ -1911,11 +1948,6 @@ Capacity below.)
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2159,7 +2191,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2226,11 +2263,6 @@ Capacity below.)
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2474,7 +2506,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2541,11 +2578,6 @@ Capacity below.)
         <span class="property-type">Metric[]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2789,7 +2821,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2856,11 +2893,6 @@ Capacity below.)
         <span class="property-type">List[Metric]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3104,7 +3136,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3141,6 +3178,9 @@ precedence over `min_elb_capacity` behavior.)
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupInitialLifecycleHookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupInitialLifecycleHookOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupInitialLifecycleHookArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupInitialLifecycleHook.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3413,6 +3453,9 @@ precedence over `min_elb_capacity` behavior.)
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupLaunchTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupLaunchTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupLaunchTemplate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3564,6 +3607,9 @@ precedence over `min_elb_capacity` behavior.)
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3678,6 +3724,9 @@ precedence over `min_elb_capacity` behavior.)
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyInstancesDistributionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyInstancesDistributionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyInstancesDistributionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyInstancesDistribution.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3938,6 +3987,9 @@ precedence over `min_elb_capacity` behavior.)
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyLaunchTemplate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4052,6 +4104,9 @@ precedence over `min_elb_capacity` behavior.)
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4204,6 +4259,9 @@ precedence over `min_elb_capacity` behavior.)
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupMixedInstancesPolicyLaunchTemplateOverrideOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupMixedInstancesPolicyLaunchTemplateOverride.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4318,6 +4376,9 @@ precedence over `min_elb_capacity` behavior.)
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#GroupTagOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupTagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupTag.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

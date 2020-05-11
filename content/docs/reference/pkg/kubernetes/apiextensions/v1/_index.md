@@ -22,6 +22,6 @@ Explore the resources and functions of the apiextensions/v1 module in the Kubern
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.1.1</dd>
 </dl>
 

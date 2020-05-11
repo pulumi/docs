@@ -16,6 +16,8 @@ A Pulumi package for creating and managing CloudAMQP resources.
 <ul class="api">
     <li><a href="alarm" title="Alarm"><span class="symbol resource"></span>Alarm</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="integrationlog" title="IntegrationLog"><span class="symbol resource"></span>IntegrationLog</a></li>
+    <li><a href="integrationmetric" title="IntegrationMetric"><span class="symbol resource"></span>IntegrationMetric</a></li>
     <li><a href="notification" title="Notification"><span class="symbol resource"></span>Notification</a></li>
     <li><a href="plugin" title="Plugin"><span class="symbol resource"></span>Plugin</a></li>
     <li><a href="plugincommunity" title="PluginCommunity"><span class="symbol resource"></span>PluginCommunity</a></li>
@@ -26,8 +28,10 @@ A Pulumi package for creating and managing CloudAMQP resources.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getalarm" title="GetAlarm"><span class="symbol function"></span>GetAlarm</a></li>
     <li><a href="getcredentials" title="GetCredentials"><span class="symbol function"></span>GetCredentials</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getnotification" title="GetNotification"><span class="symbol function"></span>GetNotification</a></li>
     <li><a href="getplugins" title="GetPlugins"><span class="symbol function"></span>GetPlugins</a></li>
     <li><a href="getpluginscommunity" title="GetPluginsCommunity"><span class="symbol function"></span>GetPluginsCommunity</a></li>
     <li><a href="getvpcinfo" title="GetVpcInfo"><span class="symbol function"></span>GetVpcInfo</a></li>
@@ -42,6 +46,6 @@ A Pulumi package for creating and managing CloudAMQP resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).</dd>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.2.0</dd>
 </dl>
 

@@ -12,13 +12,72 @@ meta_desc: "Explore the DnsRecord resource of the Digital Ocean package, includi
 
 Provides a DigitalOcean DNS record resource.
 
+
+
 {{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+default = digitalocean.Domain("default", name="example.com")
+# Add an A record to the domain for www.example.com.
+www = digitalocean.DnsRecord("www",
+    domain=default.name,
+    type="A",
+    value="192.168.0.11")
+# Add a MX record for the example.com domain itself.
+mx = digitalocean.DnsRecord("mx",
+    domain=default.name,
+    type="MX",
+    priority=10,
+    value="mail.example.com.")
+pulumi.export("wwwFqdn", www.fqdn)
+pulumi.export("mxFqdn", mx.fqdn)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const default = new digitalocean.Domain("default", {name: "example.com"});
+// Add an A record to the domain for www.example.com.
+const www = new digitalocean.DnsRecord("www", {
+    domain: default.name,
+    type: "A",
+    value: "192.168.0.11",
+});
+// Add a MX record for the example.com domain itself.
+const mx = new digitalocean.DnsRecord("mx", {
+    domain: default.name,
+    type: "MX",
+    priority: 10,
+    value: "mail.example.com.",
+});
+export const wwwFqdn = www.fqdn;
+export const mxFqdn = mx.fqdn;
+```
+{{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a DnsRecord Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +85,7 @@ Provides a DigitalOcean DNS record resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DnsRecord</span><span class="p">(resource_name, opts=None, </span>domain=None<span class="p">, </span>flags=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>priority=None<span class="p">, </span>tag=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>weight=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DnsRecord</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain=None<span class="p">, </span>flags=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>priority=None<span class="p">, </span>tag=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -698,7 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DnsRecord Resource {#look-up}
 
 Get an existing DnsRecord resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DnsRecordState">DnsRecordState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DnsRecord">DnsRecord</a></span></code></pre></div>

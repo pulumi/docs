@@ -1,7 +1,8 @@
 
 ---
 title: "Snapshot"
-block_external_search_index: true
+title_tag: "Resource Snapshot | Module compute | Package GCP"
+meta_desc: "Explore the Snapshot resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Persistent Disk Snapshot resource."
 ---
 
 
@@ -32,7 +33,7 @@ To get more information about Snapshot, see:
 
 
 ## Create a Snapshot Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -40,7 +41,7 @@ To get more information about Snapshot, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Snapshot</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>snapshot_encryption_key=None<span class="p">, </span>source_disk=None<span class="p">, </span>source_disk_encryption_key=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Snapshot</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>snapshot_encryption_key=None<span class="p">, </span>source_disk=None<span class="p">, </span>source_disk_encryption_key=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -245,10 +246,13 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -267,8 +271,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
+source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -277,8 +281,9 @@ customer-supplied encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
+if the source snapshot is protected by a customer-supplied encryption
+key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -330,10 +335,13 @@ customer-supplied encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -352,8 +360,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
+source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -362,8 +370,9 @@ customer-supplied encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
+if the source snapshot is protected by a customer-supplied encryption
+key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -415,10 +424,13 @@ customer-supplied encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -437,8 +449,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
+source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -447,8 +459,9 @@ customer-supplied encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
+if the source snapshot is protected by a customer-supplied encryption
+key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -500,10 +513,13 @@ customer-supplied encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -522,8 +538,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Dict[Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key]</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
+source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -532,8 +548,9 @@ customer-supplied encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Dict[Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
+if the source snapshot is protected by a customer-supplied encryption
+key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -924,7 +941,7 @@ snapshot creation/deletion.
 ## Look up an Existing Snapshot Resource {#look-up}
 
 Get an existing Snapshot resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SnapshotState">SnapshotState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Snapshot">Snapshot</a></span></code></pre></div>
@@ -1107,10 +1124,13 @@ encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1138,8 +1158,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
+source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1166,8 +1186,9 @@ customer-supplied encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
+if the source snapshot is protected by a customer-supplied encryption
+key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1266,10 +1287,13 @@ encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1297,8 +1321,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
+source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1325,8 +1349,9 @@ customer-supplied encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
+if the source snapshot is protected by a customer-supplied encryption
+key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1425,10 +1450,13 @@ encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1456,8 +1484,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
+source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1484,8 +1512,9 @@ customer-supplied encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
+if the source snapshot is protected by a customer-supplied encryption
+key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1584,10 +1613,13 @@ encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource; provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1615,8 +1647,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Dict[Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key]</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
+source snapshot is protected by a customer-supplied encryption key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1643,8 +1675,9 @@ customer-supplied encryption key.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Dict[Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
     </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
+    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
+if the source snapshot is protected by a customer-supplied encryption
+key.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1697,6 +1730,9 @@ snapshot creation/deletion.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SnapshotSnapshotEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SnapshotSnapshotEncryptionKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.SnapshotSnapshotEncryptionKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.SnapshotSnapshotEncryptionKey.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1710,7 +1746,9 @@ snapshot creation/deletion.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1718,7 +1756,10 @@ snapshot creation/deletion.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+encryption key that protects this resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1733,7 +1774,9 @@ snapshot creation/deletion.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1741,7 +1784,10 @@ snapshot creation/deletion.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+encryption key that protects this resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1756,7 +1802,9 @@ snapshot creation/deletion.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1764,7 +1812,10 @@ snapshot creation/deletion.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+encryption key that protects this resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1779,7 +1830,9 @@ snapshot creation/deletion.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1787,7 +1840,10 @@ snapshot creation/deletion.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
+encryption key that protects this resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1804,6 +1860,9 @@ snapshot creation/deletion.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SnapshotSourceDiskEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SnapshotSourceDiskEncryptionKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.SnapshotSourceDiskEncryptionKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.SnapshotSourceDiskEncryptionKey.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1817,7 +1876,9 @@ snapshot creation/deletion.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1832,7 +1893,9 @@ snapshot creation/deletion.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1847,7 +1910,9 @@ snapshot creation/deletion.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1862,7 +1927,9 @@ snapshot creation/deletion.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
+RFC 4648 base64 to either encrypt or decrypt this resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1881,8 +1948,7 @@ snapshot creation/deletion.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

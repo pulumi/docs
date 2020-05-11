@@ -14,10 +14,26 @@ Provides a Rancher v2 Auth Config OKTA resource. This can be used to configure a
 
 In addition to the built-in local auth, only one external auth config provider can be enabled at a time.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -34,14 +50,13 @@ const okta = new rancher2.AuthConfigOkta("okta", {
     userNameField: "<USER_NAME_FIELD>",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a AuthConfigOkta Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -49,7 +64,7 @@ const okta = new rancher2.AuthConfigOkta("okta", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthConfigOkta</span><span class="p">(resource_name, opts=None, </span>access_mode=None<span class="p">, </span>allowed_principal_ids=None<span class="p">, </span>annotations=None<span class="p">, </span>display_name_field=None<span class="p">, </span>enabled=None<span class="p">, </span>groups_field=None<span class="p">, </span>idp_metadata_content=None<span class="p">, </span>labels=None<span class="p">, </span>rancher_api_host=None<span class="p">, </span>sp_cert=None<span class="p">, </span>sp_key=None<span class="p">, </span>uid_field=None<span class="p">, </span>user_name_field=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthConfigOkta</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_mode=None<span class="p">, </span>allowed_principal_ids=None<span class="p">, </span>annotations=None<span class="p">, </span>display_name_field=None<span class="p">, </span>enabled=None<span class="p">, </span>groups_field=None<span class="p">, </span>idp_metadata_content=None<span class="p">, </span>labels=None<span class="p">, </span>rancher_api_host=None<span class="p">, </span>sp_cert=None<span class="p">, </span>sp_key=None<span class="p">, </span>uid_field=None<span class="p">, </span>user_name_field=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -865,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AuthConfigOkta Resource {#look-up}
 
 Get an existing AuthConfigOkta resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#AuthConfigOktaState">AuthConfigOktaState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#AuthConfigOkta">AuthConfigOkta</a></span></code></pre></div>

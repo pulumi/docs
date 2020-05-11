@@ -12,24 +12,39 @@ meta_desc: "Explore the IpSecPolicy resource of the vpnaas module, including exa
 
 Manages a V2 Neutron IPSec policy resource within OpenStack.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
 const policy1 = new openstack.vpnaas.IpSecPolicy("policy_1", {});
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a IpSecPolicy Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -37,7 +52,7 @@ const policy1 = new openstack.vpnaas.IpSecPolicy("policy_1", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IpSecPolicy</span><span class="p">(resource_name, opts=None, </span>auth_algorithm=None<span class="p">, </span>description=None<span class="p">, </span>encapsulation_mode=None<span class="p">, </span>encryption_algorithm=None<span class="p">, </span>lifetimes=None<span class="p">, </span>name=None<span class="p">, </span>pfs=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transform_protocol=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">IpSecPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auth_algorithm=None<span class="p">, </span>description=None<span class="p">, </span>encapsulation_mode=None<span class="p">, </span>encryption_algorithm=None<span class="p">, </span>lifetimes=None<span class="p">, </span>name=None<span class="p">, </span>pfs=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transform_protocol=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -769,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing IpSecPolicy Resource {#look-up}
 
 Get an existing IpSecPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/vpnaas/#IpSecPolicyState">IpSecPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/vpnaas/#IpSecPolicy">IpSecPolicy</a></span></code></pre></div>
@@ -1389,6 +1404,9 @@ Changing this updates the existing policy. Default is ESP.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/vpnaas?tab=doc#IpSecPolicyLifetimeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/vpnaas?tab=doc#IpSecPolicyLifetimeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.VPNaaS.Inputs.IpSecPolicyLifetimeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.VPNaaS.Outputs.IpSecPolicyLifetime.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

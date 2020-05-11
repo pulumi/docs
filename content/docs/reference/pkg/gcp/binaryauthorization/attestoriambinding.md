@@ -1,7 +1,8 @@
 
 ---
 title: "AttestorIamBinding"
-block_external_search_index: true
+title_tag: "Resource AttestorIamBinding | Module binaryauthorization | Package GCP"
+meta_desc: "Explore the AttestorIamBinding resource of the binaryauthorization module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for Binary Authorization Attestor. Each of these resources serves a different use case:"
 ---
 
 
@@ -22,7 +23,7 @@ Three different resources help you manage your IAM policy for Binary Authorizati
 
 
 ## Create a AttestorIamBinding Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -30,7 +31,7 @@ Three different resources help you manage your IAM policy for Binary Authorizati
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AttestorIamBinding</span><span class="p">(resource_name, opts=None, </span>attestor=None<span class="p">, </span>condition=None<span class="p">, </span>members=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AttestorIamBinding</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attestor=None<span class="p">, </span>condition=None<span class="p">, </span>members=None<span class="p">, </span>project=None<span class="p">, </span>role=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -526,7 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AttestorIamBinding Resource {#look-up}
 
 Get an existing AttestorIamBinding resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#AttestorIamBindingState">AttestorIamBindingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#AttestorIamBinding">AttestorIamBinding</a></span></code></pre></div>
@@ -911,6 +912,9 @@ If it is not provided, the project will be parsed from the identifier of the par
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorIamBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorIamBindingConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.AttestorIamBindingConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.AttestorIamBindingCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1052,8 +1056,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "TargetInstance"
-block_external_search_index: true
+title_tag: "Resource TargetInstance | Module compute | Package GCP"
+meta_desc: "Explore the TargetInstance resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a TargetInstance resource which defines an endpoint instance"
 ---
 
 
@@ -26,7 +27,7 @@ To get more information about TargetInstance, see:
 
 
 ## Create a TargetInstance Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -34,7 +35,7 @@ To get more information about TargetInstance, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TargetInstance</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>instance=None<span class="p">, </span>name=None<span class="p">, </span>nat_policy=None<span class="p">, </span>project=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TargetInstance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>instance=None<span class="p">, </span>name=None<span class="p">, </span>nat_policy=None<span class="p">, </span>project=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -212,9 +213,12 @@ The TargetInstance resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance. Accepts the instance self-link, relative path (e.g.
-'projects/project/zones/zone/instances/instance') or name. If name is given, the zone will default to the given zone or
-the provider-default zone and the project will default to the provider-level project.
+    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance.
+Accepts the instance self-link, relative path
+(e.g. `projects/project/zones/zone/instances/instance`) or name. If
+name is given, the zone will default to the given zone or
+the provider-default zone and the project will default to the
+provider-level project.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -232,10 +236,13 @@ the provider-default zone and the project will default to the provider-level pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -244,7 +251,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
+    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance.
+Currently only NO_NAT (default value) is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -279,9 +287,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance. Accepts the instance self-link, relative path (e.g.
-'projects/project/zones/zone/instances/instance') or name. If name is given, the zone will default to the given zone or
-the provider-default zone and the project will default to the provider-level project.
+    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance.
+Accepts the instance self-link, relative path
+(e.g. `projects/project/zones/zone/instances/instance`) or name. If
+name is given, the zone will default to the given zone or
+the provider-default zone and the project will default to the
+provider-level project.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -299,10 +310,13 @@ the provider-default zone and the project will default to the provider-level pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -311,7 +325,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
+    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance.
+Currently only NO_NAT (default value) is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -346,9 +361,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance. Accepts the instance self-link, relative path (e.g.
-'projects/project/zones/zone/instances/instance') or name. If name is given, the zone will default to the given zone or
-the provider-default zone and the project will default to the provider-level project.
+    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance.
+Accepts the instance self-link, relative path
+(e.g. `projects/project/zones/zone/instances/instance`) or name. If
+name is given, the zone will default to the given zone or
+the provider-default zone and the project will default to the
+provider-level project.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -366,10 +384,13 @@ the provider-default zone and the project will default to the provider-level pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -378,7 +399,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
+    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance.
+Currently only NO_NAT (default value) is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -413,9 +435,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance. Accepts the instance self-link, relative path (e.g.
-'projects/project/zones/zone/instances/instance') or name. If name is given, the zone will default to the given zone or
-the provider-default zone and the project will default to the provider-level project.
+    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance.
+Accepts the instance self-link, relative path
+(e.g. `projects/project/zones/zone/instances/instance`) or name. If
+name is given, the zone will default to the given zone or
+the provider-default zone and the project will default to the
+provider-level project.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -433,10 +458,13 @@ the provider-default zone and the project will default to the provider-level pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -445,7 +473,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
+    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance.
+Currently only NO_NAT (default value) is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -622,7 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing TargetInstance Resource {#look-up}
 
 Get an existing TargetInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#TargetInstanceState">TargetInstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#TargetInstance">TargetInstance</a></span></code></pre></div>
@@ -767,9 +796,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance. Accepts the instance self-link, relative path (e.g.
-'projects/project/zones/zone/instances/instance') or name. If name is given, the zone will default to the given zone or
-the provider-default zone and the project will default to the provider-level project.
+    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance.
+Accepts the instance self-link, relative path
+(e.g. `projects/project/zones/zone/instances/instance`) or name. If
+name is given, the zone will default to the given zone or
+the provider-default zone and the project will default to the
+provider-level project.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -778,10 +810,13 @@ the provider-default zone and the project will default to the provider-level pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -790,7 +825,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
+    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance.
+Currently only NO_NAT (default value) is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -852,9 +888,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance. Accepts the instance self-link, relative path (e.g.
-'projects/project/zones/zone/instances/instance') or name. If name is given, the zone will default to the given zone or
-the provider-default zone and the project will default to the provider-level project.
+    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance.
+Accepts the instance self-link, relative path
+(e.g. `projects/project/zones/zone/instances/instance`) or name. If
+name is given, the zone will default to the given zone or
+the provider-default zone and the project will default to the
+provider-level project.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -863,10 +902,13 @@ the provider-default zone and the project will default to the provider-level pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -875,7 +917,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
+    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance.
+Currently only NO_NAT (default value) is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -937,9 +980,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance. Accepts the instance self-link, relative path (e.g.
-'projects/project/zones/zone/instances/instance') or name. If name is given, the zone will default to the given zone or
-the provider-default zone and the project will default to the provider-level project.
+    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance.
+Accepts the instance self-link, relative path
+(e.g. `projects/project/zones/zone/instances/instance`) or name. If
+name is given, the zone will default to the given zone or
+the provider-default zone and the project will default to the
+provider-level project.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -948,10 +994,13 @@ the provider-default zone and the project will default to the provider-level pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -960,7 +1009,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
+    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance.
+Currently only NO_NAT (default value) is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1022,9 +1072,12 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance. Accepts the instance self-link, relative path (e.g.
-'projects/project/zones/zone/instances/instance') or name. If name is given, the zone will default to the given zone or
-the provider-default zone and the project will default to the provider-level project.
+    <dd>{{% md %}}The Compute instance VM handling traffic for this target instance.
+Accepts the instance self-link, relative path
+(e.g. `projects/project/zones/zone/instances/instance`) or name. If
+name is given, the zone will default to the given zone or
+the provider-default zone and the project will default to the
+provider-level project.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1033,10 +1086,13 @@ the provider-default zone and the project will default to the provider-level pro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
+created. The name must be 1-63 characters long, and comply with
+RFC1035. Specifically, the name must be 1-63 characters long and match
+the regular expression `a-z?` which means the
+first character must be a lowercase letter, and all following
+characters must be a dash, lowercase letter, or digit, except the last
+character, which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1045,7 +1101,8 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance. Currently only NO_NAT (default value) is supported.
+    <dd>{{% md %}}NAT option controlling how IPs are NAT'ed to the instance.
+Currently only NO_NAT (default value) is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1095,8 +1152,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

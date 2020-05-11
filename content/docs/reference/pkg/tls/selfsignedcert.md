@@ -14,7 +14,7 @@ meta_desc: "Explore the SelfSignedCert resource of the TLS package, including ex
 
 
 ## Create a SelfSignedCert Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the SelfSignedCert resource of the TLS package, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SelfSignedCert</span><span class="p">(resource_name, opts=None, </span>allowed_uses=None<span class="p">, </span>dns_names=None<span class="p">, </span>early_renewal_hours=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>is_ca_certificate=None<span class="p">, </span>key_algorithm=None<span class="p">, </span>private_key_pem=None<span class="p">, </span>set_subject_key_id=None<span class="p">, </span>subjects=None<span class="p">, </span>uris=None<span class="p">, </span>validity_period_hours=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SelfSignedCert</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_uses=None<span class="p">, </span>dns_names=None<span class="p">, </span>early_renewal_hours=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>is_ca_certificate=None<span class="p">, </span>key_algorithm=None<span class="p">, </span>private_key_pem=None<span class="p">, </span>set_subject_key_id=None<span class="p">, </span>subjects=None<span class="p">, </span>uris=None<span class="p">, </span>validity_period_hours=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -878,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SelfSignedCert Resource {#look-up}
 
 Get an existing SelfSignedCert resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/tls/#SelfSignedCertState">SelfSignedCertState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/tls/#SelfSignedCert">SelfSignedCert</a></span></code></pre></div>
@@ -1622,6 +1622,9 @@ certificate will become invalid.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#SelfSignedCertSubjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#SelfSignedCertSubjectOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.Inputs.SelfSignedCertSubjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.Outputs.SelfSignedCertSubject.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -18,7 +18,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 ## Create a Provider Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, opts=None, </span>allow_reauth=None<span class="p">, </span>application_credential_id=None<span class="p">, </span>application_credential_name=None<span class="p">, </span>application_credential_secret=None<span class="p">, </span>auth_url=None<span class="p">, </span>cacert_file=None<span class="p">, </span>cert=None<span class="p">, </span>cloud=None<span class="p">, </span>default_domain=None<span class="p">, </span>delayed_auth=None<span class="p">, </span>disable_no_cache_header=None<span class="p">, </span>domain_id=None<span class="p">, </span>domain_name=None<span class="p">, </span>endpoint_overrides=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>insecure=None<span class="p">, </span>key=None<span class="p">, </span>max_retries=None<span class="p">, </span>password=None<span class="p">, </span>project_domain_id=None<span class="p">, </span>project_domain_name=None<span class="p">, </span>region=None<span class="p">, </span>swauth=None<span class="p">, </span>tenant_id=None<span class="p">, </span>tenant_name=None<span class="p">, </span>token=None<span class="p">, </span>use_octavia=None<span class="p">, </span>user_domain_id=None<span class="p">, </span>user_domain_name=None<span class="p">, </span>user_id=None<span class="p">, </span>user_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_reauth=None<span class="p">, </span>application_credential_id=None<span class="p">, </span>application_credential_name=None<span class="p">, </span>application_credential_secret=None<span class="p">, </span>auth_url=None<span class="p">, </span>cacert_file=None<span class="p">, </span>cert=None<span class="p">, </span>cloud=None<span class="p">, </span>default_domain=None<span class="p">, </span>delayed_auth=None<span class="p">, </span>disable_no_cache_header=None<span class="p">, </span>domain_id=None<span class="p">, </span>domain_name=None<span class="p">, </span>endpoint_overrides=None<span class="p">, </span>endpoint_type=None<span class="p">, </span>insecure=None<span class="p">, </span>key=None<span class="p">, </span>max_retries=None<span class="p">, </span>password=None<span class="p">, </span>project_domain_id=None<span class="p">, </span>project_domain_name=None<span class="p">, </span>region=None<span class="p">, </span>swauth=None<span class="p">, </span>tenant_id=None<span class="p">, </span>tenant_name=None<span class="p">, </span>token=None<span class="p">, </span>use_octavia=None<span class="p">, </span>user_domain_id=None<span class="p">, </span>user_domain_name=None<span class="p">, </span>user_id=None<span class="p">, </span>user_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -204,9 +204,8 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed automatically, if the initial auth token get expired. This is
-useful, when the token TTL is low or the overall Terraform provider execution time expected to be greater than the
-initial token TTL.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
+Defaults to `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -287,7 +286,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed, when the service provider client is called.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
+to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -491,9 +491,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed automatically, if the initial auth token get expired. This is
-useful, when the token TTL is low or the overall Terraform provider execution time expected to be greater than the
-initial token TTL.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
+Defaults to `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -574,7 +573,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed, when the service provider client is called.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
+to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -778,9 +778,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed automatically, if the initial auth token get expired. This is
-useful, when the token TTL is low or the overall Terraform provider execution time expected to be greater than the
-initial token TTL.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
+Defaults to `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -861,7 +860,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed, when the service provider client is called.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
+to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1065,9 +1065,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed automatically, if the initial auth token get expired. This is
-useful, when the token TTL is low or the overall Terraform provider execution time expected to be greater than the
-initial token TTL.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
+Defaults to `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1148,7 +1147,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed, when the service provider client is called.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
+to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

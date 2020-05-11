@@ -1,7 +1,8 @@
 
 ---
 title: "Function"
-block_external_search_index: true
+title_tag: "Resource Function | Module cloudfunctions | Package GCP"
+meta_desc: "Explore the Function resource of the cloudfunctions module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a new Cloud Function. For more information see"
 ---
 
 
@@ -23,7 +24,7 @@ for Cloud Functions.
 
 
 ## Create a Function Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -31,7 +32,7 @@ for Cloud Functions.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Function</span><span class="p">(resource_name, opts=None, </span>available_memory_mb=None<span class="p">, </span>description=None<span class="p">, </span>entry_point=None<span class="p">, </span>environment_variables=None<span class="p">, </span>event_trigger=None<span class="p">, </span>https_trigger_url=None<span class="p">, </span>ingress_settings=None<span class="p">, </span>labels=None<span class="p">, </span>max_instances=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>runtime=None<span class="p">, </span>service_account_email=None<span class="p">, </span>source_archive_bucket=None<span class="p">, </span>source_archive_object=None<span class="p">, </span>source_repository=None<span class="p">, </span>timeout=None<span class="p">, </span>trigger_http=None<span class="p">, </span>vpc_connector=None<span class="p">, </span>vpc_connector_egress_settings=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Function</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>available_memory_mb=None<span class="p">, </span>description=None<span class="p">, </span>entry_point=None<span class="p">, </span>environment_variables=None<span class="p">, </span>event_trigger=None<span class="p">, </span>https_trigger_url=None<span class="p">, </span>ingress_settings=None<span class="p">, </span>labels=None<span class="p">, </span>max_instances=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>runtime=None<span class="p">, </span>service_account_email=None<span class="p">, </span>source_archive_bucket=None<span class="p">, </span>source_archive_object=None<span class="p">, </span>source_repository=None<span class="p">, </span>timeout=None<span class="p">, </span>trigger_http=None<span class="p">, </span>vpc_connector=None<span class="p">, </span>vpc_connector_egress_settings=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1071,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Function Resource {#look-up}
 
 Get an existing Function resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#FunctionState">FunctionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#Function">Function</a></span></code></pre></div>
@@ -2000,6 +2001,9 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionEventTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionEventTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Inputs.FunctionEventTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Outputs.FunctionEventTrigger.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2163,6 +2167,9 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionEventTriggerFailurePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionEventTriggerFailurePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Inputs.FunctionEventTriggerFailurePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Outputs.FunctionEventTriggerFailurePolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2241,6 +2248,9 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionSourceRepositoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#FunctionSourceRepositoryOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Inputs.FunctionSourceRepositoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Outputs.FunctionSourceRepository.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2355,8 +2365,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

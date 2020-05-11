@@ -14,11 +14,26 @@ meta_desc: "Explore the ProfileHttp resource of the ltm module, including exampl
 
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
@@ -35,14 +50,13 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     name: "/Common/sanjose-http",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a ProfileHttp Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -50,7 +64,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProfileHttp</span><span class="p">(resource_name, opts=None, </span>accept_xff=None<span class="p">, </span>app_service=None<span class="p">, </span>basic_auth_realm=None<span class="p">, </span>defaults_from=None<span class="p">, </span>description=None<span class="p">, </span>encrypt_cookie_secret=None<span class="p">, </span>encrypt_cookies=None<span class="p">, </span>fallback_host=None<span class="p">, </span>fallback_status_codes=None<span class="p">, </span>head_erase=None<span class="p">, </span>head_insert=None<span class="p">, </span>insert_xforwarded_for=None<span class="p">, </span>lws_separator=None<span class="p">, </span>name=None<span class="p">, </span>oneconnect_transformations=None<span class="p">, </span>proxy_type=None<span class="p">, </span>redirect_rewrite=None<span class="p">, </span>request_chunking=None<span class="p">, </span>response_chunking=None<span class="p">, </span>response_headers_permitteds=None<span class="p">, </span>server_agent_name=None<span class="p">, </span>tm_partition=None<span class="p">, </span>via_host_name=None<span class="p">, </span>via_request=None<span class="p">, </span>via_response=None<span class="p">, </span>xff_alternative_names=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ProfileHttp</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accept_xff=None<span class="p">, </span>app_service=None<span class="p">, </span>basic_auth_realm=None<span class="p">, </span>defaults_from=None<span class="p">, </span>description=None<span class="p">, </span>encrypt_cookie_secret=None<span class="p">, </span>encrypt_cookies=None<span class="p">, </span>fallback_host=None<span class="p">, </span>fallback_status_codes=None<span class="p">, </span>head_erase=None<span class="p">, </span>head_insert=None<span class="p">, </span>insert_xforwarded_for=None<span class="p">, </span>lws_separator=None<span class="p">, </span>name=None<span class="p">, </span>oneconnect_transformations=None<span class="p">, </span>proxy_type=None<span class="p">, </span>redirect_rewrite=None<span class="p">, </span>request_chunking=None<span class="p">, </span>response_chunking=None<span class="p">, </span>response_headers_permitteds=None<span class="p">, </span>server_agent_name=None<span class="p">, </span>tm_partition=None<span class="p">, </span>via_host_name=None<span class="p">, </span>via_request=None<span class="p">, </span>via_response=None<span class="p">, </span>xff_alternative_names=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1270,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ProfileHttp Resource {#look-up}
 
 Get an existing ProfileHttp resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#ProfileHttpState">ProfileHttpState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#ProfileHttp">ProfileHttp</a></span></code></pre></div>

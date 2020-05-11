@@ -1,7 +1,8 @@
 
 ---
 title: "ApplicationUrlDispatchRules"
-block_external_search_index: true
+title_tag: "Resource ApplicationUrlDispatchRules | Module appengine | Package GCP"
+meta_desc: "Explore the ApplicationUrlDispatchRules resource of the appengine module, including examples, input properties, output properties, lookup functions, and supporting types. Rules to match an HTTP request and dispatch that request to a service."
 ---
 
 
@@ -19,7 +20,7 @@ To get more information about ApplicationUrlDispatchRules, see:
 
 
 ## Create a ApplicationUrlDispatchRules Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -27,7 +28,7 @@ To get more information about ApplicationUrlDispatchRules, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ApplicationUrlDispatchRules</span><span class="p">(resource_name, opts=None, </span>dispatch_rules=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ApplicationUrlDispatchRules</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dispatch_rules=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -205,7 +206,7 @@ The ApplicationUrlDispatchRules resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">List&lt;Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -231,7 +232,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">[]Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -257,7 +258,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -283,7 +284,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">List[Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -379,7 +380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ApplicationUrlDispatchRules Resource {#look-up}
 
 Get an existing ApplicationUrlDispatchRules resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#ApplicationUrlDispatchRulesState">ApplicationUrlDispatchRulesState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#ApplicationUrlDispatchRules">ApplicationUrlDispatchRules</a></span></code></pre></div>
@@ -506,7 +507,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">List&lt;Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -532,7 +533,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">[]Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -558,7 +559,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -584,7 +585,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationurldispatchrulesdispatchrule">List[Application<wbr>Url<wbr>Dispatch<wbr>Rules<wbr>Dispatch<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.
+    <dd>{{% md %}}Rules to match an HTTP request and dispatch that request to a service.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -620,6 +621,9 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#ApplicationUrlDispatchRulesDispatchRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#ApplicationUrlDispatchRulesDispatchRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.ApplicationUrlDispatchRulesDispatchRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.ApplicationUrlDispatchRulesDispatchRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -633,7 +637,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+The sum of the lengths of the domain and path may not exceed 100 characters.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -641,7 +647,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+The sum of the lengths of the domain and path may not exceed 100 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -649,7 +657,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".
+Defaults to matching all domains: "*".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -664,7 +674,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+The sum of the lengths of the domain and path may not exceed 100 characters.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -672,7 +684,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+The sum of the lengths of the domain and path may not exceed 100 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -680,7 +694,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".
+Defaults to matching all domains: "*".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -695,7 +711,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+The sum of the lengths of the domain and path may not exceed 100 characters.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -703,7 +721,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+The sum of the lengths of the domain and path may not exceed 100 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -711,7 +731,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".
+Defaults to matching all domains: "*".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -726,7 +748,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+The sum of the lengths of the domain and path may not exceed 100 characters.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -734,7 +758,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
+The sum of the lengths of the domain and path may not exceed 100 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -742,7 +768,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".
+Defaults to matching all domains: "*".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -761,8 +789,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

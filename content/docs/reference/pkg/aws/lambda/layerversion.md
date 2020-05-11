@@ -12,12 +12,39 @@ meta_desc: "Explore the LayerVersion resource of the lambda module, including ex
 
 Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse shared bits of code across multiple lambda functions.
 
-For information about Lambda Layers and how to use them, see [AWS Lambda Layers][1]
+For information about Lambda Layers and how to use them, see [AWS Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
+
+
+## Specifying the Deployment Package
+
+AWS Lambda Layers expect source code to be provided as a deployment package whose structure varies depending on which `compatible_runtimes` this layer specifies.
+See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) for the valid values of `compatible_runtimes`.
+
+Once you have created your deployment package you can specify it either directly as a local file (using the `filename` argument) or
+indirectly via Amazon S3 (using the `s3_bucket`, `s3_key` and `s3_object_version` arguments). When providing the deployment
+package via S3 it may be useful to use the `aws.s3.BucketObject` resource to upload it.
+
+For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
+large files efficiently.
 
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -28,25 +55,13 @@ const lambdaLayer = new aws.lambda.LayerVersion("lambda_layer", {
     layerName: "lambda_layer_name",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-## Specifying the Deployment Package
-
-AWS Lambda Layers expect source code to be provided as a deployment package whose structure varies depending on which `compatible_runtimes` this layer specifies.
-See [Runtimes][2] for the valid values of `compatible_runtimes`.
-
-Once you have created your deployment package you can specify it either directly as a local file (using the `filename` argument) or
-indirectly via Amazon S3 (using the `s3_bucket`, `s3_key` and `s3_object_version` arguments). When providing the deployment
-package via S3 it may be useful to use the `aws.s3.BucketObject` resource to upload it.
-
-For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
-large files efficiently.
-
 
 
 ## Create a LayerVersion Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -54,7 +69,7 @@ large files efficiently.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LayerVersion</span><span class="p">(resource_name, opts=None, </span>code=None<span class="p">, </span>compatible_runtimes=None<span class="p">, </span>description=None<span class="p">, </span>layer_name=None<span class="p">, </span>license_info=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_key=None<span class="p">, </span>s3_object_version=None<span class="p">, </span>source_code_hash=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LayerVersion</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>code=None<span class="p">, </span>compatible_runtimes=None<span class="p">, </span>description=None<span class="p">, </span>layer_name=None<span class="p">, </span>license_info=None<span class="p">, </span>s3_bucket=None<span class="p">, </span>s3_key=None<span class="p">, </span>s3_object_version=None<span class="p">, </span>source_code_hash=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -250,7 +265,7 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
+    <dd>{{% md %}}A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -268,7 +283,7 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
+    <dd>{{% md %}}License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -338,7 +353,7 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
+    <dd>{{% md %}}A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -356,7 +371,7 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
+    <dd>{{% md %}}License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,7 +441,7 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
+    <dd>{{% md %}}A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -444,7 +459,7 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
+    <dd>{{% md %}}License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -514,7 +529,7 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
+    <dd>{{% md %}}A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -532,7 +547,7 @@ The LayerVersion resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
+    <dd>{{% md %}}License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -834,7 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LayerVersion Resource {#look-up}
 
 Get an existing LayerVersion resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#LayerVersionState">LayerVersionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#LayerVersion">LayerVersion</a></span></code></pre></div>
@@ -979,7 +994,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
+    <dd>{{% md %}}A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1024,7 +1039,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
+    <dd>{{% md %}}License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1112,7 +1127,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
+    <dd>{{% md %}}A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1157,7 +1172,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
+    <dd>{{% md %}}License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1245,7 +1260,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
+    <dd>{{% md %}}A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1290,7 +1305,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
+    <dd>{{% md %}}License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1378,7 +1393,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
+    <dd>{{% md %}}A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1423,7 +1438,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}License info for your Lambda Layer. See [License Info][3].
+    <dd>{{% md %}}License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
 {{% /md %}}</dd>
 
     <dt class="property-optional"

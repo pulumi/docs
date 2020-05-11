@@ -14,7 +14,7 @@ meta_desc: "Explore the PreparedQuery resource of the Consul package, including 
 
 
 ## Create a PreparedQuery Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the PreparedQuery resource of the Consul package, including 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PreparedQuery</span><span class="p">(resource_name, opts=None, </span>connect=None<span class="p">, </span>datacenter=None<span class="p">, </span>dns=None<span class="p">, </span>failover=None<span class="p">, </span>name=None<span class="p">, </span>near=None<span class="p">, </span>only_passing=None<span class="p">, </span>service=None<span class="p">, </span>session=None<span class="p">, </span>stored_token=None<span class="p">, </span>tags=None<span class="p">, </span>template=None<span class="p">, </span>token=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PreparedQuery</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>connect=None<span class="p">, </span>datacenter=None<span class="p">, </span>dns=None<span class="p">, </span>failover=None<span class="p">, </span>name=None<span class="p">, </span>near=None<span class="p">, </span>only_passing=None<span class="p">, </span>service=None<span class="p">, </span>session=None<span class="p">, </span>stored_token=None<span class="p">, </span>tags=None<span class="p">, </span>template=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -842,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing PreparedQuery Resource {#look-up}
 
 Get an existing PreparedQuery resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQueryState">PreparedQueryState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQuery">PreparedQuery</a></span></code></pre></div>
@@ -1551,6 +1551,9 @@ This overrides the token that the agent provides by default.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryDnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryDnsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Inputs.PreparedQueryDnsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Outputs.PreparedQueryDns.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1629,6 +1632,9 @@ This overrides the token that the agent provides by default.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryFailoverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryFailoverOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Inputs.PreparedQueryFailoverArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Outputs.PreparedQueryFailover.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1748,6 +1754,9 @@ sorted in ascending order of estimated RTT.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryTemplateOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Inputs.PreparedQueryTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Outputs.PreparedQueryTemplate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

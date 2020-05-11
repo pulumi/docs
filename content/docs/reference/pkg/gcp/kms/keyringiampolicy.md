@@ -1,7 +1,8 @@
 
 ---
 title: "KeyRingIAMPolicy"
-block_external_search_index: true
+title_tag: "Resource KeyRingIAMPolicy | Module kms | Package GCP"
+meta_desc: "Explore the KeyRingIAMPolicy resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for KMS key ring. Each of these resources serves a different use case:"
 ---
 
 
@@ -84,7 +85,7 @@ const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
 
 
 ## Create a KeyRingIAMPolicy Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -92,7 +93,7 @@ const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KeyRingIAMPolicy</span><span class="p">(resource_name, opts=None, </span>key_ring_id=None<span class="p">, </span>policy_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KeyRingIAMPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key_ring_id=None<span class="p">, </span>policy_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -492,7 +493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing KeyRingIAMPolicy Resource {#look-up}
 
 Get an existing KeyRingIAMPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#KeyRingIAMPolicyState">KeyRingIAMPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#KeyRingIAMPolicy">KeyRingIAMPolicy</a></span></code></pre></div>
@@ -777,8 +778,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

@@ -1,7 +1,8 @@
 
 ---
 title: "Job"
-block_external_search_index: true
+title_tag: "Resource Job | Module dataproc | Package GCP"
+meta_desc: "Explore the Job resource of the dataproc module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a job resource within a Dataproc cluster within GCE. For more information see"
 ---
 
 
@@ -17,7 +18,7 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
 
 
 ## Create a Job Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -25,7 +26,7 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Job</span><span class="p">(resource_name, opts=None, </span>force_delete=None<span class="p">, </span>hadoop_config=None<span class="p">, </span>hive_config=None<span class="p">, </span>labels=None<span class="p">, </span>pig_config=None<span class="p">, </span>placement=None<span class="p">, </span>project=None<span class="p">, </span>pyspark_config=None<span class="p">, </span>reference=None<span class="p">, </span>region=None<span class="p">, </span>scheduling=None<span class="p">, </span>spark_config=None<span class="p">, </span>sparksql_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Job</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>force_delete=None<span class="p">, </span>hadoop_config=None<span class="p">, </span>hive_config=None<span class="p">, </span>labels=None<span class="p">, </span>pig_config=None<span class="p">, </span>placement=None<span class="p">, </span>project=None<span class="p">, </span>pyspark_config=None<span class="p">, </span>reference=None<span class="p">, </span>region=None<span class="p">, </span>scheduling=None<span class="p">, </span>spark_config=None<span class="p">, </span>sparksql_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -857,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Job Resource {#look-up}
 
 Get an existing Job resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#Job">Job</a></span></code></pre></div>
@@ -1578,6 +1579,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobHadoopConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobHadoopConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobHadoopConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobHadoopConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1635,7 +1639,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1712,7 +1717,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1789,7 +1795,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1866,7 +1873,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1900,6 +1908,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobHadoopConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobHadoopConfigLoggingConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobHadoopConfigLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobHadoopConfigLoggingConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1976,6 +1987,9 @@ for this job to be submitted to. If not specified, defaults to `global`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobHiveConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobHiveConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobHiveConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobHiveConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2026,7 +2040,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2087,7 +2103,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2148,7 +2166,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2209,7 +2229,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2234,6 +2256,9 @@ Conflicts with `query_list`
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPigConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPigConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobPigConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2293,7 +2318,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2362,7 +2389,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2431,7 +2460,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2500,7 +2531,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2525,6 +2558,9 @@ Conflicts with `query_list`
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPigConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPigConfigLoggingConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobPigConfigLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobPigConfigLoggingConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2600,6 +2636,9 @@ Conflicts with `query_list`
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPlacementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPlacementOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobPlacementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobPlacement.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2708,6 +2747,9 @@ Conflicts with `query_list`
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPysparkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPysparkConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobPysparkConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobPysparkConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2721,7 +2763,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2798,7 +2841,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2875,7 +2919,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2952,7 +2997,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3031,6 +3077,9 @@ Conflicts with `query_list`
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPysparkConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobPysparkConfigLoggingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobPysparkConfigLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobPysparkConfigLoggingConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3105,6 +3154,9 @@ Conflicts with `query_list`
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobReferenceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobReference.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3181,6 +3233,9 @@ Conflicts with `query_list`
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSchedulingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSchedulingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobSchedulingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobScheduling.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3256,6 +3311,9 @@ Conflicts with `query_list`
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparkConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobSparkConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobSparkConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3313,7 +3371,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3390,7 +3449,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3467,7 +3527,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3544,7 +3605,8 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3578,6 +3640,9 @@ Conflicts with `query_list`
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparkConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparkConfigLoggingConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobSparkConfigLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobSparkConfigLoggingConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3654,6 +3719,9 @@ Conflicts with `query_list`
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparksqlConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparksqlConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobSparksqlConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobSparksqlConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3703,7 +3771,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3763,7 +3833,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3823,7 +3895,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3883,7 +3957,9 @@ Conflicts with `query_list`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
+Conflicts with `query_file_uri`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3908,6 +3984,9 @@ Conflicts with `query_list`
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparksqlConfigLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobSparksqlConfigLoggingConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.JobSparksqlConfigLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobSparksqlConfigLoggingConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3983,6 +4062,9 @@ Conflicts with `query_list`
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#JobStatusOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.JobStatus.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4157,8 +4239,7 @@ Conflicts with `query_list`
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

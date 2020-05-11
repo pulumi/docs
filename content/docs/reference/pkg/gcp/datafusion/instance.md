@@ -1,7 +1,8 @@
 
 ---
 title: "Instance"
-block_external_search_index: true
+title_tag: "Resource Instance | Module datafusion | Package GCP"
+meta_desc: "Explore the Instance resource of the datafusion module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Data Fusion instance."
 ---
 
 
@@ -20,7 +21,7 @@ To get more information about Instance, see:
 
 
 ## Create a Instance Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -28,7 +29,7 @@ To get more information about Instance, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>enable_stackdriver_logging=None<span class="p">, </span>enable_stackdriver_monitoring=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network_config=None<span class="p">, </span>options=None<span class="p">, </span>private_instance=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>enable_stackdriver_logging=None<span class="p">, </span>enable_stackdriver_monitoring=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network_config=None<span class="p">, </span>options=None<span class="p">, </span>private_instance=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -206,11 +207,13 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with
+the default settings for processing and memory.
+- BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+using point and click UI. However, there are certain limitations, such as fewer number
+of concurrent pipelines, no support for streaming pipelines, etc.
+- ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -246,7 +249,8 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
+    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
+such as Compute Engine VMs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -264,7 +268,7 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -282,8 +286,9 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.
+    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
+true, all Data Fusion nodes will have private IP addresses and will not be
+able to access the public internet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -318,11 +323,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with
+the default settings for processing and memory.
+- BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+using point and click UI. However, there are certain limitations, such as fewer number
+of concurrent pipelines, no support for streaming pipelines, etc.
+- ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -358,7 +365,8 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
+    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
+such as Compute Engine VMs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -376,7 +384,7 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -394,8 +402,9 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.
+    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
+true, all Data Fusion nodes will have private IP addresses and will not be
+able to access the public internet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -430,11 +439,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with
+the default settings for processing and memory.
+- BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+using point and click UI. However, there are certain limitations, such as fewer number
+of concurrent pipelines, no support for streaming pipelines, etc.
+- ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -470,7 +481,8 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
+    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
+such as Compute Engine VMs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -488,7 +500,7 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -506,8 +518,9 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.
+    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
+true, all Data Fusion nodes will have private IP addresses and will not be
+able to access the public internet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -542,11 +555,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with
+the default settings for processing and memory.
+- BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+using point and click UI. However, there are certain limitations, such as fewer number
+of concurrent pipelines, no support for streaming pipelines, etc.
+- ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -582,7 +597,8 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
+    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
+such as Compute Engine VMs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -600,7 +616,7 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Dict[Instance<wbr>Network<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -618,8 +634,9 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.
+    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
+true, all Data Fusion nodes will have private IP addresses and will not be
+able to access the public internet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -984,7 +1001,7 @@ being upgraded - RESTARTING: Instance is being restarted
 ## Look up an Existing Instance Resource {#look-up}
 
 Get an existing Instance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datafusion/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datafusion/#Instance">Instance</a></span></code></pre></div>
@@ -1147,7 +1164,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
+    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
+such as Compute Engine VMs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,7 +1183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1183,8 +1201,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.
+    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
+true, all Data Fusion nodes will have private IP addresses and will not be
+able to access the public internet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1250,11 +1269,13 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with
+the default settings for processing and memory.
+- BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+using point and click UI. However, there are certain limitations, such as fewer number
+of concurrent pipelines, no support for streaming pipelines, etc.
+- ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1324,7 +1345,8 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
+    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
+such as Compute Engine VMs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1342,7 +1364,7 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1360,8 +1382,9 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.
+    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
+true, all Data Fusion nodes will have private IP addresses and will not be
+able to access the public internet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1427,11 +1450,13 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with
+the default settings for processing and memory.
+- BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+using point and click UI. However, there are certain limitations, such as fewer number
+of concurrent pipelines, no support for streaming pipelines, etc.
+- ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1501,7 +1526,8 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
+    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
+such as Compute Engine VMs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1519,7 +1545,7 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1537,8 +1563,9 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.
+    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
+true, all Data Fusion nodes will have private IP addresses and will not be
+able to access the public internet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1604,11 +1631,13 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with
+the default settings for processing and memory.
+- BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+using point and click UI. However, there are certain limitations, such as fewer number
+of concurrent pipelines, no support for streaming pipelines, etc.
+- ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1678,7 +1707,8 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
+    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
+such as Compute Engine VMs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1696,7 +1726,7 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Dict[Instance<wbr>Network<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1714,8 +1744,9 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.
+    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
+true, all Data Fusion nodes will have private IP addresses and will not be
+able to access the public internet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1781,11 +1812,13 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with
+the default settings for processing and memory.
+- BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines
+using point and click UI. However, there are certain limitations, such as fewer number
+of concurrent pipelines, no support for streaming pipelines, etc.
+- ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
+available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1829,6 +1862,9 @@ features available, such as support for streaming pipelines, higher number of co
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#InstanceNetworkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#InstanceNetworkConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.Inputs.InstanceNetworkConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.Outputs.InstanceNetworkConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1842,7 +1878,9 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP range in CIDR notation to use for the managed Data Fusion instance
+nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1850,7 +1888,10 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the network in the project with which the tenant project
+will be peered for executing pipelines. In case of shared VPC where the network resides in another host
+project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1865,7 +1906,9 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP range in CIDR notation to use for the managed Data Fusion instance
+nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1873,7 +1916,10 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the network in the project with which the tenant project
+will be peered for executing pipelines. In case of shared VPC where the network resides in another host
+project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1888,7 +1934,9 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP range in CIDR notation to use for the managed Data Fusion instance
+nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1896,7 +1944,10 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the network in the project with which the tenant project
+will be peered for executing pipelines. In case of shared VPC where the network resides in another host
+project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1911,7 +1962,9 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IP range in CIDR notation to use for the managed Data Fusion instance
+nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1919,7 +1972,10 @@ features available, such as support for streaming pipelines, higher number of co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the network in the project with which the tenant project
+will be peered for executing pipelines. In case of shared VPC where the network resides in another host
+project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1938,8 +1994,7 @@ features available, such as support for streaming pipelines, higher number of co
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

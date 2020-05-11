@@ -14,12 +14,26 @@ Provides an Alicloud ECS Elastic Network Interface Attachment as a resource to a
 
 For information about Elastic Network Interface and how to use it, see [Elastic Network Interface](https://www.alibabacloud.com/help/doc-detail/58496.html).
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Bacis Usage
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -31,9 +45,9 @@ const number = config.get("number") || "2";
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "192.168.0.0/24",
 });
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const vswitch = new alicloud.vpc.Switch("vswitch", {
     availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "192.168.0.0/24",
@@ -42,15 +56,15 @@ const vswitch = new alicloud.vpc.Switch("vswitch", {
 const group = new alicloud.ecs.SecurityGroup("group", {
     vpcId: vpc.id,
 });
-const instanceType = alicloud.ecs.getInstanceTypes({
+const instanceType = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     eniAmount: 2,
-});
-const defaultImages = alicloud.ecs.getImages({
+}, { async: true }));
+const defaultImages = pulumi.output(alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-});
+}, { async: true }));
 const instance: alicloud.ecs.Instance[] = [];
 for (let i = 0; i < number; i++) {
     instance.push(new alicloud.ecs.Instance(`instance-${i}`, {
@@ -79,14 +93,13 @@ for (let i = 0; i < number; i++) {
     }));
 }
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a NetworkInterfaceAttachment Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -442,7 +455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NetworkInterfaceAttachment Resource {#look-up}
 
 Get an existing NetworkInterfaceAttachment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkInterfaceAttachmentState">NetworkInterfaceAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkInterfaceAttachment">NetworkInterfaceAttachment</a></span></code></pre></div>

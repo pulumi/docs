@@ -1,7 +1,8 @@
 
 ---
 title: "GameServerDeployment"
-block_external_search_index: true
+title_tag: "Resource GameServerDeployment | Module gameservices | Package GCP"
+meta_desc: "Explore the GameServerDeployment resource of the gameservices module, including examples, input properties, output properties, lookup functions, and supporting types. A game server deployment resource."
 ---
 
 
@@ -20,7 +21,7 @@ To get more information about GameServerDeployment, see:
 
 
 ## Create a GameServerDeployment Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -28,7 +29,7 @@ To get more information about GameServerDeployment, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GameServerDeployment</span><span class="p">(resource_name, opts=None, </span>deployment_id=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GameServerDeployment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>deployment_id=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -224,7 +225,8 @@ The GameServerDeployment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -277,7 +279,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -330,7 +333,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -383,7 +387,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -532,7 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GameServerDeployment Resource {#look-up}
 
 Get an existing GameServerDeployment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerDeploymentState">GameServerDeploymentState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerDeployment">GameServerDeployment</a></span></code></pre></div>
@@ -677,7 +682,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -741,7 +747,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -805,7 +812,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -869,7 +877,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a key-value pair.
+    <dd>{{% md %}}The labels associated with this game server deployment. Each label is a
+key-value pair.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -921,8 +930,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

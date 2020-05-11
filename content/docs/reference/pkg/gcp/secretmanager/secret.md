@@ -1,7 +1,8 @@
 
 ---
 title: "Secret"
-block_external_search_index: true
+title_tag: "Resource Secret | Module secretmanager | Package GCP"
+meta_desc: "Explore the Secret resource of the secretmanager module, including examples, input properties, output properties, lookup functions, and supporting types. A Secret is a logical secret whose value and versions can be accessed."
 ---
 
 
@@ -18,7 +19,7 @@ To get more information about Secret, see:
 
 
 ## Create a Secret Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +27,7 @@ To get more information about Secret, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Secret</span><span class="p">(resource_name, opts=None, </span>labels=None<span class="p">, </span>project=None<span class="p">, </span>replication=None<span class="p">, </span>secret_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Secret</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>labels=None<span class="p">, </span>project=None<span class="p">, </span>replication=None<span class="p">, </span>secret_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -204,8 +205,8 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
-created.
+    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
+after the Secret has been created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -223,12 +224,14 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
-maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
-Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
-the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be assigned to a given
-resource. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3"
-}.
+    <dd>{{% md %}}The labels assigned to this Secret.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be assigned to a given resource.
+An object containing a list of "key": value pairs. Example:
+{ "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -254,8 +257,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication</a></span>
     </dt>
-    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
-created.
+    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
+after the Secret has been created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -273,12 +276,14 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
-maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
-Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
-the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be assigned to a given
-resource. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3"
-}.
+    <dd>{{% md %}}The labels assigned to this Secret.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be assigned to a given resource.
+An object containing a list of "key": value pairs. Example:
+{ "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -304,8 +309,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication</a></span>
     </dt>
-    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
-created.
+    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
+after the Secret has been created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -323,12 +328,14 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
-maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
-Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
-the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be assigned to a given
-resource. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3"
-}.
+    <dd>{{% md %}}The labels assigned to this Secret.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be assigned to a given resource.
+An object containing a list of "key": value pairs. Example:
+{ "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -354,8 +361,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Dict[Secret<wbr>Replication]</a></span>
     </dt>
-    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
-created.
+    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
+after the Secret has been created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -373,12 +380,14 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
-maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
-Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
-the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be assigned to a given
-resource. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3"
-}.
+    <dd>{{% md %}}The labels assigned to this Secret.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be assigned to a given resource.
+An object containing a list of "key": value pairs. Example:
+{ "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -546,7 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Secret Resource {#look-up}
 
 Get an existing Secret resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#SecretState">SecretState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#Secret">Secret</a></span></code></pre></div>
@@ -682,12 +691,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
-maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
-Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
-the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be assigned to a given
-resource. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3"
-}.
+    <dd>{{% md %}}The labels assigned to this Secret.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be assigned to a given resource.
+An object containing a list of "key": value pairs. Example:
+{ "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -715,8 +726,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
-created.
+    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
+after the Secret has been created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -750,12 +761,14 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
-maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
-Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
-the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be assigned to a given
-resource. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3"
-}.
+    <dd>{{% md %}}The labels assigned to this Secret.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be assigned to a given resource.
+An object containing a list of "key": value pairs. Example:
+{ "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -783,8 +796,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication</a></span>
     </dt>
-    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
-created.
+    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
+after the Secret has been created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -818,12 +831,14 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
-maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
-Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
-the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be assigned to a given
-resource. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3"
-}.
+    <dd>{{% md %}}The labels assigned to this Secret.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be assigned to a given resource.
+An object containing a list of "key": value pairs. Example:
+{ "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -851,8 +866,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication</a></span>
     </dt>
-    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
-created.
+    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
+after the Secret has been created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -886,12 +901,14 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of
-maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
-Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to
-the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be assigned to a given
-resource. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3"
-}.
+    <dd>{{% md %}}The labels assigned to this Secret.
+Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
+and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+No more than 64 labels can be assigned to a given resource.
+An object containing a list of "key": value pairs. Example:
+{ "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -919,8 +936,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Dict[Secret<wbr>Replication]</a></span>
     </dt>
-    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been
-created.
+    <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
+after the Secret has been created.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -955,6 +972,9 @@ created.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretReplicationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretReplicationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Inputs.SecretReplicationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Outputs.SecretReplication.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -968,7 +988,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -976,7 +997,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -991,7 +1013,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -999,7 +1022,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1014,7 +1038,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1022,7 +1047,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1037,7 +1063,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1045,7 +1072,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanaged">Dict[Secret<wbr>Replication<wbr>User<wbr>Managed]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1062,6 +1090,9 @@ created.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretReplicationUserManagedArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretReplicationUserManagedOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Inputs.SecretReplicationUserManagedArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Outputs.SecretReplicationUserManaged.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1075,7 +1106,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanagedreplica">List&lt;Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1090,7 +1122,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanagedreplica">[]Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1105,7 +1138,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanagedreplica">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1120,7 +1154,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanagedreplica">List[Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1137,6 +1172,9 @@ created.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretReplicationUserManagedReplicaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretReplicationUserManagedReplicaOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Inputs.SecretReplicationUserManagedReplicaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Outputs.SecretReplicationUserManagedReplica.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1150,7 +1188,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: "us-east1".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1165,7 +1204,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: "us-east1".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1180,7 +1220,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: "us-east1".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1195,7 +1236,8 @@ created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: "us-east1".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1214,8 +1256,7 @@ created.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

@@ -12,10 +12,26 @@ meta_desc: "Explore the JobDefinition resource of the batch module, including ex
 
 Provides a Batch Job Definition resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -56,25 +72,13 @@ const test = new aws.batch.JobDefinition("test", {
     type: "container",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-## retry_strategy
-
-`retry_strategy` supports the following:
-
-* `attempts` - (Optional) The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
-
-## timeout
-
-`timeout` supports the following:
-
-* `attempt_duration_seconds` - (Optional) The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
-
 
 
 ## Create a JobDefinition Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -82,7 +86,7 @@ const test = new aws.batch.JobDefinition("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">JobDefinition</span><span class="p">(resource_name, opts=None, </span>container_properties=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>retry_strategy=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">JobDefinition</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_properties=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>retry_strategy=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -654,7 +658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing JobDefinition Resource {#look-up}
 
 Get an existing JobDefinition resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinitionState">JobDefinitionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinition">JobDefinition</a></span></code></pre></div>
@@ -1115,6 +1119,9 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#JobDefinitionRetryStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#JobDefinitionRetryStrategyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Inputs.JobDefinitionRetryStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Outputs.JobDefinitionRetryStrategy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1128,7 +1135,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1143,7 +1151,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1158,7 +1167,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1173,7 +1183,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1190,6 +1201,9 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#JobDefinitionTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#JobDefinitionTimeoutOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Inputs.JobDefinitionTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Outputs.JobDefinitionTimeout.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1203,7 +1217,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1218,7 +1233,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1233,7 +1249,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1248,7 +1265,8 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

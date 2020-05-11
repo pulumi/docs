@@ -23,7 +23,7 @@ Manages a V3 block storage quotaset resource within OpenStack.
 
 
 ## Create a QuoteSetV3 Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -31,7 +31,7 @@ Manages a V3 block storage quotaset resource within OpenStack.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">QuoteSetV3</span><span class="p">(resource_name, opts=None, </span>backup_gigabytes=None<span class="p">, </span>backups=None<span class="p">, </span>gigabytes=None<span class="p">, </span>groups=None<span class="p">, </span>per_volume_gigabytes=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>snapshots=None<span class="p">, </span>volumes=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">QuoteSetV3</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backup_gigabytes=None<span class="p">, </span>backups=None<span class="p">, </span>gigabytes=None<span class="p">, </span>groups=None<span class="p">, </span>per_volume_gigabytes=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>snapshots=None<span class="p">, </span>volumes=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -671,7 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing QuoteSetV3 Resource {#look-up}
 
 Get an existing QuoteSetV3 resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/blockstorage/#QuoteSetV3State">QuoteSetV3State</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/blockstorage/#QuoteSetV3">QuoteSetV3</a></span></code></pre></div>

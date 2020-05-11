@@ -12,12 +12,26 @@ meta_desc: "Explore the HealthCheck resource of the route53 module, including ex
 
 Provides a Route53 health check.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Connectivity and HTTP Status Code Check
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -34,11 +48,22 @@ const example = new aws.route53.HealthCheck("example", {
     type: "HTTP",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Connectivity and String Matching Check
 
+### Connectivity and String Matching Check
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -53,11 +78,22 @@ const example = new aws.route53.HealthCheck("example", {
     type: "HTTPS_STR_MATCH",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Aggregate Check
 
+### Aggregate Check
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -71,11 +107,22 @@ const parent = new aws.route53.HealthCheck("parent", {
     type: "CALCULATED",
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### CloudWatch Alarm Check
 
+### CloudWatch Alarm Check
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -97,14 +144,13 @@ const foo = new aws.route53.HealthCheck("foo", {
     type: "CLOUDWATCH_METRIC",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a HealthCheck Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -112,7 +158,7 @@ const foo = new aws.route53.HealthCheck("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HealthCheck</span><span class="p">(resource_name, opts=None, </span>child_health_threshold=None<span class="p">, </span>child_healthchecks=None<span class="p">, </span>cloudwatch_alarm_name=None<span class="p">, </span>cloudwatch_alarm_region=None<span class="p">, </span>enable_sni=None<span class="p">, </span>failure_threshold=None<span class="p">, </span>fqdn=None<span class="p">, </span>insufficient_data_health_status=None<span class="p">, </span>invert_healthcheck=None<span class="p">, </span>ip_address=None<span class="p">, </span>measure_latency=None<span class="p">, </span>port=None<span class="p">, </span>reference_name=None<span class="p">, </span>regions=None<span class="p">, </span>request_interval=None<span class="p">, </span>resource_path=None<span class="p">, </span>search_string=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HealthCheck</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>child_health_threshold=None<span class="p">, </span>child_healthchecks=None<span class="p">, </span>cloudwatch_alarm_name=None<span class="p">, </span>cloudwatch_alarm_region=None<span class="p">, </span>enable_sni=None<span class="p">, </span>failure_threshold=None<span class="p">, </span>fqdn=None<span class="p">, </span>insufficient_data_health_status=None<span class="p">, </span>invert_healthcheck=None<span class="p">, </span>ip_address=None<span class="p">, </span>measure_latency=None<span class="p">, </span>port=None<span class="p">, </span>reference_name=None<span class="p">, </span>regions=None<span class="p">, </span>request_interval=None<span class="p">, </span>resource_path=None<span class="p">, </span>search_string=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -453,7 +499,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
 </dl>
@@ -632,7 +678,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
 </dl>
@@ -811,7 +857,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
 </dl>
@@ -990,7 +1036,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
 </dl>
@@ -1076,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing HealthCheck Resource {#look-up}
 
 Get an existing HealthCheck resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#HealthCheckState">HealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#HealthCheck">HealthCheck</a></span></code></pre></div>
@@ -1357,7 +1403,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1536,7 +1582,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1715,7 +1761,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1894,7 +1940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the health check.
+    <dd>{{% md %}}A map of tags to assign to the health check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

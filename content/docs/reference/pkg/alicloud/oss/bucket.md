@@ -15,12 +15,26 @@ Provides a resource to create a oss bucket and set its attribution.
 > **NOTE:** The bucket namespace is shared by all users of the OSS system. Please set bucket name as unique as possible.
 
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Private Bucket
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -30,171 +44,13 @@ const bucket_acl = new alicloud.oss.Bucket("bucket-acl", {
     bucket: "bucket-170309-acl",
 });
 ```
-
-Static Website
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const bucket_website = new alicloud.oss.Bucket("bucket-website", {
-    bucket: "bucket-170309-website",
-    website: {
-        errorDocument: "error.html",
-        indexDocument: "index.html",
-    },
-});
-```
-
-Enable Logging
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const bucket_target = new alicloud.oss.Bucket("bucket-target", {
-    acl: "public-read",
-    bucket: "bucket-170309-acl",
-});
-const bucket_logging = new alicloud.oss.Bucket("bucket-logging", {
-    bucket: "bucket-170309-logging",
-    logging: {
-        targetBucket: bucket_target.id,
-        targetPrefix: "log/",
-    },
-});
-```
-
-Referer configuration
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const bucket_referer = new alicloud.oss.Bucket("bucket-referer", {
-    acl: "private",
-    bucket: "bucket-170309-referer",
-    refererConfig: {
-        allowEmpty: false,
-        referers: [
-            "http://www.aliyun.com",
-            "https://www.aliyun.com",
-        ],
-    },
-});
-```
-
-Set lifecycle rule
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const bucket_lifecycle = new alicloud.oss.Bucket("bucket-lifecycle", {
-    acl: "public-read",
-    bucket: "bucket-170309-lifecycle",
-    lifecycleRules: [{
-        enabled: true,
-        id: "rule-days-transition",
-        prefix: "path3/",
-        transitions: [
-            {
-                createdBeforeDate: "2020-11-11",
-                storageClass: "IA",
-            },
-            {
-                createdBeforeDate: "2021-11-11",
-                storageClass: "Archive",
-            },
-        ],
-    }],
-});
-```
-
-Set bucket policy 
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const bucket_policy = new alicloud.oss.Bucket("bucket-policy", {
-    acl: "private",
-    bucket: "bucket-170309-policy",
-    policy: `  {"Statement":
-      [{"Action":
-          ["oss:PutObject", "oss:GetObject", "oss:DeleteBucket"],
-        "Effect":"Allow",
-        "Resource":
-            ["acs:oss:*:*:*"]}],
-   "Version":"1"}
-  `,
-});
-```
-
-IA Bucket
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const bucket_storageclass = new alicloud.oss.Bucket("bucket-storageclass", {
-    bucket: "bucket-170309-storageclass",
-    storageClass: "IA",
-});
-```
-
-Set bucket server-side encryption rule 
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const bucket_sserule = new alicloud.oss.Bucket("bucket-sserule", {
-    acl: "private",
-    bucket: "bucket-170309-sserule",
-    serverSideEncryptionRule: {
-        sseAlgorithm: "AES256",
-    },
-});
-```
-
-Set bucket tags 
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const bucket_tags = new alicloud.oss.Bucket("bucket-tags", {
-    acl: "private",
-    bucket: "bucket-170309-tags",
-    tags: {
-        key1: "value1",
-        key2: "value2",
-    },
-});
-```
-
-Enable bucket versioning 
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const bucket_versioning = new alicloud.oss.Bucket("bucket-versioning", {
-    acl: "private",
-    bucket: "bucket-170309-versioning",
-    versioning: {
-        status: "Enabled",
-    },
-});
-```
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Bucket Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1158,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Bucket Resource {#look-up}
 
 Get an existing Bucket resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/oss/#BucketState">BucketState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/oss/#Bucket">Bucket</a></span></code></pre></div>
@@ -2003,6 +1859,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketCorsRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketCorsRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Inputs.BucketCorsRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Outputs.BucketCorsRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2225,6 +2084,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketLifecycleRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketLifecycleRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Inputs.BucketLifecycleRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Outputs.BucketLifecycleRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2449,6 +2311,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketLifecycleRuleExpirationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketLifecycleRuleExpirationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Inputs.BucketLifecycleRuleExpirationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Outputs.BucketLifecycleRuleExpiration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2563,6 +2428,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketLifecycleRuleTransitionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketLifecycleRuleTransitionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Inputs.BucketLifecycleRuleTransitionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Outputs.BucketLifecycleRuleTransition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2715,6 +2583,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketLoggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketLoggingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Inputs.BucketLoggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Outputs.BucketLogging.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2829,6 +2700,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketRefererConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketRefererConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Inputs.BucketRefererConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Outputs.BucketRefererConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2945,6 +2819,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketServerSideEncryptionRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketServerSideEncryptionRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Inputs.BucketServerSideEncryptionRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Outputs.BucketServerSideEncryptionRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3024,6 +2901,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketVersioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketVersioningOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Inputs.BucketVersioningArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Outputs.BucketVersioning.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3102,6 +2982,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketWebsiteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#BucketWebsiteOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Inputs.BucketWebsiteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Oss.Outputs.BucketWebsite.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

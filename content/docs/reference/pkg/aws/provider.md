@@ -18,7 +18,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 ## Create a Provider Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, opts=None, </span>access_key=None<span class="p">, </span>allowed_account_ids=None<span class="p">, </span>assume_role=None<span class="p">, </span>endpoints=None<span class="p">, </span>forbidden_account_ids=None<span class="p">, </span>ignore_tags=None<span class="p">, </span>insecure=None<span class="p">, </span>max_retries=None<span class="p">, </span>profile=None<span class="p">, </span>region=None<span class="p">, </span>s3_force_path_style=None<span class="p">, </span>secret_key=None<span class="p">, </span>shared_credentials_file=None<span class="p">, </span>skip_credentials_validation=None<span class="p">, </span>skip_get_ec2_platforms=None<span class="p">, </span>skip_metadata_api_check=None<span class="p">, </span>skip_region_validation=None<span class="p">, </span>skip_requesting_account_id=None<span class="p">, </span>token=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_key=None<span class="p">, </span>allowed_account_ids=None<span class="p">, </span>assume_role=None<span class="p">, </span>endpoints=None<span class="p">, </span>forbidden_account_ids=None<span class="p">, </span>ignore_tags=None<span class="p">, </span>insecure=None<span class="p">, </span>max_retries=None<span class="p">, </span>profile=None<span class="p">, </span>region=None<span class="p">, </span>s3_force_path_style=None<span class="p">, </span>secret_key=None<span class="p">, </span>shared_credentials_file=None<span class="p">, </span>skip_credentials_validation=None<span class="p">, </span>skip_get_ec2_platforms=None<span class="p">, </span>skip_metadata_api_check=None<span class="p">, </span>skip_region_validation=None<span class="p">, </span>skip_requesting_account_id=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -994,6 +994,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#ProviderAssumeRoleArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.ProviderAssumeRoleArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1164,6 +1167,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#ProviderEndpointArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.ProviderEndpointArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 
@@ -5527,6 +5533,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#ProviderIgnoreTagsArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.ProviderIgnoreTagsArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 

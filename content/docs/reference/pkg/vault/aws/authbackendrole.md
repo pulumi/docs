@@ -22,7 +22,7 @@ information.
 
 
 ## Create a AuthBackendRole Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -30,7 +30,7 @@ information.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackendRole</span><span class="p">(resource_name, opts=None, </span>allow_instance_migration=None<span class="p">, </span>auth_type=None<span class="p">, </span>backend=None<span class="p">, </span>bound_account_ids=None<span class="p">, </span>bound_ami_ids=None<span class="p">, </span>bound_ec2_instance_ids=None<span class="p">, </span>bound_iam_instance_profile_arns=None<span class="p">, </span>bound_iam_principal_arns=None<span class="p">, </span>bound_iam_role_arns=None<span class="p">, </span>bound_regions=None<span class="p">, </span>bound_subnet_ids=None<span class="p">, </span>bound_vpc_ids=None<span class="p">, </span>disallow_reauthentication=None<span class="p">, </span>inferred_aws_region=None<span class="p">, </span>inferred_entity_type=None<span class="p">, </span>max_ttl=None<span class="p">, </span>period=None<span class="p">, </span>policies=None<span class="p">, </span>resolve_aws_unique_ids=None<span class="p">, </span>role=None<span class="p">, </span>role_tag=None<span class="p">, </span>token_bound_cidrs=None<span class="p">, </span>token_explicit_max_ttl=None<span class="p">, </span>token_max_ttl=None<span class="p">, </span>token_no_default_policy=None<span class="p">, </span>token_num_uses=None<span class="p">, </span>token_period=None<span class="p">, </span>token_policies=None<span class="p">, </span>token_ttl=None<span class="p">, </span>token_type=None<span class="p">, </span>ttl=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackendRole</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_instance_migration=None<span class="p">, </span>auth_type=None<span class="p">, </span>backend=None<span class="p">, </span>bound_account_ids=None<span class="p">, </span>bound_ami_ids=None<span class="p">, </span>bound_ec2_instance_ids=None<span class="p">, </span>bound_iam_instance_profile_arns=None<span class="p">, </span>bound_iam_principal_arns=None<span class="p">, </span>bound_iam_role_arns=None<span class="p">, </span>bound_regions=None<span class="p">, </span>bound_subnet_ids=None<span class="p">, </span>bound_vpc_ids=None<span class="p">, </span>disallow_reauthentication=None<span class="p">, </span>inferred_aws_region=None<span class="p">, </span>inferred_entity_type=None<span class="p">, </span>max_ttl=None<span class="p">, </span>period=None<span class="p">, </span>policies=None<span class="p">, </span>resolve_aws_unique_ids=None<span class="p">, </span>role=None<span class="p">, </span>role_tag=None<span class="p">, </span>token_bound_cidrs=None<span class="p">, </span>token_explicit_max_ttl=None<span class="p">, </span>token_max_ttl=None<span class="p">, </span>token_no_default_policy=None<span class="p">, </span>token_num_uses=None<span class="p">, </span>token_period=None<span class="p">, </span>token_policies=None<span class="p">, </span>token_ttl=None<span class="p">, </span>token_type=None<span class="p">, </span>ttl=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1718,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AuthBackendRole Resource {#look-up}
 
 Get an existing AuthBackendRole resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendRoleState">AuthBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendRole">AuthBackendRole</a></span></code></pre></div>

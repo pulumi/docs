@@ -12,12 +12,26 @@ meta_desc: "Explore the SubnetPool resource of the networking module, including 
 
 Manages a V2 Neutron subnetpool resource within OpenStack.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Create a Subnet Pool
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -30,11 +44,22 @@ const subnetpool1 = new openstack.networking.SubnetPool("subnetpool_1", {
     ],
 });
 ```
-
 {{% /example %}}
-{{% example %}}
-### Create a Subnet from a Subnet Pool
 
+### Create a Subnet from a Subnet Pool
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -51,14 +76,13 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
     subnetpoolId: subnetpool1.id,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a SubnetPool Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -66,7 +90,7 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SubnetPool</span><span class="p">(resource_name, opts=None, </span>address_scope_id=None<span class="p">, </span>default_prefixlen=None<span class="p">, </span>default_quota=None<span class="p">, </span>description=None<span class="p">, </span>ip_version=None<span class="p">, </span>is_default=None<span class="p">, </span>max_prefixlen=None<span class="p">, </span>min_prefixlen=None<span class="p">, </span>name=None<span class="p">, </span>prefixes=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>shared=None<span class="p">, </span>tags=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SubnetPool</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address_scope_id=None<span class="p">, </span>default_prefixlen=None<span class="p">, </span>default_quota=None<span class="p">, </span>description=None<span class="p">, </span>ip_version=None<span class="p">, </span>is_default=None<span class="p">, </span>max_prefixlen=None<span class="p">, </span>min_prefixlen=None<span class="p">, </span>name=None<span class="p">, </span>prefixes=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>shared=None<span class="p">, </span>tags=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1134,7 +1158,7 @@ explicitly and implicitly added.
 ## Look up an Existing SubnetPool Resource {#look-up}
 
 Get an existing SubnetPool resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#SubnetPoolState">SubnetPoolState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#SubnetPool">SubnetPool</a></span></code></pre></div>

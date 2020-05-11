@@ -13,10 +13,26 @@ meta_desc: "Explore the SpotFleetRequest resource of the ec2 module, including e
 Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
 instances to be requested on the Spot market.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Using launch specifications
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -56,10 +72,22 @@ const cheapCompute = new aws.ec2.SpotFleetRequest("cheap_compute", {
     validUntil: "2019-11-04T20:44:20Z",
 });
 ```
+{{% /example %}}
 
-> **NOTE:** This provider does not support the functionality where multiple `subnet_id` or `availability_zone` parameters can be specified in the same
-launch configuration block. If you want to specify multiple values, then separate launch configuration blocks should be used:
+### Using multiple launch specifications
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -85,14 +113,13 @@ const foo = new aws.ec2.SpotFleetRequest("foo", {
     validUntil: "2019-11-04T20:44:20Z",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a SpotFleetRequest Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -100,7 +127,7 @@ const foo = new aws.ec2.SpotFleetRequest("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SpotFleetRequest</span><span class="p">(resource_name, opts=None, </span>allocation_strategy=None<span class="p">, </span>excess_capacity_termination_policy=None<span class="p">, </span>fleet_type=None<span class="p">, </span>iam_fleet_role=None<span class="p">, </span>instance_interruption_behaviour=None<span class="p">, </span>instance_pools_to_use_count=None<span class="p">, </span>launch_specifications=None<span class="p">, </span>load_balancers=None<span class="p">, </span>replace_unhealthy_instances=None<span class="p">, </span>spot_price=None<span class="p">, </span>tags=None<span class="p">, </span>target_capacity=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>terminate_instances_with_expiration=None<span class="p">, </span>valid_from=None<span class="p">, </span>valid_until=None<span class="p">, </span>wait_for_fulfillment=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SpotFleetRequest</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocation_strategy=None<span class="p">, </span>excess_capacity_termination_policy=None<span class="p">, </span>fleet_type=None<span class="p">, </span>iam_fleet_role=None<span class="p">, </span>instance_interruption_behaviour=None<span class="p">, </span>instance_pools_to_use_count=None<span class="p">, </span>launch_specifications=None<span class="p">, </span>launch_template_configs=None<span class="p">, </span>load_balancers=None<span class="p">, </span>replace_unhealthy_instances=None<span class="p">, </span>spot_price=None<span class="p">, </span>tags=None<span class="p">, </span>target_capacity=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>terminate_instances_with_expiration=None<span class="p">, </span>valid_from=None<span class="p">, </span>valid_until=None<span class="p">, </span>wait_for_fulfillment=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -286,17 +313,6 @@ terminateInstancesWithExpiration.
 
     <dt class="property-required"
             title="Required">
-        <span>Launch<wbr>Specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Used to define the launch configuration of the
-spot-fleet request. Can be specified multiple times to define different bids
-across different markets and instance types.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
@@ -364,6 +380,26 @@ the number of Spot pools that you specify.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Launch<wbr>Specifications</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Used to define the launch configuration of the
+spot-fleet request. Can be specified multiple times to define different bids
+across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Launch<wbr>Template<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Load<wbr>Balancers</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
@@ -386,7 +422,7 @@ the number of Spot pools that you specify.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The maximum bid price per unit hour.
+    <dd>{{% md %}}The maximum spot bid for this override request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -395,7 +431,7 @@ the number of Spot pools that you specify.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -467,17 +503,6 @@ terminateInstancesWithExpiration.
 
     <dt class="property-required"
             title="Required">
-        <span>Launch<wbr>Specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}Used to define the launch configuration of the
-spot-fleet request. Can be specified multiple times to define different bids
-across different markets and instance types.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Target<wbr>Capacity</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
@@ -545,6 +570,26 @@ the number of Spot pools that you specify.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Launch<wbr>Specifications</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Used to define the launch configuration of the
+spot-fleet request. Can be specified multiple times to define different bids
+across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Launch<wbr>Template<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Load<wbr>Balancers</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -567,7 +612,7 @@ the number of Spot pools that you specify.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The maximum bid price per unit hour.
+    <dd>{{% md %}}The maximum spot bid for this override request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -576,7 +621,7 @@ the number of Spot pools that you specify.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -648,17 +693,6 @@ terminateInstancesWithExpiration.
 
     <dt class="property-required"
             title="Required">
-        <span>launch<wbr>Specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification[]</a></span>
-    </dt>
-    <dd>{{% md %}}Used to define the launch configuration of the
-spot-fleet request. Can be specified multiple times to define different bids
-across different markets and instance types.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>target<wbr>Capacity</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
@@ -726,6 +760,26 @@ the number of Spot pools that you specify.
 
     <dt class="property-optional"
             title="Optional">
+        <span>launch<wbr>Specifications</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification[]</a></span>
+    </dt>
+    <dd>{{% md %}}Used to define the launch configuration of the
+spot-fleet request. Can be specified multiple times to define different bids
+across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>launch<wbr>Template<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>load<wbr>Balancers</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
@@ -748,7 +802,7 @@ the number of Spot pools that you specify.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The maximum bid price per unit hour.
+    <dd>{{% md %}}The maximum spot bid for this override request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -757,7 +811,7 @@ the number of Spot pools that you specify.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -829,17 +883,6 @@ terminateInstancesWithExpiration.
 
     <dt class="property-required"
             title="Required">
-        <span>launch_<wbr>specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification]</a></span>
-    </dt>
-    <dd>{{% md %}}Used to define the launch configuration of the
-spot-fleet request. Can be specified multiple times to define different bids
-across different markets and instance types.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>target_<wbr>capacity</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -907,6 +950,26 @@ the number of Spot pools that you specify.
 
     <dt class="property-optional"
             title="Optional">
+        <span>launch_<wbr>specifications</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification]</a></span>
+    </dt>
+    <dd>{{% md %}}Used to define the launch configuration of the
+spot-fleet request. Can be specified multiple times to define different bids
+across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>launch_<wbr>template_<wbr>configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>load_<wbr>balancers</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -929,7 +992,7 @@ the number of Spot pools that you specify.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The maximum bid price per unit hour.
+    <dd>{{% md %}}The maximum spot bid for this override request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -938,7 +1001,7 @@ the number of Spot pools that you specify.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1140,14 +1203,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SpotFleetRequest Resource {#look-up}
 
 Get an existing SpotFleetRequest resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotFleetRequestState">SpotFleetRequestState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotFleetRequest">SpotFleetRequest</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allocation_strategy=None<span class="p">, </span>client_token=None<span class="p">, </span>excess_capacity_termination_policy=None<span class="p">, </span>fleet_type=None<span class="p">, </span>iam_fleet_role=None<span class="p">, </span>instance_interruption_behaviour=None<span class="p">, </span>instance_pools_to_use_count=None<span class="p">, </span>launch_specifications=None<span class="p">, </span>load_balancers=None<span class="p">, </span>replace_unhealthy_instances=None<span class="p">, </span>spot_price=None<span class="p">, </span>spot_request_state=None<span class="p">, </span>tags=None<span class="p">, </span>target_capacity=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>terminate_instances_with_expiration=None<span class="p">, </span>valid_from=None<span class="p">, </span>valid_until=None<span class="p">, </span>wait_for_fulfillment=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allocation_strategy=None<span class="p">, </span>client_token=None<span class="p">, </span>excess_capacity_termination_policy=None<span class="p">, </span>fleet_type=None<span class="p">, </span>iam_fleet_role=None<span class="p">, </span>instance_interruption_behaviour=None<span class="p">, </span>instance_pools_to_use_count=None<span class="p">, </span>launch_specifications=None<span class="p">, </span>launch_template_configs=None<span class="p">, </span>load_balancers=None<span class="p">, </span>replace_unhealthy_instances=None<span class="p">, </span>spot_price=None<span class="p">, </span>spot_request_state=None<span class="p">, </span>tags=None<span class="p">, </span>target_capacity=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>terminate_instances_with_expiration=None<span class="p">, </span>valid_from=None<span class="p">, </span>valid_until=None<span class="p">, </span>wait_for_fulfillment=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1345,7 +1408,16 @@ the number of Spot pools that you specify.
     </dt>
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
-across different markets and instance types.
+across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Launch<wbr>Template<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1372,7 +1444,7 @@ across different markets and instance types.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The maximum bid price per unit hour.
+    <dd>{{% md %}}The maximum spot bid for this override request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1390,7 +1462,7 @@ across different markets and instance types.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1543,7 +1615,16 @@ the number of Spot pools that you specify.
     </dt>
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
-across different markets and instance types.
+across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Launch<wbr>Template<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1570,7 +1651,7 @@ across different markets and instance types.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The maximum bid price per unit hour.
+    <dd>{{% md %}}The maximum spot bid for this override request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1588,7 +1669,7 @@ across different markets and instance types.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1741,7 +1822,16 @@ the number of Spot pools that you specify.
     </dt>
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
-across different markets and instance types.
+across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>launch<wbr>Template<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1768,7 +1858,7 @@ across different markets and instance types.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The maximum bid price per unit hour.
+    <dd>{{% md %}}The maximum spot bid for this override request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1786,7 +1876,7 @@ across different markets and instance types.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1939,7 +2029,16 @@ the number of Spot pools that you specify.
     </dt>
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
-across different markets and instance types.
+across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>launch_<wbr>template_<wbr>configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1966,7 +2065,7 @@ across different markets and instance types.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The maximum bid price per unit hour.
+    <dd>{{% md %}}The maximum spot bid for this override request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1984,7 +2083,7 @@ across different markets and instance types.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2069,6 +2168,9 @@ timeout of 10m is reached.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2090,7 +2192,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of instance to request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2106,7 +2209,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The availability zone in which to place the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2194,7 +2298,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The maximum bid price per unit hour.
+    <dd>{{% md %}}The maximum spot bid for this override request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2203,7 +2307,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The subnet in which to launch the requested instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2211,7 +2316,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2236,7 +2341,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2259,7 +2365,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of instance to request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2275,7 +2382,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The availability zone in which to place the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2363,7 +2471,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The maximum bid price per unit hour.
+    <dd>{{% md %}}The maximum spot bid for this override request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2372,7 +2480,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The subnet in which to launch the requested instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2380,7 +2489,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2405,7 +2514,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2428,7 +2538,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of instance to request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2444,7 +2555,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The availability zone in which to place the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2532,7 +2644,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The maximum bid price per unit hour.
+    <dd>{{% md %}}The maximum spot bid for this override request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2541,7 +2653,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The subnet in which to launch the requested instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2549,7 +2662,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2574,7 +2687,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2597,7 +2711,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of instance to request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2613,7 +2728,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The availability zone in which to place the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2701,7 +2817,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The maximum bid price per unit hour.
+    <dd>{{% md %}}The maximum spot bid for this override request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2710,7 +2826,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The subnet in which to launch the requested instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2718,7 +2835,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2743,7 +2860,8 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2759,6 +2877,9 @@ timeout of 10m is reached.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationEbsBlockDeviceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchSpecificationEbsBlockDevice.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3059,6 +3180,9 @@ timeout of 10m is reached.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchSpecificationEphemeralBlockDevice.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3165,6 +3289,9 @@ timeout of 10m is reached.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationRootBlockDeviceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchSpecificationRootBlockDevice.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3385,6 +3512,540 @@ timeout of 10m is reached.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="spotfleetrequestlaunchtemplateconfig">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestLaunchTemplateConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestLaunchTemplateConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchTemplateConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Launch<wbr>Template<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Launch template specification. See Launch Template Specification below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Overrides</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more override configurations. See Overrides below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Launch<wbr>Template<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Launch template specification. See Launch Template Specification below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Overrides</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override</a></span>
+    </dt>
+    <dd>{{% md %}}One or more override configurations. See Overrides below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>launch<wbr>Template<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Launch template specification. See Launch Template Specification below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>overrides</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more override configurations. See Overrides below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>launch<wbr>Template<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Dict[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification]</a></span>
+    </dt>
+    <dd>{{% md %}}Launch template specification. See Launch Template Specification below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>overrides</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">List[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more override configurations. See Overrides below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecification">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the launch template. Conflicts with `id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource's attribute, e.g. `"${aws_launch_template.foo.latest_version}"`. It will use the default version if omitted.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the launch template. Conflicts with `id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource's attribute, e.g. `"${aws_launch_template.foo.latest_version}"`. It will use the default version if omitted.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the launch template. Conflicts with `id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource's attribute, e.g. `"${aws_launch_template.foo.latest_version}"`. It will use the default version if omitted.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the launch template. Conflicts with `id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource's attribute, e.g. `"${aws_launch_template.foo.latest_version}"`. It will use the default version if omitted.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="spotfleetrequestlaunchtemplateconfigoverride">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestLaunchTemplateConfigOverride">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestLaunchTemplateConfigOverride">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigOverrideOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchTemplateConfigOverride.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The availability zone in which to place the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of instance to request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Spot<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum spot bid for this override request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The subnet in which to launch the requested instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Weighted<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The availability zone in which to place the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of instance to request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Spot<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum spot bid for this override request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The subnet in which to launch the requested instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Weighted<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The availability zone in which to place the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of instance to request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>spot<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum spot bid for this override request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The subnet in which to launch the requested instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>weighted<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability_<wbr>zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The availability zone in which to place the request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of instance to request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>spot_<wbr>price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum spot bid for this override request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>subnet_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The subnet in which to launch the requested instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>weighted<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

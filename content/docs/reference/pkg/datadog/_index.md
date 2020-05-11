@@ -1,6 +1,7 @@
 ---
 title: "Datadog"
-block_external_search_index: true
+title_tag: "Package Datadog"
+meta_desc: "A Pulumi package for creating and managing Datadog resources."
 menu:
     reference:
         parent: API Reference
@@ -11,14 +12,14 @@ menu:
 
 A Pulumi package for creating and managing Datadog resources.
 
-<h3>Modules</h3>
+<h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="aws/" title="aws"><span class="symbol module"></span>aws</a></li>
     <li><a href="gcp/" title="gcp"><span class="symbol module"></span>gcp</a></li>
     <li><a href="pagerduty/" title="pagerduty"><span class="symbol module"></span>pagerduty</a></li>
 </ul>
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
     <li><a href="dashboardlist" title="DashboardList"><span class="symbol resource"></span>DashboardList</a></li>
@@ -38,20 +39,20 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-datadog">https://github.com/pulumi/pulumi-datadog</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.1.0</dd>
 </dl>
 

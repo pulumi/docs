@@ -12,43 +12,14 @@ meta_desc: "Explore the LaunchConfiguration resource of the ec2 module, includin
 
 Provides a resource to create a new launch configuration, used for autoscaling groups.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const ubuntu = pulumi.output(aws.getAmi({
-    filters: [
-        {
-            name: "name",
-            values: ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
-        },
-        {
-            name: "virtualization-type",
-            values: ["hvm"],
-        },
-    ],
-    mostRecent: true,
-    owners: ["099720109477"], // Canonical
-}, { async: true }));
-const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
-    imageId: ubuntu.id,
-    instanceType: "t2.micro",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Using with AutoScaling Groups
 
 Launch Configurations cannot be updated after creation with the Amazon
 Web Service API. In order to update a Launch Configuration, this provider will
 destroy the existing resource and create a replacement. In order to effectively
-use a Launch Configuration resource with an [AutoScaling Group resource][1],
-it's recommended to specify `create_before_destroy` in a [lifecycle][2] block.
+use a Launch Configuration resource with an [AutoScaling Group resource](https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html),
+it's recommended to specify `create_before_destroy` in a [lifecycle](https://www.terraform.io/docs/configuration/resources.html#lifecycle) block.
 Either omit the Launch Configuration `name` attribute, or specify a partial name
 with `name_prefix`.  Example:
 
@@ -93,7 +64,7 @@ Auto Scaling Group to reserve instances. Simply specifying the `spot_price`
 parameter will set the price on the Launch Configuration which will attempt to
 reserve your instances at this price.  See the [AWS Spot Instance
 documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
-for more information or how to launch [Spot Instances][3] with this provider.
+for more information or how to launch [Spot Instances](https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html) with this provider.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -179,10 +150,54 @@ cannot currently be detected by this provider. After updating to block device
 configuration, resource recreation can be manually triggered by using the
 [`up` command with the --replace argument](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const ubuntu = pulumi.output(aws.getAmi({
+    filters: [
+        {
+            name: "name",
+            values: ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"],
+        },
+        {
+            name: "virtualization-type",
+            values: ["hvm"],
+        },
+    ],
+    mostRecent: true,
+    owners: ["099720109477"], // Canonical
+}, { async: true }));
+const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
+    imageId: ubuntu.id,
+    instanceType: "t2.micro",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LaunchConfiguration Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -190,7 +205,7 @@ configuration, resource recreation can be manually triggered by using the
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LaunchConfiguration</span><span class="p">(resource_name, opts=None, </span>associate_public_ip_address=None<span class="p">, </span>ebs_block_devices=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>ephemeral_block_devices=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_type=None<span class="p">, </span>key_name=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>root_block_device=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_price=None<span class="p">, </span>user_data=None<span class="p">, </span>user_data_base64=None<span class="p">, </span>vpc_classic_link_id=None<span class="p">, </span>vpc_classic_link_security_groups=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LaunchConfiguration</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>associate_public_ip_address=None<span class="p">, </span>ebs_block_devices=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>ephemeral_block_devices=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_type=None<span class="p">, </span>key_name=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>root_block_device=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_price=None<span class="p">, </span>user_data=None<span class="p">, </span>user_data_base64=None<span class="p">, </span>vpc_classic_link_id=None<span class="p">, </span>vpc_classic_link_security_groups=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1218,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LaunchConfiguration Resource {#look-up}
 
 Get an existing LaunchConfiguration resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfigurationState">LaunchConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfiguration">LaunchConfiguration</a></span></code></pre></div>
@@ -2135,6 +2150,9 @@ device of the instance. See Block Devices below for details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationEbsBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchConfigurationEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchConfigurationEbsBlockDevice.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2434,6 +2452,9 @@ device of the instance. See Block Devices below for details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationEphemeralBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationEphemeralBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchConfigurationEphemeralBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchConfigurationEphemeralBlockDevice.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2540,6 +2561,9 @@ device of the instance. See Block Devices below for details.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationRootBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LaunchConfigurationRootBlockDeviceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchConfigurationRootBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchConfigurationRootBlockDevice.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

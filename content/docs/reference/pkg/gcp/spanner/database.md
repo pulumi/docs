@@ -1,7 +1,8 @@
 
 ---
 title: "Database"
-block_external_search_index: true
+title_tag: "Resource Database | Module spanner | Package GCP"
+meta_desc: "Explore the Database resource of the spanner module, including examples, input properties, output properties, lookup functions, and supporting types. A Cloud Spanner Database which is hosted on a Spanner instance."
 ---
 
 
@@ -21,7 +22,7 @@ To get more information about Database, see:
 
 
 ## Create a Database Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -29,7 +30,7 @@ To get more information about Database, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Database</span><span class="p">(resource_name, opts=None, </span>ddls=None<span class="p">, </span>instance=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Database</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ddls=None<span class="p">, </span>instance=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -216,9 +217,10 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc.
-These statements execute atomically with the creation of the database: if there is an error in any statement, the
-database is not created.
+    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created
+database. Statements can create tables, indexes, etc. These statements
+execute atomically with the creation of the database: if there is an
+error in any statement, the database is not created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -227,8 +229,8 @@ database is not created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after the instance is created. Values are of the form
-[a-z][-a-z0-9]*[a-z0-9].
+    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after
+the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -263,9 +265,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc.
-These statements execute atomically with the creation of the database: if there is an error in any statement, the
-database is not created.
+    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created
+database. Statements can create tables, indexes, etc. These statements
+execute atomically with the creation of the database: if there is an
+error in any statement, the database is not created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -274,8 +277,8 @@ database is not created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after the instance is created. Values are of the form
-[a-z][-a-z0-9]*[a-z0-9].
+    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after
+the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -310,9 +313,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc.
-These statements execute atomically with the creation of the database: if there is an error in any statement, the
-database is not created.
+    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created
+database. Statements can create tables, indexes, etc. These statements
+execute atomically with the creation of the database: if there is an
+error in any statement, the database is not created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -321,8 +325,8 @@ database is not created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after the instance is created. Values are of the form
-[a-z][-a-z0-9]*[a-z0-9].
+    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after
+the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -357,9 +361,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc.
-These statements execute atomically with the creation of the database: if there is an error in any statement, the
-database is not created.
+    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created
+database. Statements can create tables, indexes, etc. These statements
+execute atomically with the creation of the database: if there is an
+error in any statement, the database is not created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -368,8 +373,8 @@ database is not created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after the instance is created. Values are of the form
-[a-z][-a-z0-9]*[a-z0-9].
+    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after
+the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -501,7 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Database Resource {#look-up}
 
 Get an existing Database resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/spanner/#DatabaseState">DatabaseState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/spanner/#Database">Database</a></span></code></pre></div>
@@ -628,9 +633,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc.
-These statements execute atomically with the creation of the database: if there is an error in any statement, the
-database is not created.
+    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created
+database. Statements can create tables, indexes, etc. These statements
+execute atomically with the creation of the database: if there is an
+error in any statement, the database is not created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -648,8 +654,8 @@ database is not created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after the instance is created. Values are of the form
-[a-z][-a-z0-9]*[a-z0-9].
+    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after
+the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -684,9 +690,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc.
-These statements execute atomically with the creation of the database: if there is an error in any statement, the
-database is not created.
+    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created
+database. Statements can create tables, indexes, etc. These statements
+execute atomically with the creation of the database: if there is an
+error in any statement, the database is not created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -704,8 +711,8 @@ database is not created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after the instance is created. Values are of the form
-[a-z][-a-z0-9]*[a-z0-9].
+    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after
+the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -740,9 +747,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc.
-These statements execute atomically with the creation of the database: if there is an error in any statement, the
-database is not created.
+    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created
+database. Statements can create tables, indexes, etc. These statements
+execute atomically with the creation of the database: if there is an
+error in any statement, the database is not created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -760,8 +768,8 @@ database is not created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after the instance is created. Values are of the form
-[a-z][-a-z0-9]*[a-z0-9].
+    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after
+the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -796,9 +804,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc.
-These statements execute atomically with the creation of the database: if there is an error in any statement, the
-database is not created.
+    <dd>{{% md %}}An optional list of DDL statements to run inside the newly created
+database. Statements can create tables, indexes, etc. These statements
+execute atomically with the creation of the database: if there is an
+error in any statement, the database is not created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -816,8 +825,8 @@ database is not created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after the instance is created. Values are of the form
-[a-z][-a-z0-9]*[a-z0-9].
+    <dd>{{% md %}}A unique identifier for the database, which cannot be changed after
+the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -858,8 +867,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

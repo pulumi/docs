@@ -13,24 +13,24 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-alicloud/issues">pulumi/pulumi-alicloud repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/issues">terraform-providers/terraform-provider-alicloud repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_alicloud.vpn"></span><dl class="class">
+<span class="target" id="module-pulumi_alicloud.vpn"></span><dl class="py class">
 <dt id="pulumi_alicloud.vpn.AwaitableGetConnectionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">AwaitableGetConnectionsResult</code><span class="sig-paren">(</span><em class="sig-param">connections=None</em>, <em class="sig-param">customer_gateway_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.AwaitableGetConnectionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">AwaitableGetConnectionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">connections</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.AwaitableGetConnectionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.vpn.AwaitableGetCustomerGatewaysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">AwaitableGetCustomerGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">gateways=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.AwaitableGetCustomerGatewaysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">AwaitableGetCustomerGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gateways</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.AwaitableGetCustomerGatewaysResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.vpn.AwaitableGetGatewaysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">AwaitableGetGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">business_status=None</em>, <em class="sig-param">gateways=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.AwaitableGetGatewaysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">AwaitableGetGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">business_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateways</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.AwaitableGetGatewaysResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.vpn.Connection">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">Connection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">customer_gateway_id=None</em>, <em class="sig-param">effect_immediately=None</em>, <em class="sig-param">ike_configs=None</em>, <em class="sig-param">ipsec_configs=None</em>, <em class="sig-param">local_subnets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">remote_subnets=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Connection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">Connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">effect_immediately</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ike_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipsec_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_subnets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remote_subnets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Connection resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -61,21 +61,21 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">ipsecLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The SA lifecycle as the result of phase-two negotiation. The valid value is [0, 86400], the unit is second and the default value is 86400.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipsecPfs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Diffie-Hellman key exchange algorithm used by phase-two negotiation. Valid value: group1 | group2 | group5 | group14 | group24| disabled. Default value: group2</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Connection.customer_gateway_id">
-<code class="sig-name descname">customer_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.customer_gateway_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">customer_gateway_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.customer_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the customer gateway.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Connection.effect_immediately">
-<code class="sig-name descname">effect_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.effect_immediately" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">effect_immediately</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.effect_immediately" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Connection.ike_configs">
-<code class="sig-name descname">ike_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.ike_configs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ike_configs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.ike_configs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configurations of phase-one negotiation.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ikeAuthAlg</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The authentication algorithm of phase-one negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 <a href="#id5"><span class="problematic" id="id6">|</span></a>. Default value: sha1</p></li>
@@ -90,9 +90,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Connection.ipsec_configs">
-<code class="sig-name descname">ipsec_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.ipsec_configs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ipsec_configs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.ipsec_configs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configurations of phase-two negotiation.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ipsecAuthAlg</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The authentication algorithm of phase-two negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 <a href="#id7"><span class="problematic" id="id8">|</span></a>. Default value: sha1</p></li>
@@ -102,39 +102,39 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Connection.local_subnets">
-<code class="sig-name descname">local_subnets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.local_subnets" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">local_subnets</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.local_subnets" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Connection.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the IPsec connection.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Connection.remote_subnets">
-<code class="sig-name descname">remote_subnets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.remote_subnets" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">remote_subnets</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.remote_subnets" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CIDR block of the local data center. This parameter is used for phase-two negotiation.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Connection.status">
-<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The status of VPN connection.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Connection.vpn_gateway_id">
-<code class="sig-name descname">vpn_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.vpn_gateway_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vpn_gateway_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.vpn_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the VPN gateway.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.Connection.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">customer_gateway_id=None</em>, <em class="sig-param">effect_immediately=None</em>, <em class="sig-param">ike_configs=None</em>, <em class="sig-param">ipsec_configs=None</em>, <em class="sig-param">local_subnets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">remote_subnets=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">effect_immediately</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ike_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipsec_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_subnets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remote_subnets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Connection resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -176,9 +176,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.Connection.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -194,9 +194,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.Connection.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Connection.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -214,36 +214,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.vpn.CustomerGateway">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">CustomerGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">CustomerGateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a CustomerGateway resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
 :param pulumi.Input[str] description: The description of the VPN customer gateway instance.
 :param pulumi.Input[str] ip_address: The IP address of the customer gateway.
 :param pulumi.Input[str] name: The name of the VPN customer gateway. Defaults to null.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.CustomerGateway.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of the VPN customer gateway instance.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.CustomerGateway.ip_address">
-<code class="sig-name descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.ip_address" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ip_address</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP address of the customer gateway.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.CustomerGateway.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the VPN customer gateway. Defaults to null.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.CustomerGateway.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CustomerGateway resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -260,9 +260,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.CustomerGateway.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -278,9 +278,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.CustomerGateway.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.CustomerGateway.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -298,9 +298,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.vpn.Gateway">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">Gateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bandwidth=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_ipsec=None</em>, <em class="sig-param">enable_ssl=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">ssl_connections=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">Gateway</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_ipsec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_ssl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_connections</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Gateway resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -323,83 +323,83 @@ This field is ignored when enable_ssl is false.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.business_status">
-<code class="sig-name descname">business_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.business_status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">business_status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.business_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The business status of the VPN gateway.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of the VPN instance.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.enable_ipsec">
-<code class="sig-name descname">enable_ipsec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.enable_ipsec" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_ipsec</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.enable_ipsec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable or Disable IPSec VPN. At least one type of VPN should be enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.enable_ssl">
-<code class="sig-name descname">enable_ssl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.enable_ssl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_ssl</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.enable_ssl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable or Disable SSL VPN.  At least one type of VPN should be enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.instance_charge_type">
-<code class="sig-name descname">instance_charge_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.instance_charge_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">instance_charge_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.instance_charge_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The charge type for instance. If it is an international site account, the valid value is PostPaid, otherwise PrePaid. 
 Default to PostPaid.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.internet_ip">
-<code class="sig-name descname">internet_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.internet_ip" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">internet_ip</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.internet_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>The internet ip of the VPN.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the VPN. Defaults to null.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.period">
-<code class="sig-name descname">period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.period" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">period</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.period" title="Permalink to this definition">¶</a></dt>
 <dd><p>The filed is only required while the InstanceChargeType is PrePaid. Valid values: [1-9, 12, 24, 36]. Default to 1.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.ssl_connections">
-<code class="sig-name descname">ssl_connections</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.ssl_connections" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ssl_connections</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.ssl_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>The max connections of SSL VPN. Default to 5. The number of connections supported by each account is different. 
 This field is ignored when enable_ssl is false.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.status">
-<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The status of the VPN gateway.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.vpc_id">
-<code class="sig-name descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.vpc_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.vpc_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN belongs the vpc_id, the field can’t be changed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.Gateway.vswitch_id">
-<code class="sig-name descname">vswitch_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.vswitch_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vswitch_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.vswitch_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN belongs the vswitch_id, the field can’t be changed.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.Gateway.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bandwidth=None</em>, <em class="sig-param">business_status=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_ipsec=None</em>, <em class="sig-param">enable_ssl=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">internet_ip=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">ssl_connections=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bandwidth</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">business_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_ipsec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_ssl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internet_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_connections</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Gateway resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -427,9 +427,9 @@ This field is ignored when enable_ssl is false.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.Gateway.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -445,9 +445,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.Gateway.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.Gateway.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -465,41 +465,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.vpn.GetConnectionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">GetConnectionsResult</code><span class="sig-paren">(</span><em class="sig-param">connections=None</em>, <em class="sig-param">customer_gateway_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">GetConnectionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">connections</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getConnections.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetConnectionsResult.connections">
 <code class="sig-name descname">connections</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult.connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of VPN connections. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetConnectionsResult.customer_gateway_id">
 <code class="sig-name descname">customer_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult.customer_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the VPN customer gateway.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetConnectionsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetConnectionsResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult.ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Optional) IDs of the VPN connections.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetConnectionsResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult.names" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Optional) names of the VPN connections.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetConnectionsResult.vpn_gateway_id">
 <code class="sig-name descname">vpn_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetConnectionsResult.vpn_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the VPN gateway.</p>
@@ -507,65 +507,65 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.vpn.GetCustomerGatewaysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">GetCustomerGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">gateways=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.GetCustomerGatewaysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">GetCustomerGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gateways</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.GetCustomerGatewaysResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCustomerGateways.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetCustomerGatewaysResult.gateways">
 <code class="sig-name descname">gateways</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetCustomerGatewaysResult.gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of VPN customer gateways. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetCustomerGatewaysResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetCustomerGatewaysResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.vpn.GetGatewaysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">GetGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param">business_status=None</em>, <em class="sig-param">gateways=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">GetGatewaysResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">business_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateways</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGateways.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetGatewaysResult.business_status">
 <code class="sig-name descname">business_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult.business_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The business status of the VPN gateway.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetGatewaysResult.gateways">
 <code class="sig-name descname">gateways</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult.gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of VPN gateways. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetGatewaysResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetGatewaysResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult.ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>IDs of the VPN.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetGatewaysResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult.names" title="Permalink to this definition">¶</a></dt>
 <dd><p>names of the VPN.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetGatewaysResult.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The status of the VPN</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.GetGatewaysResult.vpc_id">
 <code class="sig-name descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.GetGatewaysResult.vpc_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the VPC that the VPN belongs.</p>
@@ -573,9 +573,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.vpn.RouteEntry">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">RouteEntry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">next_hop=None</em>, <em class="sig-param">publish_vpc=None</em>, <em class="sig-param">route_dest=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">weight=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">RouteEntry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">next_hop</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publish_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_dest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weight</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a RouteEntry resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -584,39 +584,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[str] route_dest: The destination network segment of the destination route.
 :param pulumi.Input[str] vpn_gateway_id: The id of the vpn gateway.
 :param pulumi.Input[float] weight: The value should be 0 or 100.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.RouteEntry.next_hop">
-<code class="sig-name descname">next_hop</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.next_hop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">next_hop</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.next_hop" title="Permalink to this definition">¶</a></dt>
 <dd><p>The next hop of the destination route.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.RouteEntry.publish_vpc">
-<code class="sig-name descname">publish_vpc</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.publish_vpc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">publish_vpc</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.publish_vpc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to issue the destination route to the VPC.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.RouteEntry.route_dest">
-<code class="sig-name descname">route_dest</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.route_dest" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">route_dest</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.route_dest" title="Permalink to this definition">¶</a></dt>
 <dd><p>The destination network segment of the destination route.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.RouteEntry.vpn_gateway_id">
-<code class="sig-name descname">vpn_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.vpn_gateway_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vpn_gateway_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.vpn_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The id of the vpn gateway.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.RouteEntry.weight">
-<code class="sig-name descname">weight</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.weight" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">weight</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.weight" title="Permalink to this definition">¶</a></dt>
 <dd><p>The value should be 0 or 100.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.RouteEntry.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">next_hop=None</em>, <em class="sig-param">publish_vpc=None</em>, <em class="sig-param">route_dest=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">next_hop</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publish_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_dest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weight</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RouteEntry resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -635,9 +635,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.RouteEntry.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -653,9 +653,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.RouteEntry.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.RouteEntry.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -673,15 +673,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.vpn.SslVpnClientCert">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">SslVpnClientCert</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ssl_vpn_server_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnClientCert" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">SslVpnClientCert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_vpn_server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnClientCert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a SslVpnClientCert resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.SslVpnClientCert.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ca_cert=None</em>, <em class="sig-param">client_cert=None</em>, <em class="sig-param">client_config=None</em>, <em class="sig-param">client_key=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ssl_vpn_server_id=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnClientCert.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssl_vpn_server_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnClientCert.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SslVpnClientCert resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -695,9 +695,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.SslVpnClientCert.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnClientCert.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnClientCert.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -713,9 +713,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.SslVpnClientCert.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnClientCert.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnClientCert.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -733,9 +733,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.vpn.SslVpnServer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">SslVpnServer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cipher=None</em>, <em class="sig-param">client_ip_pool=None</em>, <em class="sig-param">compress=None</em>, <em class="sig-param">local_subnet=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">SslVpnServer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cipher</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_ip_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compress</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_subnet</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a SslVpnServer resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -747,75 +747,75 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[float] port: The port used by the SSL-VPN server. The default value is 1194.The following ports cannot be used: [22, 2222, 22222, 9000, 9001, 9002, 7505, 80, 443, 53, 68, 123, 4510, 4560, 500, 4500].
 :param pulumi.Input[str] protocol: The protocol used by the SSL-VPN server. Valid value: UDP(default) <a href="#id13"><span class="problematic" id="id14">|</span></a>TCP
 :param pulumi.Input[str] vpn_gateway_id: The ID of the VPN gateway.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.cipher">
-<code class="sig-name descname">cipher</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.cipher" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cipher</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.cipher" title="Permalink to this definition">¶</a></dt>
 <dd><p>The encryption algorithm used by the SSL-VPN server. Valid value: AES-128-CBC (default)| AES-192-CBC | AES-256-CBC | none</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.client_ip_pool">
-<code class="sig-name descname">client_ip_pool</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.client_ip_pool" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">client_ip_pool</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.client_ip_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CIDR block from which access addresses are allocated to the virtual network interface card of the client.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.compress">
-<code class="sig-name descname">compress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.compress" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compress</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.compress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify whether to compress the communication. Valid value: true (default) | false</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.connections">
-<code class="sig-name descname">connections</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.connections" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">connections</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of current connections.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.internet_ip">
-<code class="sig-name descname">internet_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.internet_ip" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">internet_ip</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.internet_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>The internet IP of the SSL-VPN server.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.local_subnet">
-<code class="sig-name descname">local_subnet</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.local_subnet" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">local_subnet</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.local_subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CIDR block to be accessed by the client through the SSL-VPN connection. It supports to set multi CIDRs by comma join ways, like <code class="docutils literal notranslate"><span class="pre">10.0.1.0/24,10.0.2.0/24,10.0.3.0/24</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.max_connections">
-<code class="sig-name descname">max_connections</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.max_connections" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_connections</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.max_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum number of connections.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the SSL-VPN server.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.port">
-<code class="sig-name descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.port" title="Permalink to this definition">¶</a></dt>
 <dd><p>The port used by the SSL-VPN server. The default value is 1194.The following ports cannot be used: [22, 2222, 22222, 9000, 9001, 9002, 7505, 80, 443, 53, 68, 123, 4510, 4560, 500, 4500].</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.protocol">
-<code class="sig-name descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.protocol" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The protocol used by the SSL-VPN server. Valid value: UDP(default) <a href="#id15"><span class="problematic" id="id16">|</span></a>TCP</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.vpn_gateway_id">
-<code class="sig-name descname">vpn_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.vpn_gateway_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vpn_gateway_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.vpn_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the VPN gateway.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cipher=None</em>, <em class="sig-param">client_ip_pool=None</em>, <em class="sig-param">compress=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">internet_ip=None</em>, <em class="sig-param">local_subnet=None</em>, <em class="sig-param">max_connections=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cipher</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_ip_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compress</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connections</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">internet_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_subnet</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_connections</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SslVpnServer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -840,9 +840,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -858,9 +858,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.vpn.SslVpnServer.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.SslVpnServer.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -878,9 +878,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_alicloud.vpn.get_connections">
-<code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">get_connections</code><span class="sig-paren">(</span><em class="sig-param">customer_gateway_id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.get_connections" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">get_connections</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">customer_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpn_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.get_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN connections data source lists lots of VPN connections resource information owned by an Alicloud account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -895,9 +895,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_alicloud.vpn.get_customer_gateways">
-<code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">get_customer_gateways</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.get_customer_gateways" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">get_customer_gateways</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.get_customer_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN customers gateways data source lists a number of VPN customer gateways resource information owned by an Alicloud account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -910,9 +910,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_alicloud.vpn.get_gateways">
-<code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">get_gateways</code><span class="sig-paren">(</span><em class="sig-param">business_status=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.get_gateways" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.vpn.</code><code class="sig-name descname">get_gateways</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">business_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpn.get_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPNs data source lists a number of VPNs resource information owned by an Alicloud account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

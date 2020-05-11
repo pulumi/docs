@@ -14,7 +14,7 @@ meta_desc: "Explore the VirtualMachine resource of the vSphere package, includin
 
 
 ## Create a VirtualMachine Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the VirtualMachine resource of the vSphere package, includin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualMachine</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>vapp=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualMachine</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>ovf_deploy=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>vapp=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -196,17 +196,6 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinenetworkinterface">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A specification for a virtual NIC on this
-virtual machine. See network interface options
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Resource<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -372,6 +361,16 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 value strings to set for virtual machine. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The datacenter id. Required only when deploying
+an ovf template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -659,6 +658,17 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Network<wbr>Interfaces</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterface">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A specification for a virtual NIC on this
+virtual machine. See network interface options
+below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Num<wbr>Cores<wbr>Per<wbr>Socket</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
@@ -677,6 +687,17 @@ supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ovf<wbr>Deploy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}When specified, the VM will be deployed from the
+provided ovf template. See creating a virtual machine from a
+ovf template for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -885,17 +906,6 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinenetworkinterface">[]Virtual<wbr>Machine<wbr>Network<wbr>Interface</a></span>
-    </dt>
-    <dd>{{% md %}}A specification for a virtual NIC on this
-virtual machine. See network interface options
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Resource<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1061,6 +1071,16 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 value strings to set for virtual machine. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The datacenter id. Required only when deploying
+an ovf template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1348,6 +1368,17 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Network<wbr>Interfaces</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterface">[]Virtual<wbr>Machine<wbr>Network<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}A specification for a virtual NIC on this
+virtual machine. See network interface options
+below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Num<wbr>Cores<wbr>Per<wbr>Socket</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
@@ -1366,6 +1397,17 @@ supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ovf<wbr>Deploy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
+    </dt>
+    <dd>{{% md %}}When specified, the VM will be deployed from the
+provided ovf template. See creating a virtual machine from a
+ovf template for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1574,17 +1616,6 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinenetworkinterface">Virtual<wbr>Machine<wbr>Network<wbr>Interface[]</a></span>
-    </dt>
-    <dd>{{% md %}}A specification for a virtual NIC on this
-virtual machine. See network interface options
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>resource<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1750,6 +1781,16 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 value strings to set for virtual machine. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The datacenter id. Required only when deploying
+an ovf template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2037,6 +2078,17 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>network<wbr>Interfaces</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterface">Virtual<wbr>Machine<wbr>Network<wbr>Interface[]</a></span>
+    </dt>
+    <dd>{{% md %}}A specification for a virtual NIC on this
+virtual machine. See network interface options
+below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>num<wbr>Cores<wbr>Per<wbr>Socket</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
@@ -2055,6 +2107,17 @@ supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ovf<wbr>Deploy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
+    </dt>
+    <dd>{{% md %}}When specified, the VM will be deployed from the
+provided ovf template. See creating a virtual machine from a
+ovf template for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2263,17 +2326,6 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
     <dt class="property-required"
             title="Required">
-        <span>network_<wbr>interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinenetworkinterface">List[Virtual<wbr>Machine<wbr>Network<wbr>Interface]</a></span>
-    </dt>
-    <dd>{{% md %}}A specification for a virtual NIC on this
-virtual machine. See network interface options
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>resource_<wbr>pool_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2439,6 +2491,16 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 value strings to set for virtual machine. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>datacenter_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The datacenter id. Required only when deploying
+an ovf template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2726,6 +2788,17 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>network_<wbr>interfaces</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterface">List[Virtual<wbr>Machine<wbr>Network<wbr>Interface]</a></span>
+    </dt>
+    <dd>{{% md %}}A specification for a virtual NIC on this
+virtual machine. See network interface options
+below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>num_<wbr>cores_<wbr>per_<wbr>socket</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2744,6 +2817,17 @@ supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ovf_<wbr>deploy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Dict[Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy]</a></span>
+    </dt>
+    <dd>{{% md %}}When specified, the VM will be deployed from the
+provided ovf template. See creating a virtual machine from a
+ovf template for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3442,14 +3526,14 @@ datastore.
 ## Look up an Existing VirtualMachine Resource {#look-up}
 
 Get an existing VirtualMachine resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineState">VirtualMachineState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachine">VirtualMachine</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>change_version=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>default_ip_address=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>guest_ip_addresses=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>imported=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>moid=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>reboot_required=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>uuid=None<span class="p">, </span>vapp=None<span class="p">, </span>vapp_transports=None<span class="p">, </span>vmware_tools_status=None<span class="p">, </span>vmx_path=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>change_version=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>default_ip_address=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>guest_ip_addresses=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>imported=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>moid=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>ovf_deploy=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>reboot_required=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>uuid=None<span class="p">, </span>vapp=None<span class="p">, </span>vapp_transports=None<span class="p">, </span>vmware_tools_status=None<span class="p">, </span>vmx_path=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3729,6 +3813,16 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 value strings to set for virtual machine. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The datacenter id. Required only when deploying
+an ovf template.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4088,6 +4182,17 @@ supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ovf<wbr>Deploy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}When specified, the VM will be deployed from the
+provided ovf template. See creating a virtual machine from a
+ovf template for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4526,6 +4631,16 @@ for custom attributes.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The datacenter id. Required only when deploying
+an ovf template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Datastore<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -4881,6 +4996,17 @@ supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ovf<wbr>Deploy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
+    </dt>
+    <dd>{{% md %}}When specified, the VM will be deployed from the
+provided ovf template. See creating a virtual machine from a
+ovf template for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5319,6 +5445,16 @@ for custom attributes.
 
     <dt class="property-optional"
             title="Optional">
+        <span>datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The datacenter id. Required only when deploying
+an ovf template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>datastore<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -5674,6 +5810,17 @@ supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ovf<wbr>Deploy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
+    </dt>
+    <dd>{{% md %}}When specified, the VM will be deployed from the
+provided ovf template. See creating a virtual machine from a
+ovf template for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6112,6 +6259,16 @@ for custom attributes.
 
     <dt class="property-optional"
             title="Optional">
+        <span>datacenter_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The datacenter id. Required only when deploying
+an ovf template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>datastore_<wbr>cluster_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6471,6 +6628,17 @@ to this virtual machine. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>ovf_<wbr>deploy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Dict[Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy]</a></span>
+    </dt>
+    <dd>{{% md %}}When specified, the VM will be deployed from the
+provided ovf template. See creating a virtual machine from a
+ovf template for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>poweron_<wbr>timeout</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6751,6 +6919,9 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCdromArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCdromOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineCdromArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineCdrom.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6981,6 +7152,9 @@ ISO. Conflicts with `client_device`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineCloneArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineClone.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7216,6 +7390,9 @@ ISO. Conflicts with `client_device`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomize.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7560,6 +7737,9 @@ below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeLinuxOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeLinuxOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeLinuxOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomizeLinuxOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -7730,6 +7910,9 @@ below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeNetworkInterfaceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomizeNetworkInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7965,6 +8148,9 @@ below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeWindowsOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeWindowsOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeWindowsOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomizeWindowsOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -8424,6 +8610,9 @@ below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineDiskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -9372,6 +9561,9 @@ directly to the filesystem immediately instead of being buffered. Default:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineNetworkInterfaceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineNetworkInterface.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -9851,6 +10043,244 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 
 
+<h4 id="virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineOvfDeploy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineOvfDeploy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineOvfDeployArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineOvfDeployOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineOvfDeployArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineOvfDeploy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Disk<wbr>Provisioning</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip<wbr>Allocation<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Local<wbr>Ovf<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ovf<wbr>Network<wbr>Map</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Remote<wbr>Ovf<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Disk<wbr>Provisioning</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip<wbr>Allocation<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Local<wbr>Ovf<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ovf<wbr>Network<wbr>Map</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Remote<wbr>Ovf<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk<wbr>Provisioning</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip<wbr>Allocation<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>local<wbr>Ovf<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ovf<wbr>Network<wbr>Map</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>remote<wbr>Ovf<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk<wbr>Provisioning</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip<wbr>Allocation<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>local<wbr>Ovf<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ovf<wbr>Network<wbr>Map</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>remote<wbr>Ovf<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineVapp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineVapp">output</a> API doc for this type.
@@ -9858,6 +10288,9 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineVappArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineVappOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Inputs.VirtualMachineVappArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.VirtualMachineVapp.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

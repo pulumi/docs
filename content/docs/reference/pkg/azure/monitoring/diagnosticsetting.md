@@ -12,10 +12,26 @@ meta_desc: "Explore the DiagnosticSetting resource of the monitoring module, inc
 
 Manages a Diagnostic Setting for an existing Resource.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -26,11 +42,11 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
 const exampleAccount = exampleResourceGroup.name.apply(name => azure.storage.getAccount({
     name: "examplestoracc",
     resourceGroupName: name,
-}));
+}, { async: true }));
 const exampleKeyVault = exampleResourceGroup.name.apply(name => azure.keyvault.getKeyVault({
     name: "example-vault",
     resourceGroupName: name,
-}));
+}, { async: true }));
 const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example", {
     logs: [{
         category: "AuditEvent",
@@ -49,14 +65,13 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
     targetResourceId: exampleKeyVault.id,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a DiagnosticSetting Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -664,7 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DiagnosticSetting Resource {#look-up}
 
 Get an existing DiagnosticSetting resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#DiagnosticSettingState">DiagnosticSettingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#DiagnosticSetting">DiagnosticSetting</a></span></code></pre></div>
@@ -1153,6 +1168,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingLogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingLogOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.DiagnosticSettingLogArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.DiagnosticSettingLog.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1169,15 +1187,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Log Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Retention<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
@@ -1185,6 +1194,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retention<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1203,15 +1221,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Log Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Retention<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
@@ -1219,6 +1228,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retention<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1237,15 +1255,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Log Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>retention<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>enabled</span>
@@ -1253,6 +1262,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retention<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1271,15 +1289,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Log Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>retention_<wbr>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Dict[Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>enabled</span>
@@ -1287,6 +1296,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retention_<wbr>policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Dict[Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1303,6 +1321,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingLogRetentionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingLogRetentionPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.DiagnosticSettingLogRetentionPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.DiagnosticSettingLogRetentionPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1419,6 +1440,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingMetricOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.DiagnosticSettingMetricArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.DiagnosticSettingMetric.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1435,15 +1459,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Metric Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Retention<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
@@ -1451,6 +1466,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retention<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1469,15 +1493,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Metric Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Retention<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
@@ -1485,6 +1500,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retention<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1503,15 +1527,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Metric Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>retention<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>enabled</span>
@@ -1519,6 +1534,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retention<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1537,15 +1561,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Metric Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>retention_<wbr>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Dict[Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>enabled</span>
@@ -1553,6 +1568,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retention_<wbr>policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Dict[Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1569,6 +1593,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingMetricRetentionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingMetricRetentionPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.DiagnosticSettingMetricRetentionPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.DiagnosticSettingMetricRetentionPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

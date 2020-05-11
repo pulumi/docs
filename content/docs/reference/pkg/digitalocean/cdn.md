@@ -12,13 +12,57 @@ meta_desc: "Explore the Cdn resource of the Digital Ocean package, including exa
 
 Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 
+
+
 {{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Basic Example
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+# Create a new Spaces Bucket
+mybucket = digitalocean.SpacesBucket("mybucket",
+    region="sfo2",
+    acl="public-read")
+# Add a CDN endpoint to the Spaces Bucket
+mycdn = digitalocean.Cdn("mycdn", origin=mybucket.bucket_domain_name)
+pulumi.export("fqdn", mycdn.endpoint)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+// Create a new Spaces Bucket
+const mybucket = new digitalocean.SpacesBucket("mybucket", {
+    region: "sfo2",
+    acl: "public-read",
+});
+// Add a CDN endpoint to the Spaces Bucket
+const mycdn = new digitalocean.Cdn("mycdn", {origin: mybucket.bucketDomainName});
+export const fqdn = mycdn.endpoint;
+```
+{{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Cdn Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +70,7 @@ Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cdn</span><span class="p">(resource_name, opts=None, </span>certificate_id=None<span class="p">, </span>custom_domain=None<span class="p">, </span>origin=None<span class="p">, </span>ttl=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cdn</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_id=None<span class="p">, </span>custom_domain=None<span class="p">, </span>origin=None<span class="p">, </span>ttl=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -213,7 +257,7 @@ The Cdn resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
+    <dd>{{% md %}}The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -232,7 +276,6 @@ The Cdn resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
-* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -257,7 +300,7 @@ The Cdn resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
+    <dd>{{% md %}}The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -276,7 +319,6 @@ The Cdn resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
-* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -301,7 +343,7 @@ The Cdn resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
+    <dd>{{% md %}}The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -320,7 +362,6 @@ The Cdn resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
-* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -345,7 +386,7 @@ The Cdn resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
+    <dd>{{% md %}}The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -364,7 +405,6 @@ The Cdn resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
-* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -522,7 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Cdn Resource {#look-up}
 
 Get an existing Cdn resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#CdnState">CdnState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Cdn">Cdn</a></span></code></pre></div>
@@ -649,7 +689,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
+    <dd>{{% md %}}The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -695,7 +735,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
-* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -711,7 +750,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
+    <dd>{{% md %}}The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -757,7 +796,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
-* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -773,7 +811,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
+    <dd>{{% md %}}The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -819,7 +857,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
-* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -835,7 +872,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
+    <dd>{{% md %}}The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -881,7 +918,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
-* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
 </dl>

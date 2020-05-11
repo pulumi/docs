@@ -1,8 +1,8 @@
 
 ---
 title: "Route"
-title_tag: "Resource Route | Package kong"
-meta_desc: "Explore the Route resource of the kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "Resource Route | Package Kong"
+meta_desc: "Explore the Route resource of the Kong package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -14,7 +14,7 @@ meta_desc: "Explore the Route resource of the kong package, including examples, 
 
 
 ## Create a Route Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the Route resource of the kong package, including examples, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, opts=None, </span>destinations=None<span class="p">, </span>hosts=None<span class="p">, </span>methods=None<span class="p">, </span>name=None<span class="p">, </span>paths=None<span class="p">, </span>preserve_host=None<span class="p">, </span>protocols=None<span class="p">, </span>regex_priority=None<span class="p">, </span>service_id=None<span class="p">, </span>snis=None<span class="p">, </span>sources=None<span class="p">, </span>strip_path=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destinations=None<span class="p">, </span>hosts=None<span class="p">, </span>methods=None<span class="p">, </span>name=None<span class="p">, </span>paths=None<span class="p">, </span>preserve_host=None<span class="p">, </span>protocols=None<span class="p">, </span>regex_priority=None<span class="p">, </span>service_id=None<span class="p">, </span>snis=None<span class="p">, </span>sources=None<span class="p">, </span>strip_path=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -682,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Route Resource {#look-up}
 
 Get an existing Route resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#Route">Route</a></span></code></pre></div>
@@ -1231,6 +1231,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#RouteDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#RouteDestinationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Inputs.RouteDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Outputs.RouteDestination.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1337,6 +1340,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#RouteSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#RouteSourceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Inputs.RouteSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Outputs.RouteSource.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

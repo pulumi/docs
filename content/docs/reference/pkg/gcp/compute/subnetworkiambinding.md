@@ -1,7 +1,8 @@
 
 ---
 title: "SubnetworkIAMBinding"
-block_external_search_index: true
+title_tag: "Resource SubnetworkIAMBinding | Module compute | Package GCP"
+meta_desc: "Explore the SubnetworkIAMBinding resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for Compute Engine Subnetwork. Each of these resources serves a different use case:"
 ---
 
 
@@ -22,7 +23,7 @@ Three different resources help you manage your IAM policy for Compute Engine Sub
 
 
 ## Create a SubnetworkIAMBinding Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -30,7 +31,7 @@ Three different resources help you manage your IAM policy for Compute Engine Sub
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SubnetworkIAMBinding</span><span class="p">(resource_name, opts=None, </span>condition=None<span class="p">, </span>members=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>role=None<span class="p">, </span>subnetwork=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SubnetworkIAMBinding</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition=None<span class="p">, </span>members=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>role=None<span class="p">, </span>subnetwork=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -582,7 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SubnetworkIAMBinding Resource {#look-up}
 
 Get an existing SubnetworkIAMBinding resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SubnetworkIAMBindingState">SubnetworkIAMBindingState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SubnetworkIAMBinding">SubnetworkIAMBinding</a></span></code></pre></div>
@@ -1023,6 +1024,9 @@ region is specified, it is taken from the provider configuration.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkIAMBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkIAMBindingConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.SubnetworkIAMBindingConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.SubnetworkIAMBindingCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1176,8 +1180,7 @@ region is specified, it is taken from the provider configuration.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

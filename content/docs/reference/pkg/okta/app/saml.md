@@ -14,10 +14,26 @@ Creates an SAML Application.
 
 This resource allows you to create and configure an SAML Application.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -43,14 +59,13 @@ const example = new okta.app.Saml("example", {
     subjectNameIdTemplate: "${user.userName}",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Saml Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -58,7 +73,7 @@ const example = new okta.app.Saml("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Saml</span><span class="p">(resource_name, opts=None, </span>accessibility_error_redirect_url=None<span class="p">, </span>accessibility_login_redirect_url=None<span class="p">, </span>accessibility_self_service=None<span class="p">, </span>app_settings_json=None<span class="p">, </span>assertion_signed=None<span class="p">, </span>attribute_statements=None<span class="p">, </span>audience=None<span class="p">, </span>authn_context_class_ref=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>default_relay_state=None<span class="p">, </span>destination=None<span class="p">, </span>digest_algorithm=None<span class="p">, </span>features=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>honor_force_authn=None<span class="p">, </span>idp_issuer=None<span class="p">, </span>key_name=None<span class="p">, </span>key_years_valid=None<span class="p">, </span>label=None<span class="p">, </span>preconfigured_app=None<span class="p">, </span>recipient=None<span class="p">, </span>request_compressed=None<span class="p">, </span>response_signed=None<span class="p">, </span>signature_algorithm=None<span class="p">, </span>sp_issuer=None<span class="p">, </span>sso_url=None<span class="p">, </span>status=None<span class="p">, </span>subject_name_id_format=None<span class="p">, </span>subject_name_id_template=None<span class="p">, </span>user_name_template=None<span class="p">, </span>user_name_template_suffix=None<span class="p">, </span>user_name_template_type=None<span class="p">, </span>users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Saml</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accessibility_error_redirect_url=None<span class="p">, </span>accessibility_login_redirect_url=None<span class="p">, </span>accessibility_self_service=None<span class="p">, </span>app_settings_json=None<span class="p">, </span>assertion_signed=None<span class="p">, </span>attribute_statements=None<span class="p">, </span>audience=None<span class="p">, </span>authn_context_class_ref=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>default_relay_state=None<span class="p">, </span>destination=None<span class="p">, </span>digest_algorithm=None<span class="p">, </span>features=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>honor_force_authn=None<span class="p">, </span>idp_issuer=None<span class="p">, </span>key_name=None<span class="p">, </span>key_years_valid=None<span class="p">, </span>label=None<span class="p">, </span>preconfigured_app=None<span class="p">, </span>recipient=None<span class="p">, </span>request_compressed=None<span class="p">, </span>response_signed=None<span class="p">, </span>signature_algorithm=None<span class="p">, </span>sp_issuer=None<span class="p">, </span>sso_url=None<span class="p">, </span>status=None<span class="p">, </span>subject_name_id_format=None<span class="p">, </span>subject_name_id_template=None<span class="p">, </span>user_name_template=None<span class="p">, </span>user_name_template_suffix=None<span class="p">, </span>user_name_template_type=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1918,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Saml Resource {#look-up}
 
 Get an existing Saml resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#SamlState">SamlState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#Saml">Saml</a></span></code></pre></div>
@@ -3667,6 +3682,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#SamlAttributeStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#SamlAttributeStatementOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.Inputs.SamlAttributeStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.Outputs.SamlAttributeStatement.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3925,6 +3943,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#SamlUserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#SamlUserOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.Inputs.SamlUserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.Outputs.SamlUser.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

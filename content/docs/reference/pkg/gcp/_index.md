@@ -1,6 +1,7 @@
 ---
 title: "GCP"
-block_external_search_index: true
+title_tag: "Package GCP"
+meta_desc: "A Pulumi package for creating and managing Google Cloud Platform resources."
 menu:
     reference:
         parent: API Reference
@@ -60,6 +61,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="secretmanager/" title="secretmanager"><span class="symbol module"></span>secretmanager</a></li>
     <li><a href="securitycenter/" title="securitycenter"><span class="symbol module"></span>securitycenter</a></li>
     <li><a href="serviceaccount/" title="serviceAccount"><span class="symbol module"></span>serviceAccount</a></li>
+    <li><a href="servicedirectory/" title="servicedirectory"><span class="symbol module"></span>servicedirectory</a></li>
     <li><a href="servicenetworking/" title="servicenetworking"><span class="symbol module"></span>servicenetworking</a></li>
     <li><a href="serviceusage/" title="serviceusage"><span class="symbol module"></span>serviceusage</a></li>
     <li><a href="sourcerepo/" title="sourcerepo"><span class="symbol module"></span>sourcerepo</a></li>
@@ -81,9 +83,9 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 

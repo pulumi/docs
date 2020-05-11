@@ -66,7 +66,7 @@ user = datadog.User("my-policy",
 
 ```go
 import (
-  datadog "github.com/pulumi/pulumi-datadog/sdk/go/datadog"
+  datadog "github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
 )
 
 user, _ := datadog.NewUser(ctx, "my-user", &datadog.UserArgs{

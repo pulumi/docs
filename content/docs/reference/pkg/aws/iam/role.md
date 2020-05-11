@@ -14,10 +14,46 @@ Provides an IAM role.
 
 > *NOTE:* If policies are attached to the role via the [`aws.iam.PolicyAttachment` resource](https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html) and you are modifying the role `name` or `path`, the `force_detach_policies` argument must be set to `true` and applied before attempting the operation otherwise you will encounter a `DeleteConflict` error. The [`aws.iam.RolePolicyAttachment` resource (recommended)](https://www.terraform.io/docs/providers/aws/r/iam_role_policy_attachment.html) does not have this requirement.
 
+
+## Example of Using Data Source for Assume Role Policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const instance_assume_role_policy = pulumi.output(aws.iam.getPolicyDocument({
+    statements: [{
+        actions: ["sts:AssumeRole"],
+        principals: [{
+            identifiers: ["ec2.amazonaws.com"],
+            type: "Service",
+        }],
+    }],
+}, { async: true }));
+const instance = new aws.iam.Role("instance", {
+    assumeRolePolicy: instance_assume_role_policy.json,
+    path: "/system/",
+});
+```
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -42,34 +78,13 @@ const testRole = new aws.iam.Role("test_role", {
     },
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-## Example of Using Data Source for Assume Role Policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const instance_assume_role_policy = pulumi.output(aws.iam.getPolicyDocument({
-    statements: [{
-        actions: ["sts:AssumeRole"],
-        principals: [{
-            identifiers: ["ec2.amazonaws.com"],
-            type: "Service",
-        }],
-    }],
-}, { async: true }));
-const instance = new aws.iam.Role("instance", {
-    assumeRolePolicy: instance_assume_role_policy.json,
-    path: "/system/",
-});
-```
-
 
 
 ## Create a Role Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -77,7 +92,7 @@ const instance = new aws.iam.Role("instance", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Role</span><span class="p">(resource_name, opts=None, </span>assume_role_policy=None<span class="p">, </span>description=None<span class="p">, </span>force_detach_policies=None<span class="p">, </span>max_session_duration=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>path=None<span class="p">, </span>permissions_boundary=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Role</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>assume_role_policy=None<span class="p">, </span>description=None<span class="p">, </span>force_detach_policies=None<span class="p">, </span>max_session_duration=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>path=None<span class="p">, </span>permissions_boundary=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -328,7 +343,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
 </dl>
@@ -417,7 +432,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
 </dl>
@@ -506,7 +521,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
 </dl>
@@ -595,7 +610,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
 </dl>
@@ -789,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Role Resource {#look-up}
 
 Get an existing Role resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#RoleState">RoleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role">Role</a></span></code></pre></div>
@@ -1007,7 +1022,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1123,7 +1138,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1239,7 +1254,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1355,7 +1370,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
     <dt class="property-optional"

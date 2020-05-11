@@ -14,7 +14,7 @@ meta_desc: "Explore the Alarm resource of the cms module, including examples, in
 
 
 ## Create a Alarm Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -255,7 +255,6 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable alarm rule. Default to true.
-* `webhook`- (Optional, Available in 1.46.0+) The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -336,7 +335,8 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -406,7 +406,6 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable alarm rule. Default to true.
-* `webhook`- (Optional, Available in 1.46.0+) The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -487,7 +486,8 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -557,7 +557,6 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable alarm rule. Default to true.
-* `webhook`- (Optional, Available in 1.46.0+) The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -638,7 +637,8 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -708,7 +708,6 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable alarm rule. Default to true.
-* `webhook`- (Optional, Available in 1.46.0+) The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -789,7 +788,8 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -910,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Alarm Resource {#look-up}
 
 Get an existing Alarm resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cms/#AlarmState">AlarmState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cms/#Alarm">Alarm</a></span></code></pre></div>
@@ -1065,7 +1065,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable alarm rule. Default to true.
-* `webhook`- (Optional, Available in 1.46.0+) The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1182,7 +1181,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1225,7 +1225,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable alarm rule. Default to true.
-* `webhook`- (Optional, Available in 1.46.0+) The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1342,7 +1341,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1385,7 +1385,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable alarm rule. Default to true.
-* `webhook`- (Optional, Available in 1.46.0+) The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1502,7 +1501,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1545,7 +1545,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable alarm rule. Default to true.
-* `webhook`- (Optional, Available in 1.46.0+) The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1662,7 +1661,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

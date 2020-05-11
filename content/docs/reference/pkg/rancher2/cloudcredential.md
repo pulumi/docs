@@ -14,10 +14,26 @@ Provides a Rancher v2 Cloud Credential resource. This can be used to create Clou
 
 amazonec2, azure, digitalocean, linode, openstack and vsphere credentials config are supported for Cloud Credential.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -31,14 +47,13 @@ const foo = new rancher2.CloudCredential("foo", {
     description: "foo test",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a CloudCredential Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -46,7 +61,7 @@ const foo = new rancher2.CloudCredential("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">CloudCredential</span><span class="p">(resource_name, opts=None, </span>amazonec2_credential_config=None<span class="p">, </span>annotations=None<span class="p">, </span>azure_credential_config=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_credential_config=None<span class="p">, </span>labels=None<span class="p">, </span>linode_credential_config=None<span class="p">, </span>name=None<span class="p">, </span>openstack_credential_config=None<span class="p">, </span>vsphere_credential_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">CloudCredential</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>amazonec2_credential_config=None<span class="p">, </span>annotations=None<span class="p">, </span>azure_credential_config=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_credential_config=None<span class="p">, </span>labels=None<span class="p">, </span>linode_credential_config=None<span class="p">, </span>name=None<span class="p">, </span>openstack_credential_config=None<span class="p">, </span>vsphere_credential_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -718,7 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing CloudCredential Resource {#look-up}
 
 Get an existing CloudCredential resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#CloudCredentialState">CloudCredentialState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#CloudCredential">CloudCredential</a></span></code></pre></div>
@@ -1279,6 +1294,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#CloudCredentialAmazonec2CredentialConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#CloudCredentialAmazonec2CredentialConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.CloudCredentialAmazonec2CredentialConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.CloudCredentialAmazonec2CredentialConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1393,6 +1411,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#CloudCredentialAzureCredentialConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#CloudCredentialAzureCredentialConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.CloudCredentialAzureCredentialConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.CloudCredentialAzureCredentialConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1545,6 +1566,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#CloudCredentialDigitaloceanCredentialConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#CloudCredentialDigitaloceanCredentialConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.CloudCredentialDigitaloceanCredentialConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.CloudCredentialDigitaloceanCredentialConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1623,6 +1647,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#CloudCredentialLinodeCredentialConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#CloudCredentialLinodeCredentialConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.CloudCredentialLinodeCredentialConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.CloudCredentialLinodeCredentialConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1703,6 +1730,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#CloudCredentialOpenstackCredentialConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#CloudCredentialOpenstackCredentialConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.CloudCredentialOpenstackCredentialConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.CloudCredentialOpenstackCredentialConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1781,6 +1811,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#CloudCredentialVsphereCredentialConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#CloudCredentialVsphereCredentialConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.CloudCredentialVsphereCredentialConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.CloudCredentialVsphereCredentialConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

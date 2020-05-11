@@ -12,136 +12,7 @@ meta_desc: "Explore the Elastigroup resource of the azure module, including exam
 
 Provides a Spotinst elastigroup Azure resource.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as spotinst from "@pulumi/spotinst";
-
-const testAzureGroup = new spotinst.azure.Elastigroup("test_azure_group", {
-    desiredCapacity: 1,
-    // --- HEALTH-CHECKS -------------------------------------------------
-    healthCheck: {
-        autoHealing: true,
-        gracePeriod: 120,
-        healthCheckType: "INSTANCE_STATE",
-    },
-    // --- IMAGE ---------------------------------------------------------
-    images: [{
-        marketplaces: [{
-            offer: "UbuntuServer",
-            publisher: "Canonical",
-            sku: "16.04-LTS",
-        }],
-    }],
-    // --- LOAD BALANCERS ------------------------------------------------
-    loadBalancers: [{
-        autoWeight: true,
-        balancerId: "lb-1ee2e3q",
-        targetSetId: "ts-3eq",
-        type: "MULTAI_TARGET_SET",
-    }],
-    // --- LOGIN ---------------------------------------------------------
-    login: {
-        sshPublicKey: "33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==",
-        userName: "admin",
-    },
-    lowPrioritySizes: [
-        "standard_a1_v1",
-        "standard_a1_v2",
-    ],
-    managedServiceIdentities: [{
-        name: "example-identity",
-        resourceGroupName: "spotinst-azure",
-    }],
-    maxSize: 1,
-    // --- CAPACITY ------------------------------------------------------
-    minSize: 0,
-    // --- NETWORK -------------------------------------------------------
-    network: {
-        assignPublicIp: true,
-        resourceGroupName: "subnetResourceGroup",
-        subnetName: "my-subnet-name",
-        virtualNetworkName: "vname",
-    },
-    // --- INSTANCE TYPES ------------------------------------------------
-    odSizes: [
-        "standard_a1_v1",
-        "standard_a1_v2",
-    ],
-    product: "Linux",
-    region: "eastus",
-    resourceGroupName: "spotinst-azure",
-    scalingDownPolicies: [{
-        actionType: "adjustment",
-        adjustment: "MIN(5,10)",
-        cooldown: 60,
-        dimensions: [{
-            name: "name-1",
-            value: "value-1",
-        }],
-        evaluationPeriods: 10,
-        metricName: "CPUUtilization",
-        namespace: "Microsoft.Compute",
-        operator: "gt",
-        period: 60,
-        policyName: "policy-name",
-        statistic: "average",
-        threshold: 10,
-        unit: "percent",
-    }],
-    // --- SCALING POLICIES ----------------------------------------------
-    scalingUpPolicies: [{
-        actionType: "setMinTarget",
-        cooldown: 60,
-        dimensions: [
-            {
-                name: "resourceName",
-                value: "resource-name",
-            },
-            {
-                name: "resourceGroupName",
-                value: "resource-group-name",
-            },
-        ],
-        evaluationPeriods: 10,
-        metricName: "CPUUtilization",
-        minTargetCapacity: "1",
-        namespace: "Microsoft.Compute",
-        operator: "gt",
-        period: 60,
-        policyName: "policy-name",
-        statistic: "average",
-        threshold: 10,
-        unit: "percent",
-    }],
-    // --- SCHEDULED TASK ------------------------------------------------
-    scheduledTasks: [{
-        adjustment: "2",
-        adjustmentPercentage: "50",
-        batchSizePercentage: "33",
-        cronExpression: "* * * * *",
-        gracePeriod: "300",
-        isEnabled: true,
-        scaleMaxCapacity: "8",
-        scaleMinCapacity: "5",
-        scaleTargetCapacity: "6",
-        taskType: "scale",
-    }],
-    shutdownScript: "",
-    // --- STRATEGY ------------------------------------------------------
-    strategy: {
-        drainingTimeout: 300,
-        odCount: 1,
-    },
-    userData: "",
-});
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Load Balancers
 
 * `load_balancers` - (Required) Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
@@ -270,10 +141,154 @@ Usage:
 import * as pulumi from "@pulumi/pulumi";
 ```
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const testAzureGroup = new spotinst.azure.Elastigroup("test_azure_group", {
+    desiredCapacity: 1,
+    // --- HEALTH-CHECKS -------------------------------------------------
+    healthCheck: {
+        autoHealing: true,
+        gracePeriod: 120,
+        healthCheckType: "INSTANCE_STATE",
+    },
+    // --- IMAGE ---------------------------------------------------------
+    images: [{
+        marketplaces: [{
+            offer: "UbuntuServer",
+            publisher: "Canonical",
+            sku: "16.04-LTS",
+        }],
+    }],
+    // --- LOAD BALANCERS ------------------------------------------------
+    loadBalancers: [{
+        autoWeight: true,
+        balancerId: "lb-1ee2e3q",
+        targetSetId: "ts-3eq",
+        type: "MULTAI_TARGET_SET",
+    }],
+    // --- LOGIN ---------------------------------------------------------
+    login: {
+        sshPublicKey: "33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==",
+        userName: "admin",
+    },
+    lowPrioritySizes: [
+        "standard_a1_v1",
+        "standard_a1_v2",
+    ],
+    managedServiceIdentities: [{
+        name: "example-identity",
+        resourceGroupName: "spotinst-azure",
+    }],
+    maxSize: 1,
+    // --- CAPACITY ------------------------------------------------------
+    minSize: 0,
+    // --- NETWORK -------------------------------------------------------
+    network: {
+        assignPublicIp: true,
+        resourceGroupName: "subnetResourceGroup",
+        subnetName: "my-subnet-name",
+        virtualNetworkName: "vname",
+    },
+    // --- INSTANCE TYPES ------------------------------------------------
+    odSizes: [
+        "standard_a1_v1",
+        "standard_a1_v2",
+    ],
+    product: "Linux",
+    region: "eastus",
+    resourceGroupName: "spotinst-azure",
+    scalingDownPolicies: [{
+        actionType: "adjustment",
+        adjustment: "MIN(5,10)",
+        cooldown: 60,
+        dimensions: [{
+            name: "name-1",
+            value: "value-1",
+        }],
+        evaluationPeriods: 10,
+        metricName: "CPUUtilization",
+        namespace: "Microsoft.Compute",
+        operator: "gt",
+        period: 60,
+        policyName: "policy-name",
+        statistic: "average",
+        threshold: 10,
+        unit: "percent",
+    }],
+    // --- SCALING POLICIES ----------------------------------------------
+    scalingUpPolicies: [{
+        actionType: "setMinTarget",
+        cooldown: 60,
+        dimensions: [
+            {
+                name: "resourceName",
+                value: "resource-name",
+            },
+            {
+                name: "resourceGroupName",
+                value: "resource-group-name",
+            },
+        ],
+        evaluationPeriods: 10,
+        metricName: "CPUUtilization",
+        minTargetCapacity: "1",
+        namespace: "Microsoft.Compute",
+        operator: "gt",
+        period: 60,
+        policyName: "policy-name",
+        statistic: "average",
+        threshold: 10,
+        unit: "percent",
+    }],
+    // --- SCHEDULED TASK ------------------------------------------------
+    scheduledTasks: [{
+        adjustment: "2",
+        adjustmentPercentage: "50",
+        batchSizePercentage: "33",
+        cronExpression: "* * * * *",
+        gracePeriod: "300",
+        isEnabled: true,
+        scaleMaxCapacity: "8",
+        scaleMinCapacity: "5",
+        scaleTargetCapacity: "6",
+        taskType: "scale",
+    }],
+    shutdownScript: "",
+    // --- STRATEGY ------------------------------------------------------
+    strategy: {
+        drainingTimeout: 300,
+        odCount: 1,
+    },
+    userData: "",
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Elastigroup Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -281,7 +296,7 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Elastigroup</span><span class="p">(resource_name, opts=None, </span>custom_data=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>health_check=None<span class="p">, </span>images=None<span class="p">, </span>integration_kubernetes=None<span class="p">, </span>integration_multai_runtime=None<span class="p">, </span>load_balancers=None<span class="p">, </span>login=None<span class="p">, </span>low_priority_sizes=None<span class="p">, </span>managed_service_identities=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>od_sizes=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scaling_down_policies=None<span class="p">, </span>scaling_up_policies=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>strategy=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Elastigroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_data=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>health_check=None<span class="p">, </span>images=None<span class="p">, </span>integration_kubernetes=None<span class="p">, </span>integration_multai_runtime=None<span class="p">, </span>load_balancers=None<span class="p">, </span>login=None<span class="p">, </span>low_priority_sizes=None<span class="p">, </span>managed_service_identities=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>od_sizes=None<span class="p">, </span>product=None<span class="p">, </span>region=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>scaling_down_policies=None<span class="p">, </span>scaling_up_policies=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>shutdown_script=None<span class="p">, </span>strategy=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1405,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Elastigroup Resource {#look-up}
 
 Get an existing Elastigroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/azure/#ElastigroupState">ElastigroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/azure/#Elastigroup">Elastigroup</a></span></code></pre></div>
@@ -2418,6 +2433,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupHealthCheck.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2557,6 +2575,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupImageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupImageOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupImageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupImage.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2663,6 +2684,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupImageCustomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupImageCustomOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupImageCustomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupImageCustom.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2774,6 +2798,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupImageMarketplaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupImageMarketplaceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupImageMarketplaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupImageMarketplace.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2914,6 +2941,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupIntegrationKubernetesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupIntegrationKubernetesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupIntegrationKubernetesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupIntegrationKubernetes.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2989,6 +3019,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupIntegrationMultaiRuntimeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupIntegrationMultaiRuntimeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupIntegrationMultaiRuntimeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupIntegrationMultaiRuntime.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3063,6 +3096,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupLoadBalancerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupLoadBalancerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupLoadBalancerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupLoadBalancer.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3235,6 +3271,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupLoginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupLoginOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupLoginArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupLogin.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3374,6 +3413,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupManagedServiceIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupManagedServiceIdentityOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupManagedServiceIdentityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupManagedServiceIdentity.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3488,6 +3530,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupNetworkOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupNetwork.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3696,6 +3741,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupNetworkAdditionalIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupNetworkAdditionalIpConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupNetworkAdditionalIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupNetworkAdditionalIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3806,6 +3854,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupScalingDownPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupScalingDownPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupScalingDownPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupScalingDownPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4426,6 +4477,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupScalingDownPolicyDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupScalingDownPolicyDimensionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupScalingDownPolicyDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupScalingDownPolicyDimension.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4536,6 +4590,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupScalingUpPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupScalingUpPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupScalingUpPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupScalingUpPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5156,6 +5213,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupScalingUpPolicyDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupScalingUpPolicyDimensionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupScalingUpPolicyDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupScalingUpPolicyDimension.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5266,6 +5326,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupScheduledTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupScheduledTaskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupScheduledTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupScheduledTask.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5630,6 +5693,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupStrategyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupStrategy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5781,6 +5847,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupUpdatePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupUpdatePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupUpdatePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupUpdatePolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5887,6 +5956,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupUpdatePolicyRollConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/azure?tab=doc#ElastigroupUpdatePolicyRollConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Inputs.ElastigroupUpdatePolicyRollConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Azure.Outputs.ElastigroupUpdatePolicyRollConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

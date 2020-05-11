@@ -14,10 +14,26 @@ Manages a V2 neutron security group rule resource within OpenStack.
 Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -35,14 +51,13 @@ const secgroupRule1 = new openstack.networking.SecGroupRule("secgroup_rule_1", {
     securityGroupId: secgroup1.id,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a SecGroupRule Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -50,7 +65,7 @@ const secgroupRule1 = new openstack.networking.SecGroupRule("secgroup_rule_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecGroupRule</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>direction=None<span class="p">, </span>ethertype=None<span class="p">, </span>port_range_max=None<span class="p">, </span>port_range_min=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>remote_group_id=None<span class="p">, </span>remote_ip_prefix=None<span class="p">, </span>security_group_id=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecGroupRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>direction=None<span class="p">, </span>ethertype=None<span class="p">, </span>port_range_max=None<span class="p">, </span>port_range_min=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>remote_group_id=None<span class="p">, </span>remote_ip_prefix=None<span class="p">, </span>security_group_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -870,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing SecGroupRule Resource {#look-up}
 
 Get an existing SecGroupRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#SecGroupRuleState">SecGroupRuleState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#SecGroupRule">SecGroupRule</a></span></code></pre></div>

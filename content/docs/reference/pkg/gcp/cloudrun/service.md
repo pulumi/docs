@@ -1,7 +1,8 @@
 
 ---
 title: "Service"
-block_external_search_index: true
+title_tag: "Resource Service | Module cloudrun | Package GCP"
+meta_desc: "Explore the Service resource of the cloudrun module, including examples, input properties, output properties, lookup functions, and supporting types. Service acts as a top-level container that manages a set of Routes and"
 ---
 
 
@@ -121,7 +122,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
 
 
 ## Create a Service Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -129,7 +130,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Service</span><span class="p">(resource_name, opts=None, </span>autogenerate_revision_name=None<span class="p">, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>template=None<span class="p">, </span>traffics=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Service</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autogenerate_revision_name=None<span class="p">, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>template=None<span class="p">, </span>traffics=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -329,7 +330,8 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
+    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -338,9 +340,7 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
+    <dd>{{% md %}}Name of the environment variable.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,13 +359,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.
+    <dd>{{% md %}}template holds the latest specification for the Revision to
+be stamped out. The template references the container image, and may also
+include labels and annotations that should be attached to the Revision.
+To correlate a Revision, and/or to force a Revision to be created when the
+spec doesn't otherwise change, a nonce label may be provided in the
+template metadata. For more details, see:
+https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
+Cloud Run does not currently support referencing a build that is
+responsible for materializing the container image from source.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -374,7 +376,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">List&lt;Service<wbr>Traffic<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
+    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
+and Configurations  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -412,7 +415,8 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
+    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -421,9 +425,7 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
+    <dd>{{% md %}}Name of the environment variable.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -442,13 +444,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.
+    <dd>{{% md %}}template holds the latest specification for the Revision to
+be stamped out. The template references the container image, and may also
+include labels and annotations that should be attached to the Revision.
+To correlate a Revision, and/or to force a Revision to be created when the
+spec doesn't otherwise change, a nonce label may be provided in the
+template metadata. For more details, see:
+https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
+Cloud Run does not currently support referencing a build that is
+responsible for materializing the container image from source.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -457,7 +461,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">[]Service<wbr>Traffic</a></span>
     </dt>
-    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
+    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
+and Configurations  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -495,7 +500,8 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
+    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -504,9 +510,7 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
+    <dd>{{% md %}}Name of the environment variable.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -525,13 +529,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.
+    <dd>{{% md %}}template holds the latest specification for the Revision to
+be stamped out. The template references the container image, and may also
+include labels and annotations that should be attached to the Revision.
+To correlate a Revision, and/or to force a Revision to be created when the
+spec doesn't otherwise change, a nonce label may be provided in the
+template metadata. For more details, see:
+https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
+Cloud Run does not currently support referencing a build that is
+responsible for materializing the container image from source.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -540,7 +546,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]</a></span>
     </dt>
-    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
+    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
+and Configurations  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -578,7 +585,8 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Dict[Service<wbr>Metadata]</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
+    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -587,9 +595,7 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
+    <dd>{{% md %}}Name of the environment variable.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -608,13 +614,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Dict[Service<wbr>Template]</a></span>
     </dt>
-    <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.
+    <dd>{{% md %}}template holds the latest specification for the Revision to
+be stamped out. The template references the container image, and may also
+include labels and annotations that should be attached to the Revision.
+To correlate a Revision, and/or to force a Revision to be created when the
+spec doesn't otherwise change, a nonce label may be provided in the
+template metadata. For more details, see:
+https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
+Cloud Run does not currently support referencing a build that is
+responsible for materializing the container image from source.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -623,7 +631,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">List[Service<wbr>Traffic]</a></span>
     </dt>
-    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
+    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
+and Configurations  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -745,7 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Service Resource {#look-up}
 
 Get an existing Service resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#Service">Service</a></span></code></pre></div>
@@ -894,7 +903,8 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
+    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -903,9 +913,7 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
+    <dd>{{% md %}}Name of the environment variable.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -933,13 +941,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.
+    <dd>{{% md %}}template holds the latest specification for the Revision to
+be stamped out. The template references the container image, and may also
+include labels and annotations that should be attached to the Revision.
+To correlate a Revision, and/or to force a Revision to be created when the
+spec doesn't otherwise change, a nonce label may be provided in the
+template metadata. For more details, see:
+https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
+Cloud Run does not currently support referencing a build that is
+responsible for materializing the container image from source.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -948,7 +958,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">List&lt;Service<wbr>Traffic<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
+    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
+and Configurations  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -986,7 +997,8 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
+    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -995,9 +1007,7 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
+    <dd>{{% md %}}Name of the environment variable.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1025,13 +1035,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.
+    <dd>{{% md %}}template holds the latest specification for the Revision to
+be stamped out. The template references the container image, and may also
+include labels and annotations that should be attached to the Revision.
+To correlate a Revision, and/or to force a Revision to be created when the
+spec doesn't otherwise change, a nonce label may be provided in the
+template metadata. For more details, see:
+https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
+Cloud Run does not currently support referencing a build that is
+responsible for materializing the container image from source.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1040,7 +1052,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">[]Service<wbr>Traffic</a></span>
     </dt>
-    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
+    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
+and Configurations  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1078,7 +1091,8 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
+    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1087,9 +1101,7 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
+    <dd>{{% md %}}Name of the environment variable.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1117,13 +1129,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.
+    <dd>{{% md %}}template holds the latest specification for the Revision to
+be stamped out. The template references the container image, and may also
+include labels and annotations that should be attached to the Revision.
+To correlate a Revision, and/or to force a Revision to be created when the
+spec doesn't otherwise change, a nonce label may be provided in the
+template metadata. For more details, see:
+https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
+Cloud Run does not currently support referencing a build that is
+responsible for materializing the container image from source.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1132,7 +1146,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]</a></span>
     </dt>
-    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
+    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
+and Configurations  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1170,7 +1185,8 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Dict[Service<wbr>Metadata]</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
+    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1179,9 +1195,7 @@ this field is set to false, the revision name will still autogenerate.)
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
+    <dd>{{% md %}}Name of the environment variable.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1209,13 +1223,15 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Dict[Service<wbr>Template]</a></span>
     </dt>
-    <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.
+    <dd>{{% md %}}template holds the latest specification for the Revision to
+be stamped out. The template references the container image, and may also
+include labels and annotations that should be attached to the Revision.
+To correlate a Revision, and/or to force a Revision to be created when the
+spec doesn't otherwise change, a nonce label may be provided in the
+template metadata. For more details, see:
+https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
+Cloud Run does not currently support referencing a build that is
+responsible for materializing the container image from source.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1224,7 +1240,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">List[Service<wbr>Traffic]</a></span>
     </dt>
-    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
+    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
+and Configurations  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1250,6 +1267,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceMetadataOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceMetadata.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1263,7 +1283,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Annotations is a key value map stored with a resource that
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1271,7 +1294,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A sequence number representing a specific generation of the desired state.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1279,7 +1304,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
+(scope and select) objects. May match selectors of replication controllers
+and routes.
+More info: http://kubernetes.io/docs/user-guide/labels
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1287,7 +1316,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
+project ID or project number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1295,7 +1326,15 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+An opaque value that represents the internal version of this object that
+can be used by clients to determine when objects have changed. May be used
+for optimistic concurrency, change detection, and the watch operation on a
+resource or set of resources. They may only be valid for a
+particular resource or set of resources.
+More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1303,7 +1342,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+SelfLink is a URL representing this object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1311,7 +1352,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+UID is a unique id generated by the server on successful creation of a resource and is not
+allowed to change on PUT operations.
+More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1326,7 +1371,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Annotations is a key value map stored with a resource that
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1334,7 +1382,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A sequence number representing a specific generation of the desired state.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1342,7 +1392,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
+(scope and select) objects. May match selectors of replication controllers
+and routes.
+More info: http://kubernetes.io/docs/user-guide/labels
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1350,7 +1404,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
+project ID or project number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1358,7 +1414,15 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+An opaque value that represents the internal version of this object that
+can be used by clients to determine when objects have changed. May be used
+for optimistic concurrency, change detection, and the watch operation on a
+resource or set of resources. They may only be valid for a
+particular resource or set of resources.
+More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1366,7 +1430,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+SelfLink is a URL representing this object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1374,7 +1440,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+UID is a unique id generated by the server on successful creation of a resource and is not
+allowed to change on PUT operations.
+More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1389,7 +1459,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Annotations is a key value map stored with a resource that
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1397,7 +1470,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A sequence number representing a specific generation of the desired state.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1405,7 +1480,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
+(scope and select) objects. May match selectors of replication controllers
+and routes.
+More info: http://kubernetes.io/docs/user-guide/labels
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1413,7 +1492,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
+project ID or project number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1421,7 +1502,15 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+An opaque value that represents the internal version of this object that
+can be used by clients to determine when objects have changed. May be used
+for optimistic concurrency, change detection, and the watch operation on a
+resource or set of resources. They may only be valid for a
+particular resource or set of resources.
+More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1429,7 +1518,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+SelfLink is a URL representing this object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1437,7 +1528,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+UID is a unique id generated by the server on successful creation of a resource and is not
+allowed to change on PUT operations.
+More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1452,7 +1547,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Annotations is a key value map stored with a resource that
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1460,7 +1558,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A sequence number representing a specific generation of the desired state.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1468,7 +1568,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
+(scope and select) objects. May match selectors of replication controllers
+and routes.
+More info: http://kubernetes.io/docs/user-guide/labels
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1476,7 +1580,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
+project ID or project number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1484,7 +1590,15 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+An opaque value that represents the internal version of this object that
+can be used by clients to determine when objects have changed. May be used
+for optimistic concurrency, change detection, and the watch operation on a
+resource or set of resources. They may only be valid for a
+particular resource or set of resources.
+More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1492,7 +1606,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+SelfLink is a URL representing this object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1500,7 +1616,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+UID is a unique id generated by the server on successful creation of a resource and is not
+allowed to change on PUT operations.
+More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1516,6 +1636,9 @@ source.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceStatusOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceStatus.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1720,6 +1843,9 @@ source.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceStatusConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceStatusCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1891,6 +2017,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1904,7 +2033,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1912,7 +2043,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1927,7 +2059,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1935,7 +2069,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1950,7 +2085,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1958,7 +2095,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1973,7 +2111,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatemetadata">Dict[Service<wbr>Template<wbr>Metadata]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
+and annotations.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1981,7 +2121,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespec">Dict[Service<wbr>Template<wbr>Spec]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1998,6 +2139,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateMetadataOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateMetadata.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2011,7 +2155,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Annotations is a key value map stored with a resource that
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2019,7 +2166,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A sequence number representing a specific generation of the desired state.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2027,7 +2176,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
+(scope and select) objects. May match selectors of replication controllers
+and routes.
+More info: http://kubernetes.io/docs/user-guide/labels
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2035,7 +2188,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2043,7 +2197,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
+project ID or project number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2051,7 +2207,15 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+An opaque value that represents the internal version of this object that
+can be used by clients to determine when objects have changed. May be used
+for optimistic concurrency, change detection, and the watch operation on a
+resource or set of resources. They may only be valid for a
+particular resource or set of resources.
+More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2059,7 +2223,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+SelfLink is a URL representing this object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2067,7 +2233,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+UID is a unique id generated by the server on successful creation of a resource and is not
+allowed to change on PUT operations.
+More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2082,7 +2252,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Annotations is a key value map stored with a resource that
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2090,7 +2263,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A sequence number representing a specific generation of the desired state.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2098,7 +2273,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
+(scope and select) objects. May match selectors of replication controllers
+and routes.
+More info: http://kubernetes.io/docs/user-guide/labels
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2106,7 +2285,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2114,7 +2294,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
+project ID or project number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2122,7 +2304,15 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+An opaque value that represents the internal version of this object that
+can be used by clients to determine when objects have changed. May be used
+for optimistic concurrency, change detection, and the watch operation on a
+resource or set of resources. They may only be valid for a
+particular resource or set of resources.
+More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2130,7 +2320,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+SelfLink is a URL representing this object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2138,7 +2330,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+UID is a unique id generated by the server on successful creation of a resource and is not
+allowed to change on PUT operations.
+More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2153,7 +2349,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Annotations is a key value map stored with a resource that
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2161,7 +2360,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A sequence number representing a specific generation of the desired state.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2169,7 +2370,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
+(scope and select) objects. May match selectors of replication controllers
+and routes.
+More info: http://kubernetes.io/docs/user-guide/labels
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2177,7 +2382,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2185,7 +2391,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
+project ID or project number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2193,7 +2401,15 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+An opaque value that represents the internal version of this object that
+can be used by clients to determine when objects have changed. May be used
+for optimistic concurrency, change detection, and the watch operation on a
+resource or set of resources. They may only be valid for a
+particular resource or set of resources.
+More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2201,7 +2417,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+SelfLink is a URL representing this object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2209,7 +2427,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+UID is a unique id generated by the server on successful creation of a resource and is not
+allowed to change on PUT operations.
+More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2224,7 +2446,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Annotations is a key value map stored with a resource that
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2232,7 +2457,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+A sequence number representing a specific generation of the desired state.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2240,7 +2467,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
+(scope and select) objects. May match selectors of replication controllers
+and routes.
+More info: http://kubernetes.io/docs/user-guide/labels
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2248,7 +2479,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2256,7 +2488,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
+project ID or project number.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2264,7 +2498,15 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+An opaque value that represents the internal version of this object that
+can be used by clients to determine when objects have changed. May be used
+for optimistic concurrency, change detection, and the watch operation on a
+resource or set of resources. They may only be valid for a
+particular resource or set of resources.
+More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2272,7 +2514,9 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+SelfLink is a URL representing this object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2280,7 +2524,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}-
+UID is a unique id generated by the server on successful creation of a resource and is not
+allowed to change on PUT operations.
+More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2297,6 +2545,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpec.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2310,7 +2561,13 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
+requests per container of the Revision. Values are:
+- `0` thread-safe, the system should manage the max concurrency. This is
+the default value.
+- `1` not-thread-safe. Single concurrency
+- `2-N` thread-safe, max concurrency of N
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2318,7 +2575,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainer">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Container defines the unit of execution for this Revision.
+In the context of a Revision, we disallow a number of the fields of
+this Container, including: name, ports, and volumeMounts.
+The runtime contract is documented here:
+https://github.com/knative/serving/blob/master/docs/runtime-contract.md  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2326,7 +2588,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Email address of the IAM service account associated with the revision of the
+service. The service account represents the identity of the running revision,
+and determines what permissions the revision has. If not provided, the revision
+will use the project's default service account.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2334,7 +2600,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+    <dd>{{% md %}}-
+ServingState holds a value describing the state the resources
+are in for this Revision.
+It is expected
+that the system will manipulate this based on routability and load.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2349,7 +2620,13 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
+requests per container of the Revision. Values are:
+- `0` thread-safe, the system should manage the max concurrency. This is
+the default value.
+- `1` not-thread-safe. Single concurrency
+- `2-N` thread-safe, max concurrency of N
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2357,7 +2634,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainer">[]Service<wbr>Template<wbr>Spec<wbr>Container</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Container defines the unit of execution for this Revision.
+In the context of a Revision, we disallow a number of the fields of
+this Container, including: name, ports, and volumeMounts.
+The runtime contract is documented here:
+https://github.com/knative/serving/blob/master/docs/runtime-contract.md  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2365,7 +2647,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Email address of the IAM service account associated with the revision of the
+service. The service account represents the identity of the running revision,
+and determines what permissions the revision has. If not provided, the revision
+will use the project's default service account.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2373,7 +2659,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+    <dd>{{% md %}}-
+ServingState holds a value describing the state the resources
+are in for this Revision.
+It is expected
+that the system will manipulate this based on routability and load.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2388,7 +2679,13 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
+requests per container of the Revision. Values are:
+- `0` thread-safe, the system should manage the max concurrency. This is
+the default value.
+- `1` not-thread-safe. Single concurrency
+- `2-N` thread-safe, max concurrency of N
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2396,7 +2693,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainer">Service<wbr>Template<wbr>Spec<wbr>Container[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Container defines the unit of execution for this Revision.
+In the context of a Revision, we disallow a number of the fields of
+this Container, including: name, ports, and volumeMounts.
+The runtime contract is documented here:
+https://github.com/knative/serving/blob/master/docs/runtime-contract.md  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2404,7 +2706,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Email address of the IAM service account associated with the revision of the
+service. The service account represents the identity of the running revision,
+and determines what permissions the revision has. If not provided, the revision
+will use the project's default service account.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2412,7 +2718,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+    <dd>{{% md %}}-
+ServingState holds a value describing the state the resources
+are in for this Revision.
+It is expected
+that the system will manipulate this based on routability and load.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2427,7 +2738,13 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
+requests per container of the Revision. Values are:
+- `0` thread-safe, the system should manage the max concurrency. This is
+the default value.
+- `1` not-thread-safe. Single concurrency
+- `2-N` thread-safe, max concurrency of N
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2435,7 +2752,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainer">List[Service<wbr>Template<wbr>Spec<wbr>Container]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Container defines the unit of execution for this Revision.
+In the context of a Revision, we disallow a number of the fields of
+this Container, including: name, ports, and volumeMounts.
+The runtime contract is documented here:
+https://github.com/knative/serving/blob/master/docs/runtime-contract.md  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2443,7 +2765,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Email address of the IAM service account associated with the revision of the
+service. The service account represents the identity of the running revision,
+and determines what permissions the revision has. If not provided, the revision
+will use the project's default service account.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2451,7 +2777,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+    <dd>{{% md %}}-
+ServingState holds a value describing the state the resources
+are in for this Revision.
+It is expected
+that the system will manipulate this based on routability and load.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2468,6 +2799,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainer.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2481,7 +2815,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Docker image name. This is most often a reference to a container located
+in the container registry, such as gcr.io/cloudrun/hello
+More info: https://kubernetes.io/docs/concepts/containers/images
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2489,7 +2826,16 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Arguments to the entrypoint.
+The docker image's CMD is used if this is not provided.
+Variable references $(VAR_NAME) are expanded using the container's
+environment. If a variable cannot be resolved, the reference in the input
+string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
+double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+regardless of whether the variable exists or not.
+More info:
+https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2497,7 +2843,16 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Entrypoint array. Not executed within a shell.
+The docker image's ENTRYPOINT is used if this is not provided.
+Variable references $(VAR_NAME) are expanded using the container's
+environment. If a variable cannot be resolved, the reference in the input
+string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
+double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+regardless of whether the variable exists or not.
+More info:
+https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2505,7 +2860,14 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+List of sources to populate environment variables in the container.
+All invalid keys will be reported as an event when the container is starting.
+When a key exists in multiple sources, the value associated with the last source will
+take precedence. Values defined by an Env with a duplicate key will take
+precedence.  Structure is documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2513,7 +2875,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenv">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of environment variables to set in the container.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2521,7 +2884,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
+More info:
+https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2529,7 +2895,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+Container's working directory.
+If not specified, the container runtime's default will be used, which
+might be configured in the container image.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2544,7 +2915,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Docker image name. This is most often a reference to a container located
+in the container registry, such as gcr.io/cloudrun/hello
+More info: https://kubernetes.io/docs/concepts/containers/images
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2552,7 +2926,16 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Arguments to the entrypoint.
+The docker image's CMD is used if this is not provided.
+Variable references $(VAR_NAME) are expanded using the container's
+environment. If a variable cannot be resolved, the reference in the input
+string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
+double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+regardless of whether the variable exists or not.
+More info:
+https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2560,7 +2943,16 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Entrypoint array. Not executed within a shell.
+The docker image's ENTRYPOINT is used if this is not provided.
+Variable references $(VAR_NAME) are expanded using the container's
+environment. If a variable cannot be resolved, the reference in the input
+string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
+double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+regardless of whether the variable exists or not.
+More info:
+https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2568,7 +2960,14 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">[]Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+List of sources to populate environment variables in the container.
+All invalid keys will be reported as an event when the container is starting.
+When a key exists in multiple sources, the value associated with the last source will
+take precedence. Values defined by an Env with a duplicate key will take
+precedence.  Structure is documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2576,7 +2975,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenv">[]Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of environment variables to set in the container.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2584,7 +2984,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
+More info:
+https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2592,7 +2995,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+Container's working directory.
+If not specified, the container runtime's default will be used, which
+might be configured in the container image.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2607,7 +3015,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Docker image name. This is most often a reference to a container located
+in the container registry, such as gcr.io/cloudrun/hello
+More info: https://kubernetes.io/docs/concepts/containers/images
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2615,7 +3026,16 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Arguments to the entrypoint.
+The docker image's CMD is used if this is not provided.
+Variable references $(VAR_NAME) are expanded using the container's
+environment. If a variable cannot be resolved, the reference in the input
+string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
+double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+regardless of whether the variable exists or not.
+More info:
+https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2623,7 +3043,16 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Entrypoint array. Not executed within a shell.
+The docker image's ENTRYPOINT is used if this is not provided.
+Variable references $(VAR_NAME) are expanded using the container's
+environment. If a variable cannot be resolved, the reference in the input
+string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
+double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+regardless of whether the variable exists or not.
+More info:
+https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2631,7 +3060,14 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+List of sources to populate environment variables in the container.
+All invalid keys will be reported as an event when the container is starting.
+When a key exists in multiple sources, the value associated with the last source will
+take precedence. Values defined by an Env with a duplicate key will take
+precedence.  Structure is documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2639,7 +3075,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenv">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of environment variables to set in the container.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2647,7 +3084,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
+More info:
+https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2655,7 +3095,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+Container's working directory.
+If not specified, the container runtime's default will be used, which
+might be configured in the container image.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2670,7 +3115,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Docker image name. This is most often a reference to a container located
+in the container registry, such as gcr.io/cloudrun/hello
+More info: https://kubernetes.io/docs/concepts/containers/images
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2678,7 +3126,16 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Arguments to the entrypoint.
+The docker image's CMD is used if this is not provided.
+Variable references $(VAR_NAME) are expanded using the container's
+environment. If a variable cannot be resolved, the reference in the input
+string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
+double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+regardless of whether the variable exists or not.
+More info:
+https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2686,7 +3143,16 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Entrypoint array. Not executed within a shell.
+The docker image's ENTRYPOINT is used if this is not provided.
+Variable references $(VAR_NAME) are expanded using the container's
+environment. If a variable cannot be resolved, the reference in the input
+string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
+double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+regardless of whether the variable exists or not.
+More info:
+https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2694,7 +3160,14 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">List[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+List of sources to populate environment variables in the container.
+All invalid keys will be reported as an event when the container is starting.
+When a key exists in multiple sources, the value associated with the last source will
+take precedence. Values defined by an Env with a duplicate key will take
+precedence.  Structure is documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2702,7 +3175,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenv">List[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of environment variables to set in the container.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2710,7 +3184,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerresources">Dict[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
+More info:
+https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2718,7 +3195,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
+    <dd>{{% md %}}-
+(Optional, Deprecated)
+Container's working directory.
+If not specified, the container runtime's default will be used, which
+might be configured in the container image.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -2735,6 +3217,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnv.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2748,7 +3233,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2756,7 +3242,15 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded
+using the previous defined environment variables in the container and
+any route environment variables. If a variable cannot be resolved,
+the reference in the input string will be unchanged. The $(VAR_NAME)
+syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
+references will never be expanded, regardless of whether the variable
+exists or not.
+Defaults to "".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2771,7 +3265,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2779,7 +3274,15 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded
+using the previous defined environment variables in the container and
+any route environment variables. If a variable cannot be resolved,
+the reference in the input string will be unchanged. The $(VAR_NAME)
+syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
+references will never be expanded, regardless of whether the variable
+exists or not.
+Defaults to "".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2794,7 +3297,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2802,7 +3306,15 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded
+using the previous defined environment variables in the container and
+any route environment variables. If a variable cannot be resolved,
+the reference in the input string will be unchanged. The $(VAR_NAME)
+syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
+references will never be expanded, regardless of whether the variable
+exists or not.
+Defaults to "".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2817,7 +3329,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2825,7 +3338,15 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded
+using the previous defined environment variables in the container and
+any route environment variables. If a variable cannot be resolved,
+the reference in the input string will be unchanged. The $(VAR_NAME)
+syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
+references will never be expanded, regardless of whether the variable
+exists or not.
+Defaults to "".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2842,6 +3363,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvFromArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnvFrom.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2855,7 +3379,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ConfigMap to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2863,7 +3388,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2871,7 +3397,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2886,7 +3413,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ConfigMap to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2894,7 +3422,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2902,7 +3431,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2917,7 +3447,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ConfigMap to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2925,7 +3456,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2933,7 +3465,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2948,7 +3481,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Dict[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ConfigMap to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2956,7 +3490,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2964,7 +3499,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Dict[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2981,6 +3517,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvFromConfigMapRefArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnvFromConfigMapRef.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2994,7 +3533,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3002,7 +3542,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specify whether the Secret must be defined
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3017,7 +3558,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3025,7 +3567,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specify whether the Secret must be defined
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3040,7 +3583,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3048,7 +3592,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specify whether the Secret must be defined
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3063,7 +3608,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Dict[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3071,7 +3617,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specify whether the Secret must be defined
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3088,6 +3635,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3101,7 +3651,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3116,7 +3667,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3131,7 +3683,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3146,7 +3699,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3163,6 +3717,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvFromSecretRefArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnvFromSecretRef.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3176,7 +3733,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3184,7 +3742,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specify whether the Secret must be defined
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3199,7 +3758,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3207,7 +3767,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specify whether the Secret must be defined
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3222,7 +3783,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3230,7 +3792,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specify whether the Secret must be defined
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3245,7 +3808,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Dict[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3253,7 +3817,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specify whether the Secret must be defined
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3270,6 +3835,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3283,7 +3851,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3298,7 +3867,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3313,7 +3883,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3328,7 +3899,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the environment variable.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3345,6 +3917,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerResourcesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerResourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerResources.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3358,7 +3933,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed.
+The values of the map is string form of the 'quantity' k8s type:
+https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3366,7 +3944,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Requests describes the minimum amount of compute resources required.
+If Requests is omitted for a container, it defaults to Limits if that is
+explicitly specified, otherwise to an implementation-defined value.
+The values of the map is string form of the 'quantity' k8s type:
+https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3381,7 +3964,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed.
+The values of the map is string form of the 'quantity' k8s type:
+https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3389,7 +3975,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Requests describes the minimum amount of compute resources required.
+If Requests is omitted for a container, it defaults to Limits if that is
+explicitly specified, otherwise to an implementation-defined value.
+The values of the map is string form of the 'quantity' k8s type:
+https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3404,7 +3995,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed.
+The values of the map is string form of the 'quantity' k8s type:
+https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3412,7 +4006,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Requests describes the minimum amount of compute resources required.
+If Requests is omitted for a container, it defaults to Limits if that is
+explicitly specified, otherwise to an implementation-defined value.
+The values of the map is string form of the 'quantity' k8s type:
+https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3427,7 +4026,10 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed.
+The values of the map is string form of the 'quantity' k8s type:
+https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3435,7 +4037,12 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Requests describes the minimum amount of compute resources required.
+If Requests is omitted for a container, it defaults to Limits if that is
+explicitly specified, otherwise to an implementation-defined value.
+The values of the map is string form of the 'quantity' k8s type:
+https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3452,6 +4059,9 @@ source.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTrafficArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTrafficOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTrafficArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTraffic.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3465,7 +4075,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3473,7 +4084,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready
+Revision of the Configuration should be used for this traffic target. When
+provided LatestRevision must be true if RevisionName is empty; it must be
+false when RevisionName is non-empty.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3481,7 +4096,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3496,7 +4112,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3504,7 +4121,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready
+Revision of the Configuration should be used for this traffic target. When
+provided LatestRevision must be true if RevisionName is empty; it must be
+false when RevisionName is non-empty.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3512,7 +4133,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3527,7 +4149,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3535,7 +4158,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready
+Revision of the Configuration should be used for this traffic target. When
+provided LatestRevision must be true if RevisionName is empty; it must be
+false when RevisionName is non-empty.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3543,7 +4170,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3558,7 +4186,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3566,7 +4195,11 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready
+Revision of the Configuration should be used for this traffic target. When
+provided LatestRevision must be true if RevisionName is empty; it must be
+false when RevisionName is non-empty.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3574,7 +4207,8 @@ source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3593,8 +4227,7 @@ source.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

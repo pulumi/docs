@@ -12,10 +12,26 @@ meta_desc: "Explore the StackV1 resource of the orchestration module, including 
 
 Manages a V1 stack resource within OpenStack.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -45,14 +61,13 @@ resources:
     timeout: 30,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a StackV1 Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -60,7 +75,7 @@ resources:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StackV1</span><span class="p">(resource_name, opts=None, </span>capabilities=None<span class="p">, </span>creation_time=None<span class="p">, </span>description=None<span class="p">, </span>disable_rollback=None<span class="p">, </span>environment_opts=None<span class="p">, </span>name=None<span class="p">, </span>notification_topics=None<span class="p">, </span>outputs=None<span class="p">, </span>parameters=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>status_reason=None<span class="p">, </span>tags=None<span class="p">, </span>template_description=None<span class="p">, </span>template_opts=None<span class="p">, </span>timeout=None<span class="p">, </span>updated_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StackV1</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capabilities=None<span class="p">, </span>creation_time=None<span class="p">, </span>description=None<span class="p">, </span>disable_rollback=None<span class="p">, </span>environment_opts=None<span class="p">, </span>name=None<span class="p">, </span>notification_topics=None<span class="p">, </span>outputs=None<span class="p">, </span>parameters=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>status_reason=None<span class="p">, </span>tags=None<span class="p">, </span>template_description=None<span class="p">, </span>template_opts=None<span class="p">, </span>timeout=None<span class="p">, </span>updated_time=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1020,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing StackV1 Resource {#look-up}
 
 Get an existing StackV1 resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/orchestration/#StackV1State">StackV1State</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/orchestration/#StackV1">StackV1</a></span></code></pre></div>
@@ -1868,6 +1883,9 @@ is the time zone as an offset from UTC.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#StackV1OutputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#StackV1OutputOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Orchestration.Inputs.StackV1OutputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Orchestration.Outputs.StackV1Output.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

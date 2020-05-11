@@ -12,10 +12,26 @@ meta_desc: "Explore the AlertPolicy resource of the New Relic package, including
 
 Use this resource to create and manage New Relic alert policies.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
@@ -24,15 +40,13 @@ const foo = new newrelic.AlertPolicy("foo", {
     incidentPreference: "PER_POLICY", // PER_POLICY is default
 });
 ```
-See additional examples.
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a AlertPolicy Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -40,7 +54,7 @@ See additional examples.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AlertPolicy</span><span class="p">(resource_name, opts=None, </span>channel_ids=None<span class="p">, </span>incident_preference=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AlertPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>channel_ids=None<span class="p">, </span>incident_preference=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -367,14 +381,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -384,14 +398,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was last updated.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -400,14 +414,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -417,14 +431,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was last updated.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -433,14 +447,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -450,14 +464,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was last updated.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -466,14 +480,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>created_<wbr>at</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -483,14 +497,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>updated_<wbr>at</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was last updated.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -504,7 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AlertPolicy Resource {#look-up}
 
 Get an existing AlertPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#AlertPolicyState">AlertPolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#AlertPolicy">AlertPolicy</a></span></code></pre></div>
@@ -636,14 +650,14 @@ in a new alert policy resource being created and the old one being destroyed. Al
 imported via terraform import.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -663,14 +677,14 @@ imported via terraform import.
     <dd>{{% md %}}The name of the policy.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was last updated.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -690,14 +704,14 @@ in a new alert policy resource being created and the old one being destroyed. Al
 imported via terraform import.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -717,14 +731,14 @@ imported via terraform import.
     <dd>{{% md %}}The name of the policy.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was last updated.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -744,14 +758,14 @@ in a new alert policy resource being created and the old one being destroyed. Al
 imported via terraform import.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -771,14 +785,14 @@ imported via terraform import.
     <dd>{{% md %}}The name of the policy.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was last updated.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -798,14 +812,14 @@ in a new alert policy resource being created and the old one being destroyed. Al
 imported via terraform import.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>created_<wbr>at</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -825,14 +839,14 @@ imported via terraform import.
     <dd>{{% md %}}The name of the policy.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>updated_<wbr>at</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The time the policy was last updated.
-{{% /md %}}</dd>
+    <dd>{{% md %}}**DEPRECATED:** The time the policy was last updated.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Unavailable attribute in NerdGraph.{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}

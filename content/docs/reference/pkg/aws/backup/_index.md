@@ -16,6 +16,13 @@ Explore the resources and functions of the backup module in the AWS package.
     <li><a href="vault" title="Vault"><span class="symbol resource"></span>Vault</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getplan" title="GetPlan"><span class="symbol function"></span>GetPlan</a></li>
+    <li><a href="getselection" title="GetSelection"><span class="symbol function"></span>GetSelection</a></li>
+    <li><a href="getvault" title="GetVault"><span class="symbol function"></span>GetVault</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -25,6 +32,6 @@ Explore the resources and functions of the backup module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.3.0</dd>
 </dl>
 

@@ -14,14 +14,26 @@ Manages a FSx Windows File System. See the [FSx Windows Guide](https://docs.aws.
 
 > **NOTE:** Either the `active_directory_id` argument or `self_managed_active_directory` configuration block must be specified.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Using AWS Directory Service
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-Additional information for using AWS Directory Service with Windows File Systems can be found in the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/fsx-aws-managed-ad.html).
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -34,13 +46,22 @@ const example = new aws.fsx.WindowsFileSystem("example", {
     throughputCapacity: 1024,
 });
 ```
-
 {{% /example %}}
-{{% example %}}
+
 ### Using a Self-Managed Microsoft Active Directory
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-Additional information for using AWS Directory Service with Windows File Systems can be found in the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html).
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -61,14 +82,13 @@ const example = new aws.fsx.WindowsFileSystem("example", {
     throughputCapacity: 1024,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a WindowsFileSystem Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -76,7 +96,7 @@ const example = new aws.fsx.WindowsFileSystem("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">WindowsFileSystem</span><span class="p">(resource_name, opts=None, </span>active_directory_id=None<span class="p">, </span>automatic_backup_retention_days=None<span class="p">, </span>copy_tags_to_backups=None<span class="p">, </span>daily_automatic_backup_start_time=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>self_managed_active_directory=None<span class="p">, </span>skip_final_backup=None<span class="p">, </span>storage_capacity=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>throughput_capacity=None<span class="p">, </span>weekly_maintenance_start_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">WindowsFileSystem</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_directory_id=None<span class="p">, </span>automatic_backup_retention_days=None<span class="p">, </span>copy_tags_to_backups=None<span class="p">, </span>daily_automatic_backup_start_time=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>self_managed_active_directory=None<span class="p">, </span>skip_final_backup=None<span class="p">, </span>storage_capacity=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>throughput_capacity=None<span class="p">, </span>weekly_maintenance_start_time=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -353,7 +373,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -477,7 +497,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -601,7 +621,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -725,7 +745,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1000,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing WindowsFileSystem Resource {#look-up}
 
 Get an existing WindowsFileSystem resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/fsx/#WindowsFileSystemState">WindowsFileSystemState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/fsx/#WindowsFileSystem">WindowsFileSystem</a></span></code></pre></div>
@@ -1253,7 +1273,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1422,7 +1442,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1591,7 +1611,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1760,7 +1780,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the file system.
+    <dd>{{% md %}}A map of tags to assign to the file system.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1812,6 +1832,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/fsx?tab=doc#WindowsFileSystemSelfManagedActiveDirectoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/fsx?tab=doc#WindowsFileSystemSelfManagedActiveDirectoryOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fsx.Inputs.WindowsFileSystemSelfManagedActiveDirectoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fsx.Outputs.WindowsFileSystemSelfManagedActiveDirectory.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

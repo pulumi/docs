@@ -16,10 +16,26 @@ amazonec2, azure, digitalocean, linode, opennebula, openstack, and vsphere drive
 
 **Note** If you are upgrading to Rancher v2.3.3, please take a look to final section
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -39,40 +55,13 @@ const foo = new rancher2.NodeTemplate("foo", {
     description: "foo test",
 });
 ```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as rancher2 from "@pulumi/rancher2";
-
-// Create a new rancher2 Node Template from Rancher 2.2.x
-const fooCloudCredential = new rancher2.CloudCredential("foo", {
-    amazonec2CredentialConfig: {
-        accessKey: "<AWS_ACCESS_KEY>",
-        secretKey: "<AWS_SECRET_KEY>",
-    },
-    description: "foo test",
-});
-const fooNodeTemplate = new rancher2.NodeTemplate("foo", {
-    amazonec2Config: {
-        ami: "<AMI_ID>",
-        region: "<REGION>",
-        securityGroups: ["<AWS_SECURITY_GROUP>"],
-        subnetId: "<SUBNET_ID>",
-        vpcId: "<VPC_ID>",
-        zone: "<ZONE>",
-    },
-    cloudCredentialId: fooCloudCredential.id,
-    description: "foo test",
-});
-```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a NodeTemplate Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -80,7 +69,7 @@ const fooNodeTemplate = new rancher2.NodeTemplate("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodeTemplate</span><span class="p">(resource_name, opts=None, </span>amazonec2_config=None<span class="p">, </span>annotations=None<span class="p">, </span>auth_certificate_authority=None<span class="p">, </span>auth_key=None<span class="p">, </span>azure_config=None<span class="p">, </span>cloud_credential_id=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_config=None<span class="p">, </span>driver_id=None<span class="p">, </span>engine_env=None<span class="p">, </span>engine_insecure_registries=None<span class="p">, </span>engine_install_url=None<span class="p">, </span>engine_label=None<span class="p">, </span>engine_opt=None<span class="p">, </span>engine_registry_mirrors=None<span class="p">, </span>engine_storage_driver=None<span class="p">, </span>labels=None<span class="p">, </span>linode_config=None<span class="p">, </span>name=None<span class="p">, </span>opennebula_config=None<span class="p">, </span>openstack_config=None<span class="p">, </span>use_internal_ip_address=None<span class="p">, </span>vsphere_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NodeTemplate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>amazonec2_config=None<span class="p">, </span>annotations=None<span class="p">, </span>auth_certificate_authority=None<span class="p">, </span>auth_key=None<span class="p">, </span>azure_config=None<span class="p">, </span>cloud_credential_id=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_config=None<span class="p">, </span>driver_id=None<span class="p">, </span>engine_env=None<span class="p">, </span>engine_insecure_registries=None<span class="p">, </span>engine_install_url=None<span class="p">, </span>engine_label=None<span class="p">, </span>engine_opt=None<span class="p">, </span>engine_registry_mirrors=None<span class="p">, </span>engine_storage_driver=None<span class="p">, </span>labels=None<span class="p">, </span>linode_config=None<span class="p">, </span>name=None<span class="p">, </span>opennebula_config=None<span class="p">, </span>openstack_config=None<span class="p">, </span>use_internal_ip_address=None<span class="p">, </span>vsphere_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1220,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NodeTemplate Resource {#look-up}
 
 Get an existing NodeTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NodeTemplateState">NodeTemplateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NodeTemplate">NodeTemplate</a></span></code></pre></div>
@@ -2248,6 +2237,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateAmazonec2ConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateAmazonec2ConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NodeTemplateAmazonec2ConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NodeTemplateAmazonec2Config.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3408,6 +3400,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateAzureConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateAzureConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NodeTemplateAzureConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NodeTemplateAzureConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4387,6 +4382,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateDigitaloceanConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateDigitaloceanConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NodeTemplateDigitaloceanConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NodeTemplateDigitaloceanConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4933,6 +4931,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateLinodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateLinodeConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NodeTemplateLinodeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NodeTemplateLinodeConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5553,6 +5554,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateOpennebulaConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateOpennebulaConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NodeTemplateOpennebulaConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NodeTemplateOpennebulaConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5657,7 +5661,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
-* `memory`- (Optional) Size of the memory for the VM in MB (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5666,7 +5669,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the memory for the VM in MB (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5835,7 +5839,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
-* `memory`- (Optional) Size of the memory for the VM in MB (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5844,7 +5847,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the memory for the VM in MB (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6013,7 +6017,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
-* `memory`- (Optional) Size of the memory for the VM in MB (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6022,7 +6025,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the memory for the VM in MB (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6191,7 +6195,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
-* `memory`- (Optional) Size of the memory for the VM in MB (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6200,7 +6203,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the memory for the VM in MB (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6280,6 +6284,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateOpenstackConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateOpenstackConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NodeTemplateOpenstackConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NodeTemplateOpenstackConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6329,7 +6336,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OpenStack active timeout Default `200` (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6596,7 +6604,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OpenStack active timeout Default `200` (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6863,7 +6872,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OpenStack active timeout Default `200` (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7130,7 +7140,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OpenStack active timeout Default `200` (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7362,6 +7373,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateVsphereConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NodeTemplateVsphereConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NodeTemplateVsphereConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NodeTemplateVsphereConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

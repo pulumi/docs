@@ -57,7 +57,7 @@ dc = vsphere.Datacenter("my-dc",
 
 ```go
 import (
-    vsphere "github.com/pulumi/pulumi-vsphere/sdk/go/vsphere"
+    vsphere "github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere"
 )
 dc, _ := vsphere.NewDatacenter(ctx, "test", &vsphere.DatacenterArgs{
   Name: "Production-DataCenter"

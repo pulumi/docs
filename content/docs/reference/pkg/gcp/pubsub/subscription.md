@@ -1,7 +1,8 @@
 
 ---
 title: "Subscription"
-block_external_search_index: true
+title_tag: "Resource Subscription | Module pubsub | Package GCP"
+meta_desc: "Explore the Subscription resource of the pubsub module, including examples, input properties, output properties, lookup functions, and supporting types. A named resource representing the stream of messages from a single,"
 ---
 
 
@@ -22,7 +23,7 @@ To get more information about Subscription, see:
 
 
 ## Create a Subscription Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -30,7 +31,7 @@ To get more information about Subscription, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subscription</span><span class="p">(resource_name, opts=None, </span>ack_deadline_seconds=None<span class="p">, </span>dead_letter_policy=None<span class="p">, </span>expiration_policy=None<span class="p">, </span>labels=None<span class="p">, </span>message_retention_duration=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>push_config=None<span class="p">, </span>retain_acked_messages=None<span class="p">, </span>topic=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subscription</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ack_deadline_seconds=None<span class="p">, </span>dead_letter_policy=None<span class="p">, </span>expiration_policy=None<span class="p">, </span>labels=None<span class="p">, </span>message_retention_duration=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>push_config=None<span class="p">, </span>retain_acked_messages=None<span class="p">, </span>topic=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -217,15 +218,21 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the
-message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an
-outstanding message and will not be delivered again during that time (on a best-effort basis). For pull subscriptions,
-this value is used as the initial value for the ack deadline. To override this value for a given message, call
-subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify
-is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a
-default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call
-to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
-message.
+    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
+before the subscriber should acknowledge the message. After message
+delivery but before the ack deadline expires and before the message is
+acknowledged, it is an outstanding message and will not be delivered
+again during that time (on a best-effort basis).
+For pull subscriptions, this value is used as the initial value for
+the ack deadline. To override this value for a given message, call
+subscriptions.modifyAckDeadline with the corresponding ackId if using
+pull. The minimum custom deadline you can specify is 10 seconds. The
+maximum custom deadline you can specify is 600 seconds (10 minutes).
+If this parameter is 0, a default value of 10 seconds is used.
+For push delivery, this value is also used to set the request timeout
+for the call to the push endpoint.
+If the subscriber never acknowledges the message, the Pub/Sub system
+will eventually redeliver the message.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -234,10 +241,13 @@ message.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not
-set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project
-(i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on
-this subscription.
+    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
+this subscription. If dead_letter_policy is not set, dead lettering
+is disabled.
+The Cloud Pub/Sub service account associated with this subscriptions's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Acknowledge() messages on this subscription.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -246,10 +256,13 @@ this subscription.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long
-as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
-subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used. If it is set but ttl is
-"", the resource never expires. The minimum allowed value for expirationPolicy.ttl is 1 day.
+    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
+A subscription is considered active as long as any connected subscriber
+is successfully consuming messages from the subscription or is issuing
+operations on the subscription. If expirationPolicy is not set, a default
+policy with ttl of 31 days will be used.  If it is set but ttl is "", the
+resource never expires.  The minimum allowed value for expirationPolicy.ttl
+is 1 day.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -267,11 +280,14 @@ subscription. If expirationPolicy is not set, a default policy with ttl of 31 da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If
-retainAckedMessages is true, then this also configures the retention of acknowledged messages, and thus configures how
-far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days ('"604800s"') or less
-than 10 minutes ('"600s"'). A duration in seconds with up to nine fractional digits, terminated by 's'. Example:
-'"600.5s"'.
+    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
+backlog, from the moment a message is published. If
+retainAckedMessages is true, then this also configures the retention
+of acknowledged messages, and thus configures how far back in time a
+subscriptions.seek can be done. Defaults to 7 days. Cannot be more
+than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
+A duration in seconds with up to nine fractional digits, terminated
+by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -299,8 +315,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that
-the subscriber will pull and ack messages using API methods.
+    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
+configure it. An empty pushConfig signifies that the subscriber will
+pull and ack messages using API methods.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -309,8 +326,10 @@ the subscriber will pull and ack messages using API methods.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If 'true', then messages are not expunged from the subscription's
-backlog, even if they are acknowledged, until they fall out of the messageRetentionDuration window.
+    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
+messages are not expunged from the subscription's backlog, even if
+they are acknowledged, until they fall out of the
+messageRetentionDuration window.
 {{% /md %}}</dd>
 
 </dl>
@@ -335,15 +354,21 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the
-message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an
-outstanding message and will not be delivered again during that time (on a best-effort basis). For pull subscriptions,
-this value is used as the initial value for the ack deadline. To override this value for a given message, call
-subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify
-is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a
-default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call
-to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
-message.
+    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
+before the subscriber should acknowledge the message. After message
+delivery but before the ack deadline expires and before the message is
+acknowledged, it is an outstanding message and will not be delivered
+again during that time (on a best-effort basis).
+For pull subscriptions, this value is used as the initial value for
+the ack deadline. To override this value for a given message, call
+subscriptions.modifyAckDeadline with the corresponding ackId if using
+pull. The minimum custom deadline you can specify is 10 seconds. The
+maximum custom deadline you can specify is 600 seconds (10 minutes).
+If this parameter is 0, a default value of 10 seconds is used.
+For push delivery, this value is also used to set the request timeout
+for the call to the push endpoint.
+If the subscriber never acknowledges the message, the Pub/Sub system
+will eventually redeliver the message.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -352,10 +377,13 @@ message.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not
-set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project
-(i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on
-this subscription.
+    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
+this subscription. If dead_letter_policy is not set, dead lettering
+is disabled.
+The Cloud Pub/Sub service account associated with this subscriptions's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Acknowledge() messages on this subscription.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -364,10 +392,13 @@ this subscription.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long
-as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
-subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used. If it is set but ttl is
-"", the resource never expires. The minimum allowed value for expirationPolicy.ttl is 1 day.
+    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
+A subscription is considered active as long as any connected subscriber
+is successfully consuming messages from the subscription or is issuing
+operations on the subscription. If expirationPolicy is not set, a default
+policy with ttl of 31 days will be used.  If it is set but ttl is "", the
+resource never expires.  The minimum allowed value for expirationPolicy.ttl
+is 1 day.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -385,11 +416,14 @@ subscription. If expirationPolicy is not set, a default policy with ttl of 31 da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If
-retainAckedMessages is true, then this also configures the retention of acknowledged messages, and thus configures how
-far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days ('"604800s"') or less
-than 10 minutes ('"600s"'). A duration in seconds with up to nine fractional digits, terminated by 's'. Example:
-'"600.5s"'.
+    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
+backlog, from the moment a message is published. If
+retainAckedMessages is true, then this also configures the retention
+of acknowledged messages, and thus configures how far back in time a
+subscriptions.seek can be done. Defaults to 7 days. Cannot be more
+than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
+A duration in seconds with up to nine fractional digits, terminated
+by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -417,8 +451,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that
-the subscriber will pull and ack messages using API methods.
+    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
+configure it. An empty pushConfig signifies that the subscriber will
+pull and ack messages using API methods.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -427,8 +462,10 @@ the subscriber will pull and ack messages using API methods.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If 'true', then messages are not expunged from the subscription's
-backlog, even if they are acknowledged, until they fall out of the messageRetentionDuration window.
+    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
+messages are not expunged from the subscription's backlog, even if
+they are acknowledged, until they fall out of the
+messageRetentionDuration window.
 {{% /md %}}</dd>
 
 </dl>
@@ -453,15 +490,21 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the
-message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an
-outstanding message and will not be delivered again during that time (on a best-effort basis). For pull subscriptions,
-this value is used as the initial value for the ack deadline. To override this value for a given message, call
-subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify
-is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a
-default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call
-to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
-message.
+    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
+before the subscriber should acknowledge the message. After message
+delivery but before the ack deadline expires and before the message is
+acknowledged, it is an outstanding message and will not be delivered
+again during that time (on a best-effort basis).
+For pull subscriptions, this value is used as the initial value for
+the ack deadline. To override this value for a given message, call
+subscriptions.modifyAckDeadline with the corresponding ackId if using
+pull. The minimum custom deadline you can specify is 10 seconds. The
+maximum custom deadline you can specify is 600 seconds (10 minutes).
+If this parameter is 0, a default value of 10 seconds is used.
+For push delivery, this value is also used to set the request timeout
+for the call to the push endpoint.
+If the subscriber never acknowledges the message, the Pub/Sub system
+will eventually redeliver the message.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -470,10 +513,13 @@ message.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not
-set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project
-(i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on
-this subscription.
+    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
+this subscription. If dead_letter_policy is not set, dead lettering
+is disabled.
+The Cloud Pub/Sub service account associated with this subscriptions's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Acknowledge() messages on this subscription.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -482,10 +528,13 @@ this subscription.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long
-as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
-subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used. If it is set but ttl is
-"", the resource never expires. The minimum allowed value for expirationPolicy.ttl is 1 day.
+    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
+A subscription is considered active as long as any connected subscriber
+is successfully consuming messages from the subscription or is issuing
+operations on the subscription. If expirationPolicy is not set, a default
+policy with ttl of 31 days will be used.  If it is set but ttl is "", the
+resource never expires.  The minimum allowed value for expirationPolicy.ttl
+is 1 day.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -503,11 +552,14 @@ subscription. If expirationPolicy is not set, a default policy with ttl of 31 da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If
-retainAckedMessages is true, then this also configures the retention of acknowledged messages, and thus configures how
-far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days ('"604800s"') or less
-than 10 minutes ('"600s"'). A duration in seconds with up to nine fractional digits, terminated by 's'. Example:
-'"600.5s"'.
+    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
+backlog, from the moment a message is published. If
+retainAckedMessages is true, then this also configures the retention
+of acknowledged messages, and thus configures how far back in time a
+subscriptions.seek can be done. Defaults to 7 days. Cannot be more
+than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
+A duration in seconds with up to nine fractional digits, terminated
+by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -535,8 +587,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that
-the subscriber will pull and ack messages using API methods.
+    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
+configure it. An empty pushConfig signifies that the subscriber will
+pull and ack messages using API methods.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -545,8 +598,10 @@ the subscriber will pull and ack messages using API methods.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If 'true', then messages are not expunged from the subscription's
-backlog, even if they are acknowledged, until they fall out of the messageRetentionDuration window.
+    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
+messages are not expunged from the subscription's backlog, even if
+they are acknowledged, until they fall out of the
+messageRetentionDuration window.
 {{% /md %}}</dd>
 
 </dl>
@@ -571,15 +626,21 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the
-message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an
-outstanding message and will not be delivered again during that time (on a best-effort basis). For pull subscriptions,
-this value is used as the initial value for the ack deadline. To override this value for a given message, call
-subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify
-is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a
-default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call
-to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
-message.
+    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
+before the subscriber should acknowledge the message. After message
+delivery but before the ack deadline expires and before the message is
+acknowledged, it is an outstanding message and will not be delivered
+again during that time (on a best-effort basis).
+For pull subscriptions, this value is used as the initial value for
+the ack deadline. To override this value for a given message, call
+subscriptions.modifyAckDeadline with the corresponding ackId if using
+pull. The minimum custom deadline you can specify is 10 seconds. The
+maximum custom deadline you can specify is 600 seconds (10 minutes).
+If this parameter is 0, a default value of 10 seconds is used.
+For push delivery, this value is also used to set the request timeout
+for the call to the push endpoint.
+If the subscriber never acknowledges the message, the Pub/Sub system
+will eventually redeliver the message.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -588,10 +649,13 @@ message.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Dict[Subscription<wbr>Dead<wbr>Letter<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not
-set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project
-(i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on
-this subscription.
+    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
+this subscription. If dead_letter_policy is not set, dead lettering
+is disabled.
+The Cloud Pub/Sub service account associated with this subscriptions's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Acknowledge() messages on this subscription.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -600,10 +664,13 @@ this subscription.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Dict[Subscription<wbr>Expiration<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long
-as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
-subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used. If it is set but ttl is
-"", the resource never expires. The minimum allowed value for expirationPolicy.ttl is 1 day.
+    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
+A subscription is considered active as long as any connected subscriber
+is successfully consuming messages from the subscription or is issuing
+operations on the subscription. If expirationPolicy is not set, a default
+policy with ttl of 31 days will be used.  If it is set but ttl is "", the
+resource never expires.  The minimum allowed value for expirationPolicy.ttl
+is 1 day.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -621,11 +688,14 @@ subscription. If expirationPolicy is not set, a default policy with ttl of 31 da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If
-retainAckedMessages is true, then this also configures the retention of acknowledged messages, and thus configures how
-far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days ('"604800s"') or less
-than 10 minutes ('"600s"'). A duration in seconds with up to nine fractional digits, terminated by 's'. Example:
-'"600.5s"'.
+    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
+backlog, from the moment a message is published. If
+retainAckedMessages is true, then this also configures the retention
+of acknowledged messages, and thus configures how far back in time a
+subscriptions.seek can be done. Defaults to 7 days. Cannot be more
+than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
+A duration in seconds with up to nine fractional digits, terminated
+by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -653,8 +723,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Dict[Subscription<wbr>Push<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that
-the subscriber will pull and ack messages using API methods.
+    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
+configure it. An empty pushConfig signifies that the subscriber will
+pull and ack messages using API methods.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -663,8 +734,10 @@ the subscriber will pull and ack messages using API methods.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If 'true', then messages are not expunged from the subscription's
-backlog, even if they are acknowledged, until they fall out of the messageRetentionDuration window.
+    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
+messages are not expunged from the subscription's backlog, even if
+they are acknowledged, until they fall out of the
+messageRetentionDuration window.
 {{% /md %}}</dd>
 
 </dl>
@@ -782,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Subscription Resource {#look-up}
 
 Get an existing Subscription resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#SubscriptionState">SubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#Subscription">Subscription</a></span></code></pre></div>
@@ -909,15 +982,21 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the
-message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an
-outstanding message and will not be delivered again during that time (on a best-effort basis). For pull subscriptions,
-this value is used as the initial value for the ack deadline. To override this value for a given message, call
-subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify
-is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a
-default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call
-to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
-message.
+    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
+before the subscriber should acknowledge the message. After message
+delivery but before the ack deadline expires and before the message is
+acknowledged, it is an outstanding message and will not be delivered
+again during that time (on a best-effort basis).
+For pull subscriptions, this value is used as the initial value for
+the ack deadline. To override this value for a given message, call
+subscriptions.modifyAckDeadline with the corresponding ackId if using
+pull. The minimum custom deadline you can specify is 10 seconds. The
+maximum custom deadline you can specify is 600 seconds (10 minutes).
+If this parameter is 0, a default value of 10 seconds is used.
+For push delivery, this value is also used to set the request timeout
+for the call to the push endpoint.
+If the subscriber never acknowledges the message, the Pub/Sub system
+will eventually redeliver the message.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -926,10 +1005,13 @@ message.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not
-set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project
-(i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on
-this subscription.
+    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
+this subscription. If dead_letter_policy is not set, dead lettering
+is disabled.
+The Cloud Pub/Sub service account associated with this subscriptions's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Acknowledge() messages on this subscription.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -938,10 +1020,13 @@ this subscription.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long
-as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
-subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used. If it is set but ttl is
-"", the resource never expires. The minimum allowed value for expirationPolicy.ttl is 1 day.
+    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
+A subscription is considered active as long as any connected subscriber
+is successfully consuming messages from the subscription or is issuing
+operations on the subscription. If expirationPolicy is not set, a default
+policy with ttl of 31 days will be used.  If it is set but ttl is "", the
+resource never expires.  The minimum allowed value for expirationPolicy.ttl
+is 1 day.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -959,11 +1044,14 @@ subscription. If expirationPolicy is not set, a default policy with ttl of 31 da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If
-retainAckedMessages is true, then this also configures the retention of acknowledged messages, and thus configures how
-far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days ('"604800s"') or less
-than 10 minutes ('"600s"'). A duration in seconds with up to nine fractional digits, terminated by 's'. Example:
-'"600.5s"'.
+    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
+backlog, from the moment a message is published. If
+retainAckedMessages is true, then this also configures the retention
+of acknowledged messages, and thus configures how far back in time a
+subscriptions.seek can be done. Defaults to 7 days. Cannot be more
+than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
+A duration in seconds with up to nine fractional digits, terminated
+by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -999,8 +1087,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that
-the subscriber will pull and ack messages using API methods.
+    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
+configure it. An empty pushConfig signifies that the subscriber will
+pull and ack messages using API methods.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1009,8 +1098,10 @@ the subscriber will pull and ack messages using API methods.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If 'true', then messages are not expunged from the subscription's
-backlog, even if they are acknowledged, until they fall out of the messageRetentionDuration window.
+    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
+messages are not expunged from the subscription's backlog, even if
+they are acknowledged, until they fall out of the
+messageRetentionDuration window.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1035,15 +1126,21 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the
-message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an
-outstanding message and will not be delivered again during that time (on a best-effort basis). For pull subscriptions,
-this value is used as the initial value for the ack deadline. To override this value for a given message, call
-subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify
-is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a
-default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call
-to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
-message.
+    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
+before the subscriber should acknowledge the message. After message
+delivery but before the ack deadline expires and before the message is
+acknowledged, it is an outstanding message and will not be delivered
+again during that time (on a best-effort basis).
+For pull subscriptions, this value is used as the initial value for
+the ack deadline. To override this value for a given message, call
+subscriptions.modifyAckDeadline with the corresponding ackId if using
+pull. The minimum custom deadline you can specify is 10 seconds. The
+maximum custom deadline you can specify is 600 seconds (10 minutes).
+If this parameter is 0, a default value of 10 seconds is used.
+For push delivery, this value is also used to set the request timeout
+for the call to the push endpoint.
+If the subscriber never acknowledges the message, the Pub/Sub system
+will eventually redeliver the message.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1052,10 +1149,13 @@ message.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not
-set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project
-(i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on
-this subscription.
+    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
+this subscription. If dead_letter_policy is not set, dead lettering
+is disabled.
+The Cloud Pub/Sub service account associated with this subscriptions's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Acknowledge() messages on this subscription.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1064,10 +1164,13 @@ this subscription.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long
-as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
-subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used. If it is set but ttl is
-"", the resource never expires. The minimum allowed value for expirationPolicy.ttl is 1 day.
+    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
+A subscription is considered active as long as any connected subscriber
+is successfully consuming messages from the subscription or is issuing
+operations on the subscription. If expirationPolicy is not set, a default
+policy with ttl of 31 days will be used.  If it is set but ttl is "", the
+resource never expires.  The minimum allowed value for expirationPolicy.ttl
+is 1 day.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1085,11 +1188,14 @@ subscription. If expirationPolicy is not set, a default policy with ttl of 31 da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If
-retainAckedMessages is true, then this also configures the retention of acknowledged messages, and thus configures how
-far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days ('"604800s"') or less
-than 10 minutes ('"600s"'). A duration in seconds with up to nine fractional digits, terminated by 's'. Example:
-'"600.5s"'.
+    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
+backlog, from the moment a message is published. If
+retainAckedMessages is true, then this also configures the retention
+of acknowledged messages, and thus configures how far back in time a
+subscriptions.seek can be done. Defaults to 7 days. Cannot be more
+than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
+A duration in seconds with up to nine fractional digits, terminated
+by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1125,8 +1231,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that
-the subscriber will pull and ack messages using API methods.
+    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
+configure it. An empty pushConfig signifies that the subscriber will
+pull and ack messages using API methods.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1135,8 +1242,10 @@ the subscriber will pull and ack messages using API methods.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If 'true', then messages are not expunged from the subscription's
-backlog, even if they are acknowledged, until they fall out of the messageRetentionDuration window.
+    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
+messages are not expunged from the subscription's backlog, even if
+they are acknowledged, until they fall out of the
+messageRetentionDuration window.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1161,15 +1270,21 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the
-message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an
-outstanding message and will not be delivered again during that time (on a best-effort basis). For pull subscriptions,
-this value is used as the initial value for the ack deadline. To override this value for a given message, call
-subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify
-is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a
-default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call
-to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
-message.
+    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
+before the subscriber should acknowledge the message. After message
+delivery but before the ack deadline expires and before the message is
+acknowledged, it is an outstanding message and will not be delivered
+again during that time (on a best-effort basis).
+For pull subscriptions, this value is used as the initial value for
+the ack deadline. To override this value for a given message, call
+subscriptions.modifyAckDeadline with the corresponding ackId if using
+pull. The minimum custom deadline you can specify is 10 seconds. The
+maximum custom deadline you can specify is 600 seconds (10 minutes).
+If this parameter is 0, a default value of 10 seconds is used.
+For push delivery, this value is also used to set the request timeout
+for the call to the push endpoint.
+If the subscriber never acknowledges the message, the Pub/Sub system
+will eventually redeliver the message.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1178,10 +1293,13 @@ message.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not
-set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project
-(i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on
-this subscription.
+    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
+this subscription. If dead_letter_policy is not set, dead lettering
+is disabled.
+The Cloud Pub/Sub service account associated with this subscriptions's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Acknowledge() messages on this subscription.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1190,10 +1308,13 @@ this subscription.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long
-as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
-subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used. If it is set but ttl is
-"", the resource never expires. The minimum allowed value for expirationPolicy.ttl is 1 day.
+    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
+A subscription is considered active as long as any connected subscriber
+is successfully consuming messages from the subscription or is issuing
+operations on the subscription. If expirationPolicy is not set, a default
+policy with ttl of 31 days will be used.  If it is set but ttl is "", the
+resource never expires.  The minimum allowed value for expirationPolicy.ttl
+is 1 day.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1211,11 +1332,14 @@ subscription. If expirationPolicy is not set, a default policy with ttl of 31 da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If
-retainAckedMessages is true, then this also configures the retention of acknowledged messages, and thus configures how
-far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days ('"604800s"') or less
-than 10 minutes ('"600s"'). A duration in seconds with up to nine fractional digits, terminated by 's'. Example:
-'"600.5s"'.
+    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
+backlog, from the moment a message is published. If
+retainAckedMessages is true, then this also configures the retention
+of acknowledged messages, and thus configures how far back in time a
+subscriptions.seek can be done. Defaults to 7 days. Cannot be more
+than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
+A duration in seconds with up to nine fractional digits, terminated
+by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1251,8 +1375,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that
-the subscriber will pull and ack messages using API methods.
+    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
+configure it. An empty pushConfig signifies that the subscriber will
+pull and ack messages using API methods.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1261,8 +1386,10 @@ the subscriber will pull and ack messages using API methods.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If 'true', then messages are not expunged from the subscription's
-backlog, even if they are acknowledged, until they fall out of the messageRetentionDuration window.
+    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
+messages are not expunged from the subscription's backlog, even if
+they are acknowledged, until they fall out of the
+messageRetentionDuration window.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1287,15 +1414,21 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the
-message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an
-outstanding message and will not be delivered again during that time (on a best-effort basis). For pull subscriptions,
-this value is used as the initial value for the ack deadline. To override this value for a given message, call
-subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify
-is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a
-default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call
-to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
-message.
+    <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
+before the subscriber should acknowledge the message. After message
+delivery but before the ack deadline expires and before the message is
+acknowledged, it is an outstanding message and will not be delivered
+again during that time (on a best-effort basis).
+For pull subscriptions, this value is used as the initial value for
+the ack deadline. To override this value for a given message, call
+subscriptions.modifyAckDeadline with the corresponding ackId if using
+pull. The minimum custom deadline you can specify is 10 seconds. The
+maximum custom deadline you can specify is 600 seconds (10 minutes).
+If this parameter is 0, a default value of 10 seconds is used.
+For push delivery, this value is also used to set the request timeout
+for the call to the push endpoint.
+If the subscriber never acknowledges the message, the Pub/Sub system
+will eventually redeliver the message.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1304,10 +1437,13 @@ message.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Dict[Subscription<wbr>Dead<wbr>Letter<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not
-set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project
-(i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on
-this subscription.
+    <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
+this subscription. If dead_letter_policy is not set, dead lettering
+is disabled.
+The Cloud Pub/Sub service account associated with this subscriptions's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Acknowledge() messages on this subscription.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1316,10 +1452,13 @@ this subscription.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Dict[Subscription<wbr>Expiration<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long
-as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
-subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used. If it is set but ttl is
-"", the resource never expires. The minimum allowed value for expirationPolicy.ttl is 1 day.
+    <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
+A subscription is considered active as long as any connected subscriber
+is successfully consuming messages from the subscription or is issuing
+operations on the subscription. If expirationPolicy is not set, a default
+policy with ttl of 31 days will be used.  If it is set but ttl is "", the
+resource never expires.  The minimum allowed value for expirationPolicy.ttl
+is 1 day.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1337,11 +1476,14 @@ subscription. If expirationPolicy is not set, a default policy with ttl of 31 da
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If
-retainAckedMessages is true, then this also configures the retention of acknowledged messages, and thus configures how
-far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days ('"604800s"') or less
-than 10 minutes ('"600s"'). A duration in seconds with up to nine fractional digits, terminated by 's'. Example:
-'"600.5s"'.
+    <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
+backlog, from the moment a message is published. If
+retainAckedMessages is true, then this also configures the retention
+of acknowledged messages, and thus configures how far back in time a
+subscriptions.seek can be done. Defaults to 7 days. Cannot be more
+than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
+A duration in seconds with up to nine fractional digits, terminated
+by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1377,8 +1519,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Dict[Subscription<wbr>Push<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that
-the subscriber will pull and ack messages using API methods.
+    <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
+configure it. An empty pushConfig signifies that the subscriber will
+pull and ack messages using API methods.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1387,8 +1530,10 @@ the subscriber will pull and ack messages using API methods.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If 'true', then messages are not expunged from the subscription's
-backlog, even if they are acknowledged, until they fall out of the messageRetentionDuration window.
+    <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
+messages are not expunged from the subscription's backlog, even if
+they are acknowledged, until they fall out of the
+messageRetentionDuration window.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1423,6 +1568,9 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionDeadLetterPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionDeadLetterPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionDeadLetterPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionDeadLetterPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1436,7 +1584,16 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
+Format is `projects/{project}/topics/{topic}`.
+The Cloud Pub/Sub service\naccount associated with the enclosing subscription's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Publish() to this topic.
+The operation will fail if the topic does not exist.
+Users should ensure that there is a subscription attached to this topic
+since messages published to a topic with no subscriptions are lost.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1444,7 +1601,15 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of delivery attempts for any message. The value must be
+between 5 and 100.
+The number of delivery attempts is defined as 1 + (the sum of number of
+NACKs and number of times the acknowledgement deadline has been exceeded for the message).
+A NACK is any call to ModifyAckDeadline with a 0 deadline. Note that
+client libraries may automatically extend ack_deadlines.
+This field will be honored on a best effort basis.
+If this parameter is 0, a default value of 5 is used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1459,7 +1624,16 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
+Format is `projects/{project}/topics/{topic}`.
+The Cloud Pub/Sub service\naccount associated with the enclosing subscription's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Publish() to this topic.
+The operation will fail if the topic does not exist.
+Users should ensure that there is a subscription attached to this topic
+since messages published to a topic with no subscriptions are lost.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1467,7 +1641,15 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of delivery attempts for any message. The value must be
+between 5 and 100.
+The number of delivery attempts is defined as 1 + (the sum of number of
+NACKs and number of times the acknowledgement deadline has been exceeded for the message).
+A NACK is any call to ModifyAckDeadline with a 0 deadline. Note that
+client libraries may automatically extend ack_deadlines.
+This field will be honored on a best effort basis.
+If this parameter is 0, a default value of 5 is used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1482,7 +1664,16 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
+Format is `projects/{project}/topics/{topic}`.
+The Cloud Pub/Sub service\naccount associated with the enclosing subscription's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Publish() to this topic.
+The operation will fail if the topic does not exist.
+Users should ensure that there is a subscription attached to this topic
+since messages published to a topic with no subscriptions are lost.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1490,7 +1681,15 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of delivery attempts for any message. The value must be
+between 5 and 100.
+The number of delivery attempts is defined as 1 + (the sum of number of
+NACKs and number of times the acknowledgement deadline has been exceeded for the message).
+A NACK is any call to ModifyAckDeadline with a 0 deadline. Note that
+client libraries may automatically extend ack_deadlines.
+This field will be honored on a best effort basis.
+If this parameter is 0, a default value of 5 is used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1505,7 +1704,16 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
+Format is `projects/{project}/topics/{topic}`.
+The Cloud Pub/Sub service\naccount associated with the enclosing subscription's
+parent project (i.e.,
+service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
+permission to Publish() to this topic.
+The operation will fail if the topic does not exist.
+Users should ensure that there is a subscription attached to this topic
+since messages published to a topic with no subscriptions are lost.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1513,7 +1721,15 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of delivery attempts for any message. The value must be
+between 5 and 100.
+The number of delivery attempts is defined as 1 + (the sum of number of
+NACKs and number of times the acknowledgement deadline has been exceeded for the message).
+A NACK is any call to ModifyAckDeadline with a 0 deadline. Note that
+client libraries may automatically extend ack_deadlines.
+This field will be honored on a best effort basis.
+If this parameter is 0, a default value of 5 is used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1530,6 +1746,9 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionExpirationPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionExpirationPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionExpirationPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionExpirationPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1543,7 +1762,12 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the "time-to-live" duration for an associated resource. The
+resource expires if it is not active for a period of ttl.
+If ttl is not set, the associated resource never expires.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+Example - "3.5s".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1558,7 +1782,12 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the "time-to-live" duration for an associated resource. The
+resource expires if it is not active for a period of ttl.
+If ttl is not set, the associated resource never expires.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+Example - "3.5s".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1573,7 +1802,12 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the "time-to-live" duration for an associated resource. The
+resource expires if it is not active for a period of ttl.
+If ttl is not set, the associated resource never expires.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+Example - "3.5s".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1588,7 +1822,12 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the "time-to-live" duration for an associated resource. The
+resource expires if it is not active for a period of ttl.
+If ttl is not set, the associated resource never expires.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+Example - "3.5s".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1605,6 +1844,9 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionPushConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionPushConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionPushConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionPushConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1618,7 +1860,10 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A URL locating the endpoint to which messages should be pushed.
+For example, a Webhook endpoint might use
+"https://example.com/push".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1626,7 +1871,25 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Endpoint configuration attributes.
+Every endpoint has a set of API supported attributes that can
+be used to control different aspects of the message delivery.
+The currently supported attribute is x-goog-version, which you
+can use to change the format of the pushed message. This
+attribute indicates the version of the data expected by
+the endpoint. This controls the shape of the pushed message
+(i.e., its fields and metadata). The endpoint version is
+based on the version of the Pub/Sub API.
+If not present during the subscriptions.create call,
+it will default to the version of the API used to make
+such call. If not present during a subscriptions.modifyPushConfig
+call, its value will not be changed. subscriptions.get
+calls will always return a valid version, even if the
+subscription was created without this attribute.
+The possible values for this attribute are:
+- v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
+- v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1634,7 +1897,9 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
+an Authorization header in the HTTP request for every pushed message.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1649,7 +1914,10 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A URL locating the endpoint to which messages should be pushed.
+For example, a Webhook endpoint might use
+"https://example.com/push".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1657,7 +1925,25 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Endpoint configuration attributes.
+Every endpoint has a set of API supported attributes that can
+be used to control different aspects of the message delivery.
+The currently supported attribute is x-goog-version, which you
+can use to change the format of the pushed message. This
+attribute indicates the version of the data expected by
+the endpoint. This controls the shape of the pushed message
+(i.e., its fields and metadata). The endpoint version is
+based on the version of the Pub/Sub API.
+If not present during the subscriptions.create call,
+it will default to the version of the API used to make
+such call. If not present during a subscriptions.modifyPushConfig
+call, its value will not be changed. subscriptions.get
+calls will always return a valid version, even if the
+subscription was created without this attribute.
+The possible values for this attribute are:
+- v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
+- v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1665,7 +1951,9 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
+an Authorization header in the HTTP request for every pushed message.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1680,7 +1968,10 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A URL locating the endpoint to which messages should be pushed.
+For example, a Webhook endpoint might use
+"https://example.com/push".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1688,7 +1979,25 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Endpoint configuration attributes.
+Every endpoint has a set of API supported attributes that can
+be used to control different aspects of the message delivery.
+The currently supported attribute is x-goog-version, which you
+can use to change the format of the pushed message. This
+attribute indicates the version of the data expected by
+the endpoint. This controls the shape of the pushed message
+(i.e., its fields and metadata). The endpoint version is
+based on the version of the Pub/Sub API.
+If not present during the subscriptions.create call,
+it will default to the version of the API used to make
+such call. If not present during a subscriptions.modifyPushConfig
+call, its value will not be changed. subscriptions.get
+calls will always return a valid version, even if the
+subscription was created without this attribute.
+The possible values for this attribute are:
+- v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
+- v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1696,7 +2005,9 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
+an Authorization header in the HTTP request for every pushed message.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1711,7 +2022,10 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A URL locating the endpoint to which messages should be pushed.
+For example, a Webhook endpoint might use
+"https://example.com/push".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1719,7 +2033,25 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Endpoint configuration attributes.
+Every endpoint has a set of API supported attributes that can
+be used to control different aspects of the message delivery.
+The currently supported attribute is x-goog-version, which you
+can use to change the format of the pushed message. This
+attribute indicates the version of the data expected by
+the endpoint. This controls the shape of the pushed message
+(i.e., its fields and metadata). The endpoint version is
+based on the version of the Pub/Sub API.
+If not present during the subscriptions.create call,
+it will default to the version of the API used to make
+such call. If not present during a subscriptions.modifyPushConfig
+call, its value will not be changed. subscriptions.get
+calls will always return a valid version, even if the
+subscription was created without this attribute.
+The possible values for this attribute are:
+- v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
+- v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1727,7 +2059,9 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Dict[Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
+an Authorization header in the HTTP request for every pushed message.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1744,6 +2078,9 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionPushConfigOidcTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionPushConfigOidcTokenOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionPushConfigOidcTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionPushConfigOidcToken.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1757,7 +2094,11 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Service account email to be used for generating the OIDC token.
+The caller (for subscriptions.create, subscriptions.patch, and
+subscriptions.modifyPushConfig RPCs) must have the
+iam.serviceAccounts.actAs permission for the service account.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1765,7 +2106,13 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Audience to be used when generating OIDC token. The audience claim
+identifies the recipients that the JWT is intended for. The audience
+value is a single case-sensitive string. Having multiple values (array)
+for the audience field is not supported. More info about the OIDC JWT
+token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
+Note: if not specified, the Push endpoint URL will be used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1780,7 +2127,11 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Service account email to be used for generating the OIDC token.
+The caller (for subscriptions.create, subscriptions.patch, and
+subscriptions.modifyPushConfig RPCs) must have the
+iam.serviceAccounts.actAs permission for the service account.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1788,7 +2139,13 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Audience to be used when generating OIDC token. The audience claim
+identifies the recipients that the JWT is intended for. The audience
+value is a single case-sensitive string. Having multiple values (array)
+for the audience field is not supported. More info about the OIDC JWT
+token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
+Note: if not specified, the Push endpoint URL will be used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1803,7 +2160,11 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Service account email to be used for generating the OIDC token.
+The caller (for subscriptions.create, subscriptions.patch, and
+subscriptions.modifyPushConfig RPCs) must have the
+iam.serviceAccounts.actAs permission for the service account.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1811,7 +2172,13 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Audience to be used when generating OIDC token. The audience claim
+identifies the recipients that the JWT is intended for. The audience
+value is a single case-sensitive string. Having multiple values (array)
+for the audience field is not supported. More info about the OIDC JWT
+token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
+Note: if not specified, the Push endpoint URL will be used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1826,7 +2193,11 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Service account email to be used for generating the OIDC token.
+The caller (for subscriptions.create, subscriptions.patch, and
+subscriptions.modifyPushConfig RPCs) must have the
+iam.serviceAccounts.actAs permission for the service account.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1834,7 +2205,13 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Audience to be used when generating OIDC token. The audience claim
+identifies the recipients that the JWT is intended for. The audience
+value is a single case-sensitive string. Having multiple values (array)
+for the audience field is not supported. More info about the OIDC JWT
+token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
+Note: if not specified, the Push endpoint URL will be used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1853,8 +2230,7 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

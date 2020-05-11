@@ -28,13 +28,13 @@ For an overview on vSphere networking concepts, see [this page][ref-vsphere-net-
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const esxiHost = vsphere.getHost({
+}, { async: true }));
+const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-});
+}, { async: true }));
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
     activeNics: ["vmnic0"],
     hostSystemId: esxiHost.id,
@@ -62,13 +62,13 @@ the implicit default of `false` set on the virtual switch.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const esxiHost = vsphere.getHost({
+}, { async: true }));
+const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-});
+}, { async: true }));
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
     activeNics: ["vmnic0"],
     hostSystemId: esxiHost.id,
@@ -89,7 +89,7 @@ const pg = new vsphere.HostPortGroup("pg", {
 
 
 ## Create a HostPortGroup Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1137,7 +1137,7 @@ explaining the effective policy for this port group.
 ## Look up an Existing HostPortGroup Resource {#look-up}
 
 Get an existing HostPortGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostPortGroupState">HostPortGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostPortGroup">HostPortGroup</a></span></code></pre></div>
@@ -2065,6 +2065,9 @@ tagging. Default: `0`.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroupPortsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.Outputs.HostPortGroupPorts.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

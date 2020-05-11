@@ -14,10 +14,26 @@ Creates an IdP Discovery Policy Rule.
 
 This resource allows you to create and configure an IdP Discovery Policy Rule.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -35,14 +51,13 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
     userIdentifierType: "ATTRIBUTE",
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a RuleIdpDiscovery Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -50,7 +65,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RuleIdpDiscovery</span><span class="p">(resource_name, opts=None, </span>app_excludes=None<span class="p">, </span>app_includes=None<span class="p">, </span>idp_id=None<span class="p">, </span>idp_type=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>platform_includes=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>user_identifier_attribute=None<span class="p">, </span>user_identifier_patterns=None<span class="p">, </span>user_identifier_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RuleIdpDiscovery</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_excludes=None<span class="p">, </span>app_includes=None<span class="p">, </span>idp_id=None<span class="p">, </span>idp_type=None<span class="p">, </span>name=None<span class="p">, </span>network_connection=None<span class="p">, </span>network_excludes=None<span class="p">, </span>network_includes=None<span class="p">, </span>platform_includes=None<span class="p">, </span>policyid=None<span class="p">, </span>priority=None<span class="p">, </span>status=None<span class="p">, </span>user_identifier_attribute=None<span class="p">, </span>user_identifier_patterns=None<span class="p">, </span>user_identifier_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -842,7 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing RuleIdpDiscovery Resource {#look-up}
 
 Get an existing RuleIdpDiscovery resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#RuleIdpDiscoveryState">RuleIdpDiscoveryState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#RuleIdpDiscovery">RuleIdpDiscovery</a></span></code></pre></div>
@@ -1523,6 +1538,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryAppExcludeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryAppExcludeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.RuleIdpDiscoveryAppExcludeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.RuleIdpDiscoveryAppExclude.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1669,6 +1687,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryAppIncludeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryAppIncludeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.RuleIdpDiscoveryAppIncludeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.RuleIdpDiscoveryAppInclude.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1817,6 +1838,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryPlatformIncludeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryPlatformIncludeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.RuleIdpDiscoveryPlatformIncludeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.RuleIdpDiscoveryPlatformInclude.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1955,6 +1979,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryUserIdentifierPatternArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#RuleIdpDiscoveryUserIdentifierPatternOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Inputs.RuleIdpDiscoveryUserIdentifierPatternArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Outputs.RuleIdpDiscoveryUserIdentifierPattern.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

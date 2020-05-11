@@ -10,7 +10,7 @@ GIT_COMMIT=${1:-}
 # Adding a new repo to this list? Ensure that the repo's `Makefile` has a target called
 # `generate_schema`.
 REPOS=(
-    # "aiven"
+    "aiven"
     "alicloud"
     "aws"
     "azure"
@@ -25,12 +25,15 @@ REPOS=(
     "fastly"
     "f5bigip"
     "gcp"
+    "github"
     "gitlab"
     "kafka"
     "kubernetes"
     "keycloak"
+    "kong"
     "linode"
-    # "mailgun"
+    "mailgun"
+    "mongodbatlas"
     "mysql"
     "newrelic"
     "okta"
@@ -57,7 +60,8 @@ for REPO in "${REPOS[@]}" ; do \
     ./scripts/gen_resource_docs.sh "$REPO" true
 
     if [ -n "${GIT_COMMIT:-}" ]; then
-      git add .
+      git add "./content/docs/reference/pkg/${REPO}/*"
+      git add "./content/docs/reference/pkg/${REPO}/**/*"
       git commit -am "Generate resource docs for pulumi-${REPO}"
     fi
 done

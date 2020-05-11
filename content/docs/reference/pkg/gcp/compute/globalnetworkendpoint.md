@@ -1,7 +1,8 @@
 
 ---
 title: "GlobalNetworkEndpoint"
-block_external_search_index: true
+title_tag: "Resource GlobalNetworkEndpoint | Module compute | Package GCP"
+meta_desc: "Explore the GlobalNetworkEndpoint resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A Global Network endpoint represents a IP address and port combination that exists outside of GCP."
 ---
 
 
@@ -23,7 +24,7 @@ To get more information about GlobalNetworkEndpoint, see:
 
 
 ## Create a GlobalNetworkEndpoint Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -31,7 +32,7 @@ To get more information about GlobalNetworkEndpoint, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GlobalNetworkEndpoint</span><span class="p">(resource_name, opts=None, </span>fqdn=None<span class="p">, </span>global_network_endpoint_group=None<span class="p">, </span>ip_address=None<span class="p">, </span>port=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GlobalNetworkEndpoint</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>fqdn=None<span class="p">, </span>global_network_endpoint_group=None<span class="p">, </span>ip_address=None<span class="p">, </span>port=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -227,8 +228,8 @@ The GlobalNetworkEndpoint resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name of network endpoint. This can only be specified when network_endpoint_type of the NEG is
-INTERNET_FQDN_PORT.
+    <dd>{{% md %}}Fully qualified domain name of network endpoint.
+This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -281,8 +282,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name of network endpoint. This can only be specified when network_endpoint_type of the NEG is
-INTERNET_FQDN_PORT.
+    <dd>{{% md %}}Fully qualified domain name of network endpoint.
+This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -335,8 +336,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name of network endpoint. This can only be specified when network_endpoint_type of the NEG is
-INTERNET_FQDN_PORT.
+    <dd>{{% md %}}Fully qualified domain name of network endpoint.
+This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -389,8 +390,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name of network endpoint. This can only be specified when network_endpoint_type of the NEG is
-INTERNET_FQDN_PORT.
+    <dd>{{% md %}}Fully qualified domain name of network endpoint.
+This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -495,7 +496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing GlobalNetworkEndpoint Resource {#look-up}
 
 Get an existing GlobalNetworkEndpoint resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalNetworkEndpointState">GlobalNetworkEndpointState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalNetworkEndpoint">GlobalNetworkEndpoint</a></span></code></pre></div>
@@ -622,8 +623,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name of network endpoint. This can only be specified when network_endpoint_type of the NEG is
-INTERNET_FQDN_PORT.
+    <dd>{{% md %}}Fully qualified domain name of network endpoint.
+This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -676,8 +677,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name of network endpoint. This can only be specified when network_endpoint_type of the NEG is
-INTERNET_FQDN_PORT.
+    <dd>{{% md %}}Fully qualified domain name of network endpoint.
+This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -730,8 +731,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name of network endpoint. This can only be specified when network_endpoint_type of the NEG is
-INTERNET_FQDN_PORT.
+    <dd>{{% md %}}Fully qualified domain name of network endpoint.
+This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -784,8 +785,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name of network endpoint. This can only be specified when network_endpoint_type of the NEG is
-INTERNET_FQDN_PORT.
+    <dd>{{% md %}}Fully qualified domain name of network endpoint.
+This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -844,8 +845,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

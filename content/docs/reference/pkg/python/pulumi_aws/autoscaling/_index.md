@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.autoscaling"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.autoscaling"></span><dl class="py class">
 <dt id="pulumi_aws.autoscaling.Attachment">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">Attachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alb_target_group_arn=None</em>, <em class="sig-param">autoscaling_group_name=None</em>, <em class="sig-param">elb=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">Attachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alb_target_group_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaling_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Attachment resource.</p>
 <blockquote>
 <div><p><strong>NOTE on AutoScaling Groups and ASG Attachments:</strong> This provider currently provides
@@ -36,27 +36,27 @@ conflict and will overwrite attachments.</p>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Attachment.alb_target_group_arn">
-<code class="sig-name descname">alb_target_group_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.alb_target_group_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">alb_target_group_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.alb_target_group_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of an ALB Target Group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Attachment.autoscaling_group_name">
-<code class="sig-name descname">autoscaling_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.autoscaling_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">autoscaling_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.autoscaling_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of ASG to associate with the ELB.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Attachment.elb">
-<code class="sig-name descname">elb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.elb" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">elb</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.elb" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the ELB.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Attachment.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alb_target_group_arn=None</em>, <em class="sig-param">autoscaling_group_name=None</em>, <em class="sig-param">elb=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alb_target_group_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaling_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elb</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Attachment resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -73,9 +73,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Attachment.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -91,9 +91,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Attachment.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -111,112 +111,112 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.autoscaling.AwaitableGetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">default_cooldown=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">health_check_grace_period=None</em>, <em class="sig-param">health_check_type=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">launch_configuration=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_instances_protected_from_scale_in=None</em>, <em class="sig-param">placement_group=None</em>, <em class="sig-param">service_linked_role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">target_group_arns=None</em>, <em class="sig-param">termination_policies=None</em>, <em class="sig-param">vpc_zone_identifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_cooldown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_grace_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_instances_protected_from_scale_in</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_linked_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_group_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_zone_identifier</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.autoscaling.GetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">default_cooldown=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">health_check_grace_period=None</em>, <em class="sig-param">health_check_type=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">launch_configuration=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_instances_protected_from_scale_in=None</em>, <em class="sig-param">placement_group=None</em>, <em class="sig-param">service_linked_role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">target_group_arns=None</em>, <em class="sig-param">termination_policies=None</em>, <em class="sig-param">vpc_zone_identifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_cooldown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_grace_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_instances_protected_from_scale_in</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_linked_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_group_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_zone_identifier</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroup.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name (ARN) of the Auto Scaling group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.availability_zones">
 <code class="sig-name descname">availability_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.availability_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more Availability Zones for the group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.desired_capacity">
 <code class="sig-name descname">desired_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.desired_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The desired size of the group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.health_check_grace_period">
 <code class="sig-name descname">health_check_grace_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.health_check_grace_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.health_check_type">
 <code class="sig-name descname">health_check_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.health_check_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The service to use for the health checks. The valid values are EC2 and ELB.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.launch_configuration">
 <code class="sig-name descname">launch_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.launch_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the associated launch configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.load_balancers">
 <code class="sig-name descname">load_balancers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.load_balancers" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more load balancers associated with the group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.max_size">
 <code class="sig-name descname">max_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.max_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum size of the group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.min_size">
 <code class="sig-name descname">min_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.min_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The minimum size of the group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Auto Scaling group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.placement_group">
 <code class="sig-name descname">placement_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.placement_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the placement group into which to launch your instances, if any. For more information, see Placement Groups (<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html</a>) in the Amazon Elastic Compute Cloud User Guide.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.service_linked_role_arn">
 <code class="sig-name descname">service_linked_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.service_linked_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name (ARN) of the service-linked role that the Auto Scaling group uses to call other AWS services on your behalf.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current state of the group when DeleteAutoScalingGroup is in progress.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.target_group_arns">
 <code class="sig-name descname">target_group_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.target_group_arns" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Names (ARN) of the target groups for your load balancer.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.termination_policies">
 <code class="sig-name descname">termination_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.termination_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>The termination policies for the group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.vpc_zone_identifier">
 <code class="sig-name descname">vpc_zone_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.vpc_zone_identifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>VPC ID for the group.</p>
@@ -224,9 +224,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.autoscaling.Group">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">default_cooldown=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">enabled_metrics=None</em>, <em class="sig-param">force_delete=None</em>, <em class="sig-param">health_check_grace_period=None</em>, <em class="sig-param">health_check_type=None</em>, <em class="sig-param">initial_lifecycle_hooks=None</em>, <em class="sig-param">launch_configuration=None</em>, <em class="sig-param">launch_template=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">max_instance_lifetime=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">metrics_granularity=None</em>, <em class="sig-param">min_elb_capacity=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">mixed_instances_policy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">placement_group=None</em>, <em class="sig-param">protect_from_scale_in=None</em>, <em class="sig-param">service_linked_role_arn=None</em>, <em class="sig-param">suspended_processes=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tags_collection=None</em>, <em class="sig-param">target_group_arns=None</em>, <em class="sig-param">termination_policies=None</em>, <em class="sig-param">vpc_zone_identifiers=None</em>, <em class="sig-param">wait_for_capacity_timeout=None</em>, <em class="sig-param">wait_for_elb_capacity=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_cooldown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled_metrics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_delete</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_grace_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_lifecycle_hooks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_instance_lifetime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metrics_granularity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_elb_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mixed_instances_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protect_from_scale_in</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_linked_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">suspended_processes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_collection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_group_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_zone_identifiers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_capacity_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_elb_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Group resource.</p>
 <blockquote>
 <div><p><strong>Note:</strong> You must specify either <code class="docutils literal notranslate"><span class="pre">launch_configuration</span></code>, <code class="docutils literal notranslate"><span class="pre">launch_template</span></code>, or <code class="docutils literal notranslate"><span class="pre">mixed_instances_policy</span></code>.</p>
@@ -282,19 +282,6 @@ for more information.</p>
 should be running in the group. (See also Waiting for
 Capacity below.)</p></li>
 <li><p><strong>enabled_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of metrics to collect. The allowed values are <code class="docutils literal notranslate"><span class="pre">GroupDesiredCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMinSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMaxSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalInstances</span></code>.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `wait_for_capacity_timeout` (Default: &quot;10m&quot;) A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to &quot;0&quot; causes
-this provider to skip all Capacity Waiting behavior.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows deleting the autoscaling group without waiting
 for all instances in the pool to terminate.  You can force an autoscaling group to delete
 even if it’s in the process of scaling a resource. Normally, this provider
@@ -338,6 +325,11 @@ Note that if you suspend either the <code class="docutils literal notranslate"><
 <li><p><strong>target_group_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">alb.TargetGroup</span></code> ARNs, for use with Application or Network Load Balancing.</p></li>
 <li><p><strong>termination_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code class="docutils literal notranslate"><span class="pre">OldestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchConfiguration</span></code>, <code class="docutils literal notranslate"><span class="pre">ClosestToNextInstanceHour</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchTemplate</span></code>, <code class="docutils literal notranslate"><span class="pre">AllocationStrategy</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</p></li>
 <li><p><strong>vpc_zone_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of subnet IDs to launch resources in.</p></li>
+<li><p><strong>wait_for_capacity_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A maximum
+<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to “0” causes
+this provider to skip all Capacity Waiting behavior.</p></li>
 <li><p><strong>wait_for_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Setting this will cause this provider to wait
 for exactly this number of healthy instances from this autoscaling group in
 all attached load balancers on both create and update operations. (Takes
@@ -399,48 +391,41 @@ precedence over <code class="docutils literal notranslate"><span class="pre">min
 Amazon EC2 instances launched via this ASG</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN for this AutoScaling Group</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.availability_zones">
-<code class="sig-name descname">availability_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.availability_zones" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">availability_zones</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.availability_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of one or more availability zones for the group. This parameter should not be specified when using <code class="docutils literal notranslate"><span class="pre">vpc_zone_identifier</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.default_cooldown">
-<code class="sig-name descname">default_cooldown</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.default_cooldown" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">default_cooldown</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.default_cooldown" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.desired_capacity">
-<code class="sig-name descname">desired_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.desired_capacity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">desired_capacity</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.desired_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of Amazon EC2 instances that
 should be running in the group. (See also Waiting for
 Capacity below.)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.enabled_metrics">
-<code class="sig-name descname">enabled_metrics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.enabled_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled_metrics</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.enabled_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of metrics to collect. The allowed values are <code class="docutils literal notranslate"><span class="pre">GroupDesiredCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMinSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMaxSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalInstances</span></code>.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">wait_for_capacity_timeout</span></code> (Default: “10m”) A maximum
-<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to “0” causes
-this provider to skip all Capacity Waiting behavior.</p></li>
-</ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.force_delete">
-<code class="sig-name descname">force_delete</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.force_delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">force_delete</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.force_delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows deleting the autoscaling group without waiting
 for all instances in the pool to terminate.  You can force an autoscaling group to delete
 even if it’s in the process of scaling a resource. Normally, this provider
@@ -448,21 +433,21 @@ drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.health_check_grace_period">
-<code class="sig-name descname">health_check_grace_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.health_check_grace_period" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">health_check_grace_period</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.health_check_grace_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>Time (in seconds) after instance comes into service before checking health.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.health_check_type">
-<code class="sig-name descname">health_check_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.health_check_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">health_check_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.health_check_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>“EC2” or “ELB”. Controls how health checking is done.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.initial_lifecycle_hooks">
-<code class="sig-name descname">initial_lifecycle_hooks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.initial_lifecycle_hooks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initial_lifecycle_hooks</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.initial_lifecycle_hooks" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more
 <a class="reference external" href="http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html">Lifecycle Hooks</a>
 to attach to the autoscaling group <strong>before</strong> instances are launched. The
@@ -481,15 +466,15 @@ a new autoscaling group. For all other use-cases, please use <code class="docuti
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.launch_configuration">
-<code class="sig-name descname">launch_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.launch_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">launch_configuration</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.launch_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the launch configuration to use.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.launch_template">
-<code class="sig-name descname">launch_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.launch_template" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">launch_template</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.launch_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the launch template. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
@@ -498,50 +483,50 @@ a new autoscaling group. For all other use-cases, please use <code class="docuti
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.load_balancers">
-<code class="sig-name descname">load_balancers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.load_balancers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">load_balancers</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.load_balancers" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use <code class="docutils literal notranslate"><span class="pre">target_group_arns</span></code> instead.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.max_instance_lifetime">
-<code class="sig-name descname">max_instance_lifetime</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.max_instance_lifetime" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_instance_lifetime</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.max_instance_lifetime" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.max_size">
-<code class="sig-name descname">max_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.max_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.max_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum size of the auto scale group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.metrics_granularity">
-<code class="sig-name descname">metrics_granularity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.metrics_granularity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">metrics_granularity</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.metrics_granularity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The granularity to associate with the metrics to collect. The only valid value is <code class="docutils literal notranslate"><span class="pre">1Minute</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">1Minute</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.min_elb_capacity">
-<code class="sig-name descname">min_elb_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.min_elb_capacity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">min_elb_capacity</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.min_elb_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setting this causes this provider to wait for
 this number of instances from this autoscaling group to show up healthy in the
 ELB only on creation. Updates will not wait on ELB instance number changes.
 (See also Waiting for Capacity below.)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.min_size">
-<code class="sig-name descname">min_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.min_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">min_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.min_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The minimum size of the auto scale group.
 (See also Waiting for Capacity below.)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.mixed_instances_policy">
-<code class="sig-name descname">mixed_instances_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.mixed_instances_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mixed_instances_policy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.mixed_instances_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">instancesDistribution</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.</p>
@@ -574,49 +559,49 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the auto scaling group. By default generated by this provider.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.name_prefix">
-<code class="sig-name descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.name_prefix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name_prefix</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.placement_group">
-<code class="sig-name descname">placement_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.placement_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">placement_group</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.placement_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the placement group into which you’ll launch your instances, if any.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.protect_from_scale_in">
-<code class="sig-name descname">protect_from_scale_in</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.protect_from_scale_in" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">protect_from_scale_in</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.protect_from_scale_in" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows setting instance protection. The
 autoscaling group will not select instances with this setting for terminination
 during scale in events.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.service_linked_role_arn">
-<code class="sig-name descname">service_linked_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.service_linked_role_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">service_linked_role_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.service_linked_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the service-linked role that the ASG will use to call other AWS services</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.suspended_processes">
-<code class="sig-name descname">suspended_processes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.suspended_processes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">suspended_processes</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.suspended_processes" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of processes to suspend for the AutoScaling Group. The allowed values are <code class="docutils literal notranslate"><span class="pre">Launch</span></code>, <code class="docutils literal notranslate"><span class="pre">Terminate</span></code>, <code class="docutils literal notranslate"><span class="pre">HealthCheck</span></code>, <code class="docutils literal notranslate"><span class="pre">ReplaceUnhealthy</span></code>, <code class="docutils literal notranslate"><span class="pre">AZRebalance</span></code>, <code class="docutils literal notranslate"><span class="pre">AlarmNotification</span></code>, <code class="docutils literal notranslate"><span class="pre">ScheduledActions</span></code>, <code class="docutils literal notranslate"><span class="pre">AddToLoadBalancer</span></code>.
 Note that if you suspend either the <code class="docutils literal notranslate"><span class="pre">Launch</span></code> or <code class="docutils literal notranslate"><span class="pre">Terminate</span></code> process types, it can prevent your autoscaling group from functioning properly.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of tag blocks. Tags documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Key</p></li>
@@ -626,33 +611,43 @@ Amazon EC2 instances launched via this ASG</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.tags_collection">
-<code class="sig-name descname">tags_collection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.tags_collection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags_collection</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.tags_collection" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of tag blocks (maps). Tags documented below.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.target_group_arns">
-<code class="sig-name descname">target_group_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.target_group_arns" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">target_group_arns</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.target_group_arns" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of <code class="docutils literal notranslate"><span class="pre">alb.TargetGroup</span></code> ARNs, for use with Application or Network Load Balancing.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.termination_policies">
-<code class="sig-name descname">termination_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.termination_policies" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">termination_policies</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.termination_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code class="docutils literal notranslate"><span class="pre">OldestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchConfiguration</span></code>, <code class="docutils literal notranslate"><span class="pre">ClosestToNextInstanceHour</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchTemplate</span></code>, <code class="docutils literal notranslate"><span class="pre">AllocationStrategy</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.vpc_zone_identifiers">
-<code class="sig-name descname">vpc_zone_identifiers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.vpc_zone_identifiers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vpc_zone_identifiers</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.vpc_zone_identifiers" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of subnet IDs to launch resources in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
+<dt id="pulumi_aws.autoscaling.Group.wait_for_capacity_timeout">
+<code class="sig-name descname">wait_for_capacity_timeout</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.wait_for_capacity_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>A maximum
+<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to “0” causes
+this provider to skip all Capacity Waiting behavior.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Group.wait_for_elb_capacity">
-<code class="sig-name descname">wait_for_elb_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.wait_for_elb_capacity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">wait_for_elb_capacity</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.wait_for_elb_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setting this will cause this provider to wait
 for exactly this number of healthy instances from this autoscaling group in
 all attached load balancers on both create and update operations. (Takes
@@ -660,9 +655,9 @@ precedence over <code class="docutils literal notranslate"><span class="pre">min
 (See also Waiting for Capacity below.)</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Group.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">default_cooldown=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">enabled_metrics=None</em>, <em class="sig-param">force_delete=None</em>, <em class="sig-param">health_check_grace_period=None</em>, <em class="sig-param">health_check_type=None</em>, <em class="sig-param">initial_lifecycle_hooks=None</em>, <em class="sig-param">launch_configuration=None</em>, <em class="sig-param">launch_template=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">max_instance_lifetime=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">metrics_granularity=None</em>, <em class="sig-param">min_elb_capacity=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">mixed_instances_policy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">placement_group=None</em>, <em class="sig-param">protect_from_scale_in=None</em>, <em class="sig-param">service_linked_role_arn=None</em>, <em class="sig-param">suspended_processes=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tags_collection=None</em>, <em class="sig-param">target_group_arns=None</em>, <em class="sig-param">termination_policies=None</em>, <em class="sig-param">vpc_zone_identifiers=None</em>, <em class="sig-param">wait_for_capacity_timeout=None</em>, <em class="sig-param">wait_for_elb_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Group.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_cooldown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled_metrics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_delete</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_grace_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_lifecycle_hooks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_instance_lifetime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metrics_granularity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_elb_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mixed_instances_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protect_from_scale_in</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_linked_role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">suspended_processes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_collection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_group_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_zone_identifiers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_capacity_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_elb_capacity</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Group.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Group resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -678,19 +673,6 @@ properties used to qualify the lookup.</p>
 should be running in the group. (See also Waiting for
 Capacity below.)</p></li>
 <li><p><strong>enabled_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of metrics to collect. The allowed values are <code class="docutils literal notranslate"><span class="pre">GroupDesiredCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMinSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMaxSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalInstances</span></code>.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `wait_for_capacity_timeout` (Default: &quot;10m&quot;) A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to &quot;0&quot; causes
-this provider to skip all Capacity Waiting behavior.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows deleting the autoscaling group without waiting
 for all instances in the pool to terminate.  You can force an autoscaling group to delete
 even if it’s in the process of scaling a resource. Normally, this provider
@@ -735,6 +717,12 @@ Note that if you suspend either the <code class="docutils literal notranslate"><
 <li><p><strong>target_group_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">alb.TargetGroup</span></code> ARNs, for use with Application or Network Load Balancing.</p></li>
 <li><p><strong>termination_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code class="docutils literal notranslate"><span class="pre">OldestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchConfiguration</span></code>, <code class="docutils literal notranslate"><span class="pre">ClosestToNextInstanceHour</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchTemplate</span></code>, <code class="docutils literal notranslate"><span class="pre">AllocationStrategy</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</p></li>
 <li><p><strong>vpc_zone_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of subnet IDs to launch resources in.</p></li>
+<li><p><strong>wait_for_capacity_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A maximum
+<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to “0” causes
+this provider to skip all Capacity Waiting behavior.</p>
+</p></li>
 <li><p><strong>wait_for_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Setting this will cause this provider to wait
 for exactly this number of healthy instances from this autoscaling group in
 all attached load balancers on both create and update operations. (Takes
@@ -798,9 +786,9 @@ Amazon EC2 instances launched via this ASG</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Group.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Group.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Group.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -816,9 +804,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Group.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Group.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Group.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -836,9 +824,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.autoscaling.LifecycleHook">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">LifecycleHook</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling_group_name=None</em>, <em class="sig-param">default_result=None</em>, <em class="sig-param">heartbeat_timeout=None</em>, <em class="sig-param">lifecycle_transition=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_metadata=None</em>, <em class="sig-param">notification_target_arn=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">LifecycleHook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaling_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_result</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">heartbeat_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lifecycle_transition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_target_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Lifecycle Hook resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This provider has two types of ways you can add lifecycle hooks - via
@@ -869,57 +857,57 @@ but take care to not duplicate those hooks with this resource.</p>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.LifecycleHook.autoscaling_group_name">
-<code class="sig-name descname">autoscaling_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.autoscaling_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">autoscaling_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.autoscaling_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Auto Scaling group to which you want to assign the lifecycle hook</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.LifecycleHook.default_result">
-<code class="sig-name descname">default_result</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.default_result" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">default_result</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.default_result" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.LifecycleHook.heartbeat_timeout">
-<code class="sig-name descname">heartbeat_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.heartbeat_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">heartbeat_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.heartbeat_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.LifecycleHook.lifecycle_transition">
-<code class="sig-name descname">lifecycle_transition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.lifecycle_transition" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lifecycle_transition</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.lifecycle_transition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples">describe-lifecycle-hook-types</a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.LifecycleHook.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the lifecycle hook.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.LifecycleHook.notification_metadata">
-<code class="sig-name descname">notification_metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.notification_metadata" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">notification_metadata</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.notification_metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.LifecycleHook.notification_target_arn">
-<code class="sig-name descname">notification_target_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.notification_target_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">notification_target_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.notification_target_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.LifecycleHook.role_arn">
-<code class="sig-name descname">role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.role_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.LifecycleHook.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling_group_name=None</em>, <em class="sig-param">default_result=None</em>, <em class="sig-param">heartbeat_timeout=None</em>, <em class="sig-param">lifecycle_transition=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_metadata=None</em>, <em class="sig-param">notification_target_arn=None</em>, <em class="sig-param">role_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaling_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_result</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">heartbeat_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lifecycle_transition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_target_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_arn</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LifecycleHook resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -942,9 +930,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.LifecycleHook.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -960,9 +948,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.LifecycleHook.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -980,11 +968,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.autoscaling.Notification">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">Notification</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group_names=None</em>, <em class="sig-param">notifications=None</em>, <em class="sig-param">topic_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Notification" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">Notification</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Notification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Group with Notification support, via SNS Topics. Each of
-the <code class="docutils literal notranslate"><span class="pre">notifications</span></code> map to a [Notification Configuration][2] inside Amazon Web
+the <code class="docutils literal notranslate"><span class="pre">notifications</span></code> map to a <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_DescribeNotificationConfigurations.html">Notification Configuration</a> inside Amazon Web
 Services, and are applied to each AutoScaling Group you supply.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -993,33 +981,33 @@ Services, and are applied to each AutoScaling Group you supply.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of AutoScaling Group Names</p></li>
 <li><p><strong>notifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Notification Types that trigger
-notifications. Acceptable values are documented [in the AWS documentation here][1]</p></li>
+notifications. Acceptable values are documented <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_NotificationConfiguration.html">in the AWS documentation here</a></p></li>
 <li><p><strong>topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Topic ARN for notifications to be sent through</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Notification.group_names">
-<code class="sig-name descname">group_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.group_names" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">group_names</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.group_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of AutoScaling Group Names</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Notification.notifications">
-<code class="sig-name descname">notifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.notifications" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">notifications</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.notifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Notification Types that trigger
-notifications. Acceptable values are documented [in the AWS documentation here][1]</p>
+notifications. Acceptable values are documented <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_NotificationConfiguration.html">in the AWS documentation here</a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Notification.topic_arn">
-<code class="sig-name descname">topic_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.topic_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">topic_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.topic_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Topic ARN for notifications to be sent through</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Notification.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group_names=None</em>, <em class="sig-param">notifications=None</em>, <em class="sig-param">topic_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_arn</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Notification resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1029,17 +1017,18 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of AutoScaling Group Names</p></li>
-<li><p><strong>notifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Notification Types that trigger
-notifications. Acceptable values are documented [in the AWS documentation here][1]</p></li>
+<li><p><strong>notifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of Notification Types that trigger
+notifications. Acceptable values are documented <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_NotificationConfiguration.html">in the AWS documentation here</a></p>
+</p></li>
 <li><p><strong>topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Topic ARN for notifications to be sent through</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Notification.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1055,9 +1044,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Notification.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1075,9 +1064,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.autoscaling.Policy">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">adjustment_type=None</em>, <em class="sig-param">autoscaling_group_name=None</em>, <em class="sig-param">cooldown=None</em>, <em class="sig-param">estimated_instance_warmup=None</em>, <em class="sig-param">metric_aggregation_type=None</em>, <em class="sig-param">min_adjustment_magnitude=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">scaling_adjustment=None</em>, <em class="sig-param">step_adjustments=None</em>, <em class="sig-param">target_tracking_configuration=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Policy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">adjustment_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaling_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cooldown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">estimated_instance_warmup</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_aggregation_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_adjustment_magnitude</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_adjustment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">step_adjustments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_tracking_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Scaling Policy resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> You may want to omit <code class="docutils literal notranslate"><span class="pre">desired_capacity</span></code> attribute from attached <code class="docutils literal notranslate"><span class="pre">autoscaling.Group</span></code>
@@ -1145,65 +1134,65 @@ up. A negative value scales down.</p></li>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The target value for the metric.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Policy.adjustment_type">
-<code class="sig-name descname">adjustment_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.adjustment_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">adjustment_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.adjustment_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are <code class="docutils literal notranslate"><span class="pre">ChangeInCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">ExactCapacity</span></code>, and <code class="docutils literal notranslate"><span class="pre">PercentChangeInCapacity</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Policy.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN assigned by AWS to the scaling policy.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Policy.autoscaling_group_name">
-<code class="sig-name descname">autoscaling_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.autoscaling_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">autoscaling_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.autoscaling_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the autoscaling group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Policy.cooldown">
-<code class="sig-name descname">cooldown</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.cooldown" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cooldown</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.cooldown" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Policy.estimated_instance_warmup">
-<code class="sig-name descname">estimated_instance_warmup</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.estimated_instance_warmup" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">estimated_instance_warmup</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.estimated_instance_warmup" title="Permalink to this definition">¶</a></dt>
 <dd><p>The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group’s specified cooldown period.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Policy.metric_aggregation_type">
-<code class="sig-name descname">metric_aggregation_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.metric_aggregation_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">metric_aggregation_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.metric_aggregation_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The aggregation type for the policy’s metrics. Valid values are “Minimum”, “Maximum”, and “Average”. Without a value, AWS will treat the aggregation type as “Average”.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Policy.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the dimension.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Policy.policy_type">
-<code class="sig-name descname">policy_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.policy_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.policy_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The policy type, either “SimpleScaling”, “StepScaling” or “TargetTrackingScaling”. If this value isn’t provided, AWS will default to “SimpleScaling.”</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Policy.scaling_adjustment">
-<code class="sig-name descname">scaling_adjustment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.scaling_adjustment" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scaling_adjustment</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.scaling_adjustment" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of members by which to
 scale, when the adjustment bounds are breached. A positive value scales
 up. A negative value scales down.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Policy.step_adjustments">
-<code class="sig-name descname">step_adjustments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.step_adjustments" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">step_adjustments</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.step_adjustments" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of adjustments that manage
 group scaling. These have the following structure:</p>
 <ul class="simple">
@@ -1220,9 +1209,9 @@ up. A negative value scales down.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Policy.target_tracking_configuration">
-<code class="sig-name descname">target_tracking_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.target_tracking_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">target_tracking_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.target_tracking_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>A target tracking policy. These have the following structure:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">customizedMetricSpecification</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A customized metric. Conflicts with <code class="docutils literal notranslate"><span class="pre">predefined_metric_specification</span></code>.</p>
@@ -1250,9 +1239,9 @@ up. A negative value scales down.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Policy.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">adjustment_type=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">autoscaling_group_name=None</em>, <em class="sig-param">cooldown=None</em>, <em class="sig-param">estimated_instance_warmup=None</em>, <em class="sig-param">metric_aggregation_type=None</em>, <em class="sig-param">min_adjustment_magnitude=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">scaling_adjustment=None</em>, <em class="sig-param">step_adjustments=None</em>, <em class="sig-param">target_tracking_configuration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">adjustment_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaling_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cooldown</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">estimated_instance_warmup</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_aggregation_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_adjustment_magnitude</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_adjustment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">step_adjustments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_tracking_configuration</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Policy resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1318,9 +1307,9 @@ up. A negative value scales down.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Policy.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1336,9 +1325,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Policy.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1356,9 +1345,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.autoscaling.Schedule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">Schedule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling_group_name=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">end_time=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">recurrence=None</em>, <em class="sig-param">scheduled_action_name=None</em>, <em class="sig-param">start_time=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">Schedule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaling_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recurrence</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_action_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Schedule resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1380,67 +1369,67 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Schedule.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN assigned by AWS to the autoscaling schedule.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Schedule.autoscaling_group_name">
-<code class="sig-name descname">autoscaling_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.autoscaling_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">autoscaling_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.autoscaling_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name or Amazon Resource Name (ARN) of the Auto Scaling group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Schedule.desired_capacity">
-<code class="sig-name descname">desired_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.desired_capacity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">desired_capacity</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.desired_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don’t want to change the desired capacity at the scheduled time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Schedule.end_time">
-<code class="sig-name descname">end_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.end_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">end_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.end_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time for this action to end, in “YYYY-MM-DDThh:mm:ssZ” format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Schedule.max_size">
-<code class="sig-name descname">max_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.max_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.max_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don’t want to change the maximum size at the scheduled time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Schedule.min_size">
-<code class="sig-name descname">min_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.min_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">min_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.min_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don’t want to change the minimum size at the scheduled time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Schedule.recurrence">
-<code class="sig-name descname">recurrence</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.recurrence" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">recurrence</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.recurrence" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Schedule.scheduled_action_name">
-<code class="sig-name descname">scheduled_action_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.scheduled_action_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scheduled_action_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.scheduled_action_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of this scaling action.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.autoscaling.Schedule.start_time">
-<code class="sig-name descname">start_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.start_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.start_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time for this action to start, in “YYYY-MM-DDThh:mm:ssZ” format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Schedule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">autoscaling_group_name=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">end_time=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">recurrence=None</em>, <em class="sig-param">scheduled_action_name=None</em>, <em class="sig-param">start_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaling_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recurrence</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_action_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_time</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Schedule resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1467,9 +1456,9 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Schedule.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1485,9 +1474,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.autoscaling.Schedule.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1505,9 +1494,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_aws.autoscaling.get_group">
-<code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">get_group</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.get_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.autoscaling.</code><code class="sig-name descname">get_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information on an existing autoscaling group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

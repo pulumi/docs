@@ -12,10 +12,26 @@ meta_desc: "Explore the Listener resource of the loadbalancer module, including 
 
 Manages a V2 listener resource within OpenStack.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -29,14 +45,13 @@ const listener1 = new openstack.loadbalancer.Listener("listener_1", {
     protocolPort: 8080,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Listener Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -44,7 +59,7 @@ const listener1 = new openstack.loadbalancer.Listener("listener_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Listener</span><span class="p">(resource_name, opts=None, </span>admin_state_up=None<span class="p">, </span>connection_limit=None<span class="p">, </span>default_pool_id=None<span class="p">, </span>default_tls_container_ref=None<span class="p">, </span>description=None<span class="p">, </span>insert_headers=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>protocol_port=None<span class="p">, </span>region=None<span class="p">, </span>sni_container_refs=None<span class="p">, </span>tenant_id=None<span class="p">, </span>timeout_client_data=None<span class="p">, </span>timeout_member_connect=None<span class="p">, </span>timeout_member_data=None<span class="p">, </span>timeout_tcp_inspect=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Listener</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>connection_limit=None<span class="p">, </span>default_pool_id=None<span class="p">, </span>default_tls_container_ref=None<span class="p">, </span>description=None<span class="p">, </span>insert_headers=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>protocol_port=None<span class="p">, </span>region=None<span class="p">, </span>sni_container_refs=None<span class="p">, </span>tenant_id=None<span class="p">, </span>timeout_client_data=None<span class="p">, </span>timeout_member_connect=None<span class="p">, </span>timeout_member_data=None<span class="p">, </span>timeout_tcp_inspect=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1024,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Listener Resource {#look-up}
 
 Get an existing Listener resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/loadbalancer/#ListenerState">ListenerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/loadbalancer/#Listener">Listener</a></span></code></pre></div>

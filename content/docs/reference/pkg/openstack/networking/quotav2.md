@@ -23,7 +23,7 @@ Manages a V2 networking quota resource within OpenStack.
 
 
 ## Create a QuotaV2 Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -31,7 +31,7 @@ Manages a V2 networking quota resource within OpenStack.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">QuotaV2</span><span class="p">(resource_name, opts=None, </span>floatingip=None<span class="p">, </span>network=None<span class="p">, </span>port=None<span class="p">, </span>project_id=None<span class="p">, </span>rbac_policy=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>security_group=None<span class="p">, </span>security_group_rule=None<span class="p">, </span>subnet=None<span class="p">, </span>subnetpool=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">QuotaV2</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>floatingip=None<span class="p">, </span>network=None<span class="p">, </span>port=None<span class="p">, </span>project_id=None<span class="p">, </span>rbac_policy=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>security_group=None<span class="p">, </span>security_group_rule=None<span class="p">, </span>subnet=None<span class="p">, </span>subnetpool=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -751,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing QuotaV2 Resource {#look-up}
 
 Get an existing QuotaV2 resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#QuotaV2State">QuotaV2State</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#QuotaV2">QuotaV2</a></span></code></pre></div>

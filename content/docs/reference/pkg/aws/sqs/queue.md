@@ -39,7 +39,7 @@ const queue = new aws.sqs.Queue("queue", {
 
 
 ## Create a Queue Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -47,7 +47,7 @@ const queue = new aws.sqs.Queue("queue", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Queue</span><span class="p">(resource_name, opts=None, </span>content_based_deduplication=None<span class="p">, </span>delay_seconds=None<span class="p">, </span>fifo_queue=None<span class="p">, </span>kms_data_key_reuse_period_seconds=None<span class="p">, </span>kms_master_key_id=None<span class="p">, </span>max_message_size=None<span class="p">, </span>message_retention_seconds=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>policy=None<span class="p">, </span>receive_wait_time_seconds=None<span class="p">, </span>redrive_policy=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_timeout_seconds=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Queue</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content_based_deduplication=None<span class="p">, </span>delay_seconds=None<span class="p">, </span>fifo_queue=None<span class="p">, </span>kms_data_key_reuse_period_seconds=None<span class="p">, </span>kms_master_key_id=None<span class="p">, </span>max_message_size=None<span class="p">, </span>message_retention_seconds=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>policy=None<span class="p">, </span>receive_wait_time_seconds=None<span class="p">, </span>redrive_policy=None<span class="p">, </span>tags=None<span class="p">, </span>visibility_timeout_seconds=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -333,7 +333,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the queue.
+    <dd>{{% md %}}A map of tags to assign to the queue.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -466,7 +466,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the queue.
+    <dd>{{% md %}}A map of tags to assign to the queue.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -599,7 +599,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the queue.
+    <dd>{{% md %}}A map of tags to assign to the queue.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -732,7 +732,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the queue.
+    <dd>{{% md %}}A map of tags to assign to the queue.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -863,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Queue Resource {#look-up}
 
 Get an existing Queue resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sqs/#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sqs/#Queue">Queue</a></span></code></pre></div>
@@ -1107,7 +1107,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the queue.
+    <dd>{{% md %}}A map of tags to assign to the queue.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1249,7 +1249,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the queue.
+    <dd>{{% md %}}A map of tags to assign to the queue.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1391,7 +1391,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the queue.
+    <dd>{{% md %}}A map of tags to assign to the queue.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1533,7 +1533,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the queue.
+    <dd>{{% md %}}A map of tags to assign to the queue.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -12,10 +12,26 @@ meta_desc: "Explore the Project resource of the Rancher 2 package, including exa
 
 Provides a Rancher v2 Project resource. This can be used to create projects for Rancher v2 environments and retrieve their information.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -43,65 +59,13 @@ const foo = new rancher2.Project("foo", {
     },
 });
 ```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as rancher2 from "@pulumi/rancher2";
-
-// Create a new rancher2 Project enabling and customizing monitoring
-const foo = new rancher2.Project("foo", {
-    clusterId: "<CLUSTER_ID>",
-    containerResourceLimit: {
-        limitsCpu: "20m",
-        limitsMemory: "20Mi",
-        requestsCpu: "1m",
-        requestsMemory: "1Mi",
-    },
-    enableProjectMonitoring: true,
-    projectMonitoringInput: {
-        answers: {
-            "exporter-kubelets.https": true,
-            "exporter-node.enabled": true,
-            "exporter-node.ports.metrics.port": 9796,
-            "exporter-node.resources.limits.cpu": "200m",
-            "exporter-node.resources.limits.memory": "200Mi",
-            "grafana.persistence.enabled": false,
-            "grafana.persistence.size": "10Gi",
-            "grafana.persistence.storageClass": "default",
-            "operator.resources.limits.memory": "500Mi",
-            "prometheus.persistence.enabled": "false",
-            "prometheus.persistence.size": "50Gi",
-            "prometheus.persistence.storageClass": "default",
-            "prometheus.persistent.useReleaseName": "true",
-            "prometheus.resources.core.limits.cpu": "1000m",
-            "prometheus.resources.core.limits.memory": "1500Mi",
-            "prometheus.resources.core.requests.cpu": "750m",
-            "prometheus.resources.core.requests.memory": "750Mi",
-            "prometheus.retention": "12h",
-        },
-    },
-    resourceQuota: {
-        namespaceDefaultLimit: {
-            limitsCpu: "2000m",
-            limitsMemory: "500Mi",
-            requestsStorage: "1Gi",
-        },
-        projectLimit: {
-            limitsCpu: "2000m",
-            limitsMemory: "2000Mi",
-            requestsStorage: "2Gi",
-        },
-    },
-});
-```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Project Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -109,7 +73,7 @@ const foo = new rancher2.Project("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Project</span><span class="p">(resource_name, opts=None, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>container_resource_limit=None<span class="p">, </span>description=None<span class="p">, </span>enable_project_monitoring=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>pod_security_policy_template_id=None<span class="p">, </span>project_monitoring_input=None<span class="p">, </span>resource_quota=None<span class="p">, </span>wait_for_cluster=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Project</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>container_resource_limit=None<span class="p">, </span>description=None<span class="p">, </span>enable_project_monitoring=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>pod_security_policy_template_id=None<span class="p">, </span>project_monitoring_input=None<span class="p">, </span>resource_quota=None<span class="p">, </span>wait_for_cluster=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -781,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Project Resource {#look-up}
 
 Get an existing Project resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#Project">Project</a></span></code></pre></div>
@@ -1342,6 +1306,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectContainerResourceLimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectContainerResourceLimitOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ProjectContainerResourceLimitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ProjectContainerResourceLimit.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1529,6 +1496,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectProjectMonitoringInputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectProjectMonitoringInputOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ProjectProjectMonitoringInputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ProjectProjectMonitoringInput.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1644,6 +1614,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectResourceQuotaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectResourceQuotaOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ProjectResourceQuotaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ProjectResourceQuota.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1758,6 +1731,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectResourceQuotaNamespaceDefaultLimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectResourceQuotaNamespaceDefaultLimitOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ProjectResourceQuotaNamespaceDefaultLimitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ProjectResourceQuotaNamespaceDefaultLimit.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2265,6 +2241,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectResourceQuotaProjectLimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectResourceQuotaProjectLimitOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ProjectResourceQuotaProjectLimitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ProjectResourceQuotaProjectLimit.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

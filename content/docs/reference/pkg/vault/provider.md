@@ -18,7 +18,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 ## Create a Provider Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, opts=None, </span>add_address_to_env=None<span class="p">, </span>address=None<span class="p">, </span>auth_logins=None<span class="p">, </span>ca_cert_dir=None<span class="p">, </span>ca_cert_file=None<span class="p">, </span>client_auths=None<span class="p">, </span>max_lease_ttl_seconds=None<span class="p">, </span>max_retries=None<span class="p">, </span>namespace=None<span class="p">, </span>skip_tls_verify=None<span class="p">, </span>token=None<span class="p">, </span>token_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_address_to_env=None<span class="p">, </span>address=None<span class="p">, </span>auth_logins=None<span class="p">, </span>ca_cert_dir=None<span class="p">, </span>ca_cert_file=None<span class="p">, </span>client_auths=None<span class="p">, </span>max_lease_ttl_seconds=None<span class="p">, </span>max_retries=None<span class="p">, </span>namespace=None<span class="p">, </span>skip_tls_verify=None<span class="p">, </span>token=None<span class="p">, </span>token_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -746,6 +746,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/?tab=doc#ProviderAuthLoginArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Inputs.ProviderAuthLoginArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -884,6 +887,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/?tab=doc#ProviderClientAuthArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Inputs.ProviderClientAuthArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 

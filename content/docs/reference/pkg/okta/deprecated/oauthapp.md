@@ -14,7 +14,7 @@ meta_desc: "Explore the OauthApp resource of the deprecated module, including ex
 
 
 ## Create a OauthApp Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the OauthApp resource of the deprecated module, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OauthApp</span><span class="p">(resource_name, opts=None, </span>auto_key_rotation=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>client_basic_secret=None<span class="p">, </span>client_uri=None<span class="p">, </span>consent_method=None<span class="p">, </span>custom_client_id=None<span class="p">, </span>grant_types=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>label=None<span class="p">, </span>login_uri=None<span class="p">, </span>logo_uri=None<span class="p">, </span>omit_secret=None<span class="p">, </span>policy_uri=None<span class="p">, </span>post_logout_redirect_uris=None<span class="p">, </span>profile=None<span class="p">, </span>redirect_uris=None<span class="p">, </span>response_types=None<span class="p">, </span>status=None<span class="p">, </span>token_endpoint_auth_method=None<span class="p">, </span>tos_uri=None<span class="p">, </span>type=None<span class="p">, </span>users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OauthApp</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_key_rotation=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>client_basic_secret=None<span class="p">, </span>client_uri=None<span class="p">, </span>consent_method=None<span class="p">, </span>custom_client_id=None<span class="p">, </span>grant_types=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>issuer_mode=None<span class="p">, </span>label=None<span class="p">, </span>login_uri=None<span class="p">, </span>logo_uri=None<span class="p">, </span>omit_secret=None<span class="p">, </span>policy_uri=None<span class="p">, </span>post_logout_redirect_uris=None<span class="p">, </span>profile=None<span class="p">, </span>redirect_uris=None<span class="p">, </span>response_types=None<span class="p">, </span>status=None<span class="p">, </span>token_endpoint_auth_method=None<span class="p">, </span>tos_uri=None<span class="p">, </span>type=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1366,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing OauthApp Resource {#look-up}
 
 Get an existing OauthApp resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#OauthAppState">OauthAppState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#OauthApp">OauthApp</a></span></code></pre></div>
@@ -2598,6 +2598,9 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#OauthAppUserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#OauthAppUserOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Inputs.OauthAppUserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.Outputs.OauthAppUser.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

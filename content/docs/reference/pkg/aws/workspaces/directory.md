@@ -12,10 +12,26 @@ meta_desc: "Explore the Directory resource of the workspaces module, including e
 
 Provides a directory registration in AWS WorkSpaces Service
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -52,14 +68,13 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
     },
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Directory Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -67,7 +82,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Directory</span><span class="p">(resource_name, opts=None, </span>directory_id=None<span class="p">, </span>self_service_permissions=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Directory</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>directory_id=None<span class="p">, </span>self_service_permissions=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -272,7 +287,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
+    <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
 
 </dl>
@@ -315,7 +330,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
+    <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
 
 </dl>
@@ -358,7 +373,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
+    <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
 
 </dl>
@@ -401,7 +416,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
+    <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
 
 </dl>
@@ -487,7 +502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Directory Resource {#look-up}
 
 Get an existing Directory resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/workspaces/#DirectoryState">DirectoryState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/workspaces/#Directory">Directory</a></span></code></pre></div>
@@ -641,7 +656,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
+    <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
 
 </dl>
@@ -684,7 +699,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
+    <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
 
 </dl>
@@ -727,7 +742,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
+    <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
 
 </dl>
@@ -770,7 +785,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
+    <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
 
 </dl>
@@ -795,6 +810,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#DirectorySelfServicePermissionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#DirectorySelfServicePermissionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Inputs.DirectorySelfServicePermissionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Outputs.DirectorySelfServicePermissions.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

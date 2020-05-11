@@ -14,7 +14,7 @@ meta_desc: "Explore the KeyPrefix resource of the Consul package, including exam
 
 
 ## Create a KeyPrefix Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ meta_desc: "Explore the KeyPrefix resource of the Consul package, including exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KeyPrefix</span><span class="p">(resource_name, opts=None, </span>datacenter=None<span class="p">, </span>namespace=None<span class="p">, </span>path_prefix=None<span class="p">, </span>subkey_collection=None<span class="p">, </span>subkeys=None<span class="p">, </span>token=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KeyPrefix</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>datacenter=None<span class="p">, </span>namespace=None<span class="p">, </span>path_prefix=None<span class="p">, </span>subkey_collection=None<span class="p">, </span>subkeys=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -546,7 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing KeyPrefix Resource {#look-up}
 
 Get an existing KeyPrefix resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#KeyPrefixState">KeyPrefixState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#KeyPrefix">KeyPrefix</a></span></code></pre></div>
@@ -958,6 +958,9 @@ token that the agent provides by default.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#KeyPrefixSubkeyCollectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#KeyPrefixSubkeyCollectionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Inputs.KeyPrefixSubkeyCollectionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Outputs.KeyPrefixSubkeyCollection.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

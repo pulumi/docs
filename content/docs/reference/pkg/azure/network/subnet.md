@@ -22,7 +22,7 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 
 
 ## Create a Subnet Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -30,7 +30,7 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subnet</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address_prefix=None<span class="p">, </span>delegations=None<span class="p">, </span>enforce_private_link_endpoint_network_policies=None<span class="p">, </span>enforce_private_link_service_network_policies=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>service_endpoints=None<span class="p">, </span>virtual_network_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subnet</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address_prefix=None<span class="p">, </span>address_prefixes=None<span class="p">, </span>delegations=None<span class="p">, </span>enforce_private_link_endpoint_network_policies=None<span class="p">, </span>enforce_private_link_service_network_policies=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>service_endpoints=None<span class="p">, </span>virtual_network_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -204,15 +204,6 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The address prefix to use for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -227,6 +218,24 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network to which to attach the subnet. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Address<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address prefix to use for the subnet.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the `address_prefixes` property instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Address<wbr>Prefixes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The address prefixes to use for the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -283,15 +292,6 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Address<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The address prefix to use for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -306,6 +306,24 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network to which to attach the subnet. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Address<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address prefix to use for the subnet.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the `address_prefixes` property instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Address<wbr>Prefixes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The address prefixes to use for the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -362,15 +380,6 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>address<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The address prefix to use for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -385,6 +394,24 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network to which to attach the subnet. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>address<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address prefix to use for the subnet.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the `address_prefixes` property instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>address<wbr>Prefixes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The address prefixes to use for the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -441,15 +468,6 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>address_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The address prefix to use for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -464,6 +482,24 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network to which to attach the subnet. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>address_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The address prefix to use for the subnet.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the `address_prefixes` property instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>address_<wbr>prefixes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The address prefixes to use for the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -594,14 +630,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Subnet Resource {#look-up}
 
 Get an existing Subnet resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#SubnetState">SubnetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#Subnet">Subnet</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address_prefix=None<span class="p">, </span>delegations=None<span class="p">, </span>enforce_private_link_endpoint_network_policies=None<span class="p">, </span>enforce_private_link_service_network_policies=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>service_endpoints=None<span class="p">, </span>virtual_network_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address_prefix=None<span class="p">, </span>address_prefixes=None<span class="p">, </span>delegations=None<span class="p">, </span>enforce_private_link_endpoint_network_policies=None<span class="p">, </span>enforce_private_link_service_network_policies=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>service_endpoints=None<span class="p">, </span>virtual_network_name=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -715,13 +751,22 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Address<wbr>Prefix</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The address prefix to use for the subnet.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the `address_prefixes` property instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Address<wbr>Prefixes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The address prefixes to use for the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -794,13 +839,22 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Address<wbr>Prefix</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The address prefix to use for the subnet.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the `address_prefixes` property instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Address<wbr>Prefixes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The address prefixes to use for the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -873,13 +927,22 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>address<wbr>Prefix</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The address prefix to use for the subnet.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the `address_prefixes` property instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>address<wbr>Prefixes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The address prefixes to use for the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -952,13 +1015,22 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>address_<wbr>prefix</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The address prefix to use for the subnet.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the `address_prefixes` property instead.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>address_<wbr>prefixes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The address prefixes to use for the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1046,6 +1118,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#SubnetDelegationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#SubnetDelegationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.SubnetDelegationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.SubnetDelegation.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1161,6 +1236,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#SubnetDelegationServiceDelegationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#SubnetDelegationServiceDelegationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.SubnetDelegationServiceDelegationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.SubnetDelegationServiceDelegation.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -1,7 +1,8 @@
 
 ---
 title: "BucketACL"
-block_external_search_index: true
+title_tag: "Resource BucketACL | Module storage | Package GCP"
+meta_desc: "Explore the BucketACL resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. Authoritatively manages a bucket&#39;s ACLs in Google cloud storage service (GCS). For more information see"
 ---
 
 
@@ -26,7 +27,7 @@ Permissions can be granted either by ACLs or Cloud IAM policies. In general, per
 
 
 ## Create a BucketACL Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -34,7 +35,7 @@ Permissions can be granted either by ACLs or Cloud IAM policies. In general, per
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BucketACL</span><span class="p">(resource_name, opts=None, </span>bucket=None<span class="p">, </span>default_acl=None<span class="p">, </span>predefined_acl=None<span class="p">, </span>role_entities=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BucketACL</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket=None<span class="p">, </span>default_acl=None<span class="p">, </span>predefined_acl=None<span class="p">, </span>role_entities=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -454,7 +455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing BucketACL Resource {#look-up}
 
 Get an existing BucketACL resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#BucketACLState">BucketACLState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#BucketACL">BucketACL</a></span></code></pre></div>
@@ -759,8 +760,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

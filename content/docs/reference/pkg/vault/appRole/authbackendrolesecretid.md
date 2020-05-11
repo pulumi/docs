@@ -14,10 +14,26 @@ Manages an AppRole auth backend SecretID in a Vault server. See the [Vault
 documentation](https://www.vaultproject.io/docs/auth/approle.html) for more
 information.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
@@ -43,14 +59,13 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
     roleName: example.roleName,
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a AuthBackendRoleSecretID Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -58,7 +73,7 @@ const id = new vault.appRole.AuthBackendRoleSecretID("id", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackendRoleSecretID</span><span class="p">(resource_name, opts=None, </span>backend=None<span class="p">, </span>cidr_lists=None<span class="p">, </span>metadata=None<span class="p">, </span>role_name=None<span class="p">, </span>secret_id=None<span class="p">, </span>wrapping_ttl=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackendRoleSecretID</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend=None<span class="p">, </span>cidr_lists=None<span class="p">, </span>metadata=None<span class="p">, </span>role_name=None<span class="p">, </span>secret_id=None<span class="p">, </span>wrapping_ttl=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -686,7 +701,7 @@ be safely logged.
 ## Look up an Existing AuthBackendRoleSecretID Resource {#look-up}
 
 Get an existing AuthBackendRoleSecretID resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/appRole/#AuthBackendRoleSecretIDState">AuthBackendRoleSecretIDState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/appRole/#AuthBackendRoleSecretID">AuthBackendRoleSecretID</a></span></code></pre></div>

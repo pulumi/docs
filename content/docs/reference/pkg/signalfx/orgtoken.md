@@ -12,10 +12,26 @@ meta_desc: "Explore the OrgToken resource of the SignalFx package, including exa
 
 Manage SignalFx org tokens.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
@@ -35,14 +51,13 @@ const myteamkey0 = new signalfx.OrgToken("myteamkey0", {
     notifications: ["Email,foo-alerts@bar.com"],
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a OrgToken Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -495,7 +510,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The secret token created by the API. You cannot set this value.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -518,7 +534,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The secret token created by the API. You cannot set this value.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -541,7 +558,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The secret token created by the API. You cannot set this value.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -564,7 +582,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The secret token created by the API. You cannot set this value.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -578,7 +597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing OrgToken Resource {#look-up}
 
 Get an existing OrgToken resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#OrgTokenState">OrgTokenState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#OrgToken">OrgToken</a></span></code></pre></div>
@@ -760,7 +779,8 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The secret token created by the API. You cannot set this value.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -830,7 +850,8 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The secret token created by the API. You cannot set this value.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -900,7 +921,8 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The secret token created by the API. You cannot set this value.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -970,7 +992,8 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The secret token created by the API. You cannot set this value.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -994,6 +1017,9 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenDpmLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenDpmLimitsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.OrgTokenDpmLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.OrgTokenDpmLimits.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1109,6 +1135,9 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenHostOrUsageLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenHostOrUsageLimitsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Inputs.OrgTokenHostOrUsageLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Outputs.OrgTokenHostOrUsageLimits.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

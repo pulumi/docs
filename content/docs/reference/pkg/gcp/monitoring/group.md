@@ -1,7 +1,8 @@
 
 ---
 title: "Group"
-block_external_search_index: true
+title_tag: "Resource Group | Module monitoring | Package GCP"
+meta_desc: "Explore the Group resource of the monitoring module, including examples, input properties, output properties, lookup functions, and supporting types. The description of a dynamic collection of monitored resources. Each group"
 ---
 
 
@@ -37,7 +38,7 @@ const basic = new gcp.monitoring.Group("basic", {
 
 
 ## Create a Group Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -45,7 +46,7 @@ const basic = new gcp.monitoring.Group("basic", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Group</span><span class="p">(resource_name, opts=None, </span>display_name=None<span class="p">, </span>filter=None<span class="p">, </span>is_cluster=None<span class="p">, </span>parent_name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Group</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>display_name=None<span class="p">, </span>filter=None<span class="p">, </span>is_cluster=None<span class="p">, </span>parent_name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -223,7 +224,8 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-assigned name for this group, used only for display purposes.
+    <dd>{{% md %}}A user-assigned name for this group, used only for display
+purposes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -232,7 +234,8 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The filter used to determine which monitored resources belong to this group.
+    <dd>{{% md %}}The filter used to determine which monitored resources
+belong to this group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -241,8 +244,9 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups
-that are clusters.
+    <dd>{{% md %}}If true, the members of this group are considered to be a
+cluster. The system can perform additional analysis on
+groups that are clusters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -251,7 +255,8 @@ that are clusters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the group's parent, if it has one. The format is "projects/{project_id_or_number}/groups/{group_id}". For
+    <dd>{{% md %}}The name of the group's parent, if it has one. The format is
+"projects/{project_id_or_number}/groups/{group_id}". For
 groups with no parent, parentName is the empty string, "".
 {{% /md %}}</dd>
 
@@ -278,7 +283,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-assigned name for this group, used only for display purposes.
+    <dd>{{% md %}}A user-assigned name for this group, used only for display
+purposes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -287,7 +293,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The filter used to determine which monitored resources belong to this group.
+    <dd>{{% md %}}The filter used to determine which monitored resources
+belong to this group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -296,8 +303,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups
-that are clusters.
+    <dd>{{% md %}}If true, the members of this group are considered to be a
+cluster. The system can perform additional analysis on
+groups that are clusters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -306,7 +314,8 @@ that are clusters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the group's parent, if it has one. The format is "projects/{project_id_or_number}/groups/{group_id}". For
+    <dd>{{% md %}}The name of the group's parent, if it has one. The format is
+"projects/{project_id_or_number}/groups/{group_id}". For
 groups with no parent, parentName is the empty string, "".
 {{% /md %}}</dd>
 
@@ -333,7 +342,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-assigned name for this group, used only for display purposes.
+    <dd>{{% md %}}A user-assigned name for this group, used only for display
+purposes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -342,7 +352,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The filter used to determine which monitored resources belong to this group.
+    <dd>{{% md %}}The filter used to determine which monitored resources
+belong to this group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -351,8 +362,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups
-that are clusters.
+    <dd>{{% md %}}If true, the members of this group are considered to be a
+cluster. The system can perform additional analysis on
+groups that are clusters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,7 +373,8 @@ that are clusters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the group's parent, if it has one. The format is "projects/{project_id_or_number}/groups/{group_id}". For
+    <dd>{{% md %}}The name of the group's parent, if it has one. The format is
+"projects/{project_id_or_number}/groups/{group_id}". For
 groups with no parent, parentName is the empty string, "".
 {{% /md %}}</dd>
 
@@ -388,7 +401,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A user-assigned name for this group, used only for display purposes.
+    <dd>{{% md %}}A user-assigned name for this group, used only for display
+purposes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -397,7 +411,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The filter used to determine which monitored resources belong to this group.
+    <dd>{{% md %}}The filter used to determine which monitored resources
+belong to this group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -406,8 +421,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups
-that are clusters.
+    <dd>{{% md %}}If true, the members of this group are considered to be a
+cluster. The system can perform additional analysis on
+groups that are clusters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -416,7 +432,8 @@ that are clusters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the group's parent, if it has one. The format is "projects/{project_id_or_number}/groups/{group_id}". For
+    <dd>{{% md %}}The name of the group's parent, if it has one. The format is
+"projects/{project_id_or_number}/groups/{group_id}". For
 groups with no parent, parentName is the empty string, "".
 {{% /md %}}</dd>
 
@@ -549,7 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Group Resource {#look-up}
 
 Get an existing Group resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#Group">Group</a></span></code></pre></div>
@@ -676,7 +693,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-assigned name for this group, used only for display purposes.
+    <dd>{{% md %}}A user-assigned name for this group, used only for display
+purposes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -685,7 +703,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The filter used to determine which monitored resources belong to this group.
+    <dd>{{% md %}}The filter used to determine which monitored resources
+belong to this group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -694,8 +713,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups
-that are clusters.
+    <dd>{{% md %}}If true, the members of this group are considered to be a
+cluster. The system can perform additional analysis on
+groups that are clusters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -713,7 +733,8 @@ that are clusters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the group's parent, if it has one. The format is "projects/{project_id_or_number}/groups/{group_id}". For
+    <dd>{{% md %}}The name of the group's parent, if it has one. The format is
+"projects/{project_id_or_number}/groups/{group_id}". For
 groups with no parent, parentName is the empty string, "".
 {{% /md %}}</dd>
 
@@ -740,7 +761,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-assigned name for this group, used only for display purposes.
+    <dd>{{% md %}}A user-assigned name for this group, used only for display
+purposes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -749,7 +771,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The filter used to determine which monitored resources belong to this group.
+    <dd>{{% md %}}The filter used to determine which monitored resources
+belong to this group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -758,8 +781,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups
-that are clusters.
+    <dd>{{% md %}}If true, the members of this group are considered to be a
+cluster. The system can perform additional analysis on
+groups that are clusters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -777,7 +801,8 @@ that are clusters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the group's parent, if it has one. The format is "projects/{project_id_or_number}/groups/{group_id}". For
+    <dd>{{% md %}}The name of the group's parent, if it has one. The format is
+"projects/{project_id_or_number}/groups/{group_id}". For
 groups with no parent, parentName is the empty string, "".
 {{% /md %}}</dd>
 
@@ -804,7 +829,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A user-assigned name for this group, used only for display purposes.
+    <dd>{{% md %}}A user-assigned name for this group, used only for display
+purposes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -813,7 +839,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The filter used to determine which monitored resources belong to this group.
+    <dd>{{% md %}}The filter used to determine which monitored resources
+belong to this group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -822,8 +849,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups
-that are clusters.
+    <dd>{{% md %}}If true, the members of this group are considered to be a
+cluster. The system can perform additional analysis on
+groups that are clusters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -841,7 +869,8 @@ that are clusters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the group's parent, if it has one. The format is "projects/{project_id_or_number}/groups/{group_id}". For
+    <dd>{{% md %}}The name of the group's parent, if it has one. The format is
+"projects/{project_id_or_number}/groups/{group_id}". For
 groups with no parent, parentName is the empty string, "".
 {{% /md %}}</dd>
 
@@ -868,7 +897,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A user-assigned name for this group, used only for display purposes.
+    <dd>{{% md %}}A user-assigned name for this group, used only for display
+purposes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -877,7 +907,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The filter used to determine which monitored resources belong to this group.
+    <dd>{{% md %}}The filter used to determine which monitored resources
+belong to this group.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -886,8 +917,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups
-that are clusters.
+    <dd>{{% md %}}If true, the members of this group are considered to be a
+cluster. The system can perform additional analysis on
+groups that are clusters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -905,7 +937,8 @@ that are clusters.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the group's parent, if it has one. The format is "projects/{project_id_or_number}/groups/{group_id}". For
+    <dd>{{% md %}}The name of the group's parent, if it has one. The format is
+"projects/{project_id_or_number}/groups/{group_id}". For
 groups with no parent, parentName is the empty string, "".
 {{% /md %}}</dd>
 
@@ -938,8 +971,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

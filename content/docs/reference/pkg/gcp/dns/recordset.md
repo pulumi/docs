@@ -1,7 +1,8 @@
 
 ---
 title: "RecordSet"
-block_external_search_index: true
+title_tag: "Resource RecordSet | Module dns | Package GCP"
+meta_desc: "Explore the RecordSet resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a set of DNS records within Google Cloud DNS. For more information see [the official documentation](https://cloud.google.com/dns/records/) and"
 ---
 
 
@@ -23,7 +24,7 @@ will not actually remove NS records during destroy but will report that it did.
 
 
 ## Create a RecordSet Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -31,7 +32,7 @@ will not actually remove NS records during destroy but will report that it did.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RecordSet</span><span class="p">(resource_name, opts=None, </span>managed_zone=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>rrdatas=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RecordSet</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>managed_zone=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>rrdatas=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -535,7 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing RecordSet Resource {#look-up}
 
 Get an existing RecordSet resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#RecordSetState">RecordSetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#RecordSet">RecordSet</a></span></code></pre></div>
@@ -924,8 +925,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 
