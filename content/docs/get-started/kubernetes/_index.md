@@ -26,9 +26,9 @@ help you accomplish all these within minutes. Upon completing this guide you wil
 - Created a Kubernetes NGINX deployment
 - Modify your program to deploy to MiniKube
 
-Estimated Infrastructure Cost: **Free**
+Estimated Infrastructure Cost: <strong>Free</strong>
 <br />
-Estimated Time: **10 minutes**
+Estimated Time: <strong>10 minutes</strong>
 
 Click the button below to get started with the first step.
 
