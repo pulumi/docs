@@ -77,7 +77,7 @@ The following tutorials highlight the AWS platform using complete end-to-end sce
 
 ## Other Examples and Tutorials
 
-{{< chooser language "javascript,typescript,python" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 {{< tutorials-index-aws >}}
 
 If you'd like to see a new tutorial, please [request one](
