@@ -12,11 +12,37 @@ meta_desc: "Explore the DatabaseDb resource of the Digital Ocean package, includ
 
 Provides a DigitalOcean database resource. When creating a new database cluster, a default database with name `defaultdb` will be created. Then, this resource can be used to provide additional database inside the cluster.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Create a new PostgreSQL database
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+postgres_example = digitalocean.DatabaseCluster("postgres-example",
+    engine="pg",
+    version="11",
+    size="db-s-1vcpu-1gb",
+    region="nyc1",
+    node_count=1)
+database_example = digitalocean.DatabaseDb("database-example", cluster_id=postgres_example.id)
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -30,26 +56,13 @@ const postgres-example = new digitalocean.DatabaseCluster("postgres-example", {
 });
 const database-example = new digitalocean.DatabaseDb("database-example", {clusterId: postgres-example.id});
 ```
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-postgres_example = digitalocean.DatabaseCluster("postgres-example",
-    engine="pg",
-    version="11",
-    size="db-s-1vcpu-1gb",
-    region="nyc1",
-    node_count=1)
-database_example = digitalocean.DatabaseDb("database-example", cluster_id=postgres_example.id)
-```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a DatabaseDb Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -405,7 +418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DatabaseDb Resource {#look-up}
 
 Get an existing DatabaseDb resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DatabaseDbState">DatabaseDbState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DatabaseDb">DatabaseDb</a></span></code></pre></div>

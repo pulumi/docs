@@ -16,7 +16,7 @@ Use this data source to access the ID of a specified Traffic Manager Geographica
 
 ## Using GetTrafficManager {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

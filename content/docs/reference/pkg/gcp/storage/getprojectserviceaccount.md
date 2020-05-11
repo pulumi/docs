@@ -25,7 +25,7 @@ For more information see
 
 ## Using GetProjectServiceAccount {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

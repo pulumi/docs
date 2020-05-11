@@ -22,7 +22,7 @@ Deprecated: azure.managementgroups.getManagementGroup has been deprecated in fav
 
 ## Using GetManagementGroup {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

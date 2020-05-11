@@ -15,7 +15,7 @@ meta_desc: "Explore the GetCiphertext function of the kms module, including exam
 
 ## Using GetCiphertext {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

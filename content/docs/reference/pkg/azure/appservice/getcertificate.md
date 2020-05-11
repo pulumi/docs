@@ -19,7 +19,7 @@ Use this data source to access information about an App Service Certificate.
 
 ## Using GetCertificate {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

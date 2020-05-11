@@ -12,23 +12,7 @@ meta_desc: "Explore the GetVolume function of the Linode package, including exam
 
 Provides information about a Linode Volume.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-The following example shows how one might use this data source to access information about a Linode Volume.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const foo = pulumi.output(linode.getVolume({
-    id: 1234567,
-}, { async: true }));
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Attributes
 
 The Linode Volume resource exports the following attributes:
@@ -53,11 +37,40 @@ The Linode Volume resource exports the following attributes:
 
 - `filesystem_path` - The full filesystem path for the Volume based on the Volume's label. Path is /dev/disk/by-id/scsi-0LinodeVolume + Volume label.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const foo = pulumi.output(linode.getVolume({
+    id: 1234567,
+}, { async: true }));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetVolume {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

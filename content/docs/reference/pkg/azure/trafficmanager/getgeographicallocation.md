@@ -19,7 +19,7 @@ Deprecated: azure.trafficmanager.getGeographicalLocation has been deprecated in 
 
 ## Using GetGeographicalLocation {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

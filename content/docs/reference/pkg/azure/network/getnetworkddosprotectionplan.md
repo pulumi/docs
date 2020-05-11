@@ -19,7 +19,7 @@ Use this data source to access information about an existing Azure Network DDoS 
 
 ## Using GetNetworkDdosProtectionPlan {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

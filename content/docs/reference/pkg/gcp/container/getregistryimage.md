@@ -21,7 +21,7 @@ The URLs are computed entirely offline - as long as the project exists, they wil
 
 ## Using GetRegistryImage {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

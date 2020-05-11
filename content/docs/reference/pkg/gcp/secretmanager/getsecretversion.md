@@ -19,7 +19,7 @@ Get a Secret Manager secret's version. For more information see the [official do
 
 ## Using GetSecretVersion {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

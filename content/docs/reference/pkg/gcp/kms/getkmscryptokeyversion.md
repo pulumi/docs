@@ -24,7 +24,7 @@ A CryptoKeyVersion represents an individual cryptographic key, and the associate
 
 ## Using GetKMSCryptoKeyVersion {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

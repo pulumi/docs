@@ -21,7 +21,7 @@ https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_
 
 ## Using GetLBIPRanges {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

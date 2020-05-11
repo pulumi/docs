@@ -12,10 +12,26 @@ meta_desc: "Explore the GetListeners function of the slb module, including examp
 
 This data source provides the listeners related to a server load balancer of the current Alibaba Cloud user.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -26,15 +42,14 @@ const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getListener
 
 export const firstSlbListenerProtocol = sampleDs.slbListeners[0].protocol;
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetListeners {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

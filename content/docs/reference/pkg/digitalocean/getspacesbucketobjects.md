@@ -15,7 +15,7 @@ meta_desc: "Explore the GetSpacesBucketObjects function of the Digital Ocean pac
 
 ## Using GetSpacesBucketObjects {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

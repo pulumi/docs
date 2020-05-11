@@ -12,19 +12,22 @@ meta_desc: "Explore the GetKubernetesVersions function of the Digital Ocean pack
 
 Provides access to the available DigitalOcean Kubernetes Service versions.
 
+
+
 {{% examples %}}
 ## Example Usage
 
-{{% example %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 ### Output a list of all available versions
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as digitalocean from "@pulumi/digitalocean";
+{{% example go %}}
+Coming soon!
+{{% /example %}}
 
-const example = digitalocean.getKubernetesVersions({});
-export const k8s_versions = example.then(example => example.validVersions);
-```
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_digitalocean as digitalocean
@@ -32,11 +35,45 @@ import pulumi_digitalocean as digitalocean
 example = digitalocean.get_kubernetes_versions()
 pulumi.export("k8s-versions", example.valid_versions)
 ```
-
 {{% /example %}}
-{{% example %}}
-### Create a Kubernetes cluster using the most recent version available
 
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const example = digitalocean.getKubernetesVersions({});
+export const k8s_versions = example.then(example => example.validVersions);
+```
+{{% /example %}}
+
+### Create a Kubernetes cluster using the most recent version available
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+example = digitalocean.get_kubernetes_versions()
+example_cluster = digitalocean.KubernetesCluster("example-cluster",
+    region="lon1",
+    version=example.latest_version,
+    node_pool={
+        "name": "default",
+        "size": "s-1vcpu-2gb",
+        "nodeCount": 3,
+    })
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -52,11 +89,23 @@ const example-cluster = new digitalocean.KubernetesCluster("example-cluster", {
     },
 });
 ```
+{{% /example %}}
+
+### Pin a Kubernetes cluster to a specific minor version
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_digitalocean as digitalocean
 
-example = digitalocean.get_kubernetes_versions()
+example = digitalocean.get_kubernetes_versions(version_prefix="1.16.")
 example_cluster = digitalocean.KubernetesCluster("example-cluster",
     region="lon1",
     version=example.latest_version,
@@ -66,11 +115,9 @@ example_cluster = digitalocean.KubernetesCluster("example-cluster",
         "nodeCount": 3,
     })
 ```
-
 {{% /example %}}
-{{% example %}}
-### Pin a Kubernetes cluster to a specific minor version
 
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -88,29 +135,14 @@ const example-cluster = new digitalocean.KubernetesCluster("example-cluster", {
     },
 });
 ```
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-example = digitalocean.get_kubernetes_versions(version_prefix="1.16.")
-example_cluster = digitalocean.KubernetesCluster("example-cluster",
-    region="lon1",
-    version=example.latest_version,
-    node_pool={
-        "name": "default",
-        "size": "s-1vcpu-2gb",
-        "nodeCount": 3,
-    })
-```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetKubernetesVersions {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

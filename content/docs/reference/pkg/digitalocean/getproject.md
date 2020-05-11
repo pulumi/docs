@@ -13,10 +13,32 @@ meta_desc: "Explore the GetProject function of the Digital Ocean package, includ
 Get information on a single DigitalOcean project. If neither the `id` nor `name` attributes are provided,
 then this data source returns the default project.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+default = digitalocean.get_project()
+staging = digitalocean.get_project(name="My Staging Project")
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -26,22 +48,14 @@ const staging = pulumi.output(digitalocean.getProject({
     name: "My Staging Project",
 }, { async: true }));
 ```
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-default = digitalocean.get_project()
-staging = digitalocean.get_project(name="My Staging Project")
-```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetProject {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

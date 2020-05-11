@@ -19,7 +19,7 @@ Use this data source to look up [WAF Rules](https://api.cloudflare.com/#waf-rule
 
 ## Using GetWafRules {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

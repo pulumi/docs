@@ -15,7 +15,7 @@ meta_desc: "Explore the GetMongoInstances function of the dds module, including 
 
 ## Using GetMongoInstances {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -15,10 +15,26 @@ main versions available in Alibaba Cloud account when create a emr cluster.
 
 > **NOTE:** Available in 1.59.0+
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -34,15 +50,14 @@ const defaultMainVersions = pulumi.output(alicloud.emr.getMainVersions({
 export const firstMainVersion = defaultMainVersions.mainVersions[0].emrVersion;
 export const thisClusterTypes = defaultMainVersions.mainVersions[0].clusterTypes;
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetMainVersions {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

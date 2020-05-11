@@ -19,7 +19,7 @@ Use this data source to access information about a Policy Definition, both custo
 
 ## Using GetPolicyDefintion {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

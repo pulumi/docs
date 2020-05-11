@@ -15,7 +15,7 @@ meta_desc: "Explore the GetKubernetesCluster function of the Digital Ocean packa
 
 ## Using GetKubernetesCluster {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

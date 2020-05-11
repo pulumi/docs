@@ -15,10 +15,33 @@ Provides a [DigitalOcean VPC](https://developers.digitalocean.com/documentation/
 VPCs are virtual networks containing resources that can communicate with each
 other in full isolation, using private IP addresses.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+example = digitalocean.Vpc("example",
+    ip_range="10.10.10.0/24",
+    region="nyc3")
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -28,23 +51,32 @@ const example = new digitalocean.Vpc("example", {
     region: "nyc3",
 });
 ```
+{{% /example %}}
+
+### Resource Assignment
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_digitalocean as digitalocean
 
-example = digitalocean.Vpc("example",
-    ip_range="10.10.10.0/24",
-    region="nyc3")
+example_vpc = digitalocean.Vpc("exampleVpc", region="nyc3")
+example_droplet = digitalocean.Droplet("exampleDroplet",
+    size="s-1vcpu-1gb",
+    image="ubuntu-18-04-x64",
+    region="nyc3",
+    vpc_uuid=example_vpc.id)
 ```
-
 {{% /example %}}
-{{% example %}}
-### Resource Assignment
 
-`digitalocean..Droplet`, `digitalocean..KubernetesCluster`,
-`digitalocean_load_balancer`, and `digitalocean..DatabaseCluster` resources
-may be assigned to a VPC by referencing its `id`. For example:
-
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -57,25 +89,13 @@ const exampleDroplet = new digitalocean.Droplet("exampleDroplet", {
     vpcUuid: exampleVpc.id,
 });
 ```
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-example_vpc = digitalocean.Vpc("exampleVpc", region="nyc3")
-example_droplet = digitalocean.Droplet("exampleDroplet",
-    size="s-1vcpu-1gb",
-    image="ubuntu-18-04-x64",
-    region="nyc3",
-    vpc_uuid=example_vpc.id)
-```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Vpc Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -611,7 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Vpc Resource {#look-up}
 
 Get an existing Vpc resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#VpcState">VpcState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Vpc">Vpc</a></span></code></pre></div>

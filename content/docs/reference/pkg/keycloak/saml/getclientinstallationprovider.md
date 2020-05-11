@@ -15,7 +15,7 @@ meta_desc: "Explore the GetClientInstallationProvider function of the saml modul
 
 ## Using GetClientInstallationProvider {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

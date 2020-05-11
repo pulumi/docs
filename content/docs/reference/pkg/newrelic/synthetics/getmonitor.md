@@ -19,7 +19,7 @@ Use this data source to get information about a specific synthetics monitor in N
 
 ## Using GetMonitor {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

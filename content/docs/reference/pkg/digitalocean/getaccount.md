@@ -12,33 +12,45 @@ meta_desc: "Explore the GetAccount function of the Digital Ocean package, includ
 
 Get information on your DigitalOcean account.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Get the account:
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as digitalocean from "@pulumi/digitalocean";
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
 
-const example = pulumi.output(digitalocean.getAccount({ async: true }));
-```
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
 ```python
 import pulumi
 import pulumi_digitalocean as digitalocean
 
 example = digitalocean.get_account()
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const example = pulumi.output(digitalocean.getAccount({ async: true }));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAccount {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

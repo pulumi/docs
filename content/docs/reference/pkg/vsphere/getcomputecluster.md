@@ -15,7 +15,7 @@ meta_desc: "Explore the GetComputeCluster function of the vSphere package, inclu
 
 ## Using GetComputeCluster {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -15,7 +15,7 @@ meta_desc: "Explore the GetKafkaSchema function of the Aiven package, including 
 
 ## Using GetKafkaSchema {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

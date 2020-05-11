@@ -21,7 +21,7 @@ This data source provides availability zones for RDS that can be accessed by an 
 
 ## Using GetZones {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

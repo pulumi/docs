@@ -22,7 +22,7 @@ Filters support regular expression for the database name, searches by clusterId.
 
 ## Using GetDatabases {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

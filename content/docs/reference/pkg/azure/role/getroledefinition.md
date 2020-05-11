@@ -18,7 +18,7 @@ Deprecated: azure.role.getRoleDefinition has been deprecated in favour of azure.
 
 ## Using GetRoleDefinition {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

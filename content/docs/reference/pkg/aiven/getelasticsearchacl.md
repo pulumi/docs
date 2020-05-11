@@ -15,7 +15,7 @@ meta_desc: "Explore the GetElasticSearchAcl function of the Aiven package, inclu
 
 ## Using GetElasticSearchAcl {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -16,7 +16,7 @@ Uses this data source to access information about an existing Virtual Hub.
 
 ## Using GetVirtualHub {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

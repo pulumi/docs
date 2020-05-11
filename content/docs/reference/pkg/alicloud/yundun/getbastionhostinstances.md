@@ -14,10 +14,26 @@ This data source provides a list of cloud Bastionhost instances in an Alibaba Cl
 
 > **NOTE:** Available in 1.63.0+ .
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -28,15 +44,14 @@ const instanceBastionHostInstances = pulumi.output(alicloud.yundun.getBastionHos
 
 export const instance = alicloud_yundun_bastionhost_instances_instance.map(v => v.id);
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetBastionHostInstances {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

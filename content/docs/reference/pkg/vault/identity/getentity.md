@@ -15,7 +15,7 @@ meta_desc: "Explore the GetEntity function of the identity module, including exa
 
 ## Using GetEntity {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -21,10 +21,67 @@ For information about listener and how to use it, to see the following:
 * [Configure a TCP Listener](https://www.alibabacloud.com/help/doc-detail/27594.htm).
 * [Configure a UDP Listener](https://www.alibabacloud.com/help/doc-detail/27595.htm).
 
+
+## Listener fields and protocol mapping
+
+load balance support 4 protocal to listen on, they are `http`,`https`,`tcp`,`udp`, the every listener support which portocal following:
+
+listener parameter | support protocol | value range |
+------------- | ------------- | ------------- | 
+backend_port | http & https & tcp & udp | 1-65535 | 
+frontend_port | http & https & tcp & udp | 1-65535 |
+protocol | http & https & tcp & udp |
+bandwidth | http & https & tcp & udp | -1 / 1-1000 |
+scheduler | http & https & tcp & udp | wrr rr or wlc |
+sticky_session | http & https | on or off |
+sticky_session_type | http & https | insert or server | 
+cookie_timeout | http & https | 1-86400  | 
+cookie | http & https |   | 
+persistence_timeout | tcp & udp | 0-3600 | 
+health_check | http & https | on or off | 
+health_check_type | tcp | tcp or http | 
+health_check_domain | http & https & tcp | 
+health_check_method | http & https & tcp | 
+health_check_uri | http & https & tcp |  | 
+health_check_connect_port | http & https & tcp & udp | 1-65535 or -520 | 
+healthy_threshold | http & https & tcp & udp | 1-10 | 
+unhealthy_threshold | http & https & tcp & udp | 1-10 | 
+health_check_timeout | http & https & tcp & udp | 1-300 |
+health_check_interval | http & https & tcp & udp | 1-50 |
+health_check_http_code | http & https & tcp | http_2xx,http_3xx,http_4xx,http_5xx | 
+server_certificate_id | https |  |
+gzip | http & https | true or false  |
+x_forwarded_for | http & https |  |
+acl_status | http & https & tcp & udp | on or off |
+acl_type   | http & https & tcp & udp | white or black |
+acl_id     | http & https & tcp & udp | the id of resource alicloud_slb_acl|
+established_timeout | tcp       | 10-900|
+idle_timeout |http & https      | 1-60  |
+request_timeout |http & https   | 1-180 |
+enable_http2    |https          | on or off |
+tls_cipher_policy |https        |  tls_cipher_policy_1_0, tls_cipher_policy_1_1, tls_cipher_policy_1_2, tls_cipher_policy_1_2_strict |
+server_group_id    | http & https & tcp & udp | the id of resource alicloud.slb.ServerGroup |
+
+The listener mapping supports the following:
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -80,55 +137,13 @@ const defaultListener = new alicloud.slb.Listener("default", {
     },
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-## Listener fields and protocol mapping
-
-load balance support 4 protocal to listen on, they are `http`,`https`,`tcp`,`udp`, the every listener support which portocal following:
-
-listener parameter | support protocol | value range |
-------------- | ------------- | ------------- | 
-backend_port | http & https & tcp & udp | 1-65535 | 
-frontend_port | http & https & tcp & udp | 1-65535 |
-protocol | http & https & tcp & udp |
-bandwidth | http & https & tcp & udp | -1 / 1-1000 |
-scheduler | http & https & tcp & udp | wrr rr or wlc |
-sticky_session | http & https | on or off |
-sticky_session_type | http & https | insert or server | 
-cookie_timeout | http & https | 1-86400  | 
-cookie | http & https |   | 
-persistence_timeout | tcp & udp | 0-3600 | 
-health_check | http & https | on or off | 
-health_check_type | tcp | tcp or http | 
-health_check_domain | http & https & tcp | 
-health_check_method | http & https & tcp | 
-health_check_uri | http & https & tcp |  | 
-health_check_connect_port | http & https & tcp & udp | 1-65535 or -520 | 
-healthy_threshold | http & https & tcp & udp | 1-10 | 
-unhealthy_threshold | http & https & tcp & udp | 1-10 | 
-health_check_timeout | http & https & tcp & udp | 1-300 |
-health_check_interval | http & https & tcp & udp | 1-50 |
-health_check_http_code | http & https & tcp | http_2xx,http_3xx,http_4xx,http_5xx | 
-server_certificate_id | https |  |
-gzip | http & https | true or false  |
-x_forwarded_for | http & https |  |
-acl_status | http & https & tcp & udp | on or off |
-acl_type   | http & https & tcp & udp | white or black |
-acl_id     | http & https & tcp & udp | the id of resource alicloud_slb_acl|
-established_timeout | tcp       | 10-900|
-idle_timeout |http & https      | 1-60  |
-request_timeout |http & https   | 1-180 |
-enable_http2    |https          | on or off |
-tls_cipher_policy |https        |  tls_cipher_policy_1_0, tls_cipher_policy_1_1, tls_cipher_policy_1_2, tls_cipher_policy_1_2_strict |
-server_group_id    | http & https & tcp & udp | the id of resource alicloud.slb.ServerGroup |
-
-The listener mapping supports the following:
-
 
 
 ## Create a Listener Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1944,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Listener Resource {#look-up}
 
 Get an existing Listener resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#ListenerState">ListenerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#Listener">Listener</a></span></code></pre></div>

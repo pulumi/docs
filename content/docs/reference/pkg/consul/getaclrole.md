@@ -20,7 +20,7 @@ The `consul..AclRole` data source returns the information related to a
 
 ## Using GetAclRole {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

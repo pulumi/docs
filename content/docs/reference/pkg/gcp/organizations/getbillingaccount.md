@@ -16,7 +16,7 @@ Use this data source to get information about a Google Billing Account.
 
 ## Using GetBillingAccount {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

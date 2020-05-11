@@ -15,10 +15,38 @@ Droplet resource in order to better organize or facilitate the lookups and
 actions on it. Tags created with this resource can be referenced in your Droplet
 configuration via their ID or name.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+# Create a new tag
+foobar = digitalocean.Tag("foobar")
+# Create a new Droplet in nyc3 with the foobar tag
+web = digitalocean.Droplet("web",
+    image="ubuntu-18-04-x64",
+    region="nyc3",
+    size="s-1vcpu-1gb",
+    tags=[foobar.id])
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -33,27 +61,13 @@ const web = new digitalocean.Droplet("web", {
     tags: [foobar.id],
 });
 ```
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-# Create a new tag
-foobar = digitalocean.Tag("foobar")
-# Create a new Droplet in nyc3 with the foobar tag
-web = digitalocean.Droplet("web",
-    image="ubuntu-18-04-x64",
-    region="nyc3",
-    size="s-1vcpu-1gb",
-    tags=[foobar.id])
-```
-
 {{% /example %}}
+
 {{% /examples %}}
 
 
-
 ## Create a Tag Resource {#create}
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -373,7 +387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Tag Resource {#look-up}
 
 Get an existing Tag resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#TagState">TagState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Tag">Tag</a></span></code></pre></div>

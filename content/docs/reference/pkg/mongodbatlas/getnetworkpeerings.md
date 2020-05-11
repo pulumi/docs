@@ -22,7 +22,7 @@ meta_desc: "Explore the GetNetworkPeerings function of the mongodbatlas package,
 
 ## Using GetNetworkPeerings {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

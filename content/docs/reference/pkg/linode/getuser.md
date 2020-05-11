@@ -12,23 +12,7 @@ meta_desc: "Explore the GetUser function of the Linode package, including exampl
 
 Provides information about a Linode user
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-The following example shows how one might use this data source to access information about a Linode user.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const foo = pulumi.output(linode.getUser({
-    username: "foo",
-}, { async: true }));
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Attributes
 
 The Linode User resource exports the following attributes:
@@ -39,11 +23,40 @@ The Linode User resource exports the following attributes:
 
 * `restricted` - If true, this User must be granted access to perform actions or access entities on this Account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const foo = pulumi.output(linode.getUser({
+    username: "foo",
+}, { async: true }));
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetUser {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

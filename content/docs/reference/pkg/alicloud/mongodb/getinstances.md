@@ -13,10 +13,26 @@ meta_desc: "Explore the GetInstances function of the mongodb module, including e
 The `alicloud.mongodb.getInstances` data source provides a collection of MongoDB instances available in Alicloud account.
 Filters support regular expression for the instance name, engine or instance type.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -28,15 +44,14 @@ const mongo = pulumi.output(alicloud.mongodb.getInstances({
     nameRegex: "dds-.+\\d+",
 }, { async: true }));
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetInstances {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

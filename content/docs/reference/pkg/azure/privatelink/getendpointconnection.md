@@ -21,7 +21,7 @@ Use this data source to access the connection status information about an existi
 
 ## Using GetEndpointConnection {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

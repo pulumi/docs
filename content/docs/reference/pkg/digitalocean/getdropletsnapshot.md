@@ -14,12 +14,33 @@ Droplet snapshots are saved instances of a Droplet. Use this data
 source to retrieve the ID of a DigitalOcean Droplet snapshot for use in other
 resources.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-Get the Droplet snapshot:
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+web_snapshot = digitalocean.get_droplet_snapshot(most_recent=True,
+    name_regex="^web",
+    region="nyc3")
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -30,23 +51,14 @@ const web_snapshot = pulumi.output(digitalocean.getDropletSnapshot({
     region: "nyc3",
 }, { async: true }));
 ```
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-web_snapshot = digitalocean.get_droplet_snapshot(most_recent=True,
-    name_regex="^web",
-    region="nyc3")
-```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetDropletSnapshot {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -12,13 +12,26 @@ meta_desc: "Explore the GetZones function of the Cloudflare package, including e
 
 Use this data source to look up [Zone](https://api.cloudflare.com/#zone-properties) records.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The example below matches all `active` zones that begin with `example.` and are not paused. The matched zones are then
-locked down using the `cloudflare..ZoneLockdown` resource.
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
@@ -41,15 +54,14 @@ const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
     zone: test.apply(test => (<any>test.zones[0])["name"]),
 });
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetZones {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

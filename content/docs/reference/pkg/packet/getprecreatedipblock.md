@@ -20,7 +20,7 @@ You can then use the cidrsubnet TF builtin function to derive subnets.
 
 ## Using GetPrecreatedIpBlock {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

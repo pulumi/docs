@@ -17,13 +17,38 @@ _optionally_ (see below) content of an object stored inside a Spaces bucket.
 `Content-Type` (`text/*` and `application/json`). This is to prevent printing unsafe characters and potentially
 downloading large amount of data which would be thrown away in favor of metadata.
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
-The following example retrieves a text object (which must have a `Content-Type`
-value starting with `text/`) and uses it as the `user_data` for a Droplet:
+{{< chooser language "typescript,python,go,csharp" / >}}
 
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+bootstrap_script = digitalocean.get_spaces_bucket_object(bucket="ourcorp-deploy-config",
+    region="nyc3",
+    key="droplet-bootstrap-script.sh")
+web = digitalocean.Droplet("web",
+    image="ubuntu-18-04-x64",
+    region="nyc2",
+    size="s-1vcpu-1gb",
+    user_data=bootstrap_script.body)
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -40,28 +65,14 @@ const web = new digitalocean.Droplet("web", {
     userData: bootstrapScript.then(bootstrapScript => bootstrapScript.body),
 });
 ```
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-bootstrap_script = digitalocean.get_spaces_bucket_object(bucket="ourcorp-deploy-config",
-    region="nyc3",
-    key="droplet-bootstrap-script.sh")
-web = digitalocean.Droplet("web",
-    image="ubuntu-18-04-x64",
-    region="nyc2",
-    size="s-1vcpu-1gb",
-    user_data=bootstrap_script.body)
-```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetSpacesBucketObject {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

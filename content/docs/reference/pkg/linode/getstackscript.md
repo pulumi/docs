@@ -12,18 +12,7 @@ meta_desc: "Explore the GetStackScript function of the Linode package, including
 
 Provides details about a specific Linode StackScript.
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
 
-The following example shows how one might use this data source to access information about a Linode StackScript.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-{{% /example %}}
-{{% /examples %}}
 ## Attributes
 
 This resource exports the following attributes:
@@ -66,11 +55,35 @@ This resource exports the following attributes:
 
   * `default` - The default value. If not specified, this value will be used.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetStackScript {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

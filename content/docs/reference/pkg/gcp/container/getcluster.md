@@ -19,7 +19,7 @@ Get info about a GKE cluster from its name and location.
 
 ## Using GetCluster {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

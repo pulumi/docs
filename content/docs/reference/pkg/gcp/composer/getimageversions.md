@@ -19,7 +19,7 @@ Provides access to available Cloud Composer versions in a region for a given pro
 
 ## Using GetImageVersions {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

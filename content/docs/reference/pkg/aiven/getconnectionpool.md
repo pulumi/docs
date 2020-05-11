@@ -17,7 +17,7 @@ meta_desc: "Explore the GetConnectionPool function of the Aiven package, includi
 
 ## Using GetConnectionPool {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

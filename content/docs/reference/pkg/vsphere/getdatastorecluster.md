@@ -22,10 +22,26 @@ virtual machines in using the
 [docs-vmfs-datastore-resource]: /docs/providers/vsphere/r/vmfs_datastore.html
 [docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
+
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -38,15 +54,14 @@ const datastoreCluster = vsphere_datacenter_dc.id.apply(id => vsphere.getDatasto
     name: "datastore-cluster1",
 }, { async: true }));
 ```
-
 {{% /example %}}
-{{% /examples %}}
 
+{{% /examples %}}
 
 
 ## Using GetDatastoreCluster {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

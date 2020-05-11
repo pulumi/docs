@@ -13,10 +13,28 @@ meta_desc: "Explore the GetServiceAccount function of the elasticloadbalancing m
 Use this data source to get the Account ID of the [AWS Elastic Load Balancing Service Account](http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html#attach-bucket-policy)
 in a given region for the purpose of whitelisting in S3 bucket policy.
 
+
+
+Deprecated: aws.elasticloadbalancing.getServiceAccount has been deprecated in favour of aws.elb.getServiceAccount
+
 {{% examples %}}
 ## Example Usage
-{{% example %}}
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -58,18 +76,15 @@ const bar = new aws.elb.LoadBalancer("bar", {
     }],
 });
 ```
-
 {{% /example %}}
+
 {{% /examples %}}
-
-Deprecated: aws.elasticloadbalancing.getServiceAccount has been deprecated in favour of aws.elb.getServiceAccount
-
 <p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.getServiceAccount has been deprecated in favour of aws.elb.getServiceAccount{{% /md %}}</p>
 
 
 ## Using GetServiceAccount {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

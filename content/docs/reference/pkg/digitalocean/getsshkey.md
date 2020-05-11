@@ -15,7 +15,7 @@ meta_desc: "Explore the GetSshKey function of the Digital Ocean package, includi
 
 ## Using GetSshKey {#using}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
