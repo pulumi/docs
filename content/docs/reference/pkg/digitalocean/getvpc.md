@@ -15,7 +15,7 @@ meta_desc: "Explore the GetVpc function of the Digital Ocean package, including 
 
 ## Using GetVpc {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -18,26 +18,10 @@ The `consul..getAgentConfig` data source returns
 [configuration data](https://www.consul.io/api/agent.html#read-configuration)
 from the agent specified in the `provider`.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
@@ -46,14 +30,15 @@ const remoteAgent = pulumi.output(consul.getAgentConfig({ async: true }));
 
 export const consulVersion = remoteAgent.version;
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetAgentConfig {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

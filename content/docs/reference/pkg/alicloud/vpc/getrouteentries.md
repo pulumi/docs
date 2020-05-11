@@ -14,26 +14,10 @@ This data source provides a list of Route Entries owned by an Alibaba Cloud acco
 
 > **NOTE:** Available in 1.37.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -100,14 +84,15 @@ const fooRouteEntries = fooRouteEntry.routeTableId.apply(routeTableId => aliclou
     routeTableId: routeTableId,
 }, { async: true }));
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetRouteEntries {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

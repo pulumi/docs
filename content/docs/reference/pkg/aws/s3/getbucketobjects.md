@@ -14,26 +14,12 @@ meta_desc: "Explore the GetBucketObjects function of the s3 module, including ex
 
 The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The following example retrieves a list of all object keys in an S3 bucket and creates corresponding object data sources:
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,14 +35,15 @@ for (let i = 0; i < myObjects.apply(myObjects => myObjects.keys.length); i++) {
     }, { async: true })));
 }
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetBucketObjects {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

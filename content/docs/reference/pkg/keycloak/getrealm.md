@@ -29,7 +29,7 @@ See the docs for the `keycloak..Realm` resource for details on the exported attr
 
 ## Using GetRealm {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

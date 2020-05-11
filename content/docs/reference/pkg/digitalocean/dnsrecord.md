@@ -12,44 +12,10 @@ meta_desc: "Explore the DnsRecord resource of the Digital Ocean package, includi
 
 Provides a DigitalOcean DNS record resource.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-default = digitalocean.Domain("default", name="example.com")
-# Add an A record to the domain for www.example.com.
-www = digitalocean.DnsRecord("www",
-    domain=default.name,
-    type="A",
-    value="192.168.0.11")
-# Add a MX record for the example.com domain itself.
-mx = digitalocean.DnsRecord("mx",
-    domain=default.name,
-    type="MX",
-    priority=10,
-    value="mail.example.com.")
-pulumi.export("wwwFqdn", www.fqdn)
-pulumi.export("mxFqdn", mx.fqdn)
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -71,13 +37,33 @@ const mx = new digitalocean.DnsRecord("mx", {
 export const wwwFqdn = www.fqdn;
 export const mxFqdn = mx.fqdn;
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
 
+default = digitalocean.Domain("default", name="example.com")
+# Add an A record to the domain for www.example.com.
+www = digitalocean.DnsRecord("www",
+    domain=default.name,
+    type="A",
+    value="192.168.0.11")
+# Add a MX record for the example.com domain itself.
+mx = digitalocean.DnsRecord("mx",
+    domain=default.name,
+    type="MX",
+    priority=10,
+    value="mail.example.com.")
+pulumi.export("wwwFqdn", www.fqdn)
+pulumi.export("mxFqdn", mx.fqdn)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a DnsRecord Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -757,7 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DnsRecord Resource {#look-up}
 
 Get an existing DnsRecord resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DnsRecordState">DnsRecordState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DnsRecord">DnsRecord</a></span></code></pre></div>

@@ -14,26 +14,10 @@ This data source provides the Market product items of Alibaba Cloud.
 
 > **NOTE:** Available in 1.64.0+
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -47,14 +31,15 @@ const defaultProducts = pulumi.output(alicloud.marketplace.getProducts({
 export const firstProductCode = defaultProducts.productItems.0.code;
 export const productCodes = defaultProducts.ids!;
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetProducts {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

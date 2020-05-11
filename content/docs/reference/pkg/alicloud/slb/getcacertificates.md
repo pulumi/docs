@@ -12,26 +12,10 @@ meta_desc: "Explore the GetCaCertificates function of the slb module, including 
 
 This data source provides the CA certificate list.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -40,14 +24,15 @@ const sampleDs = pulumi.output(alicloud.slb.getCaCertificates({ async: true }));
 
 export const firstSlbCaCertificateId = sampleDs.certificates[0].id;
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetCaCertificates {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

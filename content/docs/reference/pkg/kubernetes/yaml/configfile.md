@@ -14,7 +14,7 @@ ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `
 
 
 ## Create a ConfigFile Resource {#create}
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "javascript,typescript,python,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

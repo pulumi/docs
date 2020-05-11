@@ -16,7 +16,7 @@ Use this data source to get the IP addresses from different special IP ranges on
 
 ## Using GetNetblockIPRanges {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

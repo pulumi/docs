@@ -22,7 +22,7 @@ Deprecated: azure.eventhub.getServiceBusNamespace has been deprecated in favour 
 
 ## Using GetServiceBusNamespace {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

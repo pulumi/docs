@@ -15,7 +15,7 @@ meta_desc: "Explore the GetPlaintext function of the kms module, including examp
 
 ## Using GetPlaintext {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

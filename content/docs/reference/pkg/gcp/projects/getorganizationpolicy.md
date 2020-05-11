@@ -21,7 +21,7 @@ documentation](https://cloud.google.com/resource-manager/docs/organization-polic
 
 ## Using GetOrganizationPolicy {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

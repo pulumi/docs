@@ -19,7 +19,7 @@ Provides a Packet Block Storage Volume datasource to allow you to read existing 
 
 ## Using GetVolume {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

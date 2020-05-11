@@ -14,26 +14,10 @@ meta_desc: "Explore the GetPrivateEndpoint function of the mongodbatlas package,
 
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
@@ -48,14 +32,15 @@ const testPrivateEndpoint = pulumi.all([testMongodbatlasPrivateEndpoint.privateL
     projectId: projectId,
 }, { async: true }));
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetPrivateEndpoint {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

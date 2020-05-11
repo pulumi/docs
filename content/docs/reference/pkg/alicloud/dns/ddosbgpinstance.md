@@ -16,33 +16,17 @@ Anti-DDoS Advanced instance resource. "Ddosbgp" is the short term of this produc
 
 > **NOTE:** Available in 1.57.0+ .
 
-
-
-Deprecated: alicloud.dns.DdosBgpInstance has been deprecated in favour of alicloud.ddos.DdosBgpInstance
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+Basic Usage
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instance = new alicloud.ddos.DdosBgpInstance("instance", {
+const instance = new alicloud.dns.DdosBgpInstance("instance", {
     bandwidth: 201,
     baseBandwidth: 20,
     ipCount: 100,
@@ -50,13 +34,15 @@ const instance = new alicloud.ddos.DdosBgpInstance("instance", {
 });
 ```
 {{% /example %}}
-
 {{% /examples %}}
+
+Deprecated: alicloud.dns.DdosBgpInstance has been deprecated in favour of alicloud.ddos.DdosBgpInstance
+
 <p class="resource-deprecated">Deprecated: {{% md %}}alicloud.dns.DdosBgpInstance has been deprecated in favour of alicloud.ddos.DdosBgpInstance{{% /md %}}</p>
 
 
 ## Create a DdosBgpInstance Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -592,7 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DdosBgpInstance Resource {#look-up}
 
 Get an existing DdosBgpInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dns/#DdosBgpInstanceState">DdosBgpInstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dns/#DdosBgpInstance">DdosBgpInstance</a></span></code></pre></div>

@@ -15,7 +15,7 @@ meta_desc: "Explore the GetDBAuditInstance function of the yundun module, includ
 
 ## Using GetDBAuditInstance {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

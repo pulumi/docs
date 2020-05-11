@@ -15,7 +15,7 @@ meta_desc: "Explore the GetDefaultPolicies function of the deprecated module, in
 
 ## Using GetDefaultPolicies {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

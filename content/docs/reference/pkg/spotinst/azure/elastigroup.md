@@ -12,7 +12,136 @@ meta_desc: "Explore the Elastigroup resource of the azure module, including exam
 
 Provides a Spotinst elastigroup Azure resource.
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const testAzureGroup = new spotinst.azure.Elastigroup("test_azure_group", {
+    desiredCapacity: 1,
+    // --- HEALTH-CHECKS -------------------------------------------------
+    healthCheck: {
+        autoHealing: true,
+        gracePeriod: 120,
+        healthCheckType: "INSTANCE_STATE",
+    },
+    // --- IMAGE ---------------------------------------------------------
+    images: [{
+        marketplaces: [{
+            offer: "UbuntuServer",
+            publisher: "Canonical",
+            sku: "16.04-LTS",
+        }],
+    }],
+    // --- LOAD BALANCERS ------------------------------------------------
+    loadBalancers: [{
+        autoWeight: true,
+        balancerId: "lb-1ee2e3q",
+        targetSetId: "ts-3eq",
+        type: "MULTAI_TARGET_SET",
+    }],
+    // --- LOGIN ---------------------------------------------------------
+    login: {
+        sshPublicKey: "33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==",
+        userName: "admin",
+    },
+    lowPrioritySizes: [
+        "standard_a1_v1",
+        "standard_a1_v2",
+    ],
+    managedServiceIdentities: [{
+        name: "example-identity",
+        resourceGroupName: "spotinst-azure",
+    }],
+    maxSize: 1,
+    // --- CAPACITY ------------------------------------------------------
+    minSize: 0,
+    // --- NETWORK -------------------------------------------------------
+    network: {
+        assignPublicIp: true,
+        resourceGroupName: "subnetResourceGroup",
+        subnetName: "my-subnet-name",
+        virtualNetworkName: "vname",
+    },
+    // --- INSTANCE TYPES ------------------------------------------------
+    odSizes: [
+        "standard_a1_v1",
+        "standard_a1_v2",
+    ],
+    product: "Linux",
+    region: "eastus",
+    resourceGroupName: "spotinst-azure",
+    scalingDownPolicies: [{
+        actionType: "adjustment",
+        adjustment: "MIN(5,10)",
+        cooldown: 60,
+        dimensions: [{
+            name: "name-1",
+            value: "value-1",
+        }],
+        evaluationPeriods: 10,
+        metricName: "CPUUtilization",
+        namespace: "Microsoft.Compute",
+        operator: "gt",
+        period: 60,
+        policyName: "policy-name",
+        statistic: "average",
+        threshold: 10,
+        unit: "percent",
+    }],
+    // --- SCALING POLICIES ----------------------------------------------
+    scalingUpPolicies: [{
+        actionType: "setMinTarget",
+        cooldown: 60,
+        dimensions: [
+            {
+                name: "resourceName",
+                value: "resource-name",
+            },
+            {
+                name: "resourceGroupName",
+                value: "resource-group-name",
+            },
+        ],
+        evaluationPeriods: 10,
+        metricName: "CPUUtilization",
+        minTargetCapacity: "1",
+        namespace: "Microsoft.Compute",
+        operator: "gt",
+        period: 60,
+        policyName: "policy-name",
+        statistic: "average",
+        threshold: 10,
+        unit: "percent",
+    }],
+    // --- SCHEDULED TASK ------------------------------------------------
+    scheduledTasks: [{
+        adjustment: "2",
+        adjustmentPercentage: "50",
+        batchSizePercentage: "33",
+        cronExpression: "* * * * *",
+        gracePeriod: "300",
+        isEnabled: true,
+        scaleMaxCapacity: "8",
+        scaleMinCapacity: "5",
+        scaleTargetCapacity: "6",
+        taskType: "scale",
+    }],
+    shutdownScript: "",
+    // --- STRATEGY ------------------------------------------------------
+    strategy: {
+        drainingTimeout: 300,
+        odCount: 1,
+    },
+    userData: "",
+});
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Load Balancers
 
 * `load_balancers` - (Required) Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
@@ -141,154 +270,10 @@ Usage:
 import * as pulumi from "@pulumi/pulumi";
 ```
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as spotinst from "@pulumi/spotinst";
-
-const testAzureGroup = new spotinst.azure.Elastigroup("test_azure_group", {
-    desiredCapacity: 1,
-    // --- HEALTH-CHECKS -------------------------------------------------
-    healthCheck: {
-        autoHealing: true,
-        gracePeriod: 120,
-        healthCheckType: "INSTANCE_STATE",
-    },
-    // --- IMAGE ---------------------------------------------------------
-    images: [{
-        marketplaces: [{
-            offer: "UbuntuServer",
-            publisher: "Canonical",
-            sku: "16.04-LTS",
-        }],
-    }],
-    // --- LOAD BALANCERS ------------------------------------------------
-    loadBalancers: [{
-        autoWeight: true,
-        balancerId: "lb-1ee2e3q",
-        targetSetId: "ts-3eq",
-        type: "MULTAI_TARGET_SET",
-    }],
-    // --- LOGIN ---------------------------------------------------------
-    login: {
-        sshPublicKey: "33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==",
-        userName: "admin",
-    },
-    lowPrioritySizes: [
-        "standard_a1_v1",
-        "standard_a1_v2",
-    ],
-    managedServiceIdentities: [{
-        name: "example-identity",
-        resourceGroupName: "spotinst-azure",
-    }],
-    maxSize: 1,
-    // --- CAPACITY ------------------------------------------------------
-    minSize: 0,
-    // --- NETWORK -------------------------------------------------------
-    network: {
-        assignPublicIp: true,
-        resourceGroupName: "subnetResourceGroup",
-        subnetName: "my-subnet-name",
-        virtualNetworkName: "vname",
-    },
-    // --- INSTANCE TYPES ------------------------------------------------
-    odSizes: [
-        "standard_a1_v1",
-        "standard_a1_v2",
-    ],
-    product: "Linux",
-    region: "eastus",
-    resourceGroupName: "spotinst-azure",
-    scalingDownPolicies: [{
-        actionType: "adjustment",
-        adjustment: "MIN(5,10)",
-        cooldown: 60,
-        dimensions: [{
-            name: "name-1",
-            value: "value-1",
-        }],
-        evaluationPeriods: 10,
-        metricName: "CPUUtilization",
-        namespace: "Microsoft.Compute",
-        operator: "gt",
-        period: 60,
-        policyName: "policy-name",
-        statistic: "average",
-        threshold: 10,
-        unit: "percent",
-    }],
-    // --- SCALING POLICIES ----------------------------------------------
-    scalingUpPolicies: [{
-        actionType: "setMinTarget",
-        cooldown: 60,
-        dimensions: [
-            {
-                name: "resourceName",
-                value: "resource-name",
-            },
-            {
-                name: "resourceGroupName",
-                value: "resource-group-name",
-            },
-        ],
-        evaluationPeriods: 10,
-        metricName: "CPUUtilization",
-        minTargetCapacity: "1",
-        namespace: "Microsoft.Compute",
-        operator: "gt",
-        period: 60,
-        policyName: "policy-name",
-        statistic: "average",
-        threshold: 10,
-        unit: "percent",
-    }],
-    // --- SCHEDULED TASK ------------------------------------------------
-    scheduledTasks: [{
-        adjustment: "2",
-        adjustmentPercentage: "50",
-        batchSizePercentage: "33",
-        cronExpression: "* * * * *",
-        gracePeriod: "300",
-        isEnabled: true,
-        scaleMaxCapacity: "8",
-        scaleMinCapacity: "5",
-        scaleTargetCapacity: "6",
-        taskType: "scale",
-    }],
-    shutdownScript: "",
-    // --- STRATEGY ------------------------------------------------------
-    strategy: {
-        drainingTimeout: 300,
-        odCount: 1,
-    },
-    userData: "",
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Elastigroup Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1420,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Elastigroup Resource {#look-up}
 
 Get an existing Elastigroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/azure/#ElastigroupState">ElastigroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/azure/#Elastigroup">Elastigroup</a></span></code></pre></div>

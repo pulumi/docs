@@ -14,26 +14,10 @@ This data source provides a list of Anti-DDoS Advanced instances in an Alibaba C
 
 > **NOTE:** Available in 1.57.0+ .
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -44,14 +28,15 @@ const instanceDdosBgpInstances = pulumi.output(alicloud.ddos.getDdosBgpInstances
 
 export const instance = alicloud_ddosbgp_instances_instance.map(v => v.id);
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetDdosBgpInstances {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

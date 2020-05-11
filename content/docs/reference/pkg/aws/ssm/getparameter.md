@@ -12,26 +12,10 @@ meta_desc: "Explore the GetParameter function of the ssm module, including examp
 
 Provides an SSM Parameter data source.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -40,14 +24,19 @@ const foo = pulumi.output(aws.ssm.getParameter({
     name: "foo",
 }, { async: true }));
 ```
-{{% /example %}}
 
+
+> **Note:** The data source is currently following the behavior of the [SSM API](https://docs.aws.amazon.com/sdk-for-go/api/service/ssm/#Parameter) to return a string value, regardless of parameter type.
+
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetParameter {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

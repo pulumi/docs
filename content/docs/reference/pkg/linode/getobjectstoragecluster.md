@@ -12,7 +12,23 @@ meta_desc: "Explore the GetObjectStorageCluster function of the Linode package, 
 
 Provides information about a Linode Object Storage Cluster
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+The following example shows how one might use this data source to access information about a Linode Object Storage Cluster.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const primary = pulumi.output(linode.getObjectStorageCluster({
+    id: "us-east-1",
+}, { async: true }));
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Attributes
 
 The Linode Object Storage Cluster resource exports the following attributes:
@@ -25,40 +41,11 @@ The Linode Object Storage Cluster resource exports the following attributes:
 
 * `static_site_domain` - The base URL for this cluster used when hosting static sites.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const primary = pulumi.output(linode.getObjectStorageCluster({
-    id: "us-east-1",
-}, { async: true }));
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetObjectStorageCluster {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -19,7 +19,7 @@ Use this data source to access information about an existing Subnet within a Vir
 
 ## Using GetSubnet {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

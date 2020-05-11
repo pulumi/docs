@@ -15,7 +15,7 @@ meta_desc: "Explore the GetLoadBalancer function of the Digital Ocean package, i
 
 ## Using GetLoadBalancer {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

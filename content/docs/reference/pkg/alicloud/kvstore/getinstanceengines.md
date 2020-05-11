@@ -14,26 +14,10 @@ This data source provides the KVStore instance engines resource available info o
 
 > **NOTE:** Available in v1.51.0+
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -51,14 +35,15 @@ const resourcesInstanceEngines = resourcesZones.apply(resourcesZones => alicloud
 
 export const firstKvstoreInstanceClass = resourcesInstanceEngines.instanceEngines[0].engine;
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetInstanceEngines {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -15,7 +15,7 @@ meta_desc: "Explore the GetTagCategory function of the vSphere package, includin
 
 ## Using GetTagCategory {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

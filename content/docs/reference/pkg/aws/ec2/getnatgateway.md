@@ -12,26 +12,10 @@ meta_desc: "Explore the GetNatGateway function of the ec2 module, including exam
 
 Provides details about a specific Nat Gateway.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -43,14 +27,29 @@ const defaultNatGateway = aws_subnet_public.id.apply(id => aws.ec2.getNatGateway
     subnetId: id,
 }, { async: true }));
 ```
-{{% /example %}}
 
+Usage with tags:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const defaultNatGateway = aws_subnet_public.id.apply(id => aws.ec2.getNatGateway({
+    subnetId: id,
+    tags: {
+        Name: "gw NAT",
+    },
+}, { async: true }));
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetNatGateway {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -14,7 +14,7 @@ The provider type for the kubernetes package.
 
 
 ## Create a Provider Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -22,7 +22,7 @@ The provider type for the kubernetes package.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster=None<span class="p">, </span>context=None<span class="p">, </span>enable_dry_run=None<span class="p">, </span>kubeconfig=None<span class="p">, </span>namespace=None<span class="p">, </span>render_yaml_to_directory=None<span class="p">, </span>suppress_deprecation_warnings=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Provider</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster=None<span class="p">, </span>context=None<span class="p">, </span>enable_dry_run=None<span class="p">, </span>kubeconfig=None<span class="p">, </span>namespace=None<span class="p">, </span>suppress_deprecation_warnings=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -246,21 +246,6 @@ A namespace can be specified in multiple places, and the precedence is as follow
 
     <dt class="property-optional"
             title="Optional">
-        <span>Render<wbr>Yaml<wbr>To<wbr>Directory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}BETA FEATURE - If present, render resource manifests to this directory. In this mode, resources will not
-be created on a Kubernetes cluster, but the rendered manifests will be kept in sync with changes
-to the Pulumi program. This feature is in developer preview, and is disabled by default.
-
-Note that some computed Outputs such as status fields will not be populated
-since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
-and may result in an error if they are referenced by other resources. Also note that any secret values
-used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Suppress<wbr>Deprecation<wbr>Warnings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
@@ -327,21 +312,6 @@ A namespace can be specified in multiple places, and the precedence is as follow
 1. `.metadata.namespace` set on the resource.
 2. This `namespace` parameter.
 3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Render<wbr>Yaml<wbr>To<wbr>Directory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}BETA FEATURE - If present, render resource manifests to this directory. In this mode, resources will not
-be created on a Kubernetes cluster, but the rendered manifests will be kept in sync with changes
-to the Pulumi program. This feature is in developer preview, and is disabled by default.
-
-Note that some computed Outputs such as status fields will not be populated
-since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
-and may result in an error if they are referenced by other resources. Also note that any secret values
-used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -414,21 +384,6 @@ A namespace can be specified in multiple places, and the precedence is as follow
 
     <dt class="property-optional"
             title="Optional">
-        <span>render<wbr>Yaml<wbr>To<wbr>Directory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}BETA FEATURE - If present, render resource manifests to this directory. In this mode, resources will not
-be created on a Kubernetes cluster, but the rendered manifests will be kept in sync with changes
-to the Pulumi program. This feature is in developer preview, and is disabled by default.
-
-Note that some computed Outputs such as status fields will not be populated
-since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
-and may result in an error if they are referenced by other resources. Also note that any secret values
-used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>suppress<wbr>Deprecation<wbr>Warnings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
@@ -495,21 +450,6 @@ A namespace can be specified in multiple places, and the precedence is as follow
 1. `.metadata.namespace` set on the resource.
 2. This `namespace` parameter.
 3. `namespace` set for the active context in the kubeconfig.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>render_<wbr>yaml_<wbr>to_<wbr>directory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}BETA FEATURE - If present, render resource manifests to this directory. In this mode, resources will not
-be created on a Kubernetes cluster, but the rendered manifests will be kept in sync with changes
-to the Pulumi program. This feature is in developer preview, and is disabled by default.
-
-Note that some computed Outputs such as status fields will not be populated
-since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
-and may result in an error if they are referenced by other resources. Also note that any secret values
-used in these resources will be rendered in plaintext to the resulting YAML.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

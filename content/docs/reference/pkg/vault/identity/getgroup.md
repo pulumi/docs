@@ -15,7 +15,7 @@ meta_desc: "Explore the GetGroup function of the identity module, including exam
 
 ## Using GetGroup {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

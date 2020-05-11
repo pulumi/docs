@@ -15,7 +15,7 @@ meta_desc: "Explore the GetSpacesBucket function of the Digital Ocean package, i
 
 ## Using GetSpacesBucket {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

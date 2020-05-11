@@ -12,26 +12,10 @@ meta_desc: "Explore the GetServerGroups function of the slb module, including ex
 
 This data source provides the VServer groups related to a server load balancer.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -42,14 +26,15 @@ const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getServerGr
 
 export const firstSlbServerGroupId = sampleDs.slbServerGroups[0].id;
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetServerGroups {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

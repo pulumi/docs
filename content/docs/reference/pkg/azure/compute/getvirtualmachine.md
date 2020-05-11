@@ -19,7 +19,7 @@ Use this data source to access information about an existing Virtual Machine.
 
 ## Using GetVirtualMachine {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -17,7 +17,7 @@ meta_desc: "Explore the GetService function of the Aiven package, including exam
 
 ## Using GetService {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

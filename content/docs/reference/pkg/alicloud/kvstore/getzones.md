@@ -21,7 +21,7 @@ This data source provides availability zones for KVStore that can be accessed by
 
 ## Using GetZones {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -18,34 +18,14 @@ Note: You can use the [`digitalocean..Project`](https://www.terraform.io/docs/pr
 obtain metadata about a single project if you already know the `id` to retrieve or the unique
 `name` of the project.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+Use the `filter` block with a `key` string and `values` list to filter projects.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
+For example to find all staging environment projects:
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-staging = digitalocean.get_projects(filters=[{
-    "key": "environment",
-    "values": ["Staging"],
-}])
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -57,14 +37,67 @@ const staging = pulumi.output(digitalocean.getProjects({
     }],
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
 
+staging = digitalocean.get_projects(filters=[{
+    "key": "environment",
+    "values": ["Staging"],
+}])
+```
+
+You can filter on multiple fields and sort the results as well:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const non_default_production = pulumi.output(digitalocean.getProjects({
+    filters: [
+        {
+            key: "environment",
+            values: ["Production"],
+        },
+        {
+            key: "is_default",
+            values: ["false"],
+        },
+    ],
+    sorts: [{
+        direction: "asc",
+        key: "name",
+    }],
+}, { async: true }));
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+non_default_production = digitalocean.get_projects(filters=[
+        {
+            "key": "environment",
+            "values": ["Production"],
+        },
+        {
+            "key": "is_default",
+            "values": ["false"],
+        },
+    ],
+    sorts=[{
+        "direction": "asc",
+        "key": "name",
+    }])
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetProjects {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -12,7 +12,23 @@ meta_desc: "Explore the GetInstanceType function of the Linode package, includin
 
 Provides information about a Linode instance type
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+The following example shows how one might use this data source to access information about a Linode Instance type.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const defaultInstanceType = pulumi.output(linode.getInstanceType({
+    id: "g6-standard-2",
+}, { async: true }));
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Attributes
 
 The Linode Instance Type resource exports the following attributes:
@@ -33,40 +49,11 @@ The Linode Instance Type resource exports the following attributes:
 
 * `addons.0.backups.0.price.0.monthly` - The cost (in US dollars) per month to add Backups service.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const defaultInstanceType = pulumi.output(linode.getInstanceType({
-    id: "g6-standard-2",
-}, { async: true }));
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetInstanceType {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

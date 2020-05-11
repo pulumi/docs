@@ -14,37 +14,10 @@ Provides a License Manager license configuration resource.
 
 > **Note:** Removing the `license_count` attribute is not supported by the License Manager API - recreate the resource instead.
 
-
-## Rules
-
-License rules should be in the format of `#RuleType=RuleValue`. Supported rule types:
-
-* `minimumVcpus` - Resource must have minimum vCPU count in order to use the license. Default: 1
-* `maximumVcpus` - Resource must have maximum vCPU count in order to use the license. Default: unbounded, limit: 10000
-* `minimumCores` - Resource must have minimum core count in order to use the license. Default: 1
-* `maximumCores` - Resource must have maximum core count in order to use the license. Default: unbounded, limit: 10000
-* `minimumSockets` - Resource must have minimum socket count in order to use the license. Default: 1
-* `maximumSockets` - Resource must have maximum socket count in order to use the license. Default: unbounded, limit: 10000
-* `allowedTenancy` - Defines where the license can be used. If set, restricts license usage to selected tenancies. Specify a comma delimited list of `EC2-Default`, `EC2-DedicatedHost`, `EC2-DedicatedInstance`
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -60,13 +33,25 @@ const example = new aws.licensemanager.LicenseConfiguration("example", {
     },
 });
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+## Rules
+
+License rules should be in the format of `#RuleType=RuleValue`. Supported rule types:
+
+* `minimumVcpus` - Resource must have minimum vCPU count in order to use the license. Default: 1
+* `maximumVcpus` - Resource must have maximum vCPU count in order to use the license. Default: unbounded, limit: 10000
+* `minimumCores` - Resource must have minimum core count in order to use the license. Default: 1
+* `maximumCores` - Resource must have maximum core count in order to use the license. Default: unbounded, limit: 10000
+* `minimumSockets` - Resource must have minimum socket count in order to use the license. Default: 1
+* `maximumSockets` - Resource must have maximum socket count in order to use the license. Default: unbounded, limit: 10000
+* `allowedTenancy` - Defines where the license can be used. If set, restricts license usage to selected tenancies. Specify a comma delimited list of `EC2-Default`, `EC2-DedicatedHost`, `EC2-DedicatedInstance`
+
 
 
 ## Create a LicenseConfiguration Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -602,7 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LicenseConfiguration Resource {#look-up}
 
 Get an existing LicenseConfiguration resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/licensemanager/#LicenseConfigurationState">LicenseConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/licensemanager/#LicenseConfiguration">LicenseConfiguration</a></span></code></pre></div>

@@ -13,26 +13,10 @@ meta_desc: "Explore the GetService function of the databasemigration module, inc
 Use this data source to access information about an existing Database Migration Service.
 
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -44,14 +28,16 @@ const example = pulumi.output(azure.databasemigration.getService({
 
 export const azurermDmsId = example.id;
 ```
-{{% /example %}}
 
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetService {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

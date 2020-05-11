@@ -21,7 +21,7 @@ and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServ
 
 ## Using GetBackendService {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

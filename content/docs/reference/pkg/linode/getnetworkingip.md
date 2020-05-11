@@ -12,7 +12,23 @@ meta_desc: "Explore the GetNetworkingIp function of the Linode package, includin
 
 Provides information about a Linode Networking IP Address
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+The following example shows how one might use this data source to access information about a Linode Networking IP Address.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const ns1LinodeCom = pulumi.output(linode.getNetworkingIp({
+    address: "162.159.27.72",
+}, { async: true }));
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Attributes
 
 The Linode Network IP Address resource exports the following attributes:
@@ -35,40 +51,11 @@ The Linode Network IP Address resource exports the following attributes:
 
 * `region` - The Region this IP address resides in.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const ns1LinodeCom = pulumi.output(linode.getNetworkingIp({
-    address: "162.159.27.72",
-}, { async: true }));
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetNetworkingIp {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -13,7 +13,52 @@ meta_desc: "Explore the Permission resource of the lambda module, including exam
 Creates a Lambda permission to allow external sources invoking the Lambda function
 (e.g. CloudWatch Event Rule, SNS or S3).
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const iamForLambda = new aws.iam.Role("iam_for_lambda", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+`,
+});
+const testLambda = new aws.lambda.Function("test_lambda", {
+    code: new pulumi.asset.FileArchive("lambdatest.zip"),
+    handler: "exports.handler",
+    role: iamForLambda.arn,
+    runtime: "nodejs8.10",
+});
+const testAlias = new aws.lambda.Alias("test_alias", {
+    description: "a sample description",
+    functionName: testLambda.functionName,
+    functionVersion: "$LATEST",
+});
+const allowCloudwatch = new aws.lambda.Permission("allow_cloudwatch", {
+    action: "lambda:InvokeFunction",
+    function: testLambda.functionName,
+    principal: "events.amazonaws.com",
+    qualifier: testAlias.name,
+    sourceArn: "arn:aws:events:eu-west-1:111122223333:rule/RunDaily",
+});
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Usage with SNS
 
 ```typescript
@@ -73,70 +118,10 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
 });
 ```
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const iamForLambda = new aws.iam.Role("iam_for_lambda", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "lambda.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
-});
-const testLambda = new aws.lambda.Function("test_lambda", {
-    code: new pulumi.asset.FileArchive("lambdatest.zip"),
-    handler: "exports.handler",
-    role: iamForLambda.arn,
-    runtime: "nodejs8.10",
-});
-const testAlias = new aws.lambda.Alias("test_alias", {
-    description: "a sample description",
-    functionName: testLambda.functionName,
-    functionVersion: "$LATEST",
-});
-const allowCloudwatch = new aws.lambda.Permission("allow_cloudwatch", {
-    action: "lambda:InvokeFunction",
-    function: testLambda.functionName,
-    principal: "events.amazonaws.com",
-    qualifier: testAlias.name,
-    sourceArn: "arn:aws:events:eu-west-1:111122223333:rule/RunDaily",
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Permission Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -780,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Permission Resource {#look-up}
 
 Get an existing Permission resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#PermissionState">PermissionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission">Permission</a></span></code></pre></div>

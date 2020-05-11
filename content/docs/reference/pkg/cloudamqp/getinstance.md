@@ -15,7 +15,7 @@ meta_desc: "Explore the GetInstance function of the CloudAMQP package, including
 
 ## Using GetInstance {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

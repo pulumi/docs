@@ -16,7 +16,7 @@ Uses this data source to access information about an existing NetApp Pool.
 
 ## Using GetPool {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

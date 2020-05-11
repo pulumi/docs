@@ -14,35 +14,10 @@ Provides a DigitalOcean Droplet resource. This can be used to create,
 modify, and delete Droplets. Droplets also support
 [provisioning](https://www.terraform.io/docs/provisioners/index.html).
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-# Create a new Web Droplet in the nyc2 region
-web = digitalocean.Droplet("web",
-    image="ubuntu-18-04-x64",
-    region="nyc2",
-    size="s-1vcpu-1gb")
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -54,13 +29,24 @@ const web = new digitalocean.Droplet("web", {
     size: "s-1vcpu-1gb",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
 
+# Create a new Web Droplet in the nyc2 region
+web = digitalocean.Droplet("web",
+    image="ubuntu-18-04-x64",
+    region="nyc2",
+    size="s-1vcpu-1gb")
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Droplet Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1320,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Droplet Resource {#look-up}
 
 Get an existing Droplet resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DropletState">DropletState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Droplet">Droplet</a></span></code></pre></div>

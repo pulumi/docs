@@ -12,26 +12,10 @@ meta_desc: "Explore the GetScheduledQueryRulesAlert function of the monitoring m
 
 Use this data source to access the properties of an AlertingAction scheduled query rule.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -43,14 +27,15 @@ const example = pulumi.output(azure.monitoring.getScheduledQueryRulesAlert({
 
 export const queryRuleId = example.id;
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetScheduledQueryRulesAlert {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

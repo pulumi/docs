@@ -16,26 +16,15 @@ Provides a CloudTrail resource.
 
 > *NOTE:* For an organization trail, this resource must be in the master account of the organization.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Basic
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+Enable CloudTrail to capture all compatible management events in region.
+For capturing events from services like IAM, `include_global_service_events` must be enabled.
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -79,22 +68,15 @@ const foobar = new aws.cloudtrail.Trail("foobar", {
     s3KeyPrefix: "prefix",
 });
 ```
-{{% /example %}}
 
+{{% /example %}}
+{{% example %}}
 ### Data Event Logging
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
+CloudTrail can log [Data Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html) for certain services such as S3 bucket objects and Lambda function invocations. Additional information about data event configuration can be found in the [CloudTrail API DataResource documentation](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DataResource.html).
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
+#### Logging All Lambda Function Invocations
 
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -110,13 +92,55 @@ const example = new aws.cloudtrail.Trail("example", {
     }],
 });
 ```
-{{% /example %}}
 
+#### Logging All S3 Bucket Object Events
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.cloudtrail.Trail("example", {
+    eventSelectors: [{
+        dataResources: [{
+            type: "AWS::S3::Object",
+            values: ["arn:aws:s3:::"],
+        }],
+        includeManagementEvents: true,
+        readWriteType: "All",
+    }],
+});
+```
+
+#### Logging Individual S3 Bucket Events
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const important_bucket = pulumi.output(aws.s3.getBucket({
+    bucket: "important-bucket",
+}, { async: true }));
+const example = new aws.cloudtrail.Trail("example", {
+    eventSelectors: [{
+        dataResources: [{
+            type: "AWS::S3::Object",
+            // Make sure to append a trailing '/' to your ARN if you want
+            // to monitor all objects in a bucket.
+            values: [pulumi.interpolate`${important_bucket.arn}/`],
+        }],
+        includeManagementEvents: true,
+        readWriteType: "All",
+    }],
+});
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Trail Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1008,7 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Trail Resource {#look-up}
 
 Get an existing Trail resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudtrail/#TrailState">TrailState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudtrail/#Trail">Trail</a></span></code></pre></div>

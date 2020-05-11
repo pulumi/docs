@@ -12,31 +12,10 @@ meta_desc: "Explore the RouterRoute resource of the networking module, including
 
 Creates a routing entry on a OpenStack V2 router.
 
-
-## Notes
-
-The `next_hop` IP address must be directly reachable from the router at the ``openstack.networking.RouterRoute``
-resource creation time.  You can ensure that by explicitly specifying a dependency on the ``openstack.networking.RouterInterface``
-resource that connects the next hop to the router, as in the example above.
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
@@ -62,13 +41,19 @@ const routerRoute1 = new openstack.networking.RouterRoute("router_route_1", {
     routerId: router1.id,
 }, { dependsOn: [int1] });
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+## Notes
+
+The `next_hop` IP address must be directly reachable from the router at the ``openstack.networking.RouterRoute``
+resource creation time.  You can ensure that by explicitly specifying a dependency on the ``openstack.networking.RouterInterface``
+resource that connects the next hop to the router, as in the example above.
+
 
 
 ## Create a RouterRoute Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -520,7 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing RouterRoute Resource {#look-up}
 
 Get an existing RouterRoute resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#RouterRouteState">RouterRouteState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#RouterRoute">RouterRoute</a></span></code></pre></div>

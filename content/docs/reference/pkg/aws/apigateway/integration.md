@@ -12,7 +12,51 @@ meta_desc: "Explore the Integration resource of the apigateway module, including
 
 Provides an HTTP Method Integration for an API Gateway Integration.
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
+    description: "This is my API for demonstration purposes",
+});
+const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
+    parentId: myDemoAPI.rootResourceId,
+    pathPart: "mydemoresource",
+    restApi: myDemoAPI.id,
+});
+const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
+    authorization: "NONE",
+    httpMethod: "GET",
+    resourceId: myDemoResource.id,
+    restApi: myDemoAPI.id,
+});
+const myDemoIntegration = new aws.apigateway.Integration("MyDemoIntegration", {
+    cacheKeyParameters: ["method.request.path.param"],
+    cacheNamespace: "foobar",
+    httpMethod: myDemoMethod.httpMethod,
+    requestParameters: {
+        "integration.request.header.X-Authorization": "'static'",
+    },
+    // Transforms the incoming XML request to JSON
+    requestTemplates: {
+        "application/xml": `{
+   "body" : $input.json('$')
+}
+`,
+    },
+    resourceId: myDemoResource.id,
+    restApi: myDemoAPI.id,
+    timeoutMilliseconds: 29000,
+    type: "MOCK",
+});
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Lambda integration
 
 ```typescript
@@ -133,69 +177,10 @@ const testIntegration = new aws.apigateway.Integration("test", {
 });
 ```
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
-    description: "This is my API for demonstration purposes",
-});
-const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
-    parentId: myDemoAPI.rootResourceId,
-    pathPart: "mydemoresource",
-    restApi: myDemoAPI.id,
-});
-const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
-    authorization: "NONE",
-    httpMethod: "GET",
-    resourceId: myDemoResource.id,
-    restApi: myDemoAPI.id,
-});
-const myDemoIntegration = new aws.apigateway.Integration("MyDemoIntegration", {
-    cacheKeyParameters: ["method.request.path.param"],
-    cacheNamespace: "foobar",
-    httpMethod: myDemoMethod.httpMethod,
-    requestParameters: {
-        "integration.request.header.X-Authorization": "'static'",
-    },
-    // Transforms the incoming XML request to JSON
-    requestTemplates: {
-        "application/xml": `{
-   "body" : $input.json('$')
-}
-`,
-    },
-    resourceId: myDemoResource.id,
-    restApi: myDemoAPI.id,
-    timeoutMilliseconds: 29000,
-    type: "MOCK",
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Integration Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1087,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Integration Resource {#look-up}
 
 Get an existing Integration resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Integration">Integration</a></span></code></pre></div>

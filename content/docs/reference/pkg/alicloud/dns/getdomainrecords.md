@@ -15,7 +15,7 @@ meta_desc: "Explore the GetDomainRecords function of the dns module, including e
 
 ## Using GetDomainRecords {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

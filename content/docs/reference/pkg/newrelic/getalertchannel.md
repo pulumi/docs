@@ -15,7 +15,7 @@ meta_desc: "Explore the GetAlertChannel function of the New Relic package, inclu
 
 ## Using GetAlertChannel {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

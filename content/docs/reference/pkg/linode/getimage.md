@@ -12,7 +12,23 @@ meta_desc: "Explore the GetImage function of the Linode package, including examp
 
 Provides information about a Linode image
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+The following example shows how one might use this data source to access information about a Linode image.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const k8Master = pulumi.output(linode.getImage({
+    id: "linode/debian8",
+}, { async: true }));
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Attributes
 
 The Linode Image resource exports the following attributes:
@@ -35,40 +51,11 @@ The Linode Image resource exports the following attributes:
 
 * `vendor` - The upstream distribution vendor. `None` for private Images.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const k8Master = pulumi.output(linode.getImage({
-    id: "linode/debian8",
-}, { async: true }));
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetImage {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

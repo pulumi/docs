@@ -12,7 +12,21 @@ meta_desc: "Explore the GetAcls function of the slb module, including examples, 
 
 This data source provides the acls in the region.
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const sampleDs = pulumi.output(alicloud.slb.getAcls({ async: true }));
+
+export const firstSlbAclId = sampleDs.acls[0].id;
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Entry Block
 
 The entry mapping supports the following:
@@ -29,40 +43,11 @@ The Listener mapping supports the following:
 * `protocol`      - the listener protocol (such as tcp/udp/http/https, etc).
 * `acl_type`      - the type of acl (such as white/black).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const sampleDs = pulumi.output(alicloud.slb.getAcls({ async: true }));
-
-export const firstSlbAclId = sampleDs.acls[0].id;
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetAcls {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -13,33 +13,12 @@ meta_desc: "Explore the LogsCustomPipeline resource of the Datadog package, incl
 Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/?lang=python#logs-pipelines) resource, which is used to create and manage Datadog logs custom pipelines.
 
 
-
-## Important Notes
-
-Each `datadog..LogsCustomPipeline` resource defines a complete pipeline. The order of the pipelines is maintained in
-a different resource datadog_logs_pipeline_order.
-When creating a new pipeline, you need to **explicitly** add this pipeline to the `datadog..LogsPipelineOrder` 
-resource to track the pipeline. Similarly, when a pipeline needs to be destroyed, remove its references from the 
-`datadog..LogsPipelineOrder` resource.
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+Create a Datadog logs pipeline:
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as datadog from "@pulumi/datadog";
@@ -198,13 +177,21 @@ const samplePipeline = new datadog.LogsCustomPipeline("sample_pipeline", {
     ],
 });
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+## Important Notes
+
+Each `datadog..LogsCustomPipeline` resource defines a complete pipeline. The order of the pipelines is maintained in
+a different resource datadog_logs_pipeline_order.
+When creating a new pipeline, you need to **explicitly** add this pipeline to the `datadog..LogsPipelineOrder` 
+resource to track the pipeline. Similarly, when a pipeline needs to be destroyed, remove its references from the 
+`datadog..LogsPipelineOrder` resource.
+
 
 
 ## Create a LogsCustomPipeline Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -632,7 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LogsCustomPipeline Resource {#look-up}
 
 Get an existing LogsCustomPipeline resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/datadog/#LogsCustomPipelineState">LogsCustomPipelineState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/datadog/#LogsCustomPipeline">LogsCustomPipeline</a></span></code></pre></div>

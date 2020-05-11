@@ -14,26 +14,10 @@ meta_desc: "Explore the GetPrivateEndpointInterfaceLink function of the mongodba
 
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -62,14 +46,15 @@ const testPrivateEndpointLink = pulumi.all([testMongodbatlasPrivateEndpointLink.
     projectId: projectId,
 }, { async: true }));
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetPrivateEndpointInterfaceLink {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

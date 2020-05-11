@@ -21,7 +21,7 @@ meta_desc: "Explore the GetTeam function of the mongodbatlas package, including 
 
 ## Using GetTeam {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

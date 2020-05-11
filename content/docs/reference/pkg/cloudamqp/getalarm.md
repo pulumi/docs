@@ -15,7 +15,7 @@ meta_desc: "Explore the GetAlarm function of the CloudAMQP package, including ex
 
 ## Using GetAlarm {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

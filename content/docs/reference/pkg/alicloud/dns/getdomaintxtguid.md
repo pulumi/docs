@@ -14,26 +14,10 @@ Provides the generation of txt records to realize the retrieval and verification
 
 > **NOTE:** Available in v1.80.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -46,14 +30,15 @@ const thisDomainTxtGuid = pulumi.output(alicloud.dns.getDomainTxtGuid({
 export const rr = thisDomainTxtGuid.rr;
 export const value = thisDomainTxtGuid.value;
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetDomainTxtGuid {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

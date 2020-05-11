@@ -16,7 +16,7 @@ Use this data source to get information about a Google Cloud Organization.
 
 ## Using GetOrganization {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

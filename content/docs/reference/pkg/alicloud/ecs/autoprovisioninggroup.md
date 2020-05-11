@@ -15,34 +15,10 @@ Provides a ECS auto provisioning group resource which is a solution that uses pr
 > **NOTE:** Available in 1.79.0+
 
 
-
-## Block config
-
-The config mapping supports the following:
-* `instance_type` - (Optional) The instance type of the Nth extended configurations of the launch template.
-* `max_price` - (Required) The maximum price of the instance type specified in the Nth extended configurations of the launch template.
-* `vswitch_id` - (Required) The ID of the VSwitch in the Nth extended configurations of the launch template.
-* `weighted_capacity` - (Optional) The weight of the instance type specified in the Nth extended configurations of the launch template.
-* `priority` - (Optional) The priority of the instance type specified in the Nth extended configurations of the launch template. A value of 0 indicates the highest priority.
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -75,7 +51,7 @@ const template = new alicloud.ecs.LaunchTemplate("template", {
     instanceType: "ecs.n1.tiny",
     securityGroupId: defaultSecurityGroup.id,
 });
-const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("default", {
+const defaultAutoProvisioningGroup = new alicloud.AutoProvisioningGroup("default", {
     launchTemplateConfigs: [{
         instanceType: "ecs.n1.small",
         vswitchId: defaultSwitch.id,
@@ -86,13 +62,23 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     totalTargetCapacity: "4",
 });
 ```
-{{% /example %}}
 
+
+{{% /example %}}
 {{% /examples %}}
+## Block config
+
+The config mapping supports the following:
+* `instance_type` - (Optional) The instance type of the Nth extended configurations of the launch template.
+* `max_price` - (Required) The maximum price of the instance type specified in the Nth extended configurations of the launch template.
+* `vswitch_id` - (Required) The ID of the VSwitch in the Nth extended configurations of the launch template.
+* `weighted_capacity` - (Optional) The weight of the instance type specified in the Nth extended configurations of the launch template.
+* `priority` - (Optional) The priority of the instance type specified in the Nth extended configurations of the launch template. A value of 0 indicates the highest priority.
+
 
 
 ## Create a AutoProvisioningGroup Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1088,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing AutoProvisioningGroup Resource {#look-up}
 
 Get an existing AutoProvisioningGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#AutoProvisioningGroupState">AutoProvisioningGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#AutoProvisioningGroup">AutoProvisioningGroup</a></span></code></pre></div>

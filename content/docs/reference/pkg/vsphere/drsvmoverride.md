@@ -25,26 +25,25 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The example below creates a virtual machine in a cluster using the
+[`vsphere..VirtualMachine`][tf-vsphere-vm-resource] resource, creating the
+virtual machine in the cluster looked up by the
+[`vsphere..ComputeCluster`][tf-vsphere-cluster-data-source] data source, but also
+pinning the VM to a host defined by the
+[`vsphere..Host`][tf-vsphere-host-data-source] data source, which is assumed to
+be a host within the cluster. To ensure that the VM stays on this host and does
+not need to be migrated back at any point in time, an override is entered using
+the `vsphere..DrsVmOverride` resource that disables DRS for this virtual
+machine, ensuring that it does not move.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
+[tf-vsphere-vm-resource]: /docs/providers/vsphere/r/virtual_machine.html
+[tf-vsphere-cluster-data-source]: /docs/providers/vsphere/d/compute_cluster.html
+[tf-vsphere-host-data-source]: /docs/providers/vsphere/d/host.html
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
@@ -89,13 +88,14 @@ const drsVmOverride = new vsphere.DrsVmOverride("drs_vm_override", {
     virtualMachineId: vm.id,
 });
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a DrsVmOverride Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -547,7 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DrsVmOverride Resource {#look-up}
 
 Get an existing DrsVmOverride resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverrideState">DrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverride">DrsVmOverride</a></span></code></pre></div>

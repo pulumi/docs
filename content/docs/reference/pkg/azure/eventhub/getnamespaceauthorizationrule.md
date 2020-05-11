@@ -19,7 +19,7 @@ Use this data source to access information about an Authorization Rule for an Ev
 
 ## Using GetNamespaceAuthorizationRule {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

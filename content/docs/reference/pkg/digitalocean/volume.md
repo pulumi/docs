@@ -12,42 +12,10 @@ meta_desc: "Explore the Volume resource of the Digital Ocean package, including 
 
 Provides a DigitalOcean Block Storage volume which can be attached to a Droplet in order to provide expanded storage.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-foobar_volume = digitalocean.Volume("foobarVolume",
-    region="nyc1",
-    size=100,
-    initial_filesystem_type="ext4",
-    description="an example volume")
-foobar_droplet = digitalocean.Droplet("foobarDroplet",
-    size="s-1vcpu-1gb",
-    image="ubuntu-18-04-x64",
-    region="nyc1")
-foobar_volume_attachment = digitalocean.VolumeAttachment("foobarVolumeAttachment",
-    droplet_id=foobar_droplet.id,
-    volume_id=foobar_volume.id)
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -68,13 +36,57 @@ const foobarVolumeAttachment = new digitalocean.VolumeAttachment("foobarVolumeAt
     volumeId: foobarVolume.id,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
 
+foobar_volume = digitalocean.Volume("foobarVolume",
+    region="nyc1",
+    size=100,
+    initial_filesystem_type="ext4",
+    description="an example volume")
+foobar_droplet = digitalocean.Droplet("foobarDroplet",
+    size="s-1vcpu-1gb",
+    image="ubuntu-18-04-x64",
+    region="nyc1")
+foobar_volume_attachment = digitalocean.VolumeAttachment("foobarVolumeAttachment",
+    droplet_id=foobar_droplet.id,
+    volume_id=foobar_volume.id)
+```
+
+You can also create a volume from an existing snapshot.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const foobarVolumeSnapshot = digitalocean.getVolumeSnapshot({
+    name: "baz",
+});
+const foobarVolume = new digitalocean.Volume("foobarVolume", {
+    region: "lon1",
+    size: foobarVolumeSnapshot.then(foobarVolumeSnapshot => foobarVolumeSnapshot.minDiskSize),
+    snapshotId: foobarVolumeSnapshot.then(foobarVolumeSnapshot => foobarVolumeSnapshot.id),
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+foobar_volume_snapshot = digitalocean.get_volume_snapshot(name="baz")
+foobar_volume = digitalocean.Volume("foobarVolume",
+    region="lon1",
+    size=foobar_volume_snapshot.min_disk_size,
+    snapshot_id=foobar_volume_snapshot.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Volume Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -790,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Volume Resource {#look-up}
 
 Get an existing Volume resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#VolumeState">VolumeState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Volume">Volume</a></span></code></pre></div>

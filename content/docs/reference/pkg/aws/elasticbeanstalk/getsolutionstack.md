@@ -12,26 +12,10 @@ meta_desc: "Explore the GetSolutionStack function of the elasticbeanstalk module
 
 Use this data source to get the name of a elastic beanstalk solution stack.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -41,14 +25,15 @@ const multiDocker = pulumi.output(aws.elasticbeanstalk.getSolutionStack({
     nameRegex: "^64bit Amazon Linux (.*) Multi-container Docker (.*)$",
 }, { async: true }));
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetSolutionStack {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

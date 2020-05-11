@@ -19,7 +19,7 @@ Use this data source to access information about an existing Dedicated Host Grou
 
 ## Using GetDedicatedHostGroup {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

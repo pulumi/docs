@@ -14,26 +14,10 @@ This data source provides the PolarDB node classes resource available info of Al
 
 > **NOTE:** Available in v1.81.0+
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -41,23 +25,24 @@ import * as alicloud from "@pulumi/alicloud";
 const resourcesZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "PolarDB",
 }, { async: true }));
-const resourcesNodeClasses = resourcesZones.apply(resourcesZones => alicloud.polardb.getNodeClasses({
+const resourcesPolardbNodeClasses = resourcesZones.apply(resourcesZones => alicloud.PolardbNodeClasses({
     dbType: "MySQL",
     dbVersion: "5.6",
     payType: "Postpaid",
     zoneId: resourcesZones.zones[0].id,
 }, { async: true }));
 
-export const firstPolardbNodeClass = resourcesNodeClasses.classes;
+export const firstPolardbNodeClass = resourcesPolardbNodeClasses.classes;
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetNodeClasses {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

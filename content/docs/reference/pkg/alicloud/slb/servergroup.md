@@ -23,34 +23,10 @@ and to meet the personalized requirements of domain name and URL forwarding.
 
 > **NOTE:** One VPC load balancer, its virtual server group can only add the same VPC ECS instances.
 
-
-## Block servers
-
-The servers mapping supports the following:
-
-* `server_ids` - (Required) A list backend server ID (ECS instance ID).
-* `port` - (Required) The port used by the backend server. Valid value range: [1-65535].
-* `weight` - (Optional) Weight of the backend server. Valid value range: [0-100]. Default to 100.
-* `type` - (Optional, Available in 1.51.0+) Type of the backend server. Valid value ecs, eni. Default to eni.
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -120,13 +96,22 @@ const defaultServerGroup = new alicloud.slb.ServerGroup("default", {
     ],
 });
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+## Block servers
+
+The servers mapping supports the following:
+
+* `server_ids` - (Required) A list backend server ID (ECS instance ID).
+* `port` - (Required) The port used by the backend server. Valid value range: [1-65535].
+* `weight` - (Optional) Weight of the backend server. Valid value range: [0-100]. Default to 100.
+* `type` - (Optional, Available in 1.51.0+) Type of the backend server. Valid value ecs, eni. Default to eni.
+
 
 
 ## Create a ServerGroup Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -554,7 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing ServerGroup Resource {#look-up}
 
 Get an existing ServerGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#ServerGroupState">ServerGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#ServerGroup">ServerGroup</a></span></code></pre></div>

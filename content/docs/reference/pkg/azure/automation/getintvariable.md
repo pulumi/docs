@@ -20,7 +20,7 @@ Use this data source to access information about an existing Automation Int Vari
 
 ## Using GetIntVariable {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

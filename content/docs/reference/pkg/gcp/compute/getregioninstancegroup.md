@@ -28,7 +28,7 @@ The most common use of this datasource will be to fetch information about the in
 
 ## Using GetRegionInstanceGroup {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

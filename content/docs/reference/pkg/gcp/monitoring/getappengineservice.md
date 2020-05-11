@@ -29,7 +29,7 @@ To get more information about Service, see:
 
 ## Using GetAppEngineService {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

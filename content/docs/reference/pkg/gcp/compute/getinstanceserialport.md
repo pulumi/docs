@@ -20,7 +20,7 @@ the official [API](https://cloud.google.com/compute/docs/instances/viewing-seria
 
 ## Using GetInstanceSerialPort {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

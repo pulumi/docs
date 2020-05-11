@@ -16,7 +16,7 @@ Use this data source to access information about an existing User Assigned Ident
 
 ## Using GetUserAssignedIdentity {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

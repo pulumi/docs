@@ -15,7 +15,7 @@ meta_desc: "Explore the GetCatalogService function of the Consul package, includ
 
 ## Using GetCatalogService {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

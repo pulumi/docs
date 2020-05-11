@@ -19,7 +19,7 @@ Use this data source to access information about a Function App.
 
 ## Using GetFunctionApp {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

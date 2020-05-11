@@ -25,7 +25,7 @@ Google Cloud KMS KeyRing.
 
 ## Using GetKMSCryptoKey {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

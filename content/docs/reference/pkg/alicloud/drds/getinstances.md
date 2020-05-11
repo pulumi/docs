@@ -22,7 +22,7 @@ Filters support regular expression for the instance name, searches by tags, and 
 
 ## Using GetInstances {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

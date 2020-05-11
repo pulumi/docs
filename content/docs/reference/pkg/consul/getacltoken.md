@@ -16,26 +16,10 @@ The `consul..AclToken` data source returns the information related to the
 If you want to get the secret ID associated with a token, use the
 [`consul..getAclTokenSecretId` data source](https://www.terraform.io/docs/providers/consul/d/acl_token_secret_id.html).
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
@@ -46,14 +30,16 @@ const test = pulumi.output(consul.getAclToken({
 
 export const consulAclPolicies = test.policies!;
 ```
-{{% /example %}}
 
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetAclToken {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

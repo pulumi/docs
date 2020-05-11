@@ -25,7 +25,7 @@ meta_desc: "Explore the GetClusters function of the mongodbatlas package, includ
 
 ## Using GetClusters {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

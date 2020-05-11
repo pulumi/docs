@@ -19,7 +19,7 @@ Returns a unique endpoint specific to the AWS account making the call.
 
 ## Using GetEndpoint {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

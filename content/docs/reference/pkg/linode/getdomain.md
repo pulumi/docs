@@ -12,7 +12,26 @@ meta_desc: "Explore the GetDomain function of the Linode package, including exam
 
 Provides information about a Linode domain.
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+The following example shows how one might use this data source to access information about a Linode domain.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const foo = pulumi.output(linode.getDomain({
+    id: "1234567",
+}, { async: true }));
+const bar = pulumi.output(linode.getDomain({
+    domain: "bar.example.com",
+}, { async: true }));
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Attributes
 
 The Linode Domain resource exports the following attributes:
@@ -45,43 +64,11 @@ The Linode Domain resource exports the following attributes:
 
 * `tags` - An array of tags applied to this object.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const foo = pulumi.output(linode.getDomain({
-    id: "1234567",
-}, { async: true }));
-const bar = pulumi.output(linode.getDomain({
-    domain: "bar.example.com",
-}, { async: true }));
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetDomain {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

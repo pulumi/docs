@@ -15,7 +15,7 @@ meta_desc: "Explore the GetDroplet function of the Digital Ocean package, includ
 
 ## Using GetDroplet {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

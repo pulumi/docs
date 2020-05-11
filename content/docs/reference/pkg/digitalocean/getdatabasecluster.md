@@ -12,32 +12,10 @@ meta_desc: "Explore the GetDatabaseCluster function of the Digital Ocean package
 
 Provides information on a DigitalOcean database cluster resource.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-example = digitalocean.get_database_cluster(name="example-cluster")
-pulumi.export("databaseOutput", example.uri)
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -47,14 +25,22 @@ const example = digitalocean.getDatabaseCluster({
 });
 export const databaseOutput = example.then(example => example.uri);
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
 
+example = digitalocean.get_database_cluster(name="example-cluster")
+pulumi.export("databaseOutput", example.uri)
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetDatabaseCluster {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

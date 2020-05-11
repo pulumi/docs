@@ -14,26 +14,10 @@ This data source compute file crc64 checksum.
 
 > **NOTE:** Available in 1.59.0+.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -45,13 +29,13 @@ const defaultFileCrc64Checksum = pulumi.output(alicloud.getFileCrc64Checksum({
 export const fileCrc64Checksum = alicloud_file_crc64_checksum_defualt.checksum;
 ```
 {{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetFileCrc64Checksum {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

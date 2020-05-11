@@ -16,26 +16,12 @@ Provides an SSM Patch Baseline resource
 both marked as optional fields, but the Patch Baseline requires that at least one
 of them is specified.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+Basic usage using `approved_patches` only
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -44,13 +30,130 @@ const production = new aws.ssm.PatchBaseline("production", {
     approvedPatches: ["KB123456"],
 });
 ```
-{{% /example %}}
 
+Advanced usage, specifying patch filters
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const production = new aws.ssm.PatchBaseline("production", {
+    approvalRules: [
+        {
+            approveAfterDays: 7,
+            complianceLevel: "HIGH",
+            patchFilters: [
+                {
+                    key: "PRODUCT",
+                    values: ["WindowsServer2016"],
+                },
+                {
+                    key: "CLASSIFICATION",
+                    values: [
+                        "CriticalUpdates",
+                        "SecurityUpdates",
+                        "Updates",
+                    ],
+                },
+                {
+                    key: "MSRC_SEVERITY",
+                    values: [
+                        "Critical",
+                        "Important",
+                        "Moderate",
+                    ],
+                },
+            ],
+        },
+        {
+            approveAfterDays: 7,
+            patchFilters: [{
+                key: "PRODUCT",
+                values: ["WindowsServer2012"],
+            }],
+        },
+    ],
+    approvedPatches: [
+        "KB123456",
+        "KB456789",
+    ],
+    description: "Patch Baseline Description",
+    globalFilters: [
+        {
+            key: "PRODUCT",
+            values: ["WindowsServer2008"],
+        },
+        {
+            key: "CLASSIFICATION",
+            values: ["ServicePacks"],
+        },
+        {
+            key: "MSRC_SEVERITY",
+            values: ["Low"],
+        },
+    ],
+    rejectedPatches: ["KB987654"],
+});
+```
+
+Advanced usage, specifying Microsoft application and Windows patch rules
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const windowsOsApps = new aws.ssm.PatchBaseline("windows_os_apps", {
+    approvalRules: [
+        {
+            approveAfterDays: 7,
+            patchFilters: [
+                {
+                    key: "CLASSIFICATION",
+                    values: [
+                        "CriticalUpdates",
+                        "SecurityUpdates",
+                    ],
+                },
+                {
+                    key: "MSRC_SEVERITY",
+                    values: [
+                        "Critical",
+                        "Important",
+                    ],
+                },
+            ],
+        },
+        {
+            approveAfterDays: 7,
+            patchFilters: [
+                {
+                    key: "PATCH_SET",
+                    values: ["APPLICATION"],
+                },
+                // Filter on Microsoft product if necessary 
+                {
+                    key: "PRODUCT",
+                    values: [
+                        "Office 2013",
+                        "Office 2016",
+                    ],
+                },
+            ],
+        },
+    ],
+    description: "Patch both Windows and Microsoft apps",
+    operatingSystem: "WINDOWS",
+});
+```
+
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a PatchBaseline Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -658,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing PatchBaseline Resource {#look-up}
 
 Get an existing PatchBaseline resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#PatchBaselineState">PatchBaselineState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#PatchBaseline">PatchBaseline</a></span></code></pre></div>

@@ -12,38 +12,12 @@ meta_desc: "Explore the KubernetesCluster resource of the Digital Ocean package,
 
 Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the [official documentation](https://www.digitalocean.com/docs/kubernetes/).
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Basic Example
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-foo = digitalocean.KubernetesCluster("foo",
-    node_pool={
-        "name": "worker-pool",
-        "nodeCount": 3,
-        "size": "s-2vcpu-2gb",
-    },
-    region="nyc1",
-    version="1.15.5-do.1")
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -59,36 +33,27 @@ const foo = new digitalocean.KubernetesCluster("foo", {
     version: "1.15.5-do.1",
 });
 ```
-{{% /example %}}
-
-### Autoscaling Example
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
 ```python
 import pulumi
 import pulumi_digitalocean as digitalocean
 
 foo = digitalocean.KubernetesCluster("foo",
     node_pool={
-        "autoScale": True,
-        "maxNodes": 5,
-        "minNodes": 1,
-        "name": "autoscale-worker-pool",
+        "name": "worker-pool",
+        "nodeCount": 3,
         "size": "s-2vcpu-2gb",
     },
     region="nyc1",
     version="1.15.5-do.1")
 ```
-{{% /example %}}
 
-{{% example typescript %}}
+{{% /example %}}
+{{% example %}}
+### Autoscaling Example
+
+Node pools may also be configured to [autoscale](https://www.digitalocean.com/docs/kubernetes/how-to/autoscale/).
+For example:
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -105,13 +70,31 @@ const foo = new digitalocean.KubernetesCluster("foo", {
     version: "1.15.5-do.1",
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
 
+foo = digitalocean.KubernetesCluster("foo",
+    node_pool={
+        "autoScale": True,
+        "maxNodes": 5,
+        "minNodes": 1,
+        "name": "autoscale-worker-pool",
+        "size": "s-2vcpu-2gb",
+    },
+    region="nyc1",
+    version="1.15.5-do.1")
+```
+
+Note that, while individual node pools may scale to 0, a cluster must always include at least one node.
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a KubernetesCluster Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -959,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing KubernetesCluster Resource {#look-up}
 
 Get an existing KubernetesCluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#KubernetesClusterState">KubernetesClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#KubernetesCluster">KubernetesCluster</a></span></code></pre></div>

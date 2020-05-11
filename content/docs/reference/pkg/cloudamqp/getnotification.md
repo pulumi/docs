@@ -15,7 +15,7 @@ meta_desc: "Explore the GetNotification function of the CloudAMQP package, inclu
 
 ## Using GetNotification {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

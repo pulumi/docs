@@ -12,37 +12,12 @@ meta_desc: "Explore the Cdn resource of the Digital Ocean package, including exa
 
 Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Basic Example
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
+#### Basic Example
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-# Create a new Spaces Bucket
-mybucket = digitalocean.SpacesBucket("mybucket",
-    region="sfo2",
-    acl="public-read")
-# Add a CDN endpoint to the Spaces Bucket
-mycdn = digitalocean.Cdn("mycdn", origin=mybucket.bucket_domain_name)
-pulumi.export("fqdn", mycdn.endpoint)
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -56,13 +31,68 @@ const mybucket = new digitalocean.SpacesBucket("mybucket", {
 const mycdn = new digitalocean.Cdn("mycdn", {origin: mybucket.bucketDomainName});
 export const fqdn = mycdn.endpoint;
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
 
+# Create a new Spaces Bucket
+mybucket = digitalocean.SpacesBucket("mybucket",
+    region="sfo2",
+    acl="public-read")
+# Add a CDN endpoint to the Spaces Bucket
+mycdn = digitalocean.Cdn("mycdn", origin=mybucket.bucket_domain_name)
+pulumi.export("fqdn", mycdn.endpoint)
+```
+
+#### Custom Sub-Domain Example
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+// Create a new Spaces Bucket
+const mybucket = new digitalocean.SpacesBucket("mybucket", {
+    region: "sfo2",
+    acl: "public-read",
+});
+// Create a DigitalOcean managed Let's Encrypt Certificate
+const cert = new digitalocean.Certificate("cert", {
+    type: "lets_encrypt",
+    domains: ["static.example.com"],
+});
+// Add a CDN endpoint with a custom sub-domain to the Spaces Bucket
+const mycdn = new digitalocean.Cdn("mycdn", {
+    origin: mybucket.bucketDomainName,
+    customDomain: "static.example.com",
+    certificateId: cert.id,
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+# Create a new Spaces Bucket
+mybucket = digitalocean.SpacesBucket("mybucket",
+    region="sfo2",
+    acl="public-read")
+# Create a DigitalOcean managed Let's Encrypt Certificate
+cert = digitalocean.Certificate("cert",
+    type="lets_encrypt",
+    domains=["static.example.com"])
+# Add a CDN endpoint with a custom sub-domain to the Spaces Bucket
+mycdn = digitalocean.Cdn("mycdn",
+    origin=mybucket.bucket_domain_name,
+    custom_domain="static.example.com",
+    certificate_id=cert.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Cdn Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -562,7 +592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing Cdn Resource {#look-up}
 
 Get an existing Cdn resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#CdnState">CdnState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Cdn">Cdn</a></span></code></pre></div>

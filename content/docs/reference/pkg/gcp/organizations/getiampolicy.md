@@ -58,7 +58,7 @@ from another resource is the only way to apply an IAM policy to a resource.
 
 ## Using GetIAMPolicy {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

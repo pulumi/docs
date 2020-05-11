@@ -15,7 +15,7 @@ meta_desc: "Explore the GetAccountAlias function of the ram module, including ex
 
 ## Using GetAccountAlias {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

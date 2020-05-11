@@ -12,7 +12,21 @@ meta_desc: "Explore the GetProfile function of the Linode package, including exa
 
 Provides information about a Linode profile.
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+The following example shows how one might use this data source to access profile details.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const profile = pulumi.output(linode.getProfile({ async: true }));
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Attributes
 
 The Linode Profile resource exports the following attributes:
@@ -49,38 +63,11 @@ The Linode Profile resource exports the following attributes:
 
 * `referrals.0.url` - The referral URL.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const profile = pulumi.output(linode.getProfile({ async: true }));
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetProfile {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

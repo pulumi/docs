@@ -22,7 +22,7 @@ meta_desc: "Explore the GetNetworkContainers function of the mongodbatlas packag
 
 ## Using GetNetworkContainers {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

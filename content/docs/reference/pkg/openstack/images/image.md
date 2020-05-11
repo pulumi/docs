@@ -12,7 +12,26 @@ meta_desc: "Explore the Image resource of the images module, including examples,
 
 Manages a V2 Image resource within OpenStack Glance.
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const rancheros = new openstack.images.Image("rancheros", {
+    containerFormat: "bare",
+    diskFormat: "qcow2",
+    imageSourceUrl: "https://releases.rancher.com/os/latest/rancheros-openstack.img",
+    properties: {
+        key: "value",
+    },
+});
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Notes
 
 ### Properties
@@ -29,44 +48,10 @@ properties.
 In addition, the `direct_url` property is also automatically reconciled if the
 Image Service set it.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as openstack from "@pulumi/openstack";
-
-const rancheros = new openstack.images.Image("rancheros", {
-    containerFormat: "bare",
-    diskFormat: "qcow2",
-    imageSourceUrl: "https://releases.rancher.com/os/latest/rancheros-openstack.img",
-    properties: {
-        key: "value",
-    },
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Image Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1358,7 +1343,7 @@ or "saving".
 ## Look up an Existing Image Resource {#look-up}
 
 Get an existing Image resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/images/#ImageState">ImageState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/images/#Image">Image</a></span></code></pre></div>

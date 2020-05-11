@@ -15,7 +15,7 @@ meta_desc: "Explore the GetAlertPolicy function of the New Relic package, includ
 
 ## Using GetAlertPolicy {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

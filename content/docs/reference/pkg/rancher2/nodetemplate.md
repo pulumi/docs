@@ -16,26 +16,10 @@ amazonec2, azure, digitalocean, linode, opennebula, openstack, and vsphere drive
 
 **Note** If you are upgrading to Rancher v2.3.3, please take a look to final section
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
@@ -55,13 +39,40 @@ const foo = new rancher2.NodeTemplate("foo", {
     description: "foo test",
 });
 ```
-{{% /example %}}
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 Node Template from Rancher 2.2.x
+const fooCloudCredential = new rancher2.CloudCredential("foo", {
+    amazonec2CredentialConfig: {
+        accessKey: "<AWS_ACCESS_KEY>",
+        secretKey: "<AWS_SECRET_KEY>",
+    },
+    description: "foo test",
+});
+const fooNodeTemplate = new rancher2.NodeTemplate("foo", {
+    amazonec2Config: {
+        ami: "<AMI_ID>",
+        region: "<REGION>",
+        securityGroups: ["<AWS_SECURITY_GROUP>"],
+        subnetId: "<SUBNET_ID>",
+        vpcId: "<VPC_ID>",
+        zone: "<ZONE>",
+    },
+    cloudCredentialId: fooCloudCredential.id,
+    description: "foo test",
+});
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a NodeTemplate Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1209,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing NodeTemplate Resource {#look-up}
 
 Get an existing NodeTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NodeTemplateState">NodeTemplateState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NodeTemplate">NodeTemplate</a></span></code></pre></div>

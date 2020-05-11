@@ -16,34 +16,14 @@ If no filters are specified, all Spaces buckets will be returned.
 Note: You can use the [`digitalocean..SpacesBucket`](https://www.terraform.io/docs/providers/do/d/spaces_bucket.html) data source to
 obtain metadata about a single bucket if you already know its `name` and `region`.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+Use the `filter` block with a `key` string and `values` list to filter buckets.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
+Get all buckets in a region:
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-nyc3 = digitalocean.get_spaces_buckets(filters=[{
-    "key": "region",
-    "values": ["nyc3"],
-}])
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -55,14 +35,54 @@ const nyc3 = pulumi.output(digitalocean.getSpacesBuckets({
     }],
 }, { async: true }));
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
 
+nyc3 = digitalocean.get_spaces_buckets(filters=[{
+    "key": "region",
+    "values": ["nyc3"],
+}])
+```
+You can sort the results as well:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const nyc3 = pulumi.output(digitalocean.getSpacesBuckets({
+    filters: [{
+        key: "region",
+        values: ["nyc3"],
+    }],
+    sorts: [{
+        direction: "desc",
+        key: "name",
+    }],
+}, { async: true }));
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+nyc3 = digitalocean.get_spaces_buckets(filters=[{
+        "key": "region",
+        "values": ["nyc3"],
+    }],
+    sorts=[{
+        "direction": "desc",
+        "key": "name",
+    }])
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetSpacesBuckets {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

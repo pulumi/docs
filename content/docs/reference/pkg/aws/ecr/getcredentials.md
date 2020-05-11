@@ -15,7 +15,7 @@ meta_desc: "Explore the GetCredentials function of the ecr module, including exa
 
 ## Using GetCredentials {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

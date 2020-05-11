@@ -14,7 +14,23 @@ Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse share
 
 For information about Lambda Layers and how to use them, see [AWS Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const lambdaLayer = new aws.lambda.LayerVersion("lambda_layer", {
+    compatibleRuntimes: ["nodejs8.10"],
+    code: new pulumi.asset.FileArchive("lambda_layer_payload.zip"),
+    layerName: "lambda_layer_name",
+});
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Specifying the Deployment Package
 
 AWS Lambda Layers expect source code to be provided as a deployment package whose structure varies depending on which `compatible_runtimes` this layer specifies.
@@ -27,41 +43,10 @@ package via S3 it may be useful to use the `aws.s3.BucketObject` resource to upl
 For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
 large files efficiently.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const lambdaLayer = new aws.lambda.LayerVersion("lambda_layer", {
-    compatibleRuntimes: ["nodejs8.10"],
-    code: new pulumi.asset.FileArchive("lambda_layer_payload.zip"),
-    layerName: "lambda_layer_name",
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a LayerVersion Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -849,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing LayerVersion Resource {#look-up}
 
 Get an existing LayerVersion resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#LayerVersionState">LayerVersionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#LayerVersion">LayerVersion</a></span></code></pre></div>

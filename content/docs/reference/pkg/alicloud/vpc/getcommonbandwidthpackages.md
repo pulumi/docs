@@ -14,32 +14,10 @@ This data source provides a list of Common Bandwidth Packages owned by an Alibab
 
 > **NOTE:** Available in 1.36.0+.
 
-
-## Public ip addresses Block
-  
-  The public ip addresses mapping supports the following:
-  
-  * `ip_address`   - The address of the EIP.
-  * `allocation_id` - The ID of the EIP instance.
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
@@ -53,14 +31,21 @@ const fooCommonBandwidthPackages = fooCommonBandwithPackage.id.apply(id => alicl
     nameRegex: "^tf-testAcc.*",
 }, { async: true }));
 ```
-{{% /example %}}
 
+{{% /example %}}
 {{% /examples %}}
+## Public ip addresses Block
+  
+  The public ip addresses mapping supports the following:
+  
+  * `ip_address`   - The address of the EIP.
+  * `allocation_id` - The ID of the EIP instance.
+
 
 
 ## Using GetCommonBandwidthPackages {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

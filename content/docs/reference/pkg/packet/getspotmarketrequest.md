@@ -21,7 +21,7 @@ Provides a Packet spot_market_request datasource. The datasource will contain li
 
 ## Using GetSpotMarketRequest {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

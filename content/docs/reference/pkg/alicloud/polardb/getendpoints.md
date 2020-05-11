@@ -22,7 +22,7 @@ Filters support regular expression for the cluster name, searches by clusterId, 
 
 ## Using GetEndpoints {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

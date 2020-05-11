@@ -19,7 +19,7 @@ Get all direct child organizational units under a parent organizational unit. Th
 
 ## Using GetOrganizationalUnits {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

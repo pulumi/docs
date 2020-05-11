@@ -58,7 +58,7 @@ In addition to the arguments listed above, the following computed attributes are
 
 ## Using GetGroup {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -16,7 +16,7 @@ meta_desc: "Explore the GetSecret function of the kms module, including examples
 
 ## Using GetSecret {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -22,26 +22,12 @@ after creation or modification. During this time, deletes to resources will be
 blocked. If you need to delete a distribution that is enabled and you do not
 want to wait, you need to use the `retain_on_delete` flag.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The following example below creates a CloudFront distribution with an S3 origin.
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -174,13 +160,63 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
     },
 });
 ```
-{{% /example %}}
 
+The following example below creates a Cloudfront distribution with an origin group for failover routing:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
+    defaultCacheBehavior: {
+        // ... other configuration ...
+        targetOriginId: "groupS3",
+    },
+    origins: [
+        {
+            domainName: aws_s3_bucket_primary.bucketRegionalDomainName,
+            originId: "primaryS3",
+            s3OriginConfig: {
+                originAccessIdentity: aws_cloudfront_origin_access_identity_default.cloudfrontAccessIdentityPath,
+            },
+        },
+        {
+            domainName: aws_s3_bucket_failover.bucketRegionalDomainName,
+            originId: "failoverS3",
+            s3OriginConfig: {
+                originAccessIdentity: aws_cloudfront_origin_access_identity_default.cloudfrontAccessIdentityPath,
+            },
+        },
+    ],
+    originGroups: [{
+        failoverCriteria: {
+            statusCodes: [
+                403,
+                404,
+                500,
+                502,
+            ],
+        },
+        members: [
+            {
+                originId: "primaryS3",
+            },
+            {
+                originId: "failoverS3",
+            },
+        ],
+        originId: "groupS3",
+    }],
+});
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a Distribution Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -1612,7 +1648,7 @@ CloudFront system.
 ## Look up an Existing Distribution Resource {#look-up}
 
 Get an existing Distribution resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#DistributionState">DistributionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#Distribution">Distribution</a></span></code></pre></div>

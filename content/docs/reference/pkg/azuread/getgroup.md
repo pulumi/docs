@@ -29,7 +29,7 @@ const example = pulumi.output(azuread.getGroup({
 
 ## Using GetGroup {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

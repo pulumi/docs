@@ -22,7 +22,7 @@ Deprecated: azure.eventhub.getEventhubNamespace has been deprecated in favour of
 
 ## Using GetEventhubNamespace {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

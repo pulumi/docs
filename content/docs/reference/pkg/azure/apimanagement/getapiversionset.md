@@ -19,7 +19,7 @@ Uses this data source to access information about an API Version Set within an A
 
 ## Using GetApiVersionSet {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

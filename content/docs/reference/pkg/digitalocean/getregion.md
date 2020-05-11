@@ -13,32 +13,10 @@ meta_desc: "Explore the GetRegion function of the Digital Ocean package, includi
 Get information on a single DigitalOcean region. This is useful to find out 
 what Droplet sizes and features are supported within a region.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-sfo2 = digitalocean.get_region(slug="sfo2")
-pulumi.export("regionName", sfo2.name)
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -48,14 +26,22 @@ const sfo2 = digitalocean.getRegion({
 });
 export const regionName = sfo2.then(sfo2 => sfo2.name);
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
 
+sfo2 = digitalocean.get_region(slug="sfo2")
+pulumi.export("regionName", sfo2.name)
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetRegion {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

@@ -14,48 +14,12 @@ Provides a DigitalOcean database firewall resource allowing you to restrict
 connections to your database to trusted sources. You may limit connections to
 specific Droplets, Kubernetes clusters, or IP addresses.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Create a new database firewall allowing multiple IP addresses
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-postgres_example = digitalocean.DatabaseCluster("postgres-example",
-    engine="pg",
-    version="11",
-    size="db-s-1vcpu-1gb",
-    region="nyc1",
-    node_count=1)
-example_fw = digitalocean.DatabaseFirewall("example-fw",
-    cluster_id=postgres_example.id,
-    rule=[
-        {
-            "type": "ip_addr",
-            "value": "192.168.1.1",
-        },
-        {
-            "type": "ip_addr",
-            "value": "192.0.2.0",
-        },
-    ])
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -81,26 +45,10 @@ const example-fw = new digitalocean.DatabaseFirewall("example-fw", {
     ],
 });
 ```
-{{% /example %}}
-
-### Create a new database firewall allowing a Droplet
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
 ```python
 import pulumi
 import pulumi_digitalocean as digitalocean
 
-web = digitalocean.Droplet("web",
-    size="s-1vcpu-1gb",
-    image="centos-7-x64",
-    region="nyc3")
 postgres_example = digitalocean.DatabaseCluster("postgres-example",
     engine="pg",
     version="11",
@@ -109,14 +57,22 @@ postgres_example = digitalocean.DatabaseCluster("postgres-example",
     node_count=1)
 example_fw = digitalocean.DatabaseFirewall("example-fw",
     cluster_id=postgres_example.id,
-    rule=[{
-        "type": "droplet",
-        "value": web.id,
-    }])
+    rule=[
+        {
+            "type": "ip_addr",
+            "value": "192.168.1.1",
+        },
+        {
+            "type": "ip_addr",
+            "value": "192.0.2.0",
+        },
+    ])
 ```
-{{% /example %}}
 
-{{% example typescript %}}
+{{% /example %}}
+{{% example %}}
+### Create a new database firewall allowing a Droplet
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -141,13 +97,35 @@ const example-fw = new digitalocean.DatabaseFirewall("example-fw", {
     }],
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
 
+web = digitalocean.Droplet("web",
+    size="s-1vcpu-1gb",
+    image="centos-7-x64",
+    region="nyc3")
+postgres_example = digitalocean.DatabaseCluster("postgres-example",
+    engine="pg",
+    version="11",
+    size="db-s-1vcpu-1gb",
+    region="nyc1",
+    node_count=1)
+example_fw = digitalocean.DatabaseFirewall("example-fw",
+    cluster_id=postgres_example.id,
+    rule=[{
+        "type": "droplet",
+        "value": web.id,
+    }])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a DatabaseFirewall Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -511,7 +489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing DatabaseFirewall Resource {#look-up}
 
 Get an existing DatabaseFirewall resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DatabaseFirewallState">DatabaseFirewallState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#DatabaseFirewall">DatabaseFirewall</a></span></code></pre></div>

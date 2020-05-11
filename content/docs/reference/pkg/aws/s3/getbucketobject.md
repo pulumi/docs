@@ -15,26 +15,13 @@ _optionally_ (see below) content of an object stored inside S3 bucket.
 
 > **Note:** The content of an object (`body` field) is available only for objects which have a human-readable `Content-Type` (`text/*` and `application/json`). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.
 
-
-
 {{% examples %}}
 ## Example Usage
+{{% example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The following example retrieves a text object (which must have a `Content-Type`
+value starting with `text/`) and uses it as the `user_data` for an EC2 instance:
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -49,14 +36,38 @@ const example = new aws.ec2.Instance("example", {
     userData: bootstrapScript.body,
 });
 ```
-{{% /example %}}
 
+The following, more-complex example retrieves only the metadata for a zip
+file stored in S3, which is then used to pass the most recent `version_id`
+to AWS Lambda for use as a function implementation. More information about
+Lambda functions is available in the documentation for
+[`aws.lambda.Function`](https://www.terraform.io/docs/providers/aws/r/lambda_function.html).
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const lambda = pulumi.output(aws.s3.getBucketObject({
+    bucket: "ourcorp-lambda-functions",
+    key: "hello-world.zip",
+}, { async: true }));
+const testLambda = new aws.lambda.Function("test_lambda", {
+    handler: "exports.test",
+    role: aws_iam_role_iam_for_lambda.arn, // (not shown)
+    s3Bucket: lambda.bucket,
+    s3Key: lambda.key,
+    s3ObjectVersion: lambda.versionId!,
+});
+```
+
+{{% /example %}}
 {{% /examples %}}
+
 
 
 ## Using GetBucketObject {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

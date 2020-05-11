@@ -26,7 +26,7 @@ source, which provides a summary of the current Consul services.
 
 ## Using GetService {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

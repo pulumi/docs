@@ -15,7 +15,7 @@ meta_desc: "Explore the GetInstances function of the elasticsearch module, inclu
 
 ## Using GetInstances {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

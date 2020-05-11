@@ -12,7 +12,28 @@ meta_desc: "Explore the GetDomainRecord function of the Linode package, includin
 
 Provides information about a Linode Domain Record.
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
 
+The following example shows how one might use this data source to access information about a Linode Domain Record.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const myRecord = pulumi.output(linode.getDomainRecord({
+    domainId: 3150401,
+    id: 14950401,
+}, { async: true }));
+const myWwwRecord = pulumi.output(linode.getDomainRecord({
+    domainId: 3150401,
+    name: "www",
+}, { async: true }));
+```
+
+{{% /example %}}
+{{% /examples %}}
 ## Attributes
 
 The Linode Volume resource exports the following attributes:
@@ -41,45 +62,11 @@ The Linode Volume resource exports the following attributes:
 
 - `tag` - The tag portion of a CAA record.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-Coming soon!
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as linode from "@pulumi/linode";
-
-const myRecord = pulumi.output(linode.getDomainRecord({
-    domainId: 3150401,
-    id: 14950401,
-}, { async: true }));
-const myWwwRecord = pulumi.output(linode.getDomainRecord({
-    domainId: 3150401,
-    name: "www",
-}, { async: true }));
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetDomainRecord {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

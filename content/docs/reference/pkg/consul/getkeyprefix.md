@@ -15,7 +15,7 @@ meta_desc: "Explore the GetKeyPrefix function of the Consul package, including e
 
 ## Using GetKeyPrefix {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

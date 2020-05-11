@@ -19,7 +19,7 @@ Use this data source to access the properties of a Log Profile.
 
 ## Using GetLogProfile {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

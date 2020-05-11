@@ -20,7 +20,7 @@ Use this data source to access information about an existing Automation Bool Var
 
 ## Using GetBoolVariable {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

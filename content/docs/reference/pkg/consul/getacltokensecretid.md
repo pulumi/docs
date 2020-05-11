@@ -15,7 +15,7 @@ meta_desc: "Explore the GetAclTokenSecretId function of the Consul package, incl
 
 ## Using GetAclTokenSecretId {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

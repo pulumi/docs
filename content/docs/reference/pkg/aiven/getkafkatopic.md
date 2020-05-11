@@ -17,7 +17,7 @@ meta_desc: "Explore the GetKafkaTopic function of the Aiven package, including e
 
 ## Using GetKafkaTopic {#using}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}

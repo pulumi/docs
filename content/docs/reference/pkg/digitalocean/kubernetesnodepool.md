@@ -12,47 +12,12 @@ meta_desc: "Explore the KubernetesNodePool resource of the Digital Ocean package
 
 Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the `digitalocean..KubernetesCluster` resource, this resource can be used to add additional ones to a cluster.
 
-
-
 {{% examples %}}
 ## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example %}}
 ### Basic Example
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-foo = digitalocean.KubernetesCluster("foo",
-    region="nyc1",
-    version="1.15.5-do.1",
-    node_pool={
-        "name": "front-end-pool",
-        "size": "s-2vcpu-2gb",
-        "nodeCount": 3,
-    })
-bar = digitalocean.KubernetesNodePool("bar",
-    cluster_id=foo.id,
-    size="c-2",
-    node_count=2,
-    tags=["backend"],
-    labels={
-        "service": "backend",
-        "priority": "high",
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -77,32 +42,36 @@ const bar = new digitalocean.KubernetesNodePool("bar", {
     },
 });
 ```
-{{% /example %}}
-
-### Autoscaling Example
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
 ```python
 import pulumi
 import pulumi_digitalocean as digitalocean
 
-autoscale_pool_01 = digitalocean.KubernetesNodePool("autoscale-pool-01",
-    cluster_id=digitalocean_kubernetes_cluster["foo"]["id"],
-    size="s-1vcpu-2gb",
-    auto_scale=True,
-    min_nodes=0,
-    max_nodes=5)
+foo = digitalocean.KubernetesCluster("foo",
+    region="nyc1",
+    version="1.15.5-do.1",
+    node_pool={
+        "name": "front-end-pool",
+        "size": "s-2vcpu-2gb",
+        "nodeCount": 3,
+    })
+bar = digitalocean.KubernetesNodePool("bar",
+    cluster_id=foo.id,
+    size="c-2",
+    node_count=2,
+    tags=["backend"],
+    labels={
+        "service": "backend",
+        "priority": "high",
+    })
 ```
-{{% /example %}}
 
-{{% example typescript %}}
+{{% /example %}}
+{{% example %}}
+### Autoscaling Example
+
+Node pools may also be configured to [autoscale](https://www.digitalocean.com/docs/kubernetes/how-to/autoscale/).
+For example:
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -115,13 +84,25 @@ const autoscale-pool-01 = new digitalocean.KubernetesNodePool("autoscale-pool-01
     maxNodes: 5,
 });
 ```
-{{% /example %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
 
+autoscale_pool_01 = digitalocean.KubernetesNodePool("autoscale-pool-01",
+    cluster_id=digitalocean_kubernetes_cluster["foo"]["id"],
+    size="s-1vcpu-2gb",
+    auto_scale=True,
+    min_nodes=0,
+    max_nodes=5)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
+
 ## Create a KubernetesNodePool Resource {#create}
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
@@ -825,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Look up an Existing KubernetesNodePool Resource {#look-up}
 
 Get an existing KubernetesNodePool resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
 <div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#KubernetesNodePoolState">KubernetesNodePoolState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#KubernetesNodePool">KubernetesNodePool</a></span></code></pre></div>
