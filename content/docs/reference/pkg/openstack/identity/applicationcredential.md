@@ -37,7 +37,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+swift = openstack.identity.ApplicationCredential("swift",
+    description="Swift technical application credential",
+    expires_at="2019-02-13T12:12:12Z",
+    roles=["swiftoperator"],
+    secret="supersecret")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -64,7 +73,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+unrestricted = openstack.identity.ApplicationCredential("unrestricted",
+    description="Unrestricted application credential",
+    unrestricted=True)
+pulumi.export("applicationCredentialSecret", unrestricted.secret)
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -91,7 +108,25 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+monitoring = openstack.identity.ApplicationCredential("monitoring",
+    access_rules=[
+        {
+            "method": "GET",
+            "path": "/v2.0/metrics",
+            "service": "monitoring",
+        },
+        {
+            "method": "PUT",
+            "path": "/v2.0/metrics",
+            "service": "monitoring",
+        },
+    ],
+    expires_at="2019-02-13T12:12:12Z")
+```
 {{% /example %}}
 
 {{% example typescript %}}

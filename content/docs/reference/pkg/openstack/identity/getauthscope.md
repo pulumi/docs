@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+scope = openstack.identity.get_auth_scope(name="my_scope")
+```
 {{% /example %}}
 
 {{% example typescript %}}

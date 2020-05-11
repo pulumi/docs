@@ -28,7 +28,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+rule1 = openstack.firewall.Rule("rule1",
+    action="deny",
+    description="drop TELNET traffic",
+    destination_port="23",
+    enabled="true",
+    protocol="tcp")
+```
 {{% /example %}}
 
 {{% example typescript %}}

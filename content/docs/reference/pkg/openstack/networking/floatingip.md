@@ -31,7 +31,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+floatip1 = openstack.networking.FloatingIp("floatip1", pool="public")
+```
 {{% /example %}}
 
 {{% example typescript %}}

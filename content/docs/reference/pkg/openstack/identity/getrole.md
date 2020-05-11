@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+admin = openstack.identity.get_role(name="admin")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -17,6 +17,47 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_openstack.objectstorage.Container">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.objectstorage.</code><code class="sig-name descname">Container</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_read</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_sync_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_sync_to</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_write</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versioning</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.objectstorage.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 container resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">container1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">objectstorage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;container1&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;RegionOne&quot;</span><span class="p">,</span>
+    <span class="n">versioning</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;tf-test-container-versions&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;versions&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">container1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">objectstorage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;container1&quot;</span><span class="p">,</span>
+    <span class="n">container_read</span><span class="o">=</span><span class="s2">&quot;.r:*&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;RegionOne&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">container1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">objectstorage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;container1&quot;</span><span class="p">,</span>
+    <span class="n">container_read</span><span class="o">=</span><span class="s2">&quot;.r:*,.rlistings&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;RegionOne&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">current</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">get_auth_scope</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;current&quot;</span><span class="p">)</span>
+<span class="n">container1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">objectstorage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;container1&quot;</span><span class="p">,</span>
+    <span class="n">container_read</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;.r:-</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">container_write</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current</span><span class="o">.</span><span class="n">project_id</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">var</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;RegionOne&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -210,6 +251,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.objectstorage.ContainerObject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.objectstorage.</code><code class="sig-name descname">ContainerObject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_disposition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_encoding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_after</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">detect_content_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_manifest</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.objectstorage.ContainerObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 container object resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">container1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">objectstorage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;container1&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;RegionOne&quot;</span><span class="p">)</span>
+<span class="n">doc1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">objectstorage</span><span class="o">.</span><span class="n">ContainerObject</span><span class="p">(</span><span class="s2">&quot;doc1&quot;</span><span class="p">,</span>
+    <span class="n">container_name</span><span class="o">=</span><span class="n">container1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;               {</span>
+<span class="s2">                 &quot;foo&quot; : &quot;bar&quot;</span>
+<span class="s2">               }</span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;RegionOne&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">container1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">objectstorage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;container1&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;RegionOne&quot;</span><span class="p">)</span>
+<span class="n">doc1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">objectstorage</span><span class="o">.</span><span class="n">ContainerObject</span><span class="p">(</span><span class="s2">&quot;doc1&quot;</span><span class="p">,</span>
+    <span class="n">container_name</span><span class="o">=</span><span class="n">container1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;RegionOne&quot;</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="s2">&quot;./default.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -514,6 +597,22 @@ Once the URL has expired, it will no longer be valid, but the resource
 will remain in place. If you wish to automatically regenerate a URL, set
 the <code class="docutils literal notranslate"><span class="pre">regenerate</span></code> argument to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This will create a new resource with
 a new ID and URL.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">container1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">objectstorage</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;container1&quot;</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;Temp-URL-Key&quot;</span><span class="p">:</span> <span class="s2">&quot;testkey&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">object1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">objectstorage</span><span class="o">.</span><span class="n">ContainerObject</span><span class="p">(</span><span class="s2">&quot;object1&quot;</span><span class="p">,</span>
+    <span class="n">container_name</span><span class="o">=</span><span class="n">container1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+<span class="n">obj_tempurl</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">objectstorage</span><span class="o">.</span><span class="n">TempUrl</span><span class="p">(</span><span class="s2">&quot;objTempurl&quot;</span><span class="p">,</span>
+    <span class="n">container</span><span class="o">=</span><span class="n">container1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="p">,</span>
+    <span class="nb">object</span><span class="o">=</span><span class="n">object1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">ttl</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

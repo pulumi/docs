@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+volume1 = openstack.blockstorage.VolumeV1("volume1",
+    description="first test volume",
+    region="RegionOne",
+    size=3)
+```
 {{% /example %}}
 
 {{% example typescript %}}

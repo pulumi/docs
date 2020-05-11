@@ -45,7 +45,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+test_sg = openstack.compute.ServerGroup("test-sg", policies=["anti-affinity"])
+```
 {{% /example %}}
 
 {{% example typescript %}}

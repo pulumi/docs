@@ -33,7 +33,24 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+router1 = openstack.networking.Router("router1", admin_state_up="true")
+network1 = openstack.networking.Network("network1", admin_state_up="true")
+subnet1 = openstack.networking.Subnet("subnet1",
+    cidr="192.168.199.0/24",
+    ip_version=4,
+    network_id=network1.id)
+int1 = openstack.networking.RouterInterface("int1",
+    router_id=router1.id,
+    subnet_id=subnet1.id)
+router_route1 = openstack.networking.RouterRoute("routerRoute1",
+    destination_cidr="10.0.1.0/24",
+    next_hop="192.168.199.254",
+    router_id=router1.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

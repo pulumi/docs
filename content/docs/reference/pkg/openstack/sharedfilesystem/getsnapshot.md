@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+snapshot1 = openstack.sharedfilesystem.get_snapshot(name="snapshot_1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

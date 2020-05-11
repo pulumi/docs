@@ -32,7 +32,23 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+members1 = openstack.loadbalancer.Members("members1",
+    members=[
+        {
+            "address": "192.168.199.23",
+            "protocolPort": 8080,
+        },
+        {
+            "address": "192.168.199.24",
+            "protocolPort": 8080,
+        },
+    ],
+    pool_id="935685fb-a896-40f9-9ff4-ae531a3a00fe")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -40,8 +56,8 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const members1 = new openstack.LbMembersV2("members_1", {
-    member: [
+const members1 = new openstack.loadbalancer.Members("members_1", {
+    members: [
         {
             address: "192.168.199.23",
             protocolPort: 8080,

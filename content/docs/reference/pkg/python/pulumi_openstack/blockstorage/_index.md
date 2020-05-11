@@ -314,6 +314,21 @@ match the queried <code class="docutils literal notranslate"><span class="pre">s
 </dd>
 </dl>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">project1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;project1&quot;</span><span class="p">)</span>
+<span class="n">quotaset1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">QuoteSetV2</span><span class="p">(</span><span class="s2">&quot;quotaset1&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">project1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">volumes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">snapshots</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">gigabytes</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">per_volume_gigabytes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">backups</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">backup_gigabytes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">groups</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -489,6 +504,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">project1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">identity</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;project1&quot;</span><span class="p">)</span>
+<span class="n">quotaset1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">QuoteSetV3</span><span class="p">(</span><span class="s2">&quot;quotaset1&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">project1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">volumes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">snapshots</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">gigabytes</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">per_volume_gigabytes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">backups</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">backup_gigabytes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">groups</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -657,6 +687,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.blockstorage.Volume">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consistency_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_online_resize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multiattach</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduler_hints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_replica</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_vol_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 volume resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">volume1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;volume1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;first test volume&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;RegionOne&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -967,6 +1006,20 @@ such as a bare-metal server or a remote virtual machine in a
 different cloud provider.</p>
 <p>This does not actually attach a volume to an instance. Please use
 the <code class="docutils literal notranslate"><span class="pre">compute.VolumeAttach</span></code> resource for that.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">volume1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;volume1&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">va1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">VolumeAttach</span><span class="p">(</span><span class="s2">&quot;va1&quot;</span><span class="p">,</span>
+    <span class="n">device</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+    <span class="n">host_name</span><span class="o">=</span><span class="s2">&quot;devstack&quot;</span><span class="p">,</span>
+    <span class="n">initiator</span><span class="o">=</span><span class="s2">&quot;iqn.1993-08.org.debian:01:e9861fb1859&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;192.168.255.10&quot;</span><span class="p">,</span>
+    <span class="n">os_type</span><span class="o">=</span><span class="s2">&quot;linux2&quot;</span><span class="p">,</span>
+    <span class="n">platform</span><span class="o">=</span><span class="s2">&quot;x86_64&quot;</span><span class="p">,</span>
+    <span class="n">volume_id</span><span class="o">=</span><span class="n">volume1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1188,6 +1241,20 @@ such as a bare-metal server or a remote virtual machine in a
 different cloud provider.</p>
 <p>This does not actually attach a volume to an instance. Please use
 the <code class="docutils literal notranslate"><span class="pre">compute.VolumeAttach</span></code> resource for that.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">volume1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">VolumeV2</span><span class="p">(</span><span class="s2">&quot;volume1&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">va1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">VolumeAttachV2</span><span class="p">(</span><span class="s2">&quot;va1&quot;</span><span class="p">,</span>
+    <span class="n">device</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+    <span class="n">host_name</span><span class="o">=</span><span class="s2">&quot;devstack&quot;</span><span class="p">,</span>
+    <span class="n">initiator</span><span class="o">=</span><span class="s2">&quot;iqn.1993-08.org.debian:01:e9861fb1859&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;192.168.255.10&quot;</span><span class="p">,</span>
+    <span class="n">os_type</span><span class="o">=</span><span class="s2">&quot;linux2&quot;</span><span class="p">,</span>
+    <span class="n">platform</span><span class="o">=</span><span class="s2">&quot;x86_64&quot;</span><span class="p">,</span>
+    <span class="n">volume_id</span><span class="o">=</span><span class="n">volume1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1399,6 +1466,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.blockstorage.VolumeV1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">VolumeV1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_vol_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 volume resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">volume1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">VolumeV1</span><span class="p">(</span><span class="s2">&quot;volume1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;first test volume&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;RegionOne&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1600,6 +1676,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.blockstorage.VolumeV2">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">VolumeV2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consistency_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduler_hints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_replica</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_vol_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 volume resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">volume1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">VolumeV2</span><span class="p">(</span><span class="s2">&quot;volume1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;first test volume&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;RegionOne&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1881,6 +1966,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.blockstorage.get_availability_zones_v3">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_availability_zones_v3</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_availability_zones_v3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of Block Storage availability zones from OpenStack</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">zones</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">get_availability_zones_v3</span><span class="p">()</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1897,6 +1988,13 @@ either be <code class="docutils literal notranslate"><span class="pre">available
 <dt id="pulumi_openstack.blockstorage.get_snapshot_v2">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_snapshot_v2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">most_recent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_snapshot_v2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing snapshot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">snapshot1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">get_snapshot_v2</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;snapshot_1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1916,6 +2014,13 @@ client. If omitted, the <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_openstack.blockstorage.get_snapshot_v3">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_snapshot_v3</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">most_recent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_snapshot_v3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing snapshot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">snapshot1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">get_snapshot_v3</span><span class="p">(</span><span class="n">most_recent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;snapshot_1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1935,6 +2040,12 @@ client. If omitted, the <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_openstack.blockstorage.get_volume_v2">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_volume_v2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bootable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_volume_v2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing volume.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">volume1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">get_volume_v2</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;volume_1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1954,6 +2065,12 @@ client. If omitted, the <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_openstack.blockstorage.get_volume_v3">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_volume_v3</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bootable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_volume_v3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing volume.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">volume1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">blockstorage</span><span class="o">.</span><span class="n">get_volume_v3</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;volume_1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

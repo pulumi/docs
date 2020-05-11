@@ -29,7 +29,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+zones = openstack.sharedfilesystem.get_availbility_zones()
+```
 {{% /example %}}
 
 {{% example typescript %}}

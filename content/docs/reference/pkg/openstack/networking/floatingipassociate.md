@@ -30,7 +30,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+port1 = openstack.networking.Port("port1", network_id="a5bbd213-e1d3-49b6-aed1-9df60ea94b9a")
+fip1 = openstack.networking.FloatingIpAssociate("fip1",
+    floating_ip="1.2.3.4",
+    port_id=port1.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

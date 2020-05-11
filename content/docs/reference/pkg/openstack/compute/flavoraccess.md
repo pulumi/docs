@@ -33,7 +33,20 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+project1 = openstack.identity.Project("project1")
+flavor1 = openstack.compute.Flavor("flavor1",
+    disk="20",
+    is_public=False,
+    ram="8096",
+    vcpus="2")
+access1 = openstack.compute.FlavorAccess("access1",
+    flavor_id=flavor1.id,
+    tenant_id=project1.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

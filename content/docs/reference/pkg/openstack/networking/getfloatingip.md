@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+floatingip1 = openstack.networking.get_floating_ip(address="192.168.0.4")
+```
 {{% /example %}}
 
 {{% example typescript %}}

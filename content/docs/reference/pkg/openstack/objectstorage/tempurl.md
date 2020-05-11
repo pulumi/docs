@@ -34,7 +34,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+container1 = openstack.objectstorage.Container("container1", metadata={
+    "Temp-URL-Key": "testkey",
+})
+object1 = openstack.objectstorage.ContainerObject("object1",
+    container_name=container1.name,
+    content="Hello, world!")
+obj_tempurl = openstack.objectstorage.TempUrl("objTempurl",
+    container=container1.name,
+    method="post",
+    object=object1.name,
+    ttl=20)
+```
 {{% /example %}}
 
 {{% example typescript %}}

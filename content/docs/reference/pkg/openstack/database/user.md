@@ -28,7 +28,15 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+basic = openstack.database.User("basic",
+    databases=["testdb"],
+    instance=openstack_db_instance_v1["basic"]["id"],
+    password="password")
+```
 {{% /example %}}
 
 {{% example typescript %}}

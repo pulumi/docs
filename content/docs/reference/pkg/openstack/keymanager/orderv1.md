@@ -28,7 +28,19 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+order1 = openstack.keymanager.OrderV1("order1",
+    meta={
+        "algorithm": "aes",
+        "bitLength": 256,
+        "mode": "cbc",
+        "name": "mysecret",
+    },
+    type="key")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -36,13 +48,13 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const order1 = new openstack.KeymanagerOrderV1("order_1", {
-    meta: [{
+const order1 = new openstack.keymanager.OrderV1("order_1", {
+    meta: {
         algorithm: "aes",
         bitLength: 256,
         mode: "cbc",
         name: "mysecret",
-    }],
+    },
     type: "key",
 });
 ```
@@ -58,7 +70,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+order1 = openstack.keymanager.OrderV1("order1",
+    meta={
+        "algorithm": "rsa",
+        "bitLength": 4096,
+        "name": "mysecret",
+    },
+    type="asymmetric")
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -66,12 +89,12 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const order1 = new openstack.KeymanagerOrderV1("order_1", {
-    meta: [{
+const order1 = new openstack.keymanager.OrderV1("order_1", {
+    meta: {
         algorithm: "rsa",
         bitLength: 4096,
         name: "mysecret",
-    }],
+    },
     type: "asymmetric",
 });
 ```

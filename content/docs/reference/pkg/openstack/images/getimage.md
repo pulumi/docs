@@ -28,7 +28,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+ubuntu = openstack.images.get_image(most_recent=True,
+    name="Ubuntu 16.04",
+    properties={
+        "key": "value",
+    })
+```
 {{% /example %}}
 
 {{% example typescript %}}

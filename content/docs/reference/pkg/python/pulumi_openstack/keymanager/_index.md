@@ -27,6 +27,76 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_openstack.keymanager.ContainerV1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">ContainerV1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_refs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.ContainerV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 Barbican container resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">certificate1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">keymanager</span><span class="o">.</span><span class="n">SecretV1</span><span class="p">(</span><span class="s2">&quot;certificate1&quot;</span><span class="p">,</span>
+    <span class="n">payload</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;cert.pem&quot;</span><span class="p">),</span>
+    <span class="n">payload_content_type</span><span class="o">=</span><span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+    <span class="n">secret_type</span><span class="o">=</span><span class="s2">&quot;certificate&quot;</span><span class="p">)</span>
+<span class="n">private_key1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">keymanager</span><span class="o">.</span><span class="n">SecretV1</span><span class="p">(</span><span class="s2">&quot;privateKey1&quot;</span><span class="p">,</span>
+    <span class="n">payload</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;cert-key.pem&quot;</span><span class="p">),</span>
+    <span class="n">payload_content_type</span><span class="o">=</span><span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+    <span class="n">secret_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">)</span>
+<span class="n">intermediate1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">keymanager</span><span class="o">.</span><span class="n">SecretV1</span><span class="p">(</span><span class="s2">&quot;intermediate1&quot;</span><span class="p">,</span>
+    <span class="n">payload</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;intermediate-ca.pem&quot;</span><span class="p">),</span>
+    <span class="n">payload_content_type</span><span class="o">=</span><span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+    <span class="n">secret_type</span><span class="o">=</span><span class="s2">&quot;certificate&quot;</span><span class="p">)</span>
+<span class="n">tls1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">keymanager</span><span class="o">.</span><span class="n">ContainerV1</span><span class="p">(</span><span class="s2">&quot;tls1&quot;</span><span class="p">,</span>
+    <span class="n">secret_refs</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;certificate&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;secretRef&quot;</span><span class="p">:</span> <span class="n">certificate1</span><span class="o">.</span><span class="n">secret_ref</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;private_key&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;secretRef&quot;</span><span class="p">:</span> <span class="n">private_key1</span><span class="o">.</span><span class="n">secret_ref</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;intermediates&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;secretRef&quot;</span><span class="p">:</span> <span class="n">intermediate1</span><span class="o">.</span><span class="n">secret_ref</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;certificate&quot;</span><span class="p">)</span>
+<span class="n">subnet1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">get_subnet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-subnet&quot;</span><span class="p">)</span>
+<span class="n">lb1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;lb1&quot;</span><span class="p">,</span> <span class="n">vip_subnet_id</span><span class="o">=</span><span class="n">subnet1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">listener1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;listener1&quot;</span><span class="p">,</span>
+    <span class="n">default_tls_container_ref</span><span class="o">=</span><span class="n">tls1</span><span class="o">.</span><span class="n">container_ref</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">lb1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;TERMINATED_HTTPS&quot;</span><span class="p">,</span>
+    <span class="n">protocol_port</span><span class="o">=</span><span class="mi">443</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">tls1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">keymanager</span><span class="o">.</span><span class="n">ContainerV1</span><span class="p">(</span><span class="s2">&quot;tls1&quot;</span><span class="p">,</span>
+    <span class="n">acl</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;read&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;projectAccess&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;users&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;userid1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;userid2&quot;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">secret_refs</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;certificate&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;secretRef&quot;</span><span class="p">:</span> <span class="n">openstack_keymanager_secret_v1</span><span class="p">[</span><span class="s2">&quot;certificate_1&quot;</span><span class="p">][</span><span class="s2">&quot;secret_ref&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;private_key&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;secretRef&quot;</span><span class="p">:</span> <span class="n">openstack_keymanager_secret_v1</span><span class="p">[</span><span class="s2">&quot;private_key_1&quot;</span><span class="p">][</span><span class="s2">&quot;secret_ref&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;intermediates&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;secretRef&quot;</span><span class="p">:</span> <span class="n">openstack_keymanager_secret_v1</span><span class="p">[</span><span class="s2">&quot;intermediate_1&quot;</span><span class="p">][</span><span class="s2">&quot;secret_ref&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;certificate&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -481,6 +551,31 @@ explicitly and implicitly added.</p>
 <dt id="pulumi_openstack.keymanager.OrderV1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">OrderV1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 Barbican order resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">order1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">keymanager</span><span class="o">.</span><span class="n">OrderV1</span><span class="p">(</span><span class="s2">&quot;order1&quot;</span><span class="p">,</span>
+    <span class="n">meta</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;algorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;aes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bitLength&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
+        <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;cbc&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mysecret&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;key&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">order1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">keymanager</span><span class="o">.</span><span class="n">OrderV1</span><span class="p">(</span><span class="s2">&quot;order1&quot;</span><span class="p">,</span>
+    <span class="n">meta</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;algorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;rsa&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bitLength&quot;</span><span class="p">:</span> <span class="mi">4096</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mysecret&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;asymmetric&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -941,6 +1036,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.keymanager.get_container">
 <code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">get_container</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.get_container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Barbican container.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">keymanager</span><span class="o">.</span><span class="n">get_container</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my_container&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

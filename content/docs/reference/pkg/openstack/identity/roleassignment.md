@@ -31,7 +31,18 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+project1 = openstack.identity.Project("project1")
+user1 = openstack.identity.User("user1", default_project_id=project1.id)
+role1 = openstack.identity.Role("role1")
+role_assignment1 = openstack.identity.RoleAssignment("roleAssignment1",
+    project_id=project1.id,
+    role_id=role1.id,
+    user_id=user1.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+cluster1 = openstack.containerinfra.get_cluster(name="cluster_1")
+```
 {{% /example %}}
 
 {{% example typescript %}}

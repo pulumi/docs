@@ -28,7 +28,14 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+public_addressscope = openstack.networking.get_address_scope(ip_version=4,
+    name="public_addressscope",
+    shared=True)
+```
 {{% /example %}}
 
 {{% example typescript %}}

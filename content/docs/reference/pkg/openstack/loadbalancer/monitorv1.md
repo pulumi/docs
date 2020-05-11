@@ -28,7 +28,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+monitor1 = openstack.loadbalancer.MonitorV1("monitor1",
+    admin_state_up="true",
+    delay=30,
+    max_retries=3,
+    timeout=5,
+    type="PING")
+```
 {{% /example %}}
 
 {{% example typescript %}}

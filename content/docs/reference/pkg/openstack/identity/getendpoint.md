@@ -30,7 +30,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+endpoint1 = openstack.identity.get_endpoint(service_name="demo")
+```
 {{% /example %}}
 
 {{% example typescript %}}

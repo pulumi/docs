@@ -30,7 +30,16 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+service1 = openstack.identity.ServiceV3("service1", type="my-service-type")
+endpoint1 = openstack.identity.EndpointV3("endpoint1",
+    endpoint_region=service1.region,
+    service_id=service1.id,
+    url="http://my-endpoint")
+```
 {{% /example %}}
 
 {{% example typescript %}}

@@ -28,7 +28,22 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+example_zone = openstack.dns.Zone("exampleZone",
+    description="a zone",
+    email="email2@example.com",
+    ttl=6000,
+    type="PRIMARY")
+rs_example_com = openstack.dns.RecordSet("rsExampleCom",
+    description="An example record set",
+    records=["10.0.0.1"],
+    ttl=3000,
+    type="A",
+    zone_id=example_zone.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

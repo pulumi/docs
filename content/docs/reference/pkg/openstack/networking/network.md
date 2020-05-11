@@ -28,7 +28,37 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+network1 = openstack.networking.Network("network1", admin_state_up="true")
+subnet1 = openstack.networking.Subnet("subnet1",
+    cidr="192.168.199.0/24",
+    ip_version=4,
+    network_id=network1.id)
+secgroup1 = openstack.compute.SecGroup("secgroup1",
+    description="a security group",
+    rules=[{
+        "cidr": "0.0.0.0/0",
+        "fromPort": 22,
+        "ipProtocol": "tcp",
+        "toPort": 22,
+    }])
+port1 = openstack.networking.Port("port1",
+    admin_state_up="true",
+    fixed_ips=[{
+        "ipAddress": "192.168.199.10",
+        "subnetId": subnet1.id,
+    }],
+    network_id=network1.id,
+    security_group_ids=[secgroup1.id])
+instance1 = openstack.compute.Instance("instance1",
+    networks=[{
+        "port": port1.id,
+    }],
+    security_groups=[secgroup1.name])
+```
 {{% /example %}}
 
 {{% example typescript %}}

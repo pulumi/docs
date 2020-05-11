@@ -17,6 +17,31 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_openstack.loadbalancer.L7PolicyV2">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">L7PolicyV2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">listener_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">position</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redirect_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redirect_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.L7PolicyV2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer L7 Policy resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">network1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network1&quot;</span><span class="p">,</span> <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
+<span class="n">subnet1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;subnet1&quot;</span><span class="p">,</span>
+    <span class="n">cidr</span><span class="o">=</span><span class="s2">&quot;192.168.199.0/24&quot;</span><span class="p">,</span>
+    <span class="n">ip_version</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">network_id</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">loadbalancer1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;loadbalancer1&quot;</span><span class="p">,</span> <span class="n">vip_subnet_id</span><span class="o">=</span><span class="n">subnet1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">listener1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;listener1&quot;</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">loadbalancer1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">protocol_port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
+<span class="n">pool1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="s2">&quot;pool1&quot;</span><span class="p">,</span>
+    <span class="n">lb_method</span><span class="o">=</span><span class="s2">&quot;ROUND_ROBIN&quot;</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">loadbalancer1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">)</span>
+<span class="n">l7policy1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">L7PolicyV2</span><span class="p">(</span><span class="s2">&quot;l7policy1&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;REDIRECT_TO_POOL&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test l7 policy&quot;</span><span class="p">,</span>
+    <span class="n">listener_id</span><span class="o">=</span><span class="n">listener1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">position</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">redirect_pool_id</span><span class="o">=</span><span class="n">pool1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -196,6 +221,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.loadbalancer.L7RuleV2">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">L7RuleV2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compare_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">l7policy_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.L7RuleV2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 L7 Rule resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">network1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network1&quot;</span><span class="p">,</span> <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
+<span class="n">subnet1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;subnet1&quot;</span><span class="p">,</span>
+    <span class="n">cidr</span><span class="o">=</span><span class="s2">&quot;192.168.199.0/24&quot;</span><span class="p">,</span>
+    <span class="n">ip_version</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">network_id</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">loadbalancer1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;loadbalancer1&quot;</span><span class="p">,</span> <span class="n">vip_subnet_id</span><span class="o">=</span><span class="n">subnet1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">listener1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;listener1&quot;</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">loadbalancer1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">protocol_port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
+<span class="n">pool1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="s2">&quot;pool1&quot;</span><span class="p">,</span>
+    <span class="n">lb_method</span><span class="o">=</span><span class="s2">&quot;ROUND_ROBIN&quot;</span><span class="p">,</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="n">loadbalancer1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">)</span>
+<span class="n">l7policy1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">L7PolicyV2</span><span class="p">(</span><span class="s2">&quot;l7policy1&quot;</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s2">&quot;REDIRECT_TO_URL&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test description&quot;</span><span class="p">,</span>
+    <span class="n">listener_id</span><span class="o">=</span><span class="n">listener1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">position</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">redirect_url</span><span class="o">=</span><span class="s2">&quot;http://www.example.com&quot;</span><span class="p">)</span>
+<span class="n">l7rule1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">L7RuleV2</span><span class="p">(</span><span class="s2">&quot;l7rule1&quot;</span><span class="p">,</span>
+    <span class="n">compare_type</span><span class="o">=</span><span class="s2">&quot;EQUAL_TO&quot;</span><span class="p">,</span>
+    <span class="n">l7policy_id</span><span class="o">=</span><span class="n">l7policy1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PATH&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;/api&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -377,6 +432,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.loadbalancer.Listener">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">Listener</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_tls_container_ref</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">insert_headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sni_container_refs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_client_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_member_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_member_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_tcp_inspect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 listener resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">listener1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;listener1&quot;</span><span class="p">,</span>
+    <span class="n">insert_headers</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;X-Forwarded-For&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">loadbalancer_id</span><span class="o">=</span><span class="s2">&quot;d9415786-5f1a-428b-b35f-2f1523e146d2&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">protocol_port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -651,6 +718,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.loadbalancer.LoadBalancer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flavor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vip_subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 loadbalancer resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">lb1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;lb1&quot;</span><span class="p">,</span> <span class="n">vip_subnet_id</span><span class="o">=</span><span class="s2">&quot;d9415786-5f1a-428b-b35f-2f1523e146d2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -849,6 +922,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.loadbalancer.Member">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">Member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weight</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Member" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 member resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">member1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">Member</span><span class="p">(</span><span class="s2">&quot;member1&quot;</span><span class="p">,</span>
+    <span class="n">address</span><span class="o">=</span><span class="s2">&quot;192.168.199.23&quot;</span><span class="p">,</span>
+    <span class="n">pool_id</span><span class="o">=</span><span class="s2">&quot;935685fb-a896-40f9-9ff4-ae531a3a00fe&quot;</span><span class="p">,</span>
+    <span class="n">protocol_port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1023,6 +1105,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.loadbalancer.MemberV1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">MemberV1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">weight</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.MemberV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 load balancer member resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">member1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">MemberV1</span><span class="p">(</span><span class="s2">&quot;member1&quot;</span><span class="p">,</span>
+    <span class="n">address</span><span class="o">=</span><span class="s2">&quot;192.168.0.10&quot;</span><span class="p">,</span>
+    <span class="n">pool_id</span><span class="o">=</span><span class="s2">&quot;d9415786-5f1a-428b-b35f-2f1523e146d2&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1169,6 +1260,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 legacy Neutron LBaaS v2 extension please use
 loadbalancer.Member resource.</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">members1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">Members</span><span class="p">(</span><span class="s2">&quot;members1&quot;</span><span class="p">,</span>
+    <span class="n">members</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.199.23&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;protocolPort&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.199.24&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;protocolPort&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">pool_id</span><span class="o">=</span><span class="s2">&quot;935685fb-a896-40f9-9ff4-ae531a3a00fe&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1318,6 +1426,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.loadbalancer.Monitor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">Monitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expected_codes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_retries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_retries_down</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 monitor resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">monitor1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">Monitor</span><span class="p">(</span><span class="s2">&quot;monitor1&quot;</span><span class="p">,</span>
+    <span class="n">delay</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">max_retries</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">pool_id</span><span class="o">=</span><span class="n">openstack_lb_pool_v2</span><span class="p">[</span><span class="s2">&quot;pool_1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PING&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1545,6 +1664,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.loadbalancer.MonitorV1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">MonitorV1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expected_codes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_retries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.MonitorV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 load balancer monitor resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">monitor1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">MonitorV1</span><span class="p">(</span><span class="s2">&quot;monitor1&quot;</span><span class="p">,</span>
+    <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">delay</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;PING&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1751,6 +1881,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.loadbalancer.Pool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">Pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lb_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">listener_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">persistence</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 pool resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">pool1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="s2">&quot;pool1&quot;</span><span class="p">,</span>
+    <span class="n">lb_method</span><span class="o">=</span><span class="s2">&quot;ROUND_ROBIN&quot;</span><span class="p">,</span>
+    <span class="n">listener_id</span><span class="o">=</span><span class="s2">&quot;d9415786-5f1a-428b-b35f-2f1523e146d2&quot;</span><span class="p">,</span>
+    <span class="n">persistence</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;cookieName&quot;</span><span class="p">:</span> <span class="s2">&quot;testCookie&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;APP_COOKIE&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1965,6 +2108,83 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.loadbalancer.PoolV1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">PoolV1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lb_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lb_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.PoolV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 load balancer pool resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">pool1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">PoolV1</span><span class="p">(</span><span class="s2">&quot;pool1&quot;</span><span class="p">,</span>
+    <span class="n">lb_method</span><span class="o">=</span><span class="s2">&quot;ROUND_ROBIN&quot;</span><span class="p">,</span>
+    <span class="n">lb_provider</span><span class="o">=</span><span class="s2">&quot;haproxy&quot;</span><span class="p">,</span>
+    <span class="n">monitor_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;67890&quot;</span><span class="p">],</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">network1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;network1&quot;</span><span class="p">,</span> <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">)</span>
+<span class="n">subnet1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">networking</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;subnet1&quot;</span><span class="p">,</span>
+    <span class="n">cidr</span><span class="o">=</span><span class="s2">&quot;192.168.199.0/24&quot;</span><span class="p">,</span>
+    <span class="n">ip_version</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">network_id</span><span class="o">=</span><span class="n">network1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">secgroup1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">SecGroup</span><span class="p">(</span><span class="s2">&quot;secgroup1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Rules for secgroup_1&quot;</span><span class="p">,</span>
+    <span class="n">rules</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;cidr&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;ipProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;icmp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;cidr&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+            <span class="s2">&quot;ipProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+<span class="n">instance1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance1&quot;</span><span class="p">,</span>
+    <span class="n">networks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;uuid&quot;</span><span class="p">:</span> <span class="n">network1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="n">secgroup1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="n">instance2</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;instance2&quot;</span><span class="p">,</span>
+    <span class="n">networks</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;uuid&quot;</span><span class="p">:</span> <span class="n">network1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">security_groups</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="n">secgroup1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="n">monitor1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">MonitorV1</span><span class="p">(</span><span class="s2">&quot;monitor1&quot;</span><span class="p">,</span>
+    <span class="n">admin_state_up</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">delay</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;TCP&quot;</span><span class="p">)</span>
+<span class="n">pool1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">PoolV1</span><span class="p">(</span><span class="s2">&quot;pool1&quot;</span><span class="p">,</span>
+    <span class="n">lb_method</span><span class="o">=</span><span class="s2">&quot;ROUND_ROBIN&quot;</span><span class="p">,</span>
+    <span class="n">monitor_ids</span><span class="o">=</span><span class="p">[</span><span class="n">monitor1</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;TCP&quot;</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">subnet1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">member1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">MemberV1</span><span class="p">(</span><span class="s2">&quot;member1&quot;</span><span class="p">,</span>
+    <span class="n">address</span><span class="o">=</span><span class="n">instance1</span><span class="o">.</span><span class="n">access_ip_v4</span><span class="p">,</span>
+    <span class="n">pool_id</span><span class="o">=</span><span class="n">pool1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+<span class="n">member2</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">MemberV1</span><span class="p">(</span><span class="s2">&quot;member2&quot;</span><span class="p">,</span>
+    <span class="n">address</span><span class="o">=</span><span class="n">instance2</span><span class="o">.</span><span class="n">access_ip_v4</span><span class="p">,</span>
+    <span class="n">pool_id</span><span class="o">=</span><span class="n">pool1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+<span class="n">vip1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">Vip</span><span class="p">(</span><span class="s2">&quot;vip1&quot;</span><span class="p">,</span>
+    <span class="n">pool_id</span><span class="o">=</span><span class="n">pool1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;TCP&quot;</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="n">subnet1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">member</span></code> block is deprecated in favor of the <code class="docutils literal notranslate"><span class="pre">loadbalancer.MemberV1</span></code> resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2132,6 +2352,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.loadbalancer.Vip">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">Vip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_state_up</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">conn_limit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">floating_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">persistence</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Vip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 load balancer vip resource within OpenStack.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_openstack</span> <span class="k">as</span> <span class="nn">openstack</span>
+
+<span class="n">vip1</span> <span class="o">=</span> <span class="n">openstack</span><span class="o">.</span><span class="n">loadbalancer</span><span class="o">.</span><span class="n">Vip</span><span class="p">(</span><span class="s2">&quot;vip1&quot;</span><span class="p">,</span>
+    <span class="n">pool_id</span><span class="o">=</span><span class="s2">&quot;67890&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;HTTP&quot;</span><span class="p">,</span>
+    <span class="n">subnet_id</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

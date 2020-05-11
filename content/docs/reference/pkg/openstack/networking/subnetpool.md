@@ -28,7 +28,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+subnetpool1 = openstack.networking.SubnetPool("subnetpool1",
+    ip_version=6,
+    prefixes=[
+        "fdf7:b13d:dead:beef::/64",
+        "fd65:86cc:a334:39b7::/64",
+    ])
+```
 {{% /example %}}
 
 {{% example typescript %}}
@@ -56,7 +66,17 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+network1 = openstack.networking.Network("network1", admin_state_up="true")
+subnetpool1 = openstack.networking.SubnetPool("subnetpool1", prefixes=["10.11.12.0/24"])
+subnet1 = openstack.networking.Subnet("subnet1",
+    cidr="10.11.12.0/25",
+    network_id=network1.id,
+    subnetpool_id=subnetpool1.id)
+```
 {{% /example %}}
 
 {{% example typescript %}}

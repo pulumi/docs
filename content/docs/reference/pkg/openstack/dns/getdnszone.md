@@ -28,7 +28,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+zone1 = openstack.dns.get_dns_zone(name="example.com")
+```
 {{% /example %}}
 
 {{% example typescript %}}

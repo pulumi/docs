@@ -31,7 +31,12 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+project1 = openstack.identity.Project("project1", description="A project")
+```
 {{% /example %}}
 
 {{% example typescript %}}

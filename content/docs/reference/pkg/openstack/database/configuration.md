@@ -28,7 +28,21 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_openstack as openstack
+
+test = openstack.database.Configuration("test",
+    configurations=[{
+        "name": "max_connections",
+        "value": 200,
+    }],
+    datastore={
+        "type": "mysql",
+        "version": "mysql-5.7",
+    },
+    description="description")
+```
 {{% /example %}}
 
 {{% example typescript %}}
