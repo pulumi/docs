@@ -1,6 +1,6 @@
 ---
 title: "Managing AWS Credentials on CI/CD - Part 3"
-date: 2020-04-29
+date: 2020-05-12
 meta_desc: "Best practices for managing AWS credentials on CI/CD - Part 3 in the series"
 authors:
     - chris-smith
@@ -321,7 +321,9 @@ whenever it needs to encrypt or decrypt some data, it will refer to the custom p
 > As you would expect, if you do use a custom secrets provider and lose access to your encryption key, then there is
 > no way to recover the encrypted data stored on your stack.
 
-For more information on custom secret providers, see [Managing Secrets with Pulumi]({{< relref "managing-secrets-with-pulumi" >}}).
+For more information on custom secret providers, see
+[Peace of Mind with Cloud Secret Providers]({{< relref "peace-of-mind-with-cloud-secret-providers" >}}) or
+[Managing Secrets with Pulumi]({{< relref "managing-secrets-with-pulumi" >}}).
 
 ## Wrapping Up
 
